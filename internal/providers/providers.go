@@ -36,15 +36,15 @@ var bedrockConfig []byte
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() provider.Provider
 
-var providerRegistry = map[provider.InferenceProvider]ProviderFunc{
-	provider.InferenceProviderOpenAI:     openAIProvider,
-	provider.InferenceProviderAnthropic:  anthropicProvider,
-	provider.InferenceProviderGemini:     geminiProvider,
-	provider.InferenceProviderAzure:      azureProvider,
-	provider.InferenceProviderBedrock:    bedrockProvider,
-	provider.InferenceProviderVertexAI:   vertexAIProvider,
-	provider.InferenceProviderXAI:        xAIProvider,
-	provider.InferenceProviderOpenRouter: openRouterProvider,
+var providerRegistry = []ProviderFunc{
+	openAIProvider,
+	anthropicProvider,
+	geminiProvider,
+	azureProvider,
+	bedrockProvider,
+	vertexAIProvider,
+	xAIProvider,
+	openRouterProvider,
 }
 
 // GetAll returns all registered providers.
@@ -54,24 +54,6 @@ func GetAll() []provider.Provider {
 		providers = append(providers, providerFunc())
 	}
 	return providers
-}
-
-// GetByID returns a provider by its ID.
-func GetByID(id provider.InferenceProvider) (provider.Provider, bool) {
-	providerFunc, exists := providerRegistry[id]
-	if !exists {
-		return provider.Provider{}, false
-	}
-	return providerFunc(), true
-}
-
-// GetAvailableIDs returns a slice of all available provider IDs.
-func GetAvailableIDs() []provider.InferenceProvider {
-	ids := make([]provider.InferenceProvider, 0, len(providerRegistry))
-	for id := range providerRegistry {
-		ids = append(ids, id)
-	}
-	return ids
 }
 
 func loadProviderFromConfig(configData []byte) provider.Provider {
