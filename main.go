@@ -25,10 +25,13 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/providers", providersHandler)
+	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
+		_, _ = w.Write([]byte("OK"))
+		w.WriteHeader(http.StatusOK)
+	})
 
 	log.Println("Server starting on :8080")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal("Server failed to start:", err)
 	}
 }
-
