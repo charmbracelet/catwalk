@@ -52,3 +52,16 @@ type Model struct {
 	CanReason          bool    `json:"can_reason"`
 	SupportsImages     bool    `json:"supports_attachments"`
 }
+
+func KnownProviders() []InferenceProvider {
+	return []InferenceProvider{
+		InferenceProviderOpenAI,
+		InferenceProviderAnthropic,
+		InferenceProviderGemini,
+		InferenceProviderAzure,
+		InferenceProviderBedrock,
+		InferenceProviderVertexAI,
+		InferenceProviderXAI,
+		InferenceProviderOpenRouter,
+	}
+}

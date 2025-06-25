@@ -2,8 +2,8 @@
   "name": "Google Vertex AI",
   "id": "vertex",
   "type": "vertex",
-  "api_key": "$VERTEX_API_KEY",
-  "api_endpoint": "$VERTEX_API_ENDPOINT",
+  "api_key": "",
+  "api_endpoint": "",
   "default_model_id": "gemini-2.5-pro",
   "models": [
     {
