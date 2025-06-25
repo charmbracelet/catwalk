@@ -1,3 +1,4 @@
+// Package providers provides a registry of inference providers
 package providers
 
 import (
@@ -32,7 +33,7 @@ var xAIConfig []byte
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
-// ProviderFunc is a function that returns a Provider
+// ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() provider.Provider
 
 var providerRegistry = map[provider.InferenceProvider]ProviderFunc{
@@ -46,6 +47,7 @@ var providerRegistry = map[provider.InferenceProvider]ProviderFunc{
 	provider.InferenceProviderOpenRouter: openRouterProvider,
 }
 
+// GetAll returns all registered providers.
 func GetAll() []provider.Provider {
 	providers := make([]provider.Provider, 0, len(providerRegistry))
 	for _, providerFunc := range providerRegistry {
@@ -54,6 +56,7 @@ func GetAll() []provider.Provider {
 	return providers
 }
 
+// GetByID returns a provider by its ID.
 func GetByID(id provider.InferenceProvider) (provider.Provider, bool) {
 	providerFunc, exists := providerRegistry[id]
 	if !exists {
@@ -62,6 +65,7 @@ func GetByID(id provider.InferenceProvider) (provider.Provider, bool) {
 	return providerFunc(), true
 }
 
+// GetAvailableIDs returns a slice of all available provider IDs.
 func GetAvailableIDs() []provider.InferenceProvider {
 	ids := make([]provider.InferenceProvider, 0, len(providerRegistry))
 	for id := range providerRegistry {

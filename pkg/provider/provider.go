@@ -1,22 +1,25 @@
+// Package provider provides types and constants for AI providers.
 package provider
 
-// ProviderType represents the type of AI provider
-type ProviderType string
+// Type represents the type of AI provider.
+type Type string
 
+// All the supported AI provider types.
 const (
-	ProviderTypeOpenAI     ProviderType = "openai"
-	ProviderTypeAnthropic  ProviderType = "anthropic"
-	ProviderTypeGemini     ProviderType = "gemini"
-	ProviderTypeAzure      ProviderType = "azure"
-	ProviderTypeBedrock    ProviderType = "bedrock"
-	ProviderTypeVertexAI   ProviderType = "vertexai"
-	ProviderTypeXAI        ProviderType = "xai"
-	ProviderTypeOpenRouter ProviderType = "openrouter"
+	TypeOpenAI     Type = "openai"
+	TypeAnthropic  Type = "anthropic"
+	TypeGemini     Type = "gemini"
+	TypeAzure      Type = "azure"
+	TypeBedrock    Type = "bedrock"
+	TypeVertexAI   Type = "vertexai"
+	TypeXAI        Type = "xai"
+	TypeOpenRouter Type = "openrouter"
 )
 
-// InferenceProvider represents the inference provider identifier
+// InferenceProvider represents the inference provider identifier.
 type InferenceProvider string
 
+// All the inference providers supported by the system.
 const (
 	InferenceProviderOpenAI     InferenceProvider = "openai"
 	InferenceProviderAnthropic  InferenceProvider = "anthropic"
@@ -28,18 +31,18 @@ const (
 	InferenceProviderOpenRouter InferenceProvider = "openrouter"
 )
 
-// Provider represents an AI provider configuration
+// Provider represents an AI provider configuration.
 type Provider struct {
 	Name           string            `json:"name"`
 	ID             InferenceProvider `json:"id"`
 	APIKey         string            `json:"api_key,omitempty"`
 	APIEndpoint    string            `json:"api_endpoint,omitempty"`
-	Type           ProviderType      `json:"type,omitempty"`
+	Type           Type              `json:"type,omitempty"`
 	DefaultModelID string            `json:"default_model_id,omitempty"`
 	Models         []Model           `json:"models,omitempty"`
 }
 
-// Model represents an AI model configuration
+// Model represents an AI model configuration.
 type Model struct {
 	ID                 string  `json:"id"`
 	Name               string  `json:"model"`
@@ -53,6 +56,7 @@ type Model struct {
 	SupportsImages     bool    `json:"supports_attachments"`
 }
 
+// KnownProviders returns all the known inference providers.
 func KnownProviders() []InferenceProvider {
 	return []InferenceProvider{
 		InferenceProviderOpenAI,

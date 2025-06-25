@@ -1,6 +1,9 @@
+// Package main provides a command-line tool to fetch models from OpenRouter
+// and generate a configuration file for the provider.
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -14,7 +17,7 @@ import (
 	"github.com/charmbracelet/fur/pkg/provider"
 )
 
-// Model represents the complete model configuration
+// Model represents the complete model configuration.
 type Model struct {
 	ID              string       `json:"id"`
 	CanonicalSlug   string       `json:"canonical_slug"`
@@ -29,7 +32,7 @@ type Model struct {
 	SupportedParams []string     `json:"supported_parameters"`
 }
 
-// Architecture defines the model's architecture details
+// Architecture defines the model's architecture details.
 type Architecture struct {
 	Modality         string   `json:"modality"`
 	InputModalities  []string `json:"input_modalities"`
@@ -38,7 +41,7 @@ type Architecture struct {
 	InstructType     *string  `json:"instruct_type"`
 }
 
-// Pricing contains the pricing information for different operations
+// Pricing contains the pricing information for different operations.
 type Pricing struct {
 	Prompt            string `json:"prompt"`
 	Completion        string `json:"completion"`
@@ -50,16 +53,20 @@ type Pricing struct {
 	InputCacheWrite   string `json:"input_cache_write"`
 }
 
-// TopProvider describes the top provider's capabilities
+// TopProvider describes the top provider's capabilities.
 type TopProvider struct {
 	ContextLength       int64  `json:"context_length"`
 	MaxCompletionTokens *int64 `json:"max_completion_tokens"`
 	IsModerated         bool   `json:"is_moderated"`
 }
 
+// ModelsResponse is the response structure for the models API.
 type ModelsResponse struct {
 	Data []Model `json:"data"`
 }
+
+// ModelPricing is the pricing structure for a model, detailing costs per
+// million tokens for input and output, both cached and uncached.
 type ModelPricing struct {
 	CostPer1MIn        float64 `json:"cost_per_1m_in"`
 	CostPer1MOut       float64 `json:"cost_per_1m_out"`
@@ -95,25 +102,30 @@ func getPricing(model Model) ModelPricing {
 
 func fetchOpenRouterModels() (*ModelsResponse, error) {
 	client := &http.Client{Timeout: 30 * time.Second}
-	req, _ := http.NewRequest("GET", "https://openrouter.ai/api/v1/models", nil)
+	req, _ := http.NewRequestWithContext(
+		context.Background(),
+		"GET",
+		"https://openrouter.ai/api/v1/models",
+		nil,
+	)
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
 	resp, err := client.Do(req)
 	if err != nil {
-		return nil, err
+		return nil, err //nolint:wrapcheck
 	}
-	defer resp.Body.Close()
+	defer resp.Body.Close() //nolint:errcheck
 	if resp.StatusCode != 200 {
 		body, _ := io.ReadAll(resp.Body)
 		return nil, fmt.Errorf("status %d: %s", resp.StatusCode, body)
 	}
 	var mr ModelsResponse
 	if err := json.NewDecoder(resp.Body).Decode(&mr); err != nil {
-		return nil, err
+		return nil, err //nolint:wrapcheck
 	}
 	return &mr, nil
 }
 
-// This is used to generate the openrouter.json config file
+// This is used to generate the openrouter.json config file.
 func main() {
 	modelsResp, err := fetchOpenRouterModels()
 	if err != nil {
@@ -125,7 +137,7 @@ func main() {
 		ID:             "openrouter",
 		APIKey:         "$OPENROUTER_API_KEY",
 		APIEndpoint:    "https://openrouter.ai/api/v1",
-		Type:           provider.ProviderTypeOpenAI,
+		Type:           provider.TypeOpenAI,
 		DefaultModelID: "anthropic/claude-sonnet-4",
 		Models:         []provider.Model{},
 	}
@@ -165,8 +177,7 @@ func main() {
 		log.Fatal("Error marshaling OpenRouter provider:", err)
 	}
 	// write to file
-	err = os.WriteFile("internal/providers/configs/openrouter.json", data, 0o644)
-	if err != nil {
+	if err := os.WriteFile("internal/providers/configs/openrouter.json", data, 0o600); err != nil {
 		log.Fatal("Error writing OpenRouter provider config:", err)
 	}
 }
