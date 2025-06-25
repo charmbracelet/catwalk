@@ -9,7 +9,17 @@ import (
 	"time"
 
 	"github.com/charmbracelet/fur/internal/providers"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promauto"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
+
+var counter = promauto.NewCounter(prometheus.CounterOpts{
+	Namespace: "fur",
+	Subsystem: "providers",
+	Name:      "requests_total",
+	Help:      "Total number of requests to the providers endpoint",
+})
 
 func providersHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
@@ -17,8 +27,8 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	counter.Inc()
 	allProviders := providers.GetAll()
-
 	w.Header().Set("Content-Type", "application/json")
 	if err := json.NewEncoder(w).Encode(allProviders); err != nil {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
@@ -33,6 +43,7 @@ func main() {
 		w.WriteHeader(http.StatusOK)
 		_, _ = w.Write([]byte("OK"))
 	})
+	mux.Handle("/metrics", promhttp.Handler())
 
 	server := &http.Server{
 		Addr:         ":8080",
