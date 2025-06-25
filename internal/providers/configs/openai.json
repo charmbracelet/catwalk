@@ -1,0 +1,143 @@
+{
+  "name": "OpenAI",
+  "id": "openai",
+  "type": "openai",
+  "api_key": "$OPENAI_API_KEY",
+  "api_endpoint": "$OPENAI_API_ENDPOINT",
+  "default_model_id": "o4-mini",
+  "models": [
+    {
+      "id": "codex-mini-latest",
+      "model": "Codex Mini",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.375,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "o4-mini",
+      "model": "o4 Mini",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.275,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "o3",
+      "model": "o3",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.5,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "o3-pro",
+      "model": "o3 Pro",
+      "cost_per_1m_in": 20,
+      "cost_per_1m_out": 80,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-4.1",
+      "model": "GPT-4.1",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.5,
+      "context_window": 1047576,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-4.1-mini",
+      "model": "GPT-4.1 Mini",
+      "cost_per_1m_in": 0.39999999999999997,
+      "cost_per_1m_out": 1.5999999999999999,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.09999999999999999,
+      "context_window": 1047576,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-4.1-nano",
+      "model": "GPT-4.1 Nano",
+      "cost_per_1m_in": 0.09999999999999999,
+      "cost_per_1m_out": 0.39999999999999997,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.024999999999999998,
+      "context_window": 1047576,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-4.5-preview",
+      "model": "GPT-4.5 (Preview)",
+      "cost_per_1m_in": 75,
+      "cost_per_1m_out": 150,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 37.5,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "o3-mini",
+      "model": "o3 Mini",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.55,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-4o",
+      "model": "GPT-4o",
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 1.25,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-4o-mini",
+      "model": "GPT-4o-mini",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.075,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "reasoning_effort": "",
+      "supports_attachments": true
+    }
+  ]
+}

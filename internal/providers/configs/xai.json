@@ -1,0 +1,34 @@
+{
+  "name": "xAI",
+  "id": "xai",
+  "api_key": "$XAI_API_KEY",
+  "api_endpoint": "https://api.x.ai/v1",
+  "type": "openai",
+  "default_model_id": "grok-3",
+  "models": [
+    {
+      "id": "grok-3-mini",
+      "model": "Grok 3 Mini",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.075,
+      "context_window": 131072,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "grok-3",
+      "model": "Grok 3",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.75,
+      "context_window": 131072,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}
