@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/charmbracelet/fur/internal/providers"
+	"github.com/charmbracelet/fur/pkg/provider"
 )
 
 // Model represents the complete model configuration
@@ -120,14 +120,14 @@ func main() {
 		log.Fatal("Error fetching OpenRouter models:", err)
 	}
 
-	openRouterProvider := providers.Provider{
+	openRouterProvider := provider.Provider{
 		Name:           "OpenRouter",
 		ID:             "openrouter",
 		APIKey:         "$OPENROUTER_API_KEY",
 		APIEndpoint:    "https://openrouter.ai/api/v1",
-		Type:           providers.ProviderTypeOpenAI,
+		Type:           provider.ProviderTypeOpenAI,
 		DefaultModelID: "anthropic/claude-sonnet-4",
-		Models:         []providers.Model{},
+		Models:         []provider.Model{},
 	}
 
 	for _, model := range modelsResp.Data {
@@ -142,7 +142,7 @@ func main() {
 		canReason := slices.Contains(model.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
-		m := providers.Model{
+		m := provider.Model{
 			ID:                 model.ID,
 			Name:               model.Name,
 			CostPer1MIn:        pricing.CostPer1MIn,

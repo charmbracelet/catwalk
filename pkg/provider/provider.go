@@ -1,5 +1,6 @@
-package providers
+package provider
 
+// ProviderType represents the type of AI provider
 type ProviderType string
 
 const (
@@ -13,6 +14,7 @@ const (
 	ProviderTypeOpenRouter ProviderType = "openrouter"
 )
 
+// InferenceProvider represents the inference provider identifier
 type InferenceProvider string
 
 const (
@@ -26,6 +28,7 @@ const (
 	InferenceProviderOpenRouter InferenceProvider = "openrouter"
 )
 
+// Provider represents an AI provider configuration
 type Provider struct {
 	Name           string            `json:"name"`
 	ID             InferenceProvider `json:"id"`
@@ -36,6 +39,7 @@ type Provider struct {
 	Models         []Model           `json:"models,omitempty"`
 }
 
+// Model represents an AI model configuration
 type Model struct {
 	ID                 string  `json:"id"`
 	Name               string  `json:"model"`
@@ -48,41 +52,3 @@ type Model struct {
 	CanReason          bool    `json:"can_reason"`
 	SupportsImages     bool    `json:"supports_attachments"`
 }
-
-type ProviderFunc func() Provider
-
-var providerRegistry = map[InferenceProvider]ProviderFunc{
-	InferenceProviderOpenAI:     openAIProvider,
-	InferenceProviderAnthropic:  anthropicProvider,
-	InferenceProviderGemini:     geminiProvider,
-	InferenceProviderAzure:      azureProvider,
-	InferenceProviderBedrock:    bedrockProvider,
-	InferenceProviderVertexAI:   vertexAIProvider,
-	InferenceProviderXAI:        xAIProvider,
-	InferenceProviderOpenRouter: openRouterProvider,
-}
-
-func GetAll() []Provider {
-	providers := make([]Provider, 0, len(providerRegistry))
-	for _, providerFunc := range providerRegistry {
-		providers = append(providers, providerFunc())
-	}
-	return providers
-}
-
-func GetByID(id InferenceProvider) (Provider, bool) {
-	providerFunc, exists := providerRegistry[id]
-	if !exists {
-		return Provider{}, false
-	}
-	return providerFunc(), true
-}
-
-func GetAvailableIDs() []InferenceProvider {
-	ids := make([]InferenceProvider, 0, len(providerRegistry))
-	for id := range providerRegistry {
-		ids = append(ids, id)
-	}
-	return ids
-}
-
