@@ -1,0 +1,35 @@
+name: deploy development
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  goreleaser:
+    uses: charmbracelet/meta/.github/workflows/nightly.yml@main
+    with:
+      go_version: stable
+      upload_artifacts: false
+    secrets:
+      docker_username: ${{ secrets.DOCKERHUB_USERNAME }}
+      docker_token: ${{ secrets.DOCKERHUB_TOKEN }}
+      goreleaser_key: ${{ secrets.GORELEASER_KEY }}
+      gh_pat: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+  deploy:
+    name: Run deploy workflow
+    runs-on: ubuntu-latest
+    needs: [goreleaser]
+    steps:
+      - uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: Update
+          repo: charmbracelet/infra-dev
+          ref: main
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          inputs: |
+            {
+              "app": "fur
+              "image": "ghcr.io/charmbracelet/fur:${{ github.sha }}-devel"
+            }

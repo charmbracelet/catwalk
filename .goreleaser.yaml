@@ -1,0 +1,79 @@
+# This is an example .goreleaser.yml file with some sensible defaults.
+# Make sure to check the documentation at https://goreleaser.com
+
+# The lines below are called `modelines`. See `:help modeline`
+# Feel free to remove those if you don't want/need to use them.
+# yaml-language-server: $schema=https://goreleaser.com/static/schema-pro.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj
+
+version: 2
+pro: true
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - binary: fur
+    env:
+      - CGO_ENABLED=0
+    main: .
+    ldflags: -s -w -X main.Version=v{{ .Version }} -X main.CommitSHA={{ .Commit }} -X main.CommitDate={{ .CommitDate }}
+    targets:
+      - linux_amd64
+      - linux_arm64
+
+checksum:
+  name_template: "checksums.txt"
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-snapshot"
+
+nightly:
+  version_template: "{{ incpatch .Version }}-devel"
+
+dockers:
+  - image_templates:
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-arm64"
+    goarch: arm64
+    build_flag_templates:
+      - --platform=linux/arm64
+      - --label=org.opencontainers.image.title={{ .ProjectName }}
+      - --label=org.opencontainers.image.source={{ .GitURL }}
+      - --label=org.opencontainers.image.version=v{{ .Version }}
+      - --label=org.opencontainers.image.created={{ .Date }}
+      - --label=org.opencontainers.image.revision={{ .FullCommit }}
+      - --label=org.opencontainers.image.licenses=MIT
+    dockerfile: goreleaser.dockerfile
+    use: buildx
+  - image_templates:
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
+    goarch: amd64
+    build_flag_templates:
+      - --platform=linux/amd64
+      - --label=org.opencontainers.image.title={{ .ProjectName }}
+      - --label=org.opencontainers.image.source={{ .GitURL }}
+      - --label=org.opencontainers.image.version=v{{ .Version }}
+      - --label=org.opencontainers.image.created={{ .Date }}
+      - --label=org.opencontainers.image.revision={{ .FullCommit }}
+      - --label=org.opencontainers.image.licenses=MIT
+    dockerfile: goreleaser.dockerfile
+    use: buildx
+
+docker_manifests:
+  - name_template: "{{ if not .IsNightly }}ghcr.io/charmbracelet/{{ .ProjectName }}:latest{{ end }}"
+    image_templates:
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-arm64"
+  - name_template: "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}"
+    image_templates:
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-arm64"
+  - name_template: "ghcr.io/charmbracelet/{{ .ProjectName }}:{{ .Commit }}{{ if .IsNightly }}-devel{{ end }}"
+    image_templates:
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-arm64"
+  - name_template: "{{ if .IsNightly }}ghcr.io/charmbracelet/{{ .ProjectName }}:nightly{{ end }}"
+    image_templates:
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
+      - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-arm64"
