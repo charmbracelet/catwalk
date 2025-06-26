@@ -133,13 +133,14 @@ func main() {
 	}
 
 	openRouterProvider := provider.Provider{
-		Name:           "OpenRouter",
-		ID:             "openrouter",
-		APIKey:         "$OPENROUTER_API_KEY",
-		APIEndpoint:    "https://openrouter.ai/api/v1",
-		Type:           provider.TypeOpenAI,
-		DefaultModelID: "anthropic/claude-sonnet-4",
-		Models:         []provider.Model{},
+		Name:                "OpenRouter",
+		ID:                  "openrouter",
+		APIKey:              "$OPENROUTER_API_KEY",
+		APIEndpoint:         "https://openrouter.ai/api/v1",
+		Type:                provider.TypeOpenAI,
+		DefaultLargeModelID: "anthropic/claude-sonnet-4",
+		DefaultSmallModelID: "anthropic/claude-haiku-3.5",
+		Models:              []provider.Model{},
 	}
 
 	for _, model := range modelsResp.Data {
