@@ -37,8 +37,8 @@ var bedrockConfig []byte
 type ProviderFunc func() provider.Provider
 
 var providerRegistry = []ProviderFunc{
-	openAIProvider,
 	anthropicProvider,
+	openAIProvider,
 	geminiProvider,
 	azureProvider,
 	bedrockProvider,

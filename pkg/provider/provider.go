@@ -33,13 +33,14 @@ const (
 
 // Provider represents an AI provider configuration.
 type Provider struct {
-	Name           string            `json:"name"`
-	ID             InferenceProvider `json:"id"`
-	APIKey         string            `json:"api_key,omitempty"`
-	APIEndpoint    string            `json:"api_endpoint,omitempty"`
-	Type           Type              `json:"type,omitempty"`
-	DefaultModelID string            `json:"default_model_id,omitempty"`
-	Models         []Model           `json:"models,omitempty"`
+	Name                string            `json:"name"`
+	ID                  InferenceProvider `json:"id"`
+	APIKey              string            `json:"api_key,omitempty"`
+	APIEndpoint         string            `json:"api_endpoint,omitempty"`
+	Type                Type              `json:"type,omitempty"`
+	DefaultLargeModelID string            `json:"default_large_model_id,omitempty"`
+	DefaultSmallModelID string            `json:"default_small_model_id,omitempty"`
+	Models              []Model           `json:"models,omitempty"`
 }
 
 // Model represents an AI model configuration.

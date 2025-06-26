@@ -4,7 +4,8 @@
   "type": "vertex",
   "api_key": "",
   "api_endpoint": "",
-  "default_model_id": "gemini-2.5-pro",
+  "default_large_model_id": "gemini-2.5-pro",
+  "default_small_model_id": "gemini-2.5-flash",
   "models": [
     {
       "id": "gemini-2.5-pro",

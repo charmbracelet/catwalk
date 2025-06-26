@@ -4,7 +4,8 @@
   "api_key": "$OPENROUTER_API_KEY",
   "api_endpoint": "https://openrouter.ai/api/v1",
   "type": "openai",
-  "default_model_id": "anthropic/claude-sonnet-4",
+  "default_large_model_id": "anthropic/claude-sonnet-4",
+  "default_small_model_id": "anthropic/claude-3-5-haiku",
   "models": [
     {
       "id": "mistralai/mistral-small-3.2-24b-instruct:free",

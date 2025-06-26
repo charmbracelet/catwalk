@@ -4,7 +4,8 @@
   "type": "anthropic",
   "api_key": "$ANTHROPIC_API_KEY",
   "api_endpoint": "$ANTHROPIC_API_ENDPOINT",
-  "default_model_id": "claude-sonnet-4-20250514",
+  "default_large_model_id": "claude-sonnet-4-20250514",
+  "default_small_model_id": "claude-3-5-haiku-20241022",
   "models": [
     {
       "id": "claude-opus-4-20250514",

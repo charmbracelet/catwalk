@@ -4,7 +4,8 @@
   "api_key": "$XAI_API_KEY",
   "api_endpoint": "https://api.x.ai/v1",
   "type": "openai",
-  "default_model_id": "grok-3",
+  "default_large_model_id": "grok-3",
+  "default_small_model_id": "grok-3-mini",
   "models": [
     {
       "id": "grok-3-mini",
