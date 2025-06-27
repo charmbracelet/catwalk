@@ -167,7 +167,7 @@ func main() {
 			SupportsImages:     supportsImages,
 		}
 		if model.TopProvider.MaxCompletionTokens != nil {
-			m.DefaultMaxTokens = int64(*model.TopProvider.MaxCompletionTokens / 2)
+			m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens / 2
 		} else {
 			m.DefaultMaxTokens = model.ContextLength / 10
 		}

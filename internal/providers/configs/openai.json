@@ -4,7 +4,7 @@
   "type": "openai",
   "api_key": "$OPENAI_API_KEY",
   "api_endpoint": "$OPENAI_API_ENDPOINT",
-  "default_large_model_id": "o4-mini",
+  "default_large_model_id": "codex-mini-latest",
   "default_small_model_id": "gpt-4o",
   "models": [
     {
@@ -16,7 +16,9 @@
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -28,7 +30,9 @@
       "cost_per_1m_out_cached": 0.275,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -40,7 +44,9 @@
       "cost_per_1m_out_cached": 0.5,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -52,7 +58,9 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -112,7 +120,9 @@
       "cost_per_1m_out_cached": 0.55,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
