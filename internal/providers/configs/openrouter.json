@@ -5,7 +5,7 @@
   "api_endpoint": "https://openrouter.ai/api/v1",
   "type": "openai",
   "default_large_model_id": "anthropic/claude-sonnet-4",
-  "default_small_model_id": "anthropic/claude-3-5-haiku",
+  "default_small_model_id": "anthropic/claude-haiku-3.5",
   "models": [
     {
       "id": "mistralai/mistral-small-3.2-24b-instruct:free",
@@ -15,7 +15,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 96000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 9600,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -27,7 +27,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -39,7 +39,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 25600,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -51,7 +51,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 40000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -63,7 +63,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -75,7 +75,7 @@
       "cost_per_1m_in_cached": 0.3833,
       "cost_per_1m_out_cached": 0.075,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -87,7 +87,7 @@
       "cost_per_1m_in_cached": 1.625,
       "cost_per_1m_out_cached": 0.31,
       "context_window": 1048576,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 32768,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -99,7 +99,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -111,7 +111,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.075,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -123,7 +123,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.75,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -135,7 +135,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40000,
-      "default_max_tokens": 40000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -147,7 +147,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40960,
-      "default_max_tokens": 40000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -159,7 +159,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40960,
-      "default_max_tokens": 40000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -171,7 +171,7 @@
       "cost_per_1m_in_cached": 1.625,
       "cost_per_1m_out_cached": 0.31,
       "context_window": 1048576,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 32768,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -183,7 +183,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -195,7 +195,7 @@
       "cost_per_1m_in_cached": 18.75,
       "cost_per_1m_out_cached": 1.5,
       "context_window": 200000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -207,7 +207,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 64000,
+      "default_max_tokens": 32000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -219,7 +219,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -231,7 +231,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -243,7 +243,7 @@
       "cost_per_1m_in_cached": 0.2333,
       "cost_per_1m_out_cached": 0.0375,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -255,7 +255,7 @@
       "cost_per_1m_in_cached": 0.2333,
       "cost_per_1m_out_cached": 0.0375,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -267,7 +267,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -279,7 +279,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -291,7 +291,7 @@
       "cost_per_1m_in_cached": 1.625,
       "cost_per_1m_out_cached": 0.31,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -303,7 +303,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -315,7 +315,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 64000,
+      "default_max_tokens": 32000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -327,7 +327,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -339,7 +339,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40960,
-      "default_max_tokens": 40960,
+      "default_max_tokens": 20480,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -351,7 +351,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40960,
-      "default_max_tokens": 40960,
+      "default_max_tokens": 20480,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -363,7 +363,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40960,
-      "default_max_tokens": 0,
+      "default_max_tokens": 4096,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -375,7 +375,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40960,
-      "default_max_tokens": 40960,
+      "default_max_tokens": 20480,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -387,7 +387,7 @@
       "cost_per_1m_in_cached": 0.2333,
       "cost_per_1m_out_cached": 0.0375,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -399,7 +399,7 @@
       "cost_per_1m_in_cached": 0.2333,
       "cost_per_1m_out_cached": 0.0375,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -411,7 +411,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.275,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -423,7 +423,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.5,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -435,7 +435,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.275,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -447,7 +447,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.5,
       "context_window": 1047576,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -459,7 +459,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.09999999999999999,
       "context_window": 1047576,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -471,7 +471,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.024999999999999998,
       "context_window": 1047576,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -483,7 +483,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.075,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -495,7 +495,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.75,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -507,7 +507,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -519,7 +519,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 524288,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -531,7 +531,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 16384,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -543,7 +543,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 65535,
+      "default_max_tokens": 32767,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -555,7 +555,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 163840,
-      "default_max_tokens": 0,
+      "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -567,7 +567,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 163840,
-      "default_max_tokens": 0,
+      "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -579,7 +579,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 96000,
-      "default_max_tokens": 96000,
+      "default_max_tokens": 48000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -587,11 +587,11 @@
       "id": "mistralai/mistral-small-3.1-24b-instruct",
       "model": "Mistral: Mistral Small 3.1 24B",
       "cost_per_1m_in": 0.049999999999999996,
-      "cost_per_1m_out": 0.15,
+      "cost_per_1m_out": 0.09999999999999999,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 0,
+      "context_window": 128000,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -603,7 +603,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -615,7 +615,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -627,7 +627,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 37.5,
       "context_window": 128000,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -639,7 +639,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -651,7 +651,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 64000,
+      "default_max_tokens": 32000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -663,7 +663,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -675,7 +675,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -687,7 +687,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -699,7 +699,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.55,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -711,7 +711,7 @@
       "cost_per_1m_in_cached": 0.18330000000000002,
       "cost_per_1m_out_cached": 0.024999999999999998,
       "context_window": 1048576,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -723,7 +723,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.02,
       "context_window": 1000000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -735,7 +735,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.16,
       "context_window": 131072,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -747,7 +747,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.64,
       "context_window": 32768,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -759,7 +759,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.55,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -771,7 +771,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -783,7 +783,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -795,7 +795,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -807,7 +807,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
-      "default_max_tokens": 0,
+      "default_max_tokens": 26214,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -819,7 +819,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 163840,
-      "default_max_tokens": 163840,
+      "default_max_tokens": 81920,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -831,7 +831,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 7.5,
       "context_window": 200000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -843,7 +843,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -851,11 +851,11 @@
       "id": "meta-llama/llama-3.3-70b-instruct",
       "model": "Meta: Llama 3.3 70B Instruct",
       "cost_per_1m_in": 0.049999999999999996,
-      "cost_per_1m_out": 0.19,
+      "cost_per_1m_out": 0.16999999999999998,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 16384,
+      "context_window": 131000,
+      "default_max_tokens": 65500,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -867,7 +867,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 300000,
-      "default_max_tokens": 5120,
+      "default_max_tokens": 2560,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -879,7 +879,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 5120,
+      "default_max_tokens": 2560,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -891,7 +891,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 300000,
-      "default_max_tokens": 5120,
+      "default_max_tokens": 2560,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -903,7 +903,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 1.25,
       "context_window": 128000,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -915,7 +915,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -927,7 +927,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -939,7 +939,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -951,7 +951,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -963,7 +963,7 @@
       "cost_per_1m_in_cached": 1,
       "cost_per_1m_out_cached": 0.08,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -975,7 +975,7 @@
       "cost_per_1m_in_cached": 1,
       "cost_per_1m_out_cached": 0.08,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -987,7 +987,7 @@
       "cost_per_1m_in_cached": 1,
       "cost_per_1m_out_cached": 0.08,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -999,7 +999,7 @@
       "cost_per_1m_in_cached": 1,
       "cost_per_1m_out_cached": 0.08,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1011,7 +1011,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1023,7 +1023,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1035,7 +1035,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1047,7 +1047,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1059,7 +1059,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 0,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1071,7 +1071,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 65536,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1083,21 +1083,9 @@
       "cost_per_1m_in_cached": 0.0583,
       "cost_per_1m_out_cached": 0.01,
       "context_window": 1000000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
-    },
-    {
-      "id": "meta-llama/llama-3.2-3b-instruct",
-      "model": "Meta: Llama 3.2 3B Instruct",
-      "cost_per_1m_in": 0.01,
-      "cost_per_1m_out": 0.02,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 16384,
-      "can_reason": false,
-      "supports_attachments": false
     },
     {
       "id": "meta-llama/llama-3.2-11b-vision-instruct",
@@ -1107,9 +1095,21 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": true
+    },
+    {
+      "id": "meta-llama/llama-3.2-3b-instruct",
+      "model": "Meta: Llama 3.2 3B Instruct",
+      "cost_per_1m_in": 0.003,
+      "cost_per_1m_out": 0.006,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 20000,
+      "default_max_tokens": 10000,
+      "can_reason": false,
+      "supports_attachments": false
     },
     {
       "id": "qwen/qwen-2.5-72b-instruct",
@@ -1119,7 +1119,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1131,7 +1131,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1143,7 +1143,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 2000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1155,7 +1155,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 2000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1167,7 +1167,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1179,7 +1179,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 65536,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1191,21 +1191,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 1.25,
       "context_window": 128000,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": true
-    },
-    {
-      "id": "meta-llama/llama-3.1-8b-instruct",
-      "model": "Meta: Llama 3.1 8B Instruct",
-      "cost_per_1m_in": 0.016,
-      "cost_per_1m_out": 0.023,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131000,
-      "default_max_tokens": 131000,
-      "can_reason": false,
-      "supports_attachments": false
     },
     {
       "id": "meta-llama/llama-3.1-405b-instruct",
@@ -1215,7 +1203,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1227,7 +1215,19 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "meta-llama/llama-3.1-8b-instruct",
+      "model": "Meta: Llama 3.1 8B Instruct",
+      "cost_per_1m_in": 0.016,
+      "cost_per_1m_out": 0.020999999999999998,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131000,
+      "default_max_tokens": 65500,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1235,11 +1235,11 @@
       "id": "mistralai/mistral-nemo",
       "model": "Mistral: Mistral Nemo",
       "cost_per_1m_in": 0.01,
-      "cost_per_1m_out": 0.013000000000000001,
+      "cost_per_1m_out": 0.011,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 65536,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1251,7 +1251,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.075,
       "context_window": 128000,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1263,7 +1263,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.075,
       "context_window": 128000,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1275,7 +1275,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1287,9 +1287,21 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
+    },
+    {
+      "id": "mistralai/mistral-7b-instruct-v0.3",
+      "model": "Mistral: Mistral 7B Instruct v0.3",
+      "cost_per_1m_in": 0.028,
+      "cost_per_1m_out": 0.054,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
     },
     {
       "id": "mistralai/mistral-7b-instruct:free",
@@ -1299,7 +1311,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1311,19 +1323,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 16384,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "mistralai/mistral-7b-instruct-v0.3",
-      "model": "Mistral: Mistral 7B Instruct v0.3",
-      "cost_per_1m_in": 0.028,
-      "cost_per_1m_out": 0.054,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1335,7 +1335,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1347,7 +1347,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1359,31 +1359,7 @@
       "cost_per_1m_in_cached": 0.1583,
       "cost_per_1m_out_cached": 0.01875,
       "context_window": 1000000,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "openai/gpt-4o",
-      "model": "OpenAI: GPT-4o",
-      "cost_per_1m_in": 2.5,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 1.25,
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "openai/gpt-4o:extended",
-      "model": "OpenAI: GPT-4o (extended)",
-      "cost_per_1m_in": 6,
-      "cost_per_1m_out": 18,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 64000,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1395,7 +1371,31 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "openai/gpt-4o",
+      "model": "OpenAI: GPT-4o",
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 1.25,
+      "context_window": 128000,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "openai/gpt-4o:extended",
+      "model": "OpenAI: GPT-4o (extended)",
+      "cost_per_1m_in": 6,
+      "cost_per_1m_out": 18,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 32000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1407,7 +1407,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 8192,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1419,7 +1419,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 8192,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1431,21 +1431,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 65536,
-      "default_max_tokens": 0,
+      "default_max_tokens": 6553,
       "can_reason": false,
       "supports_attachments": false
-    },
-    {
-      "id": "google/gemini-pro-1.5",
-      "model": "Google: Gemini 1.5 Pro",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 2000000,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4-turbo",
@@ -1455,6 +1443,18 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
+      "default_max_tokens": 2048,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "google/gemini-pro-1.5",
+      "model": "Google: Gemini 1.5 Pro",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 2000000,
       "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
@@ -1467,7 +1467,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 2000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1479,7 +1479,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 2000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1491,7 +1491,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 2000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1503,7 +1503,7 @@
       "cost_per_1m_in_cached": 0.3,
       "cost_per_1m_out_cached": 0.03,
       "context_window": 200000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1515,7 +1515,7 @@
       "cost_per_1m_in_cached": 0.3,
       "cost_per_1m_out_cached": 0.03,
       "context_window": 200000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1527,7 +1527,7 @@
       "cost_per_1m_in_cached": 18.75,
       "cost_per_1m_out_cached": 1.5,
       "context_window": 200000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1539,7 +1539,7 @@
       "cost_per_1m_in_cached": 18.75,
       "cost_per_1m_out_cached": 1.5,
       "context_window": 200000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1551,7 +1551,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1563,7 +1563,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1575,7 +1575,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 2000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1587,7 +1587,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 0,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1599,7 +1599,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 4095,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1611,19 +1611,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4096,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "mistralai/mistral-medium",
-      "model": "Mistral Medium",
-      "cost_per_1m_in": 2.75,
-      "cost_per_1m_out": 8.1,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1635,7 +1623,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1647,7 +1635,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 0,
+      "default_max_tokens": 3276,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1659,7 +1647,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 16384,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1671,7 +1659,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1683,7 +1671,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 2824,
-      "default_max_tokens": 0,
+      "default_max_tokens": 282,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1695,7 +1683,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 16385,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1707,7 +1695,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 8191,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1719,7 +1707,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 8191,
-      "default_max_tokens": 4096,
+      "default_max_tokens": 2048,
       "can_reason": false,
       "supports_attachments": false
     }

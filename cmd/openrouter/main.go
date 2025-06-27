@@ -167,7 +167,9 @@ func main() {
 			SupportsImages:     supportsImages,
 		}
 		if model.TopProvider.MaxCompletionTokens != nil {
-			m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens
+			m.DefaultMaxTokens = int64(*model.TopProvider.MaxCompletionTokens / 2)
+		} else {
+			m.DefaultMaxTokens = model.ContextLength / 10
 		}
 		openRouterProvider.Models = append(openRouterProvider.Models, m)
 	}
