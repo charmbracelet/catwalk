@@ -4,23 +4,9 @@
   "type": "openai",
   "api_key": "$OPENAI_API_KEY",
   "api_endpoint": "$OPENAI_API_ENDPOINT",
-  "default_large_model_id": "codex-mini-latest",
+  "default_large_model_id": "o4-mini",
   "default_small_model_id": "gpt-4o",
   "models": [
-    {
-      "id": "codex-mini-latest",
-      "model": "Codex Mini",
-      "cost_per_1m_in": 1.5,
-      "cost_per_1m_out": 6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.375,
-      "context_window": 200000,
-      "default_max_tokens": 50000,
-      "can_reason": true,
-      "has_reasoning_effort": true,
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
     {
       "id": "o4-mini",
       "model": "o4 Mini",
