@@ -8,6 +8,20 @@
   "default_small_model_id": "grok-3-mini",
   "models": [
     {
+      "id": "grok-4",
+      "model": "Grok 4",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.75,
+      "context_window": 256000,
+      "default_max_tokens": 20000,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "grok-3-mini",
       "model": "Grok 3 Mini",
       "cost_per_1m_in": 0.3,
