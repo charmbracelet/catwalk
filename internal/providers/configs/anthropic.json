@@ -9,7 +9,7 @@
   "models": [
     {
       "id": "claude-opus-4-20250514",
-      "model": "Claude Opus 4",
+      "name": "Claude Opus 4",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 75,
       "cost_per_1m_in_cached": 18.75,
@@ -21,7 +21,7 @@
     },
     {
       "id": "claude-sonnet-4-20250514",
-      "model": "Claude Sonnet 4",
+      "name": "Claude Sonnet 4",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -33,7 +33,7 @@
     },
     {
       "id": "claude-3-7-sonnet-20250219",
-      "model": "Claude 3.7 Sonnet",
+      "name": "Claude 3.7 Sonnet",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -45,7 +45,7 @@
     },
     {
       "id": "claude-3-5-haiku-20241022",
-      "model": "Claude 3.5 Haiku",
+      "name": "Claude 3.5 Haiku",
       "cost_per_1m_in": 0.7999999999999999,
       "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 1,
@@ -57,7 +57,7 @@
     },
     {
       "id": "claude-3-5-sonnet-20240620",
-      "model": "Claude 3.5 Sonnet (Old)",
+      "name": "Claude 3.5 Sonnet (Old)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -69,7 +69,7 @@
     },
     {
       "id": "claude-3-5-sonnet-20241022",
-      "model": "Claude 3.5 Sonnet (New)",
+      "name": "Claude 3.5 Sonnet (New)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
