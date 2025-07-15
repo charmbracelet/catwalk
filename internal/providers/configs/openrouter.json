@@ -5,7 +5,7 @@
   "api_endpoint": "https://openrouter.ai/api/v1",
   "type": "openai",
   "default_large_model_id": "anthropic/claude-sonnet-4",
-  "default_small_model_id": "anthropic/claude-haiku-3.5",
+  "default_small_model_id": "anthropic/claude-3.5-haiku",
   "models": [
     {
       "id": "moonshotai/kimi-k2:free",
