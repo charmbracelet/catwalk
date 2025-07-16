@@ -139,7 +139,7 @@ func main() {
 		APIEndpoint:         "https://openrouter.ai/api/v1",
 		Type:                provider.TypeOpenAI,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4",
-		DefaultSmallModelID: "anthropic/claude-haiku-3.5",
+		DefaultSmallModelID: "anthropic/claude-3.5-haiku",
 		Models:              []provider.Model{},
 	}
 
