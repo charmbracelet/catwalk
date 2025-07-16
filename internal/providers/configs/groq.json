@@ -1,0 +1,19 @@
+{
+  "name": "Groq",
+  "id": "groq",
+  "api_key": "$GROQ_API_KEY",
+  "api_endpoint": "https://api.groq.com/openai/v1",
+  "type": "openai",
+  "default_large_model_id": "moonshotai/kimi-k2-instruct",
+  "default_small_model_id": "moonshotai/kimi-k2-instruct",
+  "models": [
+    {
+      "id": "moonshotai/kimi-k2-instruct",
+      "model": "Kimi K2",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 3,
+      "context_window": 131072,
+      "default_max_tokens": 10000
+    }
+  ]
+}
