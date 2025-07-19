@@ -1,5 +1,5 @@
 // Package provider provides types and constants for AI providers.
-package provider
+package fur
 
 // Type represents the type of AI provider.
 type Type string

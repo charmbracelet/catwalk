@@ -1,5 +1,5 @@
 // Package main provides a command-line tool to fetch models from OpenRouter
-// and generate a configuration file for the provider.
+// and generate a configuration file for thefur.
 package main
 
 import (
@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/charmbracelet/fur/pkg/provider"
+	"github.com/charmbracelet/fur/pkg/fur"
 )
 
 // Model represents the complete model configuration.
@@ -132,15 +132,15 @@ func main() {
 		log.Fatal("Error fetching OpenRouter models:", err)
 	}
 
-	openRouterProvider := provider.Provider{
+	openRouterProvider := fur.Provider{
 		Name:                "OpenRouter",
 		ID:                  "openrouter",
 		APIKey:              "$OPENROUTER_API_KEY",
 		APIEndpoint:         "https://openrouter.ai/api/v1",
-		Type:                provider.TypeOpenAI,
+		Type:                fur.TypeOpenAI,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4",
 		DefaultSmallModelID: "anthropic/claude-3.5-haiku",
-		Models:              []provider.Model{},
+		Models:              []fur.Model{},
 	}
 
 	for _, model := range modelsResp.Data {
@@ -155,7 +155,7 @@ func main() {
 		canReason := slices.Contains(model.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
-		m := provider.Model{
+		m := fur.Model{
 			ID:                 model.ID,
 			Name:               model.Name,
 			CostPer1MIn:        pricing.CostPer1MIn,
