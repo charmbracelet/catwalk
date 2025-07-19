@@ -1,4 +1,4 @@
-// Package provider provides types and constants for AI providers.
+// Package fur provides types and constants for AI providers and models.
 package fur
 
 // Type represents the type of AI provider.

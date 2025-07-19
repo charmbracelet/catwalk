@@ -1,4 +1,3 @@
-// Package client provides a client for interacting with the fur service.
 package fur
 
 import (
