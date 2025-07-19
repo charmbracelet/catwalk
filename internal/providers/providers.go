@@ -33,6 +33,9 @@ var xAIConfig []byte
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
+//go:embed configs/groq.json
+var groqConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() fur.Provider
 
@@ -44,6 +47,7 @@ var providerRegistry = []ProviderFunc{
 	bedrockProvider,
 	vertexAIProvider,
 	xAIProvider,
+	groqProvider,
 	openRouterProvider,
 }
 
@@ -95,4 +99,8 @@ func xAIProvider() fur.Provider {
 
 func openRouterProvider() fur.Provider {
 	return loadProviderFromConfig(openRouterConfig)
+}
+
+func groqProvider() fur.Provider {
+	return loadProviderFromConfig(groqConfig)
 }
