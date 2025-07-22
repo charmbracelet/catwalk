@@ -1,3 +1,3 @@
-# Fur
+# Catwalk
 
-Database for _crush_ compatible models
+Database for _Crush_ compatible models
