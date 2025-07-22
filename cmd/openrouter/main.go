@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/charmbracelet/fur/pkg/fur"
+	"github.com/charmbracelet/fur/pkg/catwalk"
 )
 
 // Model represents the complete model configuration.
@@ -132,15 +132,15 @@ func main() {
 		log.Fatal("Error fetching OpenRouter models:", err)
 	}
 
-	openRouterProvider := fur.Provider{
+	openRouterProvider := catwalk.Provider{
 		Name:                "OpenRouter",
 		ID:                  "openrouter",
 		APIKey:              "$OPENROUTER_API_KEY",
 		APIEndpoint:         "https://openrouter.ai/api/v1",
-		Type:                fur.TypeOpenAI,
+		Type:                catwalk.TypeOpenAI,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4",
 		DefaultSmallModelID: "anthropic/claude-3.5-haiku",
-		Models:              []fur.Model{},
+		Models:              []catwalk.Model{},
 	}
 
 	for _, model := range modelsResp.Data {
@@ -155,7 +155,7 @@ func main() {
 		canReason := slices.Contains(model.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
-		m := fur.Model{
+		m := catwalk.Model{
 			ID:                 model.ID,
 			Name:               model.Name,
 			CostPer1MIn:        pricing.CostPer1MIn,

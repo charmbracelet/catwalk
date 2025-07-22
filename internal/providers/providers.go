@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/charmbracelet/fur/pkg/fur"
+	"github.com/charmbracelet/fur/pkg/catwalk"
 )
 
 //go:embed configs/openai.json
@@ -37,7 +37,7 @@ var bedrockConfig []byte
 var groqConfig []byte
 
 // ProviderFunc is a function that returns a Provider.
-type ProviderFunc func() fur.Provider
+type ProviderFunc func() catwalk.Provider
 
 var providerRegistry = []ProviderFunc{
 	anthropicProvider,
@@ -52,55 +52,55 @@ var providerRegistry = []ProviderFunc{
 }
 
 // GetAll returns all registered providers.
-func GetAll() []fur.Provider {
-	providers := make([]fur.Provider, 0, len(providerRegistry))
+func GetAll() []catwalk.Provider {
+	providers := make([]catwalk.Provider, 0, len(providerRegistry))
 	for _, providerFunc := range providerRegistry {
 		providers = append(providers, providerFunc())
 	}
 	return providers
 }
 
-func loadProviderFromConfig(configData []byte) fur.Provider {
-	var p fur.Provider
+func loadProviderFromConfig(configData []byte) catwalk.Provider {
+	var p catwalk.Provider
 	if err := json.Unmarshal(configData, &p); err != nil {
 		log.Printf("Error loading provider config: %v", err)
-		return fur.Provider{}
+		return catwalk.Provider{}
 	}
 	return p
 }
 
-func openAIProvider() fur.Provider {
+func openAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(openAIConfig)
 }
 
-func anthropicProvider() fur.Provider {
+func anthropicProvider() catwalk.Provider {
 	return loadProviderFromConfig(anthropicConfig)
 }
 
-func geminiProvider() fur.Provider {
+func geminiProvider() catwalk.Provider {
 	return loadProviderFromConfig(geminiConfig)
 }
 
-func azureProvider() fur.Provider {
+func azureProvider() catwalk.Provider {
 	return loadProviderFromConfig(azureConfig)
 }
 
-func bedrockProvider() fur.Provider {
+func bedrockProvider() catwalk.Provider {
 	return loadProviderFromConfig(bedrockConfig)
 }
 
-func vertexAIProvider() fur.Provider {
+func vertexAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(vertexAIConfig)
 }
 
-func xAIProvider() fur.Provider {
+func xAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(xAIConfig)
 }
 
-func openRouterProvider() fur.Provider {
+func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
 }
 
-func groqProvider() fur.Provider {
+func groqProvider() catwalk.Provider {
 	return loadProviderFromConfig(groqConfig)
 }

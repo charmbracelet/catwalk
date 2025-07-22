@@ -1,4 +1,4 @@
-package fur
+package catwalk
 
 import (
 	"encoding/json"

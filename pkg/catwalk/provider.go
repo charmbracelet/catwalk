@@ -1,5 +1,4 @@
-// Package fur provides types and constants for AI providers and models.
-package fur
+package catwalk
 
 // Type represents the type of AI provider.
 type Type string
