@@ -1,4 +1,4 @@
-module github.com/charmbracelet/fur
+module github.com/charmbracelet/catwalk
 
 go 1.24.3
 

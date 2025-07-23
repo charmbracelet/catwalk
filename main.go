@@ -8,14 +8,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/charmbracelet/fur/internal/providers"
+	"github.com/charmbracelet/catwalk/internal/providers"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 var counter = promauto.NewCounter(prometheus.CounterOpts{
-	Namespace: "fur",
+	Namespace: "catwalk",
 	Subsystem: "providers",
 	Name:      "requests_total",
 	Help:      "Total number of requests to the providers endpoint",

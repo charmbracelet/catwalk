@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/charmbracelet/fur/pkg/provider"
+	"github.com/charmbracelet/catwalk/pkg/provider"
 )
 
 //go:embed configs/openai.json
