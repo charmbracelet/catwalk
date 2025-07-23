@@ -14,7 +14,7 @@ before:
     - go mod tidy
 
 builds:
-  - binary: fur
+  - binary: catwalk
     env:
       - CGO_ENABLED=0
     main: .

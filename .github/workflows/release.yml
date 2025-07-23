@@ -33,6 +33,6 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           inputs: |
             {
-              "app": "fur",
-              "image": "ghcr.io/charmbracelet/fur:${{ github.ref_name }}"
+              "app": "catwalk",
+              "image": "ghcr.io/charmbracelet/catwalk:${{ github.ref_name }}"
             }

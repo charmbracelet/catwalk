@@ -1,4 +1,4 @@
 FROM alpine
-COPY fur /usr/bin/fur
+COPY catwalk /usr/bin/catwalk
 EXPOSE 8080
-CMD ["/usr/bin/fur"]
+CMD ["/usr/bin/catwalk"]

@@ -9,16 +9,16 @@ import (
 
 const defaultURL = "http://localhost:8080"
 
-// Client represents a client for the fur service.
+// Client represents a client for the catwalk service.
 type Client struct {
 	baseURL    string
 	httpClient *http.Client
 }
 
 // New creates a new client instance
-// Uses FUR_URL environment variable or falls back to localhost:8080.
+// Uses CATWALK_URL environment variable or falls back to localhost:8080.
 func New() *Client {
-	baseURL := os.Getenv("FUR_URL")
+	baseURL := os.Getenv("CATWALK_URL")
 	if baseURL == "" {
 		baseURL = defaultURL
 	}

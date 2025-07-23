@@ -1,6 +1,7 @@
-# Fur - AI Provider Database
+# Catwalk - AI Provider Database
 
 ## Build/Test Commands
+
 - `go build` - Build the main HTTP server
 - `go build ./cmd/openrouter` - Build OpenRouter config generator
 - `go test ./...` - Run all tests
@@ -9,6 +10,7 @@
 - `go run ./cmd/openrouter/main.go` - Generate OpenRouter config
 
 ## Code Style Guidelines
+
 - Package comments: Start with "Package name provides/represents..."
 - Imports: Standard library first, then third-party, then local packages
 - Error handling: Use `fmt.Errorf("message: %w", err)` for wrapping

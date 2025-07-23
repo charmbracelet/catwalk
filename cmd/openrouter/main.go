@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/charmbracelet/fur/pkg/catwalk"
+	"github.com/charmbracelet/catwalk/pkg/catwalk"
 )
 
 // Model represents the complete model configuration.
