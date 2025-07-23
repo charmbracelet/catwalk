@@ -1,5 +1,5 @@
 // Package main provides a command-line tool to fetch models from OpenRouter
-// and generate a configuration file for thefur.
+// and generate a configuration file for the provider.
 package main
 
 import (
