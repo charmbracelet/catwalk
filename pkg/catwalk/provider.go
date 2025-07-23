@@ -1,5 +1,4 @@
-// Package provider provides types and constants for AI providers.
-package provider
+package catwalk
 
 // Type represents the type of AI provider.
 type Type string
@@ -47,7 +46,7 @@ type Provider struct {
 // Model represents an AI model configuration.
 type Model struct {
 	ID                     string  `json:"id"`
-	Name                   string  `json:"model"`
+	Name                   string  `json:"name"`
 	CostPer1MIn            float64 `json:"cost_per_1m_in"`
 	CostPer1MOut           float64 `json:"cost_per_1m_out"`
 	CostPer1MInCached      float64 `json:"cost_per_1m_in_cached"`

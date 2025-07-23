@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/charmbracelet/catwalk/pkg/provider"
+	"github.com/charmbracelet/catwalk/pkg/catwalk"
 )
 
 //go:embed configs/openai.json
@@ -37,7 +37,7 @@ var bedrockConfig []byte
 var groqConfig []byte
 
 // ProviderFunc is a function that returns a Provider.
-type ProviderFunc func() provider.Provider
+type ProviderFunc func() catwalk.Provider
 
 var providerRegistry = []ProviderFunc{
 	anthropicProvider,
@@ -52,55 +52,55 @@ var providerRegistry = []ProviderFunc{
 }
 
 // GetAll returns all registered providers.
-func GetAll() []provider.Provider {
-	providers := make([]provider.Provider, 0, len(providerRegistry))
+func GetAll() []catwalk.Provider {
+	providers := make([]catwalk.Provider, 0, len(providerRegistry))
 	for _, providerFunc := range providerRegistry {
 		providers = append(providers, providerFunc())
 	}
 	return providers
 }
 
-func loadProviderFromConfig(configData []byte) provider.Provider {
-	var p provider.Provider
+func loadProviderFromConfig(configData []byte) catwalk.Provider {
+	var p catwalk.Provider
 	if err := json.Unmarshal(configData, &p); err != nil {
 		log.Printf("Error loading provider config: %v", err)
-		return provider.Provider{}
+		return catwalk.Provider{}
 	}
 	return p
 }
 
-func openAIProvider() provider.Provider {
+func openAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(openAIConfig)
 }
 
-func anthropicProvider() provider.Provider {
+func anthropicProvider() catwalk.Provider {
 	return loadProviderFromConfig(anthropicConfig)
 }
 
-func geminiProvider() provider.Provider {
+func geminiProvider() catwalk.Provider {
 	return loadProviderFromConfig(geminiConfig)
 }
 
-func azureProvider() provider.Provider {
+func azureProvider() catwalk.Provider {
 	return loadProviderFromConfig(azureConfig)
 }
 
-func bedrockProvider() provider.Provider {
+func bedrockProvider() catwalk.Provider {
 	return loadProviderFromConfig(bedrockConfig)
 }
 
-func vertexAIProvider() provider.Provider {
+func vertexAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(vertexAIConfig)
 }
 
-func xAIProvider() provider.Provider {
+func xAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(xAIConfig)
 }
 
-func openRouterProvider() provider.Provider {
+func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
 }
 
-func groqProvider() provider.Provider {
+func groqProvider() catwalk.Provider {
 	return loadProviderFromConfig(groqConfig)
 }

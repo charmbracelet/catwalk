@@ -9,7 +9,7 @@
   "models": [
     {
       "id": "codex-mini-latest",
-      "model": "Codex Mini",
+      "name": "Codex Mini",
       "cost_per_1m_in": 1.5,
       "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
@@ -23,7 +23,7 @@
     },
     {
       "id": "o4-mini",
-      "model": "o4 Mini",
+      "name": "o4 Mini",
       "cost_per_1m_in": 1.1,
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
@@ -37,7 +37,7 @@
     },
     {
       "id": "o3",
-      "model": "o3",
+      "name": "o3",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 8,
       "cost_per_1m_in_cached": 0,
@@ -51,7 +51,7 @@
     },
     {
       "id": "o3-pro",
-      "model": "o3 Pro",
+      "name": "o3 Pro",
       "cost_per_1m_in": 20,
       "cost_per_1m_out": 80,
       "cost_per_1m_in_cached": 0,
@@ -65,7 +65,7 @@
     },
     {
       "id": "gpt-4.1",
-      "model": "GPT-4.1",
+      "name": "GPT-4.1",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 8,
       "cost_per_1m_in_cached": 0,
@@ -77,7 +77,7 @@
     },
     {
       "id": "gpt-4.1-mini",
-      "model": "GPT-4.1 Mini",
+      "name": "GPT-4.1 Mini",
       "cost_per_1m_in": 0.39999999999999997,
       "cost_per_1m_out": 1.5999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -89,7 +89,7 @@
     },
     {
       "id": "gpt-4.1-nano",
-      "model": "GPT-4.1 Nano",
+      "name": "GPT-4.1 Nano",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0,
@@ -101,7 +101,7 @@
     },
     {
       "id": "gpt-4.5-preview",
-      "model": "GPT-4.5 (Preview)",
+      "name": "GPT-4.5 (Preview)",
       "cost_per_1m_in": 75,
       "cost_per_1m_out": 150,
       "cost_per_1m_in_cached": 0,
@@ -113,7 +113,7 @@
     },
     {
       "id": "o3-mini",
-      "model": "o3 Mini",
+      "name": "o3 Mini",
       "cost_per_1m_in": 1.1,
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
@@ -127,7 +127,7 @@
     },
     {
       "id": "gpt-4o",
-      "model": "GPT-4o",
+      "name": "GPT-4o",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -139,7 +139,7 @@
     },
     {
       "id": "gpt-4o-mini",
-      "model": "GPT-4o-mini",
+      "name": "GPT-4o-mini",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,

@@ -9,7 +9,7 @@
   "models": [
     {
       "id": "gemini-2.5-pro",
-      "model": "Gemini 2.5 Pro",
+      "name": "Gemini 2.5 Pro",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 1.625,
@@ -21,7 +21,7 @@
     },
     {
       "id": "gemini-2.5-flash",
-      "model": "Gemini 2.5 Flash",
+      "name": "Gemini 2.5 Flash",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 2.5,
       "cost_per_1m_in_cached": 0.3833,

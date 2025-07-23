@@ -9,7 +9,7 @@
   "models": [
     {
       "id": "qwen/qwen3-coder",
-      "model": "Qwen: Qwen3 Coder ",
+      "name": "Qwen: Qwen3 Coder ",
       "cost_per_1m_in": 1,
       "cost_per_1m_out": 5,
       "cost_per_1m_in_cached": 0,
@@ -22,7 +22,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-lite",
-      "model": "Google: Gemini 2.5 Flash Lite",
+      "name": "Google: Gemini 2.5 Flash Lite",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0.18330000000000002,
@@ -35,7 +35,7 @@
     },
     {
       "id": "qwen/qwen3-235b-a22b-07-25",
-      "model": "Qwen: Qwen3 235B A22B 2507",
+      "name": "Qwen: Qwen3 235B A22B 2507",
       "cost_per_1m_in": 0.12,
       "cost_per_1m_out": 0.59,
       "cost_per_1m_in_cached": 0,
@@ -48,7 +48,7 @@
     },
     {
       "id": "moonshotai/kimi-k2:free",
-      "model": "MoonshotAI: Kimi K2 (free)",
+      "name": "MoonshotAI: Kimi K2 (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -61,7 +61,7 @@
     },
     {
       "id": "moonshotai/kimi-k2",
-      "model": "MoonshotAI: Kimi K2",
+      "name": "MoonshotAI: Kimi K2",
       "cost_per_1m_in": 0.14,
       "cost_per_1m_out": 2.4899999999999998,
       "cost_per_1m_in_cached": 0,
@@ -74,7 +74,7 @@
     },
     {
       "id": "mistralai/devstral-medium",
-      "model": "Mistral: Devstral Medium",
+      "name": "Mistral: Devstral Medium",
       "cost_per_1m_in": 0.39999999999999997,
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
@@ -87,7 +87,7 @@
     },
     {
       "id": "mistralai/devstral-small",
-      "model": "Mistral: Devstral Small 1.1",
+      "name": "Mistral: Devstral Small 1.1",
       "cost_per_1m_in": 0.07,
       "cost_per_1m_out": 0.28,
       "cost_per_1m_in_cached": 0,
@@ -100,7 +100,7 @@
     },
     {
       "id": "x-ai/grok-4",
-      "model": "xAI: Grok 4",
+      "name": "xAI: Grok 4",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 0,
@@ -113,7 +113,7 @@
     },
     {
       "id": "mistralai/mistral-small-3.2-24b-instruct:free",
-      "model": "Mistral: Mistral Small 3.2 24B (free)",
+      "name": "Mistral: Mistral Small 3.2 24B (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -126,7 +126,7 @@
     },
     {
       "id": "mistralai/mistral-small-3.2-24b-instruct",
-      "model": "Mistral: Mistral Small 3.2 24B",
+      "name": "Mistral: Mistral Small 3.2 24B",
       "cost_per_1m_in": 0.049999999999999996,
       "cost_per_1m_out": 0.09999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -139,7 +139,7 @@
     },
     {
       "id": "minimax/minimax-m1",
-      "model": "MiniMax: MiniMax M1",
+      "name": "MiniMax: MiniMax M1",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 1.6500000000000001,
       "cost_per_1m_in_cached": 0,
@@ -152,7 +152,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-lite-preview-06-17",
-      "model": "Google: Gemini 2.5 Flash Lite Preview 06-17",
+      "name": "Google: Gemini 2.5 Flash Lite Preview 06-17",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0.18330000000000002,
@@ -165,7 +165,7 @@
     },
     {
       "id": "google/gemini-2.5-flash",
-      "model": "Google: Gemini 2.5 Flash",
+      "name": "Google: Gemini 2.5 Flash",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 2.5,
       "cost_per_1m_in_cached": 0.3833,
@@ -178,7 +178,7 @@
     },
     {
       "id": "google/gemini-2.5-pro",
-      "model": "Google: Gemini 2.5 Pro",
+      "name": "Google: Gemini 2.5 Pro",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 1.625,
@@ -191,7 +191,7 @@
     },
     {
       "id": "openai/o3-pro",
-      "model": "OpenAI: o3 Pro",
+      "name": "OpenAI: o3 Pro",
       "cost_per_1m_in": 20,
       "cost_per_1m_out": 80,
       "cost_per_1m_in_cached": 0,
@@ -204,7 +204,7 @@
     },
     {
       "id": "x-ai/grok-3-mini",
-      "model": "xAI: Grok 3 Mini",
+      "name": "xAI: Grok 3 Mini",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 0.5,
       "cost_per_1m_in_cached": 0,
@@ -217,7 +217,7 @@
     },
     {
       "id": "x-ai/grok-3",
-      "model": "xAI: Grok 3",
+      "name": "xAI: Grok 3",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 0,
@@ -230,7 +230,7 @@
     },
     {
       "id": "mistralai/magistral-small-2506",
-      "model": "Mistral: Magistral Small 2506",
+      "name": "Mistral: Magistral Small 2506",
       "cost_per_1m_in": 0.5,
       "cost_per_1m_out": 1.5,
       "cost_per_1m_in_cached": 0,
@@ -243,7 +243,7 @@
     },
     {
       "id": "mistralai/magistral-medium-2506",
-      "model": "Mistral: Magistral Medium 2506",
+      "name": "Mistral: Magistral Medium 2506",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 5,
       "cost_per_1m_in_cached": 0,
@@ -256,7 +256,7 @@
     },
     {
       "id": "mistralai/magistral-medium-2506:thinking",
-      "model": "Mistral: Magistral Medium 2506 (thinking)",
+      "name": "Mistral: Magistral Medium 2506 (thinking)",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 5,
       "cost_per_1m_in_cached": 0,
@@ -269,7 +269,7 @@
     },
     {
       "id": "google/gemini-2.5-pro-preview",
-      "model": "Google: Gemini 2.5 Pro Preview 06-05",
+      "name": "Google: Gemini 2.5 Pro Preview 06-05",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 1.625,
@@ -282,7 +282,7 @@
     },
     {
       "id": "deepseek/deepseek-r1-0528",
-      "model": "DeepSeek: R1 0528",
+      "name": "DeepSeek: R1 0528",
       "cost_per_1m_in": 0.272,
       "cost_per_1m_out": 0.272,
       "cost_per_1m_in_cached": 0,
@@ -295,7 +295,7 @@
     },
     {
       "id": "anthropic/claude-opus-4",
-      "model": "Anthropic: Claude Opus 4",
+      "name": "Anthropic: Claude Opus 4",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 75,
       "cost_per_1m_in_cached": 18.75,
@@ -308,7 +308,7 @@
     },
     {
       "id": "anthropic/claude-sonnet-4",
-      "model": "Anthropic: Claude Sonnet 4",
+      "name": "Anthropic: Claude Sonnet 4",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -321,7 +321,7 @@
     },
     {
       "id": "mistralai/devstral-small-2505:free",
-      "model": "Mistral: Devstral Small 2505 (free)",
+      "name": "Mistral: Devstral Small 2505 (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -334,7 +334,7 @@
     },
     {
       "id": "mistralai/devstral-small-2505",
-      "model": "Mistral: Devstral Small 2505",
+      "name": "Mistral: Devstral Small 2505",
       "cost_per_1m_in": 0.03,
       "cost_per_1m_out": 0.03,
       "cost_per_1m_in_cached": 0,
@@ -347,7 +347,7 @@
     },
     {
       "id": "openai/codex-mini",
-      "model": "OpenAI: Codex Mini",
+      "name": "OpenAI: Codex Mini",
       "cost_per_1m_in": 1.5,
       "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
@@ -360,7 +360,7 @@
     },
     {
       "id": "mistralai/mistral-medium-3",
-      "model": "Mistral: Mistral Medium 3",
+      "name": "Mistral: Mistral Medium 3",
       "cost_per_1m_in": 0.39999999999999997,
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
@@ -373,7 +373,7 @@
     },
     {
       "id": "google/gemini-2.5-pro-preview-05-06",
-      "model": "Google: Gemini 2.5 Pro Preview 05-06",
+      "name": "Google: Gemini 2.5 Pro Preview 05-06",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 1.625,
@@ -386,7 +386,7 @@
     },
     {
       "id": "arcee-ai/caller-large",
-      "model": "Arcee AI: Caller Large",
+      "name": "Arcee AI: Caller Large",
       "cost_per_1m_in": 0.55,
       "cost_per_1m_out": 0.85,
       "cost_per_1m_in_cached": 0,
@@ -399,7 +399,7 @@
     },
     {
       "id": "arcee-ai/virtuoso-large",
-      "model": "Arcee AI: Virtuoso Large",
+      "name": "Arcee AI: Virtuoso Large",
       "cost_per_1m_in": 0.75,
       "cost_per_1m_out": 1.2,
       "cost_per_1m_in_cached": 0,
@@ -412,7 +412,7 @@
     },
     {
       "id": "arcee-ai/virtuoso-medium-v2",
-      "model": "Arcee AI: Virtuoso Medium V2",
+      "name": "Arcee AI: Virtuoso Medium V2",
       "cost_per_1m_in": 0.5,
       "cost_per_1m_out": 0.7999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -425,7 +425,7 @@
     },
     {
       "id": "qwen/qwen3-4b:free",
-      "model": "Qwen: Qwen3 4B (free)",
+      "name": "Qwen: Qwen3 4B (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -438,7 +438,7 @@
     },
     {
       "id": "qwen/qwen3-30b-a3b",
-      "model": "Qwen: Qwen3 30B A3B",
+      "name": "Qwen: Qwen3 30B A3B",
       "cost_per_1m_in": 0.08,
       "cost_per_1m_out": 0.29,
       "cost_per_1m_in_cached": 0,
@@ -451,7 +451,7 @@
     },
     {
       "id": "qwen/qwen3-14b",
-      "model": "Qwen: Qwen3 14B",
+      "name": "Qwen: Qwen3 14B",
       "cost_per_1m_in": 0.06,
       "cost_per_1m_out": 0.24,
       "cost_per_1m_in_cached": 0,
@@ -464,7 +464,7 @@
     },
     {
       "id": "qwen/qwen3-32b",
-      "model": "Qwen: Qwen3 32B",
+      "name": "Qwen: Qwen3 32B",
       "cost_per_1m_in": 0.027,
       "cost_per_1m_out": 0.027,
       "cost_per_1m_in_cached": 0,
@@ -477,7 +477,7 @@
     },
     {
       "id": "qwen/qwen3-235b-a22b:free",
-      "model": "Qwen: Qwen3 235B A22B (free)",
+      "name": "Qwen: Qwen3 235B A22B (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -490,7 +490,7 @@
     },
     {
       "id": "qwen/qwen3-235b-a22b",
-      "model": "Qwen: Qwen3 235B A22B",
+      "name": "Qwen: Qwen3 235B A22B",
       "cost_per_1m_in": 0.13,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -503,7 +503,7 @@
     },
     {
       "id": "openai/o4-mini-high",
-      "model": "OpenAI: o4 Mini High",
+      "name": "OpenAI: o4 Mini High",
       "cost_per_1m_in": 1.1,
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
@@ -516,7 +516,7 @@
     },
     {
       "id": "openai/o3",
-      "model": "OpenAI: o3",
+      "name": "OpenAI: o3",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 8,
       "cost_per_1m_in_cached": 0,
@@ -529,7 +529,7 @@
     },
     {
       "id": "openai/o4-mini",
-      "model": "OpenAI: o4 Mini",
+      "name": "OpenAI: o4 Mini",
       "cost_per_1m_in": 1.1,
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
@@ -542,7 +542,7 @@
     },
     {
       "id": "openai/gpt-4.1",
-      "model": "OpenAI: GPT-4.1",
+      "name": "OpenAI: GPT-4.1",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 8,
       "cost_per_1m_in_cached": 0,
@@ -555,7 +555,7 @@
     },
     {
       "id": "openai/gpt-4.1-mini",
-      "model": "OpenAI: GPT-4.1 Mini",
+      "name": "OpenAI: GPT-4.1 Mini",
       "cost_per_1m_in": 0.39999999999999997,
       "cost_per_1m_out": 1.5999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -568,7 +568,7 @@
     },
     {
       "id": "openai/gpt-4.1-nano",
-      "model": "OpenAI: GPT-4.1 Nano",
+      "name": "OpenAI: GPT-4.1 Nano",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0,
@@ -581,7 +581,7 @@
     },
     {
       "id": "x-ai/grok-3-mini-beta",
-      "model": "xAI: Grok 3 Mini Beta",
+      "name": "xAI: Grok 3 Mini Beta",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 0.5,
       "cost_per_1m_in_cached": 0,
@@ -594,7 +594,7 @@
     },
     {
       "id": "x-ai/grok-3-beta",
-      "model": "xAI: Grok 3 Beta",
+      "name": "xAI: Grok 3 Beta",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 0,
@@ -607,7 +607,7 @@
     },
     {
       "id": "meta-llama/llama-4-maverick",
-      "model": "Meta: Llama 4 Maverick",
+      "name": "Meta: Llama 4 Maverick",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -620,7 +620,7 @@
     },
     {
       "id": "meta-llama/llama-4-scout",
-      "model": "Meta: Llama 4 Scout",
+      "name": "Meta: Llama 4 Scout",
       "cost_per_1m_in": 0.08,
       "cost_per_1m_out": 0.3,
       "cost_per_1m_in_cached": 0,
@@ -633,7 +633,7 @@
     },
     {
       "id": "google/gemini-2.5-pro-exp-03-25",
-      "model": "Google: Gemini 2.5 Pro Experimental",
+      "name": "Google: Gemini 2.5 Pro Experimental",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -646,7 +646,7 @@
     },
     {
       "id": "deepseek/deepseek-chat-v3-0324:free",
-      "model": "DeepSeek: DeepSeek V3 0324 (free)",
+      "name": "DeepSeek: DeepSeek V3 0324 (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -659,7 +659,7 @@
     },
     {
       "id": "deepseek/deepseek-chat-v3-0324",
-      "model": "DeepSeek: DeepSeek V3 0324",
+      "name": "DeepSeek: DeepSeek V3 0324",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 0.85,
       "cost_per_1m_in_cached": 0,
@@ -672,7 +672,7 @@
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct:free",
-      "model": "Mistral: Mistral Small 3.1 24B (free)",
+      "name": "Mistral: Mistral Small 3.1 24B (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -685,7 +685,7 @@
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct",
-      "model": "Mistral: Mistral Small 3.1 24B",
+      "name": "Mistral: Mistral Small 3.1 24B",
       "cost_per_1m_in": 0.027,
       "cost_per_1m_out": 0.027,
       "cost_per_1m_in_cached": 0,
@@ -698,7 +698,7 @@
     },
     {
       "id": "ai21/jamba-1.6-large",
-      "model": "AI21: Jamba 1.6 Large",
+      "name": "AI21: Jamba 1.6 Large",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 8,
       "cost_per_1m_in_cached": 0,
@@ -711,7 +711,7 @@
     },
     {
       "id": "ai21/jamba-1.6-mini",
-      "model": "AI21: Jamba Mini 1.6",
+      "name": "AI21: Jamba Mini 1.6",
       "cost_per_1m_in": 0.19999999999999998,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0,
@@ -724,7 +724,7 @@
     },
     {
       "id": "google/gemini-2.0-flash-lite-001",
-      "model": "Google: Gemini 2.0 Flash Lite",
+      "name": "Google: Gemini 2.0 Flash Lite",
       "cost_per_1m_in": 0.075,
       "cost_per_1m_out": 0.3,
       "cost_per_1m_in_cached": 0,
@@ -737,7 +737,7 @@
     },
     {
       "id": "anthropic/claude-3.7-sonnet",
-      "model": "Anthropic: Claude 3.7 Sonnet",
+      "name": "Anthropic: Claude 3.7 Sonnet",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -750,7 +750,7 @@
     },
     {
       "id": "anthropic/claude-3.7-sonnet:thinking",
-      "model": "Anthropic: Claude 3.7 Sonnet (thinking)",
+      "name": "Anthropic: Claude 3.7 Sonnet (thinking)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -763,7 +763,7 @@
     },
     {
       "id": "anthropic/claude-3.7-sonnet:beta",
-      "model": "Anthropic: Claude 3.7 Sonnet (self-moderated)",
+      "name": "Anthropic: Claude 3.7 Sonnet (self-moderated)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -776,7 +776,7 @@
     },
     {
       "id": "mistralai/mistral-saba",
-      "model": "Mistral: Saba",
+      "name": "Mistral: Saba",
       "cost_per_1m_in": 0.19999999999999998,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -789,7 +789,7 @@
     },
     {
       "id": "openai/o3-mini-high",
-      "model": "OpenAI: o3 Mini High",
+      "name": "OpenAI: o3 Mini High",
       "cost_per_1m_in": 1.1,
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
@@ -802,7 +802,7 @@
     },
     {
       "id": "google/gemini-2.0-flash-001",
-      "model": "Google: Gemini 2.0 Flash",
+      "name": "Google: Gemini 2.0 Flash",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0.18330000000000002,
@@ -815,7 +815,7 @@
     },
     {
       "id": "qwen/qwen-turbo",
-      "model": "Qwen: Qwen-Turbo",
+      "name": "Qwen: Qwen-Turbo",
       "cost_per_1m_in": 0.049999999999999996,
       "cost_per_1m_out": 0.19999999999999998,
       "cost_per_1m_in_cached": 0,
@@ -828,7 +828,7 @@
     },
     {
       "id": "qwen/qwen-plus",
-      "model": "Qwen: Qwen-Plus",
+      "name": "Qwen: Qwen-Plus",
       "cost_per_1m_in": 0.39999999999999997,
       "cost_per_1m_out": 1.2,
       "cost_per_1m_in_cached": 0,
@@ -841,7 +841,7 @@
     },
     {
       "id": "qwen/qwen-max",
-      "model": "Qwen: Qwen-Max ",
+      "name": "Qwen: Qwen-Max ",
       "cost_per_1m_in": 1.5999999999999999,
       "cost_per_1m_out": 6.3999999999999995,
       "cost_per_1m_in_cached": 0,
@@ -854,7 +854,7 @@
     },
     {
       "id": "openai/o3-mini",
-      "model": "OpenAI: o3 Mini",
+      "name": "OpenAI: o3 Mini",
       "cost_per_1m_in": 1.1,
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
@@ -867,7 +867,7 @@
     },
     {
       "id": "mistralai/mistral-small-24b-instruct-2501",
-      "model": "Mistral: Mistral Small 3",
+      "name": "Mistral: Mistral Small 3",
       "cost_per_1m_in": 0.03,
       "cost_per_1m_out": 0.03,
       "cost_per_1m_in_cached": 0,
@@ -880,7 +880,7 @@
     },
     {
       "id": "deepseek/deepseek-r1-distill-llama-70b",
-      "model": "DeepSeek: R1 Distill Llama 70B",
+      "name": "DeepSeek: R1 Distill Llama 70B",
       "cost_per_1m_in": 0.049999999999999996,
       "cost_per_1m_out": 0.049999999999999996,
       "cost_per_1m_in_cached": 0,
@@ -893,7 +893,7 @@
     },
     {
       "id": "deepseek/deepseek-r1",
-      "model": "DeepSeek: R1",
+      "name": "DeepSeek: R1",
       "cost_per_1m_in": 0.39999999999999997,
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
@@ -906,7 +906,7 @@
     },
     {
       "id": "mistralai/codestral-2501",
-      "model": "Mistral: Codestral 2501",
+      "name": "Mistral: Codestral 2501",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 0.8999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -919,7 +919,7 @@
     },
     {
       "id": "deepseek/deepseek-chat",
-      "model": "DeepSeek: DeepSeek V3",
+      "name": "DeepSeek: DeepSeek V3",
       "cost_per_1m_in": 0.272,
       "cost_per_1m_out": 0.272,
       "cost_per_1m_in_cached": 0,
@@ -932,7 +932,7 @@
     },
     {
       "id": "openai/o1",
-      "model": "OpenAI: o1",
+      "name": "OpenAI: o1",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 60,
       "cost_per_1m_in_cached": 0,
@@ -945,7 +945,7 @@
     },
     {
       "id": "x-ai/grok-2-1212",
-      "model": "xAI: Grok 2 1212",
+      "name": "xAI: Grok 2 1212",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -958,7 +958,7 @@
     },
     {
       "id": "google/gemini-2.0-flash-exp:free",
-      "model": "Google: Gemini 2.0 Flash Experimental (free)",
+      "name": "Google: Gemini 2.0 Flash Experimental (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -971,7 +971,7 @@
     },
     {
       "id": "meta-llama/llama-3.3-70b-instruct:free",
-      "model": "Meta: Llama 3.3 70B Instruct (free)",
+      "name": "Meta: Llama 3.3 70B Instruct (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -984,7 +984,7 @@
     },
     {
       "id": "meta-llama/llama-3.3-70b-instruct",
-      "model": "Meta: Llama 3.3 70B Instruct",
+      "name": "Meta: Llama 3.3 70B Instruct",
       "cost_per_1m_in": 0.038000000000000006,
       "cost_per_1m_out": 0.12,
       "cost_per_1m_in_cached": 0,
@@ -997,7 +997,7 @@
     },
     {
       "id": "amazon/nova-lite-v1",
-      "model": "Amazon: Nova Lite 1.0",
+      "name": "Amazon: Nova Lite 1.0",
       "cost_per_1m_in": 0.06,
       "cost_per_1m_out": 0.24,
       "cost_per_1m_in_cached": 0,
@@ -1010,7 +1010,7 @@
     },
     {
       "id": "amazon/nova-micro-v1",
-      "model": "Amazon: Nova Micro 1.0",
+      "name": "Amazon: Nova Micro 1.0",
       "cost_per_1m_in": 0.035,
       "cost_per_1m_out": 0.14,
       "cost_per_1m_in_cached": 0,
@@ -1023,7 +1023,7 @@
     },
     {
       "id": "amazon/nova-pro-v1",
-      "model": "Amazon: Nova Pro 1.0",
+      "name": "Amazon: Nova Pro 1.0",
       "cost_per_1m_in": 0.7999999999999999,
       "cost_per_1m_out": 3.1999999999999997,
       "cost_per_1m_in_cached": 0,
@@ -1036,7 +1036,7 @@
     },
     {
       "id": "openai/gpt-4o-2024-11-20",
-      "model": "OpenAI: GPT-4o (2024-11-20)",
+      "name": "OpenAI: GPT-4o (2024-11-20)",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1049,7 +1049,7 @@
     },
     {
       "id": "mistralai/mistral-large-2411",
-      "model": "Mistral Large 2411",
+      "name": "Mistral Large 2411",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
@@ -1062,7 +1062,7 @@
     },
     {
       "id": "mistralai/mistral-large-2407",
-      "model": "Mistral Large 2407",
+      "name": "Mistral Large 2407",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
@@ -1075,7 +1075,7 @@
     },
     {
       "id": "mistralai/pixtral-large-2411",
-      "model": "Mistral: Pixtral Large 2411",
+      "name": "Mistral: Pixtral Large 2411",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
@@ -1088,7 +1088,7 @@
     },
     {
       "id": "thedrummer/unslopnemo-12b",
-      "model": "TheDrummer: UnslopNemo 12B",
+      "name": "TheDrummer: UnslopNemo 12B",
       "cost_per_1m_in": 0.39999999999999997,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0,
@@ -1101,7 +1101,7 @@
     },
     {
       "id": "anthropic/claude-3.5-haiku:beta",
-      "model": "Anthropic: Claude 3.5 Haiku (self-moderated)",
+      "name": "Anthropic: Claude 3.5 Haiku (self-moderated)",
       "cost_per_1m_in": 0.7999999999999999,
       "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 1,
@@ -1114,7 +1114,7 @@
     },
     {
       "id": "anthropic/claude-3.5-haiku",
-      "model": "Anthropic: Claude 3.5 Haiku",
+      "name": "Anthropic: Claude 3.5 Haiku",
       "cost_per_1m_in": 0.7999999999999999,
       "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 1,
@@ -1127,7 +1127,7 @@
     },
     {
       "id": "anthropic/claude-3.5-haiku-20241022:beta",
-      "model": "Anthropic: Claude 3.5 Haiku (2024-10-22) (self-moderated)",
+      "name": "Anthropic: Claude 3.5 Haiku (2024-10-22) (self-moderated)",
       "cost_per_1m_in": 0.7999999999999999,
       "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 1,
@@ -1140,7 +1140,7 @@
     },
     {
       "id": "anthropic/claude-3.5-haiku-20241022",
-      "model": "Anthropic: Claude 3.5 Haiku (2024-10-22)",
+      "name": "Anthropic: Claude 3.5 Haiku (2024-10-22)",
       "cost_per_1m_in": 0.7999999999999999,
       "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 1,
@@ -1153,7 +1153,7 @@
     },
     {
       "id": "anthropic/claude-3.5-sonnet:beta",
-      "model": "Anthropic: Claude 3.5 Sonnet (self-moderated)",
+      "name": "Anthropic: Claude 3.5 Sonnet (self-moderated)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -1166,7 +1166,7 @@
     },
     {
       "id": "anthropic/claude-3.5-sonnet",
-      "model": "Anthropic: Claude 3.5 Sonnet",
+      "name": "Anthropic: Claude 3.5 Sonnet",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -1179,7 +1179,7 @@
     },
     {
       "id": "mistralai/ministral-8b",
-      "model": "Mistral: Ministral 8B",
+      "name": "Mistral: Ministral 8B",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.09999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -1192,7 +1192,7 @@
     },
     {
       "id": "mistralai/ministral-3b",
-      "model": "Mistral: Ministral 3B",
+      "name": "Mistral: Ministral 3B",
       "cost_per_1m_in": 0.04,
       "cost_per_1m_out": 0.04,
       "cost_per_1m_in_cached": 0,
@@ -1205,7 +1205,7 @@
     },
     {
       "id": "nvidia/llama-3.1-nemotron-70b-instruct",
-      "model": "NVIDIA: Llama 3.1 Nemotron 70B Instruct",
+      "name": "NVIDIA: Llama 3.1 Nemotron 70B Instruct",
       "cost_per_1m_in": 0.12,
       "cost_per_1m_out": 0.3,
       "cost_per_1m_in_cached": 0,
@@ -1218,7 +1218,7 @@
     },
     {
       "id": "google/gemini-flash-1.5-8b",
-      "model": "Google: Gemini 1.5 Flash 8B",
+      "name": "Google: Gemini 1.5 Flash 8B",
       "cost_per_1m_in": 0.0375,
       "cost_per_1m_out": 0.15,
       "cost_per_1m_in_cached": 0.0583,
@@ -1231,7 +1231,7 @@
     },
     {
       "id": "thedrummer/rocinante-12b",
-      "model": "TheDrummer: Rocinante 12B",
+      "name": "TheDrummer: Rocinante 12B",
       "cost_per_1m_in": 0.19999999999999998,
       "cost_per_1m_out": 0.5,
       "cost_per_1m_in_cached": 0,
@@ -1244,7 +1244,7 @@
     },
     {
       "id": "meta-llama/llama-3.2-3b-instruct",
-      "model": "Meta: Llama 3.2 3B Instruct",
+      "name": "Meta: Llama 3.2 3B Instruct",
       "cost_per_1m_in": 0.003,
       "cost_per_1m_out": 0.006,
       "cost_per_1m_in_cached": 0,
@@ -1257,7 +1257,7 @@
     },
     {
       "id": "meta-llama/llama-3.2-11b-vision-instruct",
-      "model": "Meta: Llama 3.2 11B Vision Instruct",
+      "name": "Meta: Llama 3.2 11B Vision Instruct",
       "cost_per_1m_in": 0.049,
       "cost_per_1m_out": 0.049,
       "cost_per_1m_in_cached": 0,
@@ -1270,7 +1270,7 @@
     },
     {
       "id": "qwen/qwen-2.5-72b-instruct",
-      "model": "Qwen2.5 72B Instruct",
+      "name": "Qwen2.5 72B Instruct",
       "cost_per_1m_in": 0.101,
       "cost_per_1m_out": 0.101,
       "cost_per_1m_in_cached": 0,
@@ -1283,7 +1283,7 @@
     },
     {
       "id": "mistralai/pixtral-12b",
-      "model": "Mistral: Pixtral 12B",
+      "name": "Mistral: Pixtral 12B",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.09999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -1296,7 +1296,7 @@
     },
     {
       "id": "cohere/command-r-plus-08-2024",
-      "model": "Cohere: Command R+ (08-2024)",
+      "name": "Cohere: Command R+ (08-2024)",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1309,7 +1309,7 @@
     },
     {
       "id": "cohere/command-r-08-2024",
-      "model": "Cohere: Command R (08-2024)",
+      "name": "Cohere: Command R (08-2024)",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -1322,7 +1322,7 @@
     },
     {
       "id": "microsoft/phi-3.5-mini-128k-instruct",
-      "model": "Microsoft: Phi-3.5 Mini 128K Instruct",
+      "name": "Microsoft: Phi-3.5 Mini 128K Instruct",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.09999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -1335,7 +1335,7 @@
     },
     {
       "id": "nousresearch/hermes-3-llama-3.1-70b",
-      "model": "Nous: Hermes 3 70B Instruct",
+      "name": "Nous: Hermes 3 70B Instruct",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.28,
       "cost_per_1m_in_cached": 0,
@@ -1348,7 +1348,7 @@
     },
     {
       "id": "openai/gpt-4o-2024-08-06",
-      "model": "OpenAI: GPT-4o (2024-08-06)",
+      "name": "OpenAI: GPT-4o (2024-08-06)",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1361,7 +1361,7 @@
     },
     {
       "id": "meta-llama/llama-3.1-8b-instruct",
-      "model": "Meta: Llama 3.1 8B Instruct",
+      "name": "Meta: Llama 3.1 8B Instruct",
       "cost_per_1m_in": 0.015,
       "cost_per_1m_out": 0.02,
       "cost_per_1m_in_cached": 0,
@@ -1374,7 +1374,7 @@
     },
     {
       "id": "meta-llama/llama-3.1-405b-instruct",
-      "model": "Meta: Llama 3.1 405B Instruct",
+      "name": "Meta: Llama 3.1 405B Instruct",
       "cost_per_1m_in": 0.7999999999999999,
       "cost_per_1m_out": 0.7999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -1387,7 +1387,7 @@
     },
     {
       "id": "meta-llama/llama-3.1-70b-instruct",
-      "model": "Meta: Llama 3.1 70B Instruct",
+      "name": "Meta: Llama 3.1 70B Instruct",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.28,
       "cost_per_1m_in_cached": 0,
@@ -1400,7 +1400,7 @@
     },
     {
       "id": "mistralai/mistral-nemo",
-      "model": "Mistral: Mistral Nemo",
+      "name": "Mistral: Mistral Nemo",
       "cost_per_1m_in": 0.0075,
       "cost_per_1m_out": 0.049999999999999996,
       "cost_per_1m_in_cached": 0,
@@ -1413,7 +1413,7 @@
     },
     {
       "id": "openai/gpt-4o-mini",
-      "model": "OpenAI: GPT-4o-mini",
+      "name": "OpenAI: GPT-4o-mini",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -1426,7 +1426,7 @@
     },
     {
       "id": "openai/gpt-4o-mini-2024-07-18",
-      "model": "OpenAI: GPT-4o-mini (2024-07-18)",
+      "name": "OpenAI: GPT-4o-mini (2024-07-18)",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -1439,7 +1439,7 @@
     },
     {
       "id": "anthropic/claude-3.5-sonnet-20240620:beta",
-      "model": "Anthropic: Claude 3.5 Sonnet (2024-06-20) (self-moderated)",
+      "name": "Anthropic: Claude 3.5 Sonnet (2024-06-20) (self-moderated)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -1452,7 +1452,7 @@
     },
     {
       "id": "anthropic/claude-3.5-sonnet-20240620",
-      "model": "Anthropic: Claude 3.5 Sonnet (2024-06-20)",
+      "name": "Anthropic: Claude 3.5 Sonnet (2024-06-20)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -1465,7 +1465,7 @@
     },
     {
       "id": "mistralai/mistral-7b-instruct:free",
-      "model": "Mistral: Mistral 7B Instruct (free)",
+      "name": "Mistral: Mistral 7B Instruct (free)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -1478,7 +1478,7 @@
     },
     {
       "id": "mistralai/mistral-7b-instruct",
-      "model": "Mistral: Mistral 7B Instruct",
+      "name": "Mistral: Mistral 7B Instruct",
       "cost_per_1m_in": 0.028,
       "cost_per_1m_out": 0.054,
       "cost_per_1m_in_cached": 0,
@@ -1491,7 +1491,7 @@
     },
     {
       "id": "mistralai/mistral-7b-instruct-v0.3",
-      "model": "Mistral: Mistral 7B Instruct v0.3",
+      "name": "Mistral: Mistral 7B Instruct v0.3",
       "cost_per_1m_in": 0.028,
       "cost_per_1m_out": 0.054,
       "cost_per_1m_in_cached": 0,
@@ -1504,7 +1504,7 @@
     },
     {
       "id": "microsoft/phi-3-mini-128k-instruct",
-      "model": "Microsoft: Phi-3 Mini 128K Instruct",
+      "name": "Microsoft: Phi-3 Mini 128K Instruct",
       "cost_per_1m_in": 0.09999999999999999,
       "cost_per_1m_out": 0.09999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -1517,7 +1517,7 @@
     },
     {
       "id": "microsoft/phi-3-medium-128k-instruct",
-      "model": "Microsoft: Phi-3 Medium 128K Instruct",
+      "name": "Microsoft: Phi-3 Medium 128K Instruct",
       "cost_per_1m_in": 1,
       "cost_per_1m_out": 1,
       "cost_per_1m_in_cached": 0,
@@ -1530,7 +1530,7 @@
     },
     {
       "id": "google/gemini-flash-1.5",
-      "model": "Google: Gemini 1.5 Flash ",
+      "name": "Google: Gemini 1.5 Flash ",
       "cost_per_1m_in": 0.075,
       "cost_per_1m_out": 0.3,
       "cost_per_1m_in_cached": 0.1583,
@@ -1543,7 +1543,7 @@
     },
     {
       "id": "openai/gpt-4o",
-      "model": "OpenAI: GPT-4o",
+      "name": "OpenAI: GPT-4o",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1556,7 +1556,7 @@
     },
     {
       "id": "openai/gpt-4o:extended",
-      "model": "OpenAI: GPT-4o (extended)",
+      "name": "OpenAI: GPT-4o (extended)",
       "cost_per_1m_in": 6,
       "cost_per_1m_out": 18,
       "cost_per_1m_in_cached": 0,
@@ -1569,7 +1569,7 @@
     },
     {
       "id": "openai/gpt-4o-2024-05-13",
-      "model": "OpenAI: GPT-4o (2024-05-13)",
+      "name": "OpenAI: GPT-4o (2024-05-13)",
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 0,
@@ -1582,7 +1582,7 @@
     },
     {
       "id": "meta-llama/llama-3-8b-instruct",
-      "model": "Meta: Llama 3 8B Instruct",
+      "name": "Meta: Llama 3 8B Instruct",
       "cost_per_1m_in": 0.03,
       "cost_per_1m_out": 0.06,
       "cost_per_1m_in_cached": 0,
@@ -1595,7 +1595,7 @@
     },
     {
       "id": "meta-llama/llama-3-70b-instruct",
-      "model": "Meta: Llama 3 70B Instruct",
+      "name": "Meta: Llama 3 70B Instruct",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0,
@@ -1608,7 +1608,7 @@
     },
     {
       "id": "mistralai/mixtral-8x22b-instruct",
-      "model": "Mistral: Mixtral 8x22B Instruct",
+      "name": "Mistral: Mixtral 8x22B Instruct",
       "cost_per_1m_in": 0.8999999999999999,
       "cost_per_1m_out": 0.8999999999999999,
       "cost_per_1m_in_cached": 0,
@@ -1621,7 +1621,7 @@
     },
     {
       "id": "google/gemini-pro-1.5",
-      "model": "Google: Gemini 1.5 Pro",
+      "name": "Google: Gemini 1.5 Pro",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 5,
       "cost_per_1m_in_cached": 0,
@@ -1634,7 +1634,7 @@
     },
     {
       "id": "openai/gpt-4-turbo",
-      "model": "OpenAI: GPT-4 Turbo",
+      "name": "OpenAI: GPT-4 Turbo",
       "cost_per_1m_in": 10,
       "cost_per_1m_out": 30,
       "cost_per_1m_in_cached": 0,
@@ -1647,7 +1647,7 @@
     },
     {
       "id": "cohere/command-r-plus",
-      "model": "Cohere: Command R+",
+      "name": "Cohere: Command R+",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 0,
@@ -1660,7 +1660,7 @@
     },
     {
       "id": "cohere/command-r-plus-04-2024",
-      "model": "Cohere: Command R+ (04-2024)",
+      "name": "Cohere: Command R+ (04-2024)",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 0,
@@ -1673,7 +1673,7 @@
     },
     {
       "id": "cohere/command-r",
-      "model": "Cohere: Command R",
+      "name": "Cohere: Command R",
       "cost_per_1m_in": 0.5,
       "cost_per_1m_out": 1.5,
       "cost_per_1m_in_cached": 0,
@@ -1686,7 +1686,7 @@
     },
     {
       "id": "anthropic/claude-3-haiku:beta",
-      "model": "Anthropic: Claude 3 Haiku (self-moderated)",
+      "name": "Anthropic: Claude 3 Haiku (self-moderated)",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 1.25,
       "cost_per_1m_in_cached": 0.3,
@@ -1699,7 +1699,7 @@
     },
     {
       "id": "anthropic/claude-3-haiku",
-      "model": "Anthropic: Claude 3 Haiku",
+      "name": "Anthropic: Claude 3 Haiku",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 1.25,
       "cost_per_1m_in_cached": 0.3,
@@ -1712,7 +1712,7 @@
     },
     {
       "id": "anthropic/claude-3-opus:beta",
-      "model": "Anthropic: Claude 3 Opus (self-moderated)",
+      "name": "Anthropic: Claude 3 Opus (self-moderated)",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 75,
       "cost_per_1m_in_cached": 18.75,
@@ -1725,7 +1725,7 @@
     },
     {
       "id": "anthropic/claude-3-opus",
-      "model": "Anthropic: Claude 3 Opus",
+      "name": "Anthropic: Claude 3 Opus",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 75,
       "cost_per_1m_in_cached": 18.75,
@@ -1738,7 +1738,7 @@
     },
     {
       "id": "anthropic/claude-3-sonnet",
-      "model": "Anthropic: Claude 3 Sonnet",
+      "name": "Anthropic: Claude 3 Sonnet",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
@@ -1751,7 +1751,7 @@
     },
     {
       "id": "cohere/command-r-03-2024",
-      "model": "Cohere: Command R (03-2024)",
+      "name": "Cohere: Command R (03-2024)",
       "cost_per_1m_in": 0.5,
       "cost_per_1m_out": 1.5,
       "cost_per_1m_in_cached": 0,
@@ -1764,7 +1764,7 @@
     },
     {
       "id": "mistralai/mistral-large",
-      "model": "Mistral Large",
+      "name": "Mistral Large",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
@@ -1777,7 +1777,7 @@
     },
     {
       "id": "openai/gpt-3.5-turbo-0613",
-      "model": "OpenAI: GPT-3.5 Turbo (older v0613)",
+      "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
       "cost_per_1m_in": 1,
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
@@ -1790,7 +1790,7 @@
     },
     {
       "id": "openai/gpt-4-turbo-preview",
-      "model": "OpenAI: GPT-4 Turbo Preview",
+      "name": "OpenAI: GPT-4 Turbo Preview",
       "cost_per_1m_in": 10,
       "cost_per_1m_out": 30,
       "cost_per_1m_in_cached": 0,
@@ -1803,7 +1803,7 @@
     },
     {
       "id": "mistralai/mistral-small",
-      "model": "Mistral Small",
+      "name": "Mistral Small",
       "cost_per_1m_in": 0.19999999999999998,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -1816,7 +1816,7 @@
     },
     {
       "id": "mistralai/mistral-tiny",
-      "model": "Mistral Tiny",
+      "name": "Mistral Tiny",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 0.25,
       "cost_per_1m_in_cached": 0,
@@ -1829,7 +1829,7 @@
     },
     {
       "id": "mistralai/mixtral-8x7b-instruct",
-      "model": "Mistral: Mixtral 8x7B Instruct",
+      "name": "Mistral: Mixtral 8x7B Instruct",
       "cost_per_1m_in": 0.08,
       "cost_per_1m_out": 0.24,
       "cost_per_1m_in_cached": 0,
@@ -1842,7 +1842,7 @@
     },
     {
       "id": "openai/gpt-4-1106-preview",
-      "model": "OpenAI: GPT-4 Turbo (older v1106)",
+      "name": "OpenAI: GPT-4 Turbo (older v1106)",
       "cost_per_1m_in": 10,
       "cost_per_1m_out": 30,
       "cost_per_1m_in_cached": 0,
@@ -1855,7 +1855,7 @@
     },
     {
       "id": "mistralai/mistral-7b-instruct-v0.1",
-      "model": "Mistral: Mistral 7B Instruct v0.1",
+      "name": "Mistral: Mistral 7B Instruct v0.1",
       "cost_per_1m_in": 0.11,
       "cost_per_1m_out": 0.19,
       "cost_per_1m_in_cached": 0,
@@ -1868,7 +1868,7 @@
     },
     {
       "id": "openai/gpt-3.5-turbo-16k",
-      "model": "OpenAI: GPT-3.5 Turbo 16k",
+      "name": "OpenAI: GPT-3.5 Turbo 16k",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 0,
@@ -1881,7 +1881,7 @@
     },
     {
       "id": "openai/gpt-3.5-turbo",
-      "model": "OpenAI: GPT-3.5 Turbo",
+      "name": "OpenAI: GPT-3.5 Turbo",
       "cost_per_1m_in": 0.5,
       "cost_per_1m_out": 1.5,
       "cost_per_1m_in_cached": 0,
@@ -1894,7 +1894,7 @@
     },
     {
       "id": "openai/gpt-4",
-      "model": "OpenAI: GPT-4",
+      "name": "OpenAI: GPT-4",
       "cost_per_1m_in": 30,
       "cost_per_1m_out": 60,
       "cost_per_1m_in_cached": 0,
@@ -1907,7 +1907,7 @@
     },
     {
       "id": "openai/gpt-4-0314",
-      "model": "OpenAI: GPT-4 (older v0314)",
+      "name": "OpenAI: GPT-4 (older v0314)",
       "cost_per_1m_in": 30,
       "cost_per_1m_out": 60,
       "cost_per_1m_in_cached": 0,
