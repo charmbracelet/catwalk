@@ -181,7 +181,7 @@ func selectBestEndpoint(endpoints []Endpoint) *Endpoint {
 	if len(endpoints) == 0 {
 		return nil
 	}
-	
+
 	var best *Endpoint
 	for i := range endpoints {
 		endpoint := &endpoints[i]
@@ -189,12 +189,12 @@ func selectBestEndpoint(endpoints []Endpoint) *Endpoint {
 		if endpoint.Status < 0 || endpoint.UptimeLast30m < 90.0 {
 			continue
 		}
-		
+
 		if best == nil {
 			best = endpoint
 			continue
 		}
-		
+
 		// Prefer higher context length
 		if endpoint.ContextLength > best.ContextLength {
 			best = endpoint
@@ -205,12 +205,12 @@ func selectBestEndpoint(endpoints []Endpoint) *Endpoint {
 			}
 		}
 	}
-	
+
 	// If no good endpoint found, return the first one as fallback
 	if best == nil {
 		best = &endpoints[0]
 	}
-	
+
 	return best
 }
 
@@ -331,7 +331,7 @@ func main() {
 		}
 
 		openRouterProvider.Models = append(openRouterProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d from provider %s\n", 
+		fmt.Printf("Added model %s with context window %d from provider %s\n",
 			model.ID, bestEndpoint.ContextLength, bestEndpoint.ProviderName)
 	}
 
