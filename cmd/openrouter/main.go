@@ -60,6 +60,32 @@ type TopProvider struct {
 	IsModerated         bool   `json:"is_moderated"`
 }
 
+// Endpoint represents a single endpoint configuration for a model.
+type Endpoint struct {
+	Name                string   `json:"name"`
+	ContextLength       int64    `json:"context_length"`
+	Pricing             Pricing  `json:"pricing"`
+	ProviderName        string   `json:"provider_name"`
+	Tag                 string   `json:"tag"`
+	Quantization        *string  `json:"quantization"`
+	MaxCompletionTokens *int64   `json:"max_completion_tokens"`
+	MaxPromptTokens     *int64   `json:"max_prompt_tokens"`
+	SupportedParams     []string `json:"supported_parameters"`
+	Status              int      `json:"status"`
+	UptimeLast30m       float64  `json:"uptime_last_30m"`
+}
+
+// EndpointsResponse is the response structure for the endpoints API.
+type EndpointsResponse struct {
+	Data struct {
+		ID          string     `json:"id"`
+		Name        string     `json:"name"`
+		Created     int64      `json:"created"`
+		Description string     `json:"description"`
+		Endpoints   []Endpoint `json:"endpoints"`
+	} `json:"data"`
+}
+
 // ModelsResponse is the response structure for the models API.
 type ModelsResponse struct {
 	Data []Model `json:"data"`
@@ -125,6 +151,69 @@ func fetchOpenRouterModels() (*ModelsResponse, error) {
 	return &mr, nil
 }
 
+func fetchModelEndpoints(modelID string) (*EndpointsResponse, error) {
+	client := &http.Client{Timeout: 30 * time.Second}
+	url := fmt.Sprintf("https://openrouter.ai/api/v1/models/%s/endpoints", modelID)
+	req, _ := http.NewRequestWithContext(
+		context.Background(),
+		"GET",
+		url,
+		nil,
+	)
+	req.Header.Set("User-Agent", "Crush-Client/1.0")
+	resp, err := client.Do(req)
+	if err != nil {
+		return nil, err //nolint:wrapcheck
+	}
+	defer resp.Body.Close() //nolint:errcheck
+	if resp.StatusCode != 200 {
+		body, _ := io.ReadAll(resp.Body)
+		return nil, fmt.Errorf("status %d: %s", resp.StatusCode, body)
+	}
+	var er EndpointsResponse
+	if err := json.NewDecoder(resp.Body).Decode(&er); err != nil {
+		return nil, err //nolint:wrapcheck
+	}
+	return &er, nil
+}
+
+func selectBestEndpoint(endpoints []Endpoint) *Endpoint {
+	if len(endpoints) == 0 {
+		return nil
+	}
+	
+	var best *Endpoint
+	for i := range endpoints {
+		endpoint := &endpoints[i]
+		// Skip endpoints with poor status or uptime
+		if endpoint.Status < 0 || endpoint.UptimeLast30m < 90.0 {
+			continue
+		}
+		
+		if best == nil {
+			best = endpoint
+			continue
+		}
+		
+		// Prefer higher context length
+		if endpoint.ContextLength > best.ContextLength {
+			best = endpoint
+		} else if endpoint.ContextLength == best.ContextLength {
+			// If context length is the same, prefer better uptime
+			if endpoint.UptimeLast30m > best.UptimeLast30m {
+				best = endpoint
+			}
+		}
+	}
+	
+	// If no good endpoint found, return the first one as fallback
+	if best == nil {
+		best = &endpoints[0]
+	}
+	
+	return best
+}
+
 // This is used to generate the openrouter.json config file.
 func main() {
 	modelsResp, err := fetchOpenRouterModels()
@@ -151,8 +240,75 @@ func main() {
 			continue
 		}
 
-		pricing := getPricing(model)
-		canReason := slices.Contains(model.SupportedParams, "reasoning")
+		// Fetch endpoints for this model to get the best configuration
+		endpointsResp, err := fetchModelEndpoints(model.ID)
+		if err != nil {
+			fmt.Printf("Warning: Failed to fetch endpoints for %s: %v\n", model.ID, err)
+			// Fall back to using the original model data
+			pricing := getPricing(model)
+			canReason := slices.Contains(model.SupportedParams, "reasoning")
+			supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
+
+			m := catwalk.Model{
+				ID:                 model.ID,
+				Name:               model.Name,
+				CostPer1MIn:        pricing.CostPer1MIn,
+				CostPer1MOut:       pricing.CostPer1MOut,
+				CostPer1MInCached:  pricing.CostPer1MInCached,
+				CostPer1MOutCached: pricing.CostPer1MOutCached,
+				ContextWindow:      model.ContextLength,
+				CanReason:          canReason,
+				SupportsImages:     supportsImages,
+			}
+			if model.TopProvider.MaxCompletionTokens != nil {
+				m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens / 2
+			} else {
+				m.DefaultMaxTokens = model.ContextLength / 10
+			}
+			if model.TopProvider.ContextLength > 0 {
+				m.ContextWindow = model.TopProvider.ContextLength
+			}
+			openRouterProvider.Models = append(openRouterProvider.Models, m)
+			continue
+		}
+
+		// Select the best endpoint
+		bestEndpoint := selectBestEndpoint(endpointsResp.Data.Endpoints)
+		if bestEndpoint == nil {
+			fmt.Printf("Warning: No suitable endpoint found for %s\n", model.ID)
+			continue
+		}
+
+		// Check if the best endpoint supports tools
+		if !slices.Contains(bestEndpoint.SupportedParams, "tools") {
+			continue
+		}
+
+		// Use the best endpoint's configuration
+		pricing := ModelPricing{}
+		costPrompt, err := strconv.ParseFloat(bestEndpoint.Pricing.Prompt, 64)
+		if err != nil {
+			costPrompt = 0.0
+		}
+		pricing.CostPer1MIn = costPrompt * 1_000_000
+		costCompletion, err := strconv.ParseFloat(bestEndpoint.Pricing.Completion, 64)
+		if err != nil {
+			costCompletion = 0.0
+		}
+		pricing.CostPer1MOut = costCompletion * 1_000_000
+
+		costPromptCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
+		if err != nil {
+			costPromptCached = 0.0
+		}
+		pricing.CostPer1MInCached = costPromptCached * 1_000_000
+		costCompletionCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
+		if err != nil {
+			costCompletionCached = 0.0
+		}
+		pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
+
+		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
 		m := catwalk.Model{
@@ -162,16 +318,21 @@ func main() {
 			CostPer1MOut:       pricing.CostPer1MOut,
 			CostPer1MInCached:  pricing.CostPer1MInCached,
 			CostPer1MOutCached: pricing.CostPer1MOutCached,
-			ContextWindow:      model.ContextLength,
+			ContextWindow:      bestEndpoint.ContextLength,
 			CanReason:          canReason,
 			SupportsImages:     supportsImages,
 		}
-		if model.TopProvider.MaxCompletionTokens != nil {
-			m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens / 2
+
+		// Set max tokens based on the best endpoint
+		if bestEndpoint.MaxCompletionTokens != nil {
+			m.DefaultMaxTokens = *bestEndpoint.MaxCompletionTokens / 2
 		} else {
-			m.DefaultMaxTokens = model.ContextLength / 10
+			m.DefaultMaxTokens = bestEndpoint.ContextLength / 10
 		}
+
 		openRouterProvider.Models = append(openRouterProvider.Models, m)
+		fmt.Printf("Added model %s with context window %d from provider %s\n", 
+			model.ID, bestEndpoint.ContextLength, bestEndpoint.ProviderName)
 	}
 
 	// save the json in internal/providers/config/openrouter.json
