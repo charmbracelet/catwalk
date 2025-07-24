@@ -195,14 +195,8 @@ func selectBestEndpoint(endpoints []Endpoint) *Endpoint {
 			continue
 		}
 
-		// Prefer higher context length
-		if endpoint.ContextLength > best.ContextLength {
+		if isBetterEndpoint(endpoint, best) {
 			best = endpoint
-		} else if endpoint.ContextLength == best.ContextLength {
-			// If context length is the same, prefer better uptime
-			if endpoint.UptimeLast30m > best.UptimeLast30m {
-				best = endpoint
-			}
 		}
 	}
 
@@ -212,6 +206,29 @@ func selectBestEndpoint(endpoints []Endpoint) *Endpoint {
 	}
 
 	return best
+}
+
+func isBetterEndpoint(candidate, current *Endpoint) bool {
+	candidateHasTools := slices.Contains(candidate.SupportedParams, "tools")
+	currentHasTools := slices.Contains(current.SupportedParams, "tools")
+
+	// Prefer endpoints with tool support over those without
+	if candidateHasTools && !currentHasTools {
+		return true
+	}
+	if !candidateHasTools && currentHasTools {
+		return false
+	}
+
+	// Both have same tool support status, compare other factors
+	if candidate.ContextLength > current.ContextLength {
+		return true
+	}
+	if candidate.ContextLength == current.ContextLength {
+		return candidate.UptimeLast30m > current.UptimeLast30m
+	}
+
+	return false
 }
 
 // This is used to generate the openrouter.json config file.
