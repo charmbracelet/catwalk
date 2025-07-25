@@ -86,18 +86,6 @@
       "supports_attachments": true
     },
     {
-      "id": "gpt-4.5-preview",
-      "name": "GPT-4.5 (Preview)",
-      "cost_per_1m_in": 75,
-      "cost_per_1m_out": 150,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 37.5,
-      "context_window": 128000,
-      "default_max_tokens": 50000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "o3-mini",
       "name": "o3 Mini",
       "cost_per_1m_in": 1.1,
