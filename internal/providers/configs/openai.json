@@ -36,20 +36,6 @@
       "supports_attachments": true
     },
     {
-      "id": "o3-pro",
-      "name": "o3 Pro",
-      "cost_per_1m_in": 20,
-      "cost_per_1m_out": 80,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 200000,
-      "default_max_tokens": 50000,
-      "can_reason": true,
-      "has_reasoning_effort": true,
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "gpt-4.1",
       "name": "GPT-4.1",
       "cost_per_1m_in": 2,
