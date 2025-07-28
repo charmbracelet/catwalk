@@ -39,6 +39,7 @@ type Provider struct {
 	DefaultLargeModelID string            `json:"default_large_model_id,omitempty"`
 	DefaultSmallModelID string            `json:"default_small_model_id,omitempty"`
 	Models              []Model           `json:"models,omitempty"`
+	DefaultHeaders      map[string]string `json:"default_headers,omitempty"`
 }
 
 // Model represents an AI model configuration.
