@@ -9,7 +9,7 @@
   "models": [
     {
       "id": "moonshotai/kimi-k2-instruct",
-      "model": "Kimi K2",
+      "name": "Kimi K2",
       "cost_per_1m_in": 1,
       "cost_per_1m_out": 3,
       "context_window": 131072,
