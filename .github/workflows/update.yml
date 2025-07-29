@@ -1,10 +1,9 @@
 name: Update Providers
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "internal/config/**"
+  schedule:
+    - cron: "0 2 * * *" # Run nightly at 2 AM UTC
+  workflow_dispatch: # Allow manual triggering
 
 jobs:
   update-schema:
