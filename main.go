@@ -22,6 +22,11 @@ var counter = promauto.NewCounter(prometheus.CounterOpts{
 })
 
 func providersHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method == http.MethodHead {
+		return
+	}
+
 	if r.Method != http.MethodGet {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
@@ -29,7 +34,6 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 
 	counter.Inc()
 	allProviders := providers.GetAll()
-	w.Header().Set("Content-Type", "application/json")
 	if err := json.NewEncoder(w).Encode(allProviders); err != nil {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
 		return
