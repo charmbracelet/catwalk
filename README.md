@@ -2,7 +2,7 @@
 
 <img width="297" height="250" alt="catwalk-header" src="https://github.com/user-attachments/assets/8fa4e312-97f1-43dc-899e-1dc0518be5dd" />
 
-A database for [_Crush_](https://github.com/charmbracelet/crush) compatible models.
+A database for [_Crush_](https://github.com/charmbracelet/crush)-compatible models.
 
 Is there a provider you’d like to see in Crush? Is there an existing model that needs an update? This is a community-supported project and we welcome and encourge contributions.
 
