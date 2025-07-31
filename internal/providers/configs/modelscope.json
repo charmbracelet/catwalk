@@ -1,0 +1,19 @@
+{
+  "name": "Modelscope",
+  "id": "modelscope",
+  "api_key": "$MODELSCOPE_API_KEY",
+  "api_endpoint": "https://api-inference.modelscope.cn/v1",
+  "type": "openai",
+  "default_large_model_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+  "default_small_model_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+  "models": [
+    {
+      "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "name": "Qwen3-Coder",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 131072,
+      "default_max_tokens": 65536
+    }
+  ]
+}
