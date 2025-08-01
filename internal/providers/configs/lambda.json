@@ -6,9 +6,6 @@
   "api_endpoint": "https://api.lambda.ai/v1",
   "default_large_model_id": "qwen25-coder-32b-instruct",
   "default_small_model_id": "llama3.2-3b-instruct",
-  "default_headers": {
-    "Authorization": "Bearer $LAMBDA_API_KEY"
-  },
   "models": [
     {
       "id": "deepseek-r1-0528",
