@@ -53,6 +53,7 @@ var providerRegistry = []ProviderFunc{
 	groqProvider,
 	openRouterProvider,
 	lambdaProvider,
+	cerebrasProvider,
 }
 
 // GetAll returns all registered providers.
