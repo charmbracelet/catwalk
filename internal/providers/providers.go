@@ -54,9 +54,9 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	groqProvider,
-	cerebrasProvider,
 	openRouterProvider,
 	lambdaProvider,
+	cerebrasProvider,
 }
 
 // GetAll returns all registered providers.
