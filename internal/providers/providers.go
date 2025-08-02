@@ -36,6 +36,9 @@ var bedrockConfig []byte
 //go:embed configs/groq.json
 var groqConfig []byte
 
+//go:embed configs/cerebras.json
+var cerebrasConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -48,6 +51,7 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	groqProvider,
+	cerebrasProvider,
 	openRouterProvider,
 }
 
@@ -103,4 +107,8 @@ func openRouterProvider() catwalk.Provider {
 
 func groqProvider() catwalk.Provider {
 	return loadProviderFromConfig(groqConfig)
+}
+
+func cerebrasProvider() catwalk.Provider {
+	return loadProviderFromConfig(cerebrasConfig)
 }
