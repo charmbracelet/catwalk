@@ -36,6 +36,8 @@ var bedrockConfig []byte
 //go:embed configs/groq.json
 var groqConfig []byte
 
+var ollamaConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -49,6 +51,7 @@ var providerRegistry = []ProviderFunc{
 	xAIProvider,
 	groqProvider,
 	openRouterProvider,
+	ollamaProvider,
 }
 
 // GetAll returns all registered providers.
@@ -103,4 +106,8 @@ func openRouterProvider() catwalk.Provider {
 
 func groqProvider() catwalk.Provider {
 	return loadProviderFromConfig(groqConfig)
+}
+
+func ollamaProvider() catwalk.Provider {
+	return loadProviderFromConfig(ollamaConfig)
 }
