@@ -36,15 +36,11 @@ var bedrockConfig []byte
 //go:embed configs/groq.json
 var groqConfig []byte
 
-<<<<<<< HEAD
-var ollamaConfig []byte
-
-||||||| ea52d41
-=======
 //go:embed configs/lambda.json
 var lambdaConfig []byte
 
->>>>>>> main
+var ollamaConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -58,12 +54,8 @@ var providerRegistry = []ProviderFunc{
 	xAIProvider,
 	groqProvider,
 	openRouterProvider,
-<<<<<<< HEAD
-	ollamaProvider,
-||||||| ea52d41
-=======
 	lambdaProvider,
->>>>>>> main
+	ollamaProvider
 }
 
 // GetAll returns all registered providers.
