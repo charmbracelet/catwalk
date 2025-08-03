@@ -45,6 +45,9 @@ var lambdaConfig []byte
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
 
+//go:embed configs/venice.json
+var veniceConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -61,6 +64,7 @@ var providerRegistry = []ProviderFunc{
 	openRouterProvider,
 	lambdaProvider,
 	cerebrasProvider,
+	veniceProvider,
 }
 
 // GetAll returns all registered providers.
@@ -127,4 +131,8 @@ func lambdaProvider() catwalk.Provider {
 
 func cerebrasProvider() catwalk.Provider {
 	return loadProviderFromConfig(cerebrasConfig)
+}
+
+func veniceProvider() catwalk.Provider {
+	return loadProviderFromConfig(veniceConfig)
 }
