@@ -4,12 +4,12 @@
   "type": "openai",
   "api_key": "$VENICE_API_KEY",
   "api_endpoint": "https://api.venice.ai/api/v1",
-  "default_large_model_id": "qwen3-235b",
+  "default_large_model_id": "qwen3-235b:strip_thinking_response=true",
   "default_small_model_id": "mistral-31-24b",
   "models": [
     {
-      "id": "qwen3-235b",
-      "name": "Venice Large",
+      "id": "qwen3-235b:strip_thinking_response=true",
+      "name": "Venice Large (qwen3-235b)",
       "cost_per_1m_in": 1.5,
       "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
@@ -20,8 +20,8 @@
       "supports_attachments": false
     },
     {
-      "id": "qwen3-4b",
-      "name": "Venice Small",
+      "id": "qwen3-4b:strip_thinking_response=true",
+      "name": "Venice Small (qwen3-4b)",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -33,7 +33,7 @@
     },
     {
       "id": "mistral-31-24b",
-      "name": "Venice Medium",
+      "name": "Venice Medium (mistral-31-24b)",
       "cost_per_1m_in": 0.5,
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
