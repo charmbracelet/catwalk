@@ -5,13 +5,21 @@
   "api_endpoint": "https://api.groq.com/openai/v1",
   "type": "openai",
   "default_large_model_id": "moonshotai/kimi-k2-instruct",
-  "default_small_model_id": "moonshotai/kimi-k2-instruct",
+  "default_small_model_id": "qwen/qwen3-32b",
   "models": [
     {
       "id": "moonshotai/kimi-k2-instruct",
       "name": "Kimi K2",
       "cost_per_1m_in": 1,
       "cost_per_1m_out": 3,
+      "context_window": 131072,
+      "default_max_tokens": 10000
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "name": "Qwen3 32B",
+      "cost_per_1m_in": 0.29,
+      "cost_per_1m_out": 0.59,
       "context_window": 131072,
       "default_max_tokens": 10000
     }
