@@ -1,0 +1,421 @@
+{
+  "name": "Ollama",
+  "id": "ollama",
+  "type": "openai",
+  "api_key": "ollama",
+  "api_endpoint": "$OLLAMA_API_ENDPOINT",
+  "default_large_model_id": "deepseek-r1",
+  "default_small_model_id": "llama3",
+  "models": [
+    {
+      "id": "deepseek-r1",
+      "name": "deepseek-r1",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3",
+      "name": "qwen3",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "llama3.1",
+      "name": "llama3.1",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "llama3.2",
+      "name": "llama3.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistral",
+      "name": "mistral",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 32000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen2.5",
+      "name": "qwen2.5",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen2.5-coder",
+      "name": "qwen2.5-coder",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen2",
+      "name": "qwen2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "llama3.3",
+      "name": "llama3.3",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 8192,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "mistral-nemo",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwq",
+      "name": "qwq",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 8192,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistral-small",
+      "name": "mistral-small",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 32000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "smollm2",
+      "name": "smollm2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 2048,
+      "default_max_tokens": 2048,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "mixtral",
+      "name": "mixtral",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 32000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "llama4",
+      "name": "llama4",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 10000000,
+      "default_max_tokens": 10000000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "command-r",
+      "name": "command-r",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "hermes3",
+      "name": "hermes3",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 8192,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "granite3.3",
+      "name": "granite3.3",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 8192,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "phi4-mini",
+      "name": "phi4-mini",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "magistral",
+      "name": "magistral",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 40000,
+      "default_max_tokens": 40000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "devstral",
+      "name": "devstral",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "cogito",
+      "name": "cogito",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistral-small3.1",
+      "name": "mistral-small3.1",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "granite3.2-vision",
+      "name": "granite3.2-vision",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 32000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "mistral-large",
+      "name": "mistral-large",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "command-r-plus",
+      "name": "command-r-plus",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "granite3.2",
+      "name": "granite3.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "granite3.1-dense",
+      "name": "granite3.1-dense",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 2048,
+      "default_max_tokens": 2048,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "granite3-dense",
+      "name": "granite3-dense",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 2048,
+      "default_max_tokens": 2048,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "nemotron-mini",
+      "name": "nemotron-mini",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 4096,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "athene-v2",
+      "name": "athene-v2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 2048,
+      "default_max_tokens": 2048,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "nemotron",
+      "name": "nemotron",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 4096,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "llama3-groq-tool-use",
+      "name": "llama3-groq-tool-use",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 8192,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistral-small3.2",
+      "name": "mistral-small3.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 24000,
+      "default_max_tokens": 24000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "aya-expanse",
+      "name": "aya-expanse",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "granite3-moe",
+      "name": "granite3-moe",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 2048,
+      "default_max_tokens": 2048,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "granite3.1-moe",
+      "name": "granite3.1-moe",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 2048,
+      "default_max_tokens": 2048,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "command-r7b",
+      "name": "command-r7b",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "command-a",
+      "name": "command-a",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 256000,
+      "default_max_tokens": 256000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "firefunction-v2",
+      "name": "firefunction-v2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 2048,
+      "default_max_tokens": 2048,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "command-r7b-arabic",
+      "name": "command-r7b-arabic",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "context_window": 128000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}
