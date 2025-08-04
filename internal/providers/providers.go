@@ -30,6 +30,9 @@ var vertexAIConfig []byte
 //go:embed configs/xai.json
 var xAIConfig []byte
 
+//go:embed configs/zai.json
+var zAIConfig []byte
+
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
@@ -53,6 +56,7 @@ var providerRegistry = []ProviderFunc{
 	bedrockProvider,
 	vertexAIProvider,
 	xAIProvider,
+	zAIProvider,
 	groqProvider,
 	openRouterProvider,
 	lambdaProvider,
@@ -103,6 +107,10 @@ func vertexAIProvider() catwalk.Provider {
 
 func xAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(xAIConfig)
+}
+
+func zAIProvider() catwalk.Provider {
+	return loadProviderFromConfig(zAIConfig)
 }
 
 func openRouterProvider() catwalk.Provider {
