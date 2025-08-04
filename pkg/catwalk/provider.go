@@ -28,6 +28,7 @@ const (
 	InferenceProviderGROQ       InferenceProvider = "groq"
 	InferenceProviderOpenRouter InferenceProvider = "openrouter"
 	InferenceProviderLambda     InferenceProvider = "lambda"
+	InferenceProviderCerebras   InferenceProvider = "cerebras"
 )
 
 // Provider represents an AI provider configuration.
@@ -72,5 +73,6 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderGROQ,
 		InferenceProviderOpenRouter,
 		InferenceProviderLambda,
+		InferenceProviderCerebras,
 	}
 }
