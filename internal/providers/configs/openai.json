@@ -8,34 +8,6 @@
   "default_small_model_id": "gpt-4o",
   "models": [
     {
-      "id": "o4-mini",
-      "name": "o4 Mini",
-      "cost_per_1m_in": 1.1,
-      "cost_per_1m_out": 4.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.275,
-      "context_window": 200000,
-      "default_max_tokens": 50000,
-      "can_reason": true,
-      "has_reasoning_effort": true,
-      "default_reasoning_effort": "low",
-      "supports_attachments": true
-    },
-    {
-      "id": "o3",
-      "name": "o3",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 8,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.5,
-      "context_window": 200000,
-      "default_max_tokens": 50000,
-      "can_reason": true,
-      "has_reasoning_effort": true,
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "gpt-5",
       "name": "GPT-5",
       "cost_per_1m_in": 1.25,
@@ -75,6 +47,34 @@
       "can_reason": true,
       "has_reasoning_effort": true,
       "default_reasoning_effort": "low",
+      "supports_attachments": true
+    },
+    {
+      "id": "o4-mini",
+      "name": "o4 Mini",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.275,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "low",
+      "supports_attachments": true
+    },
+    {
+      "id": "o3",
+      "name": "o3",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.5,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "has_reasoning_effort": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
