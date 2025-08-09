@@ -8,6 +8,32 @@
   "default_small_model_id": "anthropic/claude-3.5-haiku",
   "models": [
     {
+      "id": "ai21/jamba-mini-1.7",
+      "name": "AI21: Jamba Mini 1.7",
+      "cost_per_1m_in": 0.19999999999999998,
+      "cost_per_1m_out": 0.39999999999999997,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 2048,
+      "can_reason": false,
+      "has_reasoning_efforts": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "ai21/jamba-large-1.7",
+      "name": "AI21: Jamba Large 1.7",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 2048,
+      "can_reason": false,
+      "has_reasoning_efforts": false,
+      "supports_attachments": false
+    },
+    {
       "id": "openai/gpt-5",
       "name": "OpenAI: GPT-5",
       "cost_per_1m_in": 1.25,
@@ -16,7 +42,7 @@
       "cost_per_1m_out_cached": 0.125,
       "context_window": 400000,
       "default_max_tokens": 64000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -29,7 +55,7 @@
       "cost_per_1m_out_cached": 0.024999999999999998,
       "context_window": 400000,
       "default_max_tokens": 64000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -42,7 +68,7 @@
       "cost_per_1m_out_cached": 0.005,
       "context_window": 400000,
       "default_max_tokens": 64000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -104,9 +130,22 @@
       "cost_per_1m_in": 0.6,
       "cost_per_1m_out": 2.2,
       "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.11,
+      "context_window": 131072,
+      "default_max_tokens": 48000,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "z-ai/glm-4.5-air:free",
+      "name": "Z.AI: GLM 4.5 Air (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 48000,
       "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -118,21 +157,8 @@
       "cost_per_1m_out": 1.1,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.03,
-      "context_window": 128000,
+      "context_window": 131072,
       "default_max_tokens": 48000,
-      "can_reason": true,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "qwen/qwen3-235b-a22b-thinking-2507",
-      "name": "Qwen: Qwen3 235B A22B Thinking 2507",
-      "cost_per_1m_in": 0.65,
-      "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 131072,
       "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -153,8 +179,8 @@
     {
       "id": "qwen/qwen3-coder",
       "name": "Qwen: Qwen3 Coder ",
-      "cost_per_1m_in": 1.5,
-      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in": 0.64,
+      "cost_per_1m_out": 2.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
@@ -179,8 +205,8 @@
     {
       "id": "qwen/qwen3-235b-a22b-2507",
       "name": "Qwen: Qwen3 235B A22B Instruct 2507",
-      "cost_per_1m_in": 0.12,
-      "cost_per_1m_out": 0.59,
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.85,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
@@ -208,7 +234,7 @@
       "cost_per_1m_in": 0.6,
       "cost_per_1m_out": 2.5,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "cost_per_1m_out_cached": 0.15,
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,
@@ -328,7 +354,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -484,7 +510,7 @@
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -556,12 +582,12 @@
     {
       "id": "qwen/qwen3-30b-a3b",
       "name": "Qwen: Qwen3 30B A3B",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in": 0.08,
+      "cost_per_1m_out": 0.29,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 4000,
+      "context_window": 40960,
+      "default_max_tokens": 20480,
       "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -582,12 +608,12 @@
     {
       "id": "qwen/qwen3-32b",
       "name": "Qwen: Qwen3 32B",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in": 0.39999999999999997,
+      "cost_per_1m_out": 0.7999999999999999,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 16384,
       "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -627,7 +653,7 @@
       "cost_per_1m_out_cached": 0.275,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -640,7 +666,7 @@
       "cost_per_1m_out_cached": 0.5,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -653,7 +679,7 @@
       "cost_per_1m_out_cached": 0.275,
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": false,
+      "can_reason": true,
       "has_reasoning_efforts": false,
       "supports_attachments": true
     },
@@ -970,19 +996,6 @@
       "supports_attachments": false
     },
     {
-      "id": "deepseek/deepseek-r1-distill-llama-70b",
-      "name": "DeepSeek: R1 Distill Llama 70B",
-      "cost_per_1m_in": 0.75,
-      "cost_per_1m_out": 0.9900000000000001,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
       "id": "deepseek/deepseek-r1",
       "name": "DeepSeek: R1",
       "cost_per_1m_in": 0.44999999999999996,
@@ -1076,12 +1089,12 @@
     {
       "id": "meta-llama/llama-3.3-70b-instruct",
       "name": "Meta: Llama 3.3 70B Instruct",
-      "cost_per_1m_in": 0.12,
-      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in": 0.039,
+      "cost_per_1m_out": 0.12,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -1176,19 +1189,6 @@
       "can_reason": false,
       "has_reasoning_efforts": false,
       "supports_attachments": true
-    },
-    {
-      "id": "thedrummer/unslopnemo-12b",
-      "name": "TheDrummer: UnslopNemo 12B",
-      "cost_per_1m_in": 0.39999999999999997,
-      "cost_per_1m_out": 0.39999999999999997,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 16000,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
     },
     {
       "id": "anthropic/claude-3.5-haiku:beta",
@@ -1295,19 +1295,6 @@
       "supports_attachments": true
     },
     {
-      "id": "thedrummer/rocinante-12b",
-      "name": "TheDrummer: Rocinante 12B",
-      "cost_per_1m_in": 0.24,
-      "cost_per_1m_out": 0.44999999999999996,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
-      "default_max_tokens": 16384,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
       "id": "meta-llama/llama-3.2-3b-instruct",
       "name": "Meta: Llama 3.2 3B Instruct",
       "cost_per_1m_in": 0.015,
@@ -1386,14 +1373,14 @@
       "supports_attachments": true
     },
     {
-      "id": "meta-llama/llama-3.1-8b-instruct",
-      "name": "Meta: Llama 3.1 8B Instruct",
-      "cost_per_1m_in": 0.09999999999999999,
-      "cost_per_1m_out": 0.09999999999999999,
+      "id": "meta-llama/llama-3.1-70b-instruct",
+      "name": "Meta: Llama 3.1 70B Instruct",
+      "cost_per_1m_in": 0.12,
+      "cost_per_1m_out": 0.3,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 4000,
+      "default_max_tokens": 65536,
       "can_reason": false,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -1412,14 +1399,14 @@
       "supports_attachments": false
     },
     {
-      "id": "meta-llama/llama-3.1-70b-instruct",
-      "name": "Meta: Llama 3.1 70B Instruct",
+      "id": "meta-llama/llama-3.1-8b-instruct",
+      "name": "Meta: Llama 3.1 8B Instruct",
       "cost_per_1m_in": 0.09999999999999999,
-      "cost_per_1m_out": 0.28,
+      "cost_per_1m_out": 0.09999999999999999,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 4000,
       "can_reason": false,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -1427,12 +1414,12 @@
     {
       "id": "mistralai/mistral-nemo",
       "name": "Mistral: Mistral Nemo",
-      "cost_per_1m_in": 0.024999999999999998,
-      "cost_per_1m_out": 0.049999999999999996,
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.15,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "has_reasoning_efforts": false,
       "supports_attachments": false
@@ -1568,12 +1555,25 @@
       "supports_attachments": true
     },
     {
+      "id": "openai/gpt-4o-2024-05-13",
+      "name": "OpenAI: GPT-4o (2024-05-13)",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 2048,
+      "can_reason": false,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
       "id": "openai/gpt-4o",
       "name": "OpenAI: GPT-4o",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "cost_per_1m_out_cached": 1.25,
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
@@ -1594,17 +1594,17 @@
       "supports_attachments": true
     },
     {
-      "id": "openai/gpt-4o-2024-05-13",
-      "name": "OpenAI: GPT-4o (2024-05-13)",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 15,
+      "id": "meta-llama/llama-3-70b-instruct",
+      "name": "Meta: Llama 3 70B Instruct",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.39999999999999997,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 2048,
+      "context_window": 8192,
+      "default_max_tokens": 8192,
       "can_reason": false,
       "has_reasoning_efforts": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "meta-llama/llama-3-8b-instruct",
@@ -1620,23 +1620,10 @@
       "supports_attachments": false
     },
     {
-      "id": "meta-llama/llama-3-70b-instruct",
-      "name": "Meta: Llama 3 70B Instruct",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 0.39999999999999997,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 8192,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
       "id": "mistralai/mixtral-8x22b-instruct",
       "name": "Mistral: Mixtral 8x22B Instruct",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 6,
+      "cost_per_1m_in": 0.8999999999999999,
+      "cost_per_1m_out": 0.8999999999999999,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 65536,
@@ -1644,19 +1631,6 @@
       "can_reason": false,
       "has_reasoning_efforts": false,
       "supports_attachments": false
-    },
-    {
-      "id": "google/gemini-pro-1.5",
-      "name": "Google: Gemini 1.5 Pro",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 2000000,
-      "default_max_tokens": 4096,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4-turbo",
@@ -1667,6 +1641,19 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 2048,
+      "can_reason": false,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "google/gemini-pro-1.5",
+      "name": "Google: Gemini 1.5 Pro",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 2000000,
+      "default_max_tokens": 4096,
       "can_reason": false,
       "has_reasoning_efforts": false,
       "supports_attachments": true
@@ -1893,8 +1880,8 @@
       "supports_attachments": false
     },
     {
-      "id": "openai/gpt-4",
-      "name": "OpenAI: GPT-4",
+      "id": "openai/gpt-4-0314",
+      "name": "OpenAI: GPT-4 (older v0314)",
       "cost_per_1m_in": 30,
       "cost_per_1m_out": 60,
       "cost_per_1m_in_cached": 0,
@@ -1906,8 +1893,8 @@
       "supports_attachments": false
     },
     {
-      "id": "openai/gpt-4-0314",
-      "name": "OpenAI: GPT-4 (older v0314)",
+      "id": "openai/gpt-4",
+      "name": "OpenAI: GPT-4",
       "cost_per_1m_in": 30,
       "cost_per_1m_out": 60,
       "cost_per_1m_in_cached": 0,
