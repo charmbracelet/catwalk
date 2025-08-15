@@ -38,6 +38,16 @@
             "supports_attachments": false
         },
         {
+            "id": "gpt-oss-120b",
+            "name": "gpt-oss-120b",
+            "cost_per_1m_in": 0.4,
+            "cost_per_1m_out": 0.8,
+            "context_window": 128000,
+            "default_max_tokens": 65536,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
             "id": "qwen-3-32b",
             "name": "Qwen 3 32B",
             "cost_per_1m_in": 0.4,
