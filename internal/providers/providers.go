@@ -48,6 +48,9 @@ var cerebrasConfig []byte
 //go:embed configs/venice.json
 var veniceConfig []byte
 
+//go:embed configs/unboundai.json
+var unboundaiConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -65,6 +68,7 @@ var providerRegistry = []ProviderFunc{
 	lambdaProvider,
 	cerebrasProvider,
 	veniceProvider,
+	unboundaiProvider,
 }
 
 // GetAll returns all registered providers.
@@ -135,4 +139,8 @@ func cerebrasProvider() catwalk.Provider {
 
 func veniceProvider() catwalk.Provider {
 	return loadProviderFromConfig(veniceConfig)
+}
+
+func unboundaiProvider() catwalk.Provider {
+	return loadProviderFromConfig(unboundaiConfig)
 }
