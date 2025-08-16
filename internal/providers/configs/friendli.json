@@ -1,0 +1,71 @@
+{
+  "name": "FriendliAI",
+  "id": "friendli",
+  "type": "openai",
+  "api_key": "$FRIENDLI_TOKEN",
+  "api_endpoint": "https://api.friendli.ai/serverless/v1",
+  "default_large_model_id": "meta-llama/Llama-3.3-70B-Instruct",
+  "default_small_model_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "models": [
+    {
+      "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "name": "Llama 3.3 70B Instruct",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "meta-llama/Llama-3.1-8B-Instruct",
+      "name": "Llama 3.1 8B Instruct",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.1,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "LGAI-EXAONE/EXAONE-4.0.1-32B",
+      "name": "EXAONE 4.0.1 32B",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 1.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "K-intelligence/Midm-2.0-Base-Instruct",
+      "name": "Midm 2.0 Base Instruct",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "skt/A.X-4.0",
+      "name": "A.X 4.0",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}
