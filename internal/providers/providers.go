@@ -48,6 +48,9 @@ var cerebrasConfig []byte
 //go:embed configs/venice.json
 var veniceConfig []byte
 
+//go:embed configs/chutes.json
+var chutesConfig []byte
+
 //go:embed configs/deepseek.json
 var deepSeekConfig []byte
 
@@ -68,6 +71,7 @@ var providerRegistry = []ProviderFunc{
 	lambdaProvider,
 	cerebrasProvider,
 	veniceProvider,
+	chutesProvider,
 	deepSeekProvider,
 }
 
@@ -139,6 +143,10 @@ func cerebrasProvider() catwalk.Provider {
 
 func veniceProvider() catwalk.Provider {
 	return loadProviderFromConfig(veniceConfig)
+}
+
+func chutesProvider() catwalk.Provider {
+	return loadProviderFromConfig(chutesConfig)
 }
 
 func deepSeekProvider() catwalk.Provider {
