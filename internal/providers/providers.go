@@ -51,6 +51,9 @@ var veniceConfig []byte
 //go:embed configs/chutes.json
 var chutesConfig []byte
 
+//go:embed configs/deepseek.json
+var deepSeekConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -69,6 +72,7 @@ var providerRegistry = []ProviderFunc{
 	cerebrasProvider,
 	veniceProvider,
 	chutesProvider,
+	deepSeekProvider,
 }
 
 // GetAll returns all registered providers.
@@ -143,4 +147,8 @@ func veniceProvider() catwalk.Provider {
 
 func chutesProvider() catwalk.Provider {
 	return loadProviderFromConfig(chutesConfig)
+}
+
+func deepSeekProvider() catwalk.Provider {
+	return loadProviderFromConfig(deepSeekConfig)
 }
