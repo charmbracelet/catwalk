@@ -80,9 +80,6 @@ docker_manifests:
 
 release:
   prerelease: auto
-  footer: |
-    ---
-
-    <a href="https://charm.sh/"><img alt="The Charm logo" src="https://stuff.charm.sh/charm-badge.jpg" width="400"></a>
-
-    Thoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).
+  footer:
+    from_url:
+      url: https://raw.githubusercontent.com/charmbracelet/meta/main/footer.md

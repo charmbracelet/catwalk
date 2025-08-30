@@ -25,8 +25,13 @@ const (
 	InferenceProviderBedrock    InferenceProvider = "bedrock"
 	InferenceProviderVertexAI   InferenceProvider = "vertexai"
 	InferenceProviderXAI        InferenceProvider = "xai"
+	InferenceProviderZAI        InferenceProvider = "zai"
 	InferenceProviderGROQ       InferenceProvider = "groq"
 	InferenceProviderOpenRouter InferenceProvider = "openrouter"
+	InferenceProviderLambda     InferenceProvider = "lambda"
+	InferenceProviderCerebras   InferenceProvider = "cerebras"
+	InferenceProviderVenice     InferenceProvider = "venice"
+	InferenceProviderChutes     InferenceProvider = "chutes"
 )
 
 // Provider represents an AI provider configuration.
@@ -68,7 +73,12 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderBedrock,
 		InferenceProviderVertexAI,
 		InferenceProviderXAI,
+		InferenceProviderZAI,
 		InferenceProviderGROQ,
 		InferenceProviderOpenRouter,
+		InferenceProviderLambda,
+		InferenceProviderCerebras,
+		InferenceProviderVenice,
+		InferenceProviderChutes,
 	}
 }

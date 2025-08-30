@@ -1,0 +1,101 @@
+{
+    "name": "Cerebras",
+    "id": "cerebras",
+    "type": "openai",
+    "api_key": "$CEREBRAS_API_KEY",
+    "api_endpoint": "https://api.cerebras.ai/v1",
+    "default_large_model_id": "qwen-3-coder-480b",
+    "default_small_model_id": "qwen-3-32b",
+    "models": [
+        {
+            "id": "llama-4-scout-17b-16e-instruct",
+            "name": "Llama 4 Scout",
+            "cost_per_1m_in": 0.65,
+            "cost_per_1m_out": 0.85,
+            "context_window": 32768,
+            "default_max_tokens": 4000,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "llama3.1-8b",
+            "name": "Llama 3.1 8B",
+            "cost_per_1m_in": 0.1,
+            "cost_per_1m_out": 0.1,
+            "context_window": 32768,
+            "default_max_tokens": 4000,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "llama-3.3-70b",
+            "name": "Llama 3.3 70B",
+            "cost_per_1m_in": 0.85,
+            "cost_per_1m_out": 1.2,
+            "context_window": 128000,
+            "default_max_tokens": 4000,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "gpt-oss-120b",
+            "name": "gpt-oss-120b",
+            "cost_per_1m_in": 0.4,
+            "cost_per_1m_out": 0.8,
+            "context_window": 128000,
+            "default_max_tokens": 65536,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "qwen-3-32b",
+            "name": "Qwen 3 32B",
+            "cost_per_1m_in": 0.4,
+            "cost_per_1m_out": 0.8,
+            "context_window": 128000,
+            "default_max_tokens": 32768,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "llama-4-maverick-17b-128e-instruct",
+            "name": "Llama 4 Maverick",
+            "cost_per_1m_in": 0.2,
+            "cost_per_1m_out": 0.6,
+            "context_window": 32768,
+            "default_max_tokens": 4000,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "qwen-3-235b-a22b-instruct-2507",
+            "name": "Qwen 3 235B Instruct",
+            "cost_per_1m_in": 0.6,
+            "cost_per_1m_out": 1.2,
+            "context_window": 131072,
+            "default_max_tokens": 16384,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "qwen-3-235b-a22b-thinking-2507",
+            "name": "Qwen 3 235B Thinking",
+            "cost_per_1m_in": 0.6,
+            "cost_per_1m_out": 1.2,
+            "context_window": 128000,
+            "default_max_tokens": 32768,
+            "can_reason": true,
+            "supports_attachments": false
+        },
+        {
+            "id": "qwen-3-coder-480b",
+            "name": "Qwen 3 480B Coder",
+            "cost_per_1m_in": 2.0,
+            "cost_per_1m_out": 2.0,
+            "context_window": 131072,
+            "default_max_tokens": 65536,
+            "can_reason": true,
+            "supports_attachments": false
+        }
+    ]
+}

@@ -30,11 +30,29 @@ var vertexAIConfig []byte
 //go:embed configs/xai.json
 var xAIConfig []byte
 
+//go:embed configs/zai.json
+var zAIConfig []byte
+
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
 //go:embed configs/groq.json
 var groqConfig []byte
+
+//go:embed configs/lambda.json
+var lambdaConfig []byte
+
+//go:embed configs/cerebras.json
+var cerebrasConfig []byte
+
+//go:embed configs/venice.json
+var veniceConfig []byte
+
+//go:embed configs/chutes.json
+var chutesConfig []byte
+
+//go:embed configs/deepseek.json
+var deepSeekConfig []byte
 
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
@@ -47,8 +65,14 @@ var providerRegistry = []ProviderFunc{
 	bedrockProvider,
 	vertexAIProvider,
 	xAIProvider,
+	zAIProvider,
 	groqProvider,
 	openRouterProvider,
+	lambdaProvider,
+	cerebrasProvider,
+	veniceProvider,
+	chutesProvider,
+	deepSeekProvider,
 }
 
 // GetAll returns all registered providers.
@@ -97,10 +121,34 @@ func xAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(xAIConfig)
 }
 
+func zAIProvider() catwalk.Provider {
+	return loadProviderFromConfig(zAIConfig)
+}
+
 func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
 }
 
 func groqProvider() catwalk.Provider {
 	return loadProviderFromConfig(groqConfig)
+}
+
+func lambdaProvider() catwalk.Provider {
+	return loadProviderFromConfig(lambdaConfig)
+}
+
+func cerebrasProvider() catwalk.Provider {
+	return loadProviderFromConfig(cerebrasConfig)
+}
+
+func veniceProvider() catwalk.Provider {
+	return loadProviderFromConfig(veniceConfig)
+}
+
+func chutesProvider() catwalk.Provider {
+	return loadProviderFromConfig(chutesConfig)
+}
+
+func deepSeekProvider() catwalk.Provider {
+	return loadProviderFromConfig(deepSeekConfig)
 }
