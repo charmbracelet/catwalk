@@ -17,7 +17,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "has_reasoning_effort": true,
+      "has_reasoning_efforts": true,
       "default_reasoning_effort": "minimal",
       "supports_attachments": true
     },
@@ -31,7 +31,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "has_reasoning_effort": true,
+      "has_reasoning_efforts": true,
       "default_reasoning_effort": "low",
       "supports_attachments": true
     },
@@ -45,7 +45,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "has_reasoning_effort": true,
+      "has_reasoning_efforts": true,
       "default_reasoning_effort": "low",
       "supports_attachments": true
     },
@@ -59,7 +59,7 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "has_reasoning_effort": true,
+      "has_reasoning_efforts": true,
       "default_reasoning_effort": "low",
       "supports_attachments": true
     },
@@ -73,7 +73,7 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "has_reasoning_effort": true,
+      "has_reasoning_efforts": true,
       "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
@@ -123,7 +123,7 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "has_reasoning_effort": true,
+      "has_reasoning_efforts": true,
       "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
