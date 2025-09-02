@@ -17,7 +17,7 @@
       "context_window": 164000,
       "default_max_tokens": 8192,
       "can_reason": true,
-      "has_reasoning_effort": false,
+      "has_reasoning_efforts": false,
       "supports_attachments": false
     },
     {
@@ -30,7 +30,7 @@
       "context_window": 164000,
       "default_max_tokens": 8192,
       "can_reason": true,
-      "has_reasoning_effort": false,
+      "has_reasoning_efforts": false,
       "supports_attachments": false
     },
     {
