@@ -279,6 +279,7 @@ func main() {
 				CostPer1MOutCached: pricing.CostPer1MOutCached,
 				ContextWindow:      model.ContextLength,
 				CanReason:          canReason,
+				HasReasoningEffort: canReason,
 				SupportsImages:     supportsImages,
 			}
 			if model.TopProvider.MaxCompletionTokens != nil {
@@ -341,6 +342,7 @@ func main() {
 			CostPer1MOutCached: pricing.CostPer1MOutCached,
 			ContextWindow:      bestEndpoint.ContextLength,
 			CanReason:          canReason,
+			HasReasoningEffort: canReason,
 			SupportsImages:     supportsImages,
 		}
 
