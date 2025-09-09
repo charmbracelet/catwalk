@@ -32,38 +32,38 @@ var SupportedProviders = []string{
 	"hf-inference",
 }
 
-// HFModel represents a model from the Hugging Face Router API.
-type HFModel struct {
-	ID        string       `json:"id"`
-	Object    string       `json:"object"`
-	Created   int64        `json:"created"`
-	OwnedBy   string       `json:"owned_by"`
-	Providers []HFProvider `json:"providers"`
+// Model represents a model from the Hugging Face Router API.
+type Model struct {
+	ID        string     `json:"id"`
+	Object    string     `json:"object"`
+	Created   int64      `json:"created"`
+	OwnedBy   string     `json:"owned_by"`
+	Providers []Provider `json:"providers"`
 }
 
-// HFProvider represents a provider configuration for a model.
-type HFProvider struct {
-	Provider                 string     `json:"provider"`
-	Status                   string     `json:"status"`
-	ContextLength            int64      `json:"context_length,omitempty"`
-	Pricing                  *HFPricing `json:"pricing,omitempty"`
-	SupportsTools            bool       `json:"supports_tools"`
-	SupportsStructuredOutput bool       `json:"supports_structured_output"`
+// Provider represents a provider configuration for a model.
+type Provider struct {
+	Provider                 string   `json:"provider"`
+	Status                   string   `json:"status"`
+	ContextLength            int64    `json:"context_length,omitempty"`
+	Pricing                  *Pricing `json:"pricing,omitempty"`
+	SupportsTools            bool     `json:"supports_tools"`
+	SupportsStructuredOutput bool     `json:"supports_structured_output"`
 }
 
-// HFPricing contains the pricing information for a provider.
-type HFPricing struct {
+// Pricing contains the pricing information for a provider.
+type Pricing struct {
 	Input  float64 `json:"input"`
 	Output float64 `json:"output"`
 }
 
-// HFModelsResponse is the response structure for the Hugging Face Router models API.
-type HFModelsResponse struct {
-	Object string    `json:"object"`
-	Data   []HFModel `json:"data"`
+// ModelsResponse is the response structure for the Hugging Face Router models API.
+type ModelsResponse struct {
+	Object string  `json:"object"`
+	Data   []Model `json:"data"`
 }
 
-func fetchHuggingFaceModels() (*HFModelsResponse, error) {
+func fetchHuggingFaceModels() (*ModelsResponse, error) {
 	client := &http.Client{Timeout: 30 * time.Second}
 	req, _ := http.NewRequestWithContext(
 		context.Background(),
@@ -81,7 +81,7 @@ func fetchHuggingFaceModels() (*HFModelsResponse, error) {
 		body, _ := io.ReadAll(resp.Body)
 		return nil, fmt.Errorf("status %d: %s", resp.StatusCode, body)
 	}
-	var mr HFModelsResponse
+	var mr ModelsResponse
 	if err := json.NewDecoder(resp.Body).Decode(&mr); err != nil {
 		return nil, err //nolint:wrapcheck
 	}
@@ -89,7 +89,7 @@ func fetchHuggingFaceModels() (*HFModelsResponse, error) {
 }
 
 // findContextWindow looks for a context window from any provider for the given model.
-func findContextWindow(model HFModel) int64 {
+func findContextWindow(model Model) int64 {
 	for _, provider := range model.Providers {
 		if provider.ContextLength > 0 {
 			return provider.ContextLength
