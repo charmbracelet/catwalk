@@ -14,7 +14,7 @@
             "cost_per_1m_out": 0.85,
             "context_window": 32768,
             "default_max_tokens": 4000,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         },
         {
@@ -24,7 +24,7 @@
             "cost_per_1m_out": 0.1,
             "context_window": 32768,
             "default_max_tokens": 4000,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         },
         {
@@ -34,7 +34,7 @@
             "cost_per_1m_out": 1.2,
             "context_window": 128000,
             "default_max_tokens": 4000,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         },
         {
@@ -45,6 +45,8 @@
             "context_window": 128000,
             "default_max_tokens": 65536,
             "can_reason": true,
+            "has_reasoning_efforts": true,
+            "default_reasoning_efforts": "medium",
             "supports_attachments": false
         },
         {
@@ -54,7 +56,7 @@
             "cost_per_1m_out": 0.8,
             "context_window": 128000,
             "default_max_tokens": 32768,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         },
         {
@@ -64,7 +66,7 @@
             "cost_per_1m_out": 0.6,
             "context_window": 32768,
             "default_max_tokens": 4000,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         },
         {
@@ -74,7 +76,7 @@
             "cost_per_1m_out": 1.2,
             "context_window": 131072,
             "default_max_tokens": 16384,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         },
         {
@@ -84,7 +86,7 @@
             "cost_per_1m_out": 1.2,
             "context_window": 128000,
             "default_max_tokens": 32768,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         },
         {
@@ -94,7 +96,7 @@
             "cost_per_1m_out": 2.0,
             "context_window": 131072,
             "default_max_tokens": 65536,
-            "can_reason": true,
+            "can_reason": false,
             "supports_attachments": false
         }
     ]
