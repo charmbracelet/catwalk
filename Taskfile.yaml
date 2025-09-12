@@ -1,0 +1,28 @@
+version: '3'
+
+tasks:
+  generate:
+    desc: Generate OpenRouter models
+    aliases: [gen]
+    cmds:
+      - go run cmd/openrouter/main.go
+
+  lint:
+    desc: Run linters
+    cmds:
+      - golangci-lint run ./...
+
+  lint:fix:
+    desc: Run linters and fix issues
+    cmds:
+      - golangci-lint run --fix ./...
+
+  fmt:
+    desc: Format code
+    cmds:
+      - go fmt ./...
+
+  modernize:
+    desc: Modernize code
+    cmds:
+      - modernize ./...
