@@ -12,6 +12,7 @@ import (
 	"os"
 	"slices"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/charmbracelet/catwalk/pkg/catwalk"
@@ -357,6 +358,10 @@ func main() {
 		fmt.Printf("Added model %s with context window %d from provider %s\n",
 			model.ID, bestEndpoint.ContextLength, bestEndpoint.ProviderName)
 	}
+
+	slices.SortFunc(openRouterProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+		return strings.Compare(a.Name, b.Name)
+	})
 
 	// save the json in internal/providers/config/openrouter.json
 	data, err := json.MarshalIndent(openRouterProvider, "", "  ")
