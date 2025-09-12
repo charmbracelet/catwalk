@@ -2,8 +2,8 @@
   "name": "Z.AI Coding",
   "id": "zai-coding",
   "api_key": "$ZAI_API_KEY",
-  "api_endpoint": "https://api.z.ai/api/anthropic",
-  "type": "anthropic",
+  "api_endpoint": "https://api.z.ai/api/coding/paas/v4",
+  "type": "openai",
   "default_large_model_id": "glm-4.5",
   "default_small_model_id": "glm-4.5-air",
   "models": [
@@ -17,7 +17,8 @@
       "context_window": 131072,
       "default_max_tokens": 98304,
       "can_reason": true,
-      "has_reasoning_efforts": false,
+      "has_reasoning_efforts": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -29,7 +30,8 @@
       "context_window": 131072,
       "default_max_tokens": 98304,
       "can_reason": true,
-      "has_reasoning_efforts": false,
+      "has_reasoning_efforts": true,
+      "default_reasoning_effort": "medium",
       "supports_attachments": false
     }
   ]
