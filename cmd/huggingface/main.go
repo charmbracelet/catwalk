@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"os"
 	"slices"
+	"strings"
 	"time"
 
 	"github.com/charmbracelet/catwalk/pkg/catwalk"
@@ -21,7 +22,7 @@ import (
 var SupportedProviders = []string{
 	// "together", // Multiple issues
 	"fireworks-ai",
-	// "nebius", // Tool Call ID not unique
+	//"nebius",
 	// "novita", // Usage report is wrong
 	"groq",
 	"cerebras",
@@ -107,7 +108,7 @@ func main() {
 	hfProvider := catwalk.Provider{
 		Name:                "Hugging Face",
 		ID:                  catwalk.InferenceProviderHuggingFace,
-		APIKey:              "$HUGGINGFACE_API_KEY",
+		APIKey:              "$HF_TOKEN",
 		APIEndpoint:         "https://router.huggingface.co/v1",
 		Type:                catwalk.TypeOpenAI,
 		DefaultLargeModelID: "moonshotai/Kimi-K2-Instruct-0905:groq",
@@ -161,7 +162,7 @@ func main() {
 			}
 
 			// Set default max tokens (conservative estimate)
-			defaultMaxTokens := min(contextLength/4, 10000)
+			defaultMaxTokens := min(contextLength/4, 8192)
 
 			m := catwalk.Model{
 				ID:                 modelID,
@@ -181,6 +182,10 @@ func main() {
 				modelID, contextLength, provider.Provider)
 		}
 	}
+
+	slices.SortFunc(hfProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+		return strings.Compare(a.Name, b.Name)
+	})
 
 	// Save the JSON in internal/providers/configs/huggingface.json
 	data, err := json.MarshalIndent(hfProvider, "", "  ")
