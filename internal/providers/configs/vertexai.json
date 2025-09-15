@@ -30,6 +30,48 @@
       "default_max_tokens": 50000,
       "can_reason": true,
       "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-1-20250805",
+      "name": "Claude Opus 4.1",
+      "type": "anthropic",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 75,
+      "cost_per_1m_in_cached": 18.75,
+      "cost_per_1m_out_cached": 1.5,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-sonnet-4-20250514",
+      "name": "Claude Sonnet 4",
+      "type": "anthropic",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-3-5-haiku-20241022",
+      "name": "Claude 3.5 Haiku",
+      "type": "anthropic",
+      "cost_per_1m_in": 0.7999999999999999,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 1,
+      "cost_per_1m_out_cached": 0.08,
+      "context_window": 200000,
+      "default_max_tokens": 5000,
+      "can_reason": false,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
     }
   ]
 }
