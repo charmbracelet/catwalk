@@ -2,7 +2,7 @@
   "name": "Z.AI",
   "id": "zai",
   "api_key": "$ZAI_API_KEY",
-  "api_endpoint": "https://api.z.ai/api/paas/v4",
+  "api_endpoint": "https://api.z.ai/api/coding/paas/v4",
   "type": "openai",
   "default_large_model_id": "glm-4.5",
   "default_small_model_id": "glm-4.5-air",
