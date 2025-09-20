@@ -32,6 +32,18 @@
       "supports_attachments": true
     },
     {
+      "id": "grok-4-fast",
+      "name": "Grok 4 Fast",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.05,
+      "context_window": 2000000,
+      "default_max_tokens": 200000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "grok-3-mini",
       "name": "Grok 3 Mini",
       "cost_per_1m_in": 0.3,
