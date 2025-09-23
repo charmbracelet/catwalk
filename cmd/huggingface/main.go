@@ -100,7 +100,7 @@ func findContextWindow(model Model) int64 {
 }
 
 // WARN: DO NOT USE
-// for now we have a subset list of models we use
+// for now we have a subset list of models we use.
 func main() {
 	modelsResp, err := fetchHuggingFaceModels()
 	if err != nil {
