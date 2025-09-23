@@ -21,19 +21,6 @@
       "supports_attachments": false
     },
     {
-      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507:cerebras",
-      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507 (cerebras)",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507:fireworks-ai",
       "name": "Qwen/Qwen3-235B-A22B-Instruct-2507 (fireworks-ai)",
       "cost_per_1m_in": 0.22,
@@ -73,19 +60,6 @@
       "supports_attachments": false
     },
     {
-      "id": "Qwen/Qwen3-32B:groq",
-      "name": "Qwen/Qwen3-32B (groq)",
-      "cost_per_1m_in": 0.29,
-      "cost_per_1m_out": 0.59,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
       "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct:cerebras",
       "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct (cerebras)",
       "cost_per_1m_in": 2,
@@ -112,32 +86,6 @@
       "supports_attachments": false
     },
     {
-      "id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B:groq",
-      "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B (groq)",
-      "cost_per_1m_in": 0.75,
-      "cost_per_1m_out": 0.99,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3:fireworks-ai",
-      "name": "deepseek-ai/DeepSeek-V3 (fireworks-ai)",
-      "cost_per_1m_in": 0.9,
-      "cost_per_1m_out": 0.9,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
       "id": "deepseek-ai/DeepSeek-V3-0324:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V3-0324 (fireworks-ai)",
       "cost_per_1m_in": 0.9,
@@ -158,32 +106,6 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 163840,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "google/gemma-2-9b-it:groq",
-      "name": "google/gemma-2-9b-it (groq)",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 8192,
-      "default_max_tokens": 2048,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "meta-llama/Llama-3.1-405B-Instruct:fireworks-ai",
-      "name": "meta-llama/Llama-3.1-405B-Instruct (fireworks-ai)",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
       "has_reasoning_efforts": false,
@@ -229,19 +151,6 @@
       "supports_attachments": false
     },
     {
-      "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct:cerebras",
-      "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct (cerebras)",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
       "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct:fireworks-ai",
       "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct (fireworks-ai)",
       "cost_per_1m_in": 0.22,
@@ -262,32 +171,6 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct:cerebras",
-      "name": "meta-llama/Llama-4-Scout-17B-16E-Instruct (cerebras)",
-      "cost_per_1m_in": 0.65,
-      "cost_per_1m_out": 0.85,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct:fireworks-ai",
-      "name": "meta-llama/Llama-4-Scout-17B-16E-Instruct (fireworks-ai)",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
       "has_reasoning_efforts": false,
