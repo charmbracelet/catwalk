@@ -372,6 +372,19 @@
       "supports_attachments": false
     },
     {
+      "id": "deepseek/deepseek-r1-0528:free",
+      "name": "DeepSeek: R1 0528 (free)",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 2.1799999999999997,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 163840,
+      "default_max_tokens": 81920,
+      "can_reason": true,
+      "has_reasoning_efforts": true,
+      "supports_attachments": false
+    },
+    {
       "id": "deepseek/deepseek-r1-distill-llama-70b",
       "name": "DeepSeek: R1 Distill Llama 70B",
       "cost_per_1m_in": 0.75,
