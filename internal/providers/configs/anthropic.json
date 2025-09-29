@@ -4,9 +4,21 @@
   "type": "anthropic",
   "api_key": "$ANTHROPIC_API_KEY",
   "api_endpoint": "$ANTHROPIC_API_ENDPOINT",
-  "default_large_model_id": "claude-sonnet-4-20250514",
+  "default_large_model_id": "claude-sonnet-4-5-20250929",
   "default_small_model_id": "claude-3-5-haiku-20241022",
   "models": [
+    {
+      "id": "claude-sonnet-4-5-20250929",
+      "name": "Claude Sonnet 4.5",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
     {
       "id": "claude-opus-4-1-20250805",
       "name": "Claude Opus 4.1",
