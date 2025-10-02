@@ -3,7 +3,7 @@
   "id": "xai",
   "api_key": "$XAI_API_KEY",
   "api_endpoint": "https://api.x.ai/v1",
-  "type": "openai-compat",
+  "type": "openai",
   "default_large_model_id": "grok-code-fast",
   "default_small_model_id": "grok-3-mini",
   "models": [
@@ -29,11 +29,6 @@
       "context_window": 256000,
       "default_max_tokens": 20000,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high"
-      ],
-      "default_reasoning_effort": "low",
       "supports_attachments": true
     },
     {

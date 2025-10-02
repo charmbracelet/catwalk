@@ -255,6 +255,9 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
+		if model.ContextLength < 20000 {
+			continue
+		}
 		// skip non‐text models or those without tools
 		if !slices.Contains(model.SupportedParams, "tools") ||
 			!slices.Contains(model.Architecture.InputModalities, "text") ||
@@ -271,17 +274,24 @@ func main() {
 			canReason := slices.Contains(model.SupportedParams, "reasoning")
 			supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
+			var reasoningLevels []string
+			var defaultReasoning string
+			if canReason {
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoning = "medium"
+			}
 			m := catwalk.Model{
-				ID:                 model.ID,
-				Name:               model.Name,
-				CostPer1MIn:        pricing.CostPer1MIn,
-				CostPer1MOut:       pricing.CostPer1MOut,
-				CostPer1MInCached:  pricing.CostPer1MInCached,
-				CostPer1MOutCached: pricing.CostPer1MOutCached,
-				ContextWindow:      model.ContextLength,
-				CanReason:          canReason,
-				HasReasoningEffort: canReason,
-				SupportsImages:     supportsImages,
+				ID:                     model.ID,
+				Name:                   model.Name,
+				CostPer1MIn:            pricing.CostPer1MIn,
+				CostPer1MOut:           pricing.CostPer1MOut,
+				CostPer1MInCached:      pricing.CostPer1MInCached,
+				CostPer1MOutCached:     pricing.CostPer1MOutCached,
+				ContextWindow:          model.ContextLength,
+				CanReason:              canReason,
+				DefaultReasoningEffort: defaultReasoning,
+				ReasoningLevels:        reasoningLevels,
+				SupportsImages:         supportsImages,
 			}
 			if model.TopProvider.MaxCompletionTokens != nil {
 				m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens / 2
@@ -334,17 +344,24 @@ func main() {
 		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
+		var reasoningLevels []string
+		var defaultReasoning string
+		if canReason {
+			reasoningLevels = []string{"low", "medium", "high"}
+			defaultReasoning = "medium"
+		}
 		m := catwalk.Model{
-			ID:                 model.ID,
-			Name:               model.Name,
-			CostPer1MIn:        pricing.CostPer1MIn,
-			CostPer1MOut:       pricing.CostPer1MOut,
-			CostPer1MInCached:  pricing.CostPer1MInCached,
-			CostPer1MOutCached: pricing.CostPer1MOutCached,
-			ContextWindow:      bestEndpoint.ContextLength,
-			CanReason:          canReason,
-			HasReasoningEffort: canReason,
-			SupportsImages:     supportsImages,
+			ID:                     model.ID,
+			Name:                   model.Name,
+			CostPer1MIn:            pricing.CostPer1MIn,
+			CostPer1MOut:           pricing.CostPer1MOut,
+			CostPer1MInCached:      pricing.CostPer1MInCached,
+			CostPer1MOutCached:     pricing.CostPer1MOutCached,
+			ContextWindow:          bestEndpoint.ContextLength,
+			CanReason:              canReason,
+			DefaultReasoningEffort: defaultReasoning,
+			ReasoningLevels:        reasoningLevels,
+			SupportsImages:         supportsImages,
 		}
 
 		// Set max tokens based on the best endpoint

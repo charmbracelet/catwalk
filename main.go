@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/charmbracelet/catwalk/internal/deprecated"
 	"github.com/charmbracelet/catwalk/internal/providers"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -40,9 +41,29 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func providersHandlerDeprecated(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method == http.MethodHead {
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	counter.Inc()
+	allProviders := deprecated.GetAll()
+	if err := json.NewEncoder(w).Encode(allProviders); err != nil {
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		return
+	}
+}
+
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/providers", providersHandler)
+	mux.HandleFunc("/v2/providers", providersHandler)
+	mux.HandleFunc("/providers", providersHandlerDeprecated)
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		_, _ = w.Write([]byte("OK"))
