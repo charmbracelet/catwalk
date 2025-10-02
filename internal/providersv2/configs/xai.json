@@ -1,0 +1,71 @@
+{
+  "name": "xAI",
+  "id": "xai",
+  "api_key": "$XAI_API_KEY",
+  "api_endpoint": "https://api.x.ai/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "grok-code-fast",
+  "default_small_model_id": "grok-3-mini",
+  "models": [
+    {
+      "id": "grok-code-fast",
+      "name": "Grok Code Fast",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 1.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.02,
+      "context_window": 256000,
+      "default_max_tokens": 20000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "grok-4",
+      "name": "Grok 4",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.75,
+      "context_window": 256000,
+      "default_max_tokens": 20000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "grok-4-fast",
+      "name": "Grok 4 Fast",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.05,
+      "context_window": 2000000,
+      "default_max_tokens": 200000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "grok-3-mini",
+      "name": "Grok 3 Mini",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.075,
+      "context_window": 131072,
+      "default_max_tokens": 20000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "grok-3",
+      "name": "Grok 3",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.75,
+      "context_window": 131072,
+      "default_max_tokens": 20000,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}

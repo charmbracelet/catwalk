@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/charmbracelet/catwalk/internal/providers"
+	"github.com/charmbracelet/catwalk/internal/providersv2"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -40,8 +41,28 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func providersV2Handler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method == http.MethodHead {
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	counter.Inc()
+	allProviders := providersv2.GetAll()
+	if err := json.NewEncoder(w).Encode(allProviders); err != nil {
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		return
+	}
+}
+
 func main() {
 	mux := http.NewServeMux()
+	mux.HandleFunc("v2/providers", providersV2Handler)
 	mux.HandleFunc("/providers", providersHandler)
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)

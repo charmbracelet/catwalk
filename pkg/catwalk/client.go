@@ -58,3 +58,25 @@ func (c *Client) GetProviders() ([]Provider, error) {
 
 	return providers, nil
 }
+
+// GetProvidersV2 retrieves all available providers from the service.
+func (c *Client) GetProvidersV2() ([]Provider, error) {
+	url := fmt.Sprintf("%s/v2/providers", c.baseURL)
+
+	resp, err := c.httpClient.Get(url) //nolint:noctx
+	if err != nil {
+		return nil, fmt.Errorf("failed to make request: %w", err)
+	}
+	defer resp.Body.Close() //nolint:errcheck
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+	}
+
+	var providers []Provider
+	if err := json.NewDecoder(resp.Body).Decode(&providers); err != nil {
+		return nil, fmt.Errorf("failed to decode response: %w", err)
+	}
+
+	return providers, nil
+}
