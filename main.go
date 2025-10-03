@@ -62,7 +62,7 @@ func providersV2Handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("v2/providers", providersV2Handler)
+	mux.HandleFunc("/v2/providers", providersV2Handler)
 	mux.HandleFunc("/providers", providersHandler)
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
