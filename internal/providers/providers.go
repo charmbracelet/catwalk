@@ -39,9 +39,6 @@ var bedrockConfig []byte
 //go:embed configs/groq.json
 var groqConfig []byte
 
-//go:embed configs/lambda.json
-var lambdaConfig []byte
-
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
 
@@ -71,7 +68,6 @@ var providerRegistry = []ProviderFunc{
 	zAIProvider,
 	groqProvider,
 	openRouterProvider,
-	lambdaProvider,
 	cerebrasProvider,
 	veniceProvider,
 	chutesProvider,
@@ -135,10 +131,6 @@ func openRouterProvider() catwalk.Provider {
 
 func groqProvider() catwalk.Provider {
 	return loadProviderFromConfig(groqConfig)
-}
-
-func lambdaProvider() catwalk.Provider {
-	return loadProviderFromConfig(lambdaConfig)
 }
 
 func cerebrasProvider() catwalk.Provider {
