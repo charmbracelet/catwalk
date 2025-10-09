@@ -26,3 +26,8 @@ tasks:
     desc: Modernize code
     cmds:
       - modernize ./...
+
+  install:
+    desc: Install catwalk locally
+    cmds:
+      - go install -v .
