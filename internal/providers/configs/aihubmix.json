@@ -1,0 +1,153 @@
+{
+  "name": "AIHubMix",
+  "id": "aihubmix",
+  "api_key": "$AIHUBMIX_API_KEY",
+  "api_endpoint": "https://aihubmix.com/v1",
+  "type": "openai",
+  "default_large_model_id": "claude-sonnet-4-5",
+  "default_small_model_id": "claude-3-5-haiku",
+  "default_headers": {
+    "APP-Code": "IUFF7106"
+  },
+  "models": [
+    {
+      "id": "claude-sonnet-4-5",
+      "name": "Claude Sonnet 4.5",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-1",
+      "name": "Claude Opus 4.1",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 75,
+      "cost_per_1m_in_cached": 18.75,
+      "cost_per_1m_out_cached": 1.5,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-3-5-haiku",
+      "name": "Claude 3.5 Haiku",
+      "cost_per_1m_in": 0.7999999999999999,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 1,
+      "cost_per_1m_out_cached": 0.08,
+      "context_window": 200000,
+      "default_max_tokens": 5000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "name": "Gemini 2.5 Pro",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 1.625,
+      "cost_per_1m_out_cached": 0.31,
+      "context_window": 1048576,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "name": "Gemini 2.5 Flash",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 2.5,
+      "cost_per_1m_in_cached": 0.3833,
+      "cost_per_1m_out_cached": 0.075,
+      "context_window": 1048576,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5",
+      "name": "GPT-5",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0.25,
+      "cost_per_1m_out_cached": 0.25,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "has_reasoning_efforts": true,
+      "default_reasoning_effort": "minimal",
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5-mini",
+      "name": "GPT-5 Mini",
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0.025,
+      "cost_per_1m_out_cached": 0.025,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "has_reasoning_efforts": true,
+      "default_reasoning_effort": "low",
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5-nano",
+      "name": "GPT-5 Nano",
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0.005,
+      "cost_per_1m_out_cached": 0.005,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "has_reasoning_efforts": true,
+      "default_reasoning_effort": "low",
+      "supports_attachments": true
+    },
+    {
+      "id": "Kimi-K2-0905",
+      "name": "Kimi K2 0905",
+      "cost_per_1m_in": 0.55,
+      "cost_per_1m_out": 2.19,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 10000,
+      "can_reason": true,
+      "has_reasoning_efforts": true,
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "glm-4.6",
+      "name": "GLM-4.6",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in_cached": 0.11,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 204800,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "has_reasoning_efforts": true,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3-coder-480b-a35b-instruct",
+      "name": "Qwen 3 480B Coder",
+      "cost_per_1m_in": 0.82,
+      "cost_per_1m_out": 3.29,
+      "context_window": 131072,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}
