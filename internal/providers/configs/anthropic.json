@@ -5,7 +5,7 @@
   "api_key": "$ANTHROPIC_API_KEY",
   "api_endpoint": "$ANTHROPIC_API_ENDPOINT",
   "default_large_model_id": "claude-sonnet-4-5-20250929",
-  "default_small_model_id": "claude-haiku-4-5-20251001",
+  "default_small_model_id": "claude-3-5-haiku-20241022",
   "models": [
     {
       "id": "claude-sonnet-4-5-20250929",
