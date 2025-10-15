@@ -7,6 +7,7 @@ type Type string
 const (
 	TypeOpenAI       Type = "openai"
 	TypeOpenAICompat Type = "openai-compat"
+	TypeOpenRouter   Type = "openrouter"
 	TypeAnthropic    Type = "anthropic"
 	TypeGoogle       Type = "google"
 	TypeAzure        Type = "azure"
