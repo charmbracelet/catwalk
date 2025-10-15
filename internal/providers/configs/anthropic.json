@@ -28,8 +28,8 @@
       "cost_per_1m_out_cached": 0.09999999999999999,
       "context_window": 200000,
       "default_max_tokens": 32000,
-      "can_reason": true,
-      "has_reasoning_efforts": true,
+      "can_reason": false,
+      "has_reasoning_efforts": false,
       "supports_attachments": true
     },
     {
