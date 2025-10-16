@@ -29,7 +29,7 @@
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": true,
-      "has_reasoning_efforts": true,
+      "has_reasoning_efforts": false,
       "supports_attachments": true
     },
     {
