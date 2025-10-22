@@ -31,3 +31,9 @@ tasks:
     desc: Install catwalk locally
     cmds:
       - go install -v .
+
+  run:
+    desc: Run catwalk
+    aliases: [default]
+    cmds:
+      - go run .
