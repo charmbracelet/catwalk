@@ -39,7 +39,7 @@ func NewWithURL(url string) *Client {
 
 // GetProviders retrieves all available providers from the service.
 func (c *Client) GetProviders() ([]Provider, error) {
-	url := fmt.Sprintf("%s/providers", c.baseURL)
+	url := fmt.Sprintf("%s/v2/providers", c.baseURL)
 
 	resp, err := c.httpClient.Get(url) //nolint:noctx
 	if err != nil {

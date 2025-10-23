@@ -3,7 +3,7 @@
   "id": "huggingface",
   "api_key": "$HF_TOKEN",
   "api_endpoint": "https://router.huggingface.co/v1",
-  "type": "openai-compat",
+  "type": "openai",
   "default_large_model_id": "moonshotai/Kimi-K2-Instruct-0905:groq",
   "default_small_model_id": "openai/gpt-oss-20b",
   "models": [

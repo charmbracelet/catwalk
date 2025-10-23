@@ -1,7 +1,7 @@
 {
   "name": "Venice AI",
   "id": "venice",
-  "type": "openai-compat",
+  "type": "openai",
   "api_key": "$VENICE_API_KEY",
   "api_endpoint": "https://api.venice.ai/api/v1",
   "default_large_model_id": "qwen3-235b:strip_thinking_response=true",

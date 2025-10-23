@@ -3,7 +3,7 @@
   "id": "aihubmix",
   "api_key": "$AIHUBMIX_API_KEY",
   "api_endpoint": "https://aihubmix.com/v1",
-  "type": "openai-compat",
+  "type": "openai",
   "default_large_model_id": "claude-sonnet-4-5",
   "default_small_model_id": "claude-3-5-haiku",
   "default_headers": {
