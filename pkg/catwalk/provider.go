@@ -97,3 +97,17 @@ func KnownProviders() []InferenceProvider {
 		InferenceAIHubMix,
 	}
 }
+
+// KnownProviderTypes returns all the known inference providers types.
+func KnownProviderTypes() []Type {
+	return []Type{
+		TypeOpenAI,
+		TypeOpenAICompat,
+		TypeOpenRouter,
+		TypeAnthropic,
+		TypeGoogle,
+		TypeAzure,
+		TypeBedrock,
+		TypeVertexAI,
+	}
+}
