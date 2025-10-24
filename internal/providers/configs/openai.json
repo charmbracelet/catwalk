@@ -128,6 +128,32 @@
       "supports_attachments": false
     },
     {
+      "id": "o1",
+      "name": "o1",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 60,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 7.5,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "o1-mini",
+      "name": "o1 Mini",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 1.5,
+      "context_window": 128000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
       "id": "gpt-4o",
       "name": "GPT-4o",
       "cost_per_1m_in": 2.5,
