@@ -12,7 +12,7 @@ const (
 	TypeGoogle       Type = "google"
 	TypeAzure        Type = "azure"
 	TypeBedrock      Type = "bedrock"
-	TypeVertexAI     Type = "vertexai"
+	TypeVertexAI     Type = "google-vertex"
 )
 
 // InferenceProvider represents the inference provider identifier.
