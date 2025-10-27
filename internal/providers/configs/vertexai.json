@@ -1,7 +1,7 @@
 {
   "name": "Google Vertex AI",
   "id": "vertexai",
-  "type": "vertexai",
+  "type": "google-vertex",
   "api_key": "",
   "api_endpoint": "",
   "default_large_model_id": "gemini-2.5-pro",
@@ -27,6 +27,31 @@
       "cost_per_1m_in_cached": 0.3833,
       "cost_per_1m_out_cached": 0.075,
       "context_window": 1048576,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-haiku-4-5@20251001",
+      "name": "Claude 4.5 Haiku",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 1.25,
+      "cost_per_1m_out_cached": 0.09999999999999999,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-sonnet-4-5@20250929",
+      "name": "Claude Sonnet 4.5",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
       "supports_attachments": true

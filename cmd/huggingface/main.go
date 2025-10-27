@@ -112,7 +112,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderHuggingFace,
 		APIKey:              "$HF_TOKEN",
 		APIEndpoint:         "https://router.huggingface.co/v1",
-		Type:                catwalk.TypeOpenAI,
+		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "moonshotai/Kimi-K2-Instruct-0905:groq",
 		DefaultSmallModelID: "openai/gpt-oss-20b",
 		Models:              []catwalk.Model{},

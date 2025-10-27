@@ -1,0 +1,83 @@
+{
+  "name": "AWS Bedrock",
+  "id": "bedrock",
+  "type": "bedrock",
+  "api_key": "",
+  "api_endpoint": "",
+  "default_large_model_id": "anthropic.claude-sonnet-4-5-20250929-v1:0",
+  "default_small_model_id": "anthropic.claude-3-5-haiku-20241022-v1:0",
+  "models": [
+    {
+      "id": "anthropic.claude-sonnet-4-5-20250929-v1:0",
+      "name": "AWS Claude Sonnet 4.5",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "anthropic.claude-opus-4-1-20250805-v1:0",
+      "name": "AWS Claude Opus 4.1",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 75,
+      "cost_per_1m_in_cached": 18.75,
+      "cost_per_1m_out_cached": 1.5,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "anthropic.claude-opus-4-20250514-v1:0",
+      "name": "AWS Claude Opus 4",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 75,
+      "cost_per_1m_in_cached": 18.75,
+      "cost_per_1m_out_cached": 1.5,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "anthropic.claude-sonnet-4-20250514-v1:0",
+      "name": "AWS Claude Sonnet 4",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "name": "AWS Claude 3.7 Sonnet",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "anthropic.claude-3-5-haiku-20241022-v1:0",
+      "name": "AWS Claude 3.5 Haiku",
+      "cost_per_1m_in": 0.7999999999999999,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 1,
+      "cost_per_1m_out_cached": 0.08,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": false,
+      "supports_attachments": true
+    }
+  ]
+}

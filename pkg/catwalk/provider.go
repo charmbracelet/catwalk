@@ -5,12 +5,14 @@ type Type string
 
 // All the supported AI provider types.
 const (
-	TypeOpenAI    Type = "openai"
-	TypeAnthropic Type = "anthropic"
-	TypeGemini    Type = "gemini"
-	TypeAzure     Type = "azure"
-	TypeBedrock   Type = "bedrock"
-	TypeVertexAI  Type = "vertexai"
+	TypeOpenAI       Type = "openai"
+	TypeOpenAICompat Type = "openai-compat"
+	TypeOpenRouter   Type = "openrouter"
+	TypeAnthropic    Type = "anthropic"
+	TypeGoogle       Type = "google"
+	TypeAzure        Type = "azure"
+	TypeBedrock      Type = "bedrock"
+	TypeVertexAI     Type = "google-vertex"
 )
 
 // InferenceProvider represents the inference provider identifier.
@@ -48,20 +50,31 @@ type Provider struct {
 	DefaultHeaders      map[string]string `json:"default_headers,omitempty"`
 }
 
+// ModelOptions stores extra options for models.
+type ModelOptions struct {
+	Temperature      *float64       `json:"temperature,omitempty"`
+	TopP             *float64       `json:"top_p,omitempty"`
+	TopK             *int64         `json:"top_k,omitempty"`
+	FrequencyPenalty *float64       `json:"frequency_penalty,omitempty"`
+	PresencePenalty  *float64       `json:"presence_penalty,omitempty"`
+	ProviderOptions  map[string]any `json:"provider_options,omitempty"`
+}
+
 // Model represents an AI model configuration.
 type Model struct {
-	ID                     string  `json:"id"`
-	Name                   string  `json:"name"`
-	CostPer1MIn            float64 `json:"cost_per_1m_in"`
-	CostPer1MOut           float64 `json:"cost_per_1m_out"`
-	CostPer1MInCached      float64 `json:"cost_per_1m_in_cached"`
-	CostPer1MOutCached     float64 `json:"cost_per_1m_out_cached"`
-	ContextWindow          int64   `json:"context_window"`
-	DefaultMaxTokens       int64   `json:"default_max_tokens"`
-	CanReason              bool    `json:"can_reason"`
-	HasReasoningEffort     bool    `json:"has_reasoning_efforts"`
-	DefaultReasoningEffort string  `json:"default_reasoning_effort,omitempty"`
-	SupportsImages         bool    `json:"supports_attachments"`
+	ID                     string       `json:"id"`
+	Name                   string       `json:"name"`
+	CostPer1MIn            float64      `json:"cost_per_1m_in"`
+	CostPer1MOut           float64      `json:"cost_per_1m_out"`
+	CostPer1MInCached      float64      `json:"cost_per_1m_in_cached"`
+	CostPer1MOutCached     float64      `json:"cost_per_1m_out_cached"`
+	ContextWindow          int64        `json:"context_window"`
+	DefaultMaxTokens       int64        `json:"default_max_tokens"`
+	CanReason              bool         `json:"can_reason"`
+	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
+	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
+	SupportsImages         bool         `json:"supports_attachments"`
+	Options                ModelOptions `json:"options"`
 }
 
 // KnownProviders returns all the known inference providers.
@@ -82,5 +95,19 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderChutes,
 		InferenceProviderHuggingFace,
 		InferenceAIHubMix,
+	}
+}
+
+// KnownProviderTypes returns all the known inference providers types.
+func KnownProviderTypes() []Type {
+	return []Type{
+		TypeOpenAI,
+		TypeOpenAICompat,
+		TypeOpenRouter,
+		TypeAnthropic,
+		TypeGoogle,
+		TypeAzure,
+		TypeBedrock,
+		TypeVertexAI,
 	}
 }
