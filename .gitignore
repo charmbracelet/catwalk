@@ -34,3 +34,6 @@ go.work.sum
 # crush
 .crush
 dist/
+
+# apipie model name cache
+cmd/apipie/cache.db
