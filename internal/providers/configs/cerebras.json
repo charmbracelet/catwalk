@@ -117,7 +117,7 @@
         },
         {
             "id": "qwen-3-coder-480b",
-            "name": "Qwen 3 480B Coder [SOON TO BE DEPRECATED]",
+            "name": "Qwen 3 480B Coder",
             "cost_per_1m_in": 2.0,
             "cost_per_1m_out": 2.0,
             "context_window": 131072,
