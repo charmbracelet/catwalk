@@ -83,3 +83,39 @@ release:
   footer:
     from_url:
       url: https://raw.githubusercontent.com/charmbracelet/meta/main/footer.md
+
+changelog:
+  sort: asc
+  disable: "{{ .IsNightly }}"
+  use: github
+  filters:
+    exclude:
+      - "^(build|ci): "
+      - "^chore: auto-update generated files$"
+      - "^chore\\(legal\\): "
+      - "^chore\\(deps\\): "
+      - "^test:"
+      - "^test\\("
+      - "^v\\d.*"
+      - "merge conflict"
+      - Merge branch
+      - Merge pull request
+      - Merge remote-tracking branch
+      - go mod tidy
+      - "^wip "
+      - "^wip:"
+  groups:
+    - title: "Deps"
+      regexp: "^.*\\(deps\\)*:+.*$"
+      order: 300
+    - title: "New!"
+      regexp: "^.*feat[(\\w)]*:+.*$"
+      order: 100
+    - title: "Fixed"
+      regexp: "^.*fix[(\\w)]*:+.*$"
+      order: 200
+    - title: "Docs"
+      regexp: "^.*docs[(\\w)]*:+.*$"
+      order: 400
+    - title: "Other stuff"
+      order: 9999
