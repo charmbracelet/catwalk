@@ -17,9 +17,21 @@ jobs:
       - uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
-      - run: go run ./cmd/openrouter/main.go
+      - name: Restore APIpie cache
+        uses: actions/cache@v4
+        with:
+          path: cmd/apipie/cache.db
+          key: apipie-cache-${{ hashFiles('cmd/apipie/cache.go') }}
+          restore-keys: |
+            apipie-cache-
+      - name: Generate OpenRouter models
+        run: go run ./cmd/openrouter/main.go
       # we need to add this back when we know that the providers/models all work
       # - run: go run ./cmd/huggingface/main.go
+      - name: Generate APIpie models
+        env:
+          APIPIE_DISPLAY_NAME_API_KEY: ${{ secrets.APIPIE_DISPLAY_NAME_API_KEY }}
+        run: go run ./cmd/apipie/main.go ./cmd/apipie/cache.go
       - uses: stefanzweifel/git-auto-commit-action@28e16e81777b558cc906c8750092100bbb34c5e3 # v5
         with:
           commit_message: "chore: auto-update generated files"

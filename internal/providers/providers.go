@@ -57,6 +57,9 @@ var huggingFaceConfig []byte
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
+//go:embed configs/apipie.json
+var apipieConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -77,6 +80,7 @@ var providerRegistry = []ProviderFunc{
 	deepSeekProvider,
 	huggingFaceProvider,
 	aiHubMixProvider,
+	apipieProvider,
 }
 
 // GetAll returns all registered providers.
@@ -159,4 +163,8 @@ func huggingFaceProvider() catwalk.Provider {
 
 func aiHubMixProvider() catwalk.Provider {
 	return loadProviderFromConfig(aiHubMixConfig)
+}
+
+func apipieProvider() catwalk.Provider {
+	return loadProviderFromConfig(apipieConfig)
 }

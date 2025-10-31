@@ -7,6 +7,12 @@ tasks:
     cmds:
       - go run cmd/openrouter/main.go
 
+  generate:apipie:
+    desc: Generate APIpie models
+    aliases: [gen:apipie]
+    cmds:
+      - go run cmd/apipie/main.go
+
   lint:
     desc: Run linters
     cmds:
