@@ -22,6 +22,7 @@ type InferenceProvider string
 const (
 	InferenceProviderOpenAI      InferenceProvider = "openai"
 	InferenceProviderAnthropic   InferenceProvider = "anthropic"
+	InferenceProviderSynthetic   InferenceProvider = "synthetic"
 	InferenceProviderGemini      InferenceProvider = "gemini"
 	InferenceProviderAzure       InferenceProvider = "azure"
 	InferenceProviderBedrock     InferenceProvider = "bedrock"
@@ -81,6 +82,7 @@ type Model struct {
 func KnownProviders() []InferenceProvider {
 	return []InferenceProvider{
 		InferenceProviderOpenAI,
+		InferenceProviderSynthetic,
 		InferenceProviderAnthropic,
 		InferenceProviderGemini,
 		InferenceProviderAzure,

@@ -1,0 +1,71 @@
+{
+  "name": "Synthetic",
+  "id": "synthetic",
+  "type": "open_source",
+  "api_key": "$SYNTHETIC_API_KEY",
+  "api_endpoint": "https://synthetic.new/api",
+  "default_large_model_id": "deepseek-ai/DeepSeek-V3.1",
+  "default_small_model_id": "moonshotai/Kimi-K2-Instruct",
+  "models": [
+    {
+      "id": "deepseek-ai/DeepSeek-V3.1",
+      "name": "DeepSeek V3.1",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "context_window": 128000,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "name": "Qwen3 235B A22B Instruct",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "context_window": 32768,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "zai-org/GLM-4.6",
+      "name": "GLM 4.6",
+      "cost_per_1m_in": 0.55,
+      "cost_per_1m_out": 2.19,
+      "context_window": 200000,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "GPT OSS 120B",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "context_window": 8192,
+      "default_max_tokens": 2048,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "moonshotai/Kimi-K2-Instruct-0905",
+      "name": "Kimi K2 Instruct",
+      "cost_per_1m_in": 1.20,
+      "cost_per_1m_out": 1.20,
+      "context_window": 128000,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-M2",
+      "name": "MiniMax M2",
+      "cost_per_1m_in": 0.55,
+      "cost_per_1m_out": 2.19,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}
