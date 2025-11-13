@@ -80,7 +80,7 @@ var providerRegistry = []ProviderFunc{
 	deepSeekProvider,
 	huggingFaceProvider,
 	aiHubMixProvider,
-	syntheticProvider
+	syntheticProvider,
 }
 
 // GetAll returns all registered providers.
