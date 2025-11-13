@@ -75,7 +75,6 @@
       "cost_per_1m_in_cached": 0.07,
       "cost_per_1m_out_cached": 0.14,
       "context_window": 131072,
-      "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": true,
       "reasoning_levels": [
@@ -130,7 +129,6 @@
       "cost_per_1m_in_cached": 0.59,
       "cost_per_1m_out_cached": 1.1,
       "context_window": 131072,
-      "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false
@@ -166,7 +164,7 @@
       "cost_per_1m_out": 0.88,
       "cost_per_1m_in_cached": 0.14,
       "cost_per_1m_out_cached": 0.55,
-      "context_window": 524000,
+      "context_window": 536576,
       "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": true
@@ -190,7 +188,7 @@
       "cost_per_1m_out": 2.19,
       "cost_per_1m_in_cached": 0.27,
       "cost_per_1m_out_cached": 0.55,
-      "context_window": 192000,
+      "context_window": 196608,
       "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
@@ -215,13 +213,13 @@
     },
     {
       "id": "hf:moonshotai/Kimi-K2-Thinking",
-      "name": "Kimi K2 Instruct",
+      "name": "Kimi K2 Thinking",
       "cost_per_1m_in": 0.55,
       "cost_per_1m_out": 2.19,
       "cost_per_1m_in_cached": 0.55,
       "cost_per_1m_out_cached": 2.19,
-      "context_window": 128000,
-      "default_max_tokens": 131072,
+      "context_window": 196608,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -239,7 +237,6 @@
       "cost_per_1m_in_cached": 0.55,
       "cost_per_1m_out_cached": 1.1,
       "context_window": 262144,
-      "context_window": 256000,
       "default_max_tokens": 262144,
       "can_reason": false,
       "supports_attachments": false
@@ -288,7 +285,6 @@
       "cost_per_1m_in_cached": 0.55,
       "cost_per_1m_out_cached": 1.1,
       "context_window": 262144,
-      "context_window": 256000,
       "default_max_tokens": 6912,
       "can_reason": true,
       "reasoning_levels": [
@@ -360,7 +356,7 @@
       "cost_per_1m_out": 0.55,
       "cost_per_1m_in_cached": 0.27,
       "cost_per_1m_out_cached": 0.55,
-      "context_window": 198000,
+      "context_window": 202752,
       "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
@@ -370,6 +366,6 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
-    }
+   }
   ]
 }
