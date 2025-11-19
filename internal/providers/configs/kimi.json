@@ -1,0 +1,23 @@
+{
+  "name": "Kimi Coding",
+  "id": "kimi-coding",
+  "type": "anthropic",
+  "api_key": "$KIMI_CODING_API_KEY",
+  "api_endpoint": "https://api.kimi.com/coding",
+  "default_large_model_id": "kimi-for-coding",
+  "default_small_model_id": "kimi-for-coding",
+  "models": [
+    {
+      "id": "kimi-for-coding",
+      "name": "Kimi for Coding",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    }
+  ]
+}
