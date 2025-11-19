@@ -75,6 +75,7 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	zAIProvider,
+	kimiCodingProvider,
 	groqProvider,
 	openRouterProvider,
 	cerebrasProvider,
@@ -84,7 +85,6 @@ var providerRegistry = []ProviderFunc{
 	huggingFaceProvider,
 	aiHubMixProvider,
 	syntheticProvider,
-	kimiCodingProvider,
 }
 
 // GetAll returns all registered providers.
