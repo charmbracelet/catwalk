@@ -60,6 +60,9 @@ var huggingFaceConfig []byte
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
+//go:embed configs/ollamacloud.json
+var ollamaCloudConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -80,6 +83,7 @@ var providerRegistry = []ProviderFunc{
 	deepSeekProvider,
 	huggingFaceProvider,
 	aiHubMixProvider,
+	ollamaCloudProvider,
 	syntheticProvider,
 }
 
@@ -167,4 +171,8 @@ func huggingFaceProvider() catwalk.Provider {
 
 func aiHubMixProvider() catwalk.Provider {
 	return loadProviderFromConfig(aiHubMixConfig)
+}
+
+func ollamaCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(ollamaCloudConfig)
 }
