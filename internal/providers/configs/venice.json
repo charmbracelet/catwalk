@@ -5,7 +5,7 @@
   "api_key": "$VENICE_API_KEY",
   "api_endpoint": "https://api.venice.ai/api/v1",
   "default_large_model_id": "qwen3-235b:strip_thinking_response=true",
-  "default_small_model_id": "mistral-31-24b",
+  "default_small_model_id": "llama-3.2-3b",
   "models": [
     {
       "id": "qwen3-235b:strip_thinking_response=true",
@@ -44,10 +44,46 @@
       "supports_attachments": true
     },
     {
+      "id": "llama-3.1-405b",
+      "name": "Llama 3.1 405B",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "llama-3.1-70b",
+      "name": "Llama 3.1 70B",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "llama-3.1-8b",
+      "name": "Llama 3.1 8B",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.1,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
       "id": "llama-3.2-3b",
       "name": "Llama 3.2 3B",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.05,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
@@ -65,6 +101,66 @@
       "context_window": 65536,
       "default_max_tokens": 32000,
       "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-coder-v2",
+      "name": "Deepseek Coder V2",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen-32b",
+      "name": "Qwen 32B",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen-72b",
+      "name": "Qwen 72B",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "hermes-3-405b",
+      "name": "Hermes 3 405B",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
       "supports_attachments": false
     }
   ]
