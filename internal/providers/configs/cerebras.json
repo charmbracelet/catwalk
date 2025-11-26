@@ -18,16 +18,6 @@
             "supports_attachments": false
         },
         {
-            "id": "llama-4-scout-17b-16e-instruct",
-            "name": "Llama 4 Scout",
-            "cost_per_1m_in": 0.65,
-            "cost_per_1m_out": 0.85,
-            "context_window": 32768,
-            "default_max_tokens": 4000,
-            "can_reason": false,
-            "supports_attachments": false
-        },
-        {
             "id": "llama3.1-8b",
             "name": "Llama 3.1 8B",
             "cost_per_1m_in": 0.1,
@@ -74,54 +64,12 @@
             "supports_attachments": false
         },
         {
-            "id": "llama-4-maverick-17b-128e-instruct",
-            "name": "Llama 4 Maverick",
-            "cost_per_1m_in": 0.2,
-            "cost_per_1m_out": 0.6,
-            "context_window": 32768,
-            "default_max_tokens": 4000,
-            "can_reason": false,
-            "supports_attachments": false
-        },
-        {
             "id": "qwen-3-235b-a22b-instruct-2507",
             "name": "Qwen 3 235B Instruct",
             "cost_per_1m_in": 0.6,
             "cost_per_1m_out": 1.2,
             "context_window": 131072,
             "default_max_tokens": 16384,
-            "can_reason": true,
-            "reasoning_levels": [
-                "low",
-                "medium",
-                "high"
-            ],
-            "default_reasoning_efforts": "medium",
-            "supports_attachments": false
-        },
-        {
-            "id": "qwen-3-235b-a22b-thinking-2507",
-            "name": "Qwen 3 235B Thinking",
-            "cost_per_1m_in": 0.6,
-            "cost_per_1m_out": 1.2,
-            "context_window": 128000,
-            "default_max_tokens": 32768,
-            "can_reason": true,
-            "reasoning_levels": [
-                "low",
-                "medium",
-                "high"
-            ],
-            "default_reasoning_efforts": "medium",
-            "supports_attachments": false
-        },
-        {
-            "id": "qwen-3-coder-480b",
-            "name": "Qwen 3 480B Coder",
-            "cost_per_1m_in": 2.0,
-            "cost_per_1m_out": 2.0,
-            "context_window": 131072,
-            "default_max_tokens": 65536,
             "can_reason": true,
             "reasoning_levels": [
                 "low",
