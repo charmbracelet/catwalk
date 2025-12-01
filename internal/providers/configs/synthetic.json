@@ -130,7 +130,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 202752,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 20275,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -272,7 +272,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 196608,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 19660,
       "can_reason": true,
       "reasoning_levels": [
         "low",

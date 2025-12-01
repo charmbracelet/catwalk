@@ -219,9 +219,12 @@ func main() {
 			SupportsImages:         supportsImages,
 		}
 
-		// Set max tokens based on max_output_length if available
-		if model.MaxOutputLength > 0 {
-			m.DefaultMaxTokens = model.MaxOutputLength / 2
+		// Set max tokens based on max_output_length if available, but cap at
+		// 15% of context length
+		maxFromOutput := model.MaxOutputLength / 2
+		maxAt15Pct := (model.ContextLength * 15) / 100
+		if model.MaxOutputLength > 0 && maxFromOutput <= maxAt15Pct {
+			m.DefaultMaxTokens = maxFromOutput
 		} else {
 			m.DefaultMaxTokens = model.ContextLength / 10
 		}
