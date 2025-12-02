@@ -2,10 +2,11 @@ version: '3'
 
 tasks:
   generate:
-    desc: Generate OpenRouter models
+    desc: Generate provider configurations
     aliases: [gen]
     cmds:
       - go run cmd/openrouter/main.go
+      - go run cmd/synthetic/main.go
 
   lint:
     desc: Run linters
