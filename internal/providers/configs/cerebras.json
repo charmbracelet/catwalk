@@ -6,6 +6,9 @@
     "api_endpoint": "https://api.cerebras.ai/v1",
     "default_large_model_id": "gpt-oss-120b",
     "default_small_model_id": "qwen-3-32b",
+    "default_headers": {
+        "X-Cerebras-3rd-Party-Integration": "catwalk"
+    },
     "models": [
         {
             "id": "zai-glm-4.6",
@@ -13,7 +16,7 @@
             "cost_per_1m_in": 0,
             "cost_per_1m_out": 0,
             "context_window": 131072,
-            "default_max_tokens": 40960,
+            "default_max_tokens": 8192,
             "can_reason": false,
             "supports_attachments": false
         },
@@ -53,7 +56,7 @@
             "cost_per_1m_in": 0.4,
             "cost_per_1m_out": 0.8,
             "context_window": 128000,
-            "default_max_tokens": 65536,
+            "default_max_tokens": 8192,
             "can_reason": true,
             "reasoning_levels": [
                 "low",
@@ -69,7 +72,7 @@
             "cost_per_1m_in": 0.4,
             "cost_per_1m_out": 0.8,
             "context_window": 128000,
-            "default_max_tokens": 32768,
+            "default_max_tokens": 8192,
             "can_reason": false,
             "supports_attachments": false
         },
@@ -89,7 +92,7 @@
             "cost_per_1m_in": 0.6,
             "cost_per_1m_out": 1.2,
             "context_window": 131072,
-            "default_max_tokens": 16384,
+            "default_max_tokens": 8192,
             "can_reason": true,
             "reasoning_levels": [
                 "low",
@@ -105,7 +108,7 @@
             "cost_per_1m_in": 0.6,
             "cost_per_1m_out": 1.2,
             "context_window": 128000,
-            "default_max_tokens": 32768,
+            "default_max_tokens": 8192,
             "can_reason": true,
             "reasoning_levels": [
                 "low",
@@ -121,7 +124,7 @@
             "cost_per_1m_in": 2.0,
             "cost_per_1m_out": 2.0,
             "context_window": 131072,
-            "default_max_tokens": 65536,
+            "default_max_tokens": 8192,
             "can_reason": true,
             "reasoning_levels": [
                 "low",
