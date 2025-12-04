@@ -4,7 +4,7 @@
     "type": "openai",
     "api_key": "$CEREBRAS_API_KEY",
     "api_endpoint": "https://api.cerebras.ai/v1",
-    "default_large_model_id": "gpt-oss-120b",
+    "default_large_model_id": "zai-glm-4.6",
     "default_small_model_id": "qwen-3-32b",
     "models": [
         {
