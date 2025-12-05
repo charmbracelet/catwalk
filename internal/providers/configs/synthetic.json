@@ -110,6 +110,19 @@
       "options": {}
     },
     {
+      "id": "hf:deepseek-ai/DeepSeek-V3.2",
+      "name": "DeepSeek V3.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 162816,
+      "default_max_tokens": 16281,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "hf:zai-org/GLM-4.5",
       "name": "GLM 4.5",
       "cost_per_1m_in": 0,
