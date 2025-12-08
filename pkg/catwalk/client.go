@@ -7,6 +7,8 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+
+	"github.com/charmbracelet/catwalk/internal/etag"
 )
 
 const defaultURL = "http://localhost:8080"
@@ -38,6 +40,9 @@ func NewWithURL(url string) *Client {
 // is needed.
 var ErrNotModified = fmt.Errorf("not modified")
 
+// Etag returns the ETag for the given data.
+func Etag(data []byte) string { return etag.Of(data) }
+
 // GetProviders retrieves all available providers from the service.
 func (c *Client) GetProviders(ctx context.Context, etag string) ([]Provider, error) {
 	req, err := http.NewRequestWithContext(
@@ -51,7 +56,8 @@ func (c *Client) GetProviders(ctx context.Context, etag string) ([]Provider, err
 	}
 
 	if etag != "" {
-		req.Header.Add("If-None-Match", etag)
+		// It needs to be quoted:
+		req.Header.Add("If-None-Match", fmt.Sprintf(`"%s"`, etag))
 	}
 
 	resp, err := c.httpClient.Do(req)

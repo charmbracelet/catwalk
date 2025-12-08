@@ -61,6 +61,7 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 
 	if _, err := w.Write(providersJSON); err != nil {
 		log.Printf("Error writing response: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
 
