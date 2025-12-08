@@ -4,11 +4,13 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
 
 	"github.com/charmbracelet/catwalk/internal/deprecated"
+	"github.com/charmbracelet/catwalk/internal/etag"
 	"github.com/charmbracelet/catwalk/internal/providers"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -22,8 +24,24 @@ var counter = promauto.NewCounter(prometheus.CounterOpts{
 	Help:      "Total number of requests to the providers endpoint",
 })
 
+var (
+	providersJSON []byte
+	providersETag string
+)
+
+func init() {
+	var err error
+	providersJSON, err = json.Marshal(providers.GetAll())
+	if err != nil {
+		log.Fatal("Failed to marshal providers:", err)
+	}
+	providersETag = fmt.Sprintf(`"%s"`, etag.Of(providersJSON))
+}
+
 func providersHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("ETag", providersETag)
+
 	if r.Method == http.MethodHead {
 		return
 	}
@@ -34,10 +52,15 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	counter.Inc()
-	allProviders := providers.GetAll()
-	if err := json.NewEncoder(w).Encode(allProviders); err != nil {
-		http.Error(w, "Internal server error", http.StatusInternalServerError)
+
+	if match := r.Header.Get("If-None-Match"); match == providersETag {
+		w.WriteHeader(http.StatusNotModified)
 		return
+	}
+
+	if _, err := w.Write(providersJSON); err != nil {
+		log.Printf("Error writing response: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
 
