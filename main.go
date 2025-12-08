@@ -3,7 +3,9 @@
 package main
 
 import (
+	"crypto/sha256"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -22,8 +24,26 @@ var counter = promauto.NewCounter(prometheus.CounterOpts{
 	Help:      "Total number of requests to the providers endpoint",
 })
 
+var (
+	allProviders  = providers.GetAll()
+	providersJSON []byte
+	providersETag string
+)
+
+func init() {
+	var err error
+	providersJSON, err = json.Marshal(allProviders)
+	if err != nil {
+		log.Fatal("Failed to marshal providers:", err)
+	}
+	hash := sha256.Sum256(providersJSON)
+	providersETag = fmt.Sprintf(`"%x"`, hash[:16])
+}
+
 func providersHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("ETag", providersETag)
+
 	if r.Method == http.MethodHead {
 		return
 	}
@@ -33,11 +53,14 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	counter.Inc()
-	allProviders := providers.GetAll()
-	if err := json.NewEncoder(w).Encode(allProviders); err != nil {
-		http.Error(w, "Internal server error", http.StatusInternalServerError)
+	if match := r.Header.Get("If-None-Match"); match == providersETag {
+		w.WriteHeader(http.StatusNotModified)
 		return
+	}
+
+	counter.Inc()
+	if _, err := w.Write(providersJSON); err != nil {
+		log.Printf("Error writing response: %v", err)
 	}
 }
 

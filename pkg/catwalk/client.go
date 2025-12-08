@@ -1,6 +1,8 @@
 package catwalk
 
 import (
+	"cmp"
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -18,13 +20,8 @@ type Client struct {
 // New creates a new client instance
 // Uses CATWALK_URL environment variable or falls back to localhost:8080.
 func New() *Client {
-	baseURL := os.Getenv("CATWALK_URL")
-	if baseURL == "" {
-		baseURL = defaultURL
-	}
-
 	return &Client{
-		baseURL:    baseURL,
+		baseURL:    cmp.Or(os.Getenv("CATWALK_URL"), defaultURL),
 		httpClient: &http.Client{},
 	}
 }
@@ -37,15 +34,35 @@ func NewWithURL(url string) *Client {
 	}
 }
 
-// GetProviders retrieves all available providers from the service.
-func (c *Client) GetProviders() ([]Provider, error) {
-	url := fmt.Sprintf("%s/v2/providers", c.baseURL)
+// ErrNotModified happens when the given ETag matches the server, so no update
+// is needed.
+var ErrNotModified = fmt.Errorf("not modified")
 
-	resp, err := c.httpClient.Get(url) //nolint:noctx
+// GetProviders retrieves all available providers from the service.
+func (c *Client) GetProviders(ctx context.Context, etag string) ([]Provider, error) {
+	req, err := http.NewRequestWithContext(
+		ctx,
+		http.MethodGet,
+		fmt.Sprintf("%s/v2/providers", c.baseURL),
+		nil,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	if etag != "" {
+		req.Header.Add("If-None-Match", etag)
+	}
+
+	resp, err := c.httpClient.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("failed to make request: %w", err)
 	}
 	defer resp.Body.Close() //nolint:errcheck
+
+	if resp.StatusCode == http.StatusNotModified {
+		return nil, ErrNotModified
+	}
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
