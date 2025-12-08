@@ -3,7 +3,6 @@
 package main
 
 import (
-	"crypto/sha256"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -11,6 +10,7 @@ import (
 	"time"
 
 	"github.com/charmbracelet/catwalk/internal/deprecated"
+	"github.com/charmbracelet/catwalk/internal/etag"
 	"github.com/charmbracelet/catwalk/internal/providers"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -36,8 +36,7 @@ func init() {
 	if err != nil {
 		log.Fatal("Failed to marshal providers:", err)
 	}
-	hash := sha256.Sum256(providersJSON)
-	providersETag = fmt.Sprintf(`"%x"`, hash[:16])
+	providersETag = fmt.Sprintf(`"%s"`, etag.Of(providersJSON))
 }
 
 func providersHandler(w http.ResponseWriter, r *http.Request) {
@@ -53,12 +52,13 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	counter.Inc()
+
 	if match := r.Header.Get("If-None-Match"); match == providersETag {
 		w.WriteHeader(http.StatusNotModified)
 		return
 	}
 
-	counter.Inc()
 	if _, err := w.Write(providersJSON); err != nil {
 		log.Printf("Error writing response: %v", err)
 	}
