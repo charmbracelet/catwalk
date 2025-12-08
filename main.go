@@ -25,14 +25,13 @@ var counter = promauto.NewCounter(prometheus.CounterOpts{
 })
 
 var (
-	allProviders  = providers.GetAll()
 	providersJSON []byte
 	providersETag string
 )
 
 func init() {
 	var err error
-	providersJSON, err = json.Marshal(allProviders)
+	providersJSON, err = json.Marshal(providers.GetAll())
 	if err != nil {
 		log.Fatal("Failed to marshal providers:", err)
 	}
