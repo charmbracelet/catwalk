@@ -63,6 +63,9 @@ var aiHubMixConfig []byte
 //go:embed configs/kimi.json
 var kimiCodingConfig []byte
 
+//go:embed configs/copilot.json
+var copilotConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -85,6 +88,7 @@ var providerRegistry = []ProviderFunc{
 	huggingFaceProvider,
 	aiHubMixProvider,
 	syntheticProvider,
+	copilotProvider,
 }
 
 // GetAll returns all registered providers.
@@ -175,4 +179,8 @@ func aiHubMixProvider() catwalk.Provider {
 
 func kimiCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(kimiCodingConfig)
+}
+
+func copilotProvider() catwalk.Provider {
+	return loadProviderFromConfig(copilotConfig)
 }
