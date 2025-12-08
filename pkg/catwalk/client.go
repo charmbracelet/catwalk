@@ -47,7 +47,7 @@ func (c *Client) GetProviders(ctx context.Context, etag string) ([]Provider, err
 		nil,
 	)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("could not create request: %w", err)
 	}
 
 	if etag != "" {
