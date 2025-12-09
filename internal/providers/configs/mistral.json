@@ -4,8 +4,8 @@
   "api_key": "$MISTRAL_API_KEY",
   "api_endpoint": "https://api.mistral.ai/v1",
   "type": "mistral",
-  "default_large_model_id": "mistral-large",
-  "default_small_model_id": "mistral-small",
+  "default_large_model_id": "devstral-medium-latest",
+  "default_small_model_id": "devstral-small-latest",
   "models": [
     {
       "id": "mistral-large",
