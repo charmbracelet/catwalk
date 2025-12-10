@@ -4,14 +4,13 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"time"
 
 	"github.com/charmbracelet/catwalk/internal/deprecated"
-	"github.com/charmbracelet/catwalk/internal/etag"
 	"github.com/charmbracelet/catwalk/internal/providers"
+	"github.com/charmbracelet/x/etag"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -35,12 +34,12 @@ func init() {
 	if err != nil {
 		log.Fatal("Failed to marshal providers:", err)
 	}
-	providersETag = fmt.Sprintf(`"%s"`, etag.Of(providersJSON))
+	providersETag = etag.Of(providersJSON)
 }
 
 func providersHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("ETag", providersETag)
+	etag.Response(w, providersETag)
 
 	if r.Method == http.MethodHead {
 		return
@@ -53,7 +52,7 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 
 	counter.Inc()
 
-	if match := r.Header.Get("If-None-Match"); match == providersETag {
+	if etag.Matches(r, providersETag) {
 		w.WriteHeader(http.StatusNotModified)
 		return
 	}
