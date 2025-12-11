@@ -41,6 +41,29 @@
       "default_max_tokens": 98304,
       "can_reason": true,
       "supports_attachments": false
+    },
+    {
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V",
+      "cost_per_1m_in": 0.7,
+      "cost_per_1m_out": 2.5,
+      "cost_per_1m_in_cached": 0.12,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 24000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "glm-4.6v-flash",
+      "name": "GLM-4.6V-Flash",
+      "cost_per_1m_in": 0.35,
+      "cost_per_1m_out": 1.25,
+      "cost_per_1m_in_cached": 0.06,
+      "context_window": 65536,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": true
     }
   ]
 }
