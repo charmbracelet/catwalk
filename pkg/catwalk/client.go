@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 
 	xetag "github.com/charmbracelet/x/etag"
 )
@@ -22,17 +23,16 @@ type Client struct {
 // New creates a new client instance
 // Uses CATWALK_URL environment variable or falls back to localhost:8080.
 func New() *Client {
-	return &Client{
-		baseURL:    cmp.Or(os.Getenv("CATWALK_URL"), defaultURL),
-		httpClient: &http.Client{},
-	}
+	return NewWithURL(cmp.Or(os.Getenv("CATWALK_URL"), defaultURL))
 }
 
 // NewWithURL creates a new client with a specific URL.
 func NewWithURL(url string) *Client {
 	return &Client{
-		baseURL:    url,
-		httpClient: &http.Client{},
+		baseURL: url,
+		httpClient: &http.Client{
+			Timeout: 30 * time.Second,
+		},
 	}
 }
 
