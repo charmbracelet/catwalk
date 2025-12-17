@@ -19,6 +19,7 @@ jobs:
           go-version-file: go.mod
       - name: Generate provider configurations
         run: |
+          go run ./cmd/copilot/main.go
           go run ./cmd/openrouter/main.go
           go run ./cmd/synthetic/main.go
           # we need to add this back when we know that the providers/models all work
