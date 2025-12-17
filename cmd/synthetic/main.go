@@ -54,7 +54,46 @@ type ModelPricing struct {
 	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
 }
 
+// priceOverrides contains manual pricing for models where the API doesn't
+// provide pricing information. Keys are model IDs, values are [input, output]
+// costs per 1M tokens.
+// TODO: Remove this when Synthetic adds pricing to their models endpoint.
+var priceOverrides = map[string][2]float64{
+	"hf:deepseek-ai/DeepSeek-R1-0528":                      {3.00, 8.00},
+	"hf:deepseek-ai/DeepSeek-V3":                           {1.25, 1.25},
+	"hf:deepseek-ai/DeepSeek-V3-0324":                      {1.20, 1.20},
+	"hf:deepseek-ai/DeepSeek-V3.1":                         {0.56, 1.68},
+	"hf:deepseek-ai/DeepSeek-V3.1-Terminus":                {1.20, 1.20},
+	"hf:deepseek-ai/DeepSeek-V3.2":                         {0.56, 1.68},
+	"hf:meta-llama/Llama-3.3-70B-Instruct":                 {0.90, 0.90},
+	"hf:meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8": {0.22, 0.88},
+	"hf:MiniMaxAI/MiniMax-M2":                              {0.30, 1.20},
+	"hf:MiniMaxAI/MiniMax-M2.1":                            {0.55, 2.19},
+	"hf:moonshotai/Kimi-K2-Instruct-0905":                  {1.20, 1.20},
+	"hf:moonshotai/Kimi-K2-Thinking":                       {0.55, 2.19},
+	"hf:openai/gpt-oss-120b":                               {0.10, 0.10},
+	"hf:Qwen/Qwen3-235B-A22B-Instruct-2507":                {0.22, 0.88},
+	"hf:Qwen/Qwen3-235B-A22B-Thinking-2507":                {0.65, 3.00},
+	"hf:Qwen/Qwen3-Coder-480B-A35B-Instruct":               {0.45, 1.80},
+	"hf:Qwen/Qwen3-VL-235B-A22B-Instruct":                  {0.22, 0.88},
+	"hf:zai-org/GLM-4.5":                                   {0.55, 2.19},
+	"hf:zai-org/GLM-4.5-Open":                              {0.55, 2.19},
+	"hf:zai-org/GLM-4.6":                                   {0.55, 2.19},
+}
+
 func getPricing(model Model) ModelPricing {
+	// Check for manual price override first
+	// Synthetic doesn't have caching afaict
+	if override, ok := priceOverrides[model.ID]; ok {
+		return ModelPricing{
+			CostPer1MIn:        override[0],
+			CostPer1MOut:       override[1],
+			CostPer1MInCached:  override[0],
+			CostPer1MOutCached: override[1],
+		}
+	}
+
+	// Fall back to API pricing
 	pricing := ModelPricing{}
 	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
 	if err != nil {
@@ -93,6 +132,9 @@ func applyModelOverrides(model *Model) {
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3.1"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
+	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3.2"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3"):
@@ -152,7 +194,7 @@ func main() {
 		APIKey:              "$SYNTHETIC_API_KEY",
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "hf:zai-org/GLM-4.6",
+		DefaultLargeModelID: "hf:zai-org/GLM-4.7",
 		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.1-Terminus",
 		Models:              []catwalk.Model{},
 	}
@@ -248,5 +290,37 @@ func main() {
 		log.Fatal("Error writing Synthetic provider config:", err)
 	}
 
-	fmt.Printf("Generated synthetic.json with %d models\n", len(syntheticProvider.Models))
+	fmt.Printf("Generated synthetic.json with %d models (API pricing)\n", len(syntheticProvider.Models))
+
+	// Generate Synthetic Pro/Max provider with zero pricing
+	proMaxProvider := catwalk.Provider{
+		Name:                "Synthetic Pro/Max",
+		ID:                  "synthetic-promax",
+		APIKey:              "$SYNTHETIC_API_KEY",
+		APIEndpoint:         "https://api.synthetic.new/openai/v1",
+		Type:                catwalk.TypeOpenAICompat,
+		DefaultLargeModelID: syntheticProvider.DefaultLargeModelID,
+		DefaultSmallModelID: syntheticProvider.DefaultSmallModelID,
+		Models:              make([]catwalk.Model, len(syntheticProvider.Models)),
+	}
+
+	// Copy models with zero pricing
+	for i, model := range syntheticProvider.Models {
+		model.CostPer1MIn = 0
+		model.CostPer1MOut = 0
+		model.CostPer1MInCached = 0
+		model.CostPer1MOutCached = 0
+		proMaxProvider.Models[i] = model
+	}
+
+	proMaxData, err := json.MarshalIndent(proMaxProvider, "", "  ")
+	if err != nil {
+		log.Fatal("Error marshaling Synthetic Pro/Max provider:", err)
+	}
+
+	if err := os.WriteFile("internal/providers/configs/synthetic-promax.json", proMaxData, 0o600); err != nil {
+		log.Fatal("Error writing Synthetic Pro/Max provider config:", err)
+	}
+
+	fmt.Printf("Generated synthetic-promax.json with %d models (subscription pricing)\n", len(proMaxProvider.Models))
 }
