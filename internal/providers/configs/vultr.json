@@ -1,0 +1,53 @@
+{
+  "name": "Vultr",
+  "id": "vultr",
+  "type": "openai-compat",
+  "api_key": "$VULTR_API_KEY",
+  "api_endpoint": "https://api.vultrinference.com/",
+  "default_large_model_id": "kimi-k2-instruct",
+  "default_small_model_id": "qwen2.5-32b-instruct",
+  "models": [
+    {
+      "id": "kimi-k2-instruct",
+      "name": "Kimi K2 Instruct",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 3,
+      "context_window": 262144,
+      "default_max_tokens": 8192,
+      "can_reason": true
+    },
+    {
+      "id": "llama-3.1-70b-instruct-fp8",
+      "name": "Llama 3.1 70B Instruct FP8",
+      "cost_per_1m_in": 0.35,
+      "cost_per_1m_out": 0.35,
+      "context_window": 131072,
+      "default_max_tokens": 4096
+    },
+    {
+      "id": "mistral-7b-v0.3",
+      "name": "Mistral 7B v0.3",
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.05,
+      "context_window": 32768,
+      "default_max_tokens": 4096
+    },
+    {
+      "id": "deepseek-r1",
+      "name": "DeepSeek R1",
+      "cost_per_1m_in": 0.55,
+      "cost_per_1m_out": 2.19,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true
+    },
+    {
+      "id": "qwen2.5-32b-instruct",
+      "name": "Qwen 2.5 32B Instruct",
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.42,
+      "context_window": 32768,
+      "default_max_tokens": 4096
+    }
+  ]
+}
