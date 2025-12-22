@@ -4,9 +4,21 @@
   "api_key": "$ZAI_API_KEY",
   "api_endpoint": "https://api.z.ai/api/coding/paas/v4",
   "type": "openai-compat",
-  "default_large_model_id": "glm-4.6",
+  "default_large_model_id": "glm-4.7",
   "default_small_model_id": "glm-4.5-air",
   "models": [
+    {
+      "id": "glm-4.7",
+      "name": "GLM-4.7",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in_cached": 0.11,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 204800,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": false
+    },
     {
       "id": "glm-4.6",
       "name": "GLM-4.6",
