@@ -54,69 +54,23 @@ type ModelPricing struct {
 	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
 }
 
-// priceOverrides contains manual pricing for models where the API doesn't
-// provide pricing information. Keys are model IDs, values are [input, output]
-// costs per 1M tokens.
-// TODO: Remove this when Synthetic adds pricing to their models endpoint.
-var priceOverrides = map[string][2]float64{
-	"hf:deepseek-ai/DeepSeek-R1-0528":                      {3.00, 8.00},
-	"hf:deepseek-ai/DeepSeek-V3":                           {1.25, 1.25},
-	"hf:deepseek-ai/DeepSeek-V3-0324":                      {1.20, 1.20},
-	"hf:deepseek-ai/DeepSeek-V3.1":                         {0.56, 1.68},
-	"hf:deepseek-ai/DeepSeek-V3.1-Terminus":                {1.20, 1.20},
-	"hf:deepseek-ai/DeepSeek-V3.2":                         {0.56, 1.68},
-	"hf:meta-llama/Llama-3.3-70B-Instruct":                 {0.90, 0.90},
-	"hf:meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8": {0.22, 0.88},
-	"hf:MiniMaxAI/MiniMax-M2":                              {0.30, 1.20},
-	"hf:MiniMaxAI/MiniMax-M2.1":                            {0.55, 2.19},
-	"hf:moonshotai/Kimi-K2-Instruct-0905":                  {1.20, 1.20},
-	"hf:moonshotai/Kimi-K2-Thinking":                       {0.55, 2.19},
-	"hf:openai/gpt-oss-120b":                               {0.10, 0.10},
-	"hf:Qwen/Qwen3-235B-A22B-Instruct-2507":                {0.22, 0.88},
-	"hf:Qwen/Qwen3-235B-A22B-Thinking-2507":                {0.65, 3.00},
-	"hf:Qwen/Qwen3-Coder-480B-A35B-Instruct":               {0.45, 1.80},
-	"hf:Qwen/Qwen3-VL-235B-A22B-Instruct":                  {0.22, 0.88},
-	"hf:zai-org/GLM-4.5":                                   {0.55, 2.19},
-	"hf:zai-org/GLM-4.5-Open":                              {0.55, 2.19},
-	"hf:zai-org/GLM-4.6":                                   {0.55, 2.19},
+// parsePrice extracts a float from Synthetic's price format (e.g. "$0.00000055").
+func parsePrice(s string) float64 {
+	s = strings.TrimPrefix(s, "$")
+	v, err := strconv.ParseFloat(s, 64)
+	if err != nil {
+		return 0.0
+	}
+	return v
 }
 
 func getPricing(model Model) ModelPricing {
-	// Check for manual price override first
-	// Synthetic doesn't have caching afaict
-	if override, ok := priceOverrides[model.ID]; ok {
-		return ModelPricing{
-			CostPer1MIn:        override[0],
-			CostPer1MOut:       override[1],
-			CostPer1MInCached:  override[0],
-			CostPer1MOutCached: override[1],
-		}
+	return ModelPricing{
+		CostPer1MIn:        parsePrice(model.Pricing.Prompt) * 1_000_000,
+		CostPer1MOut:       parsePrice(model.Pricing.Completion) * 1_000_000,
+		CostPer1MInCached:  parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
+		CostPer1MOutCached: parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
 	}
-
-	// Fall back to API pricing
-	pricing := ModelPricing{}
-	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
-	if err != nil {
-		costPrompt = 0.0
-	}
-	pricing.CostPer1MIn = costPrompt * 1_000_000
-	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
-	if err != nil {
-		costCompletion = 0.0
-	}
-	pricing.CostPer1MOut = costCompletion * 1_000_000
-
-	costPromptCached, err := strconv.ParseFloat(model.Pricing.InputCacheWrites, 64)
-	if err != nil {
-		costPromptCached = 0.0
-	}
-	pricing.CostPer1MInCached = costPromptCached * 1_000_000
-	costCompletionCached, err := strconv.ParseFloat(model.Pricing.InputCacheReads, 64)
-	if err != nil {
-		costCompletionCached = 0.0
-	}
-	pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
-	return pricing
 }
 
 // applyModelOverrides sets supported_features for models where Synthetic
