@@ -54,30 +54,23 @@ type ModelPricing struct {
 	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
 }
 
-func getPricing(model Model) ModelPricing {
-	pricing := ModelPricing{}
-	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
+// parsePrice extracts a float from Synthetic's price format (e.g. "$0.00000055").
+func parsePrice(s string) float64 {
+	s = strings.TrimPrefix(s, "$")
+	v, err := strconv.ParseFloat(s, 64)
 	if err != nil {
-		costPrompt = 0.0
+		return 0.0
 	}
-	pricing.CostPer1MIn = costPrompt * 1_000_000
-	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
-	if err != nil {
-		costCompletion = 0.0
-	}
-	pricing.CostPer1MOut = costCompletion * 1_000_000
+	return v
+}
 
-	costPromptCached, err := strconv.ParseFloat(model.Pricing.InputCacheWrites, 64)
-	if err != nil {
-		costPromptCached = 0.0
+func getPricing(model Model) ModelPricing {
+	return ModelPricing{
+		CostPer1MIn:        parsePrice(model.Pricing.Prompt) * 1_000_000,
+		CostPer1MOut:       parsePrice(model.Pricing.Completion) * 1_000_000,
+		CostPer1MInCached:  parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
+		CostPer1MOutCached: parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
 	}
-	pricing.CostPer1MInCached = costPromptCached * 1_000_000
-	costCompletionCached, err := strconv.ParseFloat(model.Pricing.InputCacheReads, 64)
-	if err != nil {
-		costCompletionCached = 0.0
-	}
-	pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
-	return pricing
 }
 
 // applyModelOverrides sets supported_features for models where Synthetic
@@ -93,6 +86,9 @@ func applyModelOverrides(model *Model) {
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3.1"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
+	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3.2"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3"):
@@ -152,7 +148,7 @@ func main() {
 		APIKey:              "$SYNTHETIC_API_KEY",
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "hf:zai-org/GLM-4.6",
+		DefaultLargeModelID: "hf:zai-org/GLM-4.7",
 		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.1-Terminus",
 		Models:              []catwalk.Model{},
 	}
@@ -248,5 +244,37 @@ func main() {
 		log.Fatal("Error writing Synthetic provider config:", err)
 	}
 
-	fmt.Printf("Generated synthetic.json with %d models\n", len(syntheticProvider.Models))
+	fmt.Printf("Generated synthetic.json with %d models (API pricing)\n", len(syntheticProvider.Models))
+
+	// Generate Synthetic Pro/Max provider with zero pricing
+	proMaxProvider := catwalk.Provider{
+		Name:                "Synthetic Pro/Max",
+		ID:                  "synthetic-promax",
+		APIKey:              "$SYNTHETIC_API_KEY",
+		APIEndpoint:         "https://api.synthetic.new/openai/v1",
+		Type:                catwalk.TypeOpenAICompat,
+		DefaultLargeModelID: syntheticProvider.DefaultLargeModelID,
+		DefaultSmallModelID: syntheticProvider.DefaultSmallModelID,
+		Models:              make([]catwalk.Model, len(syntheticProvider.Models)),
+	}
+
+	// Copy models with zero pricing
+	for i, model := range syntheticProvider.Models {
+		model.CostPer1MIn = 0
+		model.CostPer1MOut = 0
+		model.CostPer1MInCached = 0
+		model.CostPer1MOutCached = 0
+		proMaxProvider.Models[i] = model
+	}
+
+	proMaxData, err := json.MarshalIndent(proMaxProvider, "", "  ")
+	if err != nil {
+		log.Fatal("Error marshaling Synthetic Pro/Max provider:", err)
+	}
+
+	if err := os.WriteFile("internal/providers/configs/synthetic-promax.json", proMaxData, 0o600); err != nil {
+		log.Fatal("Error writing Synthetic Pro/Max provider config:", err)
+	}
+
+	fmt.Printf("Generated synthetic-promax.json with %d models (subscription pricing)\n", len(proMaxProvider.Models))
 }
