@@ -1,0 +1,23 @@
+{
+  "name": "Xiaomi",
+  "id": "xiaomi",
+  "type": "xiaomi",
+  "api_key": "$XIAOMI_API_KEY",
+  "api_endpoint": "https://api.xiaomimimo.com/v1",
+  "default_large_model_id": "mimo-v2-flash",
+  "default_small_model_id": "mimo-v2-flash",
+  "models": [
+    {
+      "id": "mimo-v2-flash",
+      "name": "Mimo V2 Flash",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}

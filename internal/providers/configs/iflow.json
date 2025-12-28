@@ -1,0 +1,59 @@
+{
+  "name": "iFlow",
+  "id": "iflow",
+  "type": "iflow",
+  "api_key": "$IFLOW_API_KEY",
+  "api_endpoint": "https://apis.iflow.cn/v1",
+  "default_large_model_id": "glm-4.7",
+  "default_small_model_id": "glm-4.7",
+  "models": [
+    {
+      "id": "minimax-m2.1",
+      "name": "Minimax M2.1",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 204800,
+      "default_max_tokens": 131100,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "deepseek-v3.2",
+      "name": "DeepSeek V3.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-4.7",
+      "name": "GLM 4.7",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi K2 Thinking",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}
