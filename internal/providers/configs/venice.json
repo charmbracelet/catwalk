@@ -4,8 +4,8 @@
   "api_key": "$VENICE_API_KEY",
   "api_endpoint": "https://api.venice.ai/api/v1",
   "type": "openai-compat",
-  "default_large_model_id": "openai-gpt-52",
-  "default_small_model_id": "qwen3-4b",
+  "default_large_model_id": "claude-opus-45",
+  "default_small_model_id": "qwen3-coder-480b-a35b-instruct",
   "models": [
     {
       "id": "claude-opus-45",
@@ -43,38 +43,6 @@
       "options": {
         "temperature": 0.7,
         "top_p": 0.9
-      }
-    },
-    {
-      "id": "zai-org-glm-4.6v",
-      "name": "GLM 4.6V",
-      "cost_per_1m_in": 0.39,
-      "cost_per_1m_out": 1.13,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": true,
-      "options": {
-        "temperature": 0.8,
-        "top_p": 0.6
-      }
-    },
-    {
-      "id": "zai-org-glm-4.7",
-      "name": "GLM 4.7",
-      "cost_per_1m_in": 0.85,
-      "cost_per_1m_out": 2.75,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {
-        "temperature": 1,
-        "top_p": 0.95
       }
     },
     {
