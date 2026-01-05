@@ -122,13 +122,16 @@ func bestLargeModelID(models []catwalk.Model) string {
 			best = m
 			continue
 		}
-		if m.ContextWindow > best.ContextWindow {
+		mCost := m.CostPer1MIn + m.CostPer1MOut
+		bestCost := best.CostPer1MIn + best.CostPer1MOut
+		if mCost > bestCost {
 			best = m
 			continue
 		}
-		if m.ContextWindow == best.ContextWindow && m.CostPer1MOut > best.CostPer1MOut {
+		if mCost == bestCost && m.ContextWindow > best.ContextWindow {
 			best = m
 		}
+
 	}
 	if best == nil {
 		return ""
@@ -169,6 +172,8 @@ func main() {
 		Type:        catwalk.TypeOpenAICompat,
 		Models:      []catwalk.Model{},
 	}
+
+	codeOptimizedModels := []catwalk.Model{}
 
 	modelsResp, err := fetchVeniceModels(veniceProvider.APIEndpoint)
 	if err != nil {
@@ -233,14 +238,22 @@ func main() {
 		}
 
 		veniceProvider.Models = append(veniceProvider.Models, m)
+		if model.ModelSpec.Capabilities.OptimizedForCode {
+			codeOptimizedModels = append(codeOptimizedModels, m)
+		}
 	}
+
+	candidateModels := veniceProvider.Models
+	if len(codeOptimizedModels) > 0 {
+		candidateModels = codeOptimizedModels
+	}
+
+	veniceProvider.DefaultLargeModelID = bestLargeModelID(candidateModels)
+	veniceProvider.DefaultSmallModelID = bestSmallModelID(candidateModels)
 
 	slices.SortFunc(veniceProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
 		return strings.Compare(a.Name, b.Name)
 	})
-
-	veniceProvider.DefaultLargeModelID = bestLargeModelID(veniceProvider.Models)
-	veniceProvider.DefaultSmallModelID = bestSmallModelID(veniceProvider.Models)
 
 	data, err := json.MarshalIndent(veniceProvider, "", "  ")
 	if err != nil {
