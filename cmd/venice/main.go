@@ -1,3 +1,5 @@
+// Package main provides a command-line tool to fetch models from Venice
+// and generate a configuration file for the provider.
 package main
 
 import (
@@ -30,14 +32,14 @@ type VeniceModel struct {
 }
 
 type VeniceModelSpec struct {
-	AvailableContextTokens int64                 `json:"availableContextTokens"`
+	AvailableContextTokens int64                   `json:"availableContextTokens"`
 	Capabilities           VeniceModelCapabilities `json:"capabilities"`
 	Constraints            VeniceModelConstraints  `json:"constraints"`
-	Name                   string                `json:"name"`
-	ModelSource            string                `json:"modelSource"`
-	Offline                bool                  `json:"offline"`
-	Pricing                VeniceModelPricing    `json:"pricing"`
-	Traits                 []string              `json:"traits"`
+	Name                   string                  `json:"name"`
+	ModelSource            string                  `json:"modelSource"`
+	Offline                bool                    `json:"offline"`
+	Pricing                VeniceModelPricing      `json:"pricing"`
+	Traits                 []string                `json:"traits"`
 }
 
 type VeniceModelCapabilities struct {
@@ -115,6 +117,7 @@ func bestLargeModelID(models []catwalk.Model) string {
 	var best *catwalk.Model
 	for i := range models {
 		m := &models[i]
+
 		if best == nil {
 			best = m
 			continue
