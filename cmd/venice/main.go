@@ -40,6 +40,7 @@ type VeniceModelSpec struct {
 	Offline                bool                    `json:"offline"`
 	Pricing                VeniceModelPricing      `json:"pricing"`
 	Traits                 []string                `json:"traits"`
+	Beta                   bool                    `json:"beta"`
 }
 
 type VeniceModelCapabilities struct {
@@ -188,6 +189,10 @@ func main() {
 			continue
 		}
 		if !model.ModelSpec.Capabilities.SupportsFunctionCalling {
+			continue
+		}
+
+		if model.ModelSpec.Beta {
 			continue
 		}
 
