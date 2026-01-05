@@ -132,7 +132,6 @@ func bestLargeModelID(models []catwalk.Model) string {
 		if mCost == bestCost && m.ContextWindow > best.ContextWindow {
 			best = m
 		}
-
 	}
 	if best == nil {
 		return ""
