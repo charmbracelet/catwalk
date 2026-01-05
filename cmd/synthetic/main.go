@@ -244,37 +244,5 @@ func main() {
 		log.Fatal("Error writing Synthetic provider config:", err)
 	}
 
-	fmt.Printf("Generated synthetic.json with %d models (API pricing)\n", len(syntheticProvider.Models))
-
-	// Generate Synthetic Pro/Max provider with zero pricing
-	proMaxProvider := catwalk.Provider{
-		Name:                "Synthetic Pro/Max",
-		ID:                  "synthetic-promax",
-		APIKey:              "$SYNTHETIC_API_KEY",
-		APIEndpoint:         "https://api.synthetic.new/openai/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: syntheticProvider.DefaultLargeModelID,
-		DefaultSmallModelID: syntheticProvider.DefaultSmallModelID,
-		Models:              make([]catwalk.Model, len(syntheticProvider.Models)),
-	}
-
-	// Copy models with zero pricing
-	for i, model := range syntheticProvider.Models {
-		model.CostPer1MIn = 0
-		model.CostPer1MOut = 0
-		model.CostPer1MInCached = 0
-		model.CostPer1MOutCached = 0
-		proMaxProvider.Models[i] = model
-	}
-
-	proMaxData, err := json.MarshalIndent(proMaxProvider, "", "  ")
-	if err != nil {
-		log.Fatal("Error marshaling Synthetic Pro/Max provider:", err)
-	}
-
-	if err := os.WriteFile("internal/providers/configs/synthetic-promax.json", proMaxData, 0o600); err != nil {
-		log.Fatal("Error writing Synthetic Pro/Max provider config:", err)
-	}
-
-	fmt.Printf("Generated synthetic-promax.json with %d models (subscription pricing)\n", len(proMaxProvider.Models))
+	fmt.Printf("Generated synthetic.json with %d models\n", len(syntheticProvider.Models))
 }
