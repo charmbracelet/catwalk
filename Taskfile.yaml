@@ -16,6 +16,11 @@ tasks:
     cmds:
       - go fmt ./...
 
+  test:
+    desc: Run tests
+    cmds:
+      - go test {{.CLI_ARGS}} ./...
+
   modernize:
     desc: Modernize code
     cmds:
