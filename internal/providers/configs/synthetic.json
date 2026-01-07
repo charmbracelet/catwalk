@@ -4,7 +4,7 @@
   "api_key": "$SYNTHETIC_API_KEY",
   "api_endpoint": "https://api.synthetic.new/openai/v1",
   "type": "openai-compat",
-  "default_large_model_id": "hf:zai-org/GLM-4.7",
+  "default_large_model_id": "hf:zai-org/GLM-4.6",
   "default_small_model_id": "hf:deepseek-ai/DeepSeek-V3.1-Terminus",
   "models": [
     {
