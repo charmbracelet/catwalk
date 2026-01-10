@@ -1,14 +1,6 @@
 version: '3'
 
 tasks:
-  generate:
-    desc: Generate provider configurations
-    aliases: [gen]
-    cmds:
-      - go run cmd/openrouter/main.go
-      - go run cmd/synthetic/main.go
-      - go run cmd/venice/main.go
-
   lint:
     desc: Run linters
     cmds:
@@ -23,6 +15,11 @@ tasks:
     desc: Format code
     cmds:
       - go fmt ./...
+
+  test:
+    desc: Run tests
+    cmds:
+      - go test {{.CLI_ARGS}} ./...
 
   modernize:
     desc: Modernize code
@@ -55,3 +52,38 @@ tasks:
       - git tag --annotate --sign -m "{{.NEXT}}" {{.NEXT}} {{.CLI_ARGS}}
       - echo "Pushing {{.NEXT}}..."
       - git push origin main --follow-tags
+
+  gen:all:
+    desc: Generate all provider configurations
+    aliases: [generate, gen]
+    cmds:
+      - task: gen:copilot
+      - task: gen:huggingface
+      - task: gen:openrouter
+      - task: gen:synthetic
+      - task: gen:venice
+
+  gen:copilot:
+    desc: Generate copilot provider configurations
+    cmds:
+      - go run cmd/copilot/main.go
+
+  gen:huggingface:
+    desc: Generate huggingface provider configurations
+    cmds:
+      - go run cmd/huggingface/main.go
+
+  gen:openrouter:
+    desc: Generate openrouter provider configurations
+    cmds:
+      - go run cmd/openrouter/main.go
+
+  gen:synthetic:
+    desc: Generate synthetic provider configurations
+    cmds:
+      - go run cmd/synthetic/main.go
+      
+  gen:venice:
+    desc: Generate venice provider configurations
+    cmds:
+      - go run cmd/venice/main.go
