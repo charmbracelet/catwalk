@@ -22,6 +22,20 @@
       "supports_attachments": true
     },
     {
+      "id": "gpt-5.2-codex",
+      "name": "GPT-5.2 Codex",
+      "cost_per_1m_in": 1.75,
+      "cost_per_1m_out": 14,
+      "cost_per_1m_in_cached": 0.175,
+      "cost_per_1m_out_cached": 0.175,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["minimal", "low", "medium", "high"],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "gpt-5.1",
       "name": "GPT-5.1",
       "cost_per_1m_in": 1.25,
