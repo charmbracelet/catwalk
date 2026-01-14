@@ -50,6 +50,8 @@ type Limits struct {
 type Supports struct {
 	ToolCalls         bool `json:"tool_calls,omitempty"`
 	ParallelToolCalls bool `json:"parallel_tool_calls,omitempty"`
+	MaxThinkingBudget int  `json:"max_thinking_budget,omitempty"`
+	MinThinkingBudget int  `json:"min_thinking_budget,omitempty"`
 }
 
 type Policy struct {
@@ -144,12 +146,34 @@ func modelsToCatwalk(m []Model) []catwalk.Model {
 }
 
 func modelToCatwalk(m Model) catwalk.Model {
+	canReason, reasoningLevels, defaultReasoning := detectReasoningCapabilities(m)
+
 	return catwalk.Model{
-		ID:               m.ID,
-		Name:             m.Name,
-		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
-		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
+		ID:                     m.ID,
+		Name:                   m.Name,
+		DefaultMaxTokens:       int64(m.Capabilities.Limits.MaxOutputTokens),
+		ContextWindow:          int64(m.Capabilities.Limits.MaxContextWindowTokens),
+		CanReason:              canReason,
+		ReasoningLevels:        reasoningLevels,
+		DefaultReasoningEffort: defaultReasoning,
 	}
+}
+
+func detectReasoningCapabilities(m Model) (canReason bool, levels []string, defaultLevel string) {
+	// Models with thinking budget (Claude, Gemini) support extended thinking without levels
+	if m.Capabilities.Supports.MaxThinkingBudget > 0 {
+		return true, nil, ""
+	}
+
+	// OpenAI o-series and GPT-5+ models support reasoning with effort levels
+	if strings.HasPrefix(m.ID, "o1") ||
+		strings.HasPrefix(m.ID, "o3") ||
+		strings.HasPrefix(m.ID, "o4") ||
+		strings.HasPrefix(m.ID, "gpt-5") {
+		return true, []string{"low", "medium", "high"}, "medium"
+	}
+
+	return false, nil, ""
 }
 
 func copilotToken() string {
