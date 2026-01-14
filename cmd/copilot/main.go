@@ -173,6 +173,11 @@ func detectReasoningCapabilities(m Model) (canReason bool, levels []string, defa
 		return true, []string{"low", "medium", "high"}, "medium"
 	}
 
+	// Grok models support reasoning without effort levels
+	if strings.HasPrefix(m.ID, "grok") {
+		return true, nil, ""
+	}
+
 	return false, nil, ""
 }
 
