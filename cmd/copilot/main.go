@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -128,8 +129,17 @@ func fetchCopilotModels() ([]Model, error) {
 		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 	}
 
+	bts, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("unable to read response body: %w", err)
+	}
+
+	// for debugging
+	_ = os.MkdirAll("tmp", 0o700)
+	_ = os.WriteFile("tmp/copilot-response.json", bts, 0o600)
+
 	var data Response
-	if err := json.NewDecoder(resp.Body).Decode(&data); err != nil {
+	if err := json.Unmarshal(bts, &data); err != nil {
 		return nil, fmt.Errorf("unable to unmarshal json: %w", err)
 	}
 	return data.Data, nil
