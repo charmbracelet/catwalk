@@ -102,6 +102,54 @@
       "default_max_tokens": 50000,
       "can_reason": false,
       "supports_attachments": true
+    },
+    {
+      "id": "amazon.nova-pro-v1:0",
+      "name": "Amazon Nova Pro",
+      "cost_per_1m_in": 0.8,
+      "cost_per_1m_out": 3.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 300000,
+      "default_max_tokens": 5000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "amazon.nova-lite-v1:0",
+      "name": "Amazon Nova Lite",
+      "cost_per_1m_in": 0.06,
+      "cost_per_1m_out": 0.24,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 300000,
+      "default_max_tokens": 5000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "amazon.nova-micro-v1:0",
+      "name": "Amazon Nova Micro",
+      "cost_per_1m_in": 0.035,
+      "cost_per_1m_out": 0.14,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 5000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "amazon.nova-premier-v1:0",
+      "name": "Amazon Nova Premier",
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 12.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 300000,
+      "default_max_tokens": 5000,
+      "can_reason": true,
+      "supports_attachments": true
     }
   ]
 }
