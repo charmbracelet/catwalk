@@ -20,17 +20,17 @@ import (
 
 // Model represents a model from the Vercel API.
 type Model struct {
-	ID             string   `json:"id"`
-	Object         string   `json:"object"`
-	Created        int64    `json:"created"`
-	OwnedBy        string   `json:"owned_by"`
-	Name           string   `json:"name"`
-	Description    string   `json:"description"`
-	ContextWindow  int64    `json:"context_window"`
-	MaxTokens      int64    `json:"max_tokens"`
-	Type           string   `json:"type"`
-	Tags           []string `json:"tags"`
-	Pricing        Pricing  `json:"pricing"`
+	ID            string   `json:"id"`
+	Object        string   `json:"object"`
+	Created       int64    `json:"created"`
+	OwnedBy       string   `json:"owned_by"`
+	Name          string   `json:"name"`
+	Description   string   `json:"description"`
+	ContextWindow int64    `json:"context_window"`
+	MaxTokens     int64    `json:"max_tokens"`
+	Type          string   `json:"type"`
+	Tags          []string `json:"tags"`
+	Pricing       Pricing  `json:"pricing"`
 }
 
 // Pricing contains the pricing information for a model.
