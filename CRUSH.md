@@ -8,6 +8,7 @@
 - `go test -run TestName ./pkg/...` - Run specific test
 - `go run main.go` - Start HTTP server on :8080
 - `go run ./cmd/openrouter/main.go` - Generate OpenRouter config
+- `go run ./cmd/aigateway/main.go` - Generate AI Gateway config
 
 ## Code Style Guidelines
 

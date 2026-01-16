@@ -13,6 +13,7 @@ const (
 	TypeAzure        Type = "azure"
 	TypeBedrock      Type = "bedrock"
 	TypeVertexAI     Type = "google-vertex"
+	TypeAIGateway    Type = "ai-gateway"
 )
 
 // InferenceProvider represents the inference provider identifier.
@@ -38,6 +39,7 @@ const (
 	InferenceAIHubMix            InferenceProvider = "aihubmix"
 	InferenceKimiCoding          InferenceProvider = "kimi-coding"
 	InferenceProviderCopilot     InferenceProvider = "copilot"
+	InferenceProviderAIGateway   InferenceProvider = "ai-gateway"
 )
 
 // Provider represents an AI provider configuration.
@@ -101,6 +103,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceAIHubMix,
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
+		InferenceProviderAIGateway,
 	}
 }
 
@@ -115,5 +118,6 @@ func KnownProviderTypes() []Type {
 		TypeAzure,
 		TypeBedrock,
 		TypeVertexAI,
+		TypeAIGateway,
 	}
 }
