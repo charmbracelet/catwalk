@@ -172,22 +172,40 @@ func modelToCatwalk(m Model) catwalk.Model {
 }
 
 func detectReasoningCapabilities(m Model) (canReason bool, levels []string, defaultLevel string) {
-	// Models with thinking budget (Claude, Gemini) support extended thinking without levels
-	if m.Capabilities.Supports.MaxThinkingBudget > 0 {
+	// Claude models with reasoning support
+	if m.ID == "claude-3.7-sonnet" ||
+		m.ID == "claude-haiku-4.5" ||
+		m.ID == "claude-opus-4.5" ||
+		m.ID == "claude-sonnet-4" ||
+		m.ID == "claude-sonnet-4.5" {
 		return true, nil, ""
 	}
 
-	// OpenAI o-series and GPT-5+ models support reasoning with effort levels
-	if strings.HasPrefix(m.ID, "o1") ||
-		strings.HasPrefix(m.ID, "o3") ||
-		strings.HasPrefix(m.ID, "o4") ||
-		strings.HasPrefix(m.ID, "gpt-5") {
+	// Gemini models with reasoning support
+	if strings.HasPrefix(m.ID, "gemini-2.5-") || strings.HasPrefix(m.ID, "gemini-3-") {
 		return true, []string{"low", "medium", "high"}, "medium"
 	}
 
-	// Grok models support reasoning without effort levels
-	if strings.HasPrefix(m.ID, "grok") {
+	// GPT-5 series with reasoning levels
+	if strings.HasPrefix(m.ID, "gpt-5") && !strings.Contains(m.ID, "chat") {
+		return true, []string{"low", "medium", "high"}, "medium"
+	}
+
+	// OpenAI o-series with reasoning levels
+	if strings.HasPrefix(m.ID, "o3-") || strings.HasPrefix(m.ID, "o4-") {
+		return true, []string{"low", "medium", "high"}, "medium"
+	}
+
+	// DeepSeek R1 models
+	if strings.HasPrefix(m.ID, "deepseek-r1") {
 		return true, nil, ""
+	}
+
+	// Grok models with reasoning
+	if m.ID == "grok-3-mini" || m.ID == "grok-3-mini-beta" ||
+		strings.HasPrefix(m.ID, "grok-4") ||
+		m.ID == "grok-code-fast-1" {
+		return true, []string{"low", "medium", "high"}, "medium"
 	}
 
 	return false, nil, ""
