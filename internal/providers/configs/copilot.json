@@ -26,7 +26,7 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
+      "context_window": 160000,
       "default_max_tokens": 16000,
       "can_reason": true,
       "supports_attachments": false,
@@ -208,6 +208,19 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "gpt-5.2-codex",
+      "name": "GPT-5.2-Codex",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
       "supports_attachments": false,
       "options": {}
     },
