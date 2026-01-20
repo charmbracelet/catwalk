@@ -157,6 +157,7 @@ func modelsToCatwalk(m []Model) []catwalk.Model {
 
 func modelToCatwalk(m Model) catwalk.Model {
 	canReason, reasoningLevels, defaultReasoning := detectReasoningCapabilities(m)
+	supportsAttachments := detectAttachmentSupport(m)
 
 	return catwalk.Model{
 		ID:                     m.ID,
@@ -166,6 +167,7 @@ func modelToCatwalk(m Model) catwalk.Model {
 		CanReason:              canReason,
 		ReasoningLevels:        reasoningLevels,
 		DefaultReasoningEffort: defaultReasoning,
+		SupportsImages:         supportsAttachments,
 	}
 }
 
@@ -189,6 +191,35 @@ func detectReasoningCapabilities(m Model) (canReason bool, levels []string, defa
 	}
 
 	return false, nil, ""
+}
+
+func detectAttachmentSupport(m Model) bool {
+	// Claude models support attachments (vision/multimodal)
+	if strings.HasPrefix(m.ID, "claude-") {
+		return true
+	}
+
+	// Gemini models support attachments (vision/multimodal)
+	if strings.HasPrefix(m.ID, "gemini-") {
+		return true
+	}
+
+	// GPT-5 models support attachments (based on OpenRouter pattern)
+	if strings.HasPrefix(m.ID, "gpt-5") {
+		return true
+	}
+
+	// Older GPT models do not support attachments
+	if strings.HasPrefix(m.ID, "gpt-4") || strings.HasPrefix(m.ID, "gpt-3.5") {
+		return false
+	}
+
+	// Grok models - only grok-4 supports attachments
+	if m.ID == "grok-4" || strings.HasPrefix(m.ID, "grok-4-") {
+		return true
+	}
+
+	return false
 }
 
 func copilotToken() string {
