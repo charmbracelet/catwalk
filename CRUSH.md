@@ -22,3 +22,11 @@
 - HTTP: Always set timeouts, use context, defer close response bodies
 - JSON: Use `json.MarshalIndent` for pretty output, validate unmarshaling
 - File permissions: Use 0o600 for sensitive config files
+
+## Updating providers manually
+
+### Zai
+
+For `zai`, we'll need to grab the model list and capabilities from `https://docs.z.ai/guides/overview/overview`.
+
+That page does not contain the exact `context_window` and `default_max_tokens` though. We can grab the exact value from `./internal/providers/configs/openrouter.json`.
