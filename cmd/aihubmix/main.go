@@ -107,14 +107,14 @@ func main() {
 	}
 
 	aiHubMixProvider := catwalk.Provider{
-		Name:        "AIHubMix",
-		ID:          catwalk.InferenceAIHubMix,
-		APIKey:      "$AIHUBMIX_API_KEY",
-		APIEndpoint: "https://aihubmix.com/v1",
-		Type:        catwalk.TypeOpenAICompat,
+		Name:                "AIHubMix",
+		ID:                  catwalk.InferenceAIHubMix,
+		APIKey:              "$AIHUBMIX_API_KEY",
+		APIEndpoint:         "https://aihubmix.com/v1",
+		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "gpt-5",
 		DefaultSmallModelID: "gpt-5-nano",
-		Models:      []catwalk.Model{},
+		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"APP-Code": "IUFF7106",
 		},
@@ -123,18 +123,6 @@ func main() {
 	for _, model := range modelsResp.Data {
 		// Skip models with context window < 20000
 		if model.ContextLength < 20000 {
-			continue
-		}
-
-		// Parse pricing - API returns price per 1K tokens in USD
-		// Convert to price per 1M tokens
-		costIn := parseFloat(model.Pricing.Input) * 1000
-		costOut := parseFloat(model.Pricing.Output) * 1000
-		costInCached := parseFloat(model.Pricing.CacheWrite) * 1000
-		costOutCached := parseFloat(model.Pricing.CacheRead) * 1000
-
-		// Skip models with zero pricing or missing pricing
-		if costIn == 0 || costOut == 0 {
 			continue
 		}
 
@@ -166,10 +154,10 @@ func main() {
 		catwalkModel := catwalk.Model{
 			ID:                     model.ModelID,
 			Name:                   model.ModelID,
-			CostPer1MIn:            costIn,
-			CostPer1MOut:           costOut,
-			CostPer1MInCached:      costInCached,
-			CostPer1MOutCached:     costOutCached,
+			CostPer1MIn:            parseFloat(model.Pricing.Input),
+			CostPer1MOut:           parseFloat(model.Pricing.Output),
+			CostPer1MInCached:      parseFloat(model.Pricing.CacheWrite),
+			CostPer1MOutCached:     parseFloat(model.Pricing.CacheRead),
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       defaultMaxTokens,
 			CanReason:              canReason,
