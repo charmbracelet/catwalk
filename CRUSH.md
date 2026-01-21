@@ -2,12 +2,9 @@
 
 ## Build/Test Commands
 
-- `go build` - Build the main HTTP server
-- `go build ./cmd/openrouter` - Build OpenRouter config generator
+- `go run .` - Build and run the main HTTP server on :8080
+- `go run ./cmd/{provider-name}` - Build and run a CLI to update the `{provider-name}.json` file
 - `go test ./...` - Run all tests
-- `go test -run TestName ./pkg/...` - Run specific test
-- `go run main.go` - Start HTTP server on :8080
-- `go run ./cmd/openrouter/main.go` - Generate OpenRouter config
 
 ## Code Style Guidelines
 
@@ -22,3 +19,12 @@
 - HTTP: Always set timeouts, use context, defer close response bodies
 - JSON: Use `json.MarshalIndent` for pretty output, validate unmarshaling
 - File permissions: Use 0o600 for sensitive config files
+
+## Adding more provider commands
+
+- Create the `./cmd/{provider-name}/main.go` file
+- Try to use the provider API to figure out the available models. If there's no
+  endpoint for listing the models, look for some sort of structured text format
+  (usually in the docs). If none of that exist, refuse to create the command,
+  and add it to the `MANUAL_UPDATES.md` file.
+- Add it to `.github/workflows/update.yml`
