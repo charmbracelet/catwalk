@@ -28,3 +28,12 @@
   (usually in the docs). If none of that exist, refuse to create the command,
   and add it to the `MANUAL_UPDATES.md` file.
 - Add it to `.github/workflows/update.yml`
+
+## Updating providers manually
+
+### Zai
+
+For `zai`, we'll need to grab the model list and capabilities from `https://docs.z.ai/guides/overview/overview`.
+
+That page does not contain the exact `context_window` and `default_max_tokens` though. We can grab the exact value from `./internal/providers/configs/openrouter.json`.
+

@@ -16,7 +16,7 @@
       "context_window": 144000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -29,7 +29,7 @@
       "context_window": 160000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -42,7 +42,7 @@
       "context_window": 216000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -55,7 +55,7 @@
       "context_window": 144000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -68,7 +68,7 @@
       "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -107,7 +107,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -120,7 +120,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -133,7 +133,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -146,7 +146,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -159,7 +159,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -172,7 +172,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -185,7 +185,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
