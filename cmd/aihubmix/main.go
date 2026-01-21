@@ -37,6 +37,13 @@ type Pricing struct {
 	CacheWrite *float64 `json:"cache_write"`
 }
 
+const (
+	minContextWindow  = 20000
+	defaultLargeModel = "gpt-5"
+	defaultSmallModel = "gpt-5-nano"
+	maxTokensFactor   = 10
+)
+
 // ModelsResponse is the response structure for the models API.
 type ModelsResponse struct {
 	Data    []APIModel `json:"data"`
@@ -69,24 +76,12 @@ func fetchAIHubMixModels() (*ModelsResponse, error) {
 	return &mr, nil
 }
 
-func hasFeature(features, feature string) bool {
-	if features == "" {
+func hasField(s, field string) bool {
+	if s == "" {
 		return false
 	}
-	for f := range strings.SplitSeq(features, ",") {
-		if strings.TrimSpace(f) == feature {
-			return true
-		}
-	}
-	return false
-}
-
-func hasModality(modalities, modality string) bool {
-	if modalities == "" {
-		return false
-	}
-	for m := range strings.SplitSeq(modalities, ",") {
-		if strings.TrimSpace(m) == modality {
+	for item := range strings.SplitSeq(s, ",") {
+		if strings.TrimSpace(item) == field {
 			return true
 		}
 	}
@@ -95,7 +90,7 @@ func hasModality(modalities, modality string) bool {
 
 func parseFloat(p *float64) float64 {
 	if p == nil {
-		return 0.0
+		return 0
 	}
 	return *p
 }
@@ -112,32 +107,25 @@ func main() {
 		APIKey:              "$AIHUBMIX_API_KEY",
 		APIEndpoint:         "https://aihubmix.com/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "gpt-5",
-		DefaultSmallModelID: "gpt-5-nano",
-		Models:              []catwalk.Model{},
+		DefaultLargeModelID: defaultLargeModel,
+		DefaultSmallModelID: defaultSmallModel,
 		DefaultHeaders: map[string]string{
 			"APP-Code": "IUFF7106",
 		},
 	}
 
 	for _, model := range modelsResp.Data {
-		// Skip models with context window < 20000
-		if model.ContextLength < 20000 {
+		if model.ContextLength < minContextWindow {
 			continue
 		}
 
-		// Check for text I/O support
-		if !hasModality(model.InputModalities, "text") {
+		if !hasField(model.InputModalities, "text") {
 			continue
 		}
 
-		// Check reasoning capability
-		canReason := hasFeature(model.Features, "thinking")
+		canReason := hasField(model.Features, "thinking")
+		supportsImages := hasField(model.InputModalities, "image")
 
-		// Check image support
-		supportsImages := hasModality(model.InputModalities, "image")
-
-		// Parse reasoning levels
 		var reasoningLevels []string
 		var defaultReasoning string
 		if canReason {
@@ -145,13 +133,12 @@ func main() {
 			defaultReasoning = "medium"
 		}
 
-		// Calculate default max tokens
-		defaultMaxTokens := model.MaxOutput
-		if defaultMaxTokens == 0 || defaultMaxTokens > model.ContextLength/2 {
-			defaultMaxTokens = model.ContextLength / 10
+		maxTokens := model.MaxOutput
+		if maxTokens == 0 || maxTokens > model.ContextLength/2 {
+			maxTokens = model.ContextLength / maxTokensFactor
 		}
 
-		catwalkModel := catwalk.Model{
+		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
 			ID:                     model.ModelID,
 			Name:                   model.ModelID,
 			CostPer1MIn:            parseFloat(model.Pricing.Input),
@@ -159,14 +146,13 @@ func main() {
 			CostPer1MInCached:      parseFloat(model.Pricing.CacheWrite),
 			CostPer1MOutCached:     parseFloat(model.Pricing.CacheRead),
 			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       defaultMaxTokens,
+			DefaultMaxTokens:       maxTokens,
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         supportsImages,
-		}
+		})
 
-		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalkModel)
 		fmt.Printf("Added model %s with context window %d\n",
 			model.ModelID, model.ContextLength)
 	}

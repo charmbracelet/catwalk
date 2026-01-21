@@ -53,6 +53,19 @@
       "options": {}
     },
     {
+      "id": "DeepSeek-OCR",
+      "name": "DeepSeek-OCR",
+      "cost_per_1m_in": 0.02,
+      "cost_per_1m_out": 0.02,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 8000,
+      "default_max_tokens": 800,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "DeepSeek-R1",
       "name": "DeepSeek-R1",
       "cost_per_1m_in": 0.4,
@@ -201,6 +214,58 @@
       "options": {}
     },
     {
+      "id": "Qwen/Qwen2.5-VL-32B-Instruct",
+      "name": "Qwen/Qwen2.5-VL-32B-Instruct",
+      "cost_per_1m_in": 0.24,
+      "cost_per_1m_out": 0.24,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "name": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "ahm-Phi-3-5-vision-instruct",
+      "name": "ahm-Phi-3-5-vision-instruct",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 1.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "aihub-Phi-4",
+      "name": "aihub-Phi-4",
+      "cost_per_1m_in": 0.12,
+      "cost_per_1m_out": 0.48,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 16400,
+      "default_max_tokens": 1640,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "aihub-Phi-4-mini-instruct",
       "name": "aihub-Phi-4-mini-instruct",
       "cost_per_1m_in": 0.12,
@@ -222,6 +287,214 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 4000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "aihubmix-Cohere-command-r",
+      "name": "aihubmix-Cohere-command-r",
+      "cost_per_1m_in": 0.64,
+      "cost_per_1m_out": 1.92,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "aihubmix-command-r-08-2024",
+      "name": "aihubmix-command-r-08-2024",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "aihubmix-command-r-plus",
+      "name": "aihubmix-command-r-plus",
+      "cost_per_1m_in": 3.84,
+      "cost_per_1m_out": 19.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "aihubmix-command-r-plus-08-2024",
+      "name": "aihubmix-command-r-plus-08-2024",
+      "cost_per_1m_in": 2.8,
+      "cost_per_1m_out": 11.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "aihubmix-router",
+      "name": "aihubmix-router",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 1.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.1,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "baidu-deepseek-v3.2",
+      "name": "baidu-deepseek-v3.2",
+      "cost_per_1m_in": 0.274,
+      "cost_per_1m_out": 0.411,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "baidu-deepseek-v3.2-exp",
+      "name": "baidu-deepseek-v3.2-exp",
+      "cost_per_1m_in": 0.274,
+      "cost_per_1m_out": 0.411,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0274,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "baidu/ERNIE-4.5-300B-A47B",
+      "name": "baidu/ERNIE-4.5-300B-A47B",
+      "cost_per_1m_in": 0.32,
+      "cost_per_1m_out": 1.28,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "cc-MiniMax-M2",
+      "name": "cc-MiniMax-M2",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.1,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "cc-deepseek-v3.1",
+      "name": "cc-deepseek-v3.1",
+      "cost_per_1m_in": 0.56,
+      "cost_per_1m_out": 1.68,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "cc-ernie-4.5-300b-a47b",
+      "name": "cc-ernie-4.5-300b-a47b",
+      "cost_per_1m_in": 0.32,
+      "cost_per_1m_out": 1.28,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "cc-kimi-k2-instruct",
+      "name": "cc-kimi-k2-instruct",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 3.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "cc-kimi-k2-instruct-0905",
+      "name": "cc-kimi-k2-instruct-0905",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 3.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "cc-minimax-m2",
+      "name": "cc-minimax-m2",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.1,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "cc-minimax-m2.1",
+      "name": "cc-minimax-m2.1",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.1,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "chatgpt-4o-latest",
+      "name": "chatgpt-4o-latest",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -281,6 +554,58 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-3-haiku-20240229",
+      "name": "claude-3-haiku-20240229",
+      "cost_per_1m_in": 0.275,
+      "cost_per_1m_out": 0.275,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-3-haiku-20240307",
+      "name": "claude-3-haiku-20240307",
+      "cost_per_1m_in": 0.275,
+      "cost_per_1m_out": 1.375,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-3-haiku@20240307",
+      "name": "claude-3-haiku@20240307",
+      "cost_per_1m_in": 0.275,
+      "cost_per_1m_out": 1.375,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-3-sonnet-20240229",
+      "name": "claude-3-sonnet-20240229",
+      "cost_per_1m_in": 3.3,
+      "cost_per_1m_out": 16.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
       "supports_attachments": true,
       "options": {}
     },
@@ -431,6 +756,38 @@
       "options": {}
     },
     {
+      "id": "codex-mini-latest",
+      "name": "codex-mini-latest",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.375,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "coding-glm-4.6",
+      "name": "coding-glm-4.6",
+      "cost_per_1m_in": 0.06,
+      "cost_per_1m_out": 0.22,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.010998,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "coding-glm-4.6-free",
       "name": "coding-glm-4.6-free",
       "cost_per_1m_in": 0,
@@ -439,6 +796,44 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
       "default_max_tokens": 20000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "coding-glm-4.7",
+      "name": "coding-glm-4.7",
+      "cost_per_1m_in": 0.06,
+      "cost_per_1m_out": 0.22,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.010998,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "coding-glm-4.7-free",
+      "name": "coding-glm-4.7-free",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -507,6 +902,84 @@
       "options": {}
     },
     {
+      "id": "command",
+      "name": "command",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "command-a-03-2025",
+      "name": "command-a-03-2025",
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "command-r",
+      "name": "command-r",
+      "cost_per_1m_in": 0.64,
+      "cost_per_1m_out": 1.92,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "command-r-08-2024",
+      "name": "command-r-08-2024",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "command-r-plus",
+      "name": "command-r-plus",
+      "cost_per_1m_in": 3.84,
+      "cost_per_1m_out": 19.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "command-r-plus-08-2024",
+      "name": "command-r-plus-08-2024",
+      "cost_per_1m_in": 2.8,
+      "cost_per_1m_out": 11.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "deepseek-math-v2",
       "name": "deepseek-math-v2",
       "cost_per_1m_in": 0.492,
@@ -515,6 +988,25 @@
       "cost_per_1m_out_cached": 0.0984,
       "context_window": 163000,
       "default_max_tokens": 16300,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "name": "deepseek-r1-distill-llama-70b",
+      "cost_per_1m_in": 0.8,
+      "cost_per_1m_out": 1.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -668,6 +1160,32 @@
       "options": {}
     },
     {
+      "id": "ernie-4.5-0.3b",
+      "name": "ernie-4.5-0.3b",
+      "cost_per_1m_in": 0.0136,
+      "cost_per_1m_out": 0.0544,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "ernie-4.5-turbo-128k-preview",
+      "name": "ernie-4.5-turbo-128k-preview",
+      "cost_per_1m_in": 0.108,
+      "cost_per_1m_out": 0.432,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "ernie-4.5-turbo-latest",
       "name": "ernie-4.5-turbo-latest",
       "cost_per_1m_in": 0.11,
@@ -764,6 +1282,32 @@
       "options": {}
     },
     {
+      "id": "gemini-2.0-flash-exp",
+      "name": "gemini-2.0-flash-exp",
+      "cost_per_1m_in": 0.02,
+      "cost_per_1m_out": 0.08,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.0-flash-exp-search",
+      "name": "gemini-2.0-flash-exp-search",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "gemini-2.0-flash-free",
       "name": "gemini-2.0-flash-free",
       "cost_per_1m_in": 0,
@@ -772,6 +1316,77 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
       "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.0-flash-lite",
+      "name": "gemini-2.0-flash-lite",
+      "cost_per_1m_in": 0.076,
+      "cost_per_1m_out": 0.304,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.076,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.0-flash-preview-image-generation",
+      "name": "gemini-2.0-flash-preview-image-generation",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.0-flash-search",
+      "name": "gemini-2.0-flash-search",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.025,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.0-flash-thinking-exp-01-21",
+      "name": "gemini-2.0-flash-thinking-exp-01-21",
+      "cost_per_1m_in": 0.076,
+      "cost_per_1m_out": 0.304,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.0-pro-exp-02-05",
+      "name": "gemini-2.0-pro-exp-02-05",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -900,6 +1515,57 @@
       "options": {}
     },
     {
+      "id": "gemini-2.5-pro-exp-03-25",
+      "name": "gemini-2.5-pro-exp-03-25",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.125,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.5-pro-preview-03-25",
+      "name": "gemini-2.5-pro-preview-03-25",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.125,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.5-pro-preview-03-25-search",
+      "name": "gemini-2.5-pro-preview-03-25-search",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.125,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "gemini-2.5-pro-preview-05-06",
       "name": "gemini-2.5-pro-preview-05-06",
       "cost_per_1m_in": 1.25,
@@ -919,6 +1585,25 @@
       "options": {}
     },
     {
+      "id": "gemini-2.5-pro-preview-05-06-search",
+      "name": "gemini-2.5-pro-preview-05-06-search",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.125,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "gemini-2.5-pro-preview-06-05",
       "name": "gemini-2.5-pro-preview-06-05",
       "cost_per_1m_in": 1.25,
@@ -927,6 +1612,25 @@
       "cost_per_1m_out_cached": 0.125,
       "context_window": 1048576,
       "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.5-pro-preview-06-05-search",
+      "name": "gemini-2.5-pro-preview-06-05-search",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.125,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -995,6 +1699,63 @@
       "options": {}
     },
     {
+      "id": "gemini-3-flash-preview-search",
+      "name": "gemini-3-flash-preview-search",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.05,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-pro-preview",
+      "name": "gemini-3-pro-preview",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-pro-preview-search",
+      "name": "gemini-3-pro-preview-search",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "glm-4.5v",
       "name": "glm-4.5v",
       "cost_per_1m_in": 0.274,
@@ -1048,6 +1809,25 @@
       "cost_per_1m_out_cached": 0.054795,
       "context_window": 200000,
       "default_max_tokens": 20000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "glm-4.7-flash-free",
+      "name": "glm-4.7-flash-free",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1150,6 +1930,32 @@
       "options": {}
     },
     {
+      "id": "gpt-4o-mini-2024-07-18",
+      "name": "gpt-4o-mini-2024-07-18",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.075,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-4o-mini-audio-preview",
+      "name": "gpt-4o-mini-audio-preview",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "gpt-4o-mini-search-preview",
       "name": "gpt-4o-mini-search-preview",
       "cost_per_1m_in": 0.15,
@@ -1171,6 +1977,19 @@
       "cost_per_1m_out_cached": 1.25,
       "context_window": 128000,
       "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-4o-zh",
+      "name": "gpt-4o-zh",
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -1519,6 +2338,19 @@
       "options": {}
     },
     {
+      "id": "grok-2-vision-1212",
+      "name": "grok-2-vision-1212",
+      "cost_per_1m_in": 1.8,
+      "cost_per_1m_out": 9,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "grok-4-1-fast-non-reasoning",
       "name": "grok-4-1-fast-non-reasoning",
       "cost_per_1m_in": 0.2,
@@ -1573,6 +2405,96 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "grok-vision-beta",
+      "name": "grok-vision-beta",
+      "cost_per_1m_in": 5.6,
+      "cost_per_1m_out": 16.8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "inclusionAI/Ling-1T",
+      "name": "inclusionAI/Ling-1T",
+      "cost_per_1m_in": 0.548,
+      "cost_per_1m_out": 2.192,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "inclusionAI/Ling-flash-2.0",
+      "name": "inclusionAI/Ling-flash-2.0",
+      "cost_per_1m_in": 0.136,
+      "cost_per_1m_out": 0.544,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "inclusionAI/Ling-mini-2.0",
+      "name": "inclusionAI/Ling-mini-2.0",
+      "cost_per_1m_in": 0.068,
+      "cost_per_1m_out": 0.272,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "inclusionAI/Ring-1T",
+      "name": "inclusionAI/Ring-1T",
+      "cost_per_1m_in": 0.548,
+      "cost_per_1m_out": 2.192,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "inclusionAI/Ring-flash-2.0",
+      "name": "inclusionAI/Ring-flash-2.0",
+      "cost_per_1m_in": 0.136,
+      "cost_per_1m_out": 0.544,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
       "options": {}
     },
     {
@@ -1698,6 +2620,19 @@
       "options": {}
     },
     {
+      "id": "mimo-v2-flash",
+      "name": "mimo-v2-flash",
+      "cost_per_1m_in": 0.1918,
+      "cost_per_1m_out": 0.5754,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.03836,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "mimo-v2-flash-free",
       "name": "mimo-v2-flash-free",
       "cost_per_1m_in": 0,
@@ -1721,6 +2656,82 @@
       "default_max_tokens": 25600,
       "can_reason": false,
       "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "o1",
+      "name": "o1",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 60,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 7.5,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "o1-2024-12-17",
+      "name": "o1-2024-12-17",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 60,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 7.5,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "o1-preview",
+      "name": "o1-preview",
+      "cost_per_1m_in": 15,
+      "cost_per_1m_out": 60,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 7.5,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "o1-pro",
+      "name": "o1-pro",
+      "cost_per_1m_in": 170,
+      "cost_per_1m_out": 680,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 170,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
       "options": {}
     },
     {
@@ -1796,6 +2807,71 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "qwen-mt-plus",
+      "name": "qwen-mt-plus",
+      "cost_per_1m_in": 0.492,
+      "cost_per_1m_out": 1.476,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 16000,
+      "default_max_tokens": 8000,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "qwen-mt-turbo",
+      "name": "qwen-mt-turbo",
+      "cost_per_1m_in": 0.192,
+      "cost_per_1m_out": 0.534912,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 16000,
+      "default_max_tokens": 8000,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "qwen-turbo",
+      "name": "qwen-turbo",
+      "cost_per_1m_in": 0.36,
+      "cost_per_1m_out": 1.08,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "qwen-turbo-2024-11-01",
+      "name": "qwen-turbo-2024-11-01",
+      "cost_per_1m_in": 0.36,
+      "cost_per_1m_out": 1.08,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "qwen2.5-vl-72b-instruct",
+      "name": "qwen2.5-vl-72b-instruct",
+      "cost_per_1m_in": 2.4,
+      "cost_per_1m_out": 7.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 0,
+      "default_max_tokens": 0,
+      "can_reason": false,
       "supports_attachments": true,
       "options": {}
     },
@@ -1918,6 +2994,19 @@
       "cost_per_1m_out_cached": 0.822,
       "context_window": 262144,
       "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "qwen3-max-preview",
+      "name": "qwen3-max-preview",
+      "cost_per_1m_in": 0.822,
+      "cost_per_1m_out": 3.288,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.822,
+      "context_window": 0,
+      "default_max_tokens": 0,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
