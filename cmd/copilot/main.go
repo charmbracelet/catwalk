@@ -51,6 +51,7 @@ type Limits struct {
 type Supports struct {
 	ToolCalls         bool `json:"tool_calls,omitempty"`
 	ParallelToolCalls bool `json:"parallel_tool_calls,omitempty"`
+	Vision            bool `json:"vision,omitempty"`
 }
 
 type Policy struct {
@@ -159,6 +160,7 @@ func modelToCatwalk(m Model) catwalk.Model {
 		Name:             m.Name,
 		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
 		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
+		SupportsImages:   m.Capabilities.Supports.Vision,
 	}
 }
 
