@@ -51,6 +51,8 @@ type Limits struct {
 type Supports struct {
 	ToolCalls         bool `json:"tool_calls,omitempty"`
 	ParallelToolCalls bool `json:"parallel_tool_calls,omitempty"`
+	MaxThinkingBudget int  `json:"max_thinking_budget,omitempty"`
+	MinThinkingBudget int  `json:"min_thinking_budget,omitempty"`
 }
 
 type Policy struct {
@@ -154,12 +156,92 @@ func modelsToCatwalk(m []Model) []catwalk.Model {
 }
 
 func modelToCatwalk(m Model) catwalk.Model {
+	canReason, reasoningLevels, defaultReasoning := detectReasoningCapabilities(m)
+	supportsAttachments := detectAttachmentSupport(m)
+
 	return catwalk.Model{
-		ID:               m.ID,
-		Name:             m.Name,
-		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
-		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
+		ID:                     m.ID,
+		Name:                   m.Name,
+		DefaultMaxTokens:       int64(m.Capabilities.Limits.MaxOutputTokens),
+		ContextWindow:          int64(m.Capabilities.Limits.MaxContextWindowTokens),
+		CanReason:              canReason,
+		ReasoningLevels:        reasoningLevels,
+		DefaultReasoningEffort: defaultReasoning,
+		SupportsImages:         supportsAttachments,
 	}
+}
+
+const defaultReasoningEffort = "medium"
+
+var defaultReasoningLevels = []string{"low", "medium", "high"}
+
+func detectReasoningCapabilities(m Model) (canReason bool, levels []string, defaultLevel string) {
+	// Claude models with reasoning support
+	if m.ID == "claude-3.7-sonnet" ||
+		m.ID == "claude-haiku-4.5" ||
+		m.ID == "claude-opus-4.5" ||
+		m.ID == "claude-sonnet-4" ||
+		m.ID == "claude-sonnet-4.5" {
+		return true, nil, ""
+	}
+
+	// Gemini models with reasoning support
+	if strings.HasPrefix(m.ID, "gemini-2.5-") || strings.HasPrefix(m.ID, "gemini-3-") {
+		return true, defaultReasoningLevels, defaultReasoningEffort
+	}
+
+	// GPT-5 series with reasoning levels
+	if strings.HasPrefix(m.ID, "gpt-5") && !strings.Contains(m.ID, "chat") {
+		return true, defaultReasoningLevels, defaultReasoningEffort
+	}
+
+	// OpenAI o-series with reasoning levels
+	if strings.HasPrefix(m.ID, "o3-") || strings.HasPrefix(m.ID, "o4-") {
+		return true, defaultReasoningLevels, defaultReasoningEffort
+	}
+
+	// DeepSeek R1 models
+	if strings.HasPrefix(m.ID, "deepseek-r1") {
+		return true, nil, ""
+	}
+
+	// Grok models with reasoning
+	if m.ID == "grok-3-mini" || m.ID == "grok-3-mini-beta" ||
+		strings.HasPrefix(m.ID, "grok-4") ||
+		m.ID == "grok-code-fast-1" {
+		return true, defaultReasoningLevels, defaultReasoningEffort
+	}
+
+	return false, nil, ""
+}
+
+func detectAttachmentSupport(m Model) bool {
+	// Claude models support attachments (vision/multimodal)
+	if strings.HasPrefix(m.ID, "claude-") {
+		return true
+	}
+
+	// Gemini models support attachments (vision/multimodal)
+	if strings.HasPrefix(m.ID, "gemini-") {
+		return true
+	}
+
+	// GPT-5 models support attachments (based on OpenRouter pattern)
+	if strings.HasPrefix(m.ID, "gpt-5") {
+		return true
+	}
+
+	// Older GPT models do not support attachments
+	if strings.HasPrefix(m.ID, "gpt-4") || strings.HasPrefix(m.ID, "gpt-3.5") {
+		return false
+	}
+
+	// Grok models - only grok-4 supports attachments
+	if m.ID == "grok-4" || strings.HasPrefix(m.ID, "grok-4-") {
+		return true
+	}
+
+	return false
 }
 
 func copilotToken() string {
