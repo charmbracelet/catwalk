@@ -4,10 +4,12 @@
 
 - `go build` - Build the main HTTP server
 - `go build ./cmd/openrouter` - Build OpenRouter config generator
+- `go build ./cmd/aihubmix` - Build AIHubMix config generator
 - `go test ./...` - Run all tests
 - `go test -run TestName ./pkg/...` - Run specific test
 - `go run main.go` - Start HTTP server on :8080
 - `go run ./cmd/openrouter/main.go` - Generate OpenRouter config
+- `go run ./cmd/aihubmix/main.go` - Generate AIHubMix config
 
 ## Code Style Guidelines
 
