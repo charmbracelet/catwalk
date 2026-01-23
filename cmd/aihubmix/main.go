@@ -14,6 +14,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/charmbracelet/catwalk/internal/names"
 	"github.com/charmbracelet/catwalk/pkg/catwalk"
 )
 
@@ -140,7 +141,7 @@ func main() {
 
 		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
 			ID:                     model.ModelID,
-			Name:                   model.ModelID,
+			Name:                   names.GetDisplayName(model.ModelID),
 			CostPer1MIn:            parseFloat(model.Pricing.Input),
 			CostPer1MOut:           parseFloat(model.Pricing.Output),
 			CostPer1MInCached:      parseFloat(model.Pricing.CacheWrite),

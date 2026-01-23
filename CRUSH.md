@@ -20,6 +20,38 @@
 - JSON: Use `json.MarshalIndent` for pretty output, validate unmarshaling
 - File permissions: Use 0o600 for sensitive config files
 
+## Model Names
+
+The `internal/names` package provides human-readable display names for model IDs. **Only use this package when the provider API does not already provide a good display name.**
+
+Check the API response first:
+- If the API provides a `name` or `display_name` field, use that directly
+- Only use `names.GetDisplayName(modelID)` when you only have a `model_id` field
+
+Examples:
+- ✅ **Use API name**: OpenRouter API has a `name` field → use `model.Name`
+- ✅ **Use names package**: AIHubMix API only has `model_id` → use `names.GetDisplayName(model.ModelID)`
+
+```go
+import "github.com/charmbracelet/catwalk/internal/names"
+
+// Only when API doesn't provide a name:
+model := catwalk.Model{
+    ID:   modelID,
+    Name: names.GetDisplayName(modelID),
+    // ... other fields
+}
+```
+
+The names package uses:
+1. Static mappings for known models (most common models)
+2. Case-insensitive matching
+3. Provider prefix stripping (e.g., "anthropic/claude-sonnet-4" -> matches "claude-sonnet-4")
+4. Levenshtein distance fuzzy matching for unknown models
+5. Smart formatting for completely unknown models (converts "3-5" to "3.5", etc.)
+
+To add new model mappings, edit `internal/names/model.go` and add entries to the `modelNames` map.
+
 ## Adding more provider commands
 
 - Create the `./cmd/{provider-name}/main.go` file
