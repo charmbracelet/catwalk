@@ -53,26 +53,32 @@ type ModelsResponse struct {
 }
 
 func fetchAIHubMixModels() (*ModelsResponse, error) {
-	client := &http.Client{Timeout: 30 * time.Second}
-	req, _ := http.NewRequestWithContext(
+	req, err := http.NewRequestWithContext(
 		context.Background(),
 		"GET",
 		"https://aihubmix.com/api/v1/models?type=llm",
 		nil,
 	)
+	if err != nil {
+		return nil, fmt.Errorf("creating request: %w", err)
+	}
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
+
+	client := &http.Client{Timeout: 30 * time.Second}
 	resp, err := client.Do(req)
 	if err != nil {
-		return nil, err //nolint:wrapcheck
+		return nil, fmt.Errorf("fetching models: %w", err)
 	}
 	defer resp.Body.Close() //nolint:errcheck
-	if resp.StatusCode != 200 {
+
+	if resp.StatusCode != http.StatusOK {
 		body, _ := io.ReadAll(resp.Body)
-		return nil, fmt.Errorf("status %d: %s", resp.StatusCode, body)
+		return nil, fmt.Errorf("unexpected status %d: %s", resp.StatusCode, body)
 	}
+
 	var mr ModelsResponse
 	if err := json.NewDecoder(resp.Body).Decode(&mr); err != nil {
-		return nil, err //nolint:wrapcheck
+		return nil, fmt.Errorf("parsing response: %w", err)
 	}
 	return &mr, nil
 }
@@ -94,6 +100,20 @@ func parseFloat(p *float64) float64 {
 		return 0
 	}
 	return *p
+}
+
+func calculateMaxTokens(contextLength, maxOutput, factor int64) int64 {
+	if maxOutput == 0 || maxOutput > contextLength/2 {
+		return contextLength / factor
+	}
+	return maxOutput
+}
+
+func buildReasoningConfig(canReason bool) ([]string, string) {
+	if !canReason {
+		return nil, ""
+	}
+	return []string{"low", "medium", "high"}, "medium"
 }
 
 func main() {
@@ -119,7 +139,6 @@ func main() {
 		if model.ContextLength < minContextWindow {
 			continue
 		}
-
 		if !hasField(model.InputModalities, "text") {
 			continue
 		}
@@ -127,17 +146,8 @@ func main() {
 		canReason := hasField(model.Features, "thinking")
 		supportsImages := hasField(model.InputModalities, "image")
 
-		var reasoningLevels []string
-		var defaultReasoning string
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
-		}
-
-		maxTokens := model.MaxOutput
-		if maxTokens == 0 || maxTokens > model.ContextLength/2 {
-			maxTokens = model.ContextLength / maxTokensFactor
-		}
+		reasoningLevels, defaultReasoning := buildReasoningConfig(canReason)
+		maxTokens := calculateMaxTokens(model.ContextLength, model.MaxOutput, maxTokensFactor)
 
 		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
 			ID:                     model.ModelID,
