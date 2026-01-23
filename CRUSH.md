@@ -19,6 +19,7 @@
 - HTTP: Always set timeouts, use context, defer close response bodies
 - JSON: Use `json.MarshalIndent` for pretty output, validate unmarshaling
 - File permissions: Use 0o600 for sensitive config files
+- Always format code with `gofumpt`
 
 ## Model Names
 

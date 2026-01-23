@@ -163,7 +163,7 @@ func main() {
 	}
 
 	slices.SortFunc(aiHubMixProvider.Models, func(a, b catwalk.Model) int {
-		return strings.Compare(a.Name, b.Name)
+		return strings.Compare(a.ID, b.ID)
 	})
 
 	data, err := json.MarshalIndent(aiHubMixProvider, "", "  ")

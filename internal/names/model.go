@@ -4,8 +4,8 @@
 package names
 
 import (
+	"regexp"
 	"strings"
-	"unicode"
 )
 
 // modelNames maps model IDs to their human-readable display names.
@@ -20,6 +20,7 @@ var modelNames = map[string]string{
 	"claude-sonnet-4":            "Claude Sonnet 4",
 	"claude-sonnet-4-5":          "Claude Sonnet 4.5",
 	"claude-opus-4":              "Claude Opus 4",
+	"claude-opus-4-1":            "Claude Opus 4.1",
 	"claude-opus-4-5":            "Claude Opus 4.5",
 	"claude-opus-4-5-think":      "Claude Opus 4.5 Think",
 	"claude-sonnet-4-5-20250214": "Claude Sonnet 4.5",
@@ -65,6 +66,7 @@ var modelNames = map[string]string{
 	"deepseek-v3.1-terminus": "DeepSeek V3.1 Terminus",
 	"deepseek-v3.1-think":    "DeepSeek V3.1 Think",
 	"deepseek-v3.2":          "DeepSeek V3.2",
+	"deepseek-v3.2-exp":      "DeepSeek V3.2 Exp",
 	"deepseek-v3.2-fast":     "DeepSeek V3.2 Fast",
 	"deepseek-v3.2-think":    "DeepSeek V3.2 Think",
 	"deepseek-v3.2-speciale": "DeepSeek V3.2 Speciale",
@@ -112,7 +114,7 @@ var modelNames = map[string]string{
 	"glm-4.7-flash": "GLM-4.7 Flash",
 	"glm-4.6":       "GLM-4.6",
 	"glm-4.6v":      "GLM-4.6 Vision",
-	"glm-4.5":       "GLM-4.5",
+	"glm-4.5v":      "GLM-4.5 Vision",
 	"glm-4-flash":   "GLM-4 Flash",
 	"glm-4-plus":    "GLM-4 Plus",
 	"glm-4-air":     "GLM-4 Air",
@@ -253,124 +255,97 @@ var modelNames = map[string]string{
 }
 
 // GetDisplayName returns a human-readable display name for the given model ID.
-// It first checks the static mapping, then attempts to find a close match using
-// Levenshtein distance. If no good match is found, it returns a cleaned-up
-// version of the model ID.
 func GetDisplayName(modelID string) string {
-	// Normalize to lowercase and try exact match first
-	normalized := strings.ToLower(modelID)
-	if name, ok := modelNames[normalized]; ok {
+	if name := lookupInMappings(modelID); name != "" {
 		return name
 	}
 
-	// Try case-sensitive match
+	if bestMatch := findBestMatch(strings.ToLower(modelID)); bestMatch != "" {
+		return bestMatch
+	}
+
+	return formatModelName(modelID)
+}
+
+// lookupInMappings attempts to find the model ID in the static mappings,
+// checking both the original string and without provider prefix.
+func lookupInMappings(modelID string) string {
 	if name, ok := modelNames[modelID]; ok {
 		return name
 	}
 
-	// Try without provider prefix (e.g., "anthropic/claude-sonnet-4" -> "claude-sonnet-4")
+	lowered := strings.ToLower(modelID)
+	if name, ok := modelNames[lowered]; ok {
+		return name
+	}
+
 	if idx := strings.LastIndex(modelID, "/"); idx != -1 {
 		baseModel := modelID[idx+1:]
-		if name, ok := modelNames[strings.ToLower(baseModel)]; ok {
-			return name
-		}
 		if name, ok := modelNames[baseModel]; ok {
 			return name
 		}
+		if name, ok := modelNames[strings.ToLower(baseModel)]; ok {
+			return name
+		}
 	}
 
-	// Try fuzzy match with known models
-	if bestMatch := findBestMatch(normalized); bestMatch != "" {
-		return bestMatch
-	}
-
-	// Fall back to formatting the model ID nicely
-	return formatModelName(modelID)
+	return ""
 }
 
 // formatModelName converts a technical model ID to a more readable format.
-// It replaces separators with spaces and capitalizes properly.
 func formatModelName(modelID string) string {
+	result := modelID
+
 	// Remove provider prefix if present
-	baseModel := modelID
-	if idx := strings.LastIndex(modelID, "/"); idx != -1 {
-		baseModel = modelID[idx+1:]
+	if idx := strings.LastIndex(result, "/"); idx != -1 {
+		result = result[idx+1:]
 	}
 
-	// Split by common separators
-	separators := []string{"_", "/"}
+	// Replace underscores and slashes with spaces
+	result = strings.ReplaceAll(strings.ReplaceAll(result, "_", " "), "/", " ")
 
-	// Replace all separators (except dashes which we'll handle special) with spaces
-	result := baseModel
-	for _, sep := range separators {
-		result = strings.ReplaceAll(result, sep, " ")
-	}
+	// Convert version patterns like "3-5" to "3.5"
+	versionDashRegex := regexp.MustCompile(`(\d)-(\d)`)
+	result = versionDashRegex.ReplaceAllString(result, "$1.$2")
 
-	// Convert version patterns like "3-5", "4-5" to "3.5", "4.5"
-	// This handles cases where version numbers use dashes as decimal separators
-	result = convertVersionDashes(result)
-
-	// Now replace remaining dashes with spaces
+	// Replace remaining dashes with spaces and clean up
 	result = strings.ReplaceAll(result, "-", " ")
-
-	// Clean up extra spaces
 	result = strings.Join(strings.Fields(result), " ")
 
-	// Capitalize first letter of each word
-	result = titleCase(result)
-
-	// Handle special cases like "V3" -> "V3" (already capitalized)
-	result = preserveVersionNumbers(result)
-
-	return result
-}
-
-// convertVersionDashes converts dash-separated version numbers to dot-separated.
-// For example: "3-5" -> "3.5", "4-5-haiku" -> "4.5 Haiku"
-func convertVersionDashes(s string) string {
-	// Pattern: digit dash digit -> digit dot digit
-	// Use a simple loop to replace these patterns
-	result := s
-	for i := 0; i < len(result)-2; i++ {
-		// Check if we have "X-Y" pattern where X and Y are digits
-		if result[i] >= '0' && result[i] <= '9' &&
-			result[i+1] == '-' &&
-			result[i+2] >= '0' && result[i+2] <= '9' {
-			// Convert to "X.Y"
-			result = result[:i+1] + "." + result[i+2:]
-		}
-	}
-	return result
-}
-
-// titleCase capitalizes the first letter of each word.
-func titleCase(s string) string {
-	words := strings.Fields(s)
+	// Capitalize each word while preserving version indicators
+	words := strings.Fields(result)
+	var builder strings.Builder
 	for i, word := range words {
-		if len(word) > 0 {
-			words[i] = string(unicode.ToUpper(rune(word[0]))) + word[1:]
+		if i > 0 {
+			builder.WriteString(" ")
 		}
+		builder.WriteString(capitalizeWord(word))
 	}
-	return strings.Join(words, " ")
+
+	return builder.String()
 }
 
-// preserveVersionNumbers keeps version numbers properly formatted.
-func preserveVersionNumbers(s string) string {
-	// Handle patterns like V3, V3.1, etc.
-	result := strings.ReplaceAll(s, "V ", "V")
+// capitalizeWord capitalizes the first letter of a word, preserving version patterns.
+func capitalizeWord(word string) string {
+	if len(word) == 0 {
+		return word
+	}
 
-	// Fix double spaces that might have been introduced
-	result = strings.Join(strings.Fields(result), " ")
+	// Preserve "V" prefix for version numbers (e.g., "V3" -> "v3" becomes "V3")
+	upperWord := strings.ToUpper(word)
+	if strings.HasPrefix(upperWord, "V") && len(word) > 1 {
+		return strings.ToUpper(word[0:1]) + word[1:]
+	}
 
-	return result
+	return strings.ToUpper(word[0:1]) + word[1:]
 }
+
+const fuzzyMatchThreshold = 2 // Maximum edit distance to consider for fuzzy matching
 
 // findBestMatch uses Levenshtein distance to find the best matching model name.
 func findBestMatch(modelID string) string {
-	const threshold = 4 // Maximum edit distance to consider
-
 	var bestMatch string
-	minDistance := threshold + 1
+	minDistance := fuzzyMatchThreshold + 1
 
 	for knownID, name := range modelNames {
 		distance := levenshteinDistance(modelID, knownID)
@@ -380,28 +355,20 @@ func findBestMatch(modelID string) string {
 		}
 	}
 
-	if bestMatch != "" && minDistance <= threshold {
-		return bestMatch
-	}
-
-	return ""
+	return bestMatch
 }
 
 // levenshteinDistance computes the edit distance between two strings.
 func levenshteinDistance(a, b string) int {
-	// Optimization: if either string is empty, return the length of the other
-	if len(a) == 0 {
+	switch {
+	case len(a) == 0:
 		return len(b)
-	}
-	if len(b) == 0 {
+	case len(b) == 0:
 		return len(a)
 	}
 
-	// Use a single row to save memory
 	previous := make([]int, len(b)+1)
-
-	// Initialize the first row
-	for j := 0; j <= len(b); j++ {
+	for j := range previous {
 		previous[j] = j
 	}
 
