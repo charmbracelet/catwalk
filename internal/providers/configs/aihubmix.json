@@ -996,7 +996,7 @@
     },
     {
       "id": "glm-4.5v",
-      "name": "GLM-4.5 Vision",
+      "name": "GLM 4.5 Vision",
       "cost_per_1m_in": 0.274,
       "cost_per_1m_out": 0.822,
       "cost_per_1m_in_cached": 0,
@@ -1009,7 +1009,7 @@
     },
     {
       "id": "glm-4.6",
-      "name": "GLM-4.6",
+      "name": "GLM 4.6",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -1028,7 +1028,7 @@
     },
     {
       "id": "glm-4.6v",
-      "name": "GLM-4.6 Vision",
+      "name": "GLM 4.6 Vision",
       "cost_per_1m_in": 0.137,
       "cost_per_1m_out": 0.411,
       "cost_per_1m_in_cached": 0,
@@ -1041,7 +1041,7 @@
     },
     {
       "id": "glm-4.7",
-      "name": "GLM-4.7",
+      "name": "GLM 4.7",
       "cost_per_1m_in": 0.273974,
       "cost_per_1m_out": 1.095896,
       "cost_per_1m_in_cached": 0,
@@ -1060,7 +1060,7 @@
     },
     {
       "id": "gpt-4.1",
-      "name": "GPT-4.1",
+      "name": "GPT 4.1",
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 8,
       "cost_per_1m_in_cached": 0,
@@ -1073,7 +1073,7 @@
     },
     {
       "id": "gpt-4.1-mini",
-      "name": "GPT-4.1 Mini",
+      "name": "GPT 4.1 Mini",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 1.6,
       "cost_per_1m_in_cached": 0,
@@ -1086,7 +1086,7 @@
     },
     {
       "id": "gpt-4.1-nano",
-      "name": "GPT-4.1 Nano",
+      "name": "GPT 4.1 Nano",
       "cost_per_1m_in": 0.1,
       "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0,
@@ -1099,7 +1099,7 @@
     },
     {
       "id": "gpt-4o",
-      "name": "GPT-4o",
+      "name": "GPT 4o",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1112,7 +1112,7 @@
     },
     {
       "id": "gpt-4o-2024-11-20",
-      "name": "GPT-4o",
+      "name": "GPT 4o",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1125,7 +1125,7 @@
     },
     {
       "id": "gpt-4o-audio-preview",
-      "name": "GPT-4o Audio Preview",
+      "name": "GPT 4o Audio Preview",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1138,7 +1138,7 @@
     },
     {
       "id": "gpt-4o-mini",
-      "name": "GPT-4o Mini",
+      "name": "GPT 4o Mini",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -1151,7 +1151,7 @@
     },
     {
       "id": "gpt-4o-mini-search-preview",
-      "name": "GPT-4o Mini Search",
+      "name": "GPT 4o Mini Search",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
@@ -1164,7 +1164,7 @@
     },
     {
       "id": "gpt-4o-search-preview",
-      "name": "GPT-4o Search",
+      "name": "GPT 4o Search",
       "cost_per_1m_in": 2.5,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1177,7 +1177,7 @@
     },
     {
       "id": "gpt-5",
-      "name": "GPT-5",
+      "name": "GPT 5",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1196,7 +1196,7 @@
     },
     {
       "id": "gpt-5-chat-latest",
-      "name": "Gpt 5 Chat Latest",
+      "name": "GPT 5 Chat Latest",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1209,7 +1209,7 @@
     },
     {
       "id": "gpt-5-codex",
-      "name": "GPT-5 Codex",
+      "name": "GPT 5 Codex",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1228,7 +1228,7 @@
     },
     {
       "id": "gpt-5-mini",
-      "name": "GPT-5 Mini",
+      "name": "GPT 5 Mini",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
@@ -1247,7 +1247,7 @@
     },
     {
       "id": "gpt-5-nano",
-      "name": "GPT-5 Nano",
+      "name": "GPT 5 Nano",
       "cost_per_1m_in": 0.05,
       "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0,
@@ -1266,7 +1266,7 @@
     },
     {
       "id": "gpt-5-pro",
-      "name": "GPT-5 Pro",
+      "name": "GPT 5 Pro",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 120,
       "cost_per_1m_in_cached": 0,
@@ -1285,7 +1285,7 @@
     },
     {
       "id": "gpt-5.1",
-      "name": "GPT-5.1",
+      "name": "GPT 5.1",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1304,7 +1304,7 @@
     },
     {
       "id": "gpt-5.1-chat-latest",
-      "name": "Gpt 5.1 Chat Latest",
+      "name": "GPT 5.1 Chat Latest",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1317,7 +1317,7 @@
     },
     {
       "id": "gpt-5.1-codex",
-      "name": "GPT-5.1 Codex",
+      "name": "GPT 5.1 Codex",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1336,7 +1336,7 @@
     },
     {
       "id": "gpt-5.1-codex-max",
-      "name": "Gpt 5.1 Codex Max",
+      "name": "GPT 5.1 Codex Max",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 0,
@@ -1355,7 +1355,7 @@
     },
     {
       "id": "gpt-5.1-codex-mini",
-      "name": "Gpt 5.1 Codex Mini",
+      "name": "GPT 5.1 Codex Mini",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
@@ -1374,7 +1374,7 @@
     },
     {
       "id": "gpt-5.2",
-      "name": "GPT-5.2",
+      "name": "GPT 5.2",
       "cost_per_1m_in": 1.75,
       "cost_per_1m_out": 14,
       "cost_per_1m_in_cached": 0,
@@ -1393,7 +1393,7 @@
     },
     {
       "id": "gpt-5.2-chat-latest",
-      "name": "Gpt 5.2 Chat Latest",
+      "name": "GPT 5.2 Chat Latest",
       "cost_per_1m_in": 1.75,
       "cost_per_1m_out": 14,
       "cost_per_1m_in_cached": 0,
@@ -1406,7 +1406,7 @@
     },
     {
       "id": "gpt-5.2-codex",
-      "name": "GPT-5.2 Codex",
+      "name": "GPT 5.2 Codex",
       "cost_per_1m_in": 1.75,
       "cost_per_1m_out": 14,
       "cost_per_1m_in_cached": 0,
@@ -1425,7 +1425,7 @@
     },
     {
       "id": "gpt-5.2-high",
-      "name": "Gpt 5.2 High",
+      "name": "GPT 5.2 High",
       "cost_per_1m_in": 1.75,
       "cost_per_1m_out": 14,
       "cost_per_1m_in_cached": 0,
@@ -1444,7 +1444,7 @@
     },
     {
       "id": "gpt-5.2-low",
-      "name": "Gpt 5.2 Low",
+      "name": "GPT 5.2 Low",
       "cost_per_1m_in": 1.75,
       "cost_per_1m_out": 14,
       "cost_per_1m_in_cached": 0,
@@ -1463,7 +1463,7 @@
     },
     {
       "id": "gpt-5.2-pro",
-      "name": "GPT-5 Pro",
+      "name": "GPT 5 Pro",
       "cost_per_1m_in": 21,
       "cost_per_1m_out": 168,
       "cost_per_1m_in_cached": 0,
