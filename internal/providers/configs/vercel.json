@@ -357,7 +357,7 @@
       "name": "GLM 4.5 Air",
       "cost_per_1m_in": 0.19999999999999998,
       "cost_per_1m_out": 1.1,
-      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 8000,
@@ -872,7 +872,7 @@
       "name": "Gemini 2.5 Flash",
       "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 8000,
@@ -883,7 +883,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
+      "supports_attachments": false,
       "options": {}
     },
     {
@@ -948,7 +948,7 @@
       "name": "Gemini 2.5 Pro",
       "cost_per_1m_in": 1.25,
       "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 0.125,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
       "default_max_tokens": 8000,
@@ -959,7 +959,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
+      "supports_attachments": false,
       "options": {}
     },
     {
