@@ -4,20 +4,51 @@
   "api_key": "$ZAI_API_KEY",
   "api_endpoint": "https://api.z.ai/api/coding/paas/v4",
   "type": "openai-compat",
-  "default_large_model_id": "glm-4.6",
-  "default_small_model_id": "glm-4.5-air",
+  "default_large_model_id": "glm-4.7",
+  "default_small_model_id": "glm-4.7-flash",
   "models": [
+    {
+      "id": "glm-4.7",
+      "name": "GLM-4.7",
+      "cost_per_1m_in": 0.42,
+      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in_cached": 0.11,
+      "context_window": 204800,
+      "default_max_tokens": 102400,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-4.7-flash",
+      "name": "GLM-4.7 Flash",
+      "cost_per_1m_in": 0.07,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0.01,
+      "context_window": 200000,
+      "default_max_tokens": 65550,
+      "can_reason": true,
+      "supports_attachments": false
+    },
     {
       "id": "glm-4.6",
       "name": "GLM-4.6",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in": 0.39,
+      "cost_per_1m_out": 1.9,
       "cost_per_1m_in_cached": 0.11,
-      "cost_per_1m_out_cached": 0,
       "context_window": 204800,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 102400,
       "can_reason": true,
       "supports_attachments": false
+    },
+    {
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.9,
+      "context_window": 131072,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
     },
     {
       "id": "glm-4.5",
@@ -25,22 +56,32 @@
       "cost_per_1m_in": 0.6,
       "cost_per_1m_out": 2.2,
       "cost_per_1m_in_cached": 0.11,
-      "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 98304,
+      "default_max_tokens": 49152,
       "can_reason": true,
       "supports_attachments": false
     },
     {
       "id": "glm-4.5-air",
       "name": "GLM-4.5-Air",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 1.1,
+      "cost_per_1m_in": 0.13,
+      "cost_per_1m_out": 0.85,
       "cost_per_1m_in_cached": 0.03,
       "context_window": 131072,
-      "default_max_tokens": 98304,
+      "default_max_tokens": 49152,
       "can_reason": true,
       "supports_attachments": false
+    },
+    {
+      "id": "glm-4.5v",
+      "name": "GLM-4.5V",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 1.8,
+      "cost_per_1m_in_cached": 0.11,
+      "context_window": 65536,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": true
     }
   ]
 }

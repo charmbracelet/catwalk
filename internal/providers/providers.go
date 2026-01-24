@@ -15,6 +15,9 @@ var openAIConfig []byte
 //go:embed configs/anthropic.json
 var anthropicConfig []byte
 
+//go:embed configs/synthetic.json
+var syntheticConfig []byte
+
 //go:embed configs/gemini.json
 var geminiConfig []byte
 
@@ -59,6 +62,14 @@ var aiHubMixConfig []byte
 
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
+//go:embed configs/kimi.json
+var kimiCodingConfig []byte
+
+//go:embed configs/copilot.json
+var copilotConfig []byte
+
+//go:embed configs/vercel.json
+var vercelConfig []byte
 
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
@@ -72,6 +83,7 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	zAIProvider,
+	kimiCodingProvider,
 	groqProvider,
 	openRouterProvider,
 	cerebrasProvider,
@@ -81,6 +93,9 @@ var providerRegistry = []ProviderFunc{
 	huggingFaceProvider,
 	aiHubMixProvider,
 	miniMaxProvider,
+	syntheticProvider,
+	copilotProvider,
+	vercelProvider,
 }
 
 // GetAll returns all registered providers.
@@ -103,6 +118,10 @@ func loadProviderFromConfig(configData []byte) catwalk.Provider {
 
 func openAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(openAIConfig)
+}
+
+func syntheticProvider() catwalk.Provider {
+	return loadProviderFromConfig(syntheticConfig)
 }
 
 func anthropicProvider() catwalk.Provider {
@@ -167,4 +186,14 @@ func aiHubMixProvider() catwalk.Provider {
 
 func miniMaxProvider() catwalk.Provider {
 	return loadProviderFromConfig(miniMaxConfig)
+func kimiCodingProvider() catwalk.Provider {
+	return loadProviderFromConfig(kimiCodingConfig)
+}
+
+func copilotProvider() catwalk.Provider {
+	return loadProviderFromConfig(copilotConfig)
+}
+
+func vercelProvider() catwalk.Provider {
+	return loadProviderFromConfig(vercelConfig)
 }

@@ -22,6 +22,7 @@ type InferenceProvider string
 const (
 	InferenceProviderOpenAI      InferenceProvider = "openai"
 	InferenceProviderAnthropic   InferenceProvider = "anthropic"
+	InferenceProviderSynthetic   InferenceProvider = "synthetic"
 	InferenceProviderGemini      InferenceProvider = "gemini"
 	InferenceProviderAzure       InferenceProvider = "azure"
 	InferenceProviderBedrock     InferenceProvider = "bedrock"
@@ -36,6 +37,9 @@ const (
 	InferenceProviderHuggingFace InferenceProvider = "huggingface"
 	InferenceAIHubMix            InferenceProvider = "aihubmix"
 	InferenceProviderMiniMax     InferenceProvider = "minimax"
+	InferenceKimiCoding          InferenceProvider = "kimi-coding"
+	InferenceProviderCopilot     InferenceProvider = "copilot"
+	InferenceProviderVercel      InferenceProvider = "vercel"
 )
 
 // Provider represents an AI provider configuration.
@@ -82,6 +86,7 @@ type Model struct {
 func KnownProviders() []InferenceProvider {
 	return []InferenceProvider{
 		InferenceProviderOpenAI,
+		InferenceProviderSynthetic,
 		InferenceProviderAnthropic,
 		InferenceProviderGemini,
 		InferenceProviderAzure,
@@ -97,6 +102,9 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderHuggingFace,
 		InferenceAIHubMix,
 		InferenceProviderMiniMax,
+		InferenceKimiCoding,
+		InferenceProviderCopilot,
+		InferenceProviderVercel,
 	}
 }
 
