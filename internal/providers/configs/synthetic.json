@@ -110,19 +110,6 @@
       "options": {}
     },
     {
-      "id": "hf:zai-org/GLM-4.5",
-      "name": "GLM 4.5",
-      "cost_per_1m_in": 0.55,
-      "cost_per_1m_out": 2.1900000000000004,
-      "cost_per_1m_in_cached": 0.55,
-      "cost_per_1m_out_cached": 0.55,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
       "id": "hf:zai-org/GLM-4.7",
       "name": "GLM 4.7",
       "cost_per_1m_in": 0.55,
@@ -184,19 +171,6 @@
       "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "hf:meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-      "name": "Llama 4 Maverick 17B 128E Instruct FP8",
-      "cost_per_1m_in": 0.22,
-      "cost_per_1m_out": 0.88,
-      "cost_per_1m_in_cached": 0.22,
-      "cost_per_1m_out_cached": 0.22,
-      "context_window": 536576,
-      "default_max_tokens": 53657,
-      "can_reason": false,
-      "supports_attachments": true,
       "options": {}
     },
     {
