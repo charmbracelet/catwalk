@@ -109,6 +109,9 @@ func applyModelOverrides(model *Model) {
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2-Thinking"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
+	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2.5"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2"):
 		model.SupportedFeatures = []string{"tools"}
 
