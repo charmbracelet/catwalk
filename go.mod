@@ -1,4 +1,4 @@
-module github.com/charmbracelet/catwalk
+module charm.land/catwalk
 
 go 1.25.5
 
