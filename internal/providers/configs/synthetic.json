@@ -163,12 +163,12 @@
     {
       "id": "hf:moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
-      "cost_per_1m_in": 0.55,
-      "cost_per_1m_out": 2.1900000000000004,
-      "cost_per_1m_in_cached": 0.55,
-      "cost_per_1m_out_cached": 0.55,
+      "cost_per_1m_in": 1.2,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 1.2,
+      "cost_per_1m_out_cached": 1.2,
       "context_window": 262144,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 26214,
       "can_reason": true,
       "reasoning_levels": [
         "low",
