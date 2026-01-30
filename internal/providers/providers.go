@@ -60,6 +60,8 @@ var huggingFaceConfig []byte
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
+//go:embed configs/minimax.json
+var miniMaxConfig []byte
 //go:embed configs/kimi.json
 var kimiCodingConfig []byte
 
@@ -90,6 +92,7 @@ var providerRegistry = []ProviderFunc{
 	deepSeekProvider,
 	huggingFaceProvider,
 	aiHubMixProvider,
+	miniMaxProvider,
 	syntheticProvider,
 	copilotProvider,
 	vercelProvider,
@@ -181,6 +184,8 @@ func aiHubMixProvider() catwalk.Provider {
 	return loadProviderFromConfig(aiHubMixConfig)
 }
 
+func miniMaxProvider() catwalk.Provider {
+	return loadProviderFromConfig(miniMaxConfig)
 func kimiCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(kimiCodingConfig)
 }
