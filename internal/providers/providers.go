@@ -69,6 +69,9 @@ var copilotConfig []byte
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
+//go:embed configs/zen.json
+var zenConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -93,6 +96,7 @@ var providerRegistry = []ProviderFunc{
 	syntheticProvider,
 	copilotProvider,
 	vercelProvider,
+	zenProvider,
 }
 
 // GetAll returns all registered providers.
@@ -191,4 +195,8 @@ func copilotProvider() catwalk.Provider {
 
 func vercelProvider() catwalk.Provider {
 	return loadProviderFromConfig(vercelConfig)
+}
+
+func zenProvider() catwalk.Provider {
+	return loadProviderFromConfig(zenConfig)
 }
