@@ -120,6 +120,9 @@ func applyModelOverrides(model *Model) {
 
 	case strings.HasPrefix(model.ID, "hf:openai/gpt-oss"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
+
+	case strings.HasPrefix(model.ID, "hf:MiniMaxAI/MiniMax-M2.1"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
 	}
 }
 
