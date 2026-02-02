@@ -8,6 +8,7 @@ const (
 	TypeOpenAI       Type = "openai"
 	TypeOpenAICompat Type = "openai-compat"
 	TypeOpenRouter   Type = "openrouter"
+	TypeVercel       Type = "vercel"
 	TypeAnthropic    Type = "anthropic"
 	TypeGoogle       Type = "google"
 	TypeAzure        Type = "azure"
@@ -112,6 +113,7 @@ func KnownProviderTypes() []Type {
 		TypeOpenAI,
 		TypeOpenAICompat,
 		TypeOpenRouter,
+		TypeVercel,
 		TypeAnthropic,
 		TypeGoogle,
 		TypeAzure,
