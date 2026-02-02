@@ -3,7 +3,7 @@
   "id": "vercel",
   "api_key": "$VERCEL_API_KEY",
   "api_endpoint": "https://ai-gateway.vercel.sh/v1",
-  "type": "openai-compat",
+  "type": "vercel",
   "default_large_model_id": "anthropic/claude-sonnet-4",
   "default_small_model_id": "anthropic/claude-haiku-4.5",
   "models": [
@@ -70,9 +70,12 @@
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
@@ -89,9 +92,12 @@
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
@@ -108,9 +114,12 @@
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
@@ -127,9 +136,12 @@
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
@@ -146,9 +158,12 @@
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
@@ -165,9 +180,12 @@
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
@@ -184,9 +202,12 @@
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
@@ -1720,19 +1741,6 @@
       "cost_per_1m_in_cached": 0.19999999999999998,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 8000,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "alibaba/qwen3-max",
-      "name": "Qwen3 Max",
-      "cost_per_1m_in": 1.2,
-      "cost_per_1m_out": 6,
-      "cost_per_1m_in_cached": 0.24,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
       "default_max_tokens": 8000,
       "can_reason": false,
       "supports_attachments": false,
