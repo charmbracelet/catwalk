@@ -13,10 +13,10 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
+      "context_window": 200000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -26,10 +26,10 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 160000,
+      "context_window": 200000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -42,7 +42,7 @@
       "context_window": 216000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -52,10 +52,10 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
+      "context_window": 200000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -68,7 +68,33 @@
       "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "name": "Gemini 3 Flash (Preview)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-pro-preview",
+      "name": "Gemini 3 Pro (Preview)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -79,6 +105,19 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 16384,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "gpt-4-0125-preview",
+      "name": "GPT 4 Turbo",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false,
@@ -107,7 +146,20 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-5-codex",
+      "name": "GPT-5-Codex (Preview)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -120,7 +172,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -133,7 +185,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -146,7 +198,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -159,7 +211,20 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-5.1-codex-mini",
+      "name": "GPT-5.1-Codex-Mini",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -172,7 +237,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -185,7 +250,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {

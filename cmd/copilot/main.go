@@ -15,12 +15,28 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 type Response struct {
 	Object string  `json:"object"`
 	Data   []Model `json:"data"`
+}
+
+type APITokenResponse struct {
+	Token     string                    `json:"token"`
+	ExpiresAt int64                     `json:"expires_at"`
+	Endpoints APITokenResponseEndpoints `json:"endpoints"`
+}
+
+type APITokenResponseEndpoints struct {
+	API string `json:"api"`
+}
+
+type APIToken struct {
+	APIKey      string
+	ExpiresAt   time.Time
+	APIEndpoint string
 }
 
 type Model struct {
@@ -51,6 +67,7 @@ type Limits struct {
 type Supports struct {
 	ToolCalls         bool `json:"tool_calls,omitempty"`
 	ParallelToolCalls bool `json:"parallel_tool_calls,omitempty"`
+	Vision            bool `json:"vision,omitempty"`
 }
 
 type Policy struct {
@@ -96,6 +113,7 @@ func run() error {
 	if err != nil {
 		return fmt.Errorf("unable to marshal json: %w", err)
 	}
+	data = append(data, '\n')
 	if err := os.WriteFile("internal/providers/configs/copilot.json", data, 0o600); err != nil {
 		return fmt.Errorf("unable to write copilog.json: %w", err)
 	}
@@ -106,40 +124,85 @@ func fetchCopilotModels() ([]Model, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
 
-	req, err := http.NewRequestWithContext(
-		ctx,
-		"GET",
-		"https://api.githubcopilot.com/models",
-		nil,
-	)
-	if err != nil {
-		return nil, fmt.Errorf("unable to create request: %w", err)
+	oauthToken := copilotToken()
+	if oauthToken == "" {
+		return nil, fmt.Errorf("no OAuth token available")
 	}
-	req.Header.Set("Accept", "application/json")
-	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", copilotToken()))
+
+	// Step 1: Fetch API token from the token endpoint
+	tokenURL := "https://api.github.com/copilot_internal/v2/token" //nolint:gosec
+	tokenReq, err := http.NewRequestWithContext(ctx, "GET", tokenURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("unable to create token request: %w", err)
+	}
+	tokenReq.Header.Set("Accept", "application/json")
+	tokenReq.Header.Set("Authorization", fmt.Sprintf("token %s", oauthToken))
+
+	// Use approved integration ID to bypass client check
+	tokenReq.Header.Set("Copilot-Integration-Id", "vscode-chat")
+	tokenReq.Header.Set("User-Agent", "GitHubCopilotChat/0.1")
 
 	client := &http.Client{}
-	resp, err := client.Do(req)
+	tokenResp, err := client.Do(tokenReq)
 	if err != nil {
-		return nil, fmt.Errorf("unable to make http request: %w", err)
+		return nil, fmt.Errorf("unable to make token request: %w", err)
 	}
-	defer resp.Body.Close() //nolint:errcheck
+	defer tokenResp.Body.Close() //nolint:errcheck
 
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
-	}
-
-	bts, err := io.ReadAll(resp.Body)
+	tokenBody, err := io.ReadAll(tokenResp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("unable to read response body: %w", err)
+		return nil, fmt.Errorf("unable to read token response body: %w", err)
+	}
+
+	if tokenResp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("unexpected status code from token endpoint: %d", tokenResp.StatusCode)
+	}
+
+	var tokenData APITokenResponse
+	if err := json.Unmarshal(tokenBody, &tokenData); err != nil {
+		return nil, fmt.Errorf("unable to unmarshal token response: %w", err)
+	}
+
+	// Convert to APIToken
+	expiresAt := time.Unix(tokenData.ExpiresAt, 0)
+	apiToken := APIToken{
+		APIKey:      tokenData.Token,
+		ExpiresAt:   expiresAt,
+		APIEndpoint: tokenData.Endpoints.API,
+	}
+
+	// Step 2: Use the dynamic endpoint from the token to fetch models
+	modelsURL := apiToken.APIEndpoint + "/models"
+	modelsReq, err := http.NewRequestWithContext(ctx, "GET", modelsURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("unable to create models request: %w", err)
+	}
+	modelsReq.Header.Set("Accept", "application/json")
+	modelsReq.Header.Set("Authorization", fmt.Sprintf("Bearer %s", apiToken.APIKey))
+	modelsReq.Header.Set("Copilot-Integration-Id", "vscode-chat")
+	modelsReq.Header.Set("User-Agent", "GitHubCopilotChat/0.1")
+
+	modelsResp, err := client.Do(modelsReq)
+	if err != nil {
+		return nil, fmt.Errorf("unable to make models request: %w", err)
+	}
+	defer modelsResp.Body.Close() //nolint:errcheck
+
+	modelsBody, err := io.ReadAll(modelsResp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("unable to read models response body: %w", err)
+	}
+
+	if modelsResp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("unexpected status code from models endpoint: %d", modelsResp.StatusCode)
 	}
 
 	// for debugging
 	_ = os.MkdirAll("tmp", 0o700)
-	_ = os.WriteFile("tmp/copilot-response.json", bts, 0o600)
+	_ = os.WriteFile("tmp/copilot-response.json", modelsBody, 0o600)
 
 	var data Response
-	if err := json.Unmarshal(bts, &data); err != nil {
+	if err := json.Unmarshal(modelsBody, &data); err != nil {
 		return nil, fmt.Errorf("unable to unmarshal json: %w", err)
 	}
 	return data.Data, nil
@@ -159,6 +222,7 @@ func modelToCatwalk(m Model) catwalk.Model {
 		Name:             m.Name,
 		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
 		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
+		SupportsImages:   m.Capabilities.Supports.Vision,
 	}
 }
 

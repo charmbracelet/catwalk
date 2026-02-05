@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // Model represents a model from the Synthetic API.
@@ -104,9 +104,12 @@ func applyModelOverrides(model *Model) {
 	case strings.HasPrefix(model.ID, "hf:Qwen/Qwen3"):
 		model.SupportedFeatures = []string{"tools"}
 
-	// Has correct metadata already, but the Kimi-K2 matcher (next) would
+	// Has correct metadata already, but the following k2 matchers would
 	// override it to omit reasoning
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2-Thinking"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
+	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2.5"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2"):
@@ -116,7 +119,10 @@ func applyModelOverrides(model *Model) {
 		model.SupportedFeatures = []string{"tools"}
 
 	case strings.HasPrefix(model.ID, "hf:openai/gpt-oss"):
-		model.SupportedFeatures = []string{"tools"}
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
+	case strings.HasPrefix(model.ID, "hf:MiniMaxAI/MiniMax-M2.1"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
 	}
 }
 

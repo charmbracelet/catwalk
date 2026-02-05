@@ -8,6 +8,7 @@ const (
 	TypeOpenAI       Type = "openai"
 	TypeOpenAICompat Type = "openai-compat"
 	TypeOpenRouter   Type = "openrouter"
+	TypeVercel       Type = "vercel"
 	TypeAnthropic    Type = "anthropic"
 	TypeGoogle       Type = "google"
 	TypeAzure        Type = "azure"
@@ -38,6 +39,7 @@ const (
 	InferenceAIHubMix            InferenceProvider = "aihubmix"
 	InferenceKimiCoding          InferenceProvider = "kimi-coding"
 	InferenceProviderCopilot     InferenceProvider = "copilot"
+	InferenceProviderVercel      InferenceProvider = "vercel"
 )
 
 // Provider represents an AI provider configuration.
@@ -101,6 +103,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceAIHubMix,
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
+		InferenceProviderVercel,
 	}
 }
 
@@ -110,6 +113,7 @@ func KnownProviderTypes() []Type {
 		TypeOpenAI,
 		TypeOpenAICompat,
 		TypeOpenRouter,
+		TypeVercel,
 		TypeAnthropic,
 		TypeGoogle,
 		TypeAzure,
