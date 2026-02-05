@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // Feature: amazon-nova-bedrock-support, Property 5: Catwalk Model Configuration Validity
