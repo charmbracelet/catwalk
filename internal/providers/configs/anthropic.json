@@ -27,7 +27,7 @@
       "cost_per_1m_in_cached": 6.25,
       "cost_per_1m_out_cached": 0.50,
       "context_window": 200000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 126000,
       "can_reason": true,
       "supports_attachments": true
     },
