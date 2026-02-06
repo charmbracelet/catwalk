@@ -8,6 +8,7 @@ const (
 	TypeOpenAI       Type = "openai"
 	TypeOpenAICompat Type = "openai-compat"
 	TypeOpenRouter   Type = "openrouter"
+	TypeVercel       Type = "vercel"
 	TypeAnthropic    Type = "anthropic"
 	TypeGoogle       Type = "google"
 	TypeAzure        Type = "azure"
@@ -22,6 +23,7 @@ type InferenceProvider string
 const (
 	InferenceProviderOpenAI      InferenceProvider = "openai"
 	InferenceProviderAnthropic   InferenceProvider = "anthropic"
+	InferenceProviderSynthetic   InferenceProvider = "synthetic"
 	InferenceProviderGemini      InferenceProvider = "gemini"
 	InferenceProviderAzure       InferenceProvider = "azure"
 	InferenceProviderBedrock     InferenceProvider = "bedrock"
@@ -35,6 +37,9 @@ const (
 	InferenceProviderChutes      InferenceProvider = "chutes"
 	InferenceProviderHuggingFace InferenceProvider = "huggingface"
 	InferenceAIHubMix            InferenceProvider = "aihubmix"
+	InferenceKimiCoding          InferenceProvider = "kimi-coding"
+	InferenceProviderCopilot     InferenceProvider = "copilot"
+	InferenceProviderVercel      InferenceProvider = "vercel"
 	InferenceProviderMiniMax     InferenceProvider = "minimax"
 )
 
@@ -82,6 +87,7 @@ type Model struct {
 func KnownProviders() []InferenceProvider {
 	return []InferenceProvider{
 		InferenceProviderOpenAI,
+		InferenceProviderSynthetic,
 		InferenceProviderAnthropic,
 		InferenceProviderGemini,
 		InferenceProviderAzure,
@@ -96,6 +102,9 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderChutes,
 		InferenceProviderHuggingFace,
 		InferenceAIHubMix,
+		InferenceKimiCoding,
+		InferenceProviderCopilot,
+		InferenceProviderVercel,
 		InferenceProviderMiniMax,
 	}
 }
@@ -106,6 +115,7 @@ func KnownProviderTypes() []Type {
 		TypeOpenAI,
 		TypeOpenAICompat,
 		TypeOpenRouter,
+		TypeVercel,
 		TypeAnthropic,
 		TypeGoogle,
 		TypeAzure,

@@ -8,6 +8,31 @@
   "default_small_model_id": "gemini-2.5-flash",
   "models": [
     {
+      "id": "gemini-3-pro-preview",
+      "name": "Gemini 3 Pro (Preview)",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "name": "Gemini 3 Flash (Preview)",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.05,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "gemini-2.5-pro",
       "name": "Gemini 2.5 Pro",
       "cost_per_1m_in": 1.25,
@@ -28,6 +53,18 @@
       "cost_per_1m_out_cached": 0.075,
       "context_window": 1048576,
       "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-5@20251101",
+      "name": "Claude Opus 4.5",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 25,
+      "cost_per_1m_in_cached": 6.25,
+      "cost_per_1m_out_cached": 0.50,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
     },

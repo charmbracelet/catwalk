@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // Model represents the complete model configuration.

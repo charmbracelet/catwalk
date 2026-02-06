@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 //go:embed configs/openai.json
@@ -14,6 +14,9 @@ var openAIConfig []byte
 
 //go:embed configs/anthropic.json
 var anthropicConfig []byte
+
+//go:embed configs/synthetic.json
+var syntheticConfig []byte
 
 //go:embed configs/gemini.json
 var geminiConfig []byte
@@ -57,6 +60,15 @@ var huggingFaceConfig []byte
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
+//go:embed configs/kimi.json
+var kimiCodingConfig []byte
+
+//go:embed configs/copilot.json
+var copilotConfig []byte
+
+//go:embed configs/vercel.json
+var vercelConfig []byte
+
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
 
@@ -72,6 +84,7 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	zAIProvider,
+	kimiCodingProvider,
 	groqProvider,
 	openRouterProvider,
 	cerebrasProvider,
@@ -80,6 +93,9 @@ var providerRegistry = []ProviderFunc{
 	deepSeekProvider,
 	huggingFaceProvider,
 	aiHubMixProvider,
+	syntheticProvider,
+	copilotProvider,
+	vercelProvider,
 	miniMaxProvider,
 }
 
@@ -103,6 +119,10 @@ func loadProviderFromConfig(configData []byte) catwalk.Provider {
 
 func openAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(openAIConfig)
+}
+
+func syntheticProvider() catwalk.Provider {
+	return loadProviderFromConfig(syntheticConfig)
 }
 
 func anthropicProvider() catwalk.Provider {
@@ -163,6 +183,18 @@ func huggingFaceProvider() catwalk.Provider {
 
 func aiHubMixProvider() catwalk.Provider {
 	return loadProviderFromConfig(aiHubMixConfig)
+}
+
+func kimiCodingProvider() catwalk.Provider {
+	return loadProviderFromConfig(kimiCodingConfig)
+}
+
+func copilotProvider() catwalk.Provider {
+	return loadProviderFromConfig(copilotConfig)
+}
+
+func vercelProvider() catwalk.Provider {
+	return loadProviderFromConfig(vercelConfig)
 }
 
 func miniMaxProvider() catwalk.Provider {
