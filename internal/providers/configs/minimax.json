@@ -1,0 +1,31 @@
+{
+  "name": "MiniMax",
+  "id": "minimax",
+  "type": "anthropic",
+  "api_key": "$MINIMAX_API_KEY",
+  "api_endpoint": "https://api.minimax.io/anthropic",
+  "default_large_model_id": "MiniMax-M2.1",
+  "default_small_model_id": "MiniMax-M2.1",
+  "models": [
+    {
+      "id": "MiniMax-M2.1",
+      "name": "MiniMax-M2.1",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_out_cached": 0.375,
+      "context_window": 200000,
+      "default_max_tokens": 128000
+    },
+    {
+      "id": "MiniMax-M2",
+      "name": "MiniMax-M2",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_out_cached": 0.375,
+      "context_window": 200000,
+      "default_max_tokens": 20000
+    }
+  ]
+}
