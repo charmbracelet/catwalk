@@ -72,11 +72,15 @@ var vercelConfig []byte
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
 
+//go:embed configs/openai-codex.json
+var openAICodexConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
 var providerRegistry = []ProviderFunc{
 	anthropicProvider,
+	openAICodexProvider,
 	openAIProvider,
 	geminiProvider,
 	azureProvider,
@@ -120,6 +124,8 @@ func loadProviderFromConfig(configData []byte) catwalk.Provider {
 func openAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(openAIConfig)
 }
+
+func openAICodexProvider() catwalk.Provider { return loadProviderFromConfig(openAICodexConfig) }
 
 func syntheticProvider() catwalk.Provider {
 	return loadProviderFromConfig(syntheticConfig)

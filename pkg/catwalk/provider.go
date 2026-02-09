@@ -41,6 +41,7 @@ const (
 	InferenceProviderCopilot     InferenceProvider = "copilot"
 	InferenceProviderVercel      InferenceProvider = "vercel"
 	InferenceProviderMiniMax     InferenceProvider = "minimax"
+	InferenceProviderOpenAICodex InferenceProvider = "openai-codex"
 )
 
 // Provider represents an AI provider configuration.
@@ -106,6 +107,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderCopilot,
 		InferenceProviderVercel,
 		InferenceProviderMiniMax,
+		InferenceProviderOpenAICodex,
 	}
 }
 
