@@ -3,7 +3,7 @@
   "id": "copilot",
   "api_endpoint": "https://api.githubcopilot.com",
   "type": "openai-compat",
-  "default_large_model_id": "claude-sonnet-4.5",
+  "default_large_model_id": "claude-opus-4.6",
   "default_small_model_id": "claude-haiku-4.5",
   "models": [
     {
@@ -14,7 +14,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 16000,
+      "default_max_tokens": 32000,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -27,7 +27,33 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 16000,
+      "default_max_tokens": 32000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-opus-4.6",
+      "name": "Claude Opus 4.6",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-opus-4.6-fast",
+      "name": "Claude Opus 4.6 (fast mode)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -53,7 +79,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 16000,
+      "default_max_tokens": 32000,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
