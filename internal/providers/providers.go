@@ -63,6 +63,8 @@ var aiHubMixConfig []byte
 //go:embed configs/kimi.json
 var kimiCodingConfig []byte
 
+//go:embed configs/vultr.json
+var vultrConfig []byte
 //go:embed configs/copilot.json
 var copilotConfig []byte
 
@@ -93,6 +95,7 @@ var providerRegistry = []ProviderFunc{
 	deepSeekProvider,
 	huggingFaceProvider,
 	aiHubMixProvider,
+	vultrProvider,
 	syntheticProvider,
 	copilotProvider,
 	vercelProvider,
@@ -189,6 +192,8 @@ func kimiCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(kimiCodingConfig)
 }
 
+func vultrProvider() catwalk.Provider {
+	return loadProviderFromConfig(vultrConfig)
 func copilotProvider() catwalk.Provider {
 	return loadProviderFromConfig(copilotConfig)
 }
