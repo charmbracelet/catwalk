@@ -155,7 +155,7 @@ func main() {
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "hf:zai-org/GLM-4.7",
-		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.1-Terminus",
+		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.2",
 		Models:              []catwalk.Model{},
 	}
 
