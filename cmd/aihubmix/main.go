@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/internal/names"
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/internal/names"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // APIModel represents a model from the AIHubMix API.
