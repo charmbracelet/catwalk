@@ -170,6 +170,28 @@
       "options": {}
     },
     {
+      "id": "anthropic/claude-opus-4.6",
+      "name": "Claude Opus 4.6",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 25,
+      "cost_per_1m_in_cached": 0.5,
+      "cost_per_1m_out_cached": 6.25,
+      "context_window": 1000000,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "anthropic/claude-sonnet-4",
       "name": "Claude Sonnet 4",
       "cost_per_1m_in": 3,
@@ -266,25 +288,6 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "deepseek/deepseek-v3.2-exp",
-      "name": "DeepSeek V3.2 Exp",
-      "cost_per_1m_in": 0.27,
-      "cost_per_1m_out": 0.39999999999999997,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 163840,
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
@@ -523,6 +526,25 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "zai/glm-5",
+      "name": "GLM-5",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 3.1999999999999997,
+      "cost_per_1m_in_cached": 0.19999999999999998,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202800,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
       "options": {}
     },
     {
@@ -1274,9 +1296,9 @@
     {
       "id": "moonshotai/kimi-k2.5",
       "name": "Kimi K2.5",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0.09999999999999999,
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 2.8,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 8000,
@@ -1448,11 +1470,11 @@
     {
       "id": "minimax/minimax-m2",
       "name": "MiniMax M2",
-      "cost_per_1m_in": 0.27,
-      "cost_per_1m_out": 1.15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262114,
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_out_cached": 0.375,
+      "context_window": 205000,
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
@@ -1467,11 +1489,11 @@
     {
       "id": "minimax/minimax-m2.1",
       "name": "MiniMax M2.1",
-      "cost_per_1m_in": 0.28,
+      "cost_per_1m_in": 0.3,
       "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0.14,
+      "cost_per_1m_in_cached": 0.15,
       "cost_per_1m_out_cached": 0,
-      "context_window": 196608,
+      "context_window": 204800,
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
@@ -1632,6 +1654,25 @@
       "options": {}
     },
     {
+      "id": "alibaba/qwen-3-32b",
+      "name": "Qwen 3 32B",
+      "cost_per_1m_in": 0.09999999999999999,
+      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 40960,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "alibaba/qwen3-coder-30b-a3b",
       "name": "Qwen 3 Coder 30B A3B Instruct",
       "cost_per_1m_in": 0.07,
@@ -1670,25 +1711,6 @@
       "options": {}
     },
     {
-      "id": "alibaba/qwen-3-32b",
-      "name": "Qwen 3.32B",
-      "cost_per_1m_in": 0.09999999999999999,
-      "cost_per_1m_out": 0.3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 40960,
-      "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
       "id": "alibaba/qwen3-235b-a22b-thinking",
       "name": "Qwen3 235B A22B Thinking 2507",
       "cost_per_1m_in": 0.3,
@@ -1708,28 +1730,34 @@
       "options": {}
     },
     {
-      "id": "alibaba/qwen-3-235b",
-      "name": "Qwen3 235B A22b Instruct 2507",
-      "cost_per_1m_in": 0.071,
-      "cost_per_1m_out": 0.463,
+      "id": "alibaba/qwen3-coder",
+      "name": "Qwen3 Coder 480B A35B Instruct",
+      "cost_per_1m_in": 0.39999999999999997,
+      "cost_per_1m_out": 1.5999999999999999,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 40960,
+      "context_window": 262144,
       "default_max_tokens": 8000,
       "can_reason": false,
       "supports_attachments": false,
       "options": {}
     },
     {
-      "id": "alibaba/qwen3-coder",
-      "name": "Qwen3 Coder 480B A35B Instruct",
-      "cost_per_1m_in": 0.38,
-      "cost_per_1m_out": 1.53,
+      "id": "alibaba/qwen3-coder-next",
+      "name": "Qwen3 Coder Next",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 1.2,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
+      "context_window": 256000,
       "default_max_tokens": 8000,
-      "can_reason": false,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1760,6 +1788,25 @@
       "options": {}
     },
     {
+      "id": "alibaba/qwen3-vl-thinking",
+      "name": "Qwen3 VL 235B A22B Thinking",
+      "cost_per_1m_in": 0.22,
+      "cost_per_1m_out": 0.88,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "alibaba/qwen-3-14b",
       "name": "Qwen3-14B",
       "cost_per_1m_in": 0.06,
@@ -1775,6 +1822,19 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "alibaba/qwen-3-235b",
+      "name": "Qwen3-235B-A22B",
+      "cost_per_1m_in": 0.071,
+      "cost_per_1m_out": 0.463,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 40960,
+      "default_max_tokens": 8000,
+      "can_reason": false,
       "supports_attachments": false,
       "options": {}
     },
