@@ -72,6 +72,9 @@ var vercelConfig []byte
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
 
+//go:embed configs/ionet.json
+var ioNetConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -97,6 +100,7 @@ var providerRegistry = []ProviderFunc{
 	copilotProvider,
 	vercelProvider,
 	miniMaxProvider,
+	ioNetProvider,
 }
 
 // GetAll returns all registered providers.
@@ -199,4 +203,8 @@ func vercelProvider() catwalk.Provider {
 
 func miniMaxProvider() catwalk.Provider {
 	return loadProviderFromConfig(miniMaxConfig)
+}
+
+func ioNetProvider() catwalk.Provider {
+	return loadProviderFromConfig(ioNetConfig)
 }

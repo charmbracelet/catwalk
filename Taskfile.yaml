@@ -72,6 +72,11 @@ tasks:
     cmds:
       - go run cmd/huggingface/main.go
 
+  gen:ionet:
+    desc: Generate io.net provider configurations
+    cmds:
+      - go run cmd/ionet/main.go
+
   gen:openrouter:
     desc: Generate openrouter provider configurations
     cmds:
