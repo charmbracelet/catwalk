@@ -32,6 +32,18 @@
       "supports_attachments": true
     },
     {
+      "id": "anthropic.claude-opus-4-6-v1",
+      "name": "AWS Claude Opus 4.6",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 25,
+      "cost_per_1m_in_cached": 6.25,
+      "cost_per_1m_out_cached": 0.5,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "anthropic.claude-opus-4-5-20251101-v1:0",
       "name": "AWS Claude Opus 4.5",
       "cost_per_1m_in": 5,

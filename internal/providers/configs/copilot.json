@@ -3,7 +3,7 @@
   "id": "copilot",
   "api_endpoint": "https://api.githubcopilot.com",
   "type": "openai-compat",
-  "default_large_model_id": "claude-sonnet-4.5",
+  "default_large_model_id": "claude-opus-4.6",
   "default_small_model_id": "claude-haiku-4.5",
   "models": [
     {
@@ -13,8 +13,8 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
-      "default_max_tokens": 16000,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -26,8 +26,34 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 160000,
-      "default_max_tokens": 16000,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-opus-4.6",
+      "name": "Claude Opus 4.6",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-opus-4.6-fast",
+      "name": "Claude Opus 4.6 (fast mode)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -52,8 +78,8 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
-      "default_max_tokens": 16000,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -61,6 +87,32 @@
     {
       "id": "gemini-2.5-pro",
       "name": "Gemini 2.5 Pro",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "name": "Gemini 3 Flash (Preview)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-pro-preview",
+      "name": "Gemini 3 Pro (Preview)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -85,6 +137,19 @@
       "options": {}
     },
     {
+      "id": "gpt-4-0125-preview",
+      "name": "GPT 4 Turbo",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "gpt-4-0613",
       "name": "GPT 4",
       "cost_per_1m_in": 0,
@@ -100,6 +165,19 @@
     {
       "id": "gpt-5",
       "name": "GPT-5",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-5-codex",
+      "name": "GPT-5-Codex (Preview)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -152,6 +230,19 @@
     {
       "id": "gpt-5.1-codex-max",
       "name": "GPT-5.1-Codex-Max",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-5.1-codex-mini",
+      "name": "GPT-5.1-Codex-Mini",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,

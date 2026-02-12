@@ -8,6 +8,17 @@
   "default_small_model_id": "glm-4.7-flash",
   "models": [
     {
+      "id": "glm-5",
+      "name": "GLM-5",
+      "cost_per_1m_in": 1.0,
+      "cost_per_1m_out": 3.2,
+      "cost_per_1m_in_cached": 0.2,
+      "context_window": 131072,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
       "id": "glm-4.7",
       "name": "GLM-4.7",
       "cost_per_1m_in": 0.42,

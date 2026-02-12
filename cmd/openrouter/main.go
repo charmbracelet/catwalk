@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // Model represents the complete model configuration.
@@ -136,17 +136,28 @@ func fetchOpenRouterModels() (*ModelsResponse, error) {
 		nil,
 	)
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return nil, err //nolint:wrapcheck
 	}
 	defer resp.Body.Close() //nolint:errcheck
-	if resp.StatusCode != 200 {
-		body, _ := io.ReadAll(resp.Body)
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("unable to read models response body: %w", err)
+	}
+
+	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("status %d: %s", resp.StatusCode, body)
 	}
+
+	// for debugging
+	_ = os.MkdirAll("tmp", 0o700)
+	_ = os.WriteFile("tmp/openrouter-response.json", body, 0o600)
+
 	var mr ModelsResponse
-	if err := json.NewDecoder(resp.Body).Decode(&mr); err != nil {
+	if err := json.Unmarshal(body, &mr); err != nil {
 		return nil, err //nolint:wrapcheck
 	}
 	return &mr, nil

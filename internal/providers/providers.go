@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 //go:embed configs/openai.json
@@ -69,6 +69,9 @@ var copilotConfig []byte
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
+//go:embed configs/minimax.json
+var miniMaxConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -93,6 +96,7 @@ var providerRegistry = []ProviderFunc{
 	syntheticProvider,
 	copilotProvider,
 	vercelProvider,
+	miniMaxProvider,
 }
 
 // GetAll returns all registered providers.
@@ -191,4 +195,8 @@ func copilotProvider() catwalk.Provider {
 
 func vercelProvider() catwalk.Provider {
 	return loadProviderFromConfig(vercelConfig)
+}
+
+func miniMaxProvider() catwalk.Provider {
+	return loadProviderFromConfig(miniMaxConfig)
 }

@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // Model represents a model from the Vercel API.
@@ -85,7 +85,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderVercel,
 		APIKey:              "$VERCEL_API_KEY",
 		APIEndpoint:         "https://ai-gateway.vercel.sh/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeVercel,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4",
 		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
 		Models:              []catwalk.Model{},
@@ -146,7 +146,12 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoning string
 		if canReason {
+			// Base reasoning levels supported by most providers
 			reasoningLevels = []string{"low", "medium", "high"}
+			// Anthropic models support extended Vercel reasoning levels
+			if strings.HasPrefix(model.ID, "anthropic/") {
+				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
+			}
 			defaultReasoning = "medium"
 		}
 
