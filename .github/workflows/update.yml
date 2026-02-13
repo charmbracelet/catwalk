@@ -19,6 +19,7 @@ jobs:
           go-version-file: go.mod
       - name: Generate provider configurations
         run: |
+          go run ./cmd/ionet/main.go
           go run ./cmd/openrouter/main.go
           go run ./cmd/synthetic/main.go
           go run ./cmd/vercel/main.go
