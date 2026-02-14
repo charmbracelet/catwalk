@@ -8,6 +8,20 @@
   "default_small_model_id": "gpt-4o",
   "models": [
     {
+      "id": "gpt-5.3-codex",
+      "name": "GPT-5.3 Codex",
+      "cost_per_1m_in": 1.75,
+      "cost_per_1m_out": 14,
+      "cost_per_1m_in_cached": 0.175,
+      "cost_per_1m_out_cached": 0.175,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["minimal", "low", "medium", "high"],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "gpt-5.2",
       "name": "GPT-5.2",
       "cost_per_1m_in": 1.75,
