@@ -22,6 +22,7 @@ jobs:
           go run ./cmd/ionet/main.go
           go run ./cmd/openrouter/main.go
           go run ./cmd/synthetic/main.go
+          go run ./cmd/aihubmix/main.go
           go run ./cmd/vercel/main.go
           # we need to add this back when we know that the providers/models all work
           # go run ./cmd/huggingface/main.go
