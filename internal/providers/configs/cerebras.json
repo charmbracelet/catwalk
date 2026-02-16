@@ -5,21 +5,11 @@
     "api_key": "$CEREBRAS_API_KEY",
     "api_endpoint": "https://api.cerebras.ai/v1",
     "default_large_model_id": "gpt-oss-120b",
-    "default_small_model_id": "qwen-3-32b",
+    "default_small_model_id": "qwen-3-235b-a22b-instruct-2507",
     "default_headers": {
         "X-Cerebras-3rd-Party-Integration": "crush"
     },
     "models": [
-        {
-            "id": "llama-3.3-70b",
-            "name": "Llama 3.3 70B",
-            "cost_per_1m_in": 0.85,
-            "cost_per_1m_out": 1.2,
-            "context_window": 131072,
-            "default_max_tokens": 25000,
-            "can_reason": false,
-            "supports_attachments": false
-        },
         {
             "id": "gpt-oss-120b",
             "name": "OpenAI GPT OSS",
@@ -34,16 +24,6 @@
                 "high"
             ],
             "default_reasoning_efforts": "medium",
-            "supports_attachments": false
-        },
-        {
-            "id": "qwen-3-32b",
-            "name": "Qwen 3 32B",
-            "cost_per_1m_in": 0.4,
-            "cost_per_1m_out": 0.8,
-            "context_window": 131072,
-            "default_max_tokens": 25000,
-            "can_reason": false,
             "supports_attachments": false
         },
         {
