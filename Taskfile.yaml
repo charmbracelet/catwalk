@@ -61,6 +61,7 @@ tasks:
       - task: gen:huggingface
       - task: gen:openrouter
       - task: gen:synthetic
+      - task: gen:venice
 
   gen:copilot:
     desc: Generate copilot provider configurations
@@ -86,3 +87,8 @@ tasks:
     desc: Generate synthetic provider configurations
     cmds:
       - go run cmd/synthetic/main.go
+      
+  gen:venice:
+    desc: Generate venice provider configurations
+    cmds:
+      - go run cmd/venice/main.go
