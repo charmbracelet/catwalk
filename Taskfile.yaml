@@ -86,3 +86,8 @@ tasks:
     desc: Generate synthetic provider configurations
     cmds:
       - go run cmd/synthetic/main.go
+
+  gen:vercel:
+    desc: Generate vercel provider configurations
+    cmds:
+      - go run cmd/vercel/main.go
