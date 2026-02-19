@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
