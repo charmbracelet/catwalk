@@ -59,8 +59,10 @@ tasks:
     cmds:
       - task: gen:copilot
       - task: gen:huggingface
+      - task: gen:ionet
       - task: gen:openrouter
       - task: gen:synthetic
+      - task: gen:vercel
 
   gen:copilot:
     desc: Generate copilot provider configurations
