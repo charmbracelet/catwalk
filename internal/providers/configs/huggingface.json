@@ -5,7 +5,7 @@
   "api_endpoint": "https://router.huggingface.co/v1",
   "type": "openai-compat",
   "default_large_model_id": "moonshotai/Kimi-K2-Instruct-0905:groq",
-  "default_small_model_id": "openai/gpt-oss-20b",
+  "default_small_model_id": "openai/gpt-oss-20b:groq",
   "models": [
     {
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507:fireworks-ai",
