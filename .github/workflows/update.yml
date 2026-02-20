@@ -13,18 +13,18 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
       - name: Generate provider configurations
         run: |
+          go run ./cmd/huggingface/main.go
+          go run ./cmd/ionet/main.go
           go run ./cmd/openrouter/main.go
           go run ./cmd/synthetic/main.go
           go run ./cmd/aihubmix/main.go
           go run ./cmd/vercel/main.go
-          # we need to add this back when we know that the providers/models all work
-          # go run ./cmd/huggingface/main.go
       - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v5
         with:
           commit_message: "chore: auto-update generated files"

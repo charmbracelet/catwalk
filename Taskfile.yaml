@@ -59,8 +59,10 @@ tasks:
     cmds:
       - task: gen:copilot
       - task: gen:huggingface
+      - task: gen:ionet
       - task: gen:openrouter
       - task: gen:synthetic
+      - task: gen:vercel
 
   gen:copilot:
     desc: Generate copilot provider configurations
@@ -72,6 +74,11 @@ tasks:
     cmds:
       - go run cmd/huggingface/main.go
 
+  gen:ionet:
+    desc: Generate io.net provider configurations
+    cmds:
+      - go run cmd/ionet/main.go
+
   gen:openrouter:
     desc: Generate openrouter provider configurations
     cmds:
@@ -81,3 +88,8 @@ tasks:
     desc: Generate synthetic provider configurations
     cmds:
       - go run cmd/synthetic/main.go
+
+  gen:vercel:
+    desc: Generate vercel provider configurations
+    cmds:
+      - go run cmd/vercel/main.go

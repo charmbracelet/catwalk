@@ -41,6 +41,7 @@ const (
 	InferenceProviderCopilot     InferenceProvider = "copilot"
 	InferenceProviderVercel      InferenceProvider = "vercel"
 	InferenceProviderMiniMax     InferenceProvider = "minimax"
+	InferenceProviderIoNet       InferenceProvider = "ionet"
 )
 
 // Provider represents an AI provider configuration.
