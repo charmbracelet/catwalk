@@ -14,13 +14,13 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/internal/names"
 	"charm.land/catwalk/pkg/catwalk"
 )
 
 // APIModel represents a model from the AIHubMix API.
 type APIModel struct {
 	ModelID         string  `json:"model_id"`
+	ModelName       string  `json:"model_name"`
 	Desc            string  `json:"desc"`
 	Pricing         Pricing `json:"pricing"`
 	Types           string  `json:"types"`
@@ -151,7 +151,7 @@ func main() {
 
 		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
 			ID:                     model.ModelID,
-			Name:                   names.GetDisplayName(model.ModelID),
+			Name:                   model.ModelName,
 			CostPer1MIn:            parseFloat(model.Pricing.Input),
 			CostPer1MOut:           parseFloat(model.Pricing.Output),
 			CostPer1MInCached:      parseFloat(model.Pricing.CacheWrite),
