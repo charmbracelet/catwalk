@@ -19,6 +19,7 @@ jobs:
           go-version-file: go.mod
       - name: Generate provider configurations
         run: |
+          go run ./cmd/aihubmix/main.go
           go run ./cmd/huggingface/main.go
           go run ./cmd/ionet/main.go
           go run ./cmd/openrouter/main.go

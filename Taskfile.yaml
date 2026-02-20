@@ -57,12 +57,18 @@ tasks:
     desc: Generate all provider configurations
     aliases: [generate, gen]
     cmds:
+      - task: gen:aihubmix
       - task: gen:copilot
       - task: gen:huggingface
       - task: gen:ionet
       - task: gen:openrouter
       - task: gen:synthetic
       - task: gen:vercel
+
+  gen:aihubmix:
+    desc: Generate aihubmix provider configurations
+    cmds:
+      - go run cmd/aihubmix/main.go
 
   gen:copilot:
     desc: Generate copilot provider configurations
