@@ -2196,6 +2196,19 @@
       "options": {}
     },
     {
+      "id": "qwen3-coder-next",
+      "name": "Qwen3 Coder Next",
+      "cost_per_1m_in": 0.137,
+      "cost_per_1m_out": 0.548,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.137,
+      "context_window": 2000000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "qwen3-coder-plus",
       "name": "Qwen3 Coder Plus",
       "cost_per_1m_in": 0.54,
