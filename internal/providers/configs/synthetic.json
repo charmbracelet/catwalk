@@ -225,6 +225,19 @@
       "options": {}
     },
     {
+      "id": "hf:Qwen/Qwen3.5-397B-A17B",
+      "name": "Qwen3.5 397B A17B",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 3,
+      "cost_per_1m_in_cached": 0.6,
+      "cost_per_1m_out_cached": 0.6,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "hf:openai/gpt-oss-120b",
       "name": "gpt oss 120b",
       "cost_per_1m_in": 0.09999999999999999,
