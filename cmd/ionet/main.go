@@ -21,6 +21,7 @@ import (
 // Model represents a model from the io.net API.
 type Model struct {
 	ID                   string  `json:"id"`
+	Name                 string  `json:"name"`
 	ContextWindow        int     `json:"context_window"`
 	SupportsImagesInput  bool    `json:"supports_images_input"`
 	InputTokenPrice      float64 `json:"input_token_price"`
@@ -85,7 +86,7 @@ func main() {
 
 		m := catwalk.Model{
 			ID:                     model.ID,
-			Name:                   getModelName(model.ID),
+			Name:                   model.Name,
 			CostPer1MIn:            costPer1MIn,
 			CostPer1MOut:           costPer1MOut,
 			CostPer1MInCached:      costPer1MInCached,
@@ -150,18 +151,6 @@ func fetchModels(apiEndpoint string) (*Response, error) {
 		return nil, fmt.Errorf("unable to unmarshal json: %w", err)
 	}
 	return &mr, nil
-}
-
-// getModelName extracts a clean display name from the model ID.
-func getModelName(modelID string) string {
-	// Strip everything before the last /
-	name := modelID
-	if idx := strings.LastIndex(modelID, "/"); idx != -1 {
-		name = modelID[idx+1:]
-	}
-	// Replace hyphens with spaces
-	name = strings.ReplaceAll(name, "-", " ")
-	return name
 }
 
 // isReasoningModel checks if the model ID indicates reasoning capability.
