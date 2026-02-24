@@ -20,48 +20,18 @@ import (
 
 // Model represents a model from the io.net API.
 type Model struct {
-	ID                   string       `json:"id"`
-	Object               string       `json:"object"`
-	Created              int64        `json:"created"`
-	OwnedBy              string       `json:"owned_by"`
-	Root                 *string      `json:"root"`
-	Parent               *string      `json:"parent"`
-	MaxModelLen          *int         `json:"max_model_len"`
-	Permission           []Permission `json:"permission"`
-	MaxTokens            *int         `json:"max_tokens"`
-	ContextWindow        int          `json:"context_window"`
-	SupportsImagesInput  bool         `json:"supports_images_input"`
-	SupportsPromptCache  bool         `json:"supports_prompt_cache"`
-	InputTokenPrice      float64      `json:"input_token_price"`
-	OutputTokenPrice     float64      `json:"output_token_price"`
-	CacheWriteTokenPrice float64      `json:"cache_write_token_price"`
-	CacheReadTokenPrice  float64      `json:"cache_read_token_price"`
-	Precision            *string      `json:"precision"`
-	AvgLatencyMsPerDay   float64      `json:"avg_latency_ms_per_day"`
-	AvgThroughputPerDay  float64      `json:"avg_throughput_per_day"`
-	SupportsAttestation  bool         `json:"supports_attestation"`
-}
-
-// Permission represents a model permission from the io.net API.
-type Permission struct {
-	ID                 string  `json:"id"`
-	Object             string  `json:"object"`
-	Created            int64   `json:"created"`
-	AllowCreateEngine  bool    `json:"allow_create_engine"`
-	AllowSampling      bool    `json:"allow_sampling"`
-	AllowLogprobs      bool    `json:"allow_logprobs"`
-	AllowSearchIndices bool    `json:"allow_search_indices"`
-	AllowView          bool    `json:"allow_view"`
-	AllowFineTuning    bool    `json:"allow_fine_tuning"`
-	Organization       string  `json:"organization"`
-	Group              *string `json:"group"`
-	IsBlocking         bool    `json:"is_blocking"`
+	ID                   string  `json:"id"`
+	ContextWindow        int     `json:"context_window"`
+	SupportsImagesInput  bool    `json:"supports_images_input"`
+	InputTokenPrice      float64 `json:"input_token_price"`
+	OutputTokenPrice     float64 `json:"output_token_price"`
+	CacheWriteTokenPrice float64 `json:"cache_write_token_price"`
+	CacheReadTokenPrice  float64 `json:"cache_read_token_price"`
 }
 
 // Response is the response structure for the io.net models API.
 type Response struct {
-	Object string  `json:"object"`
-	Data   []Model `json:"data"`
+	Data []Model `json:"data"`
 }
 
 // This is used to generate the ionet.json config file.
