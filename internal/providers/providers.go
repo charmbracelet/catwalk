@@ -72,6 +72,9 @@ var vercelConfig []byte
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
 
+//go:embed configs/minimax-cn.json
+var miniMaxCNConfig []byte
+
 //go:embed configs/ionet.json
 var ioNetConfig []byte
 
@@ -100,6 +103,7 @@ var providerRegistry = []ProviderFunc{
 	copilotProvider,
 	vercelProvider,
 	miniMaxProvider,
+	miniMaxCNProvider,
 	ioNetProvider,
 }
 
@@ -203,6 +207,10 @@ func vercelProvider() catwalk.Provider {
 
 func miniMaxProvider() catwalk.Provider {
 	return loadProviderFromConfig(miniMaxConfig)
+}
+
+func miniMaxCNProvider() catwalk.Provider {
+	return loadProviderFromConfig(miniMaxCNConfig)
 }
 
 func ioNetProvider() catwalk.Provider {
