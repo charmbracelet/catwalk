@@ -41,7 +41,7 @@ const (
 	InferenceProviderCopilot     InferenceProvider = "copilot"
 	InferenceProviderVercel      InferenceProvider = "vercel"
 	InferenceProviderMiniMax     InferenceProvider = "minimax"
-	InferenceProviderMiniMaxCN   InferenceProvider = "minimax-cn"
+	InferenceProviderMiniMaxChina InferenceProvider = "minimax-china"
 	InferenceProviderIoNet       InferenceProvider = "ionet"
 )
 
@@ -108,7 +108,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderCopilot,
 		InferenceProviderVercel,
 		InferenceProviderMiniMax,
-		InferenceProviderMiniMaxCN,
+		InferenceProviderMiniMaxChina,
 	}
 }
 
