@@ -86,6 +86,19 @@
       "options": {}
     },
     {
+      "id": "deepseek-ai/DeepSeek-V3.2:fireworks-ai",
+      "name": "deepseek-ai/DeepSeek-V3.2 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 163840,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "meta-llama/Llama-3.3-70B-Instruct:groq",
       "name": "meta-llama/Llama-3.3-70B-Instruct (groq)",
       "cost_per_1m_in": 0.59,
