@@ -20,7 +20,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-sonnet-4-5-20250929-v1:0:1m",
+      "id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "name": "AWS Claude Sonnet 4.5 (1M context)",
       "cost_per_1m_in": 6,
       "cost_per_1m_out": 22.5,
@@ -57,7 +57,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-opus-4-6-v1:1m",
+      "id": "us.anthropic.claude-opus-4-6-v1",
       "name": "AWS Claude Opus 4.6 (1M context)",
       "cost_per_1m_in": 10,
       "cost_per_1m_out": 37.5,
@@ -118,7 +118,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-sonnet-4-20250514-v1:0:1m",
+      "id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
       "name": "AWS Claude Sonnet 4 (1M context)",
       "cost_per_1m_in": 6,
       "cost_per_1m_out": 22.5,
