@@ -20,6 +20,19 @@
       "supports_attachments": true
     },
     {
+      "id": "anthropic.claude-sonnet-4-5-20250929-v1:0:1m",
+      "name": "AWS Claude Sonnet 4.5 (1M context)",
+      "cost_per_1m_in": 6,
+      "cost_per_1m_out": 22.5,
+      "cost_per_1m_in_cached": 7.5,
+      "cost_per_1m_out_cached": 0.6,
+      "context_window": 1000000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true,
+      "betas": ["context-1m-2025-08-07"]
+    },
+    {
       "id": "anthropic.claude-haiku-4-5-20251001-v1:0",
       "name": "AWS Claude Haiku 4.5",
       "cost_per_1m_in": 0.8,
@@ -42,6 +55,19 @@
       "default_max_tokens": 50000,
       "can_reason": true,
       "supports_attachments": true
+    },
+    {
+      "id": "anthropic.claude-opus-4-6-v1:1m",
+      "name": "AWS Claude Opus 4.6 (1M context)",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 37.5,
+      "cost_per_1m_in_cached": 12.5,
+      "cost_per_1m_out_cached": 1,
+      "context_window": 1000000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true,
+      "betas": ["context-1m-2025-08-07"]
     },
     {
       "id": "anthropic.claude-opus-4-5-20251101-v1:0",
@@ -90,6 +116,19 @@
       "default_max_tokens": 50000,
       "can_reason": true,
       "supports_attachments": true
+    },
+    {
+      "id": "anthropic.claude-sonnet-4-20250514-v1:0:1m",
+      "name": "AWS Claude Sonnet 4 (1M context)",
+      "cost_per_1m_in": 6,
+      "cost_per_1m_out": 22.5,
+      "cost_per_1m_in_cached": 7.5,
+      "cost_per_1m_out_cached": 0.6,
+      "context_window": 1000000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true,
+      "betas": ["context-1m-2025-08-07"]
     }
   ]
 }
