@@ -30,6 +30,8 @@ const (
 	InferenceProviderVertexAI     InferenceProvider = "vertexai"
 	InferenceProviderXAI          InferenceProvider = "xai"
 	InferenceProviderZAI          InferenceProvider = "zai"
+	InferenceProviderZhipu        InferenceProvider = "zhipu"
+	InferenceProviderZhipuCoding  InferenceProvider = "zhipu-coding"
 	InferenceProviderGROQ         InferenceProvider = "groq"
 	InferenceProviderOpenRouter   InferenceProvider = "openrouter"
 	InferenceProviderCerebras     InferenceProvider = "cerebras"
@@ -97,6 +99,8 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderVertexAI,
 		InferenceProviderXAI,
 		InferenceProviderZAI,
+		InferenceProviderZhipu,
+		InferenceProviderZhipuCoding,
 		InferenceProviderGROQ,
 		InferenceProviderOpenRouter,
 		InferenceProviderCerebras,
