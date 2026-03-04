@@ -36,6 +36,12 @@ var xAIConfig []byte
 //go:embed configs/zai.json
 var zAIConfig []byte
 
+//go:embed configs/zhipu.json
+var zhipuConfig []byte
+
+//go:embed configs/zhipu-coding.json
+var zhipuCodingConfig []byte
+
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
@@ -90,6 +96,8 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	zAIProvider,
+	zhipuProvider,
+	zhipuCodingProvider,
 	kimiCodingProvider,
 	groqProvider,
 	openRouterProvider,
@@ -159,6 +167,14 @@ func xAIProvider() catwalk.Provider {
 
 func zAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(zAIConfig)
+}
+
+func zhipuProvider() catwalk.Provider {
+	return loadProviderFromConfig(zhipuConfig)
+}
+
+func zhipuCodingProvider() catwalk.Provider {
+	return loadProviderFromConfig(zhipuCodingConfig)
 }
 
 func openRouterProvider() catwalk.Provider {
