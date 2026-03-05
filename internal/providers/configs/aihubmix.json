@@ -1049,8 +1049,34 @@
       "options": {}
     },
     {
+      "id": "gemini-2.5-flash-lite-nothink",
+      "name": "Gemini 2.5 Flash Lite (no think)",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "gemini-2.5-flash-lite-preview-09-2025",
       "name": "Gemini 2.5 Flash Lite Preview 09 2025",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-2.5-flash-lite-preview-09-2025-nothink",
+      "name": "Gemini 2.5 Flash Lite Preview 09 2025 (no think)",
       "cost_per_1m_in": 0.1,
       "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0,
