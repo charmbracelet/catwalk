@@ -3,7 +3,7 @@
   "id": "copilot",
   "api_endpoint": "https://api.githubcopilot.com",
   "type": "openai-compat",
-  "default_large_model_id": "claude-sonnet-4.5",
+  "default_large_model_id": "claude-opus-4.6",
   "default_small_model_id": "claude-haiku-4.5",
   "models": [
     {
@@ -13,10 +13,10 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
-      "default_max_tokens": 16000,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -26,10 +26,36 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
-      "default_max_tokens": 16000,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-opus-4.6",
+      "name": "Claude Opus 4.6",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-opus-4.6-fast",
+      "name": "Claude Opus 4.6 (fast mode)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -42,7 +68,7 @@
       "context_window": 216000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -52,10 +78,23 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 144000,
-      "default_max_tokens": 16000,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "claude-sonnet-4.6",
+      "name": "Claude Sonnet 4.6",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -68,7 +107,46 @@
       "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "name": "Gemini 3 Flash (Preview)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3-pro-preview",
+      "name": "Gemini 3 Pro (Preview)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -79,6 +157,19 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 16384,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "gpt-4-0125-preview",
+      "name": "GPT 4 Turbo",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false,
@@ -98,19 +189,6 @@
       "options": {}
     },
     {
-      "id": "gpt-5",
-      "name": "GPT-5",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 400000,
-      "default_max_tokens": 128000,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
       "id": "gpt-5-mini",
       "name": "GPT-5 mini",
       "cost_per_1m_in": 0,
@@ -120,7 +198,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -133,7 +211,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -146,7 +224,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -159,7 +237,20 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-5.1-codex-mini",
+      "name": "GPT-5.1-Codex-Mini",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -172,7 +263,33 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-5.2-codex",
+      "name": "GPT-5.2-Codex",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "gpt-5.3-codex",
+      "name": "GPT-5.3-Codex",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true,
       "options": {}
     },
     {

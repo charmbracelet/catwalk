@@ -8,8 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/charmbracelet/catwalk/internal/deprecated"
-	"github.com/charmbracelet/catwalk/internal/providers"
+	"charm.land/catwalk/internal/providers"
 	"github.com/charmbracelet/x/etag"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -26,6 +25,8 @@ var counter = promauto.NewCounter(prometheus.CounterOpts{
 var (
 	providersJSON []byte
 	providersETag string
+
+	deprecatedJSON []byte
 )
 
 func init() {
@@ -35,6 +36,11 @@ func init() {
 		log.Fatal("Failed to marshal providers:", err)
 	}
 	providersETag = etag.Of(providersJSON)
+
+	deprecatedJSON, err = json.Marshal(map[string]any{"error": "This endpoint was removed. Please use /v2/providers instead."})
+	if err != nil {
+		log.Fatal("Failed to marshal deprecated response:", err)
+	}
 }
 
 func providersHandler(w http.ResponseWriter, r *http.Request) {
@@ -63,22 +69,12 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func providersHandlerDeprecated(w http.ResponseWriter, r *http.Request) {
+func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	if r.Method == http.MethodHead {
-		return
-	}
 
-	if r.Method != http.MethodGet {
-		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-		return
-	}
-
-	counter.Inc()
-	allProviders := deprecated.GetAll()
-	if err := json.NewEncoder(w).Encode(allProviders); err != nil {
-		http.Error(w, "Internal server error", http.StatusInternalServerError)
-		return
+	if _, err := w.Write(deprecatedJSON); err != nil {
+		log.Printf("Error writing response: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
 

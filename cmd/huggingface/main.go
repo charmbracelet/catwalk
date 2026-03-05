@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // SupportedProviders defines which providers we want to support.
@@ -114,7 +114,7 @@ func main() {
 		APIEndpoint:         "https://router.huggingface.co/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "moonshotai/Kimi-K2-Instruct-0905:groq",
-		DefaultSmallModelID: "openai/gpt-oss-20b",
+		DefaultSmallModelID: "openai/gpt-oss-20b:groq",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",

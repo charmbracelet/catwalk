@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 //go:embed configs/openai.json
@@ -35,6 +35,12 @@ var xAIConfig []byte
 
 //go:embed configs/zai.json
 var zAIConfig []byte
+
+//go:embed configs/zhipu.json
+var zhipuConfig []byte
+
+//go:embed configs/zhipu-coding.json
+var zhipuCodingConfig []byte
 
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
@@ -66,6 +72,21 @@ var kimiCodingConfig []byte
 //go:embed configs/copilot.json
 var copilotConfig []byte
 
+//go:embed configs/vercel.json
+var vercelConfig []byte
+
+//go:embed configs/minimax.json
+var miniMaxConfig []byte
+
+//go:embed configs/minimax-china.json
+var miniMaxChinaConfig []byte
+
+//go:embed configs/ionet.json
+var ioNetConfig []byte
+
+//go:embed configs/qiniucloud.json
+var qiniuCloudConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -78,6 +99,8 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	zAIProvider,
+	zhipuProvider,
+	zhipuCodingProvider,
 	kimiCodingProvider,
 	groqProvider,
 	openRouterProvider,
@@ -89,6 +112,11 @@ var providerRegistry = []ProviderFunc{
 	aiHubMixProvider,
 	syntheticProvider,
 	copilotProvider,
+	vercelProvider,
+	miniMaxProvider,
+	miniMaxChinaProvider,
+	ioNetProvider,
+	qiniuCloudProvider,
 }
 
 // GetAll returns all registered providers.
@@ -145,6 +173,14 @@ func zAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(zAIConfig)
 }
 
+func zhipuProvider() catwalk.Provider {
+	return loadProviderFromConfig(zhipuConfig)
+}
+
+func zhipuCodingProvider() catwalk.Provider {
+	return loadProviderFromConfig(zhipuCodingConfig)
+}
+
 func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
 }
@@ -183,4 +219,24 @@ func kimiCodingProvider() catwalk.Provider {
 
 func copilotProvider() catwalk.Provider {
 	return loadProviderFromConfig(copilotConfig)
+}
+
+func vercelProvider() catwalk.Provider {
+	return loadProviderFromConfig(vercelConfig)
+}
+
+func miniMaxProvider() catwalk.Provider {
+	return loadProviderFromConfig(miniMaxConfig)
+}
+
+func miniMaxChinaProvider() catwalk.Provider {
+	return loadProviderFromConfig(miniMaxChinaConfig)
+}
+
+func ioNetProvider() catwalk.Provider {
+	return loadProviderFromConfig(ioNetConfig)
+}
+
+func qiniuCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(qiniuCloudConfig)
 }

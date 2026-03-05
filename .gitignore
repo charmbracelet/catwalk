@@ -34,3 +34,6 @@ go.work.sum
 # crush
 .crush
 dist/
+
+# temp dir
+/tmp

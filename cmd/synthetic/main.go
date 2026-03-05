@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/catwalk/pkg/catwalk"
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 // Model represents a model from the Synthetic API.
@@ -54,30 +54,23 @@ type ModelPricing struct {
 	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
 }
 
-func getPricing(model Model) ModelPricing {
-	pricing := ModelPricing{}
-	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
+// parsePrice extracts a float from Synthetic's price format (e.g. "$0.00000055").
+func parsePrice(s string) float64 {
+	s = strings.TrimPrefix(s, "$")
+	v, err := strconv.ParseFloat(s, 64)
 	if err != nil {
-		costPrompt = 0.0
+		return 0.0
 	}
-	pricing.CostPer1MIn = costPrompt * 1_000_000
-	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
-	if err != nil {
-		costCompletion = 0.0
-	}
-	pricing.CostPer1MOut = costCompletion * 1_000_000
+	return v
+}
 
-	costPromptCached, err := strconv.ParseFloat(model.Pricing.InputCacheWrites, 64)
-	if err != nil {
-		costPromptCached = 0.0
+func getPricing(model Model) ModelPricing {
+	return ModelPricing{
+		CostPer1MIn:        parsePrice(model.Pricing.Prompt) * 1_000_000,
+		CostPer1MOut:       parsePrice(model.Pricing.Completion) * 1_000_000,
+		CostPer1MInCached:  parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
+		CostPer1MOutCached: parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
 	}
-	pricing.CostPer1MInCached = costPromptCached * 1_000_000
-	costCompletionCached, err := strconv.ParseFloat(model.Pricing.InputCacheReads, 64)
-	if err != nil {
-		costCompletionCached = 0.0
-	}
-	pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
-	return pricing
 }
 
 // applyModelOverrides sets supported_features for models where Synthetic
@@ -95,6 +88,9 @@ func applyModelOverrides(model *Model) {
 	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3.1"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
+	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3.2"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
 	case strings.HasPrefix(model.ID, "hf:deepseek-ai/DeepSeek-V3"):
 		model.SupportedFeatures = []string{"tools"}
 
@@ -108,9 +104,12 @@ func applyModelOverrides(model *Model) {
 	case strings.HasPrefix(model.ID, "hf:Qwen/Qwen3"):
 		model.SupportedFeatures = []string{"tools"}
 
-	// Has correct metadata already, but the Kimi-K2 matcher (next) would
+	// Has correct metadata already, but the following k2 matchers would
 	// override it to omit reasoning
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2-Thinking"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
+	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2.5"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2"):
@@ -120,7 +119,10 @@ func applyModelOverrides(model *Model) {
 		model.SupportedFeatures = []string{"tools"}
 
 	case strings.HasPrefix(model.ID, "hf:openai/gpt-oss"):
-		model.SupportedFeatures = []string{"tools"}
+		model.SupportedFeatures = []string{"tools", "reasoning"}
+
+	case strings.HasPrefix(model.ID, "hf:MiniMaxAI/MiniMax-M2.1"):
+		model.SupportedFeatures = []string{"tools", "reasoning"}
 	}
 }
 
@@ -152,8 +154,8 @@ func main() {
 		APIKey:              "$SYNTHETIC_API_KEY",
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "hf:zai-org/GLM-4.6",
-		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.1-Terminus",
+		DefaultLargeModelID: "hf:zai-org/GLM-4.7",
+		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.2",
 		Models:              []catwalk.Model{},
 	}
 

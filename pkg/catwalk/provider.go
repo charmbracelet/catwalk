@@ -8,6 +8,7 @@ const (
 	TypeOpenAI       Type = "openai"
 	TypeOpenAICompat Type = "openai-compat"
 	TypeOpenRouter   Type = "openrouter"
+	TypeVercel       Type = "vercel"
 	TypeAnthropic    Type = "anthropic"
 	TypeGoogle       Type = "google"
 	TypeAzure        Type = "azure"
@@ -20,24 +21,31 @@ type InferenceProvider string
 
 // All the inference providers supported by the system.
 const (
-	InferenceProviderOpenAI      InferenceProvider = "openai"
-	InferenceProviderAnthropic   InferenceProvider = "anthropic"
-	InferenceProviderSynthetic   InferenceProvider = "synthetic"
-	InferenceProviderGemini      InferenceProvider = "gemini"
-	InferenceProviderAzure       InferenceProvider = "azure"
-	InferenceProviderBedrock     InferenceProvider = "bedrock"
-	InferenceProviderVertexAI    InferenceProvider = "vertexai"
-	InferenceProviderXAI         InferenceProvider = "xai"
-	InferenceProviderZAI         InferenceProvider = "zai"
-	InferenceProviderGROQ        InferenceProvider = "groq"
-	InferenceProviderOpenRouter  InferenceProvider = "openrouter"
-	InferenceProviderCerebras    InferenceProvider = "cerebras"
-	InferenceProviderVenice      InferenceProvider = "venice"
-	InferenceProviderChutes      InferenceProvider = "chutes"
-	InferenceProviderHuggingFace InferenceProvider = "huggingface"
-	InferenceAIHubMix            InferenceProvider = "aihubmix"
-	InferenceKimiCoding          InferenceProvider = "kimi-coding"
-	InferenceProviderCopilot     InferenceProvider = "copilot"
+	InferenceProviderOpenAI       InferenceProvider = "openai"
+	InferenceProviderAnthropic    InferenceProvider = "anthropic"
+	InferenceProviderSynthetic    InferenceProvider = "synthetic"
+	InferenceProviderGemini       InferenceProvider = "gemini"
+	InferenceProviderAzure        InferenceProvider = "azure"
+	InferenceProviderBedrock      InferenceProvider = "bedrock"
+	InferenceProviderVertexAI     InferenceProvider = "vertexai"
+	InferenceProviderXAI          InferenceProvider = "xai"
+	InferenceProviderZAI          InferenceProvider = "zai"
+	InferenceProviderZhipu        InferenceProvider = "zhipu"
+	InferenceProviderZhipuCoding  InferenceProvider = "zhipu-coding"
+	InferenceProviderGROQ         InferenceProvider = "groq"
+	InferenceProviderOpenRouter   InferenceProvider = "openrouter"
+	InferenceProviderCerebras     InferenceProvider = "cerebras"
+	InferenceProviderVenice       InferenceProvider = "venice"
+	InferenceProviderChutes       InferenceProvider = "chutes"
+	InferenceProviderHuggingFace  InferenceProvider = "huggingface"
+	InferenceAIHubMix             InferenceProvider = "aihubmix"
+	InferenceKimiCoding           InferenceProvider = "kimi-coding"
+	InferenceProviderCopilot      InferenceProvider = "copilot"
+	InferenceProviderVercel       InferenceProvider = "vercel"
+	InferenceProviderMiniMax      InferenceProvider = "minimax"
+	InferenceProviderMiniMaxChina InferenceProvider = "minimax-china"
+	InferenceProviderIoNet        InferenceProvider = "ionet"
+	InferenceProviderQiniuCloud   InferenceProvider = "qiniucloud"
 )
 
 // Provider represents an AI provider configuration.
@@ -92,6 +100,8 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderVertexAI,
 		InferenceProviderXAI,
 		InferenceProviderZAI,
+		InferenceProviderZhipu,
+		InferenceProviderZhipuCoding,
 		InferenceProviderGROQ,
 		InferenceProviderOpenRouter,
 		InferenceProviderCerebras,
@@ -101,6 +111,10 @@ func KnownProviders() []InferenceProvider {
 		InferenceAIHubMix,
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
+		InferenceProviderVercel,
+		InferenceProviderMiniMax,
+		InferenceProviderMiniMaxChina,
+		InferenceProviderQiniuCloud,
 	}
 }
 
@@ -110,6 +124,7 @@ func KnownProviderTypes() []Type {
 		TypeOpenAI,
 		TypeOpenAICompat,
 		TypeOpenRouter,
+		TypeVercel,
 		TypeAnthropic,
 		TypeGoogle,
 		TypeAzure,
