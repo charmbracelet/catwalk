@@ -84,6 +84,9 @@ var miniMaxChinaConfig []byte
 //go:embed configs/ionet.json
 var ioNetConfig []byte
 
+//go:embed configs/qiniucloud.json
+var qiniuCloudConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -113,6 +116,7 @@ var providerRegistry = []ProviderFunc{
 	miniMaxProvider,
 	miniMaxChinaProvider,
 	ioNetProvider,
+	qiniuCloudProvider,
 }
 
 // GetAll returns all registered providers.
@@ -231,4 +235,8 @@ func miniMaxChinaProvider() catwalk.Provider {
 
 func ioNetProvider() catwalk.Provider {
 	return loadProviderFromConfig(ioNetConfig)
+}
+
+func qiniuCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(qiniuCloudConfig)
 }
