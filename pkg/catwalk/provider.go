@@ -46,6 +46,9 @@ const (
 	InferenceProviderMiniMaxChina  InferenceProvider = "minimax-china"
 	InferenceProviderIoNet         InferenceProvider = "ionet"
 	InferenceProviderAlibabaCoding InferenceProvider = "alibaba-coding"
+	InferenceProviderAlibabaPay    InferenceProvider = "alibaba-pay"
+	InferenceProviderAlibabaPayUS  InferenceProvider = "alibaba-pay-us"
+	InferenceProviderAlibabaPayCN  InferenceProvider = "alibaba-pay-china"
 )
 
 // Provider represents an AI provider configuration.
@@ -116,6 +119,9 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderMiniMaxChina,
 		InferenceProviderIoNet,
 		InferenceProviderAlibabaCoding,
+		InferenceProviderAlibabaPay,
+		InferenceProviderAlibabaPayUS,
+		InferenceProviderAlibabaPayCN,
 	}
 }
 
