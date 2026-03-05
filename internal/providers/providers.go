@@ -84,8 +84,8 @@ var miniMaxChinaConfig []byte
 //go:embed configs/ionet.json
 var ioNetConfig []byte
 
-//go:embed configs/alibaba.json
-var alibabaConfig []byte
+//go:embed configs/alibaba-coding.json
+var alibabaCodingConfig []byte
 
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
@@ -116,7 +116,7 @@ var providerRegistry = []ProviderFunc{
 	miniMaxProvider,
 	miniMaxChinaProvider,
 	ioNetProvider,
-	alibabaProvider,
+	alibabaCodingProvider,
 }
 
 // GetAll returns all registered providers.
@@ -237,6 +237,6 @@ func ioNetProvider() catwalk.Provider {
 	return loadProviderFromConfig(ioNetConfig)
 }
 
-func alibabaProvider() catwalk.Provider {
-	return loadProviderFromConfig(alibabaConfig)
+func alibabaCodingProvider() catwalk.Provider {
+	return loadProviderFromConfig(alibabaCodingConfig)
 }

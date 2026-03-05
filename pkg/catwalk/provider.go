@@ -21,31 +21,31 @@ type InferenceProvider string
 
 // All the inference providers supported by the system.
 const (
-	InferenceProviderOpenAI       InferenceProvider = "openai"
-	InferenceProviderAnthropic    InferenceProvider = "anthropic"
-	InferenceProviderSynthetic    InferenceProvider = "synthetic"
-	InferenceProviderGemini       InferenceProvider = "gemini"
-	InferenceProviderAzure        InferenceProvider = "azure"
-	InferenceProviderBedrock      InferenceProvider = "bedrock"
-	InferenceProviderVertexAI     InferenceProvider = "vertexai"
-	InferenceProviderXAI          InferenceProvider = "xai"
-	InferenceProviderZAI          InferenceProvider = "zai"
-	InferenceProviderZhipu        InferenceProvider = "zhipu"
-	InferenceProviderZhipuCoding  InferenceProvider = "zhipu-coding"
-	InferenceProviderGROQ         InferenceProvider = "groq"
-	InferenceProviderOpenRouter   InferenceProvider = "openrouter"
-	InferenceProviderCerebras     InferenceProvider = "cerebras"
-	InferenceProviderVenice       InferenceProvider = "venice"
-	InferenceProviderChutes       InferenceProvider = "chutes"
-	InferenceProviderHuggingFace  InferenceProvider = "huggingface"
-	InferenceAIHubMix             InferenceProvider = "aihubmix"
-	InferenceKimiCoding           InferenceProvider = "kimi-coding"
-	InferenceProviderCopilot      InferenceProvider = "copilot"
-	InferenceProviderVercel       InferenceProvider = "vercel"
-	InferenceProviderMiniMax      InferenceProvider = "minimax"
-	InferenceProviderMiniMaxChina InferenceProvider = "minimax-china"
-	InferenceProviderIoNet        InferenceProvider = "ionet"
-	InferenceProviderAlibaba      InferenceProvider = "alibaba"
+	InferenceProviderOpenAI        InferenceProvider = "openai"
+	InferenceProviderAnthropic     InferenceProvider = "anthropic"
+	InferenceProviderSynthetic     InferenceProvider = "synthetic"
+	InferenceProviderGemini        InferenceProvider = "gemini"
+	InferenceProviderAzure         InferenceProvider = "azure"
+	InferenceProviderBedrock       InferenceProvider = "bedrock"
+	InferenceProviderVertexAI      InferenceProvider = "vertexai"
+	InferenceProviderXAI           InferenceProvider = "xai"
+	InferenceProviderZAI           InferenceProvider = "zai"
+	InferenceProviderZhipu         InferenceProvider = "zhipu"
+	InferenceProviderZhipuCoding   InferenceProvider = "zhipu-coding"
+	InferenceProviderGROQ          InferenceProvider = "groq"
+	InferenceProviderOpenRouter    InferenceProvider = "openrouter"
+	InferenceProviderCerebras      InferenceProvider = "cerebras"
+	InferenceProviderVenice        InferenceProvider = "venice"
+	InferenceProviderChutes        InferenceProvider = "chutes"
+	InferenceProviderHuggingFace   InferenceProvider = "huggingface"
+	InferenceAIHubMix              InferenceProvider = "aihubmix"
+	InferenceKimiCoding            InferenceProvider = "kimi-coding"
+	InferenceProviderCopilot       InferenceProvider = "copilot"
+	InferenceProviderVercel        InferenceProvider = "vercel"
+	InferenceProviderMiniMax       InferenceProvider = "minimax"
+	InferenceProviderMiniMaxChina  InferenceProvider = "minimax-china"
+	InferenceProviderIoNet         InferenceProvider = "ionet"
+	InferenceProviderAlibabaCoding InferenceProvider = "alibaba-coding"
 )
 
 // Provider represents an AI provider configuration.
@@ -115,7 +115,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderMiniMax,
 		InferenceProviderMiniMaxChina,
 		InferenceProviderIoNet,
-		InferenceProviderAlibaba,
+		InferenceProviderAlibabaCoding,
 	}
 }
 
