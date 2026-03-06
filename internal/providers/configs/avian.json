@@ -1,0 +1,65 @@
+Before: context_window=1000000, default_max_tokens=1000000
+After: context_window=196608, default_max_tokens=196608
+{
+  "name": "Avian",
+  "id": "avian",
+  "type": "openai-compat",
+  "api_key": "$AVIAN_API_KEY",
+  "api_endpoint": "https://api.avian.io/v1",
+  "default_large_model_id": "moonshotai/kimi-k2.5",
+  "default_small_model_id": "deepseek/deepseek-v3.2",
+  "models": [
+    {
+      "id": "deepseek/deepseek-v3.2",
+      "name": "DeepSeek V3.2",
+      "cost_per_1m_in": 0.26,
+      "cost_per_1m_out": 0.38,
+      "cost_per_1m_in_cached": 0.13,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 164000,
+      "default_max_tokens": 65000,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "moonshotai/kimi-k2.5",
+      "name": "Kimi K2.5",
+      "cost_per_1m_in": 0.45,
+      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in_cached": 0.22,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131000,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "z-ai/glm-5",
+      "name": "GLM-5",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 2.55,
+      "cost_per_1m_in_cached": 0.15,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131000,
+      "default_max_tokens": 16000,
+      "can_reason": true,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "minimax/minimax-m2.5",
+      "name": "MiniMax M2.5",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.1,
+      "cost_per_1m_in_cached": 0.15,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 196608,
+      "default_max_tokens": 196608,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    }
+  ]
+}
