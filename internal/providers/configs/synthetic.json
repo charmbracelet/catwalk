@@ -40,19 +40,6 @@
       "options": {}
     },
     {
-      "id": "hf:deepseek-ai/DeepSeek-V3-0324",
-      "name": "DeepSeek V3 0324",
-      "cost_per_1m_in": 1.2,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 1.2,
-      "cost_per_1m_out_cached": 1.2,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
       "id": "hf:deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek V3.2",
       "cost_per_1m_in": 0.56,
@@ -163,10 +150,10 @@
     {
       "id": "hf:meta-llama/Llama-3.3-70B-Instruct",
       "name": "Llama 3.3 70B Instruct",
-      "cost_per_1m_in": 0.8999999999999999,
-      "cost_per_1m_out": 0.8999999999999999,
-      "cost_per_1m_in_cached": 0.8999999999999999,
-      "cost_per_1m_out_cached": 0.8999999999999999,
+      "cost_per_1m_in": 0.88,
+      "cost_per_1m_out": 0.88,
+      "cost_per_1m_in_cached": 0.88,
+      "cost_per_1m_out_cached": 0.88,
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,

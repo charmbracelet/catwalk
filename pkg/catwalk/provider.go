@@ -30,6 +30,8 @@ const (
 	InferenceProviderVertexAI     InferenceProvider = "vertexai"
 	InferenceProviderXAI          InferenceProvider = "xai"
 	InferenceProviderZAI          InferenceProvider = "zai"
+	InferenceProviderZhipu        InferenceProvider = "zhipu"
+	InferenceProviderZhipuCoding  InferenceProvider = "zhipu-coding"
 	InferenceProviderGROQ         InferenceProvider = "groq"
 	InferenceProviderOpenRouter   InferenceProvider = "openrouter"
 	InferenceProviderCerebras     InferenceProvider = "cerebras"
@@ -43,6 +45,7 @@ const (
 	InferenceProviderMiniMax      InferenceProvider = "minimax"
 	InferenceProviderMiniMaxChina InferenceProvider = "minimax-china"
 	InferenceProviderIoNet        InferenceProvider = "ionet"
+	InferenceProviderQiniuCloud   InferenceProvider = "qiniucloud"
 )
 
 // Provider represents an AI provider configuration.
@@ -99,6 +102,8 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderVertexAI,
 		InferenceProviderXAI,
 		InferenceProviderZAI,
+		InferenceProviderZhipu,
+		InferenceProviderZhipuCoding,
 		InferenceProviderGROQ,
 		InferenceProviderOpenRouter,
 		InferenceProviderCerebras,
@@ -111,6 +116,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderVercel,
 		InferenceProviderMiniMax,
 		InferenceProviderMiniMaxChina,
+		InferenceProviderQiniuCloud,
 	}
 }
 

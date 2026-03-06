@@ -36,6 +36,12 @@ var xAIConfig []byte
 //go:embed configs/zai.json
 var zAIConfig []byte
 
+//go:embed configs/zhipu.json
+var zhipuConfig []byte
+
+//go:embed configs/zhipu-coding.json
+var zhipuCodingConfig []byte
+
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
@@ -78,6 +84,9 @@ var miniMaxChinaConfig []byte
 //go:embed configs/ionet.json
 var ioNetConfig []byte
 
+//go:embed configs/qiniucloud.json
+var qiniuCloudConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -90,6 +99,8 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	xAIProvider,
 	zAIProvider,
+	zhipuProvider,
+	zhipuCodingProvider,
 	kimiCodingProvider,
 	groqProvider,
 	openRouterProvider,
@@ -105,6 +116,7 @@ var providerRegistry = []ProviderFunc{
 	miniMaxProvider,
 	miniMaxChinaProvider,
 	ioNetProvider,
+	qiniuCloudProvider,
 }
 
 // GetAll returns all registered providers.
@@ -161,6 +173,14 @@ func zAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(zAIConfig)
 }
 
+func zhipuProvider() catwalk.Provider {
+	return loadProviderFromConfig(zhipuConfig)
+}
+
+func zhipuCodingProvider() catwalk.Provider {
+	return loadProviderFromConfig(zhipuCodingConfig)
+}
+
 func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
 }
@@ -215,4 +235,8 @@ func miniMaxChinaProvider() catwalk.Provider {
 
 func ioNetProvider() catwalk.Provider {
 	return loadProviderFromConfig(ioNetConfig)
+}
+
+func qiniuCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(qiniuCloudConfig)
 }
