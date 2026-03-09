@@ -8,19 +8,6 @@
   "default_small_model_id": "openai/gpt-oss-20b:groq",
   "models": [
     {
-      "id": "MiniMaxAI/MiniMax-M2.1:fireworks-ai",
-      "name": "MiniMaxAI/MiniMax-M2.1 (fireworks-ai)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 204800,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
       "id": "MiniMaxAI/MiniMax-M2.5:fireworks-ai",
       "name": "MiniMaxAI/MiniMax-M2.5 (fireworks-ai)",
       "cost_per_1m_in": 0,
@@ -86,34 +73,8 @@
       "options": {}
     },
     {
-      "id": "deepcogito/cogito-671b-v2.1:fireworks-ai",
-      "name": "deepcogito/cogito-671b-v2.1 (fireworks-ai)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 163840,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
       "id": "deepseek-ai/DeepSeek-V3.1:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V3.1 (fireworks-ai)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 163840,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.2:fireworks-ai",
-      "name": "deepseek-ai/DeepSeek-V3.2 (fireworks-ai)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -166,6 +127,19 @@
     {
       "id": "moonshotai/Kimi-K2-Instruct-0905:fireworks-ai",
       "name": "moonshotai/Kimi-K2-Instruct-0905 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "moonshotai/Kimi-K2-Instruct-0905:groq",
+      "name": "moonshotai/Kimi-K2-Instruct-0905 (groq)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -275,6 +249,19 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "zai-org/GLM-4.7:fireworks-ai",
+      "name": "zai-org/GLM-4.7 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false,
