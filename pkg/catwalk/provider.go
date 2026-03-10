@@ -86,8 +86,8 @@ type Model struct {
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	SupportsImages         bool         `json:"supports_attachments"`
 	Options                ModelOptions `json:"options"`
-	// Betas is a list of beta features to enable for this model (e.g., "context-1m-2025-08-07" for Bedrock 1M context).
-	Betas []string `json:"betas,omitempty"`
+	// Supports1MContext indicates the model supports the 1M context window beta feature.
+	Supports1MContext bool `json:"supports_1m_context,omitempty"`
 }
 
 // KnownProviders returns all the known inference providers.
