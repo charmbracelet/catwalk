@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -64,12 +65,16 @@ func parsePrice(s string) float64 {
 	return v
 }
 
+func roundCost(v float64) float64 {
+	return math.Round(v*1e5) / 1e5
+}
+
 func getPricing(model Model) ModelPricing {
 	return ModelPricing{
-		CostPer1MIn:        parsePrice(model.Pricing.Prompt) * 1_000_000,
-		CostPer1MOut:       parsePrice(model.Pricing.Completion) * 1_000_000,
-		CostPer1MInCached:  parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
-		CostPer1MOutCached: parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
+		CostPer1MIn:        roundCost(parsePrice(model.Pricing.Prompt) * 1_000_000),
+		CostPer1MOut:       roundCost(parsePrice(model.Pricing.Completion) * 1_000_000),
+		CostPer1MInCached:  roundCost(parsePrice(model.Pricing.InputCacheReads) * 1_000_000),
+		CostPer1MOutCached: roundCost(parsePrice(model.Pricing.InputCacheReads) * 1_000_000),
 	}
 }
 

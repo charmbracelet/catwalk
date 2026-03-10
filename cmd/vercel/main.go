@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -107,6 +108,7 @@ func main() {
 		}
 
 		// Parse pricing
+		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
 		costPer1MIn := 0.0
 		costPer1MOut := 0.0
 		costPer1MInCached := 0.0
@@ -115,28 +117,28 @@ func main() {
 		if model.Pricing.Input != "" {
 			costPrompt, err := strconv.ParseFloat(model.Pricing.Input, 64)
 			if err == nil {
-				costPer1MIn = costPrompt * 1_000_000
+				costPer1MIn = roundCost(costPrompt * 1_000_000)
 			}
 		}
 
 		if model.Pricing.Output != "" {
 			costCompletion, err := strconv.ParseFloat(model.Pricing.Output, 64)
 			if err == nil {
-				costPer1MOut = costCompletion * 1_000_000
+				costPer1MOut = roundCost(costCompletion * 1_000_000)
 			}
 		}
 
 		if model.Pricing.InputCacheRead != "" {
 			costCached, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 			if err == nil {
-				costPer1MInCached = costCached * 1_000_000
+				costPer1MInCached = roundCost(costCached * 1_000_000)
 			}
 		}
 
 		if model.Pricing.InputCacheWrite != "" {
 			costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 			if err == nil {
-				costPer1MOutCached = costCacheWrite * 1_000_000
+				costPer1MOutCached = roundCost(costCacheWrite * 1_000_000)
 			}
 		}
 

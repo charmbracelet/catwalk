@@ -225,11 +225,12 @@ func main() {
 			}
 		}
 
+		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.ModelSpec.Name,
-			CostPer1MIn:            model.ModelSpec.Pricing.Input.USD,
-			CostPer1MOut:           model.ModelSpec.Pricing.Output.USD,
+			CostPer1MIn:            roundCost(model.ModelSpec.Pricing.Input.USD),
+			CostPer1MOut:           roundCost(model.ModelSpec.Pricing.Output.USD),
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
 			ContextWindow:          contextWindow,
