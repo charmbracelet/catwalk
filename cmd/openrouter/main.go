@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -101,29 +102,33 @@ type ModelPricing struct {
 	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
 }
 
+func roundCost(v float64) float64 {
+	return math.Round(v*1e5) / 1e5
+}
+
 func getPricing(model Model) ModelPricing {
 	pricing := ModelPricing{}
 	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
 	if err != nil {
 		costPrompt = 0.0
 	}
-	pricing.CostPer1MIn = costPrompt * 1_000_000
+	pricing.CostPer1MIn = roundCost(costPrompt * 1_000_000)
 	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 	if err != nil {
 		costCompletion = 0.0
 	}
-	pricing.CostPer1MOut = costCompletion * 1_000_000
+	pricing.CostPer1MOut = roundCost(costCompletion * 1_000_000)
 
 	costPromptCached, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 	if err != nil {
 		costPromptCached = 0.0
 	}
-	pricing.CostPer1MInCached = costPromptCached * 1_000_000
+	pricing.CostPer1MInCached = roundCost(costPromptCached * 1_000_000)
 	costCompletionCached, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 	if err != nil {
 		costCompletionCached = 0.0
 	}
-	pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
+	pricing.CostPer1MOutCached = roundCost(costCompletionCached * 1_000_000)
 	return pricing
 }
 
@@ -334,23 +339,23 @@ func main() {
 		if err != nil {
 			costPrompt = 0.0
 		}
-		pricing.CostPer1MIn = costPrompt * 1_000_000
+		pricing.CostPer1MIn = roundCost(costPrompt * 1_000_000)
 		costCompletion, err := strconv.ParseFloat(bestEndpoint.Pricing.Completion, 64)
 		if err != nil {
 			costCompletion = 0.0
 		}
-		pricing.CostPer1MOut = costCompletion * 1_000_000
+		pricing.CostPer1MOut = roundCost(costCompletion * 1_000_000)
 
 		costPromptCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
 		if err != nil {
 			costPromptCached = 0.0
 		}
-		pricing.CostPer1MInCached = costPromptCached * 1_000_000
+		pricing.CostPer1MInCached = roundCost(costPromptCached * 1_000_000)
 		costCompletionCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
 		if err != nil {
 			costCompletionCached = 0.0
 		}
-		pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
+		pricing.CostPer1MOutCached = roundCost(costCompletionCached * 1_000_000)
 
 		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")

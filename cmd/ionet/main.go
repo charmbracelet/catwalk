@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -79,10 +80,11 @@ func main() {
 		}
 
 		// Convert token prices (per token) to cost per 1M tokens
-		costPer1MIn := model.InputTokenPrice * 1_000_000
-		costPer1MOut := model.OutputTokenPrice * 1_000_000
-		costPer1MInCached := model.CacheReadTokenPrice * 1_000_000
-		costPer1MOutCached := model.CacheWriteTokenPrice * 1_000_000
+		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
+		costPer1MIn := roundCost(model.InputTokenPrice * 1_000_000)
+		costPer1MOut := roundCost(model.OutputTokenPrice * 1_000_000)
+		costPer1MInCached := roundCost(model.CacheReadTokenPrice * 1_000_000)
+		costPer1MOutCached := roundCost(model.CacheWriteTokenPrice * 1_000_000)
 
 		m := catwalk.Model{
 			ID:                     model.ID,

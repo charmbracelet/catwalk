@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -95,11 +96,15 @@ func hasField(s, field string) bool {
 	return false
 }
 
+func roundCost(v float64) float64 {
+	return math.Round(v*1e5) / 1e5
+}
+
 func parseFloat(p *float64) float64 {
 	if p == nil {
 		return 0
 	}
-	return *p
+	return roundCost(*p)
 }
 
 func calculateMaxTokens(contextLength, maxOutput, factor int64) int64 {
