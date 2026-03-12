@@ -504,6 +504,19 @@
       "options": {}
     },
     {
+      "id": "mistral-small-3-2-24b-instruct",
+      "name": "Mistral Small 3.2 24B Instruct",
+      "cost_per_1m_in": 0.09375,
+      "cost_per_1m_out": 0.25,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "nvidia-nemotron-3-nano-30b-a3b",
       "name": "NVIDIA Nemotron 3 Nano 30B",
       "cost_per_1m_in": 0.075,
