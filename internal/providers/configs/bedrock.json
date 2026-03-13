@@ -4,9 +4,21 @@
   "type": "bedrock",
   "api_key": "",
   "api_endpoint": "",
-  "default_large_model_id": "anthropic.claude-sonnet-4-5-20250929-v1:0",
+  "default_large_model_id": "anthropic.claude-sonnet-4-6",
   "default_small_model_id": "anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [
+    {
+      "id": "anthropic.claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 3.75,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
     {
       "id": "anthropic.claude-sonnet-4-5-20250929-v1:0",
       "name": "AWS Claude Sonnet 4.5",
