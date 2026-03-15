@@ -5,7 +5,7 @@
   "api_endpoint": "https://api.venice.ai/api/v1",
   "type": "openai-compat",
   "default_large_model_id": "claude-opus-4-6",
-  "default_small_model_id": "qwen3-5-35b-a3b",
+  "default_small_model_id": "minimax-m25",
   "models": [
     {
       "id": "claude-opus-4-5",
@@ -442,8 +442,8 @@
     {
       "id": "kimi-k2-5",
       "name": "Kimi K2.5",
-      "cost_per_1m_in": 0.75,
-      "cost_per_1m_out": 3.75,
+      "cost_per_1m_in": 0.56,
+      "cost_per_1m_out": 3.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
@@ -487,8 +487,8 @@
     {
       "id": "minimax-m21",
       "name": "MiniMax M2.1",
-      "cost_per_1m_in": 0.4,
-      "cost_per_1m_out": 1.6,
+      "cost_per_1m_in": 0.35,
+      "cost_per_1m_out": 1.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 198000,
@@ -506,8 +506,8 @@
     {
       "id": "minimax-m25",
       "name": "MiniMax M2.5",
-      "cost_per_1m_in": 0.4,
-      "cost_per_1m_out": 1.6,
+      "cost_per_1m_in": 0.34,
+      "cost_per_1m_out": 1.19,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 198000,
