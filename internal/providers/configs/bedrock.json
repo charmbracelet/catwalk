@@ -29,7 +29,11 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "supports_1m_context": true,
+      "long_context_cost_per_1m_in": 6,
+      "long_context_cost_per_1m_out": 22.5,
+      "long_context_cost_per_1m_in_cached": 0.6
     },
     {
       "id": "anthropic.claude-haiku-4-5-20251001-v1:0",
@@ -53,7 +57,11 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "supports_1m_context": true,
+      "long_context_cost_per_1m_in": 10,
+      "long_context_cost_per_1m_out": 37.5,
+      "long_context_cost_per_1m_in_cached": 1.0
     },
     {
       "id": "anthropic.claude-opus-4-5-20251101-v1:0",
@@ -101,7 +109,11 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "supports_1m_context": true,
+      "long_context_cost_per_1m_in": 6,
+      "long_context_cost_per_1m_out": 22.5,
+      "long_context_cost_per_1m_in_cached": 0.6
     }
   ]
 }

@@ -17,9 +17,18 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "max"],
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ],
       "default_reasoning_efforts": "medium",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "supports_1m_context": true,
+      "long_context_cost_per_1m_in": 6,
+      "long_context_cost_per_1m_out": 22.5,
+      "long_context_cost_per_1m_in_cached": 0.6
     },
     {
       "id": "claude-sonnet-4-5-20250929",
@@ -31,7 +40,11 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "supports_1m_context": true,
+      "long_context_cost_per_1m_in": 6,
+      "long_context_cost_per_1m_out": 22.5,
+      "long_context_cost_per_1m_in_cached": 0.6
     },
     {
       "id": "claude-opus-4-6",
@@ -39,13 +52,22 @@
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 25,
       "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.50,
+      "cost_per_1m_out_cached": 0.5,
       "context_window": 200000,
       "default_max_tokens": 126000,
       "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "max"],
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ],
       "default_reasoning_efforts": "medium",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "supports_1m_context": true,
+      "long_context_cost_per_1m_in": 10,
+      "long_context_cost_per_1m_out": 37.5,
+      "long_context_cost_per_1m_in_cached": 1.0
     },
     {
       "id": "claude-opus-4-5-20251101",
@@ -53,7 +75,7 @@
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 25,
       "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.50,
+      "cost_per_1m_out_cached": 0.5,
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
@@ -106,7 +128,11 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "supports_1m_context": true,
+      "long_context_cost_per_1m_in": 6,
+      "long_context_cost_per_1m_out": 22.5,
+      "long_context_cost_per_1m_in_cached": 0.6
     }
   ]
 }

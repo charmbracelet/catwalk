@@ -87,6 +87,13 @@ type Model struct {
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	SupportsImages         bool         `json:"supports_attachments"`
 	Options                ModelOptions `json:"options"`
+	// Supports1MContext indicates the model supports the 1M context window beta feature.
+	Supports1MContext bool `json:"supports_1m_context,omitempty"`
+	// Long context pricing (when >200K input tokens with 1M context enabled).
+	// These are the premium rates; standard rates are in the CostPer1M* fields above.
+	LongContextCostPer1MIn       float64 `json:"long_context_cost_per_1m_in,omitempty"`
+	LongContextCostPer1MOut      float64 `json:"long_context_cost_per_1m_out,omitempty"`
+	LongContextCostPer1MInCached float64 `json:"long_context_cost_per_1m_in_cached,omitempty"`
 }
 
 // KnownProviders returns all the known inference providers.
