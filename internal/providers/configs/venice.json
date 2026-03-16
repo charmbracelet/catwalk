@@ -709,7 +709,7 @@
       "context_window": 128000,
       "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {}
     },
     {
