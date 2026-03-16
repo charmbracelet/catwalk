@@ -14,8 +14,8 @@
       "cost_per_1m_out": 15,
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
-      "context_window": 200000,
-      "default_max_tokens": 50000,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -27,7 +27,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 50000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -39,7 +39,7 @@
       "cost_per_1m_in_cached": 1,
       "cost_per_1m_out_cached": 0.08,
       "context_window": 200000,
-      "default_max_tokens": 50000,
+      "default_max_tokens": 64000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -50,8 +50,8 @@
       "cost_per_1m_out": 25,
       "cost_per_1m_in_cached": 6.25,
       "cost_per_1m_out_cached": 0.5,
-      "context_window": 200000,
-      "default_max_tokens": 50000,
+      "context_window": 1000000,
+      "default_max_tokens": 126000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -63,7 +63,7 @@
       "cost_per_1m_in_cached": 6.25,
       "cost_per_1m_out_cached": 0.5,
       "context_window": 200000,
-      "default_max_tokens": 50000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -75,7 +75,7 @@
       "cost_per_1m_in_cached": 18.75,
       "cost_per_1m_out_cached": 1.5,
       "context_window": 200000,
-      "default_max_tokens": 50000,
+      "default_max_tokens": 32000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -87,7 +87,7 @@
       "cost_per_1m_in_cached": 18.75,
       "cost_per_1m_out_cached": 1.5,
       "context_window": 200000,
-      "default_max_tokens": 50000,
+      "default_max_tokens": 32000,
       "can_reason": true,
       "supports_attachments": true
     },
@@ -99,7 +99,7 @@
       "cost_per_1m_in_cached": 3.75,
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
-      "default_max_tokens": 50000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
     }
