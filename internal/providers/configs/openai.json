@@ -36,6 +36,34 @@
       "supports_attachments": true
     },
     {
+      "id": "gpt-5.4-mini",
+      "name": "GPT-5.4 Mini",
+      "cost_per_1m_in": 0.75,
+      "cost_per_1m_out": 180,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "medium", "high", "xhigh"],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5.4-nano",
+      "name": "GPT-5.4 Nano",
+      "cost_per_1m_in": 0.20,
+      "cost_per_1m_out": 1.25,
+      "cost_per_1m_in_cached": 0.02,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "medium", "high", "xhigh"],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "gpt-5.3-codex",
       "name": "GPT-5.3 Codex",
       "cost_per_1m_in": 1.75,
