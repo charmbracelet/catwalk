@@ -2467,6 +2467,32 @@
       "options": {}
     },
     {
+      "id": "mimo-v2-omni",
+      "name": "MiMo V2 Omni",
+      "cost_per_1m_in": 0.44,
+      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.088,
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
+      "id": "mimo-v2-pro",
+      "name": "MiMo V2 Pro",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 3.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.22,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "minimax-m2",
       "name": "MiniMax M2",
       "cost_per_1m_in": 0.288,
