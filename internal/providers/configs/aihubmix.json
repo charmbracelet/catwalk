@@ -659,6 +659,63 @@
       "options": {}
     },
     {
+      "id": "coding-minimax-m2.7",
+      "name": "Coding MiniMax M2.7",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 204800,
+      "default_max_tokens": 13100,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "coding-minimax-m2.7-free",
+      "name": "Coding MiniMax M2.7 (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 204800,
+      "default_max_tokens": 13100,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "coding-minimax-m2.7-highspeed",
+      "name": "Coding MiniMax M2.7 Highspeed",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 204800,
+      "default_max_tokens": 13100,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "deepseek-math-v2",
       "name": "DeepSeek Math V2",
       "cost_per_1m_in": 0.492,
@@ -2014,8 +2071,8 @@
       "cost_per_1m_out": 4.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.075,
-      "context_window": 1047576,
-      "default_max_tokens": 32768,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
       "can_reason": false,
       "supports_attachments": true,
       "options": {}
@@ -2452,6 +2509,25 @@
       "name": "MiniMax M2.5",
       "cost_per_1m_in": 0.288,
       "cost_per_1m_out": 1.152,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 204800,
+      "default_max_tokens": 20480,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
+      "id": "minimax-m2.5-free",
+      "name": "MiniMax M2.5 (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 204800,
