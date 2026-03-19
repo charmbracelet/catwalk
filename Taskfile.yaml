@@ -71,6 +71,11 @@ tasks:
     cmds:
       - go run cmd/aihubmix/main.go
 
+  gen:avian:
+    desc: Generate avian provider configurations
+    cmds:
+      - go run cmd/avian/main.go
+
   gen:copilot:
     desc: Generate copilot provider configurations
     cmds:
