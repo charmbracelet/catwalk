@@ -105,3 +105,8 @@ tasks:
     desc: Generate vercel provider configurations
     cmds:
       - go run cmd/vercel/main.go
+
+  update:
+    desc: Trigger the update workflow on GitHub
+    cmds:
+      - gh workflow run update.yml
