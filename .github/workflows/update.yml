@@ -18,6 +18,8 @@ jobs:
         with:
           go-version-file: go.mod
       - name: Generate provider configurations
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
         run: |
           go run ./cmd/aihubmix/main.go
           go run ./cmd/avian/main.go
@@ -27,6 +29,7 @@ jobs:
           go run ./cmd/synthetic/main.go
           go run ./cmd/venice/main.go
           go run ./cmd/vercel/main.go
+          go run ./cmd/xai/main.go
       - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v5
         with:
           commit_message: "chore: auto-update generated files"
