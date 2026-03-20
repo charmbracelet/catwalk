@@ -111,6 +111,11 @@ tasks:
     cmds:
       - go run cmd/vercel/main.go
 
+  gen:xai:
+    desc: Generate xAI provider configurations
+    cmds:
+      - go run cmd/xai/main.go
+
   update:
     desc: Trigger the update workflow on GitHub
     cmds:
