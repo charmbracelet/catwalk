@@ -170,9 +170,9 @@
     {
       "id": "zai-org/GLM-5",
       "name": "Z.ai: GLM 5",
-      "cost_per_1m_in": 0.94,
+      "cost_per_1m_in": 1,
       "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0.47,
+      "cost_per_1m_in_cached": 0.5,
       "cost_per_1m_out_cached": 0,
       "context_window": 202752,
       "default_max_tokens": 20275,
