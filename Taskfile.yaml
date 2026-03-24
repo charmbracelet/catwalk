@@ -71,6 +71,11 @@ tasks:
     cmds:
       - go run cmd/aihubmix/main.go
 
+  gen:avian:
+    desc: Generate avian provider configurations
+    cmds:
+      - go run cmd/avian/main.go
+
   gen:copilot:
     desc: Generate copilot provider configurations
     cmds:
@@ -105,3 +110,13 @@ tasks:
     desc: Generate vercel provider configurations
     cmds:
       - go run cmd/vercel/main.go
+
+  gen:xai:
+    desc: Generate xAI provider configurations
+    cmds:
+      - go run cmd/xai/main.go
+
+  update:
+    desc: Trigger the update workflow on GitHub
+    cmds:
+      - gh workflow run update.yml
