@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"os"
 	"slices"
+	"strconv"
 	"strings"
 	"time"
 
@@ -27,11 +28,14 @@ type Model struct {
 	Pricing       Pricing `json:"pricing"`
 }
 
-// Pricing contains the pricing information for a model.
+// Pricing contains the pricing information for a model from the Nebius API.
 type Pricing struct {
-	InputPerMillion     float64 `json:"input_per_million"`
-	OutputPerMillion    float64 `json:"output_per_million"`
-	CacheReadPerMillion float64 `json:"cache_read_per_million"`
+	Prompt              string `json:"prompt"`
+	Completion          string `json:"completion"`
+	Image               string `json:"image"`
+	PricePerVideoSecond string `json:"price_per_video_second"`
+	Request             string `json:"request"`
+	PricePerMinute      string `json:"price_per_minute"`
 }
 
 // ModelsResponse is the response structure for the Nebius Token Factory models API.
@@ -44,7 +48,7 @@ func fetchNebiusModels() (*ModelsResponse, error) {
 	req, _ := http.NewRequestWithContext(
 		context.Background(),
 		"GET",
-		"https://api.tokenfactory.nebius.com/v1/models",
+		"https://api.tokenfactory.nebius.com/v1/models?verbose=true",
 		nil,
 	)
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
@@ -96,12 +100,36 @@ func main() {
 			defaultReasoning = "medium"
 		}
 
+		// Convert pricing from string to float64
+		var costPer1MIn, costPer1MOut, costPer1MInCached float64
+
+		// Handle prompt price conversion
+		promptPrice, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
+		if err != nil {
+			promptPrice = 0.0
+		}
+		costPer1MIn = promptPrice * 1_000_000
+
+		// Handle completion price conversion
+		completionPrice, err := strconv.ParseFloat(model.Pricing.Completion, 64)
+		if err != nil {
+			completionPrice = 0.0
+		}
+		costPer1MOut = completionPrice * 1_000_000
+
+		// Cache reading is typically charged similar to input
+		cacheReadPrice, err := strconv.ParseFloat(model.Pricing.Request, 64)
+		if err != nil {
+			cacheReadPrice = 0.0
+		}
+		costPer1MInCached = cacheReadPrice * 1_000_000
+
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.DisplayName,
-			CostPer1MIn:            model.Pricing.InputPerMillion,
-			CostPer1MOut:           model.Pricing.OutputPerMillion,
-			CostPer1MInCached:      model.Pricing.CacheReadPerMillion,
+			CostPer1MIn:            costPer1MIn,
+			CostPer1MOut:           costPer1MOut,
+			CostPer1MInCached:      costPer1MInCached,
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.MaxOutput,
