@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -108,21 +109,21 @@ func main() {
 		if err != nil {
 			promptPrice = 0.0
 		}
-		costPer1MIn = promptPrice * 1_000_000
+		costPer1MIn = math.Round(promptPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		// Handle completion price conversion
 		completionPrice, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 		if err != nil {
 			completionPrice = 0.0
 		}
-		costPer1MOut = completionPrice * 1_000_000
+		costPer1MOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		// Cache reading is typically charged similar to input
 		cacheReadPrice, err := strconv.ParseFloat(model.Pricing.Request, 64)
 		if err != nil {
 			cacheReadPrice = 0.0
 		}
-		costPer1MInCached = cacheReadPrice * 1_000_000
+		costPer1MInCached = math.Round(cacheReadPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		m := catwalk.Model{
 			ID:                     model.ID,
