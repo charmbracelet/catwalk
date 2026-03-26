@@ -21,12 +21,13 @@ import (
 
 // Model represents a model from the Nebius Token Factory API.
 type Model struct {
-	ID            string  `json:"id"`
-	DisplayName   string  `json:"display_name"`
-	ContextLength int64   `json:"context_length"`
-	MaxOutput     int64   `json:"max_output"`
-	Reasoning     bool    `json:"reasoning"`
-	Pricing       Pricing `json:"pricing"`
+	ID                string   `json:"id"`
+	DisplayName       string   `json:"display_name"`
+	ContextLength     int64    `json:"context_length"`
+	MaxOutput         int64    `json:"max_output"`
+	Reasoning         bool     `json:"reasoning"`
+	SupportedFeatures []string `json:"supported_features,omitempty"`
+	Pricing           Pricing  `json:"pricing"`
 }
 
 // Pricing contains the pricing information for a model from the Nebius API.
@@ -125,6 +126,17 @@ func main() {
 		}
 		costPer1MInCached = math.Round(cacheReadPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
+		// Determine if reasoning is supported based on supported_features or the legacy Reasoning field
+		canReason := model.Reasoning
+		if !canReason && model.SupportedFeatures != nil {
+			for _, feature := range model.SupportedFeatures {
+				if feature == "reasoning" {
+					canReason = true
+					break
+				}
+			}
+		}
+
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.DisplayName,
@@ -134,7 +146,7 @@ func main() {
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.MaxOutput,
-			CanReason:              model.Reasoning,
+			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         false,
