@@ -48,6 +48,13 @@ func fetchNebiusModels() (*ModelsResponse, error) {
 		nil,
 	)
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
+
+	// Read API key from environment variable
+	apiKey := os.Getenv("NEBIUS_API_KEY")
+	if apiKey != "" {
+		req.Header.Set("Authorization", "Bearer "+apiKey)
+	}
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return nil, err //nolint:wrapcheck
@@ -73,7 +80,7 @@ func main() {
 	nebiusProvider := catwalk.Provider{
 		Name:                "Nebius Token Factory",
 		ID:                  catwalk.InferenceProviderNebius,
-		APIKey:              "$NEBIUS_API_KEY",
+		APIKey:              os.Getenv("NEBIUS_API_KEY"),
 		APIEndpoint:         "https://api.tokenfactory.nebius.com/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "Qwen/Qwen3-Coder-30B-A3B-Instruct",
