@@ -175,6 +175,5 @@ func supportsTools(modelID string) bool {
 		"llama-4",
 		"mistral-nemo",
 		"qwen2.5",
-		"gpt-oss",
 	)
 }
