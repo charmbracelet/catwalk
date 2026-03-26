@@ -22,7 +22,7 @@ import (
 // Model represents a model from the Nebius Token Factory API.
 type Model struct {
 	ID                string   `json:"id"`
-	DisplayName       string   `json:"display_name"`
+	DisplayName       string   `json:"name"`
 	ContextLength     int64    `json:"context_length"`
 	MaxOutput         int64    `json:"max_output"`
 	Reasoning         bool     `json:"reasoning"`
