@@ -28,6 +28,9 @@ type Model struct {
 	Reasoning         bool     `json:"reasoning"`
 	SupportedFeatures []string `json:"supported_features,omitempty"`
 	Pricing           Pricing  `json:"pricing"`
+	Architecture      struct {
+		Modality string `json:"modality"`
+	} `json:"architecture,omitempty"`
 }
 
 // Pricing contains the pricing information for a model from the Nebius API.
@@ -137,6 +140,13 @@ func main() {
 			}
 		}
 
+		// Determine if model supports images based on modality
+		supportsImages := false
+		if model.Architecture.Modality != "" {
+			// Check if the modality contains "image" anywhere in the string
+			supportsImages = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
+		}
+
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.DisplayName,
@@ -149,7 +159,7 @@ func main() {
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         false,
+			SupportsImages:         supportsImages,
 		}
 
 		nebiusProvider.Models = append(nebiusProvider.Models, m)
