@@ -47,6 +47,7 @@ const (
 	InferenceProviderIoNet        InferenceProvider = "ionet"
 	InferenceProviderQiniuCloud   InferenceProvider = "qiniucloud"
 	InferenceProviderAvian        InferenceProvider = "avian"
+	InferenceProviderNebius       InferenceProvider = "nebius"
 )
 
 // Provider represents an AI provider configuration.
@@ -117,6 +118,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderMiniMaxChina,
 		InferenceProviderQiniuCloud,
 		InferenceProviderAvian,
+		InferenceProviderNebius,
 	}
 }
 

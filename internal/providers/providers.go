@@ -42,6 +42,9 @@ var zhipuConfig []byte
 //go:embed configs/zhipu-coding.json
 var zhipuCodingConfig []byte
 
+//go:embed configs/nebius.json
+var nebiusConfig []byte
+
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
@@ -121,6 +124,7 @@ var providerRegistry = []ProviderFunc{
 	ioNetProvider,
 	qiniuCloudProvider,
 	avianProvider,
+	nebiusProvider,
 }
 
 // GetAll returns all registered providers.
@@ -243,6 +247,10 @@ func ioNetProvider() catwalk.Provider {
 
 func qiniuCloudProvider() catwalk.Provider {
 	return loadProviderFromConfig(qiniuCloudConfig)
+}
+
+func nebiusProvider() catwalk.Provider {
+	return loadProviderFromConfig(nebiusConfig)
 }
 
 func avianProvider() catwalk.Provider {
