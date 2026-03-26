@@ -4,7 +4,7 @@
   "api_key": "$IONET_API_KEY",
   "api_endpoint": "https://api.intelligence.io.solutions/api/v1",
   "type": "openai-compat",
-  "default_large_model_id": "zai-org/GLM-4.7",
+  "default_large_model_id": "moonshotai/Kimi-K2.5",
   "default_small_model_id": "zai-org/GLM-4.7-Flash",
   "models": [
     {
