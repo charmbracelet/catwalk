@@ -1,4 +1,4 @@
-// Package main provides a command-line tool to fetch models from Nebius Tokenfactory
+// Package main provides a command-line tool to fetch models from Nebius Token Factory
 // and generate a configuration file for the provider.
 package main
 
@@ -85,8 +85,8 @@ func main() {
 	nebiusProvider := catwalk.Provider{
 		Name:                "Nebius Token Factory",
 		ID:                  catwalk.InferenceProviderNebius,
-		APIKey:              os.Getenv("NEBIUS_API_KEY"),
-		APIEndpoint:         "https://api.tokenfactory.nebius.com/v1",
+		APIKey:              "$NEBIUS_API_KEY",
+		APIEndpoint:         "https://api.tokenfactory.nebius.com/v1", // this is their default region, eu-north1
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "Qwen/Qwen3-Coder-30B-A3B-Instruct",
 		DefaultSmallModelID: "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
