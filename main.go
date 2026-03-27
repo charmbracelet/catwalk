@@ -137,10 +137,10 @@ func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider) {
 	
 	if len(provider.Models) > 0 {
 		fmt.Fprintf(w, "\n## Models\n\n")
-		fmt.Fprintf(w, "| Model ID | Name | Context Window | Default Max Tokens |\n")
-		fmt.Fprintf(w, "|----------|------|----------------|------------------|\n")
+		fmt.Fprintf(w, "| Model ID | Name | Context Window | Default Max Tokens | Input Cost ($/M) | Output Cost ($/M) |\n")
+		fmt.Fprintf(w, "|----------|------|----------------|------------------|------------------|------------------|\n")
 		for _, model := range provider.Models {
-			fmt.Fprintf(w, "| `%s` | %s | %d | %d |\n", model.ID, model.Name, model.ContextWindow, model.DefaultMaxTokens)
+			fmt.Fprintf(w, "| `%s` | %s | %d | %d | %.6f | %.6f |\n", model.ID, model.Name, model.ContextWindow, model.DefaultMaxTokens, model.CostPer1MIn, model.CostPer1MOut)
 		}
 	}
 }
