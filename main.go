@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"sort"
 	"strings"
 	"time"
 
@@ -110,7 +111,7 @@ func providersSpecificHandler(w http.ResponseWriter, r *http.Request) {
 	if pretty {
 		// Return as markdown table
 		w.Header().Set("Content-Type", "text/markdown")
-		renderProviderMarkdown(w, *foundProvider)
+		renderProviderMarkdown(w, *foundProvider, r)
 	} else {
 		// Return as JSON
 		w.Header().Set("Content-Type", "application/json")
@@ -122,7 +123,7 @@ func providersSpecificHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider) {
+func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r *http.Request) {
 	// Header
 	fmt.Fprintf(w, "# Provider: %s\n\n", provider.Name)
 	
@@ -137,10 +138,33 @@ func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider) {
 	
 	if len(provider.Models) > 0 {
 		fmt.Fprintf(w, "\n## Models\n\n")
-		fmt.Fprintf(w, "| Model ID | Name | Context Window | Default Max Tokens | Input Cost ($/M) | Output Cost ($/M) |\n")
-		fmt.Fprintf(w, "|----------|------|----------------|------------------|------------------|------------------|\n")
-		for _, model := range provider.Models {
-			fmt.Fprintf(w, "| `%s` | %s | %d | %d | %.6f | %.6f |\n", model.ID, model.Name, model.ContextWindow, model.DefaultMaxTokens, model.CostPer1MIn, model.CostPer1MOut)
+		
+		// Handle sorting
+		models := provider.Models
+		sortParam := r.URL.Query().Get("sort")
+		
+		switch sortParam {
+		case "output":
+			// Sort by output cost (ascending)
+			sort.Slice(models, func(i, j int) bool {
+				return models[i].CostPer1MOut < models[j].CostPer1MOut
+			})
+		case "context":
+			// Sort by context window (descending)
+			sort.Slice(models, func(i, j int) bool {
+				return models[i].ContextWindow > models[j].ContextWindow
+			})
+		default:
+			// Default sort by input cost (ascending)
+			sort.Slice(models, func(i, j int) bool {
+				return models[i].CostPer1MIn < models[j].CostPer1MIn
+			})
+		}
+		
+		fmt.Fprintf(w, "| Model ID | Name | Context Window | Input Cost ($/M) | Output Cost ($/M) |\n")
+		fmt.Fprintf(w, "|----------|------|----------------|------------------|------------------|\n")
+		for _, model := range models {
+			fmt.Fprintf(w, "| `%s` | %s | %d | %.6f | %.6f |\n", model.ID, model.Name, model.ContextWindow, model.CostPer1MIn, model.CostPer1MOut)
 		}
 	}
 }
