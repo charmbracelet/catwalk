@@ -123,6 +123,13 @@ func providersSpecificHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func yesNo(b bool) string {
+	if b {
+		return "yes"
+	}
+	return "no"
+}
+
 func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r *http.Request) {
 	// Header
 	fmt.Fprintf(w, "# Provider: %s\n\n", provider.Name)
@@ -137,7 +144,7 @@ func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r 
 	fmt.Fprintf(w, "| Default Small Model ID | `%s` |\n", provider.DefaultSmallModelID)
 
 	if len(provider.Models) > 0 {
-		fmt.Fprintf(w, "\n## Models\n\n")
+		fmt.Fprintf(w, "\n## Available Models\n\n")
 
 		// Handle sorting
 		models := provider.Models
@@ -161,10 +168,10 @@ func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r 
 			})
 		}
 
-		fmt.Fprintf(w, "| Model ID | Name | Context Window | Input Cost ($/M) | Output Cost ($/M) |\n")
-		fmt.Fprintf(w, "|----------|------|----------------|------------------|------------------|\n")
+		fmt.Fprintf(w, "| Name | ID | Context Window | Input Cost ($/M) | Output Cost ($/M) | Reasoning |\n")
+		fmt.Fprintf(w, "|----------|------|----------------|------------------|------------------|----------|\n")
 		for _, model := range models {
-			fmt.Fprintf(w, "| `%s` | %s | %d | %.6f | %.6f |\n", model.ID, model.Name, model.ContextWindow, model.CostPer1MIn, model.CostPer1MOut)
+			fmt.Fprintf(w, "| %s | `%s` | %d | %.6f | %.6f | %s |\n", model.Name, model.ID, model.ContextWindow, model.CostPer1MIn, model.CostPer1MOut, yesNo(model.CanReason))
 		}
 	}
 }
