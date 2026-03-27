@@ -4,11 +4,14 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 
 	"charm.land/catwalk/internal/providers"
+	"charm.land/catwalk/pkg/catwalk"
 	"github.com/charmbracelet/x/etag"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -69,6 +72,79 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func providersSpecificHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// Extract provider ID from the URL path
+	path := strings.TrimPrefix(r.URL.Path, "/v2/providers/")
+	providerID := strings.TrimSuffix(path, "/")
+
+	if providerID == "" {
+		http.Error(w, "Provider ID is required", http.StatusBadRequest)
+		return
+	}
+
+	// Check if pretty printing is requested
+	pretty := r.URL.Query().Get("pretty") == "true"
+
+	// Get all providers
+	allProviders := providers.GetAll()
+	
+	// Find the specific provider by ID
+	var foundProvider *catwalk.Provider
+	for _, provider := range allProviders {
+		if string(provider.ID) == providerID {
+			foundProvider = &provider
+			break
+		}
+	}
+
+	if foundProvider == nil {
+		http.Error(w, "Provider not found", http.StatusNotFound)
+		return
+	}
+
+	if pretty {
+		// Return as markdown table
+		w.Header().Set("Content-Type", "text/markdown")
+		renderProviderMarkdown(w, *foundProvider)
+	} else {
+		// Return as JSON
+		w.Header().Set("Content-Type", "application/json")
+		if err := json.NewEncoder(w).Encode(foundProvider); err != nil {
+			log.Printf("Error encoding provider response: %v", err)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+}
+
+func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider) {
+	// Header
+	fmt.Fprintf(w, "# Provider: %s\n\n", provider.Name)
+	
+	// Basic info table
+	fmt.Fprintf(w, "| Field | Value |\n")
+	fmt.Fprintf(w, "|-------|-------|\n")
+	fmt.Fprintf(w, "| ID | `%s` |\n", provider.ID)
+	fmt.Fprintf(w, "| Type | `%s` |\n", provider.Type)
+	fmt.Fprintf(w, "| API Endpoint | `%s` |\n", provider.APIEndpoint)
+	fmt.Fprintf(w, "| Default Large Model ID | `%s` |\n", provider.DefaultLargeModelID)
+	fmt.Fprintf(w, "| Default Small Model ID | `%s` |\n", provider.DefaultSmallModelID)
+	
+	if len(provider.Models) > 0 {
+		fmt.Fprintf(w, "\n## Models\n\n")
+		fmt.Fprintf(w, "| Model ID | Name | Context Window | Default Max Tokens |\n")
+		fmt.Fprintf(w, "|----------|------|----------------|------------------|\n")
+		for _, model := range provider.Models {
+			fmt.Fprintf(w, "| `%s` | %s | %d | %d |\n", model.ID, model.Name, model.ContextWindow, model.DefaultMaxTokens)
+		}
+	}
+}
+
 func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
@@ -81,6 +157,7 @@ func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
+	mux.HandleFunc("/v2/providers/", providersSpecificHandler)
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
