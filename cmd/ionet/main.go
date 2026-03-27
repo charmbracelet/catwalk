@@ -160,6 +160,7 @@ func isReasoningModel(modelID string) bool {
 	return xstrings.ContainsAnyOf(
 		strings.ToLower(modelID),
 		"-thinking",
+		"kimi-k2.5",
 		"deepseek",
 		"glm",
 		"gpt-oss",
