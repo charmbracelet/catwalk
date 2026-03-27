@@ -93,7 +93,7 @@ func providersSpecificHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Get all providers
 	allProviders := providers.GetAll()
-	
+
 	// Find the specific provider by ID
 	var foundProvider *catwalk.Provider
 	for _, provider := range allProviders {
@@ -126,7 +126,7 @@ func providersSpecificHandler(w http.ResponseWriter, r *http.Request) {
 func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r *http.Request) {
 	// Header
 	fmt.Fprintf(w, "# Provider: %s\n\n", provider.Name)
-	
+
 	// Basic info table
 	fmt.Fprintf(w, "| Field | Value |\n")
 	fmt.Fprintf(w, "|-------|-------|\n")
@@ -135,14 +135,14 @@ func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r 
 	fmt.Fprintf(w, "| API Endpoint | `%s` |\n", provider.APIEndpoint)
 	fmt.Fprintf(w, "| Default Large Model ID | `%s` |\n", provider.DefaultLargeModelID)
 	fmt.Fprintf(w, "| Default Small Model ID | `%s` |\n", provider.DefaultSmallModelID)
-	
+
 	if len(provider.Models) > 0 {
 		fmt.Fprintf(w, "\n## Models\n\n")
-		
+
 		// Handle sorting
 		models := provider.Models
 		sortParam := r.URL.Query().Get("sort")
-		
+
 		switch sortParam {
 		case "output":
 			// Sort by output cost (ascending)
@@ -160,7 +160,7 @@ func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r 
 				return models[i].CostPer1MIn < models[j].CostPer1MIn
 			})
 		}
-		
+
 		fmt.Fprintf(w, "| Model ID | Name | Context Window | Input Cost ($/M) | Output Cost ($/M) |\n")
 		fmt.Fprintf(w, "|----------|------|----------------|------------------|------------------|\n")
 		for _, model := range models {
