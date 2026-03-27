@@ -268,6 +268,19 @@
       "options": {}
     },
     {
+      "id": "zai-org/GLM-4.7:fireworks-ai",
+      "name": "zai-org/GLM-4.7 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "zai-org/GLM-5:fireworks-ai",
       "name": "zai-org/GLM-5 (fireworks-ai)",
       "cost_per_1m_in": 0,
