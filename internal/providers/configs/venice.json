@@ -294,6 +294,25 @@
       "options": {}
     },
     {
+      "id": "openai-gpt-54-mini",
+      "name": "GPT-5.4 Mini",
+      "cost_per_1m_in": 0.9375,
+      "cost_per_1m_out": 5.625,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
+      "options": {}
+    },
+    {
       "id": "openai-gpt-54-pro",
       "name": "GPT-5.4 Pro",
       "cost_per_1m_in": 37.5,
