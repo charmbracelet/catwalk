@@ -23,11 +23,8 @@ type ModelsResponse struct {
 }
 
 type VeniceModel struct {
-	Created   int64           `json:"created"`
 	ID        string          `json:"id"`
 	ModelSpec VeniceModelSpec `json:"model_spec"`
-	Object    string          `json:"object"`
-	OwnedBy   string          `json:"owned_by"`
 	Type      string          `json:"type"`
 }
 
@@ -37,23 +34,17 @@ type VeniceModelSpec struct {
 	Capabilities           VeniceModelCapabilities `json:"capabilities"`
 	Constraints            VeniceModelConstraints  `json:"constraints"`
 	Name                   string                  `json:"name"`
-	ModelSource            string                  `json:"modelSource"`
 	Offline                bool                    `json:"offline"`
 	Pricing                VeniceModelPricing      `json:"pricing"`
-	Traits                 []string                `json:"traits"`
 	Beta                   bool                    `json:"beta"`
 }
 
 type VeniceModelCapabilities struct {
-	OptimizedForCode        bool   `json:"optimizedForCode"`
-	Quantization            string `json:"quantization"`
-	SupportsFunctionCalling bool   `json:"supportsFunctionCalling"`
-	SupportsReasoning       bool   `json:"supportsReasoning"`
-	SupportsReasoningEffort bool   `json:"supportsReasoningEffort"`
-	SupportsResponseSchema  bool   `json:"supportsResponseSchema"`
-	SupportsVision          bool   `json:"supportsVision"`
-	SupportsWebSearch       bool   `json:"supportsWebSearch"`
-	SupportsLogProbs        bool   `json:"supportsLogProbs"`
+	OptimizedForCode        bool `json:"optimizedForCode"`
+	SupportsFunctionCalling bool `json:"supportsFunctionCalling"`
+	SupportsReasoning       bool `json:"supportsReasoning"`
+	SupportsReasoningEffort bool `json:"supportsReasoningEffort"`
+	SupportsVision          bool `json:"supportsVision"`
 }
 
 type VeniceModelConstraints struct {
@@ -71,8 +62,7 @@ type VeniceModelPricing struct {
 }
 
 type VeniceModelPricingValue struct {
-	USD  float64 `json:"usd"`
-	Diem float64 `json:"diem"`
+	USD float64 `json:"usd"`
 }
 
 func fetchVeniceModels(apiEndpoint string) (*ModelsResponse, error) {
@@ -161,7 +151,7 @@ func main() {
 		Models:      []catwalk.Model{},
 	}
 
-	codeOptimizedModels := []catwalk.Model{}
+	var codeOptimizedModels []catwalk.Model
 
 	modelsResp, err := fetchVeniceModels(veniceProvider.APIEndpoint)
 	if err != nil {
@@ -252,6 +242,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error marshaling Venice provider:", err)
 	}
+	data = append(data, '\n')
 
 	if err := os.WriteFile("internal/providers/configs/venice.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Venice provider config:", err)
