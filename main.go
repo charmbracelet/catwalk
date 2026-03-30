@@ -128,18 +128,19 @@ func yesNo(b bool) string {
 }
 
 func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r *http.Request) {
-	fmt.Fprintf(w, "# Provider: %s\n\n", provider.Name)
+	var buf strings.Builder
 
-	fmt.Fprintf(w, "| Field | Value |\n")
-	fmt.Fprintf(w, "|-------|-------|\n")
-	fmt.Fprintf(w, "| ID | `%s` |\n", provider.ID)
-	fmt.Fprintf(w, "| Type | `%s` |\n", provider.Type)
-	fmt.Fprintf(w, "| API Endpoint | `%s` |\n", provider.APIEndpoint)
-	fmt.Fprintf(w, "| Default Large Model ID | `%s` |\n", provider.DefaultLargeModelID)
-	fmt.Fprintf(w, "| Default Small Model ID | `%s` |\n", provider.DefaultSmallModelID)
+	fmt.Fprintf(&buf, "# Provider: %s\n\n", provider.Name)
+	fmt.Fprintf(&buf, "| Field | Value |\n")
+	fmt.Fprintf(&buf, "|-------|-------|\n")
+	fmt.Fprintf(&buf, "| ID | `%s` |\n", provider.ID)
+	fmt.Fprintf(&buf, "| Type | `%s` |\n", provider.Type)
+	fmt.Fprintf(&buf, "| API Endpoint | `%s` |\n", provider.APIEndpoint)
+	fmt.Fprintf(&buf, "| Default Large Model ID | `%s` |\n", provider.DefaultLargeModelID)
+	fmt.Fprintf(&buf, "| Default Small Model ID | `%s` |\n", provider.DefaultSmallModelID)
 
 	if len(provider.Models) > 0 {
-		fmt.Fprintf(w, "\n## Available Models\n\n")
+		fmt.Fprintf(&buf, "\n## Available Models\n\n")
 
 		models := provider.Models
 		sortParam := r.URL.Query().Get("sort")
@@ -162,11 +163,16 @@ func renderProviderMarkdown(w http.ResponseWriter, provider catwalk.Provider, r 
 			})
 		}
 
-		fmt.Fprintf(w, "| Name | ID | Context Window | Input Cost ($/M) | Output Cost ($/M) | Reasoning |\n")
-		fmt.Fprintf(w, "|----------|------|----------------|------------------|------------------|----------|\n")
+		fmt.Fprintf(&buf, "| Name | ID | Context Window | Input Cost ($/M) | Output Cost ($/M) | Reasoning |\n")
+		fmt.Fprintf(&buf, "|----------|------|----------------|------------------|------------------|----------|\n")
 		for _, model := range models {
-			fmt.Fprintf(w, "| %s | `%s` | %d | %.6f | %.6f | %s |\n", model.Name, model.ID, model.ContextWindow, model.CostPer1MIn, model.CostPer1MOut, yesNo(model.CanReason))
+			fmt.Fprintf(&buf, "| %s | `%s` | %d | %.6f | %.6f | %s |\n", model.Name, model.ID, model.ContextWindow, model.CostPer1MIn, model.CostPer1MOut, yesNo(model.CanReason))
 		}
+	}
+
+	if _, err := w.Write([]byte(buf.String())); err != nil {
+		log.Printf("Error writing markdown response: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
 
