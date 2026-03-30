@@ -33,6 +33,7 @@ type VeniceModel struct {
 
 type VeniceModelSpec struct {
 	AvailableContextTokens int64                   `json:"availableContextTokens"`
+	MaxCompletionTokens    int64                   `json:"maxCompletionTokens"`
 	Capabilities           VeniceModelCapabilities `json:"capabilities"`
 	Constraints            VeniceModelConstraints  `json:"constraints"`
 	Name                   string                  `json:"name"`
@@ -98,20 +99,6 @@ func fetchVeniceModels(apiEndpoint string) (*ModelsResponse, error) {
 		return nil, err //nolint:wrapcheck
 	}
 	return &mr, nil
-}
-
-func minInt64(a, b int64) int64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func maxInt64(a, b int64) int64 {
-	if a > b {
-		return a
-	}
-	return b
 }
 
 func bestLargeModelID(models []catwalk.Model) string {
@@ -200,9 +187,6 @@ func main() {
 			continue
 		}
 
-		defaultMaxTokens := minInt64(contextWindow/4, 32768)
-		defaultMaxTokens = maxInt64(defaultMaxTokens, 2048)
-
 		canReason := model.ModelSpec.Capabilities.SupportsReasoning
 		var reasoningLevels []string
 		var defaultReasoning string
@@ -234,7 +218,7 @@ func main() {
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
 			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
+			DefaultMaxTokens:       model.ModelSpec.MaxCompletionTokens,
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
