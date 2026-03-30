@@ -49,6 +49,7 @@ type VeniceModelCapabilities struct {
 	Quantization            string `json:"quantization"`
 	SupportsFunctionCalling bool   `json:"supportsFunctionCalling"`
 	SupportsReasoning       bool   `json:"supportsReasoning"`
+	SupportsReasoningEffort bool   `json:"supportsReasoningEffort"`
 	SupportsResponseSchema  bool   `json:"supportsResponseSchema"`
 	SupportsVision          bool   `json:"supportsVision"`
 	SupportsWebSearch       bool   `json:"supportsWebSearch"`
@@ -187,10 +188,13 @@ func main() {
 			continue
 		}
 
-		canReason := model.ModelSpec.Capabilities.SupportsReasoning
+		var (
+			canReason            = model.ModelSpec.Capabilities.SupportsReasoning
+			supportsReasonEffort = model.ModelSpec.Capabilities.SupportsReasoningEffort
+		)
 		var reasoningLevels []string
 		var defaultReasoning string
-		if canReason {
+		if canReason && supportsReasonEffort {
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
