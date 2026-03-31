@@ -10,25 +10,26 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"time"
 	"strings"
+	"time"
+
 	"charm.land/catwalk/pkg/catwalk"
 )
 
 type CortecsModel struct {
-	ID              string  `json:"id"`
-	Object string `json:"object"`
-	Created int64 `json:"created"`
-	OwnedBy            string  `json:"owned_by"`
-	Description string `json:"description"`
-	Pricing         Pricing `json:"pricing"`
-	ContextSize   int64   `json:"context_size"`
-	Tags            []string `json:"tags,omitempty"`
+	ID          string   `json:"id"`
+	Object      string   `json:"object"`
+	Created     int64    `json:"created"`
+	OwnedBy     string   `json:"owned_by"`
+	Description string   `json:"description"`
+	Pricing     Pricing  `json:"pricing"`
+	ContextSize int64    `json:"context_size"`
+	Tags        []string `json:"tags,omitempty"`
 }
 
 type Pricing struct {
-	InputToken              float64 `json:"input_token"`
-	OutputToken          float64 `json:"output_token"`
+	InputToken  float64 `json:"input_token"`
+	OutputToken float64 `json:"output_token"`
 }
 
 type ModelsResponse struct {
@@ -68,12 +69,10 @@ func main() {
 
 	var models []catwalk.Model
 	for _, model := range modelsResp.Data {
-	//	var costPer1MIn, costPer1MOut float64
+		var costPer1MIn = model.Pricing.InputToken
+		var costPer1MOut = model.Pricing.OutputToken
 
-	var costPer1MIn float64 = model.Pricing.InputToken
-		var costPer1MOut float64 = model.Pricing.OutputToken
-
-		// Determine if reasoning is supported based on tags 
+		// Determine if reasoning is supported based on tags
 		canReason := false
 		if model.Tags != nil {
 			for _, tag := range model.Tags {
@@ -84,7 +83,7 @@ func main() {
 			}
 		}
 
-		// TODO: determine if model supports images
+		// TODO: decide on a proxy tag to determine if the model supports images
 		supportsImages := false
 
 		model := catwalk.Model{
@@ -123,10 +122,10 @@ func main() {
 	if err != nil {
 		log.Fatal("Error marshaling Cortecs provider:", err)
 	}
-	
+
 	if err := os.WriteFile("./internal/providers/configs/cortecs.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Cortecs provider config:", err)
 	}
-	
+
 	fmt.Println("Cortecs provider configuration generated successfully!")
 }
