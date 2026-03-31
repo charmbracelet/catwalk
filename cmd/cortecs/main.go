@@ -17,15 +17,13 @@ import (
 
 type CortecsModel struct {
 	ID              string  `json:"id"`
-	Name            string  `json:"name"`
-	ContextLength   int64   `json:"context_size"`
-	MaxOutput       int64   `json:"default_max_tokens"`
-	Reasoning       bool    `json:"reasoning"`
-	Tags            []string `json:"tags,omitempty"`
+	Object string `json:"object"`
+	Created int64 `json:"created"`
+	OwnedBy            string  `json:"owned_by"`
+	Description string `json:"description"`
 	Pricing         Pricing `json:"pricing"`
-	Architecture    struct {
-		Modality string `json:"modality"`
-	} `json:"architecture,omitempty"`
+	ContextSize   int64   `json:"context_size"`
+	Tags            []string `json:"tags,omitempty"`
 }
 
 type Pricing struct {
@@ -70,51 +68,37 @@ func main() {
 
 	var models []catwalk.Model
 	for _, model := range modelsResp.Data {
-		var reasoningLevels []string
-		var defaultReasoning string
-		if model.Reasoning {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
-		}
-		// Convert pricing from string to float64
-		var costPer1MIn, costPer1MOut float64
+	//	var costPer1MIn, costPer1MOut float64
 
-		// Handle prompt price conversion
-		costPer1MIn = model.Pricing.InputToken
-
-		// Handle completion price conversion
-		costPer1MOut = model.Pricing.OutputToken
+	var costPer1MIn float64 = model.Pricing.InputToken
+		var costPer1MOut float64 = model.Pricing.OutputToken
 
 		// Determine if reasoning is supported based on tags 
-		canReason := model.Reasoning
-		if !canReason && model.Tags != nil {
+		canReason := false
+		if model.Tags != nil {
 			for _, tag := range model.Tags {
-				if tag == "reasoning" {
+				if strings.ToLower(tag) == "reasoning" {
 					canReason = true
 					break
 				}
 			}
 		}
 
-		// Determine if model supports images based on modality
+		// TODO: determine if model supports images
 		supportsImages := false
-		if model.Architecture.Modality != "" {
-			// Check if the modality contains "image" anywhere in the string
-			supportsImages = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
-		}
 
 		model := catwalk.Model{
 			ID:                     model.ID,
-			Name:                   model.Name,
-			ContextWindow:          model.ContextLength,
+			Name:                   model.ID,
+			ContextWindow:          model.ContextSize,
 			CostPer1MIn:            costPer1MIn,
 			CostPer1MOut:           costPer1MOut,
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
-			DefaultMaxTokens:       model.ContextLength,
+			DefaultMaxTokens:       model.ContextSize,
 			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
+			DefaultReasoningEffort: "unknown",
+			ReasoningLevels:        []string{"unknown"},
 			SupportsImages:         supportsImages,
 		}
 		models = append(models, model)

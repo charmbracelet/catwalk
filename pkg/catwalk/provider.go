@@ -41,6 +41,7 @@ const (
 	InferenceAIHubMix             InferenceProvider = "aihubmix"
 	InferenceKimiCoding           InferenceProvider = "kimi-coding"
 	InferenceProviderCopilot      InferenceProvider = "copilot"
+	InferenceProviderCortecs      InferenceProvider = "cortecs"
 	InferenceProviderVercel       InferenceProvider = "vercel"
 	InferenceProviderMiniMax      InferenceProvider = "minimax"
 	InferenceProviderMiniMaxChina InferenceProvider = "minimax-china"
@@ -112,6 +113,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceAIHubMix,
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
+		InferenceProviderCortecs,
 		InferenceProviderVercel,
 		InferenceProviderMiniMax,
 		InferenceProviderMiniMaxChina,
