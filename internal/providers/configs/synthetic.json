@@ -23,8 +23,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:deepseek-ai/DeepSeek-V3",
@@ -36,8 +35,7 @@
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:deepseek-ai/DeepSeek-V3.2",
@@ -55,8 +53,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:zai-org/GLM-4.7",
@@ -74,8 +71,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:zai-org/GLM-4.7-Flash",
@@ -93,8 +89,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:zai-org/GLM-5",
@@ -112,8 +107,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:moonshotai/Kimi-K2-Instruct-0905",
@@ -125,8 +119,7 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:moonshotai/Kimi-K2-Thinking",
@@ -144,8 +137,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:moonshotai/Kimi-K2.5",
@@ -163,8 +155,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "hf:nvidia/Kimi-K2.5-NVFP4",
@@ -182,8 +173,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "hf:meta-llama/Llama-3.3-70B-Instruct",
@@ -195,8 +185,7 @@
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:MiniMaxAI/MiniMax-M2.1",
@@ -214,8 +203,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:MiniMaxAI/MiniMax-M2.5",
@@ -233,8 +221,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
@@ -252,8 +239,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:Qwen/Qwen3-235B-A22B-Thinking-2507",
@@ -271,8 +257,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:Qwen/Qwen3-Coder-480B-A35B-Instruct",
@@ -284,8 +269,7 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "hf:Qwen/Qwen3.5-397B-A17B",
@@ -297,8 +281,7 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "hf:openai/gpt-oss-120b",
@@ -316,8 +299,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     }
   ]
 }

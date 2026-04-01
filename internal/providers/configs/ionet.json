@@ -17,8 +17,7 @@
       "context_window": 106000,
       "default_max_tokens": 10600,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
@@ -36,8 +35,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.5",
@@ -49,8 +47,7 @@
       "context_window": 196600,
       "default_max_tokens": 19660,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistralai/Mistral-Large-Instruct-2411",
@@ -62,8 +59,7 @@
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "moonshotai/Kimi-K2-Instruct-0905",
@@ -75,8 +71,7 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/Kimi-K2-Thinking",
@@ -94,8 +89,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/Kimi-K2.5",
@@ -113,8 +107,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-120b",
@@ -132,8 +125,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-20b",
@@ -151,8 +143,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
@@ -164,8 +155,7 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org/GLM-4.6",
@@ -183,8 +173,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org/GLM-4.7",
@@ -202,8 +191,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org/GLM-4.7-Flash",
@@ -221,8 +209,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org/GLM-5",
@@ -240,8 +227,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     }
   ]
 }

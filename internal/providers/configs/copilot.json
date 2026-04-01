@@ -16,8 +16,7 @@
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4.5",
@@ -29,8 +28,7 @@
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4.6",
@@ -42,8 +40,7 @@
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4.6-fast",
@@ -55,8 +52,7 @@
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4",
@@ -68,8 +64,7 @@
       "context_window": 216000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4.5",
@@ -81,8 +76,7 @@
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4.6",
@@ -94,8 +88,7 @@
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gemini-2.5-pro",
@@ -107,8 +100,7 @@
       "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gemini-3-flash-preview",
@@ -120,8 +112,7 @@
       "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gemini-3.1-pro-preview",
@@ -133,8 +124,7 @@
       "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "goldeneye-free-auto",
@@ -146,8 +136,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-3.5-turbo-0613",
@@ -159,8 +148,7 @@
       "context_window": 16384,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "gpt-4-0125-preview",
@@ -172,8 +160,7 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "gpt-4-0613",
@@ -185,8 +172,7 @@
       "context_window": 32768,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "gpt-5-mini",
@@ -198,8 +184,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.1",
@@ -211,8 +196,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.1-codex",
@@ -224,8 +208,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.1-codex-max",
@@ -237,8 +220,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.1-codex-mini",
@@ -250,8 +232,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.2",
@@ -263,8 +244,7 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.2-codex",
@@ -276,8 +256,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.3-codex",
@@ -289,8 +268,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.4",
@@ -302,8 +280,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.4-mini",
@@ -315,8 +292,7 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "grok-code-fast-1",
@@ -328,8 +304,7 @@
       "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     }
   ]
 }
