@@ -131,6 +131,13 @@ func main() {
 
 		canReason := model.hasFeature("reasoning")
 
+		var reasoningLevels []string
+		var defaultReasoning string
+		if canReason {
+			reasoningLevels = []string{"low", "medium", "high"}
+			defaultReasoning = "medium"
+		}
+
 		// Determine if model supports images based on modality
 		supportsImages := false
 		if model.Architecture.Modality != "" {
@@ -145,10 +152,10 @@ func main() {
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.ContextLength / 10,
+			DefaultMaxTokens:       model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
 			CanReason:              canReason,
-			ReasoningLevels:        []string{"low", "medium", "high"},
-			DefaultReasoningEffort: "medium",
+			ReasoningLevels:        reasoningLevels,
+			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         supportsImages,
 		}
 
