@@ -23,8 +23,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4-6",
@@ -42,8 +41,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4-5",
@@ -61,8 +59,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4-6",
@@ -80,8 +77,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "deepseek-v3.2",
@@ -93,8 +89,7 @@
       "context_window": 160000,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-4.6",
@@ -106,8 +101,7 @@
       "context_window": 198000,
       "default_max_tokens": 16384,
       "can_reason": true,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-4.7",
@@ -119,8 +113,7 @@
       "context_window": 198000,
       "default_max_tokens": 16384,
       "can_reason": true,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-4.7-flash",
@@ -138,8 +131,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "olafangensan-glm-4.7-flash-heretic",
@@ -151,8 +143,7 @@
       "context_window": 200000,
       "default_max_tokens": 24000,
       "can_reason": true,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-5",
@@ -164,8 +155,7 @@
       "context_window": 198000,
       "default_max_tokens": 32000,
       "can_reason": true,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai-gpt-4o-2024-11-20",
@@ -177,8 +167,7 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-4o-mini-2024-07-18",
@@ -190,8 +179,7 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-52",
@@ -209,8 +197,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai-gpt-52-codex",
@@ -228,8 +215,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-53-codex",
@@ -247,8 +233,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-54",
@@ -266,8 +251,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-54-mini",
@@ -285,8 +269,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-54-pro",
@@ -304,8 +287,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gemini-3-flash-preview",
@@ -323,8 +305,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gemini-3-1-pro-preview",
@@ -342,8 +323,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google-gemma-3-27b-it",
@@ -355,8 +335,7 @@
       "context_window": 198000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "grok-41-fast",
@@ -374,8 +353,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "grok-4-20-beta",
@@ -393,8 +371,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "grok-code-fast-1",
@@ -412,8 +389,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "kimi-k2-thinking",
@@ -431,8 +407,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "kimi-k2-5",
@@ -450,8 +425,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "llama-3.2-3b",
@@ -463,8 +437,7 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "llama-3.3-70b",
@@ -476,8 +449,7 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax-m21",
@@ -495,8 +467,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax-m25",
@@ -514,8 +485,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax-m27",
@@ -533,8 +503,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral-small-3-2-24b-instruct",
@@ -546,8 +515,7 @@
       "context_window": 256000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "nvidia-nemotron-3-nano-30b-a3b",
@@ -559,8 +527,7 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai-gpt-oss-120b",
@@ -572,8 +539,7 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -585,8 +551,7 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-235b-a22b-thinking-2507",
@@ -598,8 +563,7 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": true,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct-turbo",
@@ -611,8 +575,7 @@
       "context_window": 256000,
       "default_max_tokens": 65536,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct",
@@ -624,8 +587,7 @@
       "context_window": 256000,
       "default_max_tokens": 65536,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-next-80b",
@@ -637,8 +599,7 @@
       "context_window": 256000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-5-35b-a3b",
@@ -666,8 +627,7 @@
       "context_window": 256000,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "qwen3-vl-235b-a22b",
@@ -679,8 +639,7 @@
       "context_window": 256000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "venice-uncensored-role-play",
@@ -692,8 +651,7 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     }
   ]
 }
