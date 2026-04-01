@@ -18,11 +18,6 @@ import (
 
 type CortecsModel struct {
 	ID          string   `json:"id"`
-	Object      string   `json:"object"`
-	Created     int64    `json:"created"`
-	OwnedBy     string   `json:"owned_by"`
-	Description string   `json:"description"`
-	Pricing     Pricing  `json:"pricing"`
 	ContextSize int64    `json:"context_size"`
 	Tags        []string `json:"tags,omitempty"`
 }
@@ -38,11 +33,6 @@ func (m CortecsModel) hasTag(tagValue string) bool {
 	return false
 }
 
-type Pricing struct {
-	InputToken  float64 `json:"input_token"`
-	OutputToken float64 `json:"output_token"`
-}
-
 type ModelsResponse struct {
 	Data []CortecsModel `json:"data"`
 }
@@ -52,7 +42,6 @@ type ModelDetailResponse struct {
 }
 
 type ModelDetail struct {
-	ID         string  `json:"id"`
 	ScreenName string  `json:"screen_name"`
 	Context    int64   `json:"context"`
 	InputCost  float64 `json:"input_tokens"`
