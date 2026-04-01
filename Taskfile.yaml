@@ -99,6 +99,11 @@ tasks:
     cmds:
       - go run cmd/ionet/main.go
 
+  gen:nebius:
+    desc: Generate Nebius provider configurations
+    cmds:
+      - go run cmd/nebius/main.go
+
   gen:openrouter:
     desc: Generate openrouter provider configurations
     cmds:
