@@ -69,9 +69,10 @@ func fetchNebiusModels() (*ModelsResponse, error) {
 
 	// Read API key from environment variable
 	apiKey := os.Getenv("NEBIUS_API_KEY")
-	if apiKey != "" {
-		req.Header.Set("Authorization", "Bearer "+apiKey)
+	if apiKey == "" {
+		return nil, fmt.Errorf("$NEBIUS_API_KEY is required")
 	}
+	req.Header.Set("Authorization", "Bearer "+apiKey)
 
 	resp, err := client.Do(req)
 	if err != nil {
@@ -103,7 +104,6 @@ func main() {
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "Qwen/Qwen3-Coder-30B-A3B-Instruct",
 		DefaultSmallModelID: "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
-		Models:              []catwalk.Model{},
 	}
 
 	for _, model := range modelsResp.Data {
@@ -129,19 +129,15 @@ func main() {
 		}
 		costPer1MOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
-		canReason := model.hasFeature("reasoning")
-
-		var reasoningLevels []string
-		var defaultReasoning string
+		var (
+			supportsImages   = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
+			canReason        = model.hasFeature("reasoning")
+			reasoningLevels  []string
+			defaultReasoning string
+		)
 		if canReason {
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
-		}
-
-		// Determine if model supports images based on modality
-		supportsImages := false
-		if model.Architecture.Modality != "" {
-			supportsImages = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
 		}
 
 		m := catwalk.Model{
