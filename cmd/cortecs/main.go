@@ -47,6 +47,18 @@ type ModelsResponse struct {
 	Data []CortecsModel `json:"data"`
 }
 
+type ModelDetailResponse struct {
+	Model ModelDetail `json:"model"`
+}
+
+type ModelDetail struct {
+	ID         string  `json:"id"`
+	ScreenName string  `json:"screen_name"`
+	Context    int64   `json:"context"`
+	InputCost  float64 `json:"input_tokens"`
+	OutputCost float64 `json:"output_tokens"`
+}
+
 // This is used to generate the cortecs.json config file.
 func main() {
 	client := &http.Client{Timeout: 30 * time.Second}
@@ -85,28 +97,66 @@ func main() {
 			continue
 		}
 
-		costPer1MIn := model.Pricing.InputToken
-		costPer1MOut := model.Pricing.OutputToken
+		// Fetch individual model details to get screen_name
+		detailReq, _ := http.NewRequestWithContext(
+			context.Background(),
+			"GET",
+			fmt.Sprintf("https://api.cortecs.ai/v1/models/%s", model.ID),
+			nil,
+		)
+		detailReq.Header.Set("User-Agent", "Crush-Client/1.0")
+
+		detailResp, err := client.Do(detailReq)
+		if err != nil {
+			log.Printf("Warning: Error fetching details for model %s: %v", model.ID, err)
+			// Continue with default model.ID as name if we can't get details
+			continue
+		}
+		defer func() {
+			if err := detailResp.Body.Close(); err != nil {
+				log.Printf("Warning: Error closing response body for model %s: %v", model.ID, err)
+			}
+		}()
+
+		detailBody, err := io.ReadAll(detailResp.Body)
+		if err != nil {
+			log.Printf("Warning: Error reading details for model %s: %v", model.ID, err)
+			continue
+		}
+
+		if detailResp.StatusCode != http.StatusOK {
+			log.Printf("Warning: Error fetching details for model %s: status %d: %s", model.ID, detailResp.StatusCode, detailBody)
+			continue
+		}
+
+		var detailRespData ModelDetailResponse
+		if err := json.Unmarshal(detailBody, &detailRespData); err != nil {
+			log.Printf("Warning: Error parsing details for model %s: %v", model.ID, err)
+			continue
+		}
+
+		costPer1MIn := detailRespData.Model.InputCost
+		costPer1MOut := detailRespData.Model.OutputCost
 
 		canReason := model.hasTag("Reasoning")
 		supportsImages := model.hasTag("Image")
 
 		model := catwalk.Model{
 			ID:                     model.ID,
-			Name:                   model.ID,
-			ContextWindow:          model.ContextSize,
+			Name:                   detailRespData.Model.ScreenName,
+			ContextWindow:          detailRespData.Model.Context,
 			CostPer1MIn:            costPer1MIn,
 			CostPer1MOut:           costPer1MOut,
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
-			DefaultMaxTokens:       model.ContextSize,
+			DefaultMaxTokens:       detailRespData.Model.Context,
 			CanReason:              canReason,
 			DefaultReasoningEffort: "medium",
 			ReasoningLevels:        []string{"low", "medium", "high"},
 			SupportsImages:         supportsImages,
 		}
 		models = append(models, model)
-		fmt.Printf("Added model %s\n", model.ID)
+		fmt.Printf("Added model %s (%s)\n", model.ID, model.Name)
 	}
 
 	cortecsProvider := catwalk.Provider{
