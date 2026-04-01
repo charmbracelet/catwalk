@@ -33,7 +33,6 @@ type Model struct {
 	} `json:"architecture,omitempty"`
 }
 
-// Pricing contains the pricing information for a model from the Nebius API.
 type Pricing struct {
 	Prompt              string `json:"prompt"`
 	Completion          string `json:"completion"`
@@ -43,9 +42,19 @@ type Pricing struct {
 	PricePerMinute      string `json:"price_per_minute"`
 }
 
-// ModelsResponse is the response structure for the Nebius Token Factory models API.
 type ModelsResponse struct {
 	Data []Model `json:"data"`
+}
+
+func (m Model) hasFeature(featureValue string) bool {
+	if m.SupportedFeatures != nil {
+		for _, feature := range m.SupportedFeatures {
+			if strings.EqualFold(feature, featureValue) {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 func fetchNebiusModels() (*ModelsResponse, error) {
@@ -98,6 +107,11 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
+		// we skip models that don't support tool calling
+		if !model.hasFeature("tools") {
+			continue
+		}
+
 		var reasoningLevels []string
 		var defaultReasoning string
 		if model.Reasoning {
@@ -129,21 +143,11 @@ func main() {
 		}
 		costPer1MInCached = math.Round(cacheReadPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
-		// Determine if reasoning is supported based on supported_features or the legacy Reasoning field
-		canReason := model.Reasoning
-		if !canReason && model.SupportedFeatures != nil {
-			for _, feature := range model.SupportedFeatures {
-				if feature == "reasoning" {
-					canReason = true
-					break
-				}
-			}
-		}
+		canReason := model.hasFeature("reasoning")
 
 		// Determine if model supports images based on modality
 		supportsImages := false
 		if model.Architecture.Modality != "" {
-			// Check if the modality contains "image" anywhere in the string
 			supportsImages = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
 		}
 
