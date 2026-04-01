@@ -40,6 +40,19 @@
       "options": {}
     },
     {
+      "id": "MiniMaxAI/MiniMax-M2.5",
+      "name": "MiniMaxAI/MiniMax-M2.5",
+      "cost_per_1m_in": 0.195,
+      "cost_per_1m_out": 1.25,
+      "cost_per_1m_in_cached": 0.1,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 196600,
+      "default_max_tokens": 19660,
+      "can_reason": false,
+      "supports_attachments": false,
+      "options": {}
+    },
+    {
       "id": "mistralai/Mistral-Large-Instruct-2411",
       "name": "Mistral: Mistral Large Instruct 2411",
       "cost_per_1m_in": 2,
