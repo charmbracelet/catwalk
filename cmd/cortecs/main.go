@@ -141,6 +141,13 @@ func main() {
 		canReason := model.hasTag("Reasoning")
 		supportsImages := model.hasTag("Image")
 
+		var reasoningLevels []string
+		var defaultReasoning string
+		if canReason {
+			reasoningLevels = []string{"low", "medium", "high"}
+			defaultReasoning = "medium"
+		}
+
 		model := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   detailRespData.Model.ScreenName,
@@ -151,8 +158,8 @@ func main() {
 			CostPer1MOutCached:     0,
 			DefaultMaxTokens:       model.ContextSize / 10,
 			CanReason:              canReason,
-			DefaultReasoningEffort: "medium",
-			ReasoningLevels:        []string{"low", "medium", "high"},
+			DefaultReasoningEffort: defaultReasoning,
+			ReasoningLevels:        reasoningLevels,
 			SupportsImages:         supportsImages,
 		}
 		models = append(models, model)
