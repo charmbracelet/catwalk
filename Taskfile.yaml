@@ -58,13 +58,16 @@ tasks:
     aliases: [generate, gen]
     cmds:
       - task: gen:aihubmix
+      - task: gen:avian
       - task: gen:copilot
+      - task: gen:cortecs
       - task: gen:huggingface
       - task: gen:ionet
       - task: gen:openrouter
       - task: gen:synthetic
       - task: gen:venice
       - task: gen:vercel
+      - task: gen:xai
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
