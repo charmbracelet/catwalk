@@ -81,6 +81,11 @@ tasks:
     cmds:
       - go run cmd/copilot/main.go
 
+  gen:cortecs:
+    desc: Generate cortecs provider configurations
+    cmds:
+      - go run cmd/cortecs/main.go
+
   gen:huggingface:
     desc: Generate huggingface provider configurations
     cmds:
