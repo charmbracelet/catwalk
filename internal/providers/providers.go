@@ -90,8 +90,8 @@ var qiniuCloudConfig []byte
 //go:embed configs/avian.json
 var avianConfig []byte
 
-//go:embed configs/alibaba.json
-var alibabaConfig []byte
+//go:embed configs/alibaba-coding-plan.json
+var alibabaCodingPlanConfig []byte
 
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
@@ -124,7 +124,7 @@ var providerRegistry = []ProviderFunc{
 	ioNetProvider,
 	qiniuCloudProvider,
 	avianProvider,
-	alibabaProvider,
+	alibabaCodingPlanProvider,
 }
 
 // GetAll returns all registered providers.
@@ -253,6 +253,6 @@ func avianProvider() catwalk.Provider {
 	return loadProviderFromConfig(avianConfig)
 }
 
-func alibabaProvider() catwalk.Provider {
-	return loadProviderFromConfig(alibabaConfig)
+func alibabaCodingPlanProvider() catwalk.Provider {
+	return loadProviderFromConfig(alibabaCodingPlanConfig)
 }

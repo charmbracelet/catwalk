@@ -1,0 +1,107 @@
+{
+  "name": "Alibaba Coding Plan",
+  "id": "alibaba-coding-plan",
+  "type": "openai-compat",
+  "api_key": "$ALIBABA_CODING_PLAN_API_KEY",
+  "api_endpoint": "https://coding-intl.dashscope.aliyuncs.com/v1",
+  "default_large_model_id": "qwen3.5-plus",
+  "default_small_model_id": "qwen3-coder-next",
+  "models": [
+    {
+      "id": "qwen3.5-plus",
+      "name": "Qwen3.5 Plus",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "supports_attachments": false,
+      "can_reason": true
+    },
+    {
+      "id": "qwen3-coder-next",
+      "name": "Qwen3 Coder Next",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "supports_attachments": false,
+      "can_reason": false
+    },
+    {
+      "id": "kimi-k2.5",
+      "name": "Kimi K2.5",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "supports_attachments": true,
+      "can_reason": true
+    },
+    {
+      "id": "MiniMax-M2.5",
+      "name": "MiniMax-M2.5",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 196608,
+      "default_max_tokens": 24576,
+      "supports_attachments": false,
+      "can_reason": true
+    },
+    {
+      "id": "glm-5",
+      "name": "GLM-5",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 202752,
+      "default_max_tokens": 16384,
+      "supports_attachments": false,
+      "can_reason": true
+    },
+    {
+      "id": "qwen3-coder-plus",
+      "name": "Qwen3 Coder Plus",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "supports_attachments": false,
+      "can_reason": false
+    },
+    {
+      "id": "glm-4.7",
+      "name": "GLM-4.7",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 202752,
+      "default_max_tokens": 16384,
+      "supports_attachments": false,
+      "can_reason": true
+    },
+    {
+      "id": "qwen3-max-2026-01-23",
+      "name": "Qwen3 Max",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "supports_attachments": false,
+      "can_reason": false
+    }
+  ]
+}
