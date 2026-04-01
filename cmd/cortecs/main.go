@@ -149,7 +149,7 @@ func main() {
 			CostPer1MOut:           costPer1MOut,
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
-			DefaultMaxTokens:       detailRespData.Model.Context,
+			DefaultMaxTokens:       model.ContextSize / 10,
 			CanReason:              canReason,
 			DefaultReasoningEffort: "medium",
 			ReasoningLevels:        []string{"low", "medium", "high"},

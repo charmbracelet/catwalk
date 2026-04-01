@@ -15,7 +15,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 202752,
-      "default_max_tokens": 202752,
+      "default_max_tokens": 20275,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -34,7 +34,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 203000,
-      "default_max_tokens": 203000,
+      "default_max_tokens": 20300,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -53,7 +53,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 164000,
-      "default_max_tokens": 164000,
+      "default_max_tokens": 16400,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -72,7 +72,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 33000,
-      "default_max_tokens": 33000,
+      "default_max_tokens": 3300,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -91,7 +91,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 25000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -110,7 +110,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 163840,
-      "default_max_tokens": 163840,
+      "default_max_tokens": 16384,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -129,7 +129,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 256000,
+      "default_max_tokens": 25600,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -148,7 +148,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 196608,
-      "default_max_tokens": 196608,
+      "default_max_tokens": 6553,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -167,7 +167,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 1000000,
+      "default_max_tokens": 100000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -186,7 +186,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 203000,
-      "default_max_tokens": 203000,
+      "default_max_tokens": 20300,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -205,7 +205,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 256000,
+      "default_max_tokens": 25600,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -224,7 +224,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 1000000,
+      "default_max_tokens": 100000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -243,7 +243,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 196608,
-      "default_max_tokens": 196608,
+      "default_max_tokens": 19660,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -262,7 +262,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 200000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -281,7 +281,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 196000,
-      "default_max_tokens": 196000,
+      "default_max_tokens": 19600,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -300,7 +300,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -319,7 +319,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 13100,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -338,7 +338,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 3200,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -357,7 +357,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -376,7 +376,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 200000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -395,7 +395,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -414,27 +414,8 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 22000,
-      "default_max_tokens": 22000,
+      "default_max_tokens": 2200,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
-    },
-    {
-      "id": "devstral-small-2512",
-      "name": "Devstral Small 2 2512",
-      "cost_per_1m_in": 0.105,
-      "cost_per_1m_out": 0.315,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262000,
-      "default_max_tokens": 262000,
-      "can_reason": false,
       "reasoning_levels": [
         "low",
         "medium",
@@ -452,7 +433,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 20000,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -471,7 +452,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 1000000,
+      "default_max_tokens": 100000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -490,7 +471,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -509,7 +490,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 256000,
+      "default_max_tokens": 25600,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -528,7 +509,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 256000,
+      "default_max_tokens": 25600,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -547,7 +528,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 256000,
+      "default_max_tokens": 25600,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -566,7 +547,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 256000,
+      "default_max_tokens": 25600,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -585,7 +566,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 26200,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -604,7 +585,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -623,7 +604,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 400000,
-      "default_max_tokens": 400000,
+      "default_max_tokens": 40000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -642,7 +623,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -661,7 +642,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 200000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -680,7 +661,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 200000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -699,7 +680,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -718,7 +699,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -737,7 +718,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -756,7 +737,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 400000,
-      "default_max_tokens": 400000,
+      "default_max_tokens": 40000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -775,7 +756,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 26200,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -794,7 +775,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -813,7 +794,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 26200,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -832,7 +813,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 26200,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -851,7 +832,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 26200,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -870,7 +851,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -889,7 +870,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 13100,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -908,7 +889,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -927,7 +908,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -946,7 +927,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 127000,
-      "default_max_tokens": 127000,
+      "default_max_tokens": 12700,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -965,7 +946,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 3200,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -984,7 +965,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1003,7 +984,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1022,7 +1003,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 40000,
-      "default_max_tokens": 40000,
+      "default_max_tokens": 1638,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1041,7 +1022,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 13100,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1060,7 +1041,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262000,
-      "default_max_tokens": 262000,
+      "default_max_tokens": 3200,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1079,7 +1060,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1047576,
-      "default_max_tokens": 1047576,
+      "default_max_tokens": 104757,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1098,7 +1079,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1047576,
-      "default_max_tokens": 1047576,
+      "default_max_tokens": 104757,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1117,7 +1098,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1047576,
-      "default_max_tokens": 1047576,
+      "default_max_tokens": 104757,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1136,7 +1117,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1155,7 +1136,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 300000,
-      "default_max_tokens": 300000,
+      "default_max_tokens": 30000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1174,7 +1155,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 300000,
-      "default_max_tokens": 300000,
+      "default_max_tokens": 30000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1193,7 +1174,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 200000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1212,7 +1193,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 200000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1231,7 +1212,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1250,7 +1231,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1050000,
-      "default_max_tokens": 1050000,
+      "default_max_tokens": 105000,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1269,7 +1250,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 163840,
-      "default_max_tokens": 163840,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1288,7 +1269,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1307,7 +1288,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1326,7 +1307,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 104857,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1345,7 +1326,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 104857,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1364,7 +1345,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 104857,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1383,7 +1364,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 104857,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1402,7 +1383,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 4000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1421,7 +1402,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 1600,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1440,7 +1421,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 164000,
-      "default_max_tokens": 164000,
+      "default_max_tokens": 16400,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1459,7 +1440,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 256000,
+      "default_max_tokens": 25600,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1478,7 +1459,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
-      "default_max_tokens": 131000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1497,7 +1478,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1516,7 +1497,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 400000,
-      "default_max_tokens": 400000,
+      "default_max_tokens": 40000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1535,7 +1516,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 400000,
-      "default_max_tokens": 400000,
+      "default_max_tokens": 40000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1554,7 +1535,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 13107,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1573,7 +1554,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1592,7 +1573,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 11800,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1611,7 +1592,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1630,7 +1611,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 13107,
       "can_reason": false,
       "reasoning_levels": [
         "low",
@@ -1649,7 +1630,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1668,7 +1649,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1687,7 +1668,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1706,7 +1687,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 12800,
       "can_reason": true,
       "reasoning_levels": [
         "low",
