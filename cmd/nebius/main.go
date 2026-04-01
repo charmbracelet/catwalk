@@ -159,7 +159,7 @@ func main() {
 			CostPer1MInCached:      costPer1MInCached,
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.MaxOutput,
+			DefaultMaxTokens:       model.ContextLength / 10,
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
