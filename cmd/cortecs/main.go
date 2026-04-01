@@ -27,6 +27,17 @@ type CortecsModel struct {
 	Tags        []string `json:"tags,omitempty"`
 }
 
+func (m CortecsModel) hasTag(tagValue string) bool {
+	if m.Tags != nil {
+		for _, tag := range m.Tags {
+			if strings.EqualFold(tag, tagValue) {
+				return true
+			}
+		}
+	}
+	return false
+}
+
 type Pricing struct {
 	InputToken  float64 `json:"input_token"`
 	OutputToken float64 `json:"output_token"`
@@ -69,22 +80,16 @@ func main() {
 
 	var models []catwalk.Model
 	for _, model := range modelsResp.Data {
-		var costPer1MIn = model.Pricing.InputToken
-		var costPer1MOut = model.Pricing.OutputToken
-
-		// Determine if reasoning is supported based on tags
-		canReason := false
-		if model.Tags != nil {
-			for _, tag := range model.Tags {
-				if strings.ToLower(tag) == "reasoning" {
-					canReason = true
-					break
-				}
-			}
+		// we skip models that don't support tool calling
+		if !model.hasTag("Tools") {
+			continue
 		}
 
-		// TODO: decide on a proxy tag to determine if the model supports images
-		supportsImages := false
+		costPer1MIn := model.Pricing.InputToken
+		costPer1MOut := model.Pricing.OutputToken
+
+		canReason := model.hasTag("Reasoning")
+		supportsImages := model.hasTag("Image")
 
 		model := catwalk.Model{
 			ID:                     model.ID,
@@ -96,8 +101,8 @@ func main() {
 			CostPer1MOutCached:     0,
 			DefaultMaxTokens:       model.ContextSize,
 			CanReason:              canReason,
-			DefaultReasoningEffort: "unknown",
-			ReasoningLevels:        []string{"unknown"},
+			DefaultReasoningEffort: "medium",
+			ReasoningLevels:        []string{"low", "medium", "high"},
 			SupportsImages:         supportsImages,
 		}
 		models = append(models, model)
@@ -113,9 +118,6 @@ func main() {
 		DefaultLargeModelID: "qwen3-coder-30b-a3b-instruct",
 		DefaultSmallModelID: "glm-4.7-flash",
 		Models:              models,
-		DefaultHeaders: map[string]string{
-			"User-Agent": "Crush-Client/1.0",
-		},
 	}
 
 	data, err := json.MarshalIndent(cortecsProvider, "", "  ")

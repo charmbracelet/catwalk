@@ -18,26 +18,11 @@
       "default_max_tokens": 202752,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "faster-whisper-large-v3",
-      "name": "faster-whisper-large-v3",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 0,
-      "default_max_tokens": 0,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -52,9 +37,11 @@
       "default_max_tokens": 203000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -69,9 +56,11 @@
       "default_max_tokens": 164000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -86,9 +75,11 @@
       "default_max_tokens": 33000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -103,9 +94,11 @@
       "default_max_tokens": 250000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -120,9 +113,11 @@
       "default_max_tokens": 163840,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -137,10 +132,12 @@
       "default_max_tokens": 256000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -154,9 +151,11 @@
       "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -171,10 +170,12 @@
       "default_max_tokens": 1000000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -188,9 +189,11 @@
       "default_max_tokens": 203000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -205,9 +208,11 @@
       "default_max_tokens": 256000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -222,10 +227,12 @@
       "default_max_tokens": 1000000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -239,26 +246,11 @@
       "default_max_tokens": 196608,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "voxtral-mini-transcribe-2602",
-      "name": "voxtral-mini-transcribe-2602",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 0,
-      "default_max_tokens": 0,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -273,9 +265,11 @@
       "default_max_tokens": 200000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -290,9 +284,11 @@
       "default_max_tokens": 196000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -307,111 +303,11 @@
       "default_max_tokens": 128000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "qwen3guard-gen-8b",
-      "name": "qwen3guard-gen-8b",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 32000,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "qwen3guard-gen-0.6b",
-      "name": "qwen3guard-gen-0.6b",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 32000,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "voxtral-small-2507",
-      "name": "voxtral-small-2507",
-      "cost_per_1m_in": 0.105,
-      "cost_per_1m_out": 0.315,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 32000,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "voxtral-mini-transcribe-2507",
-      "name": "voxtral-mini-transcribe-2507",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 0,
-      "default_max_tokens": 0,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "name": "whisper-large-v3-turbo",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 0,
-      "default_max_tokens": 0,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "whisper-large-v3",
-      "name": "whisper-large-v3",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 0,
-      "default_max_tokens": 0,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -426,10 +322,12 @@
       "default_max_tokens": 131000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -443,9 +341,11 @@
       "default_max_tokens": 32000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -460,9 +360,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -477,10 +379,12 @@
       "default_max_tokens": 200000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -494,9 +398,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -511,10 +417,12 @@
       "default_max_tokens": 22000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -528,10 +436,12 @@
       "default_max_tokens": 262000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -545,9 +455,11 @@
       "default_max_tokens": 200000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -562,10 +474,12 @@
       "default_max_tokens": 1000000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -579,9 +493,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -596,10 +512,12 @@
       "default_max_tokens": 256000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -613,10 +531,12 @@
       "default_max_tokens": 256000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -630,10 +550,12 @@
       "default_max_tokens": 256000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -647,10 +569,12 @@
       "default_max_tokens": 256000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -664,9 +588,11 @@
       "default_max_tokens": 262000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -681,9 +607,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -698,10 +626,12 @@
       "default_max_tokens": 400000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -715,10 +645,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -732,10 +664,12 @@
       "default_max_tokens": 200000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -749,10 +683,12 @@
       "default_max_tokens": 200000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -766,10 +702,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -783,10 +721,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -800,9 +740,11 @@
       "default_max_tokens": 128000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -817,10 +759,12 @@
       "default_max_tokens": 400000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -834,9 +778,11 @@
       "default_max_tokens": 262000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -851,9 +797,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -868,9 +816,11 @@
       "default_max_tokens": 262000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -885,9 +835,11 @@
       "default_max_tokens": 262000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -902,9 +854,11 @@
       "default_max_tokens": 262000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -919,9 +873,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -936,9 +892,11 @@
       "default_max_tokens": 131000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -953,9 +911,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -970,9 +930,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -987,26 +949,11 @@
       "default_max_tokens": 127000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "mistral-7b-instruct-v0.2",
-      "name": "mistral-7b-instruct-v0.2",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.207,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 32000,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1021,9 +968,11 @@
       "default_max_tokens": 32000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1038,10 +987,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1055,10 +1006,12 @@
       "default_max_tokens": 128000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1072,9 +1025,11 @@
       "default_max_tokens": 16384,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1089,9 +1044,11 @@
       "default_max_tokens": 131000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1106,9 +1063,11 @@
       "default_max_tokens": 32000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1123,10 +1082,12 @@
       "default_max_tokens": 1047576,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1140,10 +1101,12 @@
       "default_max_tokens": 1047576,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1157,10 +1120,12 @@
       "default_max_tokens": 1047576,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1174,10 +1139,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1191,10 +1158,12 @@
       "default_max_tokens": 300000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1208,10 +1177,12 @@
       "default_max_tokens": 300000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1225,10 +1196,12 @@
       "default_max_tokens": 200000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1242,10 +1215,12 @@
       "default_max_tokens": 200000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1259,9 +1234,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1276,9 +1253,11 @@
       "default_max_tokens": 1050000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1293,9 +1272,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1310,10 +1291,12 @@
       "default_max_tokens": 128000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1327,10 +1310,12 @@
       "default_max_tokens": 131072,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1344,10 +1329,12 @@
       "default_max_tokens": 1048576,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1361,10 +1348,12 @@
       "default_max_tokens": 1048576,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1378,10 +1367,12 @@
       "default_max_tokens": 1048576,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1395,10 +1386,12 @@
       "default_max_tokens": 1048576,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1412,27 +1405,12 @@
       "default_max_tokens": 40000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "qwen2.5-vl-72b-instruct",
-      "name": "qwen2.5-vl-72b-instruct",
-      "cost_per_1m_in": 0.235,
-      "cost_per_1m_out": 0.705,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 32000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1446,9 +1424,11 @@
       "default_max_tokens": 16000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1463,9 +1443,11 @@
       "default_max_tokens": 164000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1480,9 +1462,11 @@
       "default_max_tokens": 256000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1497,9 +1481,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1514,10 +1500,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1531,10 +1519,12 @@
       "default_max_tokens": 400000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1548,10 +1538,12 @@
       "default_max_tokens": 400000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1565,111 +1557,11 @@
       "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "pixtral-large-2411",
-      "name": "pixtral-large-2411",
-      "cost_per_1m_in": 1.89,
-      "cost_per_1m_out": 5.67,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 131072,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "pixtral-12b-2409",
-      "name": "pixtral-12b-2409",
-      "cost_per_1m_in": 0.21,
-      "cost_per_1m_out": 0.21,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "teuken-7b-instruct-commercial",
-      "name": "teuken-7b-instruct-commercial",
-      "cost_per_1m_in": 0.158,
-      "cost_per_1m_out": 0.158,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 4096,
-      "default_max_tokens": 4096,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "llama-3.2-1b-instruct",
-      "name": "llama-3.2-1b-instruct",
-      "cost_per_1m_in": 0.103,
-      "cost_per_1m_out": 0.103,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131000,
-      "default_max_tokens": 131000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "llama-3.2-3b-instruct",
-      "name": "llama-3.2-3b-instruct",
-      "cost_per_1m_in": 0.16,
-      "cost_per_1m_out": 0.16,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131000,
-      "default_max_tokens": 131000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "qwen2.5-coder-7b",
-      "name": "qwen2.5-coder-7b",
-      "cost_per_1m_in": 0.028,
-      "cost_per_1m_out": 0.084,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 32000,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1684,9 +1576,11 @@
       "default_max_tokens": 128000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1701,9 +1595,11 @@
       "default_max_tokens": 118000,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1718,9 +1614,11 @@
       "default_max_tokens": 131072,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1735,9 +1633,11 @@
       "default_max_tokens": 131072,
       "can_reason": false,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1752,10 +1652,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1769,9 +1671,11 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     },
@@ -1786,44 +1690,12 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "gemma-2-2b-it",
-      "name": "gemma-2-2b-it",
-      "cost_per_1m_in": 0.019,
-      "cost_per_1m_out": 0.057,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 8192,
-      "default_max_tokens": 8192,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "gemma-2-9b-it",
-      "name": "gemma-2-9b-it",
-      "cost_per_1m_in": 0.028,
-      "cost_per_1m_out": 0.084,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 8000,
-      "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true,
       "options": {}
     },
     {
@@ -1837,48 +1709,13 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
-        "unknown"
+        "low",
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "codellama-13b-instruct-hf",
-      "name": "codellama-13b-instruct-hf",
-      "cost_per_1m_in": 0.473,
-      "cost_per_1m_out": 0.473,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 16000,
-      "default_max_tokens": 16000,
-      "can_reason": false,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "mixtral-8x7B-instruct-v0.1",
-      "name": "mixtral-8x7B-instruct-v0.1",
-      "cost_per_1m_in": 0.46,
-      "cost_per_1m_out": 0.662,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 32000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "unknown"
-      ],
-      "default_reasoning_effort": "unknown",
+      "default_reasoning_effort": "medium",
       "supports_attachments": false,
       "options": {}
     }
-  ],
-  "default_headers": {
-    "User-Agent": "Crush-Client/1.0"
-  }
+  ]
 }
