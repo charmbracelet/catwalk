@@ -3,7 +3,7 @@
   "id": "alibaba-coding-plan",
   "type": "openai-compat",
   "api_key": "$ALIBABA_CODING_PLAN_API_KEY",
-  "api_endpoint": "https://coding.dashscope.aliyuncs.com/v1",
+  "api_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
   "default_large_model_id": "qwen3.5-plus",
   "default_small_model_id": "qwen3-coder-next",
   "models": [
