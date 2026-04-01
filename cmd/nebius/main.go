@@ -112,15 +112,8 @@ func main() {
 			continue
 		}
 
-		var reasoningLevels []string
-		var defaultReasoning string
-		if model.Reasoning {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
-		}
-
 		// Convert pricing from string to float64
-		var costPer1MIn, costPer1MOut, costPer1MInCached float64
+		var costPer1MIn, costPer1MOut float64
 
 		// Handle prompt price conversion
 		promptPrice, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
@@ -136,13 +129,6 @@ func main() {
 		}
 		costPer1MOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
-		// Cache reading is typically charged similar to input
-		cacheReadPrice, err := strconv.ParseFloat(model.Pricing.Request, 64)
-		if err != nil {
-			cacheReadPrice = 0.0
-		}
-		costPer1MInCached = math.Round(cacheReadPrice*1_000_000*100) / 100 // Round to 2 decimal places
-
 		canReason := model.hasFeature("reasoning")
 
 		// Determine if model supports images based on modality
@@ -156,13 +142,13 @@ func main() {
 			Name:                   model.DisplayName,
 			CostPer1MIn:            costPer1MIn,
 			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      costPer1MInCached,
+			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.ContextLength / 10,
 			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
+			ReasoningLevels:        []string{"low", "medium", "high"},
+			DefaultReasoningEffort: "medium",
 			SupportsImages:         supportsImages,
 		}
 
