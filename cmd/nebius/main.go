@@ -24,8 +24,6 @@ type Model struct {
 	ID                string   `json:"id"`
 	DisplayName       string   `json:"name"`
 	ContextLength     int64    `json:"context_length"`
-	MaxOutput         int64    `json:"max_output"`
-	Reasoning         bool     `json:"reasoning"`
 	SupportedFeatures []string `json:"supported_features,omitempty"`
 	Pricing           Pricing  `json:"pricing"`
 	Architecture      struct {
@@ -34,12 +32,8 @@ type Model struct {
 }
 
 type Pricing struct {
-	Prompt              string `json:"prompt"`
-	Completion          string `json:"completion"`
-	Image               string `json:"image"`
-	PricePerVideoSecond string `json:"price_per_video_second"`
-	Request             string `json:"request"`
-	PricePerMinute      string `json:"price_per_minute"`
+	Prompt     string `json:"prompt"`
+	Completion string `json:"completion"`
 }
 
 type ModelsResponse struct {
