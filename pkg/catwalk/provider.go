@@ -87,7 +87,7 @@ type Model struct {
 	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	SupportsImages         bool         `json:"supports_attachments"`
-	Options                ModelOptions `json:"options"`
+	Options                ModelOptions `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.
