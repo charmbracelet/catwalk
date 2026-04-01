@@ -135,14 +135,11 @@ func main() {
 			continue
 		}
 
-		costPer1MIn := detailRespData.Model.InputCost
-		costPer1MOut := detailRespData.Model.OutputCost
-
-		canReason := model.hasTag("Reasoning")
-		supportsImages := model.hasTag("Image")
-
-		var reasoningLevels []string
-		var defaultReasoning string
+		var (
+			canReason        = model.hasTag("Reasoning")
+			reasoningLevels  []string
+			defaultReasoning string
+		)
 		if canReason {
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
@@ -152,15 +149,15 @@ func main() {
 			ID:                     model.ID,
 			Name:                   detailRespData.Model.ScreenName,
 			ContextWindow:          detailRespData.Model.Context,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
+			CostPer1MIn:            detailRespData.Model.InputCost,
+			CostPer1MOut:           detailRespData.Model.OutputCost,
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
 			DefaultMaxTokens:       model.ContextSize / 10,
 			CanReason:              canReason,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         supportsImages,
+			SupportsImages:         model.hasTag("Image"),
 		}
 		models = append(models, model)
 		fmt.Printf("Added model %s (%s)\n", model.ID, model.Name)
@@ -181,6 +178,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error marshaling Cortecs provider:", err)
 	}
+	data = append(data, '\n')
 
 	if err := os.WriteFile("./internal/providers/configs/cortecs.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Cortecs provider config:", err)
