@@ -1,0 +1,55 @@
+{
+  "name": "Alibaba Cloud",
+  "id": "alibaba",
+  "type": "openai-compat",
+  "api_key": "$ALIBABA_API_KEY",
+  "api_endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "default_large_model_id": "qwen-max",
+  "default_small_model_id": "qwen-plus",
+  "models": [
+    {
+      "id": "qwen-max",
+      "name": "Qwen Max",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 32000,
+      "default_max_tokens": 4096,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen-plus",
+      "name": "Qwen Plus",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 131072,
+      "default_max_tokens": 4096,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen-turbo",
+      "name": "Qwen Turbo",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 131072,
+      "default_max_tokens": 4096,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen-long",
+      "name": "Qwen Long",
+      "cost_per_1m_in": 0.0,
+      "cost_per_1m_out": 0.0,
+      "cost_per_1m_in_cached": 0.0,
+      "cost_per_1m_out_cached": 0.0,
+      "context_window": 1000000,
+      "default_max_tokens": 4096,
+      "supports_attachments": true
+    }
+  ]
+}
