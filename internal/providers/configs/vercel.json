@@ -17,8 +17,7 @@
       "context_window": 200000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-3.5-haiku",
@@ -30,8 +29,7 @@
       "context_window": 200000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-3.5-sonnet",
@@ -43,8 +41,7 @@
       "context_window": 200000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-3.5-sonnet-20240620",
@@ -56,8 +53,7 @@
       "context_window": 200000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-3.7-sonnet",
@@ -78,8 +74,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-haiku-4.5",
@@ -100,8 +95,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-opus-4",
@@ -122,8 +116,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-opus-4.1",
@@ -144,8 +137,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-opus-4.5",
@@ -166,8 +158,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-opus-4.6",
@@ -188,8 +179,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-sonnet-4",
@@ -210,8 +200,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-sonnet-4.5",
@@ -232,8 +221,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
@@ -254,8 +242,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "cohere/command-a",
@@ -267,8 +254,7 @@
       "context_window": 256000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepseek/deepseek-v3",
@@ -280,8 +266,7 @@
       "context_window": 163840,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepseek/deepseek-v3.1-terminus",
@@ -299,8 +284,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepseek/deepseek-v3.2",
@@ -312,8 +296,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepseek/deepseek-v3.2-thinking",
@@ -331,8 +314,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepseek/deepseek-r1",
@@ -350,15 +332,14 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepseek/deepseek-v3.1",
       "name": "DeepSeek-V3.1",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 1.5,
-      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_in": 0.56,
+      "cost_per_1m_out": 1.68,
+      "cost_per_1m_in_cached": 0.28,
       "cost_per_1m_out_cached": 0,
       "context_window": 163840,
       "default_max_tokens": 8000,
@@ -369,8 +350,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral/devstral-2",
@@ -382,8 +362,7 @@
       "context_window": 256000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral/devstral-small",
@@ -395,8 +374,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral/devstral-small-2",
@@ -408,8 +386,7 @@
       "context_window": 256000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-4.5-air",
@@ -427,8 +404,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-4.5v",
@@ -440,8 +416,7 @@
       "context_window": 66000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "zai/glm-4.6",
@@ -459,15 +434,14 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-4.7",
       "name": "GLM 4.7",
       "cost_per_1m_in": 0.6,
       "cost_per_1m_out": 2.2,
-      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_in_cached": 0.11,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
       "default_max_tokens": 8000,
@@ -478,8 +452,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-4.7-flash",
@@ -497,8 +470,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-4.7-flashx",
@@ -516,8 +488,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-5",
@@ -535,8 +506,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-5-turbo",
@@ -554,8 +524,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-4.5",
@@ -573,8 +542,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai/glm-4.6v",
@@ -592,8 +560,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "zai/glm-4.6v-flash",
@@ -611,8 +578,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5-chat",
@@ -630,8 +596,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.1-codex-max",
@@ -649,8 +614,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.1-codex-mini",
@@ -668,8 +632,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.1-thinking",
@@ -687,8 +650,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.2",
@@ -706,8 +668,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.2-pro",
@@ -725,8 +686,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.2-chat",
@@ -744,8 +704,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.2-codex",
@@ -763,8 +722,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.3-codex",
@@ -782,8 +740,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.4",
@@ -801,8 +758,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.4-mini",
@@ -820,8 +776,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.4-nano",
@@ -839,8 +794,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.4-pro",
@@ -858,8 +812,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4-turbo",
@@ -871,8 +824,7 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4.1",
@@ -884,8 +836,7 @@
       "context_window": 1047576,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4.1-mini",
@@ -897,8 +848,7 @@
       "context_window": 1047576,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4.1-nano",
@@ -910,8 +860,7 @@
       "context_window": 1047576,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4o",
@@ -923,8 +872,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-4o-mini",
@@ -936,8 +884,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5",
@@ -955,8 +902,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5-mini",
@@ -974,8 +920,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5-nano",
@@ -993,8 +938,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5-pro",
@@ -1012,8 +956,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5-codex",
@@ -1031,8 +974,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-5.1-instant",
@@ -1050,8 +992,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.1-codex",
@@ -1069,8 +1010,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-5.3-chat",
@@ -1088,8 +1028,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-2.0-flash",
@@ -1101,8 +1040,7 @@
       "context_window": 1048576,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-2.0-flash-lite",
@@ -1114,8 +1052,7 @@
       "context_window": 1048576,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-2.5-flash",
@@ -1133,8 +1070,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-2.5-flash-lite",
@@ -1152,8 +1088,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-2.5-pro",
@@ -1171,8 +1106,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-3-flash",
@@ -1190,8 +1124,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-3-pro-preview",
@@ -1209,8 +1142,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-3.1-flash-lite-preview",
@@ -1228,8 +1160,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google/gemini-3.1-pro-preview",
@@ -1247,8 +1178,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-2-vision",
@@ -1260,8 +1190,7 @@
       "context_window": 32768,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-3",
@@ -1273,8 +1202,7 @@
       "context_window": 131072,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-3-fast",
@@ -1286,8 +1214,7 @@
       "context_window": 131072,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-3-mini",
@@ -1299,8 +1226,7 @@
       "context_window": 131072,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-3-mini-fast",
@@ -1312,8 +1238,7 @@
       "context_window": 131072,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-4",
@@ -1331,8 +1256,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4-fast-non-reasoning",
@@ -1344,8 +1268,7 @@
       "context_window": 2000000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-4-fast-reasoning",
@@ -1363,8 +1286,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-4.1-fast-non-reasoning",
@@ -1376,8 +1298,7 @@
       "context_window": 2000000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-4.1-fast-reasoning",
@@ -1395,8 +1316,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-4.20-non-reasoning-beta",
@@ -1408,8 +1328,7 @@
       "context_window": 2000000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.20-reasoning-beta",
@@ -1427,8 +1346,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.20-multi-agent-beta",
@@ -1446,8 +1364,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-4.20-multi-agent",
@@ -1465,8 +1382,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xai/grok-4.20-non-reasoning",
@@ -1478,8 +1394,7 @@
       "context_window": 2000000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.20-reasoning",
@@ -1497,8 +1412,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-code-fast-1",
@@ -1516,8 +1430,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "prime-intellect/intellect-3",
@@ -1535,8 +1448,25 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
+    },
+    {
+      "id": "kwaipilot/kat-coder-pro-v2",
+      "name": "Kat Coder Pro V2",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0.06,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/kimi-k2",
@@ -1548,8 +1478,7 @@
       "context_window": 131072,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/kimi-k2-0905",
@@ -1561,8 +1490,7 @@
       "context_window": 256000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/kimi-k2-thinking",
@@ -1580,8 +1508,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/kimi-k2-thinking-turbo",
@@ -1599,8 +1526,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/kimi-k2-turbo",
@@ -1612,8 +1538,7 @@
       "context_window": 256000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/kimi-k2.5",
@@ -1631,8 +1556,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "meta/llama-3.1-70b",
@@ -1644,21 +1568,19 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "meta/llama-3.1-8b",
       "name": "Llama 3.1 8B Instruct",
-      "cost_per_1m_in": 0.1,
-      "cost_per_1m_out": 0.1,
-      "cost_per_1m_in_cached": 0.1,
+      "cost_per_1m_in": 0.22,
+      "cost_per_1m_out": 0.22,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "meta/llama-3.2-11b",
@@ -1670,8 +1592,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "meta/llama-3.2-90b",
@@ -1683,8 +1604,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "meta/llama-3.3-70b",
@@ -1696,21 +1616,19 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "meta/llama-4-maverick",
       "name": "Llama 4 Maverick 17B Instruct",
-      "cost_per_1m_in": 0.24,
-      "cost_per_1m_out": 0.97,
+      "cost_per_1m_in": 0.35,
+      "cost_per_1m_out": 1.15,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
+      "context_window": 524288,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "meta/llama-4-scout",
@@ -1722,8 +1640,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "meituan/longcat-flash-chat",
@@ -1735,8 +1652,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "meituan/longcat-flash-thinking",
@@ -1754,8 +1670,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "inception/mercury-2",
@@ -1773,8 +1688,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "inception/mercury-coder-small",
@@ -1786,15 +1700,14 @@
       "context_window": 32000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xiaomi/mimo-v2-flash",
       "name": "MiMo V2 Flash",
-      "cost_per_1m_in": 0.1,
-      "cost_per_1m_out": 0.3,
-      "cost_per_1m_in_cached": 0.02,
+      "cost_per_1m_in": 0.09,
+      "cost_per_1m_out": 0.29,
+      "cost_per_1m_in_cached": 0.045,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
       "default_max_tokens": 8000,
@@ -1805,8 +1718,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "xiaomi/mimo-v2-pro",
@@ -1824,8 +1736,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2",
@@ -1843,8 +1754,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2.1",
@@ -1862,8 +1772,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2.1-lightning",
@@ -1881,8 +1790,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2.5",
@@ -1900,8 +1808,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2.5-highspeed",
@@ -1919,8 +1826,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2.7-highspeed",
@@ -1938,8 +1844,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "minimax/minimax-m2.7",
@@ -1957,8 +1862,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "mistral/ministral-3b",
@@ -1970,8 +1874,7 @@
       "context_window": 128000,
       "default_max_tokens": 4000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral/ministral-8b",
@@ -1983,8 +1886,7 @@
       "context_window": 128000,
       "default_max_tokens": 4000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral/codestral",
@@ -1996,8 +1898,7 @@
       "context_window": 128000,
       "default_max_tokens": 4000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral/mistral-medium",
@@ -2009,8 +1910,7 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "mistral/mistral-small",
@@ -2022,8 +1922,7 @@
       "context_window": 32000,
       "default_max_tokens": 4000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "nvidia/nemotron-nano-12b-v2-vl",
@@ -2041,8 +1940,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "nvidia/nemotron-nano-9b-v2",
@@ -2060,8 +1958,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral/pixtral-12b",
@@ -2073,8 +1970,7 @@
       "context_window": 128000,
       "default_max_tokens": 4000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "mistral/pixtral-large",
@@ -2086,17 +1982,16 @@
       "context_window": 128000,
       "default_max_tokens": 4000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "alibaba/qwen-3-32b",
       "name": "Qwen 3 32B",
-      "cost_per_1m_in": 0.29,
-      "cost_per_1m_out": 0.59,
-      "cost_per_1m_in_cached": 0.145,
+      "cost_per_1m_in": 0.16,
+      "cost_per_1m_out": 0.64,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
+      "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
@@ -2105,8 +2000,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3-coder-30b-a3b",
@@ -2124,8 +2018,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3-max-thinking",
@@ -2143,8 +2036,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3.5-flash",
@@ -2162,8 +2054,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "alibaba/qwen3.5-plus",
@@ -2181,8 +2072,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "alibaba/qwen3-235b-a22b-thinking",
@@ -2200,21 +2090,19 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "alibaba/qwen3-coder",
       "name": "Qwen3 Coder 480B A35B Instruct",
-      "cost_per_1m_in": 0.4,
-      "cost_per_1m_out": 1.6,
-      "cost_per_1m_in_cached": 0.022,
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0.3,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3-coder-next",
@@ -2226,8 +2114,7 @@
       "context_window": 256000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3-coder-plus",
@@ -2239,8 +2126,7 @@
       "context_window": 1000000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3-max",
@@ -2252,8 +2138,7 @@
       "context_window": 262144,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3-max-preview",
@@ -2265,8 +2150,7 @@
       "context_window": 262144,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3-vl-thinking",
@@ -2284,8 +2168,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "alibaba/qwen-3-14b",
@@ -2303,21 +2186,19 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen-3-235b",
       "name": "Qwen3-235B-A22B",
-      "cost_per_1m_in": 0.071,
-      "cost_per_1m_out": 0.463,
-      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_in": 0.22,
+      "cost_per_1m_out": 0.88,
+      "cost_per_1m_in_cached": 0.11,
       "cost_per_1m_out_cached": 0,
-      "context_window": 40960,
+      "context_window": 32768,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen-3-30b",
@@ -2335,8 +2216,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "bytedance/seed-1.6",
@@ -2354,8 +2234,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "perplexity/sonar",
@@ -2367,8 +2246,7 @@
       "context_window": 127000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "perplexity/sonar-pro",
@@ -2380,8 +2258,7 @@
       "context_window": 200000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "arcee-ai/trinity-large-preview",
@@ -2393,8 +2270,25 @@
       "context_window": 131000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-20b",
@@ -2412,8 +2306,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-safeguard-20b",
@@ -2431,8 +2324,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/o1",
@@ -2450,8 +2342,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/o3",
@@ -2469,8 +2360,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/o3-pro",
@@ -2488,8 +2378,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/o3-deep-research",
@@ -2507,8 +2396,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai/o3-mini",
@@ -2526,8 +2414,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/o4-mini",
@@ -2545,8 +2432,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     }
   ],
   "default_headers": {

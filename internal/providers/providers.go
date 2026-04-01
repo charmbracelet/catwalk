@@ -75,6 +75,9 @@ var kimiCodingConfig []byte
 //go:embed configs/copilot.json
 var copilotConfig []byte
 
+//go:embed configs/cortecs.json
+var cortecsConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -118,6 +121,7 @@ var providerRegistry = []ProviderFunc{
 	aiHubMixProvider,
 	syntheticProvider,
 	copilotProvider,
+	cortecsProvider,
 	vercelProvider,
 	miniMaxProvider,
 	miniMaxChinaProvider,
@@ -227,6 +231,10 @@ func kimiCodingProvider() catwalk.Provider {
 
 func copilotProvider() catwalk.Provider {
 	return loadProviderFromConfig(copilotConfig)
+}
+
+func cortecsProvider() catwalk.Provider {
+	return loadProviderFromConfig(cortecsConfig)
 }
 
 func vercelProvider() catwalk.Provider {

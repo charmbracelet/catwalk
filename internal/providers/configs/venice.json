@@ -23,8 +23,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4-6",
@@ -34,7 +33,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -42,8 +41,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4-5",
@@ -53,7 +51,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 198000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -61,8 +59,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4-6",
@@ -72,7 +69,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -80,8 +77,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "deepseek-v3.2",
@@ -93,14 +89,7 @@
       "context_window": 160000,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-4.6",
@@ -110,10 +99,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 198000,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-4.7",
@@ -123,16 +111,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 198000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-4.7-flash",
@@ -142,7 +123,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16384,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -150,8 +131,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "olafangensan-glm-4.7-flash-heretic",
@@ -161,16 +141,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 200000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 24000,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org-glm-5",
@@ -180,16 +153,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 198000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 32000,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai-gpt-4o-2024-11-20",
@@ -199,10 +165,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-4o-mini-2024-07-18",
@@ -212,10 +177,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-52",
@@ -225,7 +189,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -233,8 +197,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai-gpt-52-codex",
@@ -244,7 +207,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -252,8 +215,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-53-codex",
@@ -263,7 +225,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 400000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -271,8 +233,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-54",
@@ -282,7 +243,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -290,8 +251,25 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
+    },
+    {
+      "id": "openai-gpt-54-mini",
+      "name": "GPT-5.4 Mini",
+      "cost_per_1m_in": 0.9375,
+      "cost_per_1m_out": 5.625,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
     },
     {
       "id": "openai-gpt-54-pro",
@@ -301,7 +279,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -309,8 +287,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gemini-3-flash-preview",
@@ -320,7 +297,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -328,27 +305,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
-    },
-    {
-      "id": "gemini-3-pro-preview",
-      "name": "Gemini 3 Pro Preview",
-      "cost_per_1m_in": 2.5,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 198000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "gemini-3-1-pro-preview",
@@ -366,8 +323,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "google-gemma-3-27b-it",
@@ -377,10 +333,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 198000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "grok-41-fast",
@@ -390,7 +345,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 30000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -398,8 +353,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "grok-4-20-beta",
@@ -409,7 +363,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 2000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -417,8 +371,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "grok-code-fast-1",
@@ -428,7 +381,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 10000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -436,8 +389,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "kimi-k2-thinking",
@@ -447,7 +399,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -455,8 +407,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "kimi-k2-5",
@@ -466,7 +417,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -474,8 +425,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "llama-3.2-3b",
@@ -485,10 +435,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "llama-3.3-70b",
@@ -498,10 +447,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax-m21",
@@ -519,8 +467,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax-m25",
@@ -538,8 +485,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "minimax-m27",
@@ -557,8 +503,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "mistral-small-3-2-24b-instruct",
@@ -568,10 +513,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "nvidia-nemotron-3-nano-30b-a3b",
@@ -581,10 +525,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai-gpt-oss-120b",
@@ -594,10 +537,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -607,10 +549,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-235b-a22b-thinking-2507",
@@ -620,16 +561,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 16384,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct-turbo",
@@ -639,10 +573,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct",
@@ -652,10 +585,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-next-80b",
@@ -665,10 +597,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "qwen3-5-35b-a3b",
@@ -678,14 +609,8 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": true,
       "options": {
         "temperature": 1,
@@ -702,14 +627,7 @@
       "context_window": 256000,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "qwen3-vl-235b-a22b",
@@ -719,23 +637,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
-    },
-    {
-      "id": "mistral-31-24b",
-      "name": "Venice Medium",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 32000,
-      "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
+      "supports_attachments": true
     },
     {
       "id": "venice-uncensored-role-play",
@@ -745,29 +649,9 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true,
-      "options": {}
-    },
-    {
-      "id": "qwen3-4b",
-      "name": "Venice Small",
-      "cost_per_1m_in": 0.05,
-      "cost_per_1m_out": 0.15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": true
     }
   ]
 }
