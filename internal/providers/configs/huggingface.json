@@ -17,8 +17,7 @@
       "context_window": 204800,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.5:fireworks-ai",
@@ -30,8 +29,7 @@
       "context_window": 204800,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "Qwen/Qwen3-32B:groq",
@@ -43,8 +41,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "Qwen/Qwen3-8B:fireworks-ai",
@@ -56,8 +53,7 @@
       "context_window": 40960,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "Qwen/Qwen3-VL-30B-A3B-Instruct:fireworks-ai",
@@ -69,8 +65,7 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "Qwen/Qwen3-VL-30B-A3B-Thinking:fireworks-ai",
@@ -82,8 +77,7 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepcogito/cogito-671b-v2.1:fireworks-ai",
@@ -95,21 +89,7 @@
       "context_window": 163840,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.1:fireworks-ai",
-      "name": "deepseek-ai/DeepSeek-V3.1 (fireworks-ai)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 163840,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "deepseek-ai/DeepSeek-V3.2:fireworks-ai",
@@ -121,8 +101,7 @@
       "context_window": 163840,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct:groq",
@@ -134,8 +113,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct:groq",
@@ -147,8 +125,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/Kimi-K2-Instruct-0905:fireworks-ai",
@@ -160,8 +137,7 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/Kimi-K2-Instruct-0905:groq",
@@ -173,8 +149,7 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/Kimi-K2-Thinking:fireworks-ai",
@@ -186,8 +161,7 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "moonshotai/Kimi-K2.5:fireworks-ai",
@@ -199,8 +173,7 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-120b:fireworks-ai",
@@ -212,8 +185,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-120b:groq",
@@ -225,8 +197,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-20b:fireworks-ai",
@@ -238,8 +209,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-20b:groq",
@@ -251,8 +221,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "openai/gpt-oss-safeguard-20b:groq",
@@ -264,8 +233,7 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org/GLM-4.7:fireworks-ai",
@@ -277,8 +245,7 @@
       "context_window": 202752,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     },
     {
       "id": "zai-org/GLM-5:fireworks-ai",
@@ -290,8 +257,7 @@
       "context_window": 202752,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false,
-      "options": {}
+      "supports_attachments": false
     }
   ],
   "default_headers": {

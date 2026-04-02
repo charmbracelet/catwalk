@@ -42,6 +42,9 @@ var zhipuConfig []byte
 //go:embed configs/zhipu-coding.json
 var zhipuCodingConfig []byte
 
+//go:embed configs/nebius.json
+var nebiusConfig []byte
+
 //go:embed configs/bedrock.json
 var bedrockConfig []byte
 
@@ -71,6 +74,9 @@ var kimiCodingConfig []byte
 
 //go:embed configs/copilot.json
 var copilotConfig []byte
+
+//go:embed configs/cortecs.json
+var cortecsConfig []byte
 
 //go:embed configs/vercel.json
 var vercelConfig []byte
@@ -118,6 +124,7 @@ var providerRegistry = []ProviderFunc{
 	aiHubMixProvider,
 	syntheticProvider,
 	copilotProvider,
+	cortecsProvider,
 	vercelProvider,
 	miniMaxProvider,
 	miniMaxChinaProvider,
@@ -125,6 +132,7 @@ var providerRegistry = []ProviderFunc{
 	qiniuCloudProvider,
 	avianProvider,
 	alibabaCodingPlanProvider,
+	nebiusProvider,
 }
 
 // GetAll returns all registered providers.
@@ -229,6 +237,10 @@ func copilotProvider() catwalk.Provider {
 	return loadProviderFromConfig(copilotConfig)
 }
 
+func cortecsProvider() catwalk.Provider {
+	return loadProviderFromConfig(cortecsConfig)
+}
+
 func vercelProvider() catwalk.Provider {
 	return loadProviderFromConfig(vercelConfig)
 }
@@ -247,6 +259,10 @@ func ioNetProvider() catwalk.Provider {
 
 func qiniuCloudProvider() catwalk.Provider {
 	return loadProviderFromConfig(qiniuCloudConfig)
+}
+
+func nebiusProvider() catwalk.Provider {
+	return loadProviderFromConfig(nebiusConfig)
 }
 
 func avianProvider() catwalk.Provider {

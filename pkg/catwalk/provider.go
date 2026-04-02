@@ -41,12 +41,14 @@ const (
 	InferenceAIHubMix             InferenceProvider = "aihubmix"
 	InferenceKimiCoding           InferenceProvider = "kimi-coding"
 	InferenceProviderCopilot      InferenceProvider = "copilot"
+	InferenceProviderCortecs      InferenceProvider = "cortecs"
 	InferenceProviderVercel       InferenceProvider = "vercel"
 	InferenceProviderMiniMax      InferenceProvider = "minimax"
 	InferenceProviderMiniMaxChina InferenceProvider = "minimax-china"
 	InferenceProviderIoNet        InferenceProvider = "ionet"
 	InferenceProviderQiniuCloud   InferenceProvider = "qiniucloud"
 	InferenceProviderAvian        InferenceProvider = "avian"
+	InferenceProviderNebius       InferenceProvider = "nebius"
 )
 
 // Provider represents an AI provider configuration.
@@ -86,7 +88,7 @@ type Model struct {
 	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	SupportsImages         bool         `json:"supports_attachments"`
-	Options                ModelOptions `json:"options"`
+	Options                ModelOptions `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.
@@ -112,11 +114,13 @@ func KnownProviders() []InferenceProvider {
 		InferenceAIHubMix,
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
+		InferenceProviderCortecs,
 		InferenceProviderVercel,
 		InferenceProviderMiniMax,
 		InferenceProviderMiniMaxChina,
 		InferenceProviderQiniuCloud,
 		InferenceProviderAvian,
+		InferenceProviderNebius,
 	}
 }
 

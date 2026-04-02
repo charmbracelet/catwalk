@@ -58,13 +58,16 @@ tasks:
     aliases: [generate, gen]
     cmds:
       - task: gen:aihubmix
+      - task: gen:avian
       - task: gen:copilot
+      - task: gen:cortecs
       - task: gen:huggingface
       - task: gen:ionet
       - task: gen:openrouter
       - task: gen:synthetic
       - task: gen:venice
       - task: gen:vercel
+      - task: gen:xai
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
@@ -81,6 +84,11 @@ tasks:
     cmds:
       - go run cmd/copilot/main.go
 
+  gen:cortecs:
+    desc: Generate cortecs provider configurations
+    cmds:
+      - go run cmd/cortecs/main.go
+
   gen:huggingface:
     desc: Generate huggingface provider configurations
     cmds:
@@ -90,6 +98,11 @@ tasks:
     desc: Generate io.net provider configurations
     cmds:
       - go run cmd/ionet/main.go
+
+  gen:nebius:
+    desc: Generate Nebius provider configurations
+    cmds:
+      - go run cmd/nebius/main.go
 
   gen:openrouter:
     desc: Generate openrouter provider configurations
