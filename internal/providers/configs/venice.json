@@ -338,6 +338,30 @@
       "supports_attachments": true
     },
     {
+      "id": "google.gemma-4-26b-a4b-it",
+      "name": "Google Gemma 4 26B A4B Instruct",
+      "cost_per_1m_in": 0.1625,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 12288,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "google.gemma-4-31b-it",
+      "name": "Google Gemma 4 31B Instruct",
+      "cost_per_1m_in": 0.175,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 12288,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "grok-41-fast",
       "name": "Grok 4.1 Fast",
       "cost_per_1m_in": 0.25,
