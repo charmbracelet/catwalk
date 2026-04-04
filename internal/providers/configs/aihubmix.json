@@ -1022,18 +1022,6 @@
       "supports_attachments": true
     },
     {
-      "id": "gemini-2.0-flash-free",
-      "name": "Gemini 2.0 Flash (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "cost_per_1m_in": 0.3,
