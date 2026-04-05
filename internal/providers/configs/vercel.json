@@ -2165,6 +2165,18 @@
       "supports_attachments": true
     },
     {
+      "id": "alibaba/qwen-3-235b",
+      "name": "Qwen3 235B A22b Instruct 2507",
+      "cost_per_1m_in": 0.22,
+      "cost_per_1m_out": 0.88,
+      "cost_per_1m_in_cached": 0.11,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 8000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "alibaba/qwen3-coder",
       "name": "Qwen3 Coder 480B A35B Instruct",
       "cost_per_1m_in": 1.5,
@@ -2258,18 +2270,6 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "alibaba/qwen-3-235b",
-      "name": "Qwen3-235B-A22B",
-      "cost_per_1m_in": 0.22,
-      "cost_per_1m_out": 0.88,
-      "cost_per_1m_in_cached": 0.11,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
-      "default_max_tokens": 8000,
-      "can_reason": false,
       "supports_attachments": false
     },
     {
