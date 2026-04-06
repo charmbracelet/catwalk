@@ -32,30 +32,6 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic/claude-3.5-sonnet",
-      "name": "Claude 3.5 Sonnet",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 0.3,
-      "cost_per_1m_out_cached": 3.75,
-      "context_window": 200000,
-      "default_max_tokens": 8000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "anthropic/claude-3.5-sonnet-20240620",
-      "name": "Claude 3.5 Sonnet (2024-06-20)",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 0.3,
-      "cost_per_1m_out_cached": 3.75,
-      "context_window": 200000,
-      "default_max_tokens": 8000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "anthropic/claude-3.7-sonnet",
       "name": "Claude 3.7 Sonnet",
       "cost_per_1m_in": 3,
@@ -1207,13 +1183,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
       "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
+      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -1225,13 +1195,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
       "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
+      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -1523,18 +1487,6 @@
       "supports_attachments": false
     },
     {
-      "id": "moonshotai/kimi-k2",
-      "name": "Kimi K2",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 8000,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "moonshotai/kimi-k2-0905",
       "name": "Kimi K2 0905",
       "cost_per_1m_in": 0.6,
@@ -1542,6 +1494,18 @@
       "cost_per_1m_in_cached": 0.3,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
+      "default_max_tokens": 8000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "moonshotai/kimi-k2",
+      "name": "Kimi K2 Instruct",
+      "cost_per_1m_in": 0.57,
+      "cost_per_1m_out": 2.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
       "default_max_tokens": 8000,
       "can_reason": false,
       "supports_attachments": false
@@ -1675,11 +1639,11 @@
     {
       "id": "meta/llama-4-maverick",
       "name": "Llama 4 Maverick 17B Instruct",
-      "cost_per_1m_in": 0.35,
-      "cost_per_1m_out": 1.15,
+      "cost_per_1m_in": 0.24,
+      "cost_per_1m_out": 0.97,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 524288,
+      "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
       "supports_attachments": true
@@ -1706,24 +1670,6 @@
       "context_window": 128000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "meituan/longcat-flash-thinking",
-      "name": "LongCat Flash Thinking",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 1.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -2239,11 +2185,11 @@
     {
       "id": "alibaba/qwen3-vl-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
-      "cost_per_1m_in": 0.22,
-      "cost_per_1m_out": 0.88,
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
+      "context_window": 131072,
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
