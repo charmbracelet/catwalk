@@ -1436,6 +1436,24 @@
       "supports_attachments": false
     },
     {
+      "id": "glm-5.1",
+      "name": "GLM 5.1",
+      "cost_per_1m_in": 0.845,
+      "cost_per_1m_out": 3.38,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.18311,
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "glm-5v-turbo",
       "name": "GLM 5 Vision Turbo",
       "cost_per_1m_in": 0.7042,
