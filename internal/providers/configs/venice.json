@@ -654,6 +654,22 @@
       "supports_attachments": true
     },
     {
+      "id": "qwen-3-6-plus",
+      "name": "Qwen 3.6 Plus",
+      "cost_per_1m_in": 0.625,
+      "cost_per_1m_out": 3.75,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true,
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8
+      }
+    },
+    {
       "id": "e2ee-qwen3-30b-a3b-p",
       "name": "Qwen3 30B A3B",
       "cost_per_1m_in": 0.19,
