@@ -1,105 +1,189 @@
 {
   "name": "Chutes",
   "id": "chutes",
-  "type": "openai-compat",
   "api_key": "$CHUTES_API_KEY",
   "api_endpoint": "https://llm.chutes.ai/v1",
-  "default_large_model_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-  "default_small_model_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+  "type": "openai-compat",
+  "default_large_model_id": "zai-org/GLM-5-TEE",
+  "default_small_model_id": "zai-org/GLM-5-Turbo",
   "models": [
     {
-      "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-      "name": "Qwen3 Coder 480B A35B Instruct (FP8)",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.8,
-      "context_window": 262000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "zai-org/GLM-4.5-FP8",
-      "name": "GLM 4.5 FP8",
-      "cost_per_1m_in": 0.0,
-      "cost_per_1m_out": 0.0,
-      "context_window": 98000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "moonshotai/Kimi-K2-Instruct-75k",
-      "name": "Kimi K2 Instruct",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.59,
-      "context_window": 75000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-R1-0528",
-      "name": "DeepSeek R1 0528",
-      "cost_per_1m_in": 0.18,
-      "cost_per_1m_out": 0.72,
-      "context_window": 75000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
-      "name": "DeepSeek R1 0528 Qwen3 8B",
-      "cost_per_1m_in": 0.02,
-      "cost_per_1m_out": 0.07,
+      "id": "NousResearch/DeepHermes-3-Mistral-24B-Preview",
+      "name": "DeepHermes-3-Mistral-24B-Preview",
+      "cost_per_1m_in": 0.0245,
+      "cost_per_1m_out": 0.0978,
+      "cost_per_1m_in_cached": 0.01225,
+      "cost_per_1m_out_cached": 0,
       "context_window": 32768,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 32768,
       "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-R1-0528-TEE",
+      "name": "DeepSeek-R1-0528-TEE",
+      "cost_per_1m_in": 0.45,
+      "cost_per_1m_out": 2.15,
+      "cost_per_1m_in_cached": 0.225,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 163840,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
     },
     {
       "id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-      "name": "DeepSeek R1 Distill Llama 70B",
-      "cost_per_1m_in": 0.03,
-      "cost_per_1m_out": 0.14,
-      "context_window": 65536,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
+      "name": "DeepSeek-R1-Distill-Llama-70B",
+      "cost_per_1m_in": 0.0272,
+      "cost_per_1m_out": 0.1087,
+      "cost_per_1m_in_cached": 0.0136,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
     },
     {
-      "id": "tngtech/DeepSeek-R1T-Chimera",
-      "name": "DeepSeek R1T Chimera",
-      "cost_per_1m_in": 0.18,
-      "cost_per_1m_out": 0.72,
+      "id": "tngtech/DeepSeek-TNG-R1T2-Chimera-TEE",
+      "name": "DeepSeek-TNG-R1T2-Chimera-TEE",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.1,
+      "cost_per_1m_in_cached": 0.15,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 163840,
+      "default_max_tokens": 163840,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V3-0324-TEE",
+      "name": "DeepSeek-V3-0324-TEE",
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 1,
+      "cost_per_1m_in_cached": 0.125,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 163840,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V3.1-TEE",
+      "name": "DeepSeek-V3.1-TEE",
+      "cost_per_1m_in": 0.27,
+      "cost_per_1m_out": 1,
+      "cost_per_1m_in_cached": 0.135,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 163840,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V3.1-Terminus-TEE",
+      "name": "DeepSeek-V3.1-Terminus-TEE",
+      "cost_per_1m_in": 0.27,
+      "cost_per_1m_out": 1,
+      "cost_per_1m_in_cached": 0.135,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 163840,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V3.2-TEE",
+      "name": "DeepSeek-V3.2-TEE",
+      "cost_per_1m_in": 0.28,
+      "cost_per_1m_out": 0.42,
+      "cost_per_1m_in_cached": 0.14,
+      "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-4.6-FP8",
+      "name": "GLM-4.6-FP8",
+      "cost_per_1m_in": 0.2989,
+      "cost_per_1m_out": 1.1957,
+      "cost_per_1m_in_cached": 0.14945,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 65535,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-4.6-TEE",
+      "name": "GLM-4.6-TEE",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 1.7,
+      "cost_per_1m_in_cached": 0.2,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-4.6V",
+      "name": "GLM-4.6V",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.9,
+      "cost_per_1m_in_cached": 0.15,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -110,10 +194,288 @@
       "supports_attachments": true
     },
     {
-      "id": "tngtech/DeepSeek-TNG-R1T2-Chimera",
-      "name": "DeepSeek TNG R1T2 Chimera",
-      "cost_per_1m_in": 0.2,
+      "id": "zai-org/GLM-4.7-FP8",
+      "name": "GLM-4.7-FP8",
+      "cost_per_1m_in": 0.2989,
+      "cost_per_1m_out": 1.1957,
+      "cost_per_1m_in_cached": 0.14945,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 65535,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-4.7-TEE",
+      "name": "GLM-4.7-TEE",
+      "cost_per_1m_in": 0.39,
+      "cost_per_1m_out": 1.75,
+      "cost_per_1m_in_cached": 0.195,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 65535,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-5-TEE",
+      "name": "GLM-5-TEE",
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 3.15,
+      "cost_per_1m_in_cached": 0.475,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 65535,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-5-Turbo",
+      "name": "GLM-5-Turbo",
+      "cost_per_1m_in": 0.4891,
+      "cost_per_1m_out": 1.9565,
+      "cost_per_1m_in_cached": 0.24455,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 65535,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "NousResearch/Hermes-4-14B",
+      "name": "Hermes-4-14B",
+      "cost_per_1m_in": 0.0136,
+      "cost_per_1m_out": 0.0543,
+      "cost_per_1m_in_cached": 0.0068,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 40960,
+      "default_max_tokens": 40960,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "moonshotai/Kimi-K2.5-TEE",
+      "name": "Kimi-K2.5-TEE",
+      "cost_per_1m_in": 0.3827,
+      "cost_per_1m_out": 1.72,
+      "cost_per_1m_in_cached": 0.19135,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65535,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2-Flash-TEE",
+      "name": "MiMo-V2-Flash-TEE",
+      "cost_per_1m_in": 0.09,
+      "cost_per_1m_out": 0.29,
+      "cost_per_1m_in_cached": 0.045,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-M2.5-TEE",
+      "name": "MiniMax-M2.5-TEE",
+      "cost_per_1m_in": 0.118,
+      "cost_per_1m_out": 0.99,
+      "cost_per_1m_in_cached": 0.059,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 196608,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "unsloth/Mistral-Small-24B-Instruct-2501",
+      "name": "Mistral-Small-24B-Instruct-2501",
+      "cost_per_1m_in": 0.0747,
+      "cost_per_1m_out": 0.2989,
+      "cost_per_1m_in_cached": 0.03735,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "chutesai/Mistral-Small-3.1-24B-Instruct-2503-TEE",
+      "name": "Mistral-Small-3.1-24B-Instruct-2503-TEE",
+      "cost_per_1m_in": 0.03,
+      "cost_per_1m_out": 0.11,
+      "cost_per_1m_in_cached": 0.015,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 131072,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "chutesai/Mistral-Small-3.2-24B-Instruct-2506",
+      "name": "Mistral-Small-3.2-24B-Instruct-2506",
+      "cost_per_1m_in": 0.06,
+      "cost_per_1m_out": 0.18,
+      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 131072,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "Qwen/Qwen2.5-72B-Instruct",
+      "name": "Qwen2.5-72B-Instruct",
+      "cost_per_1m_in": 0.2989,
+      "cost_per_1m_out": 1.1957,
+      "cost_per_1m_in_cached": 0.14945,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507-TEE",
+      "name": "Qwen3-235B-A22B-Instruct-2507-TEE",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0.05,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "name": "Qwen3-235B-A22B-Thinking-2507",
+      "cost_per_1m_in": 0.11,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0.055,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 262144,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3-30B-A3B",
+      "name": "Qwen3-30B-A3B",
+      "cost_per_1m_in": 0.06,
+      "cost_per_1m_out": 0.22,
+      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 40960,
+      "default_max_tokens": 40960,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3-32B-TEE",
+      "name": "Qwen3-32B-TEE",
+      "cost_per_1m_in": 0.08,
+      "cost_per_1m_out": 0.24,
+      "cost_per_1m_in_cached": 0.04,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 40960,
+      "default_max_tokens": 40960,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3-Coder-Next-TEE",
+      "name": "Qwen3-Coder-Next-TEE",
+      "cost_per_1m_in": 0.12,
+      "cost_per_1m_out": 0.75,
+      "cost_per_1m_in_cached": 0.06,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "name": "Qwen3-Next-80B-A3B-Instruct",
+      "cost_per_1m_in": 0.1,
       "cost_per_1m_out": 0.8,
+      "cost_per_1m_in_cached": 0.05,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 262144,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3.5-397B-A17B-TEE",
+      "name": "Qwen3.5-397B-A17B-TEE",
+      "cost_per_1m_in": 0.39,
+      "cost_per_1m_out": 2.34,
+      "cost_per_1m_in_cached": 0.195,
+      "cost_per_1m_out_cached": 0,
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -126,39 +488,26 @@
       "supports_attachments": true
     },
     {
-      "id": "deepseek-ai/DeepSeek-V3-0324",
-      "name": "DeepSeek V3 0324",
-      "cost_per_1m_in": 0.18,
-      "cost_per_1m_out": 0.72,
-      "context_window": 75000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "chutesai/Devstral-Small-2505",
-      "name": "Devstral Small 2505",
-      "cost_per_1m_in": 0.02,
-      "cost_per_1m_out": 0.08,
-      "context_window": 32768,
-      "default_max_tokens": 8192,
+      "id": "unsloth/gemma-3-27b-it",
+      "name": "gemma-3-27b-it",
+      "cost_per_1m_in": 0.0272,
+      "cost_per_1m_out": 0.1087,
+      "cost_per_1m_in_cached": 0.0136,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 65536,
       "can_reason": false,
-      "has_reasoning_efforts": false,
       "supports_attachments": true
     },
     {
-      "id": "zai-org/GLM-4.5-Air",
-      "name": "GLM 4.5 Air",
-      "cost_per_1m_in": 0.0,
-      "cost_per_1m_out": 0.0,
+      "id": "openai/gpt-oss-120b-TEE",
+      "name": "gpt-oss-120b-TEE",
+      "cost_per_1m_in": 0.09,
+      "cost_per_1m_out": 0.36,
+      "cost_per_1m_in_cached": 0.045,
+      "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -166,15 +515,17 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
-      "id": "openai/gpt-oss-120b",
-      "name": "GPT OSS 120B",
-      "cost_per_1m_in": 0.1,
-      "cost_per_1m_out": 0.41,
+      "id": "openai/gpt-oss-20b-TEE",
+      "name": "gpt-oss-20b-TEE",
+      "cost_per_1m_in": 0.03,
+      "cost_per_1m_out": 0.11,
+      "cost_per_1m_in_cached": 0.015,
+      "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -182,105 +533,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "chutesai/Mistral-Small-3.2-24B-Instruct-2506",
-      "name": "Mistral Small 3.2 24B Instruct 2506",
-      "cost_per_1m_in": 0.02,
-      "cost_per_1m_out": 0.08,
-      "context_window": 32768,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "name": "Qwen3 235B A22B Instruct 2507",
-      "cost_per_1m_in": 0.08,
-      "cost_per_1m_out": 0.31,
-      "context_window": 32768,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "Qwen/Qwen3-30B-A3B",
-      "name": "Qwen3 30B A3B",
-      "cost_per_1m_in": 0.02,
-      "cost_per_1m_out": 0.08,
-      "context_window": 32768,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "name": "Qwen3 235B A22B Thinking 2507",
-      "cost_per_1m_in": 0.08,
-      "cost_per_1m_out": 0.31,
-      "context_window": 32768,
-      "default_max_tokens": 8192,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.1",
-      "name": "DeepSeek V3.1",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.8,
-      "context_window": 163840,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.1:THINKING",
-      "name": "DeepSeek V3.1 Reasoning",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.8,
-      "context_window": 163840,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
-      "name": "Qwen3 30B A3B Instruct 2507",
-      "cost_per_1m_in": 0.05,
-      "cost_per_1m_out": 0.2,
-      "context_window": 262144,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "name": "Qwen3 Coder 30B A3B Instruct",
-      "cost_per_1m_in": 0.0,
-      "cost_per_1m_out": 0.0,
-      "context_window": 262144,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "has_reasoning_efforts": false,
-      "supports_attachments": true
+      "supports_attachments": false
     }
   ]
 }
