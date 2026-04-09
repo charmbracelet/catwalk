@@ -1217,18 +1217,6 @@
       "supports_attachments": true
     },
     {
-      "id": "xai/grok-2-vision",
-      "name": "Grok 2 Vision",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
-      "default_max_tokens": 8000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "xai/grok-3",
       "name": "Grok 3 Beta",
       "cost_per_1m_in": 3,
