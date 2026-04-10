@@ -92,7 +92,7 @@ func run() error {
 
 	// NOTE(@andreynering): Exclude versioned models and keep only the main version of each.
 	copilotModels = slices.DeleteFunc(copilotModels, func(m Model) bool {
-		return m.ID != m.Version || versionedModelRegexp.MatchString(m.ID) || strings.Contains(m.ID, "embedding")
+		return m.ID != m.Version || versionedModelRegexp.MatchString(m.ID) || strings.Contains(m.ID, "embedding") || strings.HasPrefix(m.ID, "accounts/msft/routers")
 	})
 
 	catwalkModels := modelsToCatwalk(copilotModels)
