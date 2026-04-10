@@ -8,6 +8,18 @@
   "default_small_model_id": "zai-org/GLM-4.7-Flash",
   "models": [
     {
+      "id": "google/gemma-4-26b-a4b-it",
+      "name": "Google: Gemma 4 26B A4B",
+      "cost_per_1m_in": 0.145,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0.08,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "Intel/Qwen3-Coder-480B-A35B-Instruct-int4-mixed-ar",
       "name": "Intel: Qwen3 Coder 480B A35B Instruct INT4 Mixed AR",
       "cost_per_1m_in": 0.22,
@@ -112,8 +124,8 @@
     {
       "id": "openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b",
-      "cost_per_1m_in": 0.02,
-      "cost_per_1m_out": 0.1,
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0.01,
       "cost_per_1m_out_cached": 0.04,
       "context_window": 131072,

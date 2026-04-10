@@ -1161,7 +1161,7 @@
       "name": "Gemini 3.1 Flash Lite Preview",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 1.5,
-      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 8000,
