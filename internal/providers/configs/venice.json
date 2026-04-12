@@ -404,7 +404,7 @@
       "supports_attachments": true
     },
     {
-      "id": "google.gemma-4-26b-a4b-it",
+      "id": "google-gemma-4-26b-a4b-it",
       "name": "Google Gemma 4 26B A4B Instruct",
       "cost_per_1m_in": 0.1625,
       "cost_per_1m_out": 0.5,
@@ -416,7 +416,7 @@
       "supports_attachments": true
     },
     {
-      "id": "google.gemma-4-31b-it",
+      "id": "google-gemma-4-31b-it",
       "name": "Google Gemma 4 31B Instruct",
       "cost_per_1m_in": 0.175,
       "cost_per_1m_out": 0.5,
@@ -440,8 +440,8 @@
       "supports_attachments": true
     },
     {
-      "id": "grok-4-20-beta",
-      "name": "Grok 4.20 Beta",
+      "id": "grok-4-20",
+      "name": "Grok 4.20",
       "cost_per_1m_in": 2.27,
       "cost_per_1m_out": 6.8,
       "cost_per_1m_in_cached": 0,
