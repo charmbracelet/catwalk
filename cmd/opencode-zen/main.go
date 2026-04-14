@@ -166,14 +166,15 @@ func main() {
 			contextWindow = enrichment.Limit.Context
 			defaultMaxTokens = enrichment.Limit.Output
 			supportsImages = enrichment.Attachment
-			canReason = enrichment.Reasoning
 			modelName = enrichment.Name
-			if canReason {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoningEffort = "medium"
-			}
 		} else {
 			log.Printf("WARNING: No pricing found for model %s, using defaults\n", zenModel.ID)
+		}
+
+		if hasPricing && enrichment.Reasoning {
+			reasoningLevels = []string{"low", "medium", "high"}
+			defaultReasoningEffort = "medium"
+			canReason = true
 		}
 
 		m := catwalk.Model{
