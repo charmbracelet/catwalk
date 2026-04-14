@@ -66,7 +66,7 @@ func fetchZenModels() ([]ZenModel, error) {
 
 	resp, err := client.Do(req)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to fetch zen models: %w", err)
 	}
 	defer func() { _ = resp.Body.Close() }()
 	if resp.StatusCode != 200 {
@@ -76,7 +76,7 @@ func fetchZenModels() ([]ZenModel, error) {
 
 	var mr ZenModelsResponse
 	if err := json.NewDecoder(resp.Body).Decode(&mr); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to decode zen models: %w", err)
 	}
 
 	return mr.Data, nil
@@ -94,7 +94,7 @@ func fetchEnrichmentData() (map[string]ModelEnrichment, error) {
 
 	resp, err := client.Do(req)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed fetching enrichment data: %w", err)
 	}
 	defer func() { _ = resp.Body.Close() }()
 	if resp.StatusCode != 200 {
@@ -104,7 +104,7 @@ func fetchEnrichmentData() (map[string]ModelEnrichment, error) {
 
 	var fullData map[string]json.RawMessage
 	if err := json.NewDecoder(resp.Body).Decode(&fullData); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to decode when fetching enrichment data: %w", err)
 	}
 
 	rawOpenCode, ok := fullData["opencode"]
@@ -116,7 +116,7 @@ func fetchEnrichmentData() (map[string]ModelEnrichment, error) {
 		Models map[string]ModelEnrichment `json:"models"`
 	}
 	if err := json.Unmarshal(rawOpenCode, &openCodeData); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to unmarshal when fetching enrichment data: %w", err)
 	}
 
 	return openCodeData.Models, nil
