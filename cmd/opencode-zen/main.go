@@ -82,7 +82,7 @@ func fetchZenModels() ([]ZenModel, error) {
 	return mr.Data, nil
 }
 
-func fetchPricingData() (map[string]ModelEnrichment, error) {
+func fetchEnrichmentData() (map[string]ModelEnrichment, error) {
 	client := &http.Client{Timeout: 30 * time.Second}
 	req, _ := http.NewRequestWithContext(
 		context.Background(),
@@ -128,9 +128,9 @@ func main() {
 		log.Fatal("Error fetching OpenCode Zen models:", err)
 	}
 
-	pricingData, err := fetchPricingData()
+	enrichmentData, err := fetchEnrichmentData()
 	if err != nil {
-		log.Fatal("Error fetching pricing data:", err)
+		log.Fatal("Error fetching enrichment data:", err)
 	}
 
 	apiKey := os.Getenv("OPENCODE_ZEN_API_KEY")
@@ -149,16 +149,17 @@ func main() {
 	}
 
 	for _, zenModel := range zenModels {
-		enrichment, hasPricing := pricingData[zenModel.ID]
+		enrichment, hasEnrichment := enrichmentData[zenModel.ID]
 
 		var costPer1MIn, costPer1MOut, costPer1MInCached, costPer1MOutCached float64
 		var contextWindow, defaultMaxTokens int64 = 200000, 20000
-		var supportsImages, canReason bool
+		var supportsImages bool
+		var canReason bool = false
 		var reasoningLevels []string
 		var defaultReasoningEffort string
 		var modelName string = formatModelName(zenModel.ID)
 
-		if hasPricing {
+		if hasEnrichment {
 			costPer1MIn = math.Round(enrichment.Cost.Input*100) / 100
 			costPer1MOut = math.Round(enrichment.Cost.Output*100) / 100
 			costPer1MInCached = math.Round(enrichment.Cost.CacheRead*100) / 100
@@ -167,14 +168,14 @@ func main() {
 			defaultMaxTokens = enrichment.Limit.Output
 			supportsImages = enrichment.Attachment
 			modelName = enrichment.Name
-		} else {
-			log.Printf("WARNING: No pricing found for model %s, using defaults\n", zenModel.ID)
-		}
 
-		if hasPricing && enrichment.Reasoning {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoningEffort = "medium"
-			canReason = true
+			if enrichment.Reasoning {
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoningEffort = "medium"
+				canReason = true
+			}
+		} else {
+			log.Printf("WARNING: No enrichment found for model %s, using defaults\n", zenModel.ID)
 		}
 
 		m := catwalk.Model{
@@ -193,7 +194,7 @@ func main() {
 		}
 
 		zenProvider.Models = append(zenProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", zenModel.ID, contextWindow)
+		fmt.Printf("Added model %s with context window %d\n", modelName, contextWindow)
 	}
 
 	slices.SortFunc(zenProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
