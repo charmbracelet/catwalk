@@ -133,15 +133,10 @@ func main() {
 		log.Fatal("Error fetching enrichment data:", err)
 	}
 
-	apiKey := os.Getenv("OPENCODE_ZEN_API_KEY")
-	if apiKey == "" {
-		apiKey = "public"
-	}
-
 	zenProvider := catwalk.Provider{
 		Name:                "OpenCode Zen",
 		ID:                  catwalk.InferenceProviderOpenCodeZen,
-		APIKey:              apiKey,
+		APIKey:              "$OPENCODE_ZEN_API_KEY",
 		APIEndpoint:         "https://opencode.ai/zen/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "claude-sonnet-4-6",
