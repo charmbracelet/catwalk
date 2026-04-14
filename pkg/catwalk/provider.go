@@ -49,6 +49,7 @@ const (
 	InferenceProviderQiniuCloud   InferenceProvider = "qiniucloud"
 	InferenceProviderAvian        InferenceProvider = "avian"
 	InferenceProviderNebius       InferenceProvider = "nebius"
+	InferenceProviderOpenCodeZen  InferenceProvider = "opencode-zen"
 )
 
 // Provider represents an AI provider configuration.
@@ -121,6 +122,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderQiniuCloud,
 		InferenceProviderAvian,
 		InferenceProviderNebius,
+		InferenceProviderOpenCodeZen,
 	}
 }
 

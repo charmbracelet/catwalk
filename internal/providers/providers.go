@@ -96,6 +96,9 @@ var qiniuCloudConfig []byte
 //go:embed configs/avian.json
 var avianConfig []byte
 
+//go:embed configs/opencode-zen.json
+var openCodeZenConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -129,6 +132,7 @@ var providerRegistry = []ProviderFunc{
 	qiniuCloudProvider,
 	avianProvider,
 	nebiusProvider,
+	openCodeZenProvider,
 }
 
 // GetAll returns all registered providers.
@@ -259,6 +263,10 @@ func qiniuCloudProvider() catwalk.Provider {
 
 func nebiusProvider() catwalk.Provider {
 	return loadProviderFromConfig(nebiusConfig)
+}
+
+func openCodeZenProvider() catwalk.Provider {
+	return loadProviderFromConfig(openCodeZenConfig)
 }
 
 func avianProvider() catwalk.Provider {
