@@ -1,3 +1,4 @@
+// Package main generates the OpenCode Zen provider configuration.
 package main
 
 import (
@@ -149,10 +150,10 @@ func main() {
 		var costPer1MIn, costPer1MOut, costPer1MInCached, costPer1MOutCached float64
 		var contextWindow, defaultMaxTokens int64 = 200000, 20000
 		var supportsImages bool
-		var canReason bool = false
+		var canReason bool
 		var reasoningLevels []string
 		var defaultReasoningEffort string
-		var modelName string = zenModel.ID
+		modelName := zenModel.ID
 
 		if hasEnrichment {
 			costPer1MIn = math.Round(enrichment.Cost.Input*100) / 100
