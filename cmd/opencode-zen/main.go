@@ -139,8 +139,8 @@ func main() {
 		APIKey:              "$OPENCODE_ZEN_API_KEY",
 		APIEndpoint:         "https://opencode.ai/zen/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "claude-sonnet-4-6",
-		DefaultSmallModelID: "claude-haiku-4-5",
+		DefaultLargeModelID: "minimax-m2.5-free",
+		DefaultSmallModelID: "minimax-m2.5-free",
 	}
 
 	for _, zenModel := range zenModels {
@@ -152,7 +152,7 @@ func main() {
 		var canReason bool = false
 		var reasoningLevels []string
 		var defaultReasoningEffort string
-		var modelName string = formatModelName(zenModel.ID)
+		var modelName string = zenModel.ID
 
 		if hasEnrichment {
 			costPer1MIn = math.Round(enrichment.Cost.Input*100) / 100
@@ -173,6 +173,13 @@ func main() {
 			log.Printf("WARNING: No enrichment found for model %s, using defaults\n", zenModel.ID)
 		}
 
+		if costPer1MIn == 0 && costPer1MOut == 0 {
+			modelName = strings.TrimSuffix(modelName, "Free ")
+			modelName = strings.TrimSuffix(modelName, "Free")
+			modelName = strings.TrimRight(modelName, " ")
+			modelName += " FREE"
+		}
+
 		m := catwalk.Model{
 			ID:                     zenModel.ID,
 			Name:                   modelName,
@@ -189,7 +196,7 @@ func main() {
 		}
 
 		zenProvider.Models = append(zenProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", modelName, contextWindow)
+		fmt.Printf("Added model %s (%s)\n", zenModel.ID, modelName)
 	}
 
 	slices.SortFunc(zenProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
@@ -207,14 +214,4 @@ func main() {
 	}
 
 	fmt.Printf("Generated opencode-zen.json with %d models\n", len(zenProvider.Models))
-}
-
-func formatModelName(id string) string {
-	id = strings.ReplaceAll(id, "-", " ")
-	id = strings.ReplaceAll(id, ".", " ")
-	parts := strings.Fields(id)
-	for i := range parts {
-		parts[i] = strings.ToUpper(parts[i][:1]) + parts[i][1:]
-	}
-	return strings.Join(parts, " ")
 }

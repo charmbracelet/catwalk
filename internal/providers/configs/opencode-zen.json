@@ -4,12 +4,12 @@
   "api_key": "$OPENCODE_ZEN_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
   "type": "openai-compat",
-  "default_large_model_id": "claude-sonnet-4-6",
-  "default_small_model_id": "claude-haiku-4-5",
+  "default_large_model_id": "minimax-m2.5-free",
+  "default_small_model_id": "minimax-m2.5-free",
   "models": [
     {
       "id": "big-pickle",
-      "name": "Big Pickle",
+      "name": "Big Pickle FREE",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -273,7 +273,7 @@
     },
     {
       "id": "gpt-5-nano",
-      "name": "GPT-5 Nano",
+      "name": "GPT-5 Nano FREE",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -645,7 +645,7 @@
     },
     {
       "id": "minimax-m2.5-free",
-      "name": "MiniMax M2.5 Free",
+      "name": "MiniMax M2.5 FREE",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -663,7 +663,7 @@
     },
     {
       "id": "nemotron-3-super-free",
-      "name": "Nemotron 3 Super Free",
+      "name": "Nemotron 3 Super FREE",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -681,7 +681,7 @@
     },
     {
       "id": "trinity-large-preview-free",
-      "name": "Trinity Large Preview",
+      "name": "Trinity Large Preview FREE",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
