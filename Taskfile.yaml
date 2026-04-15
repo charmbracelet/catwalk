@@ -115,6 +115,11 @@ tasks:
     cmds:
       - go run cmd/neuralwatt/main.go
 
+  gen:opencode-go:
+    desc: Generate OpenCode Go provider configurations
+    cmds:
+      - go run cmd/opencode-go/main.go
+
   gen:opencode-zen:
     desc: Generate OpenCode Zen provider configurations
     cmds:

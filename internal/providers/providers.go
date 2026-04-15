@@ -102,6 +102,9 @@ var neuralwattConfig []byte
 //go:embed configs/opencode-zen.json
 var openCodeZenConfig []byte
 
+//go:embed configs/opencode-go.json
+var openCodeGoConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -137,6 +140,7 @@ var providerRegistry = []ProviderFunc{
 	nebiusProvider,
 	neuralwattProvider,
 	openCodeZenProvider,
+	openCodeGoProvider,
 }
 
 // GetAll returns all registered providers.
@@ -279,4 +283,8 @@ func neuralwattProvider() catwalk.Provider {
 
 func openCodeZenProvider() catwalk.Provider {
 	return loadProviderFromConfig(openCodeZenConfig)
+}
+
+func openCodeGoProvider() catwalk.Provider {
+	return loadProviderFromConfig(openCodeGoConfig)
 }
