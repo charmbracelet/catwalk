@@ -9,23 +9,86 @@ import (
 	"charm.land/catwalk/pkg/catwalk"
 )
 
-//go:embed configs/openai.json
-var openAIConfig []byte
+//go:embed configs/aihubmix.json
+var aiHubMixConfig []byte
 
 //go:embed configs/anthropic.json
 var anthropicConfig []byte
 
-//go:embed configs/synthetic.json
-var syntheticConfig []byte
+//go:embed configs/avian.json
+var avianConfig []byte
+
+//go:embed configs/azure.json
+var azureConfig []byte
+
+//go:embed configs/bedrock.json
+var bedrockConfig []byte
+
+//go:embed configs/cerebras.json
+var cerebrasConfig []byte
+
+//go:embed configs/chutes.json
+var chutesConfig []byte
+
+//go:embed configs/copilot.json
+var copilotConfig []byte
+
+//go:embed configs/cortecs.json
+var cortecsConfig []byte
+
+//go:embed configs/deepseek.json
+var deepSeekConfig []byte
 
 //go:embed configs/gemini.json
 var geminiConfig []byte
 
+//go:embed configs/groq.json
+var groqConfig []byte
+
+//go:embed configs/huggingface.json
+var huggingFaceConfig []byte
+
+//go:embed configs/ionet.json
+var ioNetConfig []byte
+
+//go:embed configs/kimi.json
+var kimiCodingConfig []byte
+
+//go:embed configs/minimax.json
+var miniMaxConfig []byte
+
+//go:embed configs/minimax-china.json
+var miniMaxChinaConfig []byte
+
+//go:embed configs/nebius.json
+var nebiusConfig []byte
+
+//go:embed configs/neuralwatt.json
+var neuralwattConfig []byte
+
+//go:embed configs/openai.json
+var openAIConfig []byte
+
+//go:embed configs/opencode-go.json
+var openCodeGoConfig []byte
+
+//go:embed configs/opencode-zen.json
+var openCodeZenConfig []byte
+
 //go:embed configs/openrouter.json
 var openRouterConfig []byte
 
-//go:embed configs/azure.json
-var azureConfig []byte
+//go:embed configs/qiniucloud.json
+var qiniuCloudConfig []byte
+
+//go:embed configs/synthetic.json
+var syntheticConfig []byte
+
+//go:embed configs/vercel.json
+var vercelConfig []byte
+
+//go:embed configs/venice.json
+var veniceConfig []byte
 
 //go:embed configs/vertexai.json
 var vertexAIConfig []byte
@@ -42,105 +105,45 @@ var zhipuConfig []byte
 //go:embed configs/zhipu-coding.json
 var zhipuCodingConfig []byte
 
-//go:embed configs/nebius.json
-var nebiusConfig []byte
-
-//go:embed configs/bedrock.json
-var bedrockConfig []byte
-
-//go:embed configs/groq.json
-var groqConfig []byte
-
-//go:embed configs/cerebras.json
-var cerebrasConfig []byte
-
-//go:embed configs/venice.json
-var veniceConfig []byte
-
-//go:embed configs/chutes.json
-var chutesConfig []byte
-
-//go:embed configs/deepseek.json
-var deepSeekConfig []byte
-
-//go:embed configs/huggingface.json
-var huggingFaceConfig []byte
-
-//go:embed configs/aihubmix.json
-var aiHubMixConfig []byte
-
-//go:embed configs/kimi.json
-var kimiCodingConfig []byte
-
-//go:embed configs/copilot.json
-var copilotConfig []byte
-
-//go:embed configs/cortecs.json
-var cortecsConfig []byte
-
-//go:embed configs/vercel.json
-var vercelConfig []byte
-
-//go:embed configs/minimax.json
-var miniMaxConfig []byte
-
-//go:embed configs/minimax-china.json
-var miniMaxChinaConfig []byte
-
-//go:embed configs/ionet.json
-var ioNetConfig []byte
-
-//go:embed configs/qiniucloud.json
-var qiniuCloudConfig []byte
-
-//go:embed configs/avian.json
-var avianConfig []byte
-
-//go:embed configs/neuralwatt.json
-var neuralwattConfig []byte
-
-//go:embed configs/opencode-zen.json
-var openCodeZenConfig []byte
-
-//go:embed configs/opencode-go.json
-var openCodeGoConfig []byte
-
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
 var providerRegistry = []ProviderFunc{
+	// Let's keep the main providers at the top.
 	anthropicProvider,
 	openAIProvider,
 	geminiProvider,
-	azureProvider,
-	bedrockProvider,
-	vertexAIProvider,
 	xAIProvider,
 	zAIProvider,
-	zhipuProvider,
-	zhipuCodingProvider,
 	kimiCodingProvider,
-	groqProvider,
-	openRouterProvider,
-	cerebrasProvider,
-	veniceProvider,
-	chutesProvider,
-	deepSeekProvider,
-	huggingFaceProvider,
-	aiHubMixProvider,
-	syntheticProvider,
-	copilotProvider,
-	cortecsProvider,
-	vercelProvider,
 	miniMaxProvider,
 	miniMaxChinaProvider,
-	ioNetProvider,
-	qiniuCloudProvider,
+	syntheticProvider,
+
+	// The remaining will be in alphabetical order.
+	aiHubMixProvider,
 	avianProvider,
+	azureProvider,
+	bedrockProvider,
+	cerebrasProvider,
+	chutesProvider,
+	copilotProvider,
+	cortecsProvider,
+	deepSeekProvider,
+	groqProvider,
+	huggingFaceProvider,
+	ioNetProvider,
 	nebiusProvider,
 	neuralwattProvider,
-	openCodeZenProvider,
 	openCodeGoProvider,
+	openCodeZenProvider,
+	openRouterProvider,
+	qiniuCloudProvider,
+	vercelProvider,
+	veniceProvider,
+	vertexAIProvider,
+	zhipuProvider,
+	zhipuCodingProvider,
 }
 
 // GetAll returns all registered providers.
@@ -161,20 +164,16 @@ func loadProviderFromConfig(configData []byte) catwalk.Provider {
 	return p
 }
 
-func openAIProvider() catwalk.Provider {
-	return loadProviderFromConfig(openAIConfig)
-}
-
-func syntheticProvider() catwalk.Provider {
-	return loadProviderFromConfig(syntheticConfig)
+func aiHubMixProvider() catwalk.Provider {
+	return loadProviderFromConfig(aiHubMixConfig)
 }
 
 func anthropicProvider() catwalk.Provider {
 	return loadProviderFromConfig(anthropicConfig)
 }
 
-func geminiProvider() catwalk.Provider {
-	return loadProviderFromConfig(geminiConfig)
+func avianProvider() catwalk.Provider {
+	return loadProviderFromConfig(avianConfig)
 }
 
 func azureProvider() catwalk.Provider {
@@ -183,6 +182,94 @@ func azureProvider() catwalk.Provider {
 
 func bedrockProvider() catwalk.Provider {
 	return loadProviderFromConfig(bedrockConfig)
+}
+
+func cerebrasProvider() catwalk.Provider {
+	return loadProviderFromConfig(cerebrasConfig)
+}
+
+func chutesProvider() catwalk.Provider {
+	return loadProviderFromConfig(chutesConfig)
+}
+
+func copilotProvider() catwalk.Provider {
+	return loadProviderFromConfig(copilotConfig)
+}
+
+func cortecsProvider() catwalk.Provider {
+	return loadProviderFromConfig(cortecsConfig)
+}
+
+func deepSeekProvider() catwalk.Provider {
+	return loadProviderFromConfig(deepSeekConfig)
+}
+
+func geminiProvider() catwalk.Provider {
+	return loadProviderFromConfig(geminiConfig)
+}
+
+func groqProvider() catwalk.Provider {
+	return loadProviderFromConfig(groqConfig)
+}
+
+func huggingFaceProvider() catwalk.Provider {
+	return loadProviderFromConfig(huggingFaceConfig)
+}
+
+func ioNetProvider() catwalk.Provider {
+	return loadProviderFromConfig(ioNetConfig)
+}
+
+func kimiCodingProvider() catwalk.Provider {
+	return loadProviderFromConfig(kimiCodingConfig)
+}
+
+func miniMaxProvider() catwalk.Provider {
+	return loadProviderFromConfig(miniMaxConfig)
+}
+
+func miniMaxChinaProvider() catwalk.Provider {
+	return loadProviderFromConfig(miniMaxChinaConfig)
+}
+
+func nebiusProvider() catwalk.Provider {
+	return loadProviderFromConfig(nebiusConfig)
+}
+
+func neuralwattProvider() catwalk.Provider {
+	return loadProviderFromConfig(neuralwattConfig)
+}
+
+func openAIProvider() catwalk.Provider {
+	return loadProviderFromConfig(openAIConfig)
+}
+
+func openCodeGoProvider() catwalk.Provider {
+	return loadProviderFromConfig(openCodeGoConfig)
+}
+
+func openCodeZenProvider() catwalk.Provider {
+	return loadProviderFromConfig(openCodeZenConfig)
+}
+
+func openRouterProvider() catwalk.Provider {
+	return loadProviderFromConfig(openRouterConfig)
+}
+
+func qiniuCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(qiniuCloudConfig)
+}
+
+func syntheticProvider() catwalk.Provider {
+	return loadProviderFromConfig(syntheticConfig)
+}
+
+func vercelProvider() catwalk.Provider {
+	return loadProviderFromConfig(vercelConfig)
+}
+
+func veniceProvider() catwalk.Provider {
+	return loadProviderFromConfig(veniceConfig)
 }
 
 func vertexAIProvider() catwalk.Provider {
@@ -203,88 +290,4 @@ func zhipuProvider() catwalk.Provider {
 
 func zhipuCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(zhipuCodingConfig)
-}
-
-func openRouterProvider() catwalk.Provider {
-	return loadProviderFromConfig(openRouterConfig)
-}
-
-func groqProvider() catwalk.Provider {
-	return loadProviderFromConfig(groqConfig)
-}
-
-func cerebrasProvider() catwalk.Provider {
-	return loadProviderFromConfig(cerebrasConfig)
-}
-
-func veniceProvider() catwalk.Provider {
-	return loadProviderFromConfig(veniceConfig)
-}
-
-func chutesProvider() catwalk.Provider {
-	return loadProviderFromConfig(chutesConfig)
-}
-
-func deepSeekProvider() catwalk.Provider {
-	return loadProviderFromConfig(deepSeekConfig)
-}
-
-func huggingFaceProvider() catwalk.Provider {
-	return loadProviderFromConfig(huggingFaceConfig)
-}
-
-func aiHubMixProvider() catwalk.Provider {
-	return loadProviderFromConfig(aiHubMixConfig)
-}
-
-func kimiCodingProvider() catwalk.Provider {
-	return loadProviderFromConfig(kimiCodingConfig)
-}
-
-func copilotProvider() catwalk.Provider {
-	return loadProviderFromConfig(copilotConfig)
-}
-
-func cortecsProvider() catwalk.Provider {
-	return loadProviderFromConfig(cortecsConfig)
-}
-
-func vercelProvider() catwalk.Provider {
-	return loadProviderFromConfig(vercelConfig)
-}
-
-func miniMaxProvider() catwalk.Provider {
-	return loadProviderFromConfig(miniMaxConfig)
-}
-
-func miniMaxChinaProvider() catwalk.Provider {
-	return loadProviderFromConfig(miniMaxChinaConfig)
-}
-
-func ioNetProvider() catwalk.Provider {
-	return loadProviderFromConfig(ioNetConfig)
-}
-
-func qiniuCloudProvider() catwalk.Provider {
-	return loadProviderFromConfig(qiniuCloudConfig)
-}
-
-func nebiusProvider() catwalk.Provider {
-	return loadProviderFromConfig(nebiusConfig)
-}
-
-func avianProvider() catwalk.Provider {
-	return loadProviderFromConfig(avianConfig)
-}
-
-func neuralwattProvider() catwalk.Provider {
-	return loadProviderFromConfig(neuralwattConfig)
-}
-
-func openCodeZenProvider() catwalk.Provider {
-	return loadProviderFromConfig(openCodeZenConfig)
-}
-
-func openCodeGoProvider() catwalk.Provider {
-	return loadProviderFromConfig(openCodeGoConfig)
 }
