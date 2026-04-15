@@ -25,6 +25,9 @@ jobs:
       - run: go run ./cmd/avian/main.go
         continue-on-error: true
 
+      - run: go run ./cmd/neuralwatt/main.go
+        continue-on-error: true
+
       - run: go run ./cmd/chutes/main.go
         continue-on-error: true
 

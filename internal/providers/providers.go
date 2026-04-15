@@ -96,6 +96,9 @@ var qiniuCloudConfig []byte
 //go:embed configs/avian.json
 var avianConfig []byte
 
+//go:embed configs/neuralwatt.json
+var neuralwattConfig []byte
+
 //go:embed configs/opencode-zen.json
 var openCodeZenConfig []byte
 
@@ -132,6 +135,7 @@ var providerRegistry = []ProviderFunc{
 	qiniuCloudProvider,
 	avianProvider,
 	nebiusProvider,
+	neuralwattProvider,
 	openCodeZenProvider,
 }
 
@@ -265,10 +269,15 @@ func nebiusProvider() catwalk.Provider {
 	return loadProviderFromConfig(nebiusConfig)
 }
 
-func openCodeZenProvider() catwalk.Provider {
-	return loadProviderFromConfig(openCodeZenConfig)
-}
 
 func avianProvider() catwalk.Provider {
 	return loadProviderFromConfig(avianConfig)
+}
+
+func neuralwattProvider() catwalk.Provider {
+	return loadProviderFromConfig(neuralwattConfig)
+}
+
+func openCodeZenProvider() catwalk.Provider {
+	return loadProviderFromConfig(openCodeZenConfig)
 }

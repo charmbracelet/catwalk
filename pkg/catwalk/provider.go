@@ -49,6 +49,7 @@ const (
 	InferenceProviderQiniuCloud   InferenceProvider = "qiniucloud"
 	InferenceProviderAvian        InferenceProvider = "avian"
 	InferenceProviderNebius       InferenceProvider = "nebius"
+	InferenceProviderNeuralwatt   InferenceProvider = "neuralwatt"
 	InferenceProviderOpenCodeZen  InferenceProvider = "opencode-zen"
 )
 
@@ -122,6 +123,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderQiniuCloud,
 		InferenceProviderAvian,
 		InferenceProviderNebius,
+		InferenceProviderNeuralwatt,
 		InferenceProviderOpenCodeZen,
 	}
 }

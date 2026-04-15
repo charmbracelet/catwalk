@@ -296,30 +296,6 @@
       "supports_attachments": false
     },
     {
-      "id": "unsloth/Mistral-Small-24B-Instruct-2501",
-      "name": "Mistral-Small-24B-Instruct-2501",
-      "cost_per_1m_in": 0.0747,
-      "cost_per_1m_out": 0.2989,
-      "cost_per_1m_in_cached": 0.03735,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "chutesai/Mistral-Small-3.2-24B-Instruct-2506",
-      "name": "Mistral-Small-3.2-24B-Instruct-2506",
-      "cost_per_1m_in": 0.06,
-      "cost_per_1m_out": 0.18,
-      "cost_per_1m_in_cached": 0.03,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 131072,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "Qwen/Qwen2.5-72B-Instruct",
       "name": "Qwen2.5-72B-Instruct",
       "cost_per_1m_in": 0.2989,

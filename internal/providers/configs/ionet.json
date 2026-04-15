@@ -119,7 +119,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "openai/gpt-oss-120b",
