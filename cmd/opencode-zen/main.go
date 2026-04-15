@@ -2,6 +2,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -50,10 +51,7 @@ type ModelEnrichment struct {
 }
 
 func fetchZenModels() ([]ZenModel, error) {
-	apiKey := os.Getenv("OPENCODE_ZEN_API_KEY")
-	if apiKey == "" {
-		apiKey = "public"
-	}
+	apiKey := cmp.Or(os.Getenv("OPENCODE_API_KEY"), "public")
 
 	client := &http.Client{Timeout: 30 * time.Second}
 	req, _ := http.NewRequestWithContext(
@@ -137,7 +135,7 @@ func main() {
 	zenProvider := catwalk.Provider{
 		Name:                "OpenCode Zen",
 		ID:                  catwalk.InferenceProviderOpenCodeZen,
-		APIKey:              "$OPENCODE_ZEN_API_KEY",
+		APIKey:              "$OPENCODE_API_KEY",
 		APIEndpoint:         "https://opencode.ai/zen/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "minimax-m2.5-free",
@@ -172,13 +170,6 @@ func main() {
 			}
 		} else {
 			log.Printf("WARNING: No enrichment found for model %s, using defaults\n", zenModel.ID)
-		}
-
-		if costPer1MIn == 0 && costPer1MOut == 0 {
-			modelName = strings.TrimSuffix(modelName, "Free ")
-			modelName = strings.TrimSuffix(modelName, "Free")
-			modelName = strings.TrimRight(modelName, " ")
-			modelName += " FREE"
 		}
 
 		m := catwalk.Model{
