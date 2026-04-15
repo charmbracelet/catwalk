@@ -40,44 +40,74 @@ type ModelMeta struct {
 
 var modelMetadata = map[string]ModelMeta{
 	"mistralai/Devstral-Small-2-24B-Instruct-2512": {
-		Tools: true, Reasoning: false, Vision: true,
-		CostPer1MIn: 0.1, CostPer1MOut: 0.3,
+		Tools:        true,
+		Reasoning:    false,
+		Vision:       true,
+		CostPer1MIn:  0.1,
+		CostPer1MOut: 0.3,
 	},
 	"zai-org/GLM-5.1-FP8": {
-		Tools: true, Reasoning: true, Vision: false,
-		CostPer1MIn: 1.1, CostPer1MOut: 3.6,
+		Tools:        true,
+		Reasoning:    true,
+		Vision:       false,
+		CostPer1MIn:  1.1,
+		CostPer1MOut: 3.6,
 	},
 	"glm-5.1-fast": {
-		Tools: true, Reasoning: false, Vision: false,
-		CostPer1MIn: 1.1, CostPer1MOut: 3.6,
+		Tools:        true,
+		Reasoning:    false,
+		Vision:       false,
+		CostPer1MIn:  1.1,
+		CostPer1MOut: 3.6,
 	},
 	"openai/gpt-oss-20b": {
-		Tools: true, Reasoning: false, Vision: false,
-		CostPer1MIn: 0.0, CostPer1MOut: 0.2,
+		Tools:        true,
+		Reasoning:    false,
+		Vision:       false,
+		CostPer1MIn:  0.0,
+		CostPer1MOut: 0.2,
 	},
 	"moonshotai/Kimi-K2.5": {
-		Tools: true, Reasoning: false, Vision: true,
-		CostPer1MIn: 0.5, CostPer1MOut: 2.6,
+		Tools:        true,
+		Reasoning:    false,
+		Vision:       true,
+		CostPer1MIn:  0.5,
+		CostPer1MOut: 2.6,
 	},
 	"kimi-k2.5-fast": {
-		Tools: true, Reasoning: false, Vision: true,
-		CostPer1MIn: 0.5, CostPer1MOut: 2.6,
+		Tools:        true,
+		Reasoning:    false,
+		Vision:       true,
+		CostPer1MIn:  0.5,
+		CostPer1MOut: 2.6,
 	},
 	"MiniMaxAI/MiniMax-M2.5": {
-		Tools: true, Reasoning: true, Vision: false,
-		CostPer1MIn: 0.3, CostPer1MOut: 1.4,
+		Tools:        true,
+		Reasoning:    true,
+		Vision:       false,
+		CostPer1MIn:  0.3,
+		CostPer1MOut: 1.4,
 	},
 	"Qwen/Qwen3.5-35B-A3B": {
-		Tools: true, Reasoning: true, Vision: false,
-		CostPer1MIn: 0.3, CostPer1MOut: 1.1,
+		Tools:        true,
+		Reasoning:    true,
+		Vision:       false,
+		CostPer1MIn:  0.3,
+		CostPer1MOut: 1.1,
 	},
 	"Qwen/Qwen3.5-397B-A17B-FP8": {
-		Tools: true, Reasoning: true, Vision: false,
-		CostPer1MIn: 0.7, CostPer1MOut: 4.1,
+		Tools:        true,
+		Reasoning:    true,
+		Vision:       false,
+		CostPer1MIn:  0.7,
+		CostPer1MOut: 4.1,
 	},
 	"qwen3.5-397b-fast": {
-		Tools: true, Reasoning: false, Vision: false,
-		CostPer1MIn: 0.7, CostPer1MOut: 4.1,
+		Tools:        true,
+		Reasoning:    false,
+		Vision:       false,
+		CostPer1MIn:  0.7,
+		CostPer1MOut: 4.1,
 	},
 }
 
@@ -150,7 +180,6 @@ func main() {
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "zai-org/GLM-5.1-FP8",
 		DefaultSmallModelID: "mistralai/Devstral-Small-2-24B-Instruct-2512",
-		Models:              []catwalk.Model{},
 	}
 
 	modelsResp, err := fetchNeuralwattModels(neuralwattProvider.APIEndpoint)
@@ -200,8 +229,7 @@ func main() {
 		}
 
 		neuralwattProvider.Models = append(neuralwattProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n",
-			model.ID, model.MaxModelLen)
+		fmt.Printf("Added model %s with context window %d\n", model.ID, model.MaxModelLen)
 	}
 
 	slices.SortFunc(neuralwattProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
