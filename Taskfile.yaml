@@ -64,6 +64,10 @@ tasks:
       - task: gen:cortecs
       - task: gen:huggingface
       - task: gen:ionet
+      - task: gen:nebius
+      - task: gen:neuralwatt
+      - task: gen:opencode-go
+      - task: gen:opencode-zen
       - task: gen:openrouter
       - task: gen:synthetic
       - task: gen:venice
