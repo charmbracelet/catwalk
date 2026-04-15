@@ -269,7 +269,6 @@ func nebiusProvider() catwalk.Provider {
 	return loadProviderFromConfig(nebiusConfig)
 }
 
-
 func avianProvider() catwalk.Provider {
 	return loadProviderFromConfig(avianConfig)
 }
