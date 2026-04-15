@@ -40,6 +40,9 @@ jobs:
       - run: go run ./cmd/ionet/main.go
         continue-on-error: true
 
+      - run: go run ./cmd/opencode-go/main.go
+        continue-on-error: true
+
       - run: go run ./cmd/opencode-zen/main.go
         continue-on-error: true
 
