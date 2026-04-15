@@ -110,6 +110,11 @@ tasks:
     cmds:
       - go run cmd/nebius/main.go
 
+  gen:neuralwatt:
+    desc: Generate Neuralwatt provider configurations
+    cmds:
+      - go run cmd/neuralwatt/main.go
+
   gen:openrouter:
     desc: Generate openrouter provider configurations
     cmds:
