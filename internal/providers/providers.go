@@ -96,6 +96,9 @@ var qiniuCloudConfig []byte
 //go:embed configs/avian.json
 var avianConfig []byte
 
+//go:embed configs/neuralwatt.json
+var neuralwattConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -129,6 +132,7 @@ var providerRegistry = []ProviderFunc{
 	qiniuCloudProvider,
 	avianProvider,
 	nebiusProvider,
+	neuralwattProvider,
 }
 
 // GetAll returns all registered providers.
@@ -263,4 +267,8 @@ func nebiusProvider() catwalk.Provider {
 
 func avianProvider() catwalk.Provider {
 	return loadProviderFromConfig(avianConfig)
+}
+
+func neuralwattProvider() catwalk.Provider {
+	return loadProviderFromConfig(neuralwattConfig)
 }
