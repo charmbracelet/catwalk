@@ -50,6 +50,7 @@ const (
 	InferenceProviderAvian        InferenceProvider = "avian"
 	InferenceProviderNebius       InferenceProvider = "nebius"
 	InferenceProviderNeuralwatt   InferenceProvider = "neuralwatt"
+	InferenceProviderOpenCodeZen  InferenceProvider = "opencode-zen"
 )
 
 // Provider represents an AI provider configuration.
@@ -123,6 +124,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderAvian,
 		InferenceProviderNebius,
 		InferenceProviderNeuralwatt,
+		InferenceProviderOpenCodeZen,
 	}
 }
 
