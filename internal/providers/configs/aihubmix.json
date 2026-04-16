@@ -1034,6 +1034,18 @@
       "supports_attachments": true
     },
     {
+      "id": "gemini-2.5-flash-image",
+      "name": "Gemini 2.5 Flash Image",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 2.499,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 32800,
+      "default_max_tokens": 8000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "gemini-2.5-flash-lite",
       "name": "Gemini 2.5 Flash Lite",
       "cost_per_1m_in": 0.1,
