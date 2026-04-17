@@ -158,6 +158,27 @@
       "supports_attachments": true
     },
     {
+      "id": "anthropic/claude-opus-4.7",
+      "name": "Claude Opus 4.7",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 25,
+      "cost_per_1m_in_cached": 0.5,
+      "cost_per_1m_out_cached": 6.25,
+      "context_window": 1000000,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "anthropic/claude-sonnet-4",
       "name": "Claude Sonnet 4",
       "cost_per_1m_in": 3,
@@ -509,7 +530,7 @@
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0.26,
       "cost_per_1m_out_cached": 0,
-      "context_window": 202800,
+      "context_window": 202752,
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
@@ -518,7 +539,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "zai/glm-5v-turbo",
@@ -1292,7 +1313,7 @@
       "context_window": 2000000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4-fast-reasoning",
@@ -1310,7 +1331,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.1-fast-non-reasoning",
@@ -1322,7 +1343,7 @@
       "context_window": 2000000,
       "default_max_tokens": 8000,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.1-fast-reasoning",
@@ -1340,7 +1361,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.20-non-reasoning-beta",
@@ -1388,7 +1409,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.20-multi-agent",
@@ -1406,7 +1427,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xai/grok-4.20-non-reasoning",
