@@ -90,9 +90,26 @@ func run() error {
 		return err
 	}
 
-	// NOTE(@andreynering): Exclude versioned models and keep only the main version of each.
+	// Exclude versioned/duplicate models and keep only the main version of each.
+	aliasedVersions := make(map[string]bool, len(copilotModels))
+	for _, m := range copilotModels {
+		if m.ID != m.Version {
+			aliasedVersions[m.Version] = true
+		}
+	}
+
 	copilotModels = slices.DeleteFunc(copilotModels, func(m Model) bool {
-		return m.ID != m.Version || versionedModelRegexp.MatchString(m.ID) || strings.Contains(m.ID, "embedding") || strings.HasPrefix(m.ID, "accounts/msft/routers")
+		return aliasedVersions[m.ID] || versionedModelRegexp.MatchString(m.ID) || strings.Contains(m.ID, "embedding") || strings.HasPrefix(m.ID, "accounts/msft/routers") || strings.HasPrefix(m.ID, "oswe-vscode") || m.ID == "gpt-4-o-preview"
+	})
+
+	// Deduplicate by ID (API can return duplicates)
+	seen := make(map[string]bool, len(copilotModels))
+	copilotModels = slices.DeleteFunc(copilotModels, func(m Model) bool {
+		if seen[m.ID] {
+			return true
+		}
+		seen[m.ID] = true
+		return false
 	})
 
 	catwalkModels := modelsToCatwalk(copilotModels)

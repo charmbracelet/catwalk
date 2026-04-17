@@ -139,13 +139,25 @@
       "supports_attachments": true
     },
     {
-      "id": "gpt-3.5-turbo-0613",
+      "id": "gpt-3.5-turbo",
       "name": "GPT 3.5 Turbo",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 16384,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-4",
+      "name": "GPT 4",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
       "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false
@@ -163,13 +175,37 @@
       "supports_attachments": false
     },
     {
-      "id": "gpt-4-0613",
-      "name": "GPT 4",
+      "id": "gpt-4.1",
+      "name": "GPT-4.1",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-4o-mini",
+      "name": "GPT-4o mini",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
       "supports_attachments": false
