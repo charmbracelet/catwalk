@@ -410,6 +410,18 @@
       "supports_attachments": true
     },
     {
+      "id": "gemma-4-uncensored",
+      "name": "Gemma 4 Uncensored",
+      "cost_per_1m_in": 0.1625,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "google-gemma-3-27b-it",
       "name": "Google Gemma 3 27B Instruct",
       "cost_per_1m_in": 0.12,
@@ -746,7 +758,7 @@
     {
       "id": "qwen3-5-9b",
       "name": "Qwen 3.5 9B",
-      "cost_per_1m_in": 0.05,
+      "cost_per_1m_in": 0.1,
       "cost_per_1m_out": 0.15,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
