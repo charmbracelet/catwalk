@@ -96,7 +96,7 @@ func main() {
 		APIKey:              "$NEBIUS_API_KEY",
 		APIEndpoint:         "https://api.tokenfactory.nebius.com/v1", // this is their default region, eu-north1
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+		DefaultLargeModelID: "moonshotai/Kimi-K2.5",
 		DefaultSmallModelID: "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
 	}
 

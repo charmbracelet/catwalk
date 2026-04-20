@@ -123,7 +123,7 @@ func run() error {
 		Models:              catwalkModels,
 		APIEndpoint:         "https://api.githubcopilot.com",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "claude-opus-4.6",
+		DefaultLargeModelID: "claude-sonnet-4.6",
 		DefaultSmallModelID: "claude-haiku-4.5",
 	}
 	data, err := json.MarshalIndent(provider, "", "  ")
