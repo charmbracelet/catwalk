@@ -161,6 +161,7 @@ func isReasoningModel(modelID string) bool {
 		strings.ToLower(modelID),
 		"-thinking",
 		"kimi-k2.5",
+		"kimi-k2.6",
 		"deepseek",
 		"glm",
 		"gpt-oss",
