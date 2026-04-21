@@ -4,7 +4,7 @@
   "api_key": "$HF_TOKEN",
   "api_endpoint": "https://router.huggingface.co/v1",
   "type": "openai-compat",
-  "default_large_model_id": "moonshotai/Kimi-K2.5:fireworks-ai",
+  "default_large_model_id": "moonshotai/Kimi-K2.6:fireworks-ai",
   "default_small_model_id": "openai/gpt-oss-20b:groq",
   "models": [
     {

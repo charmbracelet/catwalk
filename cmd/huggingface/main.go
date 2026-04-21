@@ -114,7 +114,7 @@ func main() {
 		APIKey:              "$HF_TOKEN",
 		APIEndpoint:         "https://router.huggingface.co/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "moonshotai/Kimi-K2.5:fireworks-ai",
+		DefaultLargeModelID: "moonshotai/Kimi-K2.6:fireworks-ai",
 		DefaultSmallModelID: "openai/gpt-oss-20b:groq",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
