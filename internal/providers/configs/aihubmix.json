@@ -2474,6 +2474,18 @@
       "supports_attachments": true
     },
     {
+      "id": "ling-2.6-flash-free",
+      "name": "Ling 2.6 Flash (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262100,
+      "default_max_tokens": 32000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "llama-4-maverick",
       "name": "Llama 4 Maverick",
       "cost_per_1m_in": 0.2,

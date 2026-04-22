@@ -32,18 +32,6 @@
       "supports_attachments": false
     },
     {
-      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507:cerebras",
-      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507 (cerebras)",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "Qwen/Qwen3-32B:groq",
       "name": "Qwen/Qwen3-32B (groq)",
       "cost_per_1m_in": 0.29,
@@ -87,18 +75,6 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.1:fireworks-ai",
-      "name": "deepseek-ai/DeepSeek-V3.1 (fireworks-ai)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 163840,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
@@ -238,18 +214,6 @@
     {
       "id": "zai-org/GLM-4.7:fireworks-ai",
       "name": "zai-org/GLM-4.7 (fireworks-ai)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 202752,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "zai-org/GLM-5:fireworks-ai",
-      "name": "zai-org/GLM-5 (fireworks-ai)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
