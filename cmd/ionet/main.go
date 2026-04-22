@@ -71,10 +71,11 @@ func main() {
 			continue
 		}
 
-		canReason := isReasoningModel(model.ID)
-		var reasoningLevels []string
-		var defaultReasoning string
-		if canReason {
+		var (
+			reasoningLevels  []string
+			defaultReasoning string
+		)
+		if supportsReasoningLevels(model.ID) {
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -95,7 +96,7 @@ func main() {
 			CostPer1MOutCached:     costPer1MOutCached,
 			ContextWindow:          int64(model.ContextWindow),
 			DefaultMaxTokens:       int64(model.ContextWindow) / 10,
-			CanReason:              canReason,
+			CanReason:              isReasoningModel(model.ID),
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         model.SupportsImagesInput,
@@ -166,6 +167,15 @@ func isReasoningModel(modelID string) bool {
 		"glm",
 		"gpt-oss",
 		"llama",
+		"gemma-4",
+	)
+}
+
+// supportsReasoningLevels returns whether the models supports reasoning levels.
+func supportsReasoningLevels(modelID string) bool {
+	return xstrings.ContainsAnyOf(
+		strings.ToLower(modelID),
+		"gpt-oss",
 	)
 }
 
