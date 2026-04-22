@@ -31,7 +31,7 @@ var (
 
 func init() {
 	var err error
-	providersJSON, err = json.Marshal(providers.GetAll())
+	providersJSON, err = json.MarshalIndent(providers.GetAll(), "", "  ")
 	if err != nil {
 		log.Fatal("Failed to marshal providers:", err)
 	}
