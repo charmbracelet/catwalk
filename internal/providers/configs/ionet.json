@@ -16,7 +16,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "can_reason": true,
       "supports_attachments": false
     },
     {
@@ -41,12 +41,6 @@
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -95,12 +89,6 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -113,12 +101,6 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -131,12 +113,6 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -197,12 +173,6 @@
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -215,12 +185,6 @@
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -233,12 +197,6 @@
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -251,12 +209,6 @@
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -269,12 +221,6 @@
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     }
   ]
