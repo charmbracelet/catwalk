@@ -4,7 +4,11 @@ package providers
 import (
 	_ "embed"
 	"encoding/json"
+	"fmt"
 	"log"
+	"os"
+	"slices"
+	"strings"
 
 	"charm.land/catwalk/pkg/catwalk"
 )
@@ -181,7 +185,87 @@ func azureProvider() catwalk.Provider {
 }
 
 func bedrockProvider() catwalk.Provider {
-	return loadProviderFromConfig(bedrockConfig)
+	p := loadProviderFromConfig(bedrockConfig)
+
+	region := os.Getenv("AWS_REGION")
+	if region == "" {
+		region = os.Getenv("AWS_DEFAULT_REGION")
+	}
+
+	regionsByModelID, err := loadBedrockRegionsByModelID()
+	if err != nil {
+		log.Printf("Error loading bedrock regions: %v", err)
+		return catwalk.Provider{}
+	}
+
+	prefix := bedrockRegionPrefix(region)
+	origLarge := p.DefaultLargeModelID
+	origSmall := p.DefaultSmallModelID
+
+	resolved := make([]catwalk.Model, 0, len(p.Models))
+	for _, m := range p.Models {
+		id := m.ID
+		regions := regionsByModelID[id]
+
+		switch {
+		case slices.Contains(regions, prefix):
+			m.ID = prefix + "." + m.ID
+		case slices.Contains(regions, "global"):
+			m.ID = "global." + m.ID
+		default:
+			continue
+		}
+
+		if id == origLarge {
+			p.DefaultLargeModelID = m.ID
+		}
+		if id == origSmall {
+			p.DefaultSmallModelID = m.ID
+		}
+		resolved = append(resolved, m)
+	}
+	p.Models = resolved
+
+	return p
+}
+
+// bedrockRegionPrefix maps an AWS region to the inference profile prefix used
+// by Bedrock cross-region inference. Returns an empty string when the region
+// is unknown or unset, in which case the global profile is used as fallback.
+func bedrockRegionPrefix(region string) string {
+	switch {
+	case strings.HasPrefix(region, "us-") || region == "ca-central-1":
+		return "us"
+	case strings.HasPrefix(region, "eu-"):
+		return "eu"
+	case region == "ap-northeast-1":
+		return "jp"
+	case region == "ap-southeast-2":
+		return "au"
+	case strings.HasPrefix(region, "ap-"):
+		return "apac"
+	default:
+		return ""
+	}
+}
+
+func loadBedrockRegionsByModelID() (map[string][]string, error) {
+	var config struct {
+		Models []struct {
+			ID      string   `json:"id"`
+			Regions []string `json:"regions"`
+		} `json:"models"`
+	}
+
+	if err := json.Unmarshal(bedrockConfig, &config); err != nil {
+		return nil, fmt.Errorf("unmarshal bedrock config: %w", err)
+	}
+
+	regionsByModelID := make(map[string][]string, len(config.Models))
+	for _, model := range config.Models {
+		regionsByModelID[model.ID] = model.Regions
+	}
+	return regionsByModelID, nil
 }
 
 func cerebrasProvider() catwalk.Provider {
