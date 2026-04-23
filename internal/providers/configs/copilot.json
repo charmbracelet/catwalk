@@ -115,18 +115,6 @@
       "supports_attachments": true
     },
     {
-      "id": "goldeneye-free-auto",
-      "name": "Goldeneye",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 400000,
-      "default_max_tokens": 128000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "gpt-3.5-turbo",
       "name": "GPT 3.5 Turbo",
       "cost_per_1m_in": 0,
