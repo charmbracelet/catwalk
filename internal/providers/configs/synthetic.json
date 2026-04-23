@@ -128,36 +128,6 @@
       "supports_attachments": false
     },
     {
-      "id": "hf:moonshotai/Kimi-K2-Instruct-0905",
-      "name": "Kimi K2 Instruct 0905",
-      "cost_per_1m_in": 1.2,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 1.2,
-      "cost_per_1m_out_cached": 1.2,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "hf:moonshotai/Kimi-K2-Thinking",
-      "name": "Kimi K2 Thinking",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0.6,
-      "cost_per_1m_out_cached": 0.6,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
       "id": "hf:moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
       "cost_per_1m_in": 0.45,
@@ -203,24 +173,6 @@
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "hf:MiniMaxAI/MiniMax-M2.1",
-      "name": "MiniMax M2.1",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0.3,
-      "cost_per_1m_out_cached": 0.3,
-      "context_window": 196608,
-      "default_max_tokens": 19660,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
