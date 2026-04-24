@@ -92,6 +92,18 @@
       "supports_attachments": false
     },
     {
+      "id": "meta-llama/Llama-3.3-70B-Instruct:groq",
+      "name": "meta-llama/Llama-3.3-70B-Instruct (groq)",
+      "cost_per_1m_in": 0.59,
+      "cost_per_1m_out": 0.79,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct:groq",
       "name": "meta-llama/Llama-4-Scout-17B-16E-Instruct (groq)",
       "cost_per_1m_in": 0.11,
