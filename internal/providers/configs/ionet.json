@@ -8,6 +8,42 @@
   "default_small_model_id": "zai-org/GLM-4.7-Flash",
   "models": [
     {
+      "id": "deepseek-ai/DeepSeek-V3.2",
+      "name": "DeepSeek: DeepSeek V3.2",
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 0.38,
+      "cost_per_1m_in_cached": 0.125,
+      "cost_per_1m_out_cached": 0.5,
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "name": "DeepSeek: DeepSeek V4 Flash",
+      "cost_per_1m_in": 1.55,
+      "cost_per_1m_out": 2.28,
+      "cost_per_1m_in_cached": 0.38,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 65000,
+      "default_max_tokens": 6500,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "name": "DeepSeek: DeepSeek V4 Pro",
+      "cost_per_1m_in": 4.45,
+      "cost_per_1m_out": 5.5,
+      "cost_per_1m_in_cached": 0.35,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 800000,
+      "default_max_tokens": 80000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Google: Gemma 4 26B A4B",
       "cost_per_1m_in": 0.145,
@@ -30,6 +66,18 @@
       "default_max_tokens": 10600,
       "can_reason": false,
       "supports_attachments": false
+    },
+    {
+      "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "name": "Meta-Llama: Llama 4 Maverick 17B 128E Instruct FP8",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0.075,
+      "cost_per_1m_out_cached": 0.3,
+      "context_window": 430000,
+      "default_max_tokens": 43000,
+      "can_reason": true,
+      "supports_attachments": true
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
@@ -150,6 +198,18 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen2.5-VL-32B-Instruct",
+      "name": "Qwen: Qwen2.5 VL 32B Instruct",
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.22,
+      "cost_per_1m_in_cached": 0.025,
+      "cost_per_1m_out_cached": 0.1,
+      "context_window": 32000,
+      "default_max_tokens": 3200,
+      "can_reason": false,
+      "supports_attachments": true
     },
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",

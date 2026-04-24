@@ -64,10 +64,7 @@ func main() {
 		}
 		modelIDSet[model.ID] = struct{}{}
 
-		if model.ContextWindow < 20000 {
-			continue
-		}
-		if !supportsTools(model.ID) {
+		if !shouldSkipModel(model.ID) {
 			continue
 		}
 
@@ -179,13 +176,13 @@ func supportsReasoningLevels(modelID string) bool {
 	)
 }
 
-// supportsTools determines if a model supports tool calling based on its ID.
-func supportsTools(modelID string) bool {
+// shouldSkipModel return if we should skip a model, if it's not good enough
+// for coding.
+func shouldSkipModel(modelID string) bool {
 	return !xstrings.ContainsAnyOf(
 		strings.ToLower(modelID),
-		"deepseek",
-		"llama-4",
+		"deepseek-r1",
+		"llama-3.2",
 		"mistral-nemo",
-		"qwen2.5",
 	)
 }
