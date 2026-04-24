@@ -8,6 +8,18 @@
   "default_small_model_id": "anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [
     {
+      "id": "anthropic.claude-opus-4-7-v1",
+      "name": "AWS Claude Opus 4.7",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 25,
+      "cost_per_1m_in_cached": 6.25,
+      "cost_per_1m_out_cached": 0.50,
+      "context_window": 1000000,
+      "default_max_tokens": 126000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "anthropic.claude-sonnet-4-6",
       "name": "AWS Claude Sonnet 4.6",
       "cost_per_1m_in": 3,
@@ -28,18 +40,6 @@
       "cost_per_1m_out_cached": 0.3,
       "context_window": 200000,
       "default_max_tokens": 64000,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "anthropic.claude-opus-4-7-v1",
-      "name": "AWS Claude Opus 4.7",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 25,
-      "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.50,
-      "context_window": 1000000,
-      "default_max_tokens": 126000,
       "can_reason": true,
       "supports_attachments": true
     },
