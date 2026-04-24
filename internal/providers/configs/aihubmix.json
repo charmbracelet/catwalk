@@ -818,6 +818,60 @@
       "supports_attachments": false
     },
     {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "cost_per_1m_in": 0.154,
+      "cost_per_1m_out": 0.308,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0308,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4-flash-think",
+      "name": "DeepSeek V4 Flash Thinking",
+      "cost_per_1m_in": 0.154,
+      "cost_per_1m_out": 0.308,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0308,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "cost_per_1m_in": 1.914,
+      "cost_per_1m_out": 3.828,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.17226,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "doubao-seed-1-6",
       "name": "Doubao Seed 1.6",
       "cost_per_1m_in": 0.18,
