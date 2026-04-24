@@ -47,8 +47,8 @@ func fetchModelIDs(ctx context.Context, apiKey string) ([]string, error) {
 		return nil, fmt.Errorf("read body: %w", err)
 	}
 
-	_ = os.MkdirAll("tmp", 0o700)                                      //nolint:errcheck,gosec
-	_ = os.WriteFile("tmp/moonshot-models-response.json", body, 0o600) //nolint:errcheck,gosec
+	_ = os.MkdirAll("tmp", 0o700)
+	_ = os.WriteFile("tmp/moonshot-models-response.json", body, 0o600)
 
 	if resp.StatusCode != http.StatusOK {
 		err := fmt.Errorf("status %d: %s", resp.StatusCode, body)
@@ -187,7 +187,7 @@ func main() {
 	}
 	data = append(data, '\n')
 
-	if err := os.WriteFile("internal/providers/configs/moonshot.json", data, 0o600); err != nil { //nolint:gosec
+	if err := os.WriteFile("internal/providers/configs/moonshot.json", data, 0o600); err != nil {
 		log.Fatalf("Error writing moonshot config: %v", err)
 	}
 	fmt.Printf("Generated moonshot.json with %d models\n", len(provider.Models))
