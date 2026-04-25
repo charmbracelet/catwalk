@@ -4,37 +4,70 @@
   "type": "openai-compat",
   "api_key": "$DEEPSEEK_API_KEY",
   "api_endpoint": "https://api.deepseek.com/v1",
-  "default_large_model_id": "deepseek-reasoner",
+  "default_large_model_id": "deepseek-v4-flash",
   "default_small_model_id": "deepseek-chat",
   "models": [
     {
       "id": "deepseek-chat",
       "name": "DeepSeek-V3.2 (Non-thinking Mode)",
-      "cost_per_1m_in": 0.28,
-      "cost_per_1m_out": 0.42,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.028,
-      "context_window": 128000,
-      "default_max_tokens": 4000,
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.28,
+      "cost_per_1m_in_cached": 0.028,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 38400,
       "can_reason": false,
       "supports_attachments": false
     },
     {
       "id": "deepseek-reasoner",
       "name": "DeepSeek-V3.2 (Thinking Mode)",
-      "cost_per_1m_in": 0.28,
-      "cost_per_1m_out": 0.42,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.028,
-      "context_window": 128000,
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.28,
+      "cost_per_1m_in_cached": 0.028,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
       "default_max_tokens": 32000,
       "can_reason": true,
       "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
+        "high",
+        "max"
       ],
-      "default_reasoning_effort": "medium",
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek-V4-Flash",
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.28,
+      "cost_per_1m_in_cached": 0.028,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek-V4-Pro",
+      "cost_per_1m_in": 0.435,
+      "cost_per_1m_out": 0.87,
+      "cost_per_1m_in_cached": 0.03625,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
       "supports_attachments": false
     }
   ]

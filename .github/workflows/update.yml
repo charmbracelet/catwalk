@@ -34,6 +34,11 @@ jobs:
       - run: go run ./cmd/cortecs/main.go
         continue-on-error: true
 
+      - run: go run ./cmd/deepseek/main.go
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
       - run: go run ./cmd/huggingface/main.go
         continue-on-error: true
 
