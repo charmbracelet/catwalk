@@ -42,6 +42,7 @@ const (
 	InferenceKimiCoding           InferenceProvider = "kimi-coding"
 	InferenceProviderCopilot      InferenceProvider = "copilot"
 	InferenceProviderCortecs      InferenceProvider = "cortecs"
+	InferenceProviderFireworks    InferenceProvider = "fireworks"
 	InferenceProviderVercel       InferenceProvider = "vercel"
 	InferenceProviderMiniMax      InferenceProvider = "minimax"
 	InferenceProviderMiniMaxChina InferenceProvider = "minimax-china"
@@ -118,6 +119,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
 		InferenceProviderCortecs,
+		InferenceProviderFireworks,
 		InferenceProviderVercel,
 		InferenceProviderMiniMax,
 		InferenceProviderMiniMaxChina,
