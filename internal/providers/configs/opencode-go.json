@@ -30,7 +30,7 @@
       "name": "DeepSeek V4 Pro",
       "cost_per_1m_in": 1.74,
       "cost_per_1m_out": 3.48,
-      "cost_per_1m_in_cached": 0.14,
+      "cost_per_1m_in_cached": 0.01,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -158,7 +158,7 @@
       "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0.08,
       "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
+      "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
