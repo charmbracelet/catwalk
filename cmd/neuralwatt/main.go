@@ -18,126 +18,52 @@ import (
 	"charm.land/catwalk/pkg/catwalk"
 )
 
+type Pricing struct {
+	InputPerMillion        *float64 `json:"input_per_million"`
+	OutputPerMillion       *float64 `json:"output_per_million"`
+	CachedInputPerMillion  *float64 `json:"cached_input_per_million"`
+	CachedOutputPerMillion *float64 `json:"cached_output_per_million"`
+	PricingTBD             bool     `json:"pricing_tbd"`
+}
+
+type Capabilities struct {
+	Tools           bool `json:"tools"`
+	Vision          bool `json:"vision"`
+	Reasoning       bool `json:"reasoning"`
+	ReasoningEffort bool `json:"reasoning_effort"`
+}
+
+type Limits struct {
+	MaxOutputTokens *int64 `json:"max_output_tokens"`
+}
+
+type Metadata struct {
+	DisplayName  string       `json:"display_name"`
+	Pricing      Pricing      `json:"pricing"`
+	Capabilities Capabilities `json:"capabilities"`
+	Limits       Limits       `json:"limits"`
+	Deprecated   bool         `json:"deprecated"`
+}
+
 type NeuralwattModel struct {
-	ID          string `json:"id"`
-	MaxModelLen int64  `json:"max_model_len"`
+	ID          string   `json:"id"`
+	MaxModelLen int64    `json:"max_model_len"`
+	Metadata    Metadata `json:"metadata"`
 }
 
 type ModelsResponse struct {
 	Data []NeuralwattModel `json:"data"`
 }
 
-// ModelMeta contains the hardcoded metadata for a Neuralwatt model.
-// The API only returns id and max_model_len, so pricing and capabilities
-// are sourced from the pricing page at https://portal.neuralwatt.com/pricing.
-type ModelMeta struct {
-	Tools        bool
-	Reasoning    bool
-	Vision       bool
-	CostPer1MIn  float64
-	CostPer1MOut float64
-}
-
-var modelMetadata = map[string]ModelMeta{
-	"mistralai/Devstral-Small-2-24B-Instruct-2512": {
-		Tools:        true,
-		Reasoning:    false,
-		Vision:       true,
-		CostPer1MIn:  0.1,
-		CostPer1MOut: 0.3,
-	},
-	"zai-org/GLM-5.1-FP8": {
-		Tools:        true,
-		Reasoning:    true,
-		Vision:       false,
-		CostPer1MIn:  1.1,
-		CostPer1MOut: 3.6,
-	},
-	"glm-5.1-fast": {
-		Tools:        true,
-		Reasoning:    false,
-		Vision:       false,
-		CostPer1MIn:  1.1,
-		CostPer1MOut: 3.6,
-	},
-	"openai/gpt-oss-20b": {
-		Tools:        true,
-		Reasoning:    false,
-		Vision:       false,
-		CostPer1MIn:  0.0,
-		CostPer1MOut: 0.2,
-	},
-	"moonshotai/Kimi-K2.5": {
-		Tools:        true,
-		Reasoning:    false,
-		Vision:       true,
-		CostPer1MIn:  0.5,
-		CostPer1MOut: 2.6,
-	},
-	"kimi-k2.5-fast": {
-		Tools:        true,
-		Reasoning:    false,
-		Vision:       true,
-		CostPer1MIn:  0.5,
-		CostPer1MOut: 2.6,
-	},
-	"MiniMaxAI/MiniMax-M2.5": {
-		Tools:        true,
-		Reasoning:    true,
-		Vision:       false,
-		CostPer1MIn:  0.3,
-		CostPer1MOut: 1.4,
-	},
-	"Qwen/Qwen3.5-35B-A3B": {
-		Tools:        true,
-		Reasoning:    true,
-		Vision:       false,
-		CostPer1MIn:  0.3,
-		CostPer1MOut: 1.1,
-	},
-	"Qwen/Qwen3.5-397B-A17B-FP8": {
-		Tools:        true,
-		Reasoning:    true,
-		Vision:       false,
-		CostPer1MIn:  0.7,
-		CostPer1MOut: 4.1,
-	},
-	"qwen3.5-397b-fast": {
-		Tools:        true,
-		Reasoning:    false,
-		Vision:       false,
-		CostPer1MIn:  0.7,
-		CostPer1MOut: 4.1,
-	},
-}
-
-// modelNames provides display names for Neuralwatt-owned models that lack an
-// org prefix and use lowercase IDs.
-var modelNames = map[string]string{
-	"glm-5.1-fast":      "GLM 5.1 Fast",
-	"kimi-k2.5-fast":    "Kimi K2.5 Fast",
-	"qwen3.5-397b-fast": "Qwen3.5 397B Fast",
-}
-
 func roundCost(v float64) float64 {
 	return math.Round(v*1e5) / 1e5
 }
 
-// modelDisplayName converts a model ID to a human-readable display name. For
-// models with an org prefix (e.g. "zai-org/GLM-5-FP8"), the prefix is stripped.
-// Neuralwatt-owned models without a prefix are looked up in modelNames for
-// proper casing.
-func modelDisplayName(id string) string {
-	if name, ok := modelNames[id]; ok {
-		return name
+func ptrDeref[T any](v *T, fallback T) T {
+	if v == nil {
+		return fallback
 	}
-
-	name := id
-	if idx := strings.Index(name, "/"); idx != -1 {
-		name = name[idx+1:]
-	}
-	name = strings.ReplaceAll(name, "-", " ")
-	return name
+	return *v
 }
 
 func fetchNeuralwattModels(apiEndpoint string) (*ModelsResponse, error) {
@@ -171,6 +97,14 @@ func fetchNeuralwattModels(apiEndpoint string) (*ModelsResponse, error) {
 	return &mr, nil
 }
 
+func fallbackDisplayName(id string) string {
+	name := id
+	if idx := strings.Index(name, "/"); idx != -1 {
+		name = name[idx+1:]
+	}
+	return strings.ReplaceAll(name, "-", " ")
+}
+
 func main() {
 	neuralwattProvider := catwalk.Provider{
 		Name:                "Neuralwatt",
@@ -188,6 +122,13 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
+		meta := model.Metadata
+
+		if meta.Deprecated {
+			fmt.Printf("Skipping deprecated model %s\n", model.ID)
+			continue
+		}
+
 		// Skip models with small context windows
 		if model.MaxModelLen < 20000 {
 			fmt.Printf("Skipping model %s: context %d < 20000\n",
@@ -195,37 +136,49 @@ func main() {
 			continue
 		}
 
-		meta, ok := modelMetadata[model.ID]
-		if !ok {
-			fmt.Printf("Skipping unknown model %s (no metadata)\n", model.ID)
+		if !meta.Capabilities.Tools {
+			fmt.Printf("Skipping model %s (no tool support)\n", model.ID)
 			continue
 		}
 
-		// Only include models that support tools
-		if !meta.Tools {
-			continue
+		costIn := ptrDeref(meta.Pricing.InputPerMillion, 0)
+		costOut := ptrDeref(meta.Pricing.OutputPerMillion, 0)
+		// Null cached pricing means same as non-cached
+		costInCached := ptrDeref(meta.Pricing.CachedInputPerMillion, costIn)
+		costOutCached := ptrDeref(meta.Pricing.CachedOutputPerMillion, costOut)
+
+		var defaultMaxTokens int64
+		if meta.Limits.MaxOutputTokens != nil {
+			defaultMaxTokens = *meta.Limits.MaxOutputTokens
+		} else {
+			defaultMaxTokens = model.MaxModelLen / 10
 		}
 
 		var reasoningLevels []string
 		var defaultReasoning string
-		if meta.Reasoning {
+		if meta.Capabilities.ReasoningEffort {
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
 
+		name := meta.DisplayName
+		if name == "" {
+			name = fallbackDisplayName(model.ID)
+		}
+
 		m := catwalk.Model{
 			ID:                     model.ID,
-			Name:                   modelDisplayName(model.ID),
-			CostPer1MIn:            roundCost(meta.CostPer1MIn),
-			CostPer1MOut:           roundCost(meta.CostPer1MOut),
-			CostPer1MInCached:      0, // Not available
-			CostPer1MOutCached:     0, // Not available
+			Name:                   name,
+			CostPer1MIn:            roundCost(costIn),
+			CostPer1MOut:           roundCost(costOut),
+			CostPer1MInCached:      roundCost(costInCached),
+			CostPer1MOutCached:     roundCost(costOutCached),
 			ContextWindow:          model.MaxModelLen,
-			DefaultMaxTokens:       model.MaxModelLen / 10,
-			CanReason:              meta.Reasoning,
+			DefaultMaxTokens:       defaultMaxTokens,
+			CanReason:              meta.Capabilities.Reasoning,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         meta.Vision,
+			SupportsImages:         meta.Capabilities.Vision,
 		}
 
 		neuralwattProvider.Models = append(neuralwattProvider.Models, m)
