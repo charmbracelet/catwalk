@@ -334,9 +334,9 @@
     {
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
-      "cost_per_1m_in": 1.74,
-      "cost_per_1m_out": 3.48,
-      "cost_per_1m_in_cached": 0.145,
+      "cost_per_1m_in": 0.435,
+      "cost_per_1m_out": 0.87,
+      "cost_per_1m_in_cached": 0.0036,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 8000,

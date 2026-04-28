@@ -436,9 +436,9 @@
     {
       "id": "Qwen/Qwen3.6-27B-TEE",
       "name": "Qwen3.6-27B-TEE",
-      "cost_per_1m_in": 0.195,
-      "cost_per_1m_out": 1.56,
-      "cost_per_1m_in_cached": 0.0975,
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0.25,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
       "default_max_tokens": 65536,

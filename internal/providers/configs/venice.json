@@ -858,6 +858,22 @@
       "supports_attachments": true
     },
     {
+      "id": "qwen3-6-27b",
+      "name": "Qwen 3.6 27B",
+      "cost_per_1m_in": 0.325,
+      "cost_per_1m_out": 3.25,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true,
+      "options": {
+        "temperature": 1,
+        "top_p": 0.95
+      }
+    },
+    {
       "id": "qwen-3-6-plus",
       "name": "Qwen 3.6 Plus Uncensored",
       "cost_per_1m_in": 0.625,
@@ -920,22 +936,6 @@
       "default_max_tokens": 32768,
       "can_reason": true,
       "supports_attachments": true
-    },
-    {
-      "id": "qwen3-6-27b",
-      "name": "Qwen3.6 27B",
-      "cost_per_1m_in": 0.325,
-      "cost_per_1m_out": 3.25,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "supports_attachments": true,
-      "options": {
-        "temperature": 1,
-        "top_p": 0.95
-      }
     },
     {
       "id": "arcee-trinity-large-thinking",
