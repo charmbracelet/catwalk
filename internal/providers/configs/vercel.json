@@ -318,7 +318,7 @@
       "name": "DeepSeek V4 Flash",
       "cost_per_1m_in": 0.14,
       "cost_per_1m_out": 0.28,
-      "cost_per_1m_in_cached": 0.028,
+      "cost_per_1m_in_cached": 0.0028,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 8000,
