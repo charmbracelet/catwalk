@@ -6,9 +6,11 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 
 	"charm.land/catwalk/internal/providers"
+	"charm.land/catwalk/pkg/catwalk"
 	"github.com/charmbracelet/x/etag"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -69,6 +71,46 @@ func providersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func providersSpecificHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// Extract provider ID from the URL path
+	path := strings.TrimPrefix(r.URL.Path, "/v2/providers/")
+	providerID := strings.TrimSuffix(path, "/")
+
+	if providerID == "" {
+		http.Error(w, "Provider ID is required", http.StatusBadRequest)
+		return
+	}
+
+	// Get all providers
+	allProviders := providers.GetAll()
+
+	// Find the specific provider by ID
+	var foundProvider *catwalk.Provider
+	for _, provider := range allProviders {
+		if string(provider.ID) == providerID {
+			foundProvider = &provider
+			break
+		}
+	}
+
+	if foundProvider == nil {
+		http.Error(w, "Provider not found", http.StatusNotFound)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(foundProvider); err != nil {
+		log.Printf("Error encoding provider response: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
 func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
@@ -81,6 +123,7 @@ func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
+	mux.HandleFunc("/v2/providers/", providersSpecificHandler)
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
