@@ -40,6 +40,16 @@ jobs:
       - run: go run ./cmd/ionet/main.go
         continue-on-error: true
 
+      - run: go run ./cmd/moonshot/main.go
+        continue-on-error: true
+        env:
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+
+      - run: go run ./cmd/moonshot-cn/main.go
+        continue-on-error: true
+        env:
+          MOONSHOT_CN_API_KEY: ${{ secrets.MOONSHOT_CN_API_KEY }}
+
       - run: go run ./cmd/opencode-go/main.go
         continue-on-error: true
 
