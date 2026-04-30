@@ -91,7 +91,12 @@ type Model struct {
 	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	SupportsImages         bool         `json:"supports_attachments"`
-	Options                ModelOptions `json:"options,omitzero"`
+	// MaxAttachments is the per-request hard cap on image attachments for this
+	// model. Zero (the default) means no provider-enforced limit and consumers
+	// should fall back to context-window sizing. A positive value is a hard
+	// cap that consumers must respect (e.g. Gemini caps at 10).
+	MaxAttachments int64        `json:"max_attachments,omitempty"`
+	Options        ModelOptions `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.
