@@ -44,7 +44,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-opus-4-7-v1",
+      "id": "anthropic.claude-opus-4-7",
       "name": "AWS Claude Opus 4.7",
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 25,
