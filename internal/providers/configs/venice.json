@@ -130,7 +130,7 @@
     {
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
-      "cost_per_1m_in": 0.175,
+      "cost_per_1m_in": 0.17,
       "cost_per_1m_out": 0.35,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
@@ -148,8 +148,8 @@
     {
       "id": "deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
-      "cost_per_1m_in": 2.175,
-      "cost_per_1m_out": 4.35,
+      "cost_per_1m_in": 1.73,
+      "cost_per_1m_out": 3.796,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,

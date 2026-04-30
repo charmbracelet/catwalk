@@ -100,7 +100,7 @@
       "cost_per_1m_out_cached": 3.22,
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": true,
+      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -149,7 +149,7 @@
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "qwen3.6-35b-fast",
@@ -161,7 +161,7 @@
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     }
   ]
 }
