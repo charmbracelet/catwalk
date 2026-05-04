@@ -1616,18 +1616,6 @@
       "supports_attachments": false
     },
     {
-      "id": "moonshotai/kimi-k2-0905",
-      "name": "Kimi K2 0905",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0.3,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 8000,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "moonshotai/kimi-k2",
       "name": "Kimi K2 Instruct",
       "cost_per_1m_in": 0.57,
@@ -2384,7 +2372,7 @@
       "supports_attachments": false
     },
     {
-      "id": "alibaba/qwen3-vl-thinking",
+      "id": "alibaba/qwen3-235b-a22b-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
@@ -2402,7 +2390,7 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-235b-a22b-thinking",
+      "id": "alibaba/qwen3-vl-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
