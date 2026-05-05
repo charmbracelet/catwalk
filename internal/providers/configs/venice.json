@@ -760,7 +760,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 16384,
-      "can_reason": false,
+      "can_reason": true,
       "supports_attachments": false
     },
     {
@@ -792,18 +792,6 @@
       "name": "Qwen 3 Coder 480B Turbo",
       "cost_per_1m_in": 0.35,
       "cost_per_1m_out": 1.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "qwen3-coder-480b-a35b-instruct",
-      "name": "Qwen 3 Coder 480b",
-      "cost_per_1m_in": 0.75,
-      "cost_per_1m_out": 3,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
