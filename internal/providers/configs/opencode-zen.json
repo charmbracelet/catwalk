@@ -244,9 +244,9 @@
     {
       "id": "gpt-5-nano",
       "name": "GPT-5 Nano",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0.01,
       "cost_per_1m_out_cached": 0,
       "context_window": 400000,
       "default_max_tokens": 128000,

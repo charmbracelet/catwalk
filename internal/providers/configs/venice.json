@@ -544,8 +544,8 @@
     {
       "id": "grok-4-20",
       "name": "Grok 4.20",
-      "cost_per_1m_in": 2.27,
-      "cost_per_1m_out": 6.8,
+      "cost_per_1m_in": 1.42,
+      "cost_per_1m_out": 2.83,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 2000000,
