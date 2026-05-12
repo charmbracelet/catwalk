@@ -4,8 +4,8 @@
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
   "type": "openai-compat",
-  "default_large_model_id": "minimax-m2.5-free",
-  "default_small_model_id": "minimax-m2.5-free",
+  "default_large_model_id": "kimi-k2.6-fast",
+  "default_small_model_id": "Qwen/Qwen3.6-35B-A3B",
   "models": [
     {
       "id": "big-pickle",
