@@ -113,7 +113,7 @@ func main() {
 		APIEndpoint:         "https://api.neuralwatt.com/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "zai-org/GLM-5.1-FP8",
-		DefaultSmallModelID: "mistralai/Devstral-Small-2-24B-Instruct-2512",
+		DefaultSmallModelID: "Qwen/Qwen3.6-35B-A3B",
 	}
 
 	modelsResp, err := fetchNeuralwattModels(neuralwattProvider.APIEndpoint)
