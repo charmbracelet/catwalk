@@ -30,6 +30,7 @@ const (
 	InferenceProviderVertexAI     InferenceProvider = "vertexai"
 	InferenceProviderXAI          InferenceProvider = "xai"
 	InferenceProviderZAI          InferenceProvider = "zai"
+	InferenceProviderDeepSeek     InferenceProvider = "deepseek"
 	InferenceProviderZhipu        InferenceProvider = "zhipu"
 	InferenceProviderZhipuCoding  InferenceProvider = "zhipu-coding"
 	InferenceProviderGROQ         InferenceProvider = "groq"
