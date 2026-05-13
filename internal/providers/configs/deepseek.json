@@ -18,11 +18,8 @@
       "default_max_tokens": 384000,
       "can_reason": true,
       "reasoning_levels": [
-        "low",
-        "medium",
         "high",
-        "xhigh",
-        "max"
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
@@ -38,11 +35,8 @@
       "default_max_tokens": 384000,
       "can_reason": true,
       "reasoning_levels": [
-        "low",
-        "medium",
         "high",
-        "xhigh",
-        "max"
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
