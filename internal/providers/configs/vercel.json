@@ -32,27 +32,6 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic/claude-3.7-sonnet",
-      "name": "Claude 3.7 Sonnet",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 0.3,
-      "cost_per_1m_out_cached": 3.75,
-      "context_window": 200000,
-      "default_max_tokens": 8000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "anthropic/claude-haiku-4.5",
       "name": "Claude Haiku 4.5",
       "cost_per_1m_in": 1,
@@ -2390,7 +2369,7 @@
       "supports_attachments": false
     },
     {
-      "id": "alibaba/qwen3-vl-thinking",
+      "id": "alibaba/qwen3-235b-a22b-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
@@ -2408,7 +2387,7 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-235b-a22b-thinking",
+      "id": "alibaba/qwen3-vl-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
