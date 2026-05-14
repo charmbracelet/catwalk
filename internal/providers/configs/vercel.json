@@ -894,7 +894,7 @@
     },
     {
       "id": "openai/gpt-oss-20b",
-      "name": "GPT OSS 120B",
+      "name": "GPT OSS 20B",
       "cost_per_1m_in": 0.05,
       "cost_per_1m_out": 0.2,
       "cost_per_1m_in_cached": 0,
