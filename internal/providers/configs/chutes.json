@@ -266,18 +266,6 @@
       "supports_attachments": false
     },
     {
-      "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
-      "name": "Qwen3-Next-80B-A3B-Instruct",
-      "cost_per_1m_in": 0.1,
-      "cost_per_1m_out": 0.8,
-      "cost_per_1m_in_cached": 0.05,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 262144,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "Qwen/Qwen3.5-397B-A17B-TEE",
       "name": "Qwen3.5-397B-A17B-TEE",
       "cost_per_1m_in": 0.48,
