@@ -86,18 +86,6 @@
       "supports_attachments": false
     },
     {
-      "id": "DeepSeek-V3.1-Fast",
-      "name": "DeepSeek V3.1 Fast",
-      "cost_per_1m_in": 1.096,
-      "cost_per_1m_out": 3.288,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 163000,
-      "default_max_tokens": 16300,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "DeepSeek-V3.1-Terminus",
       "name": "DeepSeek V3.1 Terminus",
       "cost_per_1m_in": 0.56,
