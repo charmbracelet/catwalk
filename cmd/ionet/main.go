@@ -3,6 +3,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -23,6 +24,7 @@ import (
 type Model struct {
 	ID                   string  `json:"id"`
 	Name                 string  `json:"name"`
+	MaxTokens            int     `json:"max_tokens"`
 	ContextWindow        int     `json:"context_window"`
 	SupportsImagesInput  bool    `json:"supports_images_input"`
 	InputTokenPrice      float64 `json:"input_token_price"`
@@ -97,7 +99,7 @@ func main() {
 			CostPer1MInCached:      costPer1MInCached,
 			CostPer1MOutCached:     costPer1MOutCached,
 			ContextWindow:          int64(model.ContextWindow),
-			DefaultMaxTokens:       int64(model.ContextWindow) / 10,
+			DefaultMaxTokens:       int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
 			CanReason:              isReasoningModel(model.ID),
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
