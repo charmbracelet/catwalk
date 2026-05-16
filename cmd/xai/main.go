@@ -138,7 +138,7 @@ func main() {
 		APIEndpoint:         "https://api.x.ai/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "grok-4.20",
-		DefaultSmallModelID: "grok-4-1-fast",
+		DefaultSmallModelID: "grok-4.20",
 	}
 
 	for _, model := range modelsResp.Models {

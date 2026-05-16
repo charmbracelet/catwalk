@@ -257,18 +257,6 @@
       "default_max_tokens": 128000,
       "can_reason": false,
       "supports_attachments": true
-    },
-    {
-      "id": "grok-code-fast-1",
-      "name": "Grok Code Fast 1",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 64000,
-      "can_reason": false,
-      "supports_attachments": false
     }
   ]
 }

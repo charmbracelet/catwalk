@@ -84,6 +84,11 @@ func main() {
 		costPer1MInCached := roundCost(model.CacheReadTokenPrice * 1_000_000)
 		costPer1MOutCached := roundCost(model.CacheWriteTokenPrice * 1_000_000)
 
+		switch model.ID {
+		case "google/gemma-4-26b-a4b-it":
+			model.ContextWindow = max(256000)
+		}
+
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.Name,
