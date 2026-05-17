@@ -128,10 +128,10 @@
       "supports_attachments": false
     },
     {
-      "id": "openai/gpt-oss-120b:fireworks-ai",
-      "name": "openai/gpt-oss-120b (fireworks-ai)",
+      "id": "openai/gpt-oss-120b:groq",
+      "name": "openai/gpt-oss-120b (groq)",
       "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.6,
+      "cost_per_1m_out": 0.75,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
@@ -140,10 +140,10 @@
       "supports_attachments": false
     },
     {
-      "id": "openai/gpt-oss-120b:groq",
-      "name": "openai/gpt-oss-120b (groq)",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.75,
+      "id": "openai/gpt-oss-20b:fireworks-ai",
+      "name": "openai/gpt-oss-20b (fireworks-ai)",
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.2,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
