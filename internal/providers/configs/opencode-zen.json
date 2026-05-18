@@ -726,36 +726,6 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
-    },
-    {
-      "id": "ring-2.6-1t-free",
-      "name": "Ring 2.6 1T Free",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262000,
-      "default_max_tokens": 66000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "trinity-large-preview-free",
-      "name": "Trinity Large Preview",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 131072,
-      "can_reason": false,
-      "supports_attachments": false
     }
   ]
 }
