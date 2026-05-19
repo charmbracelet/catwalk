@@ -15,7 +15,8 @@
       "cost_per_1m_in_cached": 0.06,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "can_reason": true
     },
     {
       "id": "MiniMax-M2.7",
@@ -25,7 +26,8 @@
       "cost_per_1m_in_cached": 0.06,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "can_reason": true
     },
     {
       "id": "MiniMax-M2.5-highspeed",
@@ -35,7 +37,8 @@
       "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "can_reason": true
     },
     {
       "id": "MiniMax-M2.5",
@@ -45,7 +48,8 @@
       "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "can_reason": true
     },
     {
       "id": "MiniMax-M2.1-highspeed",
@@ -55,7 +59,8 @@
       "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "can_reason": true
     },
     {
       "id": "MiniMax-M2.1",
@@ -65,7 +70,8 @@
       "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "can_reason": true
     },
     {
       "id": "MiniMax-M2",
@@ -75,7 +81,8 @@
       "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 200000,
-      "default_max_tokens": 20000
+      "default_max_tokens": 20000,
+      "can_reason": true
     }
   ]
 }
