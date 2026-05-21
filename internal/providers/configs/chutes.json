@@ -4,8 +4,8 @@
   "api_key": "$CHUTES_API_KEY",
   "api_endpoint": "https://llm.chutes.ai/v1",
   "type": "openai-compat",
-  "default_large_model_id": "zai-org/GLM-5-TEE",
-  "default_small_model_id": "zai-org/GLM-5-Turbo",
+  "default_large_model_id": "moonshotai/Kimi-K2.6-TEE",
+  "default_small_model_id": "google/gemma-4-31B-turbo-TEE",
   "models": [
     {
       "id": "deepseek-ai/DeepSeek-V3.2-TEE",

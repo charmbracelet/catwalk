@@ -136,8 +136,8 @@ func main() {
 		APIKey:              "$CHUTES_API_KEY",
 		APIEndpoint:         "https://llm.chutes.ai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "zai-org/GLM-5-TEE",
-		DefaultSmallModelID: "zai-org/GLM-5-Turbo",
+		DefaultLargeModelID: "moonshotai/Kimi-K2.6-TEE",
+		DefaultSmallModelID: "google/gemma-4-31B-turbo-TEE",
 		Models:              models,
 	}
 
