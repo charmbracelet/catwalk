@@ -566,6 +566,18 @@
       "supports_attachments": true
     },
     {
+      "id": "grok-build-0-1",
+      "name": "Grok Build 0.1",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "kimi-k2-5",
       "name": "Kimi K2.5",
       "cost_per_1m_in": 0.56,
@@ -890,6 +902,18 @@
         "temperature": 1,
         "top_p": 0.95
       }
+    },
+    {
+      "id": "e2ee-qwen3-6-35b-a3b",
+      "name": "Qwen 3.6 35B A3B FP8",
+      "cost_per_1m_in": 0.2125,
+      "cost_per_1m_out": 1.375,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
     },
     {
       "id": "qwen-3-6-plus",
