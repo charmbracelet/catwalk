@@ -2,8 +2,8 @@
   "name": "Alibaba (Singapore)",
   "id": "alibaba-singapore",
   "api_key": "$ALIBABA_SINGAPORE_API_KEY",
-  "api_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
-  "type": "openai-compat",
+  "api_endpoint": "https://dashscope-intl.aliyuncs.com/apps/anthropic",
+  "type": "anthropic",
   "default_large_model_id": "qwen3.6-plus",
   "default_small_model_id": "qwen3.6-flash",
   "models": [
