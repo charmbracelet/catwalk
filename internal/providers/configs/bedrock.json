@@ -4,11 +4,11 @@
   "type": "bedrock",
   "api_key": "",
   "api_endpoint": "",
-  "default_large_model_id": "anthropic.claude-sonnet-4-6",
-  "default_small_model_id": "anthropic.claude-haiku-4-5-20251001-v1:0",
+  "default_large_model_id": "us.anthropic.claude-sonnet-4-6",
+  "default_small_model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [
     {
-      "id": "anthropic.claude-sonnet-4-6",
+      "id": "us.anthropic.claude-sonnet-4-6",
       "name": "AWS Claude Sonnet 4.6",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
@@ -22,7 +22,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-sonnet-4-5-20250929-v1:0",
+      "id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "name": "AWS Claude Sonnet 4.5",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
@@ -34,7 +34,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
       "name": "AWS Claude Haiku 4.5",
       "cost_per_1m_in": 0.8,
       "cost_per_1m_out": 4,
@@ -46,7 +46,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-opus-4-7",
+      "id": "us.anthropic.claude-opus-4-7",
       "name": "AWS Claude Opus 4.7",
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 25,
@@ -60,7 +60,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-opus-4-6-v1",
+      "id": "us.anthropic.claude-opus-4-6-v1",
       "name": "AWS Claude Opus 4.6",
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 25,
@@ -74,7 +74,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-opus-4-5-20251101-v1:0",
+      "id": "us.anthropic.claude-opus-4-5-20251101-v1:0",
       "name": "AWS Claude Opus 4.5",
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 25,
@@ -86,7 +86,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-opus-4-1-20250805-v1:0",
+      "id": "us.anthropic.claude-opus-4-1-20250805-v1:0",
       "name": "AWS Claude Opus 4.1",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 75,
@@ -98,7 +98,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-opus-4-20250514-v1:0",
+      "id": "us.anthropic.claude-opus-4-20250514-v1:0",
       "name": "AWS Claude Opus 4",
       "cost_per_1m_in": 15,
       "cost_per_1m_out": 75,
@@ -110,7 +110,7 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic.claude-sonnet-4-20250514-v1:0",
+      "id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
       "name": "AWS Claude Sonnet 4",
       "cost_per_1m_in": 3,
       "cost_per_1m_out": 15,
