@@ -68,6 +68,18 @@
       "supports_attachments": false
     },
     {
+      "id": "qwen3.7-max",
+      "name": "Qwen3.7-Max",
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0.25,
+      "cost_per_1m_out_cached": 3.125,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
       "id": "deepseek-v4-pro",
       "name": "DeepSeek-V4-Pro",
       "cost_per_1m_in": 2.4,
