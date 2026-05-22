@@ -2,8 +2,8 @@ name: deploy production
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - v*.*.*
 
 concurrency:
   group: goreleaser
