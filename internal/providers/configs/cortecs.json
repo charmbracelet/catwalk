@@ -1636,12 +1636,12 @@
     {
       "id": "llama-3.1-8b-instruct",
       "name": "Llama 3.1 8B Instruct",
-      "cost_per_1m_in": 0.018,
-      "cost_per_1m_out": 0.054,
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.1,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 12800,
+      "context_window": 131000,
+      "default_max_tokens": 13100,
       "can_reason": true,
       "reasoning_levels": [
         "low",
