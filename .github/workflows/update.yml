@@ -65,6 +65,10 @@ jobs:
         run: go run ./cmd/synthetic/main.go
         continue-on-error: true
 
+      - name: Pioneer
+        run: go run ./cmd/pioneer/main.go
+        continue-on-error: true
+
       - name: Venice
         run: go run ./cmd/venice/main.go
         continue-on-error: true
