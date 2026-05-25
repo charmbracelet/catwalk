@@ -484,8 +484,8 @@
     {
       "id": "gemini-3-5-flash",
       "name": "Gemini 3.5 Flash",
-      "cost_per_1m_in": 1.8,
-      "cost_per_1m_out": 11,
+      "cost_per_1m_in": 1.55,
+      "cost_per_1m_out": 9.45,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
@@ -544,8 +544,8 @@
     {
       "id": "google-gemma-4-31b-it",
       "name": "Google Gemma 4 31B Instruct",
-      "cost_per_1m_in": 0.175,
-      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in": 0.155,
+      "cost_per_1m_out": 0.44,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
@@ -849,7 +849,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 16384,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -924,8 +924,8 @@
     {
       "id": "e2ee-qwen3-6-35b-a3b",
       "name": "Qwen 3.6 35B A3B FP8",
-      "cost_per_1m_in": 0.2125,
-      "cost_per_1m_out": 1.375,
+      "cost_per_1m_in": 0.182,
+      "cost_per_1m_out": 1.18,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32000,
@@ -952,8 +952,8 @@
     {
       "id": "qwen-3-7-max",
       "name": "Qwen 3.7 Max",
-      "cost_per_1m_in": 3.125,
-      "cost_per_1m_out": 9.375,
+      "cost_per_1m_in": 2.7,
+      "cost_per_1m_out": 8.05,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
