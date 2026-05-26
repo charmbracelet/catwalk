@@ -27,6 +27,7 @@ const (
 	InferenceProviderGemini           InferenceProvider = "gemini"
 	InferenceProviderAzure            InferenceProvider = "azure"
 	InferenceProviderBedrock          InferenceProvider = "bedrock"
+	InferenceProviderBedrockEurope    InferenceProvider = "bedrock-europe"
 	InferenceProviderVertexAI         InferenceProvider = "vertexai"
 	InferenceProviderXAI              InferenceProvider = "xai"
 	InferenceProviderZAI              InferenceProvider = "zai"
@@ -105,6 +106,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderGemini,
 		InferenceProviderAzure,
 		InferenceProviderBedrock,
+		InferenceProviderBedrockEurope,
 		InferenceProviderVertexAI,
 		InferenceProviderXAI,
 		InferenceProviderZAI,
