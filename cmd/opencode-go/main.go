@@ -102,8 +102,14 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoningEffort string
 		if goModel.Reasoning {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoningEffort = "medium"
+			switch {
+			case strings.Contains(goModel.ID, "deepseek-v4"):
+				reasoningLevels = []string{"high", "xhigh"}
+				defaultReasoningEffort = "high"
+			default:
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoningEffort = "medium"
+			}
 		}
 
 		m := catwalk.Model{
