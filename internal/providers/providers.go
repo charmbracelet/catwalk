@@ -24,8 +24,11 @@ var avianConfig []byte
 //go:embed configs/azure.json
 var azureConfig []byte
 
-//go:embed configs/bedrock.json
-var bedrockConfig []byte
+//go:embed configs/bedrock-united-states.json
+var bedrockUnitedStatesConfig []byte
+
+//go:embed configs/bedrock-europe.json
+var bedrockEuropeConfig []byte
 
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
@@ -128,7 +131,8 @@ var providerRegistry = []ProviderFunc{
 	alibabaSingaporeProvider,
 	avianProvider,
 	azureProvider,
-	bedrockProvider,
+	bedrockUnitedStatesProvider,
+	bedrockEuropeProvider,
 	cerebrasProvider,
 	chutesProvider,
 	copilotProvider,
@@ -188,8 +192,12 @@ func azureProvider() catwalk.Provider {
 	return loadProviderFromConfig(azureConfig)
 }
 
-func bedrockProvider() catwalk.Provider {
-	return loadProviderFromConfig(bedrockConfig)
+func bedrockUnitedStatesProvider() catwalk.Provider {
+	return loadProviderFromConfig(bedrockUnitedStatesConfig)
+}
+
+func bedrockEuropeProvider() catwalk.Provider {
+	return loadProviderFromConfig(bedrockEuropeConfig)
 }
 
 func cerebrasProvider() catwalk.Provider {
