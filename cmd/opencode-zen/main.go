@@ -164,9 +164,16 @@ func main() {
 			modelName = enrichment.Name
 
 			if enrichment.Reasoning {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoningEffort = "medium"
 				canReason = true
+
+				switch {
+				case strings.Contains(zenModel.ID, "deepseek-v4"):
+					reasoningLevels = []string{"high", "xhigh"}
+					defaultReasoningEffort = "high"
+				default:
+					reasoningLevels = []string{"low", "medium", "high"}
+					defaultReasoningEffort = "medium"
+				}
 			}
 		} else {
 			log.Printf("WARNING: No enrichment found for model %s, using defaults\n", zenModel.ID)
