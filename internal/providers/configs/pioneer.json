@@ -644,6 +644,96 @@
       "supports_attachments": false
     },
     {
+      "id": "Qwen/Qwen3.6-35B-A3B",
+      "name": "Qwen3.6 35B A3B",
+      "cost_per_1m_in": 0.21,
+      "cost_per_1m_out": 1.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3.6-flash",
+      "name": "Qwen3.6 Flash",
+      "cost_per_1m_in": 0.2625,
+      "cost_per_1m_out": 1.575,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3.6-max-preview",
+      "name": "Qwen3.6 Max Preview",
+      "cost_per_1m_in": 1.456,
+      "cost_per_1m_out": 8.736,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3.6-plus",
+      "name": "Qwen3.6 Plus",
+      "cost_per_1m_in": 0.455,
+      "cost_per_1m_out": 2.73,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3.7-max",
+      "name": "Qwen3.7 Max",
+      "cost_per_1m_in": 3.5,
+      "cost_per_1m_out": 10.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "HuggingFaceTB/SmolLM3-3B-Base",
       "name": "SmolLM3 3B Base",
       "cost_per_1m_in": 0.21,
