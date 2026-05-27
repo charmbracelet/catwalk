@@ -29,10 +29,6 @@ jobs:
         run: go run ./cmd/avian/main.go
         continue-on-error: true
 
-      - name: Neuralwatt
-        run: go run ./cmd/neuralwatt/main.go
-        continue-on-error: true
-
       - name: Chutes
         run: go run ./cmd/chutes/main.go
         continue-on-error: true
@@ -47,6 +43,14 @@ jobs:
 
       - name: io.net
         run: go run ./cmd/ionet/main.go
+        continue-on-error: true
+
+      - name: Neuralwatt
+        run: go run ./cmd/neuralwatt/main.go
+        continue-on-error: true
+
+      - name: NovitaAI
+        run: go run ./cmd/novita/main.go
         continue-on-error: true
 
       - name: OpenCode Go
