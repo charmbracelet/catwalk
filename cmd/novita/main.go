@@ -1,5 +1,5 @@
-// Package main provides a command-line tool to fetch models from NovitaAI
-// and generate a configuration file for the provider.
+// Package main provides a command-line tool to fetch models from NovitaAI and
+// generate a configuration file for the provider.
 package main
 
 import (
@@ -19,17 +19,17 @@ import (
 )
 
 type NovitaAIModel struct {
-	ID                  string   `json:"id"`
-	DisplayName         string   `json:"display_name"`
+	ID                   string   `json:"id"`
+	DisplayName          string   `json:"display_name"`
 	InputTokenPricePerM  float64  `json:"input_token_price_per_m"`
 	OutputTokenPricePerM float64  `json:"output_token_price_per_m"`
-	ContextSize         int64    `json:"context_size"`
-	MaxOutputTokens     int64    `json:"max_output_tokens"`
-	Status              int      `json:"status"`
-	ModelType           string   `json:"model_type"`
-	Features            []string `json:"features"`
-	Endpoints           []string `json:"endpoints"`
-	InputModalities     []string `json:"input_modalities"`
+	ContextSize          int64    `json:"context_size"`
+	MaxOutputTokens      int64    `json:"max_output_tokens"`
+	Status               int      `json:"status"`
+	ModelType            string   `json:"model_type"`
+	Features             []string `json:"features"`
+	Endpoints            []string `json:"endpoints"`
+	InputModalities      []string `json:"input_modalities"`
 }
 
 type ModelsResponse struct {
