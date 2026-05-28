@@ -68,6 +68,30 @@
       "supports_attachments": true
     },
     {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "cost_per_1m_in": 6,
+      "cost_per_1m_out": 30,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-8-fast",
+      "name": "Claude Opus 4.8 Fast",
+      "cost_per_1m_in": 12,
+      "cost_per_1m_out": 60,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "cost_per_1m_in": 3.75,
