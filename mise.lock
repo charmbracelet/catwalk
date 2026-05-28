@@ -130,6 +130,7 @@ provenance = "github-attestations"
 [tools.goreleaser."platforms.macos-arm64"]
 checksum = "sha256:82d730f3366350c90d7e5df3cf9e8e425fd1c84bf7d7e3e564f92d97c5ea9ea4"
 url = "https://github.com/goreleaser/goreleaser/releases/download/v2.15.4/goreleaser_Darwin_all.tar.gz"
+provenance = "github-attestations"
 
 [tools.goreleaser."platforms.macos-x64"]
 checksum = "sha256:82d730f3366350c90d7e5df3cf9e8e425fd1c84bf7d7e3e564f92d97c5ea9ea4"
