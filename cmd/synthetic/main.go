@@ -160,7 +160,7 @@ func main() {
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
 		DefaultLargeModelID: "hf:moonshotai/Kimi-K2.6",
-		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.2",
+		DefaultSmallModelID: "syn:small:text",
 		Models:              []catwalk.Model{},
 	}
 
