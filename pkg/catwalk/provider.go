@@ -56,9 +56,9 @@ const (
 	InferenceProviderOpenCodeGo             InferenceProvider = "opencode-go"
 	InferenceProviderAlibabaSingapore       InferenceProvider = "alibaba-singapore"
 	InferenceProviderXiaomiMiMo             InferenceProvider = "xiaomi-mimo"
-	InferenceProviderXiaomiMiMoTokenPlanAMS InferenceProvider = "xiaomi-mimo-token-plan-ams"
-	InferenceProviderXiaomiMiMoTokenPlanCN  InferenceProvider = "xiaomi-mimo-token-plan-cn"
-	InferenceProviderXiaomiMiMoTokenPlanSGP InferenceProvider = "xiaomi-mimo-token-plan-sgp"
+	InferenceProviderXiaomiMiMoTokenPlanAMS InferenceProvider = "xiaomi-mimo-token-plan-ams" // #nosec G101 -- provider ID, not a credential.
+	InferenceProviderXiaomiMiMoTokenPlanCN  InferenceProvider = "xiaomi-mimo-token-plan-cn"  // #nosec G101 -- provider ID, not a credential.
+	InferenceProviderXiaomiMiMoTokenPlanSGP InferenceProvider = "xiaomi-mimo-token-plan-sgp" // #nosec G101 -- provider ID, not a credential.
 )
 
 // Provider represents an AI provider configuration.
