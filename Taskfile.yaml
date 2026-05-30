@@ -66,6 +66,7 @@ tasks:
       - task: gen:ionet
       - task: gen:nebius
       - task: gen:neuralwatt
+      - task: gen:novita
       - task: gen:opencode-go
       - task: gen:opencode-zen
       - task: gen:openrouter
@@ -118,6 +119,11 @@ tasks:
     desc: Generate Neuralwatt provider configurations
     cmds:
       - go run cmd/neuralwatt/main.go
+
+  gen:novita:
+    desc: Generate NovitaAI provider configurations
+    cmds:
+      - go run cmd/novita/main.go
 
   gen:opencode-go:
     desc: Generate OpenCode Go provider configurations
