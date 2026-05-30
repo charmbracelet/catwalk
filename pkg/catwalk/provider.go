@@ -94,6 +94,7 @@ type Model struct {
 	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	SupportsImages         bool         `json:"supports_attachments"`
+	MaxAttachments         int          `json:"max_attachments,omitempty"`
 	Options                ModelOptions `json:"options,omitzero"`
 }
 
