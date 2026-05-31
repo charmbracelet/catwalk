@@ -41,6 +41,14 @@ jobs:
         run: go run ./cmd/cortecs/main.go
         continue-on-error: true
 
+      - name: Fireworks
+        run: go run ./cmd/fireworks/main.go
+        continue-on-error: true
+
+      - name: Fire Pass
+        run: go run ./cmd/firepass/main.go
+        continue-on-error: true
+
       - name: HuggingFace
         run: go run ./cmd/huggingface/main.go
         continue-on-error: true
