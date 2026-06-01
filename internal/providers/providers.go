@@ -90,6 +90,9 @@ var qiniuCloudConfig []byte
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
+//go:embed configs/stepfun.json
+var stepfunConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -147,6 +150,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeZenProvider,
 	openRouterProvider,
 	qiniuCloudProvider,
+	stepfunProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -278,6 +282,10 @@ func qiniuCloudProvider() catwalk.Provider {
 
 func syntheticProvider() catwalk.Provider {
 	return loadProviderFromConfig(syntheticConfig)
+}
+
+func stepfunProvider() catwalk.Provider {
+	return loadProviderFromConfig(stepfunConfig)
 }
 
 func vercelProvider() catwalk.Provider {
