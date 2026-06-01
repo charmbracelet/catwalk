@@ -37,10 +37,6 @@ type ModelsResponse struct {
 	Data []CortecsModel `json:"data"`
 }
 
-type ModelDetailResponse struct {
-	Model ModelDetail `json:"model"`
-}
-
 type ModelDetail struct {
 	ScreenName string  `json:"screen_name"`
 	Context    int64   `json:"context"`
@@ -118,8 +114,8 @@ func main() {
 			continue
 		}
 
-		var detailRespData ModelDetailResponse
-		if err := json.Unmarshal(detailBody, &detailRespData); err != nil {
+		var detailData ModelDetail
+		if err := json.Unmarshal(detailBody, &detailData); err != nil {
 			log.Printf("Warning: Error parsing details for model %s: %v", model.ID, err)
 			continue
 		}
@@ -136,10 +132,10 @@ func main() {
 
 		model := catwalk.Model{
 			ID:                     model.ID,
-			Name:                   detailRespData.Model.ScreenName,
-			ContextWindow:          detailRespData.Model.Context,
-			CostPer1MIn:            detailRespData.Model.InputCost,
-			CostPer1MOut:           detailRespData.Model.OutputCost,
+			Name:                   detailData.ScreenName,
+			ContextWindow:          detailData.Context,
+			CostPer1MIn:            detailData.InputCost,
+			CostPer1MOut:           detailData.OutputCost,
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
 			DefaultMaxTokens:       model.ContextSize / 10,
