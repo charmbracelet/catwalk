@@ -4,8 +4,8 @@
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
   "type": "openai-compat",
-  "default_large_model_id": "minimax-m2.5-free",
-  "default_small_model_id": "minimax-m2.5-free",
+  "default_large_model_id": "deepseek-v4-flash-free",
+  "default_small_model_id": "deepseek-v4-flash-free",
   "models": [
     {
       "id": "big-pickle",
@@ -186,6 +186,23 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.28,
+      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
     },
     {
       "id": "deepseek-v4-flash-free",
@@ -661,8 +678,8 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -691,11 +708,11 @@
       "supports_attachments": false
     },
     {
-      "id": "minimax-m2.5-free",
-      "name": "MiniMax M2.5 Free",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
+      "id": "minimax-m2.7",
+      "name": "MiniMax M2.7",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0.06,
       "cost_per_1m_out_cached": 0,
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -709,14 +726,14 @@
       "supports_attachments": false
     },
     {
-      "id": "minimax-m2.7",
-      "name": "MiniMax M2.7",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0.06,
+      "id": "minimax-m3-free",
+      "name": "MiniMax M3 Free",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 204800,
-      "default_max_tokens": 131072,
+      "context_window": 200000,
+      "default_max_tokens": 32000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
