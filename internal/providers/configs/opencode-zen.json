@@ -4,8 +4,8 @@
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
   "type": "openai-compat",
-  "default_large_model_id": "minimax-m2.5-free",
-  "default_small_model_id": "minimax-m2.5-free",
+  "default_large_model_id": "deepseek-v4-flash-free",
+  "default_small_model_id": "deepseek-v4-flash-free",
   "models": [
     {
       "id": "big-pickle",
