@@ -8,8 +8,8 @@
   "default_small_model_id": "qwen3.6-flash",
   "models": [
     {
-      "id": "qwen3.6-35b-a3b",
-      "name": "Qwen3.6-35B-A3B",
+      "id": "qwen3.5-35b-a3b",
+      "name": "Qwen3.5-35B-A3B",
       "cost_per_1m_in": 0.248,
       "cost_per_1m_out": 1.485,
       "cost_per_1m_in_cached": 0,
@@ -20,8 +20,8 @@
       "supports_attachments": true
     },
     {
-      "id": "qwen3.6-27b",
-      "name": "Qwen3.6-27B",
+      "id": "qwen3.5-27b",
+      "name": "Qwen3.5-27B",
       "cost_per_1m_in": 0.6,
       "cost_per_1m_out": 3.6,
       "cost_per_1m_in_cached": 0,
