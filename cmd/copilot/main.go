@@ -105,6 +105,7 @@ func run() error {
 			strings.HasPrefix(m.ID, "accounts/msft/routers") ||
 			strings.HasPrefix(m.ID, "oswe-vscode") ||
 			strings.HasPrefix(m.ID, "lark") ||
+			strings.HasPrefix(m.ID, "mai-code") ||
 			m.ID == "gpt-4-o-preview" ||
 			m.ID == "trajectory-compaction"
 	})
