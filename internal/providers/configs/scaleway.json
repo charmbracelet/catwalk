@@ -4,8 +4,8 @@
   "type": "openai-compat",
   "api_key": "$SCW_SECRET_KEY",
   "api_endpoint": "https://api.scaleway.ai/v1",
-  "default_large_model_id": "qwen3.5-397b-a17b",
-  "default_small_model_id": "qwen3-coder-30b-a3b-instruct",
+  "default_large_model_id": "qwen3.6-35b-a3b",
+  "default_small_model_id": "gemma-4-26b-a4b-it",
   "models": [
     {
       "id": "qwen3.5-397b-a17b",
