@@ -16,7 +16,8 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "supports_code": true
+      "can_reason": true,
+      "supports_attachments": true
     },
     {
       "id": "qwen3.6-35b-a3b",
@@ -27,7 +28,8 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 16384,
-      "can_reason": true
+      "can_reason": true,
+      "supports_attachments": true
     },
     {
       "id": "gemma-4-26b-a4b-it",
@@ -38,7 +40,8 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "supports_vision": true
+      "can_reason": true,
+      "supports_attachments": true
     },
     {
       "id": "gpt-oss-120b",
@@ -90,8 +93,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32768,
-      "supports_code": true
+      "default_max_tokens": 32768
     },
     {
       "id": "voxtral-small-24b-2507",
@@ -101,8 +103,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32000,
-      "default_max_tokens": 16384,
-      "supports_audio_transcription": true
+      "default_max_tokens": 16384
     },
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
@@ -113,7 +114,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 32768,
-      "supports_vision": true
+      "supports_attachments": true
     },
     {
       "id": "devstral-2-123b-instruct-2512",
@@ -123,8 +124,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 16384,
-      "supports_code": true
+      "default_max_tokens": 16384
     },
     {
       "id": "gemma-3-27b-it",
@@ -135,7 +135,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 40000,
       "default_max_tokens": 8192,
-      "supports_vision": true
+      "supports_attachments": true
     }
   ]
 }
