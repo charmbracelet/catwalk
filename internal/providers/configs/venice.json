@@ -1050,18 +1050,6 @@
       "supports_attachments": true
     },
     {
-      "id": "e2ee-qwen3-5-122b-a10b",
-      "name": "Qwen3.5 122B A10B",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
       "id": "arcee-trinity-large-thinking",
       "name": "Trinity Large Thinking",
       "cost_per_1m_in": 0.3125,
