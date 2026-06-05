@@ -149,13 +149,17 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoning string
 		if canReason {
-			// Base reasoning levels supported by most providers
-			reasoningLevels = []string{"low", "medium", "high"}
-			// Anthropic models support extended Vercel reasoning levels
-			if strings.HasPrefix(model.ID, "anthropic/") {
+			switch {
+			case strings.HasPrefix(model.ID, "anthropic/"):
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
+				defaultReasoning = "medium"
+			case strings.HasPrefix(model.ID, "deepseek/deepseek-v4"):
+				reasoningLevels = []string{"high", "xhigh"}
+				defaultReasoning = "high"
+			default:
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoning = "medium"
 			}
-			defaultReasoning = "medium"
 		}
 
 		// Check if model supports images
