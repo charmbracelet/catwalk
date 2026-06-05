@@ -99,7 +99,15 @@ func run() error {
 	}
 
 	copilotModels = slices.DeleteFunc(copilotModels, func(m Model) bool {
-		return aliasedVersions[m.ID] || versionedModelRegexp.MatchString(m.ID) || strings.Contains(m.ID, "embedding") || strings.HasPrefix(m.ID, "accounts/msft/routers") || strings.HasPrefix(m.ID, "oswe-vscode") || m.ID == "gpt-4-o-preview"
+		return aliasedVersions[m.ID] ||
+			versionedModelRegexp.MatchString(m.ID) ||
+			strings.Contains(m.ID, "embedding") ||
+			strings.HasPrefix(m.ID, "accounts/msft/routers") ||
+			strings.HasPrefix(m.ID, "oswe-vscode") ||
+			strings.HasPrefix(m.ID, "lark") ||
+			strings.HasPrefix(m.ID, "mai-code") ||
+			m.ID == "gpt-4-o-preview" ||
+			m.ID == "trajectory-compaction"
 	})
 
 	// Deduplicate by ID (API can return duplicates)

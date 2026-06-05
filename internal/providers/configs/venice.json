@@ -68,6 +68,30 @@
       "supports_attachments": true
     },
     {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "cost_per_1m_in": 6,
+      "cost_per_1m_out": 30,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-8-fast",
+      "name": "Claude Opus 4.8 Fast",
+      "cost_per_1m_in": 12,
+      "cost_per_1m_out": 60,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "cost_per_1m_in": 3.75,
@@ -710,6 +734,18 @@
       "supports_attachments": false
     },
     {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 500000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "mistral-small-3-2-24b-instruct",
       "name": "Mistral Small 3.2 24B Instruct",
       "cost_per_1m_in": 0.09375,
@@ -962,6 +998,22 @@
       "supports_attachments": false
     },
     {
+      "id": "qwen-3-7-plus",
+      "name": "Qwen 3.7 Plus",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true,
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8
+      }
+    },
+    {
       "id": "e2ee-qwen3-30b-a3b-p",
       "name": "Qwen3 30B A3B",
       "cost_per_1m_in": 0.19,
@@ -995,18 +1047,6 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "e2ee-qwen3-5-122b-a10b",
-      "name": "Qwen3.5 122B A10B",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
       "supports_attachments": true
     },
     {

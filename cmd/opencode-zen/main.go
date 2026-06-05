@@ -138,8 +138,8 @@ func main() {
 		APIKey:              "$OPENCODE_API_KEY",
 		APIEndpoint:         "https://opencode.ai/zen/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "minimax-m2.5-free",
-		DefaultSmallModelID: "minimax-m2.5-free",
+		DefaultLargeModelID: "deepseek-v4-flash-free",
+		DefaultSmallModelID: "deepseek-v4-flash-free",
 	}
 
 	for _, zenModel := range zenModels {

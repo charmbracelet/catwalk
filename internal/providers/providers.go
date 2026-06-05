@@ -24,8 +24,11 @@ var avianConfig []byte
 //go:embed configs/azure.json
 var azureConfig []byte
 
-//go:embed configs/bedrock.json
-var bedrockConfig []byte
+//go:embed configs/bedrock-united-states.json
+var bedrockUnitedStatesConfig []byte
+
+//go:embed configs/bedrock-europe.json
+var bedrockEuropeConfig []byte
 
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
@@ -87,6 +90,9 @@ var openRouterConfig []byte
 //go:embed configs/qiniucloud.json
 var qiniuCloudConfig []byte
 
+//go:embed configs/scaleway.json
+var scalewayConfig []byte
+
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
@@ -132,7 +138,8 @@ var providerRegistry = []ProviderFunc{
 	alibabaSingaporeProvider,
 	avianProvider,
 	azureProvider,
-	bedrockProvider,
+	bedrockUnitedStatesProvider,
+	bedrockEuropeProvider,
 	cerebrasProvider,
 	chutesProvider,
 	copilotProvider,
@@ -147,6 +154,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeZenProvider,
 	openRouterProvider,
 	qiniuCloudProvider,
+	scalewayProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -192,8 +200,12 @@ func azureProvider() catwalk.Provider {
 	return loadProviderFromConfig(azureConfig)
 }
 
-func bedrockProvider() catwalk.Provider {
-	return loadProviderFromConfig(bedrockConfig)
+func bedrockUnitedStatesProvider() catwalk.Provider {
+	return loadProviderFromConfig(bedrockUnitedStatesConfig)
+}
+
+func bedrockEuropeProvider() catwalk.Provider {
+	return loadProviderFromConfig(bedrockEuropeConfig)
 }
 
 func cerebrasProvider() catwalk.Provider {
@@ -274,6 +286,10 @@ func openRouterProvider() catwalk.Provider {
 
 func qiniuCloudProvider() catwalk.Provider {
 	return loadProviderFromConfig(qiniuCloudConfig)
+}
+
+func scalewayProvider() catwalk.Provider {
+	return loadProviderFromConfig(scalewayConfig)
 }
 
 func syntheticProvider() catwalk.Provider {
