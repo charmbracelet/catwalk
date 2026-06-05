@@ -326,6 +326,30 @@
       "supports_attachments": false
     },
     {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "gemini-3.1-pro",
+      "name": "Gemini 3.1 Pro",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "cost_per_1m_in": 1.5,
@@ -342,6 +366,18 @@
       "name": "Gemma 3 4B (Pretrained)",
       "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "google/gemma-4-12B-it",
+      "name": "Gemma 4 12B IT",
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 0.25,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32768,
@@ -494,6 +530,18 @@
       "supports_attachments": false
     },
     {
+      "id": "mistral-medium-3.5",
+      "name": "Mistral Medium 3.5",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "mistralai/Mistral-Nemo-Instruct-2407",
       "name": "Mistral Nemo",
       "cost_per_1m_in": 0.02,
@@ -502,6 +550,30 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
       "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistralai/Mistral-Small-4-119B-2603",
+      "name": "Mistral Small 4",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "name": "Nemotron 3 Ultra",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 2.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "can_reason": false,
       "supports_attachments": false
     },

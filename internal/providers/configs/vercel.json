@@ -371,7 +371,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "deepseek/deepseek-r1",
@@ -1979,7 +1979,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2.7",
@@ -1997,7 +1997,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m2.7-highspeed",
@@ -2015,7 +2015,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "minimax/minimax-m3",
@@ -2133,6 +2133,24 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
+      "default_max_tokens": 8000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 2.4,
+      "cost_per_1m_in_cached": 0.12,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
       "default_max_tokens": 8000,
       "can_reason": true,
       "reasoning_levels": [
@@ -2327,7 +2345,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3.6-plus",
@@ -2363,7 +2381,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "alibaba/qwen3.7-plus",
