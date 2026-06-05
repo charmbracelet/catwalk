@@ -114,8 +114,8 @@ func main() {
 		APIKey:              "$HF_TOKEN",
 		APIEndpoint:         "https://router.huggingface.co/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "moonshotai/Kimi-K2.5:fireworks-ai",
-		DefaultSmallModelID: "openai/gpt-oss-20b:groq",
+		DefaultLargeModelID: "moonshotai/Kimi-K2.6:fireworks-ai",
+		DefaultSmallModelID: "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",

@@ -4,8 +4,8 @@
   "api_key": "$HF_TOKEN",
   "api_endpoint": "https://router.huggingface.co/v1",
   "type": "openai-compat",
-  "default_large_model_id": "moonshotai/Kimi-K2.5:fireworks-ai",
-  "default_small_model_id": "openai/gpt-oss-20b:groq",
+  "default_large_model_id": "moonshotai/Kimi-K2.6:fireworks-ai",
+  "default_small_model_id": "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
   "models": [
     {
       "id": "MiniMaxAI/MiniMax-M2.5:fireworks-ai",
@@ -87,6 +87,18 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "moonshotai/Kimi-K2.5:fireworks-ai",
+      "name": "moonshotai/Kimi-K2.5 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
