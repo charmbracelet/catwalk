@@ -3,6 +3,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -160,15 +161,6 @@ func main() {
 		// Check if model supports images
 		supportsImages := slices.Contains(model.Tags, "vision")
 
-		// Calculate default max tokens
-		defaultMaxTokens := model.MaxTokens
-		if defaultMaxTokens == 0 {
-			defaultMaxTokens = model.ContextWindow / 10
-		}
-		if defaultMaxTokens > 8000 {
-			defaultMaxTokens = 8000
-		}
-
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.Name,
@@ -177,7 +169,7 @@ func main() {
 			CostPer1MInCached:      costPer1MInCached,
 			CostPer1MOutCached:     costPer1MOutCached,
 			ContextWindow:          model.ContextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
+			DefaultMaxTokens:       cmp.Or(model.MaxTokens, model.ContextWindow/10),
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
