@@ -181,7 +181,6 @@ func main() {
 		}
 
 		vercelProvider.Models = append(vercelProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.ContextWindow)
 	}
 
 	slices.SortFunc(vercelProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

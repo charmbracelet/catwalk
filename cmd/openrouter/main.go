@@ -388,8 +388,6 @@ func main() {
 		}
 
 		openRouterProvider.Models = append(openRouterProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d from provider %s\n",
-			model.ID, bestEndpoint.ContextLength, bestEndpoint.ProviderName)
 	}
 
 	slices.SortFunc(openRouterProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

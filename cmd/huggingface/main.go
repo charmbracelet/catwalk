@@ -181,8 +181,6 @@ func main() {
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)
-			fmt.Printf("Added model %s with context window %d from provider %s\n",
-				modelID, contextLength, provider.Provider)
 		}
 	}
 

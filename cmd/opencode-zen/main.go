@@ -195,7 +195,6 @@ func main() {
 		}
 
 		zenProvider.Models = append(zenProvider.Models, m)
-		fmt.Printf("Added model %s (%s)\n", zenModel.ID, modelName)
 	}
 
 	slices.SortFunc(zenProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
