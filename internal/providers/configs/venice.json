@@ -568,7 +568,7 @@
     {
       "id": "google-gemma-4-31b-it",
       "name": "Google Gemma 4 31B Instruct",
-      "cost_per_1m_in": 0.126,
+      "cost_per_1m_in": 0.12,
       "cost_per_1m_out": 0.36,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
@@ -789,7 +789,7 @@
     },
     {
       "id": "nvidia-nemotron-3-ultra-550b-a55b",
-      "name": "NVIDIA Nemotron 3 Ultra 550B",
+      "name": "NVIDIA Nemotron 3 Ultra",
       "cost_per_1m_in": 0.625,
       "cost_per_1m_out": 3.125,
       "cost_per_1m_in_cached": 0,
