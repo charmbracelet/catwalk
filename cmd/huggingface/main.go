@@ -127,7 +127,6 @@ func main() {
 		// Find context window from any provider for this model
 		fallbackContextLength := findContextWindow(model)
 		if fallbackContextLength == 0 {
-			fmt.Printf("Skipping model %s - no context window found in any provider\n", model.ID)
 			continue
 		}
 

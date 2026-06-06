@@ -131,13 +131,10 @@ func main() {
 
 		// Skip models with small context windows
 		if model.MaxModelLen < 20000 {
-			fmt.Printf("Skipping model %s: context %d < 20000\n",
-				model.ID, model.MaxModelLen)
 			continue
 		}
 
 		if !meta.Capabilities.Tools {
-			fmt.Printf("Skipping model %s (no tool support)\n", model.ID)
 			continue
 		}
 
