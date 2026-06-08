@@ -224,9 +224,9 @@
     {
       "id": "minimax-m3",
       "name": "MiniMax M3",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.4,
-      "cost_per_1m_in_cached": 0.12,
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0.06,
       "cost_per_1m_out_cached": 0,
       "context_window": 512000,
       "default_max_tokens": 131072,
