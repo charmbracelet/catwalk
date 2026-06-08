@@ -63,6 +63,9 @@ var kimiCodingConfig []byte
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
 
+//go:embed configs/mistral.json
+var mistralConfig []byte
+
 //go:embed configs/minimax-china.json
 var miniMaxChinaConfig []byte
 
@@ -144,6 +147,7 @@ var providerRegistry = []ProviderFunc{
 	groqProvider,
 	huggingFaceProvider,
 	ioNetProvider,
+	mistralProvider,
 	nebiusProvider,
 	neuralwattProvider,
 	openCodeGoProvider,
@@ -250,6 +254,10 @@ func miniMaxProvider() catwalk.Provider {
 
 func miniMaxChinaProvider() catwalk.Provider {
 	return loadProviderFromConfig(miniMaxChinaConfig)
+}
+
+func mistralProvider() catwalk.Provider {
+	return loadProviderFromConfig(mistralConfig)
 }
 
 func nebiusProvider() catwalk.Provider {
