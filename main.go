@@ -82,10 +82,8 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
-	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		_, _ = w.Write([]byte("OK"))
-	})
+	mux.HandleFunc("/health", health)
+	mux.HandleFunc("/healthz", health)
 	mux.Handle("/metrics", promhttp.Handler())
 
 	server := &http.Server{
@@ -100,4 +98,9 @@ func main() {
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatal("Server failed to start:", err)
 	}
+}
+
+func health(w http.ResponseWriter, _ *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	_, _ = w.Write([]byte("OK"))
 }
