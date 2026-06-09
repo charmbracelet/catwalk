@@ -8,6 +8,18 @@
   "default_small_model_id": "tencent-hy3-preview",
   "models": [
     {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "cost_per_1m_in": 12,
+      "cost_per_1m_out": 60,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "claude-opus-4-5",
       "name": "Claude Opus 4.5",
       "cost_per_1m_in": 6,
