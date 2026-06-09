@@ -26,6 +26,24 @@
       "supports_attachments": false
     },
     {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
+      "cost_per_1m_in_cached": 1,
+      "cost_per_1m_out_cached": 12.5,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "cost_per_1m_in": 1,
@@ -744,13 +762,13 @@
       "supports_attachments": false
     },
     {
-      "id": "nemotron-3-super-free",
-      "name": "Nemotron 3 Super Free",
+      "id": "nemotron-3-ultra-free",
+      "name": "Nemotron 3 Ultra Free",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 204800,
+      "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
@@ -762,14 +780,14 @@
       "supports_attachments": false
     },
     {
-      "id": "nemotron-3-ultra-free",
-      "name": "Nemotron 3 Ultra Free",
+      "id": "north-mini-code-free",
+      "name": "North Mini Code Free",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "context_window": 256000,
+      "default_max_tokens": 64000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
