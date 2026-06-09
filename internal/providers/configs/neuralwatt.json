@@ -32,7 +32,7 @@
       "supports_attachments": false
     },
     {
-      "id": "zai-org/GLM-5.1-FP8",
+      "id": "glm-5.1",
       "name": "GLM-5.1",
       "cost_per_1m_in": 1.1,
       "cost_per_1m_out": 3.6,
@@ -80,7 +80,7 @@
       "supports_attachments": true
     },
     {
-      "id": "moonshotai/Kimi-K2.6",
+      "id": "kimi-k2.6",
       "name": "Kimi K2.6",
       "cost_per_1m_in": 0.69,
       "cost_per_1m_out": 3.22,
@@ -116,7 +116,7 @@
       "supports_attachments": false
     },
     {
-      "id": "Qwen/Qwen3.5-397B-A17B-FP8",
+      "id": "qwen3.5-397b",
       "name": "Qwen3.5 397B",
       "cost_per_1m_in": 0.69,
       "cost_per_1m_out": 4.14,
@@ -140,7 +140,7 @@
       "supports_attachments": false
     },
     {
-      "id": "Qwen/Qwen3.6-35B-A3B",
+      "id": "qwen3.6-35b",
       "name": "Qwen3.6 35B",
       "cost_per_1m_in": 0.29,
       "cost_per_1m_out": 1.15,
