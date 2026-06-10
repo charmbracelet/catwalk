@@ -8,18 +8,6 @@
   "default_small_model_id": "qwen3.6-35b",
   "models": [
     {
-      "id": "mistralai/Devstral-Small-2-24B-Instruct-2512",
-      "name": "Devstral-Small-2-24B-Instruct-2512",
-      "cost_per_1m_in": 0.12,
-      "cost_per_1m_out": 0.35,
-      "cost_per_1m_in_cached": 0.12,
-      "cost_per_1m_out_cached": 0.35,
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "glm-5-fast",
       "name": "GLM-5 Fast",
       "cost_per_1m_in": 1.1,
@@ -102,18 +90,6 @@
       "default_max_tokens": 26212,
       "can_reason": false,
       "supports_attachments": true
-    },
-    {
-      "id": "MiniMaxAI/MiniMax-M2.5",
-      "name": "MiniMax M2.5",
-      "cost_per_1m_in": 0.35,
-      "cost_per_1m_out": 1.38,
-      "cost_per_1m_in_cached": 0.35,
-      "cost_per_1m_out_cached": 1.38,
-      "context_window": 196592,
-      "default_max_tokens": 19659,
-      "can_reason": true,
-      "supports_attachments": false
     },
     {
       "id": "qwen3.5-397b",
