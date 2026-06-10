@@ -580,8 +580,8 @@
     {
       "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "name": "Nemotron 3 Nano",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.2,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
@@ -592,8 +592,8 @@
     {
       "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "name": "Nemotron 3 Super",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.09,
+      "cost_per_1m_out": 0.45,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
