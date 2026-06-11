@@ -92,6 +92,18 @@
       "supports_attachments": false
     },
     {
+      "id": "claude-sonnet-4-5",
+      "name": "Claude Sonnet 4.5",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 50000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "cost_per_1m_in": 3.3,
@@ -502,6 +514,18 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 16384,
       "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2.5",
+      "name": "MiMo V2.5",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 128000,
       "can_reason": false,
       "supports_attachments": false
     },
