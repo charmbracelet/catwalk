@@ -3562,10 +3562,10 @@
     {
       "id": "step-3.7-flash",
       "name": "Step 3.7 Flash",
-      "cost_per_1m_in": 0.22,
-      "cost_per_1m_out": 1.32,
+      "cost_per_1m_in": 0.022,
+      "cost_per_1m_out": 0.132,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.044,
+      "cost_per_1m_out_cached": 0.0044,
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
