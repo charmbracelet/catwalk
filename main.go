@@ -4,11 +4,13 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
 
 	"charm.land/catwalk/internal/providers"
+	"github.com/caarlos0/env/v11"
 	"github.com/charmbracelet/x/etag"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -78,7 +80,16 @@ func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 	}
 }
 
+type config struct {
+	Port int `env:"CATWALK_PORT" envDefault:"8080"`
+}
+
 func main() {
+	var cfg config
+	if err := env.Parse(&cfg); err != nil {
+		log.Fatal(fmt.Errorf("parse config: %w", err))
+	}
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
@@ -86,15 +97,16 @@ func main() {
 	mux.HandleFunc("/healthz", health)
 	mux.Handle("/metrics", promhttp.Handler())
 
+	addr := fmt.Sprintf(":%d", cfg.Port)
 	server := &http.Server{
-		Addr:         ":8080",
+		Addr:         addr,
 		Handler:      mux,
 		ReadTimeout:  15 * time.Second,
 		WriteTimeout: 15 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}
 
-	log.Println("Server starting on :8080")
+	log.Println("Server starting on", addr)
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatal("Server failed to start:", err)
 	}
