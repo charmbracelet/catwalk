@@ -1,0 +1,144 @@
+{
+  "name": "Mistral",
+  "id": "mistral",
+  "type": "openai-compat",
+  "api_key": "$MISTRAL_API_KEY",
+  "api_endpoint": "https://api.mistral.ai/v1",
+  "default_large_model_id": "mistral-medium-3.5",
+  "default_small_model_id": "mistral-small-2603",
+  "models": [
+    {
+      "id": "magistral-medium-2509",
+      "name": "Magistral Medium 1.2",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "mistral-medium-3.5",
+      "name": "Mistral Medium 3.5",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "mistral-large-2512",
+      "name": "Mistral Large 3",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 1.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "magistral-small-2509",
+      "name": "Magistral Small",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 1.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "devstral-2512",
+      "name": "Devstral 2",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 25600
+    },
+    {
+      "id": "codestral-2508",
+      "name": "Codestral",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.9,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "mistral-small-2603",
+      "name": "Mistral Small 4",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "supports_attachments": true
+    },
+    {
+      "id": "devstral-small-2505",
+      "name": "Devstral Small 2",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "ministral-14b-2512",
+      "name": "Ministral 14B",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "ministral-8b-2512",
+      "name": "Ministral 8B",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "ministral-3b-2512",
+      "name": "Ministral 3B",
+      "cost_per_1m_in": 0.04,
+      "cost_per_1m_out": 0.04,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384
+    }
+  ]
+}
