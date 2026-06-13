@@ -32,6 +32,18 @@
       "supports_attachments": false
     },
     {
+      "id": "MiniMaxAI/MiniMax-M3:fireworks-ai",
+      "name": "MiniMaxAI/MiniMax-M3 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 524288,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "Qwen/Qwen3-32B:groq",
       "name": "Qwen/Qwen3-32B (groq)",
       "cost_per_1m_in": 0.29,
@@ -111,6 +123,18 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4:fireworks-ai",
+      "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 512288,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
