@@ -11,11 +11,14 @@ jobs:
     with:
       go_version: stable
       upload_artifacts: false
+      gcp_enabled: true
     secrets:
       docker_username: ${{ secrets.DOCKERHUB_USERNAME }}
       docker_token: ${{ secrets.DOCKERHUB_TOKEN }}
       goreleaser_key: ${{ secrets.GORELEASER_KEY }}
       gh_pat: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      gcp_wif_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+      gcp_service_account: ${{ secrets.GCP_DEPLOYER_SA }}
 
   deploy:
     name: Run deploy workflow

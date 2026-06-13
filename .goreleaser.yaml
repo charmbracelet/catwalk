@@ -35,6 +35,7 @@ nightly:
 dockers:
   - image_templates:
       - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-arm64"
+      - "us-east1-docker.pkg.dev/devel-416316/charm/{{ .ProjectName }}:v{{ .Version }}-arm64"
     goarch: arm64
     build_flag_templates:
       - --platform=linux/arm64
@@ -48,6 +49,7 @@ dockers:
     use: buildx
   - image_templates:
       - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
+      - "us-east1-docker.pkg.dev/devel-416316/charm/{{ .ProjectName }}:v{{ .Version }}-amd64"
     goarch: amd64
     build_flag_templates:
       - --platform=linux/amd64
@@ -73,6 +75,10 @@ docker_manifests:
     image_templates:
       - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
       - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-arm64"
+  - name_template: "us-east1-docker.pkg.dev/devel-416316/charm/{{ .ProjectName }}:{{ .Commit }}{{ if .IsNightly }}-devel{{ end }}"
+    image_templates:
+      - "us-east1-docker.pkg.dev/devel-416316/charm/{{ .ProjectName }}:v{{ .Version }}-amd64"
+      - "us-east1-docker.pkg.dev/devel-416316/charm/{{ .ProjectName }}:v{{ .Version }}-arm64"
   - name_template: "{{ if .IsNightly }}ghcr.io/charmbracelet/{{ .ProjectName }}:nightly{{ end }}"
     image_templates:
       - "ghcr.io/charmbracelet/{{ .ProjectName }}:v{{ .Version }}-amd64"
