@@ -4,9 +4,25 @@
   "api_key": "$ZHIPU_API_KEY",
   "api_endpoint": "https://open.bigmodel.cn/api/coding/paas/v4",
   "type": "openai-compat",
-  "default_large_model_id": "glm-4.7",
-  "default_small_model_id": "glm-4.7-flash",
+  "default_large_model_id": "glm-5.2",
+  "default_small_model_id": "glm-5-turbo",
   "models": [
+    {
+      "id": "glm-5.2",
+      "name": "GLM-5.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "xhigh",
+      "supports_attachments": false
+    },
     {
       "id": "glm-5.1",
       "name": "GLM-5.1",
