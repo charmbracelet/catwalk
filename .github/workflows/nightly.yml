@@ -24,6 +24,8 @@ jobs:
     name: Run deploy workflow
     runs-on: ubuntu-latest
     needs: [goreleaser]
+    permissions:
+      id-token: write
     steps:
       - uses: benc-uk/workflow-dispatch@v1
         with:
@@ -36,3 +38,17 @@ jobs:
               "app": "catwalk",
               "image": "ghcr.io/charmbracelet/catwalk:${{ github.sha }}-devel"
             }
+      - uses: google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed # v2.1.13
+        name: gcp auth
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_DEPLOYER_SA }}
+      - uses: google-github-actions/setup-gcloud@77e7a554d41e2ee56fc945c52dfd3f33d12def9a # v2.1.4
+        name: setup gcloud
+      - run: |
+          gcloud run deploy catwalk \
+            --project=devel-416316 \
+            --region=us-east1 \
+            --image=us-east1-docker.pkg.dev/devel-416316/charm/catwalk:${{ github.sha }}-devel \
+            --quiet
+        name: deploy to cloud run
