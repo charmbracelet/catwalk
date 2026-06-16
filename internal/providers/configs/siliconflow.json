@@ -1,0 +1,32 @@
+{
+  "name": "SiliconFlow",
+  "id": "siliconflow",
+  "type": "openai-compat",
+  "api_key": "$SILICONFLOW_API_KEY",
+  "api_endpoint": "https://api.siliconflow.com/v1",
+  "default_large_model_id": "Pro/zai-org/GLM-5.1",
+  "default_small_model_id": "Qwen/Qwen3.6-27B",
+  "models": [
+    {
+      "id": "Pro/zai-org/GLM-5.1",
+      "name": "GLM-5.1",
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0.26,
+      "context_window": 202752,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "Qwen/Qwen3.6-27B",
+      "name": "Qwen3.6-27B",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 3.2,
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "can_reason": false,
+      "supports_attachments": true
+    }
+  ]
+}
