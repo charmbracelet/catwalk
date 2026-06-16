@@ -73,6 +73,7 @@ tasks:
       - task: gen:venice
       - task: gen:vercel
       - task: gen:xai
+      - task: gen:xiaomi-mimo
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
@@ -153,6 +154,11 @@ tasks:
     desc: Generate xAI provider configurations
     cmds:
       - go run cmd/xai/main.go
+
+  gen:xiaomi-mimo:
+    desc: Generate Xiaomi MiMo provider configurations
+    cmds:
+      - go run cmd/xiaomi-mimo/main.go
 
   update:
     desc: Trigger the update workflow on GitHub
