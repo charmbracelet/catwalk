@@ -44,6 +44,18 @@
       "supports_attachments": false
     },
     {
+      "id": "glm-5.2",
+      "name": "GLM-5.2",
+      "cost_per_1m_in": 1.45,
+      "cost_per_1m_out": 4.5,
+      "cost_per_1m_in_cached": 1.45,
+      "cost_per_1m_out_cached": 4.5,
+      "context_window": 1048560,
+      "default_max_tokens": 104856,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
       "id": "moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
       "cost_per_1m_in": 0.52,
