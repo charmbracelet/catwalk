@@ -140,9 +140,8 @@ func main() {
 
 		costIn := ptrDeref(meta.Pricing.InputPerMillion, 0)
 		costOut := ptrDeref(meta.Pricing.OutputPerMillion, 0)
-		// Null cached pricing means same as non-cached
-		costInCached := ptrDeref(meta.Pricing.CachedInputPerMillion, costIn)
-		costOutCached := ptrDeref(meta.Pricing.CachedOutputPerMillion, costOut)
+		costInCached := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
+		costOutCached := ptrDeref(meta.Pricing.CachedOutputPerMillion, 0)
 
 		var defaultMaxTokens int64
 		if meta.Limits.MaxOutputTokens != nil {
