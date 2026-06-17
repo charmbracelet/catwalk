@@ -7,18 +7,6 @@
   "default_small_model_id": "claude-haiku-4.5",
   "models": [
     {
-      "id": "claude-fable-5",
-      "name": "Claude Fable 5",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 264000,
-      "default_max_tokens": 64000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "claude-haiku-4.5",
       "name": "Claude Haiku 4.5",
       "cost_per_1m_in": 0,
