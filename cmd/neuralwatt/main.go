@@ -154,8 +154,8 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoning string
 		if meta.Capabilities.ReasoningEffort {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoningLevels = []string{"minimal", "low", "medium", "high", "xhigh", "max"}
+			defaultReasoning = "high"
 		}
 
 		name := meta.DisplayName
