@@ -182,6 +182,18 @@
       "supports_attachments": false
     },
     {
+      "id": "zai-org/GLM-5.2",
+      "name": "GLM 5.2",
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "gpt-4.1",
       "name": "GPT-4.1",
       "cost_per_1m_in": 2,
