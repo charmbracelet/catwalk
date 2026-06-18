@@ -72,7 +72,10 @@ tasks:
       - task: gen:synthetic
       - task: gen:venice
       - task: gen:vercel
+      - task: gen:fireworks
+      - task: gen:fireworks
       - task: gen:xai
+      - task: gen:xiaomi-mimo
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
@@ -149,10 +152,25 @@ tasks:
     cmds:
       - go run cmd/vercel/main.go
 
+  gen:fireworks:
+    desc: Generate Fireworks provider configurations
+    cmds:
+      - go run cmd/fireworks/main.go
+
+  gen:fireworks:
+    desc: Generate Fireworks provider configurations
+    cmds:
+      - go run cmd/fireworks/main.go
+
   gen:xai:
     desc: Generate xAI provider configurations
     cmds:
       - go run cmd/xai/main.go
+
+  gen:xiaomi-mimo:
+    desc: Generate Xiaomi MiMo provider configurations
+    cmds:
+      - go run cmd/xiaomi-mimo/main.go
 
   update:
     desc: Trigger the update workflow on GitHub
