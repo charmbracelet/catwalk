@@ -24,11 +24,20 @@ type ModelsResponse struct {
 
 // FireworksModel represents a single model entry in the /v1/models response.
 type FireworksModel struct {
-	ID string `json:"id"`
+	ID                 string `json:"id"`
+	SupportsImageInput bool   `json:"supports_image_input"`
+	ContextLength      int64  `json:"context_length"`
 }
 
-// modelSpec holds metadata for each known Fireworks model. The API only returns
-// model IDs, so pricing and capabilities are sourced from here.
+// apiModel is the normalized model data extracted from the API response.
+type apiModel struct {
+	ID                 string
+	ContextLength      int64
+	SupportsImageInput bool
+}
+
+// modelSpec holds metadata for each known Fireworks model. The API does not
+// return pricing, so pricing and capabilities are sourced from here.
 type modelSpec struct {
 	Name              string
 	CostPer1MIn       float64
@@ -42,8 +51,8 @@ type modelSpec struct {
 
 var reasoningLevels = []string{"low", "medium", "high"}
 
-// knownModels maps short model IDs to their metadata. Only models present in
-// both the API response and this map are included in the generated configs.
+// knownModels maps model IDs to their metadata. Only models present in
+// both the API response and this map are included in fireworks.json.
 var knownModels = map[string]modelSpec{
 	"accounts/fireworks/models/kimi-k2p7-code": {
 		Name:              "Kimi K2.7 Code",
@@ -54,6 +63,16 @@ var knownModels = map[string]modelSpec{
 		DefaultMaxTokens:  65_536,
 		CanReason:         true,
 		SupportsImages:    true,
+	},
+	"accounts/fireworks/models/kimi-k2p5": {
+		Name:              "Kimi K2.5",
+		CostPer1MIn:       0.60,
+		CostPer1MOut:      3.00,
+		CostPer1MInCached: 0.10,
+		ContextWindow:     262_144,
+		DefaultMaxTokens:  65_536,
+		CanReason:         true,
+		SupportsImages:    false,
 	},
 	"accounts/fireworks/models/kimi-k2p6": {
 		Name:              "Kimi K2.6",
@@ -167,18 +186,7 @@ var knownModels = map[string]modelSpec{
 	},
 }
 
-// firepassModels lists models available via Firepass (zero-cost subscription).
-var firepassModels = map[string]modelSpec{
-	"accounts/fireworks/routers/kimi-k2p6-turbo": {
-		Name:             "Kimi K2.6 Turbo",
-		ContextWindow:    262_144,
-		DefaultMaxTokens: 65_536,
-		CanReason:        true,
-		SupportsImages:   true,
-	},
-}
-
-func fetchModels(endpoint, apiKey string) ([]string, error) {
+func fetchModels(endpoint, apiKey string) ([]apiModel, error) {
 	client := &http.Client{Timeout: 30 * time.Second}
 	req, _ := http.NewRequestWithContext(
 		context.Background(),
@@ -212,17 +220,23 @@ func fetchModels(endpoint, apiKey string) ([]string, error) {
 		return nil, err //nolint:wrapcheck
 	}
 
-	ids := make([]string, len(mr.Data))
+	models := make([]apiModel, len(mr.Data))
 	for i, m := range mr.Data {
-		ids[i] = m.ID
+		models[i] = apiModel{
+			ID:                 m.ID,
+			ContextLength:      m.ContextLength,
+			SupportsImageInput: m.SupportsImageInput,
+		}
 	}
-	return ids, nil
+	return models, nil
 }
 
-func buildModels(apiModelIDs []string, specs map[string]modelSpec) []catwalk.Model {
+// buildModels builds the pay-as-you-go Fireworks models from the API response,
+// enriching them with pricing from the knownModels map.
+func buildModels(apiModels []apiModel) []catwalk.Model {
 	var models []catwalk.Model
-	for _, id := range apiModelIDs {
-		spec, ok := specs[id]
+	for _, am := range apiModels {
+		spec, ok := knownModels[am.ID]
 		if !ok {
 			continue
 		}
@@ -234,19 +248,24 @@ func buildModels(apiModelIDs []string, specs map[string]modelSpec) []catwalk.Mod
 			reasoningEffort = "medium"
 		}
 
+		ctxWindow := spec.ContextWindow
+		if ctxWindow == 0 {
+			ctxWindow = am.ContextLength
+		}
+
 		m := catwalk.Model{
-			ID:                     id,
+			ID:                     am.ID,
 			Name:                   spec.Name,
 			CostPer1MIn:            spec.CostPer1MIn,
 			CostPer1MOut:           spec.CostPer1MOut,
 			CostPer1MInCached:      spec.CostPer1MInCached,
 			CostPer1MOutCached:     0,
-			ContextWindow:          spec.ContextWindow,
+			ContextWindow:          ctxWindow,
 			DefaultMaxTokens:       spec.DefaultMaxTokens,
 			CanReason:              spec.CanReason,
 			ReasoningLevels:        levels,
 			DefaultReasoningEffort: reasoningEffort,
-			SupportsImages:         spec.SupportsImages,
+			SupportsImages:         spec.SupportsImages || am.SupportsImageInput,
 		}
 
 		models = append(models, m)
@@ -257,6 +276,65 @@ func buildModels(apiModelIDs []string, specs map[string]modelSpec) []catwalk.Mod
 	})
 
 	return models
+}
+
+// buildFirepassModels builds Firepass (subscription) models purely from the API
+// response. All costs are zero since Firepass is a flat-rate subscription.
+func buildFirepassModels(apiModels []apiModel) []catwalk.Model {
+	var models []catwalk.Model
+	for _, am := range apiModels {
+		ctxWindow := am.ContextLength
+		if ctxWindow == 0 {
+			ctxWindow = 262_144
+		}
+		defaultMaxTokens := ctxWindow / 4
+
+		m := catwalk.Model{
+			ID:                     am.ID,
+			Name:                   prettyName(am.ID),
+			CostPer1MIn:            0,
+			CostPer1MOut:           0,
+			CostPer1MInCached:      0,
+			CostPer1MOutCached:     0,
+			ContextWindow:          ctxWindow,
+			DefaultMaxTokens:       defaultMaxTokens,
+			CanReason:              true,
+			ReasoningLevels:        reasoningLevels,
+			DefaultReasoningEffort: "medium",
+			SupportsImages:         am.SupportsImageInput,
+		}
+		models = append(models, m)
+	}
+
+	slices.SortFunc(models, func(a, b catwalk.Model) int {
+		return strings.Compare(a.ID, b.ID)
+	})
+
+	return models
+}
+
+// prettyName converts a router model ID into a human-readable name.
+func prettyName(id string) string {
+	parts := strings.Split(id, "/")
+	short := parts[len(parts)-1]
+	short = strings.ReplaceAll(short, "-", " ")
+	short = strings.ReplaceAll(short, "p", ".")
+	// Capitalize each word
+	var result strings.Builder
+	capitalize := true
+	for _, r := range short {
+		if capitalize && r >= 'a' && r <= 'z' {
+			result.WriteRune(r - 32)
+			capitalize = false
+		} else if r == ' ' {
+			result.WriteRune(r)
+			capitalize = true
+		} else {
+			result.WriteRune(r)
+			capitalize = false
+		}
+	}
+	return result.String()
 }
 
 func writeProvider(path string, provider catwalk.Provider) {
@@ -274,75 +352,87 @@ func writeProvider(path string, provider catwalk.Provider) {
 }
 
 func main() {
-	apiKey := os.Getenv("FIREWORKS_API_KEY")
-	if apiKey == "" {
+	fireworksKey := os.Getenv("FIREWORKS_API_KEY")
+	if fireworksKey == "" {
 		log.Fatal("FIREWORKS_API_KEY environment variable is not set")
 	}
 
-	fetchEndpoint := os.Getenv("FIREWORKS_API_ENDPOINT")
-	if fetchEndpoint == "" {
-		fetchEndpoint = "https://api.fireworks.ai/inference/v1"
+	endpoint := os.Getenv("FIREWORKS_API_ENDPOINT")
+	if endpoint == "" {
+		endpoint = "https://api.fireworks.ai/inference/v1"
 	}
 
-	apiModelIDs, err := fetchModels(fetchEndpoint, apiKey)
+	// Fetch Fireworks pay-as-you-go models
+	apiModels, err := fetchModels(endpoint, fireworksKey)
 	if err != nil {
 		log.Fatal("Error fetching Fireworks models:", err)
 	}
 
+	var fireworksAPIModels []apiModel
+	for _, am := range apiModels {
+		if !strings.HasPrefix(am.ID, "accounts/fireworks/routers/") {
+			fireworksAPIModels = append(fireworksAPIModels, am)
+		}
+	}
+
 	knownCount := 0
-	for _, id := range apiModelIDs {
-		if _, ok := knownModels[id]; ok {
+	for _, am := range fireworksAPIModels {
+		if _, ok := knownModels[am.ID]; ok {
 			knownCount++
 		} else {
-			log.Printf("Warning: model %q found in API but not in known models map; skipping", id)
+			log.Printf("Warning: model %q found in API but not in known models map; skipping", am.ID)
 		}
 	}
 	if knownCount == 0 {
 		log.Fatal("No known models found in API response")
 	}
 
-	// Fireworks pay-as-you-go provider
-	fireworksModels := buildModels(apiModelIDs, knownModels)
+	fireworksModels := buildModels(fireworksAPIModels)
 	writeProvider("internal/providers/configs/fireworks.json", catwalk.Provider{
 		Name:                "Fireworks",
 		ID:                  catwalk.InferenceProviderFireworks,
 		APIKey:              "$FIREWORKS_API_KEY",
-		APIEndpoint:         "https://api.fireworks.ai/inference/v1",
+		APIEndpoint:         endpoint,
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "accounts/fireworks/models/deepseek-v4-pro",
-		DefaultSmallModelID: "accounts/fireworks/models/deepseek-v4-flash",
+		DefaultLargeModelID: "accounts/fireworks/models/kimi-k2p6",
+		DefaultSmallModelID: "accounts/fireworks/models/gpt-oss-120b",
 		Models:              fireworksModels,
 	})
 
-	// Firepass provider — Kimi K2.6 Turbo with zero cost
-	var firepassModelList []catwalk.Model
-	for id, spec := range firepassModels {
-		firepassModelList = append(firepassModelList, catwalk.Model{
-			ID:                     id,
-			Name:                   spec.Name,
-			CostPer1MIn:            0,
-			CostPer1MOut:           0,
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     0,
-			ContextWindow:          spec.ContextWindow,
-			DefaultMaxTokens:       spec.DefaultMaxTokens,
-			CanReason:              spec.CanReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: "medium",
-			SupportsImages:         spec.SupportsImages,
-		})
+	// Fetch Firepass models with a separate API key (optional)
+	firepassKey := os.Getenv("FIREPASS_API_KEY")
+	if firepassKey == "" {
+		log.Println("FIREPASS_API_KEY not set; skipping Firepass config generation")
+		return
 	}
-	slices.SortFunc(firepassModelList, func(a, b catwalk.Model) int {
-		return strings.Compare(a.ID, b.ID)
-	})
+
+	firepassAPIModels, err := fetchModels(endpoint, firepassKey)
+	if err != nil {
+		log.Fatal("Error fetching Firepass models:", err)
+	}
+
+	var firepassRouterModels []apiModel
+	for _, am := range firepassAPIModels {
+		if strings.HasPrefix(am.ID, "accounts/fireworks/routers/") {
+			firepassRouterModels = append(firepassRouterModels, am)
+		}
+	}
+
+	if len(firepassRouterModels) == 0 {
+		log.Println("No Firepass router models found in API response; skipping Firepass config")
+		return
+	}
+
+	firepassModels := buildFirepassModels(firepassRouterModels)
+	defaultFirepassModel := firepassModels[0].ID
 	writeProvider("internal/providers/configs/firepass.json", catwalk.Provider{
 		Name:                "Fireworks Firepass",
 		ID:                  catwalk.InferenceProviderFirepass,
 		APIKey:              "$FIREPASS_API_KEY",
-		APIEndpoint:         "https://api.fireworks.ai/inference/v1",
+		APIEndpoint:         endpoint,
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "accounts/fireworks/routers/kimi-k2p6-turbo",
-		DefaultSmallModelID: "accounts/fireworks/routers/kimi-k2p6-turbo",
-		Models:              firepassModelList,
+		DefaultLargeModelID: defaultFirepassModel,
+		DefaultSmallModelID: defaultFirepassModel,
+		Models:              firepassModels,
 	})
 }
