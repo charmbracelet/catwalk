@@ -298,8 +298,8 @@
     {
       "id": "zai-org-glm-5-2",
       "name": "GLM 5.2",
-      "cost_per_1m_in": 1.75,
-      "cost_per_1m_out": 5.5,
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
