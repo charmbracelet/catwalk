@@ -64,6 +64,10 @@ jobs:
         run: go run ./cmd/openrouter/main.go
         continue-on-error: true
 
+      - name: OrcaRouter
+        run: go run ./cmd/orcarouter/main.go
+        continue-on-error: true
+
       - name: Synthetic
         run: go run ./cmd/synthetic/main.go
         continue-on-error: true
