@@ -1,6 +1,6 @@
 {
   "name": "Fireworks Firepass",
-  "id": "firepass",
+  "id": "fireworks-firepass",
   "api_key": "$FIREPASS_API_KEY",
   "api_endpoint": "https://api.fireworks.ai/inference/v1",
   "type": "openai-compat",

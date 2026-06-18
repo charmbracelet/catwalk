@@ -108,20 +108,8 @@ var xAIConfig []byte
 //go:embed configs/fireworks.json
 var fireworksConfig []byte
 
-//go:embed configs/firepass.json
-var firepassConfig []byte
-
-//go:embed configs/xiaomi-mimo.json
-var xiaomiMiMoConfig []byte
-
-//go:embed configs/xiaomi-mimo-token-plan-ams.json
-var xiaomiMiMoTokenPlanAMSConfig []byte
-
-//go:embed configs/xiaomi-mimo-token-plan-cn.json
-var xiaomiMiMoTokenPlanCNConfig []byte
-
-//go:embed configs/xiaomi-mimo-token-plan-sgp.json
-var xiaomiMiMoTokenPlanSGPConfig []byte
+//go:embed configs/fireworks-firepass.json
+var fireworksFirepassConfig []byte
 
 //go:embed configs/zai.json
 var zAIConfig []byte
@@ -146,6 +134,8 @@ var providerRegistry = []ProviderFunc{
 	miniMaxProvider,
 	miniMaxChinaProvider,
 	syntheticProvider,
+	fireworksProvider,
+	fireworksFirepassProvider,
 
 	// The remaining will be in alphabetical order.
 	aiHubMixProvider,
@@ -167,17 +157,11 @@ var providerRegistry = []ProviderFunc{
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
-	fireworksProvider,
-	firepassProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
-	xiaomiMiMoProvider,
-	xiaomiMiMoTokenPlanAMSProvider,
-	xiaomiMiMoTokenPlanCNProvider,
-	xiaomiMiMoTokenPlanSGPProvider,
 	zhipuProvider,
 	zhipuCodingProvider,
 }
@@ -304,8 +288,8 @@ func fireworksProvider() catwalk.Provider {
 	return loadProviderFromConfig(fireworksConfig)
 }
 
-func firepassProvider() catwalk.Provider {
-	return loadProviderFromConfig(firepassConfig)
+func fireworksFirepassProvider() catwalk.Provider {
+	return loadProviderFromConfig(fireworksFirepassConfig)
 }
 
 func qiniuCloudProvider() catwalk.Provider {
@@ -334,22 +318,6 @@ func vertexAIProvider() catwalk.Provider {
 
 func xAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(xAIConfig)
-}
-
-func xiaomiMiMoProvider() catwalk.Provider {
-	return loadProviderFromConfig(xiaomiMiMoConfig)
-}
-
-func xiaomiMiMoTokenPlanAMSProvider() catwalk.Provider {
-	return loadProviderFromConfig(xiaomiMiMoTokenPlanAMSConfig)
-}
-
-func xiaomiMiMoTokenPlanCNProvider() catwalk.Provider {
-	return loadProviderFromConfig(xiaomiMiMoTokenPlanCNConfig)
-}
-
-func xiaomiMiMoTokenPlanSGPProvider() catwalk.Provider {
-	return loadProviderFromConfig(xiaomiMiMoTokenPlanSGPConfig)
 }
 
 func zAIProvider() catwalk.Provider {

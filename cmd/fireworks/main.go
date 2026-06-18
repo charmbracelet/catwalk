@@ -3,6 +3,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -25,15 +26,10 @@ type ModelsResponse struct {
 // FireworksModel represents a single model entry in the /v1/models response.
 type FireworksModel struct {
 	ID                 string `json:"id"`
+	SupportsChat       bool   `json:"supports_chat"`
 	SupportsImageInput bool   `json:"supports_image_input"`
+	SupportsTools      bool   `json:"supports_tools"`
 	ContextLength      int64  `json:"context_length"`
-}
-
-// apiModel is the normalized model data extracted from the API response.
-type apiModel struct {
-	ID                 string
-	ContextLength      int64
-	SupportsImageInput bool
 }
 
 // modelSpec holds metadata for each known Fireworks model. The API does not
@@ -186,7 +182,7 @@ var knownModels = map[string]modelSpec{
 	},
 }
 
-func fetchModels(endpoint, apiKey string) ([]apiModel, error) {
+func fetchModels(endpoint, apiKey string) ([]FireworksModel, error) {
 	client := &http.Client{Timeout: 30 * time.Second}
 	req, _ := http.NewRequestWithContext(
 		context.Background(),
@@ -219,24 +215,19 @@ func fetchModels(endpoint, apiKey string) ([]apiModel, error) {
 	if err := json.Unmarshal(body, &mr); err != nil {
 		return nil, err //nolint:wrapcheck
 	}
-
-	models := make([]apiModel, len(mr.Data))
-	for i, m := range mr.Data {
-		models[i] = apiModel{
-			ID:                 m.ID,
-			ContextLength:      m.ContextLength,
-			SupportsImageInput: m.SupportsImageInput,
-		}
-	}
-	return models, nil
+	return mr.Data, nil
 }
 
 // buildModels builds the pay-as-you-go Fireworks models from the API response,
 // enriching them with pricing from the knownModels map.
-func buildModels(apiModels []apiModel) []catwalk.Model {
+func buildModels(fireworksModels []FireworksModel) []catwalk.Model {
 	var models []catwalk.Model
-	for _, am := range apiModels {
-		spec, ok := knownModels[am.ID]
+	for _, m := range fireworksModels {
+		if !m.SupportsChat || !m.SupportsTools {
+			continue
+		}
+
+		spec, ok := knownModels[m.ID]
 		if !ok {
 			continue
 		}
@@ -248,13 +239,10 @@ func buildModels(apiModels []apiModel) []catwalk.Model {
 			reasoningEffort = "medium"
 		}
 
-		ctxWindow := spec.ContextWindow
-		if ctxWindow == 0 {
-			ctxWindow = am.ContextLength
-		}
+		ctxWindow := cmp.Or(spec.ContextWindow, m.ContextLength)
 
 		m := catwalk.Model{
-			ID:                     am.ID,
+			ID:                     m.ID,
 			Name:                   spec.Name,
 			CostPer1MIn:            spec.CostPer1MIn,
 			CostPer1MOut:           spec.CostPer1MOut,
@@ -265,7 +253,7 @@ func buildModels(apiModels []apiModel) []catwalk.Model {
 			CanReason:              spec.CanReason,
 			ReasoningLevels:        levels,
 			DefaultReasoningEffort: reasoningEffort,
-			SupportsImages:         spec.SupportsImages || am.SupportsImageInput,
+			SupportsImages:         spec.SupportsImages || m.SupportsImageInput,
 		}
 
 		models = append(models, m)
@@ -280,13 +268,10 @@ func buildModels(apiModels []apiModel) []catwalk.Model {
 
 // buildFirepassModels builds Firepass (subscription) models purely from the API
 // response. All costs are zero since Firepass is a flat-rate subscription.
-func buildFirepassModels(apiModels []apiModel) []catwalk.Model {
+func buildFirepassModels(fireworksModels []FireworksModel) []catwalk.Model {
 	var models []catwalk.Model
-	for _, am := range apiModels {
-		ctxWindow := am.ContextLength
-		if ctxWindow == 0 {
-			ctxWindow = 262_144
-		}
+	for _, am := range fireworksModels {
+		ctxWindow := cmp.Or(am.ContextLength, 262_144)
 		defaultMaxTokens := ctxWindow / 4
 
 		m := catwalk.Model{
@@ -357,10 +342,7 @@ func main() {
 		log.Fatal("FIREWORKS_API_KEY environment variable is not set")
 	}
 
-	endpoint := os.Getenv("FIREWORKS_API_ENDPOINT")
-	if endpoint == "" {
-		endpoint = "https://api.fireworks.ai/inference/v1"
-	}
+	endpoint := cmp.Or(os.Getenv("FIREWORKS_API_ENDPOINT"), "https://api.fireworks.ai/inference/v1")
 
 	// Fetch Fireworks pay-as-you-go models
 	apiModels, err := fetchModels(endpoint, fireworksKey)
@@ -368,7 +350,7 @@ func main() {
 		log.Fatal("Error fetching Fireworks models:", err)
 	}
 
-	var fireworksAPIModels []apiModel
+	var fireworksAPIModels []FireworksModel
 	for _, am := range apiModels {
 		if !strings.HasPrefix(am.ID, "accounts/fireworks/routers/") {
 			fireworksAPIModels = append(fireworksAPIModels, am)
@@ -411,7 +393,7 @@ func main() {
 		log.Fatal("Error fetching Firepass models:", err)
 	}
 
-	var firepassRouterModels []apiModel
+	var firepassRouterModels []FireworksModel
 	for _, am := range firepassAPIModels {
 		if strings.HasPrefix(am.ID, "accounts/fireworks/routers/") {
 			firepassRouterModels = append(firepassRouterModels, am)
@@ -425,9 +407,9 @@ func main() {
 
 	firepassModels := buildFirepassModels(firepassRouterModels)
 	defaultFirepassModel := firepassModels[0].ID
-	writeProvider("internal/providers/configs/firepass.json", catwalk.Provider{
+	writeProvider("internal/providers/configs/fireworks-firepass.json", catwalk.Provider{
 		Name:                "Fireworks Firepass",
-		ID:                  catwalk.InferenceProviderFirepass,
+		ID:                  catwalk.InferenceProviderFireworksFirepass,
 		APIKey:              "$FIREPASS_API_KEY",
 		APIEndpoint:         endpoint,
 		Type:                catwalk.TypeOpenAICompat,

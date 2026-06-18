@@ -21,46 +21,42 @@ type InferenceProvider string
 
 // All the inference providers supported by the system.
 const (
-	InferenceProviderOpenAI                 InferenceProvider = "openai"
-	InferenceProviderAnthropic              InferenceProvider = "anthropic"
-	InferenceProviderSynthetic              InferenceProvider = "synthetic"
-	InferenceProviderGemini                 InferenceProvider = "gemini"
-	InferenceProviderAzure                  InferenceProvider = "azure"
-	InferenceProviderBedrock                InferenceProvider = "bedrock"
-	InferenceProviderBedrockEurope          InferenceProvider = "bedrock-europe"
-	InferenceProviderVertexAI               InferenceProvider = "vertexai"
-	InferenceProviderXAI                    InferenceProvider = "xai"
-	InferenceProviderZAI                    InferenceProvider = "zai"
-	InferenceProviderDeepSeek               InferenceProvider = "deepseek"
-	InferenceProviderZhipu                  InferenceProvider = "zhipu"
-	InferenceProviderZhipuCoding            InferenceProvider = "zhipu-coding"
-	InferenceProviderGROQ                   InferenceProvider = "groq"
-	InferenceProviderOpenRouter             InferenceProvider = "openrouter"
-	InferenceProviderCerebras               InferenceProvider = "cerebras"
-	InferenceProviderVenice                 InferenceProvider = "venice"
-	InferenceProviderChutes                 InferenceProvider = "chutes"
-	InferenceProviderHuggingFace            InferenceProvider = "huggingface"
-	InferenceAIHubMix                       InferenceProvider = "aihubmix"
-	InferenceKimiCoding                     InferenceProvider = "kimi-coding"
-	InferenceProviderCopilot                InferenceProvider = "copilot"
-	InferenceProviderCortecs                InferenceProvider = "cortecs"
-	InferenceProviderVercel                 InferenceProvider = "vercel"
-	InferenceProviderMiniMax                InferenceProvider = "minimax"
-	InferenceProviderMiniMaxChina           InferenceProvider = "minimax-china"
-	InferenceProviderIoNet                  InferenceProvider = "ionet"
-	InferenceProviderQiniuCloud             InferenceProvider = "qiniucloud"
-	InferenceProviderAvian                  InferenceProvider = "avian"
-	InferenceProviderNebius                 InferenceProvider = "nebius"
-	InferenceProviderNeuralwatt             InferenceProvider = "neuralwatt"
-	InferenceProviderOpenCodeZen            InferenceProvider = "opencode-zen"
-	InferenceProviderOpenCodeGo             InferenceProvider = "opencode-go"
-	InferenceProviderAlibabaSingapore       InferenceProvider = "alibaba-singapore"
-	InferenceProviderFireworks              InferenceProvider = "fireworks"
-	InferenceProviderFirepass               InferenceProvider = "firepass"
-	InferenceProviderXiaomiMiMo             InferenceProvider = "xiaomi-mimo"
-	InferenceProviderXiaomiMiMoTokenPlanAMS InferenceProvider = "xiaomi-mimo-token-plan-ams" // #nosec G101 -- provider ID, not a credential.
-	InferenceProviderXiaomiMiMoTokenPlanCN  InferenceProvider = "xiaomi-mimo-token-plan-cn"  // #nosec G101 -- provider ID, not a credential.
-	InferenceProviderXiaomiMiMoTokenPlanSGP InferenceProvider = "xiaomi-mimo-token-plan-sgp" // #nosec G101 -- provider ID, not a credential.
+	InferenceProviderOpenAI            InferenceProvider = "openai"
+	InferenceProviderAnthropic         InferenceProvider = "anthropic"
+	InferenceProviderSynthetic         InferenceProvider = "synthetic"
+	InferenceProviderGemini            InferenceProvider = "gemini"
+	InferenceProviderAzure             InferenceProvider = "azure"
+	InferenceProviderBedrock           InferenceProvider = "bedrock"
+	InferenceProviderBedrockEurope     InferenceProvider = "bedrock-europe"
+	InferenceProviderVertexAI          InferenceProvider = "vertexai"
+	InferenceProviderXAI               InferenceProvider = "xai"
+	InferenceProviderZAI               InferenceProvider = "zai"
+	InferenceProviderDeepSeek          InferenceProvider = "deepseek"
+	InferenceProviderZhipu             InferenceProvider = "zhipu"
+	InferenceProviderZhipuCoding       InferenceProvider = "zhipu-coding"
+	InferenceProviderGROQ              InferenceProvider = "groq"
+	InferenceProviderOpenRouter        InferenceProvider = "openrouter"
+	InferenceProviderCerebras          InferenceProvider = "cerebras"
+	InferenceProviderVenice            InferenceProvider = "venice"
+	InferenceProviderChutes            InferenceProvider = "chutes"
+	InferenceProviderHuggingFace       InferenceProvider = "huggingface"
+	InferenceAIHubMix                  InferenceProvider = "aihubmix"
+	InferenceKimiCoding                InferenceProvider = "kimi-coding"
+	InferenceProviderCopilot           InferenceProvider = "copilot"
+	InferenceProviderCortecs           InferenceProvider = "cortecs"
+	InferenceProviderVercel            InferenceProvider = "vercel"
+	InferenceProviderMiniMax           InferenceProvider = "minimax"
+	InferenceProviderMiniMaxChina      InferenceProvider = "minimax-china"
+	InferenceProviderIoNet             InferenceProvider = "ionet"
+	InferenceProviderQiniuCloud        InferenceProvider = "qiniucloud"
+	InferenceProviderAvian             InferenceProvider = "avian"
+	InferenceProviderNebius            InferenceProvider = "nebius"
+	InferenceProviderNeuralwatt        InferenceProvider = "neuralwatt"
+	InferenceProviderOpenCodeZen       InferenceProvider = "opencode-zen"
+	InferenceProviderOpenCodeGo        InferenceProvider = "opencode-go"
+	InferenceProviderAlibabaSingapore  InferenceProvider = "alibaba-singapore"
+	InferenceProviderFireworks         InferenceProvider = "fireworks"
+	InferenceProviderFireworksFirepass InferenceProvider = "fireworks-firepass"
 )
 
 // Provider represents an AI provider configuration.
@@ -138,11 +134,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderOpenCodeZen,
 		InferenceProviderOpenCodeGo,
 		InferenceProviderFireworks,
-		InferenceProviderFirepass,
-		InferenceProviderXiaomiMiMo,
-		InferenceProviderXiaomiMiMoTokenPlanAMS,
-		InferenceProviderXiaomiMiMoTokenPlanCN,
-		InferenceProviderXiaomiMiMoTokenPlanSGP,
+		InferenceProviderFireworksFirepass,
 	}
 }
 

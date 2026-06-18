@@ -32,10 +32,6 @@ jobs:
         run: go run ./cmd/avian/main.go
         continue-on-error: true
 
-      - name: Neuralwatt
-        run: go run ./cmd/neuralwatt/main.go
-        continue-on-error: true
-
       - name: Chutes
         run: go run ./cmd/chutes/main.go
         continue-on-error: true
@@ -44,12 +40,22 @@ jobs:
         run: go run ./cmd/cortecs/main.go
         continue-on-error: true
 
+      - name: Fireworks
+        run: go run ./cmd/fireworks/main.go
+        continue-on-error: true
+        env:
+          FIREWORKS_API_KEY: ${{ secrets.FIREWORKS_API_KEY }}
+
       - name: HuggingFace
         run: go run ./cmd/huggingface/main.go
         continue-on-error: true
 
       - name: io.net
         run: go run ./cmd/ionet/main.go
+        continue-on-error: true
+
+      - name: Neuralwatt
+        run: go run ./cmd/neuralwatt/main.go
         continue-on-error: true
 
       - name: OpenCode Go
@@ -85,22 +91,6 @@ jobs:
         continue-on-error: true
         env:
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-
-      - name: Fireworks
-        run: go run ./cmd/fireworks/main.go
-        continue-on-error: true
-        env:
-          FIREWORKS_API_KEY: ${{ secrets.FIREWORKS_API_KEY }}
-
-      - name: Fireworks
-        run: go run ./cmd/fireworks/main.go
-        continue-on-error: true
-        env:
-          FIREWORKS_API_KEY: ${{ secrets.FIREWORKS_API_KEY }}
-
-      - name: Xiaomi MiMo
-        run: go run ./cmd/xiaomi-mimo/main.go
-        continue-on-error: true
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
