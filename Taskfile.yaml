@@ -73,6 +73,7 @@ tasks:
       - task: gen:venice
       - task: gen:vercel
       - task: gen:xai
+      - task: gen:zenmux
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
@@ -153,6 +154,11 @@ tasks:
     desc: Generate xAI provider configurations
     cmds:
       - go run cmd/xai/main.go
+
+  gen:zenmux:
+    desc: Generate ZenMux provider configurations
+    cmds:
+      - go run cmd/zenmux/main.go
 
   update:
     desc: Trigger the update workflow on GitHub

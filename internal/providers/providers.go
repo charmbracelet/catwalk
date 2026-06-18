@@ -105,6 +105,9 @@ var vertexAIConfig []byte
 //go:embed configs/xai.json
 var xAIConfig []byte
 
+//go:embed configs/zenmux.json
+var zenMuxConfig []byte
+
 //go:embed configs/zai.json
 var zAIConfig []byte
 
@@ -149,6 +152,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
+	zenMuxProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
 	vercelProvider,
@@ -274,6 +278,10 @@ func openCodeZenProvider() catwalk.Provider {
 
 func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
+}
+
+func zenMuxProvider() catwalk.Provider {
+	return loadProviderFromConfig(zenMuxConfig)
 }
 
 func qiniuCloudProvider() catwalk.Provider {
