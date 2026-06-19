@@ -8,18 +8,6 @@
   "default_small_model_id": "grok-4.20",
   "models": [
     {
-      "id": "grok-3",
-      "name": "Grok 3",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2,
-      "context_window": 200000,
-      "default_max_tokens": 20000,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
       "id": "grok-4.20",
       "name": "Grok 4.20",
       "cost_per_1m_in": 1.25,
@@ -41,6 +29,18 @@
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "grok-4.3",
+      "name": "grok-4.3",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 2.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "can_reason": true,
       "supports_attachments": true
     },
     {
