@@ -73,6 +73,7 @@ tasks:
       - task: gen:venice
       - task: gen:vercel
       - task: gen:xai
+      - task: gen:deepinfra
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
@@ -118,6 +119,11 @@ tasks:
     desc: Generate Neuralwatt provider configurations
     cmds:
       - go run cmd/neuralwatt/main.go
+
+  gen:deepinfra:
+    desc: Generate DeepInfra provider configurations
+    cmds:
+      - go run cmd/deepinfra/main.go
 
   gen:opencode-go:
     desc: Generate OpenCode Go provider configurations
