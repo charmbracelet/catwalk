@@ -67,6 +67,7 @@ tasks:
       - task: gen:nebius
       - task: gen:neuralwatt
       - task: gen:ollama
+      - task: gen:ollama-cloud
       - task: gen:opencode-go
       - task: gen:opencode-zen
       - task: gen:openrouter
@@ -124,6 +125,11 @@ tasks:
     desc: Generate Ollama provider configurations
     cmds:
       - go run cmd/ollama/main.go
+
+  gen:ollama-cloud:
+    desc: Generate Ollama Cloud provider configurations
+    cmds:
+      - go run cmd/ollama-cloud/main.go
 
   gen:opencode-go:
     desc: Generate OpenCode Go provider configurations

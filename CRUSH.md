@@ -5,6 +5,9 @@
 - `go run .` - Build and run the main HTTP server on :8080
 - `go run ./cmd/{provider-name}` - Build and run a CLI to update the `{provider-name}.json` file
 - `go test ./...` - Run all tests
+- `task run` - Run the main HTTP server via Taskfile
+- `task gen:all` - Regenerate all provider configurations
+- `task gen:{provider-name}` - Regenerate a single provider configuration
 
 ## Code Style Guidelines
 
@@ -37,3 +40,109 @@
 For `zai`, we'll need to grab the model list and capabilities from `https://docs.z.ai/guides/overview/overview`.
 
 That page does not contain the exact `context_window` and `default_max_tokens` though. We can grab the exact value from `./internal/providers/configs/openrouter.json`.
+
+## Local testing with Crush
+
+To test Catwalk changes locally with the Crush client:
+
+1. Start the Catwalk server:
+   ```bash
+   task run
+   # or: go run .
+   ```
+
+2. If port 8080 is already in use, find and kill the existing Catwalk process:
+   ```bash
+   pgrep -fl catwalk
+   /bin/kill <PID>
+   ```
+   Note: On OpenBSD, `pgrep -af` is not supported, so use `pgrep -fl`.
+
+3. In a new terminal, point Crush to the local Catwalk instance:
+   ```bash
+   export CATWALK_URL=http://localhost:8080
+   crush update-providers
+   crush
+   ```
+
+   Alternatively, use a one-shot command:
+   ```bash
+   CATWALK_URL=http://localhost:8080 crush
+   ```
+
+4. Verify the providers are served correctly:
+   ```bash
+   curl -s http://localhost:8080/health
+   curl -s http://localhost:8080/v2/providers | jq '.[] | select(.id == "ollama")'
+   ```
+
+### Ollama-specific testing
+
+- **Ollama (local)** requires a running Ollama instance on `http://localhost:11434`.
+  Generate the config with:
+  ```bash
+  task gen:ollama
+  # or: go run ./cmd/ollama/main.go
+  ```
+  If Ollama is not running, the generator exits with an error message.
+
+- **Ollama Cloud** does not require a local Ollama instance.
+  Generate the config with:
+  ```bash
+  task gen:ollama-cloud
+  # or: go run ./cmd/ollama-cloud/main.go
+  ```
+  It fetches the public model list from `https://ollama.com/v1/models`.
+
+## Local testing with Crush
+
+To test Catwalk changes locally with the Crush client:
+
+1. Start the Catwalk server:
+   ```bash
+   task run
+   # or: go run .
+   ```
+
+2. If port 8080 is already in use, find and kill the existing Catwalk process:
+   ```bash
+   pgrep -fl catwalk
+   /bin/kill <PID>
+   ```
+   Note: On OpenBSD, `pgrep -af` is not supported, so use `pgrep -fl`.
+
+3. In a new terminal, point Crush to the local Catwalk instance:
+   ```bash
+   export CATWALK_URL=http://localhost:8080
+   crush update-providers
+   crush
+   ```
+
+   Alternatively, use a one-shot command:
+   ```bash
+   CATWALK_URL=http://localhost:8080 crush
+   ```
+
+4. Verify the providers are served correctly:
+   ```bash
+   curl -s http://localhost:8080/health
+   curl -s http://localhost:8080/v2/providers | jq '.[] | select(.id == "ollama")'
+   ```
+
+### Ollama-specific testing
+
+- **Ollama (local)** requires a running Ollama instance on `http://localhost:11434`.
+  Generate the config with:
+  ```bash
+  task gen:ollama
+  # or: go run ./cmd/ollama/main.go
+  ```
+  If Ollama is not running, the generator exits with an error message.
+
+- **Ollama Cloud** does not require a local Ollama instance.
+  Generate the config with:
+  ```bash
+  task gen:ollama-cloud
+  # or: go run ./cmd/ollama-cloud/main.go
+  ```
+  It fetches the public model list from `https://ollama.com/v1/models`.
