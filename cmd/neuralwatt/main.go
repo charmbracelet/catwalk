@@ -112,8 +112,8 @@ func main() {
 		APIKey:              "$NEURALWATT_API_KEY",
 		APIEndpoint:         "https://api.neuralwatt.com/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "glm-5.1",
-		DefaultSmallModelID: "qwen3.6-35b",
+		DefaultLargeModelID: "glm-5.2",
+		DefaultSmallModelID: "glm-5.2-fast",
 	}
 
 	modelsResp, err := fetchNeuralwattModels(neuralwattProvider.APIEndpoint)

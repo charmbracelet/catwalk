@@ -4,8 +4,8 @@
   "api_key": "$NEURALWATT_API_KEY",
   "api_endpoint": "https://api.neuralwatt.com/v1",
   "type": "openai-compat",
-  "default_large_model_id": "glm-5.1",
-  "default_small_model_id": "qwen3.6-35b",
+  "default_large_model_id": "glm-5.2",
+  "default_small_model_id": "glm-5.2-fast",
   "models": [
     {
       "id": "glm-5.2",
