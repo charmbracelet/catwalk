@@ -66,6 +66,9 @@ var kimiCodingConfig []byte
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
 
+//go:embed configs/moonshot.json
+var moonshotConfig []byte
+
 //go:embed configs/minimax-china.json
 var miniMaxChinaConfig []byte
 
@@ -150,6 +153,7 @@ var providerRegistry = []ProviderFunc{
 	ioNetProvider,
 	nebiusProvider,
 	neuralwattProvider,
+	moonshotProvider,
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
@@ -266,6 +270,10 @@ func nebiusProvider() catwalk.Provider {
 
 func neuralwattProvider() catwalk.Provider {
 	return loadProviderFromConfig(neuralwattConfig)
+}
+
+func moonshotProvider() catwalk.Provider {
+	return loadProviderFromConfig(moonshotConfig)
 }
 
 func openAIProvider() catwalk.Provider {
