@@ -94,4 +94,4 @@ jobs:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: "chore: auto-update generated files"
           branch: update-providers
-          reviewers: andreynering,meowgorithm,yamcharm1111
+          reviewers: andreynering,meowgorithm
