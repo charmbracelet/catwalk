@@ -153,7 +153,7 @@ func main() {
 			case strings.HasPrefix(model.ID, "anthropic/"):
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
 				defaultReasoning = "medium"
-			case strings.HasPrefix(model.ID, "deepseek/deepseek-v4"):
+			case strings.HasPrefix(model.ID, "deepseek/deepseek-v4") || model.ID == "zai/glm-5.2":
 				reasoningLevels = []string{"high", "xhigh"}
 				defaultReasoning = "high"
 			default:
@@ -192,6 +192,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error marshaling Vercel provider:", err)
 	}
+	data = append(data, '\n')
 
 	if err := os.WriteFile("internal/providers/configs/vercel.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Vercel provider config:", err)
