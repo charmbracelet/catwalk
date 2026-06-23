@@ -113,7 +113,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",

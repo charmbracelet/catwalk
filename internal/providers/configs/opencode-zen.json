@@ -867,6 +867,18 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
+    },
+    {
+      "id": "glm-5.2",
+      "name": "glm-5.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "can_reason": false,
+      "supports_attachments": false
     }
   ]
 }
