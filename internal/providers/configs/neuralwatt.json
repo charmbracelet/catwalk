@@ -80,30 +80,6 @@
       "supports_attachments": false
     },
     {
-      "id": "moonshotai/Kimi-K2.5",
-      "name": "Kimi K2.5",
-      "cost_per_1m_in": 0.52,
-      "cost_per_1m_out": 2.59,
-      "cost_per_1m_in_cached": 0.13,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "kimi-k2.5-fast",
-      "name": "Kimi K2.5 Fast",
-      "cost_per_1m_in": 0.52,
-      "cost_per_1m_out": 2.59,
-      "cost_per_1m_in_cached": 0.13,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "kimi-k2.6",
       "name": "Kimi K2.6",
       "cost_per_1m_in": 0.69,

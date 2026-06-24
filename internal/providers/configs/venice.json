@@ -1091,7 +1091,7 @@
       "context_window": 1000000,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "qwen-3-7-plus",
