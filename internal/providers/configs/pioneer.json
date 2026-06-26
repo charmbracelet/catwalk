@@ -290,6 +290,18 @@
       "supports_attachments": false
     },
     {
+      "id": "gpt-5.3-codex",
+      "name": "GPT-5.3 Codex",
+      "cost_per_1m_in": 1.75,
+      "cost_per_1m_out": 14,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "gpt-5.4",
       "name": "GPT-5.4",
       "cost_per_1m_in": 2.5,
@@ -941,6 +953,18 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "sakana/fugu-ultra",
+      "name": "Sakana Fugu Ultra",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 30,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
       "supports_attachments": false
     },
     {

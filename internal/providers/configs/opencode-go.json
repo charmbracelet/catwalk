@@ -264,7 +264,7 @@
       "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0.02,
       "cost_per_1m_out_cached": 0,
-      "context_window": 512000,
+      "context_window": 1000000,
       "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [

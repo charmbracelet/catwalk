@@ -682,8 +682,8 @@
     {
       "id": "kimi-k2-6",
       "name": "Kimi K2.6",
-      "cost_per_1m_in": 0.85,
-      "cost_per_1m_out": 4.655,
+      "cost_per_1m_in": 0.75,
+      "cost_per_1m_out": 3.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
@@ -1122,7 +1122,7 @@
       "cost_per_1m_out": 1.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
+      "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": true
