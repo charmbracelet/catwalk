@@ -152,9 +152,14 @@ func main() {
 
 		var reasoningLevels []string
 		var defaultReasoning string
-		if meta.Capabilities.ReasoningEffort {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		if meta.Capabilities.Reasoning && meta.Capabilities.ReasoningEffort {
+			if strings.HasPrefix(model.ID, "glm-5.2") {
+				reasoningLevels = []string{"minimal", "high", "xhigh"}
+				defaultReasoning = "xhigh"
+			} else {
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoning = "medium"
+			}
 		}
 
 		name := meta.DisplayName
