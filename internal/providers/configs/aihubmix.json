@@ -158,14 +158,14 @@
       "supports_attachments": true
     },
     {
-      "id": "claude-3-7-sonnet",
-      "name": "Claude 3.7 Sonnet",
-      "cost_per_1m_in": 3.3,
-      "cost_per_1m_out": 16.5,
+      "id": "auto",
+      "name": "Auto",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 200000,
-      "default_max_tokens": 20000,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -176,14 +176,14 @@
       "supports_attachments": true
     },
     {
-      "id": "claude-fable-5",
-      "name": "Claude Fable 5",
-      "cost_per_1m_in": 11,
-      "cost_per_1m_out": 55,
-      "cost_per_1m_in_cached": 13.75,
-      "cost_per_1m_out_cached": 1.1,
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "id": "claude-3-7-sonnet",
+      "name": "Claude 3.7 Sonnet",
+      "cost_per_1m_in": 3.3,
+      "cost_per_1m_out": 16.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 20000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
