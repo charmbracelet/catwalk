@@ -9,3 +9,4 @@ jobs:
     uses: charmbracelet/meta/.github/workflows/lint.yml@main
     with:
       golangci_version: v2.9
+      os: '["ubuntu-latest"]'
