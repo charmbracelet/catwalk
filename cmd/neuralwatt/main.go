@@ -55,13 +55,6 @@ type ModelsResponse struct {
 	Data []NeuralwattModel `json:"data"`
 }
 
-// glm52Prefix matches GLM-5.2 and its aliases (e.g. glm-5.2-fast). Neuralwatt
-// only exposes reasoning effort levels for the GLM-5.2 family atm and accepts
-// the full scale but normalises intermediate values to three distinct
-// behaviours, so we expose only those. Other models, if added with reasoning
-// support in the future, fall back to a reasonable default scale.
-const glm52Prefix = "glm-5.2"
-
 func roundCost(v float64) float64 {
 	return math.Round(v*1e5) / 1e5
 }
@@ -160,7 +153,7 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoning string
 		if meta.Capabilities.Reasoning && meta.Capabilities.ReasoningEffort {
-			if strings.HasPrefix(model.ID, glm52Prefix) {
+			if strings.HasPrefix(model.ID, "glm-5.2") {
 				reasoningLevels = []string{"minimal", "high", "xhigh"}
 				defaultReasoning = "xhigh"
 			} else {
