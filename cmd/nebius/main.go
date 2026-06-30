@@ -150,7 +150,6 @@ func main() {
 		}
 
 		nebiusProvider.Models = append(nebiusProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.ContextLength)
 	}
 
 	slices.SortFunc(nebiusProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

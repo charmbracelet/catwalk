@@ -11,16 +11,21 @@ jobs:
     with:
       go_version: stable
       upload_artifacts: false
+      gcp_enabled: true
     secrets:
       docker_username: ${{ secrets.DOCKERHUB_USERNAME }}
       docker_token: ${{ secrets.DOCKERHUB_TOKEN }}
       goreleaser_key: ${{ secrets.GORELEASER_KEY }}
       gh_pat: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      gcp_wif_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+      gcp_service_account: ${{ secrets.GCP_DEPLOYER_SA }}
 
   deploy:
     name: Run deploy workflow
     runs-on: ubuntu-latest
     needs: [goreleaser]
+    permissions:
+      id-token: write
     steps:
       - uses: benc-uk/workflow-dispatch@v1
         with:
@@ -33,3 +38,17 @@ jobs:
               "app": "catwalk",
               "image": "ghcr.io/charmbracelet/catwalk:${{ github.sha }}-devel"
             }
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
+        name: gcp auth
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_DEPLOYER_SA }}
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
+        name: setup gcloud
+      - run: |
+          gcloud run deploy catwalk \
+            --project=devel-416316 \
+            --region=us-east1 \
+            --image=us-east1-docker.pkg.dev/devel-416316/charm/catwalk:${{ github.sha }}-devel \
+            --quiet
+        name: deploy to cloud run

@@ -105,7 +105,6 @@ func main() {
 		}
 
 		avianProvider.Models = append(avianProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.ContextLength)
 	}
 
 	slices.SortFunc(avianProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

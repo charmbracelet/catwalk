@@ -127,7 +127,6 @@ func main() {
 		}
 
 		goProvider.Models = append(goProvider.Models, m)
-		fmt.Printf("Added model %s (%s)\n", goModel.ID, goModel.Name)
 	}
 
 	slices.SortFunc(goProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

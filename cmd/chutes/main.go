@@ -123,7 +123,6 @@ func main() {
 			SupportsImages:         hasModality(m, "image"),
 		}
 		models = append(models, model)
-		fmt.Printf("Added model %s\n", m.ID)
 	}
 
 	slices.SortFunc(models, func(a, b catwalk.Model) int {

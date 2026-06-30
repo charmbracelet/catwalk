@@ -3,6 +3,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -148,26 +149,21 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoning string
 		if canReason {
-			// Base reasoning levels supported by most providers
-			reasoningLevels = []string{"low", "medium", "high"}
-			// Anthropic models support extended Vercel reasoning levels
-			if strings.HasPrefix(model.ID, "anthropic/") {
+			switch {
+			case strings.HasPrefix(model.ID, "anthropic/"):
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
+				defaultReasoning = "medium"
+			case strings.HasPrefix(model.ID, "deepseek/deepseek-v4") || model.ID == "zai/glm-5.2":
+				reasoningLevels = []string{"high", "xhigh"}
+				defaultReasoning = "high"
+			default:
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoning = "medium"
 			}
-			defaultReasoning = "medium"
 		}
 
 		// Check if model supports images
 		supportsImages := slices.Contains(model.Tags, "vision")
-
-		// Calculate default max tokens
-		defaultMaxTokens := model.MaxTokens
-		if defaultMaxTokens == 0 {
-			defaultMaxTokens = model.ContextWindow / 10
-		}
-		if defaultMaxTokens > 8000 {
-			defaultMaxTokens = 8000
-		}
 
 		m := catwalk.Model{
 			ID:                     model.ID,
@@ -177,7 +173,7 @@ func main() {
 			CostPer1MInCached:      costPer1MInCached,
 			CostPer1MOutCached:     costPer1MOutCached,
 			ContextWindow:          model.ContextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
+			DefaultMaxTokens:       cmp.Or(model.MaxTokens, model.ContextWindow/10),
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
@@ -185,7 +181,6 @@ func main() {
 		}
 
 		vercelProvider.Models = append(vercelProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.ContextWindow)
 	}
 
 	slices.SortFunc(vercelProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
@@ -197,6 +192,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error marshaling Vercel provider:", err)
 	}
+	data = append(data, '\n')
 
 	if err := os.WriteFile("internal/providers/configs/vercel.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Vercel provider config:", err)

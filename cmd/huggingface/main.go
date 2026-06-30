@@ -114,8 +114,8 @@ func main() {
 		APIKey:              "$HF_TOKEN",
 		APIEndpoint:         "https://router.huggingface.co/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "moonshotai/Kimi-K2.5:fireworks-ai",
-		DefaultSmallModelID: "openai/gpt-oss-20b:groq",
+		DefaultLargeModelID: "deepseek-ai/DeepSeek-V4-Pro:fireworks-ai",
+		DefaultSmallModelID: "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
@@ -127,7 +127,6 @@ func main() {
 		// Find context window from any provider for this model
 		fallbackContextLength := findContextWindow(model)
 		if fallbackContextLength == 0 {
-			fmt.Printf("Skipping model %s - no context window found in any provider\n", model.ID)
 			continue
 		}
 
@@ -181,8 +180,6 @@ func main() {
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)
-			fmt.Printf("Added model %s with context window %d from provider %s\n",
-				modelID, contextLength, provider.Provider)
 		}
 	}
 

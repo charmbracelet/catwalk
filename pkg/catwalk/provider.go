@@ -55,6 +55,7 @@ const (
 	InferenceProviderOpenCodeZen      InferenceProvider = "opencode-zen"
 	InferenceProviderOpenCodeGo       InferenceProvider = "opencode-go"
 	InferenceProviderAlibabaSingapore InferenceProvider = "alibaba-singapore"
+	InferenceProviderFireworks        InferenceProvider = "fireworks"
 	InferenceProviderMoonshot         InferenceProvider = "moonshot"
 )
 
@@ -132,6 +133,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderNeuralwatt,
 		InferenceProviderOpenCodeZen,
 		InferenceProviderOpenCodeGo,
+		InferenceProviderFireworks,
 		InferenceProviderMoonshot,
 	}
 }

@@ -112,8 +112,8 @@ func main() {
 		APIKey:              "$NEURALWATT_API_KEY",
 		APIEndpoint:         "https://api.neuralwatt.com/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "zai-org/GLM-5.1-FP8",
-		DefaultSmallModelID: "Qwen/Qwen3.6-35B-A3B",
+		DefaultLargeModelID: "glm-5.2",
+		DefaultSmallModelID: "glm-5.2-fast",
 	}
 
 	modelsResp, err := fetchNeuralwattModels(neuralwattProvider.APIEndpoint)
@@ -131,21 +131,17 @@ func main() {
 
 		// Skip models with small context windows
 		if model.MaxModelLen < 20000 {
-			fmt.Printf("Skipping model %s: context %d < 20000\n",
-				model.ID, model.MaxModelLen)
 			continue
 		}
 
 		if !meta.Capabilities.Tools {
-			fmt.Printf("Skipping model %s (no tool support)\n", model.ID)
 			continue
 		}
 
 		costIn := ptrDeref(meta.Pricing.InputPerMillion, 0)
 		costOut := ptrDeref(meta.Pricing.OutputPerMillion, 0)
-		// Null cached pricing means same as non-cached
-		costInCached := ptrDeref(meta.Pricing.CachedInputPerMillion, costIn)
-		costOutCached := ptrDeref(meta.Pricing.CachedOutputPerMillion, costOut)
+		costInCached := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
+		costOutCached := ptrDeref(meta.Pricing.CachedOutputPerMillion, 0)
 
 		var defaultMaxTokens int64
 		if meta.Limits.MaxOutputTokens != nil {
@@ -156,9 +152,14 @@ func main() {
 
 		var reasoningLevels []string
 		var defaultReasoning string
-		if meta.Capabilities.ReasoningEffort {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		if meta.Capabilities.Reasoning && meta.Capabilities.ReasoningEffort {
+			if strings.HasPrefix(model.ID, "glm-5.2") {
+				reasoningLevels = []string{"minimal", "high", "xhigh"}
+				defaultReasoning = "xhigh"
+			} else {
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoning = "medium"
+			}
 		}
 
 		name := meta.DisplayName
@@ -182,7 +183,6 @@ func main() {
 		}
 
 		neuralwattProvider.Models = append(neuralwattProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.MaxModelLen)
 	}
 
 	slices.SortFunc(neuralwattProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

@@ -145,7 +145,6 @@ func main() {
 			SupportsImages:         model.hasTag("Image"),
 		}
 		models = append(models, model)
-		fmt.Printf("Added model %s (%s)\n", model.ID, model.Name)
 	}
 
 	cortecsProvider := catwalk.Provider{

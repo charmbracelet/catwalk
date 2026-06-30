@@ -261,8 +261,8 @@ func main() {
 		APIKey:              "$OPENROUTER_API_KEY",
 		APIEndpoint:         "https://openrouter.ai/api/v1",
 		Type:                catwalk.TypeOpenRouter,
-		DefaultLargeModelID: "anthropic/claude-sonnet-4",
-		DefaultSmallModelID: "anthropic/claude-3.5-haiku",
+		DefaultLargeModelID: "anthropic/claude-sonnet-4.6",
+		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
@@ -388,8 +388,6 @@ func main() {
 		}
 
 		openRouterProvider.Models = append(openRouterProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d from provider %s\n",
-			model.ID, bestEndpoint.ContextLength, bestEndpoint.ProviderName)
 	}
 
 	slices.SortFunc(openRouterProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
