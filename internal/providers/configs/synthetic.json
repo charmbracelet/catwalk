@@ -8,24 +8,6 @@
   "default_small_model_id": "hf:openai/gpt-oss-120b",
   "models": [
     {
-      "id": "hf:zai-org/GLM-4.7",
-      "name": "GLM 4.7",
-      "cost_per_1m_in": 0.45,
-      "cost_per_1m_out": 2.19,
-      "cost_per_1m_in_cached": 0.45,
-      "cost_per_1m_out_cached": 0.45,
-      "context_window": 202752,
-      "default_max_tokens": 20275,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
       "id": "hf:zai-org/GLM-4.7-Flash",
       "name": "GLM 4.7 Flash",
       "cost_per_1m_in": 0.1,
@@ -98,6 +80,18 @@
       "supports_attachments": true
     },
     {
+      "id": "hf:moonshotai/Kimi-K2.7-Code",
+      "name": "Kimi K2.7 Code",
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 0.95,
+      "cost_per_1m_out_cached": 0.95,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "hf:MiniMaxAI/MiniMax-M3",
       "name": "MiniMax M3",
       "cost_per_1m_in": 0.6,
@@ -132,18 +126,6 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
-    },
-    {
-      "id": "hf:Qwen/Qwen3.5-397B-A17B",
-      "name": "Qwen3.5 397B A17B",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 3.6,
-      "cost_per_1m_in_cached": 0.6,
-      "cost_per_1m_out_cached": 0.6,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": true
     },
     {
       "id": "hf:Qwen/Qwen3.6-27B",
