@@ -55,6 +55,18 @@
       "supports_attachments": true
     },
     {
+      "id": "claude-opus-4.8-fast",
+      "name": "Claude Opus 4.8 (fast mode)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 264000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "claude-sonnet-4.5",
       "name": "Claude Sonnet 4.5",
       "cost_per_1m_in": 0,
