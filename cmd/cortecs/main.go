@@ -38,10 +38,11 @@ type ModelsResponse struct {
 }
 
 type ModelDetail struct {
-	ScreenName string  `json:"screen_name"`
-	Context    int64   `json:"context"`
-	InputCost  float64 `json:"input_tokens"`
-	OutputCost float64 `json:"output_tokens"`
+	Pricing struct {
+		InputToken  float64 `json:"input_token"`
+		OutputToken float64 `json:"output_token"`
+	} `json:"pricing"`
+	ContextSize int64 `json:"context_size"`
 }
 
 // This is used to generate the cortecs.json config file.
@@ -132,10 +133,10 @@ func main() {
 
 		model := catwalk.Model{
 			ID:                     model.ID,
-			Name:                   detailData.ScreenName,
-			ContextWindow:          detailData.Context,
-			CostPer1MIn:            detailData.InputCost,
-			CostPer1MOut:           detailData.OutputCost,
+			Name:                   model.ID,
+			ContextWindow:          detailData.ContextSize,
+			CostPer1MIn:            detailData.Pricing.InputToken,
+			CostPer1MOut:           detailData.Pricing.OutputToken,
 			CostPer1MInCached:      0,
 			CostPer1MOutCached:     0,
 			DefaultMaxTokens:       model.ContextSize / 10,
