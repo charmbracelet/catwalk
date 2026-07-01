@@ -164,6 +164,20 @@
       "default_max_tokens": 64000,
       "can_reason": true,
       "supports_attachments": true
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
+      "cost_per_1m_in_cached": 12.5,
+      "cost_per_1m_out_cached": 1,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "medium", "high", "xhigh", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
     }
   ]
 }
