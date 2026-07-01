@@ -73,6 +73,7 @@ tasks:
       - task: gen:venice
       - task: gen:vercel
       - task: gen:xai
+      - task: gen:novita
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
@@ -118,6 +119,11 @@ tasks:
     desc: Generate Neuralwatt provider configurations
     cmds:
       - go run cmd/neuralwatt/main.go
+
+  gen:novita:
+    desc: Generate Novita provider configurations
+    cmds:
+      - go run cmd/novita/main.go
 
   gen:opencode-go:
     desc: Generate OpenCode Go provider configurations
