@@ -129,17 +129,21 @@ func main() {
 			}
 		}
 
+		// NOTE: catwalk's naming is confusing (see providers.go in hyper):
+		// - cost_per_1m_in_cached  = cache CREATION (write)
+		// - cost_per_1m_out_cached = cache READ
+		// Vercel's API uses the intuitive names, so we map them accordingly.
 		if model.Pricing.InputCacheRead != "" {
-			costCached, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
+			costCacheRead, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 			if err == nil {
-				costPer1MInCached = roundCost(costCached * 1_000_000)
+				costPer1MOutCached = roundCost(costCacheRead * 1_000_000)
 			}
 		}
 
 		if model.Pricing.InputCacheWrite != "" {
 			costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 			if err == nil {
-				costPer1MOutCached = roundCost(costCacheWrite * 1_000_000)
+				costPer1MInCached = roundCost(costCacheWrite * 1_000_000)
 			}
 		}
 
