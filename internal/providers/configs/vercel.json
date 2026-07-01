@@ -50,6 +50,27 @@
       "supports_attachments": true
     },
     {
+      "id": "anthropic/claude-fable-5",
+      "name": "Claude Fable 5",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
+      "cost_per_1m_in_cached": 1,
+      "cost_per_1m_out_cached": 12.5,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "anthropic/claude-haiku-4.5",
       "name": "Claude Haiku 4.5",
       "cost_per_1m_in": 1,
@@ -2744,7 +2765,7 @@
       "supports_attachments": false
     },
     {
-      "id": "alibaba/qwen3-vl-instruct",
+      "id": "alibaba/qwen3-vl-235b-a22b-instruct",
       "name": "Qwen3 VL 235B A22B Instruct",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 1.6,
@@ -2756,7 +2777,7 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-vl-235b-a22b-instruct",
+      "id": "alibaba/qwen3-vl-instruct",
       "name": "Qwen3 VL 235B A22B Instruct",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 1.6,
