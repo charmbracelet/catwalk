@@ -72,6 +72,7 @@ tasks:
       - task: gen:synthetic
       - task: gen:venice
       - task: gen:vercel
+      - task: gen:volcengine
       - task: gen:xai
 
   gen:aihubmix:
@@ -148,6 +149,11 @@ tasks:
     desc: Generate vercel provider configurations
     cmds:
       - go run cmd/vercel/main.go
+
+  gen:volcengine:
+    desc: Generate Volcengine Ark provider configurations
+    cmds:
+      - go run cmd/volcengine/main.go
 
   gen:xai:
     desc: Generate xAI provider configurations
