@@ -56,6 +56,8 @@ const (
 	InferenceProviderOpenCodeGo       InferenceProvider = "opencode-go"
 	InferenceProviderAlibabaSingapore InferenceProvider = "alibaba-singapore"
 	InferenceProviderFireworks        InferenceProvider = "fireworks"
+	InferenceProviderOllama           InferenceProvider = "ollama"
+	InferenceProviderOllamaCloud      InferenceProvider = "ollama-cloud"
 )
 
 // Provider represents an AI provider configuration.
@@ -133,6 +135,8 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderOpenCodeZen,
 		InferenceProviderOpenCodeGo,
 		InferenceProviderFireworks,
+		InferenceProviderOllama,
+		InferenceProviderOllamaCloud,
 	}
 }
 

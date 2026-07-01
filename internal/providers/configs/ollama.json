@@ -1,0 +1,7 @@
+{
+  "name": "Ollama",
+  "id": "ollama",
+  "api_endpoint": "http://localhost:11434/v1",
+  "type": "openai-compat",
+  "models": []
+}

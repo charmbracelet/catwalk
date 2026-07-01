@@ -8,6 +8,9 @@ import (
 func TestValidDefaultModels(t *testing.T) {
 	for _, p := range GetAll() {
 		t.Run(p.Name, func(t *testing.T) {
+			if len(p.Models) == 0 {
+				t.Skipf("Skipping provider %q with no models (dynamic provider)", p.Name)
+			}
 			var modelIds []string
 			for _, m := range p.Models {
 				modelIds = append(modelIds, m.ID)

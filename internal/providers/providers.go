@@ -75,6 +75,12 @@ var nebiusConfig []byte
 //go:embed configs/neuralwatt.json
 var neuralwattConfig []byte
 
+//go:embed configs/ollama.json
+var ollamaConfig []byte
+
+//go:embed configs/ollama-cloud.json
+var ollamaCloudConfig []byte
+
 //go:embed configs/openai.json
 var openAIConfig []byte
 
@@ -150,6 +156,8 @@ var providerRegistry = []ProviderFunc{
 	ioNetProvider,
 	nebiusProvider,
 	neuralwattProvider,
+	ollamaProvider,
+	ollamaCloudProvider,
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
@@ -266,6 +274,14 @@ func nebiusProvider() catwalk.Provider {
 
 func neuralwattProvider() catwalk.Provider {
 	return loadProviderFromConfig(neuralwattConfig)
+}
+
+func ollamaProvider() catwalk.Provider {
+	return loadProviderFromConfig(ollamaConfig)
+}
+
+func ollamaCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(ollamaCloudConfig)
 }
 
 func openAIProvider() catwalk.Provider {
