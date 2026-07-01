@@ -41,6 +41,7 @@ const (
 	InferenceProviderChutes           InferenceProvider = "chutes"
 	InferenceProviderHuggingFace      InferenceProvider = "huggingface"
 	InferenceAIHubMix                 InferenceProvider = "aihubmix"
+	InferenceProviderAIMLAPI          InferenceProvider = "aimlapi"
 	InferenceKimiCoding               InferenceProvider = "kimi-coding"
 	InferenceProviderCopilot          InferenceProvider = "copilot"
 	InferenceProviderCortecs          InferenceProvider = "cortecs"
@@ -120,6 +121,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderChutes,
 		InferenceProviderHuggingFace,
 		InferenceAIHubMix,
+		InferenceProviderAIMLAPI,
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
 		InferenceProviderCortecs,
