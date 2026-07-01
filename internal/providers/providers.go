@@ -69,6 +69,9 @@ var miniMaxConfig []byte
 //go:embed configs/minimax-china.json
 var miniMaxChinaConfig []byte
 
+//go:embed configs/nearai.json
+var nearAIConfig []byte
+
 //go:embed configs/nebius.json
 var nebiusConfig []byte
 
@@ -148,6 +151,7 @@ var providerRegistry = []ProviderFunc{
 	groqProvider,
 	huggingFaceProvider,
 	ioNetProvider,
+	nearAIProvider,
 	nebiusProvider,
 	neuralwattProvider,
 	openCodeGoProvider,
@@ -258,6 +262,10 @@ func miniMaxProvider() catwalk.Provider {
 
 func miniMaxChinaProvider() catwalk.Provider {
 	return loadProviderFromConfig(miniMaxChinaConfig)
+}
+
+func nearAIProvider() catwalk.Provider {
+	return loadProviderFromConfig(nearAIConfig)
 }
 
 func nebiusProvider() catwalk.Provider {
