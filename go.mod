@@ -3,6 +3,7 @@ module charm.land/catwalk
 go 1.25.11
 
 require (
+	github.com/caarlos0/env/v11 v11.4.1
 	github.com/charmbracelet/x/etag v0.2.0
 	github.com/charmbracelet/x/exp/strings v0.1.0
 	github.com/prometheus/client_golang v1.23.2
