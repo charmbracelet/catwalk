@@ -32,6 +32,12 @@ jobs:
         run: go run ./cmd/avian/main.go
         continue-on-error: true
 
+      - name: Baseten
+        run: go run ./cmd/baseten/main.go
+        continue-on-error: true
+        env:
+          BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
+
       - name: Neuralwatt
         run: go run ./cmd/neuralwatt/main.go
         continue-on-error: true
