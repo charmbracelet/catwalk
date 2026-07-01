@@ -69,6 +69,9 @@ var miniMaxConfig []byte
 //go:embed configs/moonshot.json
 var moonshotConfig []byte
 
+//go:embed configs/moonshot-china.json
+var moonshotChinaConfig []byte
+
 //go:embed configs/minimax-china.json
 var miniMaxChinaConfig []byte
 
@@ -134,6 +137,7 @@ var providerRegistry = []ProviderFunc{
 	miniMaxProvider,
 	miniMaxChinaProvider,
 	moonshotProvider,
+	moonshotChinaProvider,
 	syntheticProvider,
 
 	// The remaining will be in alphabetical order.
@@ -266,6 +270,10 @@ func miniMaxChinaProvider() catwalk.Provider {
 
 func moonshotProvider() catwalk.Provider {
 	return loadProviderFromConfig(moonshotConfig)
+}
+
+func moonshotChinaProvider() catwalk.Provider {
+	return loadProviderFromConfig(moonshotChinaConfig)
 }
 
 func nebiusProvider() catwalk.Provider {
