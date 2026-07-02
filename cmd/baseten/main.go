@@ -131,10 +131,14 @@ func main() {
 		)
 		if canReason {
 			switch model.ID {
+			case "deepseek-ai/DeepSeek-V4-Pro", "openai/gpt-oss-120b":
+				// Baseten supports the full reasoning_effort range for
+				// DeepSeek V4 Pro and GPT OSS 120B.
+				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
+				defaultReasoning = "medium"
 			case "zai-org/GLM-5.2":
-				// GLM-5.2 exposes two reasoning levels on Baseten: "high"
-				// and "xhigh" (the working alias for "max").
-				reasoningLevels = []string{"high", "xhigh"}
+				// GLM 5.2 supports a reduced reasoning_effort range.
+				reasoningLevels = []string{"none", "high", "max"}
 				defaultReasoning = "high"
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).

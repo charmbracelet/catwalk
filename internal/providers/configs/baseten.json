@@ -18,9 +18,13 @@
       "default_max_tokens": 262144,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh",
+        "max"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
@@ -72,8 +76,9 @@
       "default_max_tokens": 32768,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
         "high",
-        "xhigh"
+        "max"
       ],
       "default_reasoning_effort": "high",
       "supports_attachments": false
@@ -167,9 +172,13 @@
       "default_max_tokens": 128072,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh",
+        "max"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
