@@ -130,8 +130,25 @@ func main() {
 			defaultReasoning string
 		)
 		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			switch model.ID {
+			case "zai-org/GLM-5.2":
+				// GLM-5.2 exposes two reasoning levels on Baseten: "high"
+				// and "xhigh" (the working alias for "max").
+				reasoningLevels = []string{"high", "xhigh"}
+				defaultReasoning = "high"
+			case "moonshotai/Kimi-K2.7-Code":
+				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
+			default:
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoning = "medium"
+			}
+		}
+
+		maxTokens := model.MaxCompletion
+		switch model.ID {
+		case "zai-org/GLM-5.2", "moonshotai/Kimi-K2.7-Code":
+			// Reasoning burns tokens fast on these models; cap output.
+			maxTokens = 32768
 		}
 
 		m := catwalk.Model{
@@ -142,7 +159,7 @@ func main() {
 			CostPer1MInCached:      parsePrice(model.Pricing.InputCacheRead),
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.MaxCompletion,
+			DefaultMaxTokens:       maxTokens,
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
