@@ -4,7 +4,7 @@
   "api_key": "$SYNTHETIC_API_KEY",
   "api_endpoint": "https://api.synthetic.new/openai/v1",
   "type": "openai-compat",
-  "default_large_model_id": "hf:moonshotai/Kimi-K2.6",
+  "default_large_model_id": "hf:moonshotai/Kimi-K2.7-Code",
   "default_small_model_id": "hf:openai/gpt-oss-120b",
   "models": [
     {
