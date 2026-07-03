@@ -1,0 +1,45 @@
+{
+  "name": "Alibaba (US)",
+  "id": "alibaba-us",
+  "api_key": "$ALIBABA_US_API_KEY",
+  "api_endpoint": "https://dashscope-us.aliyuncs.com/compatible-mode/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "deepseek-v4-pro-us",
+  "default_small_model_id": "deepseek-v4-flash-us",
+  "models": [
+    {
+      "id": "deepseek-v4-pro-us",
+      "name": "DeepSeek-V4-Pro",
+      "cost_per_1m_in": 2.4,
+      "cost_per_1m_out": 4.8,
+      "cost_per_1m_in_cached": 0.2,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4-flash-us",
+      "name": "DeepSeek-V4-Flash",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0.04,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    }
+  ]
+}
