@@ -59,6 +59,7 @@ tasks:
     cmds:
       - task: gen:aihubmix
       - task: gen:avian
+      - task: gen:baseten
       - task: gen:chutes
       - task: gen:copilot
       - task: gen:cortecs
@@ -83,6 +84,11 @@ tasks:
     desc: Generate avian provider configurations
     cmds:
       - go run cmd/avian/main.go
+
+  gen:baseten:
+    desc: Generate baseten provider configurations
+    cmds:
+      - go run cmd/baseten/main.go
 
   gen:chutes:
     desc: Generate chutes provider configurations

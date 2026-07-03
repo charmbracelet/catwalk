@@ -159,7 +159,7 @@ func main() {
 		APIKey:              "$SYNTHETIC_API_KEY",
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "hf:moonshotai/Kimi-K2.6",
+		DefaultLargeModelID: "hf:moonshotai/Kimi-K2.7-Code",
 		DefaultSmallModelID: "hf:openai/gpt-oss-120b",
 		Models:              []catwalk.Model{},
 	}
