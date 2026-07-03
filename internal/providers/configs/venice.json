@@ -821,7 +821,7 @@
       "context_window": 524288,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "mistral-small-3-2-24b-instruct",
