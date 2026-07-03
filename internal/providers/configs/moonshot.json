@@ -1,0 +1,131 @@
+{
+  "name": "Moonshot",
+  "id": "moonshot",
+  "api_key": "$MOONSHOT_API_KEY",
+  "api_endpoint": "https://api.moonshot.ai/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "kimi-k2.7-code",
+  "default_small_model_id": "kimi-k2.5",
+  "models": [
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 4.0,
+      "cost_per_1m_in_cached": 0.19,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k2.7-code-highspeed",
+      "name": "Kimi K2.7 Code High Speed",
+      "cost_per_1m_in": 1.90,
+      "cost_per_1m_out": 8.0,
+      "cost_per_1m_in_cached": 0.38,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi K2.6",
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 4.0,
+      "cost_per_1m_in_cached": 0.16,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k2.5",
+      "name": "Kimi K2.5",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 3.0,
+      "cost_per_1m_in_cached": 0.1,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "moonshot-v1-8k",
+      "name": "Moonshot V1 8K",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 2.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 8192,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "moonshot-v1-32k",
+      "name": "Moonshot V1 32K",
+      "cost_per_1m_in": 1.0,
+      "cost_per_1m_out": 3.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "moonshot-v1-128k",
+      "name": "Moonshot V1 128K",
+      "cost_per_1m_in": 2.0,
+      "cost_per_1m_out": 5.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "moonshot-v1-8k-vision-preview",
+      "name": "Moonshot V1 8K Vision Preview",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 2.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 8192,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "moonshot-v1-32k-vision-preview",
+      "name": "Moonshot V1 32K Vision Preview",
+      "cost_per_1m_in": 1.0,
+      "cost_per_1m_out": 3.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "moonshot-v1-128k-vision-preview",
+      "name": "Moonshot V1 128K Vision Preview",
+      "cost_per_1m_in": 2.0,
+      "cost_per_1m_out": 5.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": true
+    }
+  ]
+}
