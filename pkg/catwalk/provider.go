@@ -55,6 +55,7 @@ const (
 	InferenceProviderOpenCodeZen      InferenceProvider = "opencode-zen"
 	InferenceProviderOpenCodeGo       InferenceProvider = "opencode-go"
 	InferenceProviderAlibabaSingapore InferenceProvider = "alibaba-singapore"
+	InferenceProviderAlibabaUS        InferenceProvider = "alibaba-us"
 	InferenceProviderFireworks        InferenceProvider = "fireworks"
 	InferenceProviderBaseten          InferenceProvider = "baseten"
 	InferenceProviderMoonshot         InferenceProvider = "moonshot"
