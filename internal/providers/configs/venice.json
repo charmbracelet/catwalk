@@ -146,6 +146,18 @@
       "supports_attachments": false
     },
     {
+      "id": "e2ee-deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "cost_per_1m_in": 0.182,
+      "cost_per_1m_out": 0.373,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 8192,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "cost_per_1m_in": 0.138,
@@ -1052,6 +1064,18 @@
         "temperature": 1,
         "top_p": 0.95
       }
+    },
+    {
+      "id": "e2ee-qwen3-6-27b",
+      "name": "Qwen 3.6 27B FP8",
+      "cost_per_1m_in": 0.346,
+      "cost_per_1m_out": 3.46,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": false
     },
     {
       "id": "e2ee-qwen3-6-35b-a3b",
