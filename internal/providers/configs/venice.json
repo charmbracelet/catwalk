@@ -344,18 +344,6 @@
       "supports_attachments": false
     },
     {
-      "id": "zai-org-glm-5-2",
-      "name": "GLM 5.2",
-      "cost_per_1m_in": 1.4,
-      "cost_per_1m_out": 4.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "can_reason": true,
-      "supports_attachments": false
-    },
-    {
       "id": "e2ee-glm-5-2-p",
       "name": "GLM 5.2",
       "cost_per_1m_in": 1.75,
@@ -371,6 +359,18 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org-glm-5-2",
+      "name": "GLM 5.2",
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
       "supports_attachments": false
     },
     {
