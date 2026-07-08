@@ -10,47 +10,11 @@
     {
       "id": "umans-coder",
       "name": "Umans Coder",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "umans-kimi-k2.7",
-      "name": "Umans Kimi K2.7",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "umans-glm-5.2",
-      "name": "Umans GLM 5.2",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 400000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "umans-glm-5.1",
-      "name": "Umans GLM 5.1",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 200000,
+      "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
       "supports_attachments": true
@@ -58,13 +22,49 @@
     {
       "id": "umans-flash",
       "name": "Umans Flash",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 1,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
+      "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "umans-glm-5.2",
+      "name": "Umans GLM 5.2",
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 405504,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "umans-kimi-k2.7",
+      "name": "Umans Kimi K2.7",
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "umans-qwen3.6-35b-a3b",
+      "name": "Umans Qwen3.6 35B A3B",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 1,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": true,
       "supports_attachments": true
     }
   ]
