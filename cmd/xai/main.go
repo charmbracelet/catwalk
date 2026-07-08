@@ -59,6 +59,9 @@ var prettyNames = map[string]string{
 	"grok-4.20":                   "Grok 4.20",
 	"grok-4.20-non-reasoning":     "Grok 4.20 Non-Reasoning",
 	"grok-4.20-multi-agent":       "Grok 4.20 Multi-Agent",
+	"grok-4.3":                    "Grok 4.3",
+	"grok-4.5":                    "Grok 4.5",
+	"grok-build-0.1":              "Grok Build 0.1",
 	"grok-code-fast":              "Grok Code Fast",
 }
 
@@ -137,8 +140,8 @@ func main() {
 		APIKey:              "$XAI_API_KEY",
 		APIEndpoint:         "https://api.x.ai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "grok-4.20",
-		DefaultSmallModelID: "grok-4.20",
+		DefaultLargeModelID: "grok-4.5",
+		DefaultSmallModelID: "grok-4.5",
 	}
 
 	for _, model := range modelsResp.Models {
@@ -150,21 +153,32 @@ func main() {
 		ctxWindow := contextWindow(model.ID)
 		defaultMaxTokens := ctxWindow / 10
 
-		canReason := !strings.Contains(model.ID, "non-reasoning") &&
-			model.ID != "grok-3"
-		supportsImages := slices.Contains(model.InputModalities, "image")
+		var (
+			canReason             bool
+			reasoningLevels       []string
+			defaultReasoningLevel string
+			supportsImages        = slices.Contains(model.InputModalities, "image")
+		)
+		switch id {
+		case "grok-4.5":
+			canReason = true
+			reasoningLevels = []string{"low", "medium", "high"}
+			defaultReasoningLevel = "high"
+		}
 
 		m := catwalk.Model{
-			ID:                 id,
-			Name:               prettyName(id),
-			CostPer1MIn:        priceToDollarsPerMillion(model.PromptTextTokenPrice),
-			CostPer1MOut:       priceToDollarsPerMillion(model.CompletionTextTokenPrice),
-			CostPer1MInCached:  0,
-			CostPer1MOutCached: priceToDollarsPerMillion(model.CachedPromptTextTokenPrc),
-			ContextWindow:      ctxWindow,
-			DefaultMaxTokens:   defaultMaxTokens,
-			CanReason:          canReason,
-			SupportsImages:     supportsImages,
+			ID:                     id,
+			Name:                   prettyName(id),
+			CostPer1MIn:            priceToDollarsPerMillion(model.PromptTextTokenPrice),
+			CostPer1MOut:           priceToDollarsPerMillion(model.CompletionTextTokenPrice),
+			CostPer1MInCached:      0,
+			CostPer1MOutCached:     priceToDollarsPerMillion(model.CachedPromptTextTokenPrc),
+			ContextWindow:          ctxWindow,
+			DefaultMaxTokens:       defaultMaxTokens,
+			CanReason:              canReason,
+			ReasoningLevels:        reasoningLevels,
+			DefaultReasoningEffort: defaultReasoningLevel,
+			SupportsImages:         supportsImages,
 		}
 
 		provider.Models = append(provider.Models, m)
