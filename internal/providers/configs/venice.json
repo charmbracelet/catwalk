@@ -704,6 +704,18 @@
       "supports_attachments": true
     },
     {
+      "id": "grok-4-5",
+      "name": "Grok 4.5",
+      "cost_per_1m_in": 2.27,
+      "cost_per_1m_out": 6.8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 500000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "grok-build-0-1",
       "name": "Grok Build 0.1",
       "cost_per_1m_in": 1,
