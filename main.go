@@ -86,6 +86,7 @@ func main() {
 	if !strings.Contains(address, ":") {
 		address = ":" + address
 	}
+	address = strings.TrimPrefix("tcp://", address)
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
@@ -104,7 +105,7 @@ func main() {
 
 	log.Printf("Server starting on %s\n", address)
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal("Server failed to start:", err)
+		log.Fatal("Server failed to start: ", err)
 	}
 }
 
