@@ -109,14 +109,12 @@ func main() {
 	}
 
 	hfProvider := catwalk.Provider{
-		Name:                "Hugging Face",
-		ID:                  catwalk.InferenceProviderHuggingFace,
-		APIKey:              "$HF_TOKEN",
-		APIEndpoint:         "https://router.huggingface.co/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "zai-org/GLM-5.2:fireworks-ai",
-		DefaultSmallModelID: "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
-		Models:              []catwalk.Model{},
+		Name:        "Hugging Face",
+		ID:          catwalk.InferenceProviderHuggingFace,
+		APIKey:      "$HF_TOKEN",
+		APIEndpoint: "https://router.huggingface.co/v1",
+		Type:        catwalk.TypeOpenAICompat,
+		Models:      []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
 			"X-Title":      "Crush",
@@ -187,6 +185,23 @@ func main() {
 		return strings.Compare(a.Name, b.Name)
 	})
 
+	// Default large and small model IDs, in priority order.
+	// Hugging Face sometimes temporarily removes models, so we provide fallbacks.
+	hfProvider.DefaultLargeModelID = firstAvailableModel(
+		hfProvider.Models,
+		"zai-org/GLM-5.2:fireworks-ai",
+		"moonshotai/Kimi-K2.7-Code:fireworks-ai",
+		"MiniMaxAI/MiniMax-M3:fireworks-ai",
+		"deepseek-ai/DeepSeek-V4-Pro:fireworks-ai",
+	)
+	hfProvider.DefaultSmallModelID = firstAvailableModel(
+		hfProvider.Models,
+		"deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
+		"google/gemma-4-31B-it:cerebras",
+		"openai/gpt-oss-20b:fireworks-ai",
+		"openai/gpt-oss-20b:groq",
+	)
+
 	// Save the JSON in internal/providers/configs/huggingface.json
 	data, err := json.MarshalIndent(hfProvider, "", "  ")
 	if err != nil {
@@ -198,4 +213,20 @@ func main() {
 	}
 
 	fmt.Printf("Generated huggingface.json with %d models\n", len(hfProvider.Models))
+}
+
+// firstAvailableModel returns the first model ID from candidates that exists in
+// models. If none match, it returns the last candidate as a fallback.
+func firstAvailableModel(models []catwalk.Model, candidates ...string) string {
+	if len(candidates) == 0 {
+		return ""
+	}
+	for _, candidate := range candidates {
+		for _, m := range models {
+			if m.ID == candidate {
+				return candidate
+			}
+		}
+	}
+	return candidates[0]
 }
