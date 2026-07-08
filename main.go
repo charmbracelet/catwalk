@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"strings"
 	"time"
@@ -83,10 +84,14 @@ func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 
 func main() {
 	address := cmp.Or(os.Getenv("CATWALK_PORT"), "8080")
-	if !strings.Contains(address, ":") {
+	switch {
+	case strings.HasPrefix(address, "tcp://"):
+		if u, err := url.Parse(address); err == nil {
+			address = ":" + u.Port()
+		}
+	default:
 		address = ":" + address
 	}
-	address = strings.TrimPrefix(address, "tcp://")
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
