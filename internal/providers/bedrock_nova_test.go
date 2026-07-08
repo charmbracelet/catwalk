@@ -17,7 +17,7 @@ import (
 // Validates: Requirements 2.2, 2.3, 2.4, 2.5, 2.6
 func TestProperty_CatwalkModelConfigurationValidity(t *testing.T) {
 	// Get the Bedrock provider configuration
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	// Define the expected Nova model IDs
 	expectedNovaModels := []string{
@@ -25,10 +25,11 @@ func TestProperty_CatwalkModelConfigurationValidity(t *testing.T) {
 		"amazon.nova-lite-v1:0",
 		"amazon.nova-micro-v1:0",
 		"amazon.nova-premier-v1:0",
+		"amazon.nova-2-lite-v1:0",
 	}
 
 	// Pattern for valid Nova model IDs
-	novaModelPattern := regexp.MustCompile(`^amazon\.nova-[a-z]+-v\d+:\d+$`)
+	novaModelPattern := regexp.MustCompile(`^amazon\.nova-.+-v\d+:\d+$`)
 
 	// Find all Nova models in the configuration
 	var novaModels []catwalk.Model
@@ -145,11 +146,22 @@ func TestProperty_CatwalkModelConfigurationValidity(t *testing.T) {
 				if model.ContextWindow != 300000 {
 					t.Errorf("Nova Premier context window should be 300000, got %d", model.ContextWindow)
 				}
-				if !model.CanReason {
-					t.Errorf("Nova Premier should have reasoning capability")
+				if model.CanReason {
+					t.Errorf("Nova Premier should not advertise reasoning capability")
 				}
 				if !model.SupportsImages {
 					t.Errorf("Nova Premier should support attachments")
+				}
+
+			case "amazon.nova-2-lite-v1:0":
+				if model.ContextWindow != 1000000 {
+					t.Errorf("Nova 2 Lite context window should be 1000000, got %d", model.ContextWindow)
+				}
+				if !model.CanReason {
+					t.Errorf("Nova 2 Lite should support extended thinking")
+				}
+				if !model.SupportsImages {
+					t.Errorf("Nova 2 Lite should support attachments")
 				}
 			}
 		})
@@ -159,13 +171,14 @@ func TestProperty_CatwalkModelConfigurationValidity(t *testing.T) {
 // TestNovaModelsPresent verifies that all Nova models are present in the Bedrock configuration.
 // Validates: Requirements 2.1, 2.6
 func TestNovaModelsPresent(t *testing.T) {
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	expectedModels := map[string]string{
-		"amazon.nova-pro-v1:0":     "Amazon Nova Pro",
-		"amazon.nova-lite-v1:0":    "Amazon Nova Lite",
-		"amazon.nova-micro-v1:0":   "Amazon Nova Micro",
-		"amazon.nova-premier-v1:0": "Amazon Nova Premier",
+		"amazon.nova-pro-v1:0":      "Amazon Nova Pro",
+		"amazon.nova-lite-v1:0":     "Amazon Nova Lite",
+		"amazon.nova-micro-v1:0":    "Amazon Nova Micro",
+		"amazon.nova-premier-v1:0":  "Amazon Nova Premier",
+		"amazon.nova-2-lite-v1:0":   "Amazon Nova 2 Lite",
 	}
 
 	// Build a map of actual models
@@ -191,16 +204,17 @@ func TestNovaModelsPresent(t *testing.T) {
 // TestNovaModelIDFormat verifies that all Nova model IDs match the expected format.
 // Validates: Requirements 2.1, 2.6
 func TestNovaModelIDFormat(t *testing.T) {
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	// Pattern for valid Nova model IDs: amazon.nova-{variant}-v{version}:{revision}
-	novaModelPattern := regexp.MustCompile(`^amazon\.nova-[a-z]+-v\d+:\d+$`)
+	novaModelPattern := regexp.MustCompile(`^amazon\.nova-.+-v\d+:\d+$`)
 
 	expectedNovaModels := []string{
 		"amazon.nova-pro-v1:0",
 		"amazon.nova-lite-v1:0",
 		"amazon.nova-micro-v1:0",
 		"amazon.nova-premier-v1:0",
+		"amazon.nova-2-lite-v1:0",
 	}
 
 	for _, expectedID := range expectedNovaModels {
@@ -233,7 +247,7 @@ func TestNovaModelIDFormat(t *testing.T) {
 // TestNovaPricingNonNegative verifies that all Nova models have non-negative pricing values.
 // Validates: Requirements 2.1, 2.6
 func TestNovaPricingNonNegative(t *testing.T) {
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	novaModelPattern := regexp.MustCompile(`^amazon\.nova-`)
 
@@ -274,13 +288,14 @@ func TestNovaPricingNonNegative(t *testing.T) {
 // TestNovaModelContextWindows verifies that Nova models have appropriate context window sizes.
 // Validates: Requirements 2.1, 2.6
 func TestNovaModelContextWindows(t *testing.T) {
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	expectedContextWindows := map[string]int64{
-		"amazon.nova-pro-v1:0":     300000,
-		"amazon.nova-lite-v1:0":    300000,
-		"amazon.nova-micro-v1:0":   128000,
-		"amazon.nova-premier-v1:0": 300000,
+		"amazon.nova-pro-v1:0":      300000,
+		"amazon.nova-lite-v1:0":     300000,
+		"amazon.nova-micro-v1:0":    128000,
+		"amazon.nova-premier-v1:0":  300000,
+		"amazon.nova-2-lite-v1:0":   1000000,
 	}
 
 	for modelID, expectedWindow := range expectedContextWindows {
@@ -311,7 +326,7 @@ func TestNovaModelContextWindows(t *testing.T) {
 // TestNovaModelDefaultMaxTokens verifies that Nova models have appropriate default max tokens.
 // Validates: Requirements 2.1, 2.6
 func TestNovaModelDefaultMaxTokens(t *testing.T) {
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	novaModelPattern := regexp.MustCompile(`^amazon\.nova-`)
 
@@ -337,13 +352,14 @@ func TestNovaModelDefaultMaxTokens(t *testing.T) {
 // TestNovaModelAttachmentSupport verifies that Nova models have correct attachment support flags.
 // Validates: Requirements 2.1, 2.6
 func TestNovaModelAttachmentSupport(t *testing.T) {
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	expectedAttachmentSupport := map[string]bool{
-		"amazon.nova-pro-v1:0":     true,
-		"amazon.nova-lite-v1:0":    true,
-		"amazon.nova-micro-v1:0":   false, // Micro does not support attachments
-		"amazon.nova-premier-v1:0": true,
+		"amazon.nova-pro-v1:0":      true,
+		"amazon.nova-lite-v1:0":     true,
+		"amazon.nova-micro-v1:0":    false,
+		"amazon.nova-premier-v1:0":  true,
+		"amazon.nova-2-lite-v1:0":   true,
 	}
 
 	for modelID, expectedSupport := range expectedAttachmentSupport {
@@ -367,16 +383,16 @@ func TestNovaModelAttachmentSupport(t *testing.T) {
 	}
 }
 
-// TestNovaModelReasoningCapability verifies that Nova Premier has reasoning capability.
-// Validates: Requirements 2.1, 2.6
+// TestNovaModelReasoningCapability verifies extended thinking metadata.
 func TestNovaModelReasoningCapability(t *testing.T) {
-	provider := bedrockProvider()
+	provider := bedrockUnitedStatesProvider()
 
 	expectedReasoning := map[string]bool{
-		"amazon.nova-pro-v1:0":     false,
-		"amazon.nova-lite-v1:0":    false,
-		"amazon.nova-micro-v1:0":   false,
-		"amazon.nova-premier-v1:0": true, // Only Premier has reasoning
+		"amazon.nova-pro-v1:0":      false,
+		"amazon.nova-lite-v1:0":     false,
+		"amazon.nova-micro-v1:0":    false,
+		"amazon.nova-premier-v1:0":  false,
+		"amazon.nova-2-lite-v1:0":   true,
 	}
 
 	for modelID, expectedCanReason := range expectedReasoning {

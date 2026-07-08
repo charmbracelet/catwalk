@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -108,14 +109,12 @@ func main() {
 	}
 
 	hfProvider := catwalk.Provider{
-		Name:                "Hugging Face",
-		ID:                  catwalk.InferenceProviderHuggingFace,
-		APIKey:              "$HF_TOKEN",
-		APIEndpoint:         "https://router.huggingface.co/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "moonshotai/Kimi-K2-Instruct-0905:groq",
-		DefaultSmallModelID: "openai/gpt-oss-20b",
-		Models:              []catwalk.Model{},
+		Name:        "Hugging Face",
+		ID:          catwalk.InferenceProviderHuggingFace,
+		APIKey:      "$HF_TOKEN",
+		APIEndpoint: "https://router.huggingface.co/v1",
+		Type:        catwalk.TypeOpenAICompat,
+		Models:      []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
 			"X-Title":      "Crush",
@@ -126,7 +125,6 @@ func main() {
 		// Find context window from any provider for this model
 		fallbackContextLength := findContextWindow(model)
 		if fallbackContextLength == 0 {
-			fmt.Printf("Skipping model %s - no context window found in any provider\n", model.ID)
 			continue
 		}
 
@@ -159,8 +157,8 @@ func main() {
 			// Calculate pricing (convert from per-token to per-1M tokens)
 			var costPer1MIn, costPer1MOut float64
 			if provider.Pricing != nil {
-				costPer1MIn = provider.Pricing.Input
-				costPer1MOut = provider.Pricing.Output
+				costPer1MIn = math.Round(provider.Pricing.Input*1e5) / 1e5
+				costPer1MOut = math.Round(provider.Pricing.Output*1e5) / 1e5
 			}
 
 			// Set default max tokens (conservative estimate)
@@ -180,14 +178,29 @@ func main() {
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)
-			fmt.Printf("Added model %s with context window %d from provider %s\n",
-				modelID, contextLength, provider.Provider)
 		}
 	}
 
 	slices.SortFunc(hfProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
 		return strings.Compare(a.Name, b.Name)
 	})
+
+	// Default large and small model IDs, in priority order.
+	// Hugging Face sometimes temporarily removes models, so we provide fallbacks.
+	hfProvider.DefaultLargeModelID = firstAvailableModel(
+		hfProvider.Models,
+		"zai-org/GLM-5.2:fireworks-ai",
+		"moonshotai/Kimi-K2.7-Code:fireworks-ai",
+		"MiniMaxAI/MiniMax-M3:fireworks-ai",
+		"deepseek-ai/DeepSeek-V4-Pro:fireworks-ai",
+	)
+	hfProvider.DefaultSmallModelID = firstAvailableModel(
+		hfProvider.Models,
+		"deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
+		"google/gemma-4-31B-it:cerebras",
+		"openai/gpt-oss-20b:fireworks-ai",
+		"openai/gpt-oss-20b:groq",
+	)
 
 	// Save the JSON in internal/providers/configs/huggingface.json
 	data, err := json.MarshalIndent(hfProvider, "", "  ")
@@ -200,4 +213,20 @@ func main() {
 	}
 
 	fmt.Printf("Generated huggingface.json with %d models\n", len(hfProvider.Models))
+}
+
+// firstAvailableModel returns the first model ID from candidates that exists in
+// models. If none match, it returns the last candidate as a fallback.
+func firstAvailableModel(models []catwalk.Model, candidates ...string) string {
+	if len(candidates) == 0 {
+		return ""
+	}
+	for _, candidate := range candidates {
+		for _, m := range models {
+			if m.ID == candidate {
+				return candidate
+			}
+		}
+	}
+	return candidates[0]
 }

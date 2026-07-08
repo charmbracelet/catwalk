@@ -1,0 +1,141 @@
+{
+  "name": "Scaleway",
+  "id": "scaleway",
+  "type": "openai-compat",
+  "api_key": "$SCW_SECRET_KEY",
+  "api_endpoint": "https://api.scaleway.ai/v1",
+  "default_large_model_id": "qwen3.6-35b-a3b",
+  "default_small_model_id": "gemma-4-26b-a4b-it",
+  "models": [
+    {
+      "id": "qwen3.5-397b-a17b",
+      "name": "Qwen 3.5 397B A17B",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 3.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3.6-35b-a3b",
+      "name": "Qwen 3.6 35B A3B",
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 1.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "gemma-4-26b-a4b-it",
+      "name": "Gemma 4 26B A4B IT",
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT OSS 120B",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 32768,
+      "can_reason": true
+    },
+    {
+      "id": "mistral-medium-3.5-128b",
+      "name": "Mistral Medium 3.5 128B",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 16384,
+      "can_reason": true
+    },
+    {
+      "id": "llama-3.3-70b-instruct",
+      "name": "Llama 3.3 70B Instruct",
+      "cost_per_1m_in": 0.9,
+      "cost_per_1m_out": 0.9,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 100000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "qwen3-235b-a22b-instruct-2507",
+      "name": "Qwen 3 235B A22B Instruct 2507",
+      "cost_per_1m_in": 0.75,
+      "cost_per_1m_out": 2.25,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "qwen3-coder-30b-a3b-instruct",
+      "name": "Qwen 3 Coder 30B A3B Instruct",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.8,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 32768
+    },
+    {
+      "id": "voxtral-small-24b-2507",
+      "name": "Voxtral Small 24B 2507",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.35,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "mistral-small-3.2-24b-instruct-2506",
+      "name": "Mistral Small 3.2 24B Instruct 2506",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.35,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 32768,
+      "supports_attachments": true
+    },
+    {
+      "id": "devstral-2-123b-instruct-2512",
+      "name": "Devstral 2 123B Instruct 2512",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 16384
+    },
+    {
+      "id": "gemma-3-27b-it",
+      "name": "Gemma 3 27B IT",
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 40000,
+      "default_max_tokens": 8192,
+      "supports_attachments": true
+    }
+  ]
+}

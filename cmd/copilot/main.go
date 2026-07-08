@@ -90,9 +90,34 @@ func run() error {
 		return err
 	}
 
-	// NOTE(@andreynering): Exclude versioned models and keep only the main version of each.
+	// Exclude versioned/duplicate models and keep only the main version of each.
+	aliasedVersions := make(map[string]bool, len(copilotModels))
+	for _, m := range copilotModels {
+		if m.ID != m.Version {
+			aliasedVersions[m.Version] = true
+		}
+	}
+
 	copilotModels = slices.DeleteFunc(copilotModels, func(m Model) bool {
-		return m.ID != m.Version || versionedModelRegexp.MatchString(m.ID) || strings.Contains(m.ID, "embedding")
+		return aliasedVersions[m.ID] ||
+			versionedModelRegexp.MatchString(m.ID) ||
+			strings.Contains(m.ID, "embedding") ||
+			strings.HasPrefix(m.ID, "accounts/msft/routers") ||
+			strings.HasPrefix(m.ID, "oswe-vscode") ||
+			strings.HasPrefix(m.ID, "lark") ||
+			strings.HasPrefix(m.ID, "mai-code") ||
+			m.ID == "gpt-4-o-preview" ||
+			m.ID == "trajectory-compaction"
+	})
+
+	// Deduplicate by ID (API can return duplicates)
+	seen := make(map[string]bool, len(copilotModels))
+	copilotModels = slices.DeleteFunc(copilotModels, func(m Model) bool {
+		if seen[m.ID] {
+			return true
+		}
+		seen[m.ID] = true
+		return false
 	})
 
 	catwalkModels := modelsToCatwalk(copilotModels)
@@ -106,7 +131,7 @@ func run() error {
 		Models:              catwalkModels,
 		APIEndpoint:         "https://api.githubcopilot.com",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "claude-sonnet-4.5",
+		DefaultLargeModelID: "claude-sonnet-4.6",
 		DefaultSmallModelID: "claude-haiku-4.5",
 	}
 	data, err := json.MarshalIndent(provider, "", "  ")
@@ -247,6 +272,9 @@ func tokenFromDisk() string {
 		return ""
 	}
 	if app, ok := content["github.com:Iv1.b507a08c87ecfe98"]; ok {
+		return app.OAuthToken
+	}
+	if app, ok := content["github.com:Iv1.b507a08c87ecfe98:zed"]; ok {
 		return app.OAuthToken
 	}
 	return ""

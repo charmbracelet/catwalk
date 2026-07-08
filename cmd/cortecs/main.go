@@ -1,0 +1,173 @@
+// Package main provides a command-line tool to generate a configuration file
+// for the Cortecs provider, which is OpenAI compatible.
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+	"io"
+	"log"
+	"net/http"
+	"os"
+	"strings"
+	"time"
+
+	"charm.land/catwalk/pkg/catwalk"
+)
+
+type CortecsModel struct {
+	ID          string   `json:"id"`
+	ContextSize int64    `json:"context_size"`
+	Tags        []string `json:"tags,omitempty"`
+}
+
+func (m CortecsModel) hasTag(tagValue string) bool {
+	if m.Tags != nil {
+		for _, tag := range m.Tags {
+			if strings.EqualFold(tag, tagValue) {
+				return true
+			}
+		}
+	}
+	return false
+}
+
+type ModelsResponse struct {
+	Data []CortecsModel `json:"data"`
+}
+
+type ModelDetail struct {
+	Pricing struct {
+		InputToken  float64 `json:"input_token"`
+		OutputToken float64 `json:"output_token"`
+	} `json:"pricing"`
+	ContextSize int64 `json:"context_size"`
+}
+
+// This is used to generate the cortecs.json config file.
+func main() {
+	client := &http.Client{Timeout: 30 * time.Second}
+	req, _ := http.NewRequestWithContext(
+		context.Background(),
+		"GET",
+		"https://api.cortecs.ai/v1/models",
+		nil,
+	)
+	req.Header.Set("User-Agent", "Crush-Client/1.0")
+
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatal("Error fetching Cortecs models:", err)
+	}
+	defer resp.Body.Close() //nolint:errcheck
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatal("Error reading Cortecs models response:", err)
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		log.Fatalf("Error fetching Cortecs models: status %d: %s", resp.StatusCode, body)
+	}
+
+	var modelsResp ModelsResponse
+	if err := json.Unmarshal(body, &modelsResp); err != nil {
+		log.Fatal("Error parsing Cortecs models response:", err)
+	}
+
+	var models []catwalk.Model
+	for _, model := range modelsResp.Data {
+		// we skip models that don't support tool calling
+		if !model.hasTag("Tools") {
+			continue
+		}
+
+		// Fetch individual model details to get screen_name
+		detailReq, _ := http.NewRequestWithContext(
+			context.Background(),
+			"GET",
+			fmt.Sprintf("https://api.cortecs.ai/v1/models/%s", model.ID),
+			nil,
+		)
+		detailReq.Header.Set("User-Agent", "Crush-Client/1.0")
+
+		detailResp, err := client.Do(detailReq)
+		if err != nil {
+			log.Printf("Warning: Error fetching details for model %s: %v", model.ID, err)
+			// Continue with default model.ID as name if we can't get details
+			continue
+		}
+		defer func() {
+			if err := detailResp.Body.Close(); err != nil {
+				log.Printf("Warning: Error closing response body for model %s: %v", model.ID, err)
+			}
+		}()
+
+		detailBody, err := io.ReadAll(detailResp.Body)
+		if err != nil {
+			log.Printf("Warning: Error reading details for model %s: %v", model.ID, err)
+			continue
+		}
+
+		if detailResp.StatusCode != http.StatusOK {
+			log.Printf("Warning: Error fetching details for model %s: status %d: %s", model.ID, detailResp.StatusCode, detailBody)
+			continue
+		}
+
+		var detailData ModelDetail
+		if err := json.Unmarshal(detailBody, &detailData); err != nil {
+			log.Printf("Warning: Error parsing details for model %s: %v", model.ID, err)
+			continue
+		}
+
+		var (
+			canReason        = model.hasTag("Reasoning")
+			reasoningLevels  []string
+			defaultReasoning string
+		)
+		if canReason {
+			reasoningLevels = []string{"low", "medium", "high"}
+			defaultReasoning = "medium"
+		}
+
+		model := catwalk.Model{
+			ID:                     model.ID,
+			Name:                   model.ID,
+			ContextWindow:          detailData.ContextSize,
+			CostPer1MIn:            detailData.Pricing.InputToken,
+			CostPer1MOut:           detailData.Pricing.OutputToken,
+			CostPer1MInCached:      0,
+			CostPer1MOutCached:     0,
+			DefaultMaxTokens:       model.ContextSize / 10,
+			CanReason:              canReason,
+			DefaultReasoningEffort: defaultReasoning,
+			ReasoningLevels:        reasoningLevels,
+			SupportsImages:         model.hasTag("Image"),
+		}
+		models = append(models, model)
+	}
+
+	cortecsProvider := catwalk.Provider{
+		Name:                "Cortecs",
+		ID:                  "cortecs",
+		APIKey:              "$CORTECS_API_KEY",
+		APIEndpoint:         "https://api.cortecs.ai/v1",
+		Type:                catwalk.TypeOpenAI,
+		DefaultLargeModelID: "qwen3-coder-30b-a3b-instruct",
+		DefaultSmallModelID: "glm-4.7-flash",
+		Models:              models,
+	}
+
+	data, err := json.MarshalIndent(cortecsProvider, "", "  ")
+	if err != nil {
+		log.Fatal("Error marshaling Cortecs provider:", err)
+	}
+	data = append(data, '\n')
+
+	if err := os.WriteFile("./internal/providers/configs/cortecs.json", data, 0o600); err != nil {
+		log.Fatal("Error writing Cortecs provider config:", err)
+	}
+
+	fmt.Println("Cortecs provider configuration generated successfully!")
+}

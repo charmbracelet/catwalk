@@ -1,0 +1,155 @@
+{
+  "name": "Neuralwatt",
+  "id": "neuralwatt",
+  "api_key": "$NEURALWATT_API_KEY",
+  "api_endpoint": "https://api.neuralwatt.com/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "glm-5.2",
+  "default_small_model_id": "glm-5.2-fast",
+  "models": [
+    {
+      "id": "glm-5.2",
+      "name": "GLM-5.2",
+      "cost_per_1m_in": 1.45,
+      "cost_per_1m_out": 4.5,
+      "cost_per_1m_in_cached": 0.3625,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048560,
+      "default_max_tokens": 104856,
+      "can_reason": true,
+      "reasoning_levels": [
+        "minimal",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "xhigh",
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-5.2-fast",
+      "name": "GLM-5.2 (fast)",
+      "cost_per_1m_in": 1.45,
+      "cost_per_1m_out": 4.5,
+      "cost_per_1m_in_cached": 0.3625,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048560,
+      "default_max_tokens": 104856,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-5.2-short",
+      "name": "GLM-5.2 (short)",
+      "cost_per_1m_in": 1.45,
+      "cost_per_1m_out": 4.5,
+      "cost_per_1m_in_cached": 0.3625,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 199984,
+      "default_max_tokens": 19998,
+      "can_reason": true,
+      "reasoning_levels": [
+        "minimal",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "xhigh",
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-5.2-short-fast",
+      "name": "GLM-5.2 (short, fast)",
+      "cost_per_1m_in": 1.45,
+      "cost_per_1m_out": 4.5,
+      "cost_per_1m_in_cached": 0.3625,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 199984,
+      "default_max_tokens": 19998,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi K2.6",
+      "cost_per_1m_in": 0.69,
+      "cost_per_1m_out": 3.22,
+      "cost_per_1m_in_cached": 0.1725,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k2.6-fast",
+      "name": "Kimi K2.6 Fast",
+      "cost_per_1m_in": 0.69,
+      "cost_per_1m_out": 3.22,
+      "cost_per_1m_in_cached": 0.1725,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 0.2375,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3.5-397b",
+      "name": "Qwen3.5 397B",
+      "cost_per_1m_in": 0.69,
+      "cost_per_1m_out": 4.14,
+      "cost_per_1m_in_cached": 0.1725,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3.5-397b-fast",
+      "name": "Qwen3.5 397B Fast",
+      "cost_per_1m_in": 0.69,
+      "cost_per_1m_out": 4.14,
+      "cost_per_1m_in_cached": 0.1725,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3.6-35b",
+      "name": "Qwen3.6 35B",
+      "cost_per_1m_in": 0.29,
+      "cost_per_1m_out": 1.15,
+      "cost_per_1m_in_cached": 0.0725,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131056,
+      "default_max_tokens": 13105,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3.6-35b-fast",
+      "name": "Qwen3.6 35B Fast",
+      "cost_per_1m_in": 0.29,
+      "cost_per_1m_out": 1.15,
+      "cost_per_1m_in_cached": 0.0725,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131056,
+      "default_max_tokens": 13105,
+      "can_reason": false,
+      "supports_attachments": true
+    }
+  ]
+}

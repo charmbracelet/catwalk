@@ -2,32 +2,102 @@ name: Update Providers
 
 on:
   schedule:
-    - cron: "0 2 * * *" # Run nightly at 2 AM UTC
+    - cron: "0 */6 * * *" # Run every 6 hours
+      timezone: "America/New_York"
   workflow_dispatch: # Allow manual triggering
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
-  update-schema:
+  update-providers:
+    name: Update Providers
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Setup Mise
+        uses: jdx/mise-action@e6a8b3978addb5a52f2b4cd9d91eafa7f0ab959d # v4.2.0
+
+      - name: Go Mod Download
+        run: go mod download
+
+      - name: AIHubMix
+        run: go run ./cmd/aihubmix/main.go
+        continue-on-error: true
+
+      - name: Avian
+        run: go run ./cmd/avian/main.go
+        continue-on-error: true
+
+      - name: Baseten
+        run: go run ./cmd/baseten/main.go
+        continue-on-error: true
+        env:
+          BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
+
+      - name: Neuralwatt
+        run: go run ./cmd/neuralwatt/main.go
+        continue-on-error: true
+
+      - name: Chutes
+        run: go run ./cmd/chutes/main.go
+        continue-on-error: true
+
+      - name: Cortecs
+        run: go run ./cmd/cortecs/main.go
+        continue-on-error: true
+
+      - name: HuggingFace
+        run: go run ./cmd/huggingface/main.go
+        continue-on-error: true
+
+      - name: io.net
+        run: go run ./cmd/ionet/main.go
+        continue-on-error: true
+
+      - name: OpenCode Go
+        run: go run ./cmd/opencode-go/main.go
+        continue-on-error: true
+
+      - name: OpenCode Zen
+        run: go run ./cmd/opencode-zen/main.go
+        continue-on-error: true
+
+      - name: OpenRouter
+        run: go run ./cmd/openrouter/main.go
+        continue-on-error: true
+
+      - name: Synthetic
+        run: go run ./cmd/synthetic/main.go
+        continue-on-error: true
+
+      - name: Pioneer
+        run: go run ./cmd/pioneer/main.go
+        continue-on-error: true
+
+      - name: Venice
+        run: go run ./cmd/venice/main.go
+        continue-on-error: true
+
+      - name: Vercel
+        run: go run ./cmd/vercel/main.go
+        continue-on-error: true
+
+      - name: xAI
+        run: go run ./cmd/xai/main.go
+        continue-on-error: true
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-go@v6
-        with:
-          go-version-file: go.mod
-      - name: Generate provider configurations
-        run: |
-          go run ./cmd/openrouter/main.go
-          go run ./cmd/synthetic/main.go
-          go run ./cmd/vercel/main.go
-          # we need to add this back when we know that the providers/models all work
-          # go run ./cmd/huggingface/main.go
-      - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v5
-        with:
-          commit_message: "chore: auto-update generated files"
-          branch: main
-          commit_user_name: Charm
-          commit_user_email: 124303983+charmcli@users.noreply.github.com
-          commit_author: Charm <124303983+charmcli@users.noreply.github.com>
+          title: "chore: auto-update generated files"
+          body: ""
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          commit-message: "chore: auto-update generated files"
+          branch: update-providers
+          reviewers: andreynering,meowgorithm

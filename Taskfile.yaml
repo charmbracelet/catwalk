@@ -57,20 +57,83 @@ tasks:
     desc: Generate all provider configurations
     aliases: [generate, gen]
     cmds:
+      - task: gen:aihubmix
+      - task: gen:avian
+      - task: gen:baseten
+      - task: gen:chutes
       - task: gen:copilot
+      - task: gen:cortecs
       - task: gen:huggingface
+      - task: gen:ionet
+      - task: gen:nebius
+      - task: gen:neuralwatt
+      - task: gen:opencode-go
+      - task: gen:opencode-zen
       - task: gen:openrouter
       - task: gen:synthetic
+      - task: gen:venice
+      - task: gen:vercel
+      - task: gen:xai
+
+  gen:aihubmix:
+    desc: Generate aihubmix provider configurations
+    cmds:
+      - go run cmd/aihubmix/main.go
+
+  gen:avian:
+    desc: Generate avian provider configurations
+    cmds:
+      - go run cmd/avian/main.go
+
+  gen:baseten:
+    desc: Generate baseten provider configurations
+    cmds:
+      - go run cmd/baseten/main.go
+
+  gen:chutes:
+    desc: Generate chutes provider configurations
+    cmds:
+      - go run cmd/chutes/main.go
 
   gen:copilot:
     desc: Generate copilot provider configurations
     cmds:
       - go run cmd/copilot/main.go
 
+  gen:cortecs:
+    desc: Generate cortecs provider configurations
+    cmds:
+      - go run cmd/cortecs/main.go
+
   gen:huggingface:
     desc: Generate huggingface provider configurations
     cmds:
       - go run cmd/huggingface/main.go
+
+  gen:ionet:
+    desc: Generate io.net provider configurations
+    cmds:
+      - go run cmd/ionet/main.go
+
+  gen:nebius:
+    desc: Generate Nebius provider configurations
+    cmds:
+      - go run cmd/nebius/main.go
+
+  gen:neuralwatt:
+    desc: Generate Neuralwatt provider configurations
+    cmds:
+      - go run cmd/neuralwatt/main.go
+
+  gen:opencode-go:
+    desc: Generate OpenCode Go provider configurations
+    cmds:
+      - go run cmd/opencode-go/main.go
+
+  gen:opencode-zen:
+    desc: Generate OpenCode Zen provider configurations
+    cmds:
+      - go run cmd/opencode-zen/main.go
 
   gen:openrouter:
     desc: Generate openrouter provider configurations
@@ -81,3 +144,23 @@ tasks:
     desc: Generate synthetic provider configurations
     cmds:
       - go run cmd/synthetic/main.go
+
+  gen:venice:
+    desc: Generate venice provider configurations
+    cmds:
+      - go run cmd/venice/main.go
+
+  gen:vercel:
+    desc: Generate vercel provider configurations
+    cmds:
+      - go run cmd/vercel/main.go
+
+  gen:xai:
+    desc: Generate xAI provider configurations
+    cmds:
+      - go run cmd/xai/main.go
+
+  update:
+    desc: Trigger the update workflow on GitHub
+    cmds:
+      - gh workflow run update.yml

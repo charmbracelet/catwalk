@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -101,29 +102,33 @@ type ModelPricing struct {
 	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
 }
 
+func roundCost(v float64) float64 {
+	return math.Round(v*1e5) / 1e5
+}
+
 func getPricing(model Model) ModelPricing {
 	pricing := ModelPricing{}
 	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
 	if err != nil {
 		costPrompt = 0.0
 	}
-	pricing.CostPer1MIn = costPrompt * 1_000_000
+	pricing.CostPer1MIn = roundCost(costPrompt * 1_000_000)
 	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 	if err != nil {
 		costCompletion = 0.0
 	}
-	pricing.CostPer1MOut = costCompletion * 1_000_000
+	pricing.CostPer1MOut = roundCost(costCompletion * 1_000_000)
 
 	costPromptCached, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 	if err != nil {
 		costPromptCached = 0.0
 	}
-	pricing.CostPer1MInCached = costPromptCached * 1_000_000
+	pricing.CostPer1MInCached = roundCost(costPromptCached * 1_000_000)
 	costCompletionCached, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 	if err != nil {
 		costCompletionCached = 0.0
 	}
-	pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
+	pricing.CostPer1MOutCached = roundCost(costCompletionCached * 1_000_000)
 	return pricing
 }
 
@@ -136,17 +141,28 @@ func fetchOpenRouterModels() (*ModelsResponse, error) {
 		nil,
 	)
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return nil, err //nolint:wrapcheck
 	}
 	defer resp.Body.Close() //nolint:errcheck
-	if resp.StatusCode != 200 {
-		body, _ := io.ReadAll(resp.Body)
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("unable to read models response body: %w", err)
+	}
+
+	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("status %d: %s", resp.StatusCode, body)
 	}
+
+	// for debugging
+	_ = os.MkdirAll("tmp", 0o700)
+	_ = os.WriteFile("tmp/openrouter-response.json", body, 0o600)
+
 	var mr ModelsResponse
-	if err := json.NewDecoder(resp.Body).Decode(&mr); err != nil {
+	if err := json.Unmarshal(body, &mr); err != nil {
 		return nil, err //nolint:wrapcheck
 	}
 	return &mr, nil
@@ -245,8 +261,8 @@ func main() {
 		APIKey:              "$OPENROUTER_API_KEY",
 		APIEndpoint:         "https://openrouter.ai/api/v1",
 		Type:                catwalk.TypeOpenRouter,
-		DefaultLargeModelID: "anthropic/claude-sonnet-4",
-		DefaultSmallModelID: "anthropic/claude-3.5-haiku",
+		DefaultLargeModelID: "anthropic/claude-sonnet-4.6",
+		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
@@ -323,23 +339,23 @@ func main() {
 		if err != nil {
 			costPrompt = 0.0
 		}
-		pricing.CostPer1MIn = costPrompt * 1_000_000
+		pricing.CostPer1MIn = roundCost(costPrompt * 1_000_000)
 		costCompletion, err := strconv.ParseFloat(bestEndpoint.Pricing.Completion, 64)
 		if err != nil {
 			costCompletion = 0.0
 		}
-		pricing.CostPer1MOut = costCompletion * 1_000_000
+		pricing.CostPer1MOut = roundCost(costCompletion * 1_000_000)
 
 		costPromptCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
 		if err != nil {
 			costPromptCached = 0.0
 		}
-		pricing.CostPer1MInCached = costPromptCached * 1_000_000
+		pricing.CostPer1MInCached = roundCost(costPromptCached * 1_000_000)
 		costCompletionCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
 		if err != nil {
 			costCompletionCached = 0.0
 		}
-		pricing.CostPer1MOutCached = costCompletionCached * 1_000_000
+		pricing.CostPer1MOutCached = roundCost(costCompletionCached * 1_000_000)
 
 		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
@@ -372,8 +388,6 @@ func main() {
 		}
 
 		openRouterProvider.Models = append(openRouterProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d from provider %s\n",
-			model.ID, bestEndpoint.ContextLength, bestEndpoint.ProviderName)
 	}
 
 	slices.SortFunc(openRouterProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

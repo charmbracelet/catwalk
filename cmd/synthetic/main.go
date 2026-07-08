@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -64,12 +65,16 @@ func parsePrice(s string) float64 {
 	return v
 }
 
+func roundCost(v float64) float64 {
+	return math.Round(v*1e5) / 1e5
+}
+
 func getPricing(model Model) ModelPricing {
 	return ModelPricing{
-		CostPer1MIn:        parsePrice(model.Pricing.Prompt) * 1_000_000,
-		CostPer1MOut:       parsePrice(model.Pricing.Completion) * 1_000_000,
-		CostPer1MInCached:  parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
-		CostPer1MOutCached: parsePrice(model.Pricing.InputCacheReads) * 1_000_000,
+		CostPer1MIn:        roundCost(parsePrice(model.Pricing.Prompt) * 1_000_000),
+		CostPer1MOut:       roundCost(parsePrice(model.Pricing.Completion) * 1_000_000),
+		CostPer1MInCached:  roundCost(parsePrice(model.Pricing.InputCacheReads) * 1_000_000),
+		CostPer1MOutCached: roundCost(parsePrice(model.Pricing.InputCacheReads) * 1_000_000),
 	}
 }
 
@@ -109,7 +114,7 @@ func applyModelOverrides(model *Model) {
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2-Thinking"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
-	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2.5"):
+	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2.6"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2"):
@@ -154,8 +159,8 @@ func main() {
 		APIKey:              "$SYNTHETIC_API_KEY",
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "hf:zai-org/GLM-4.7",
-		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.1-Terminus",
+		DefaultLargeModelID: "syn:large:text",
+		DefaultSmallModelID: "syn:small:text",
 		Models:              []catwalk.Model{},
 	}
 
@@ -232,8 +237,6 @@ func main() {
 		}
 
 		syntheticProvider.Models = append(syntheticProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n",
-			model.ID, model.ContextLength)
 	}
 
 	slices.SortFunc(syntheticProvider.Models, func(a catwalk.Model, b catwalk.Model) int {

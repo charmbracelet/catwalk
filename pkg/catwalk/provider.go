@@ -21,25 +21,44 @@ type InferenceProvider string
 
 // All the inference providers supported by the system.
 const (
-	InferenceProviderOpenAI      InferenceProvider = "openai"
-	InferenceProviderAnthropic   InferenceProvider = "anthropic"
-	InferenceProviderSynthetic   InferenceProvider = "synthetic"
-	InferenceProviderGemini      InferenceProvider = "gemini"
-	InferenceProviderAzure       InferenceProvider = "azure"
-	InferenceProviderBedrock     InferenceProvider = "bedrock"
-	InferenceProviderVertexAI    InferenceProvider = "vertexai"
-	InferenceProviderXAI         InferenceProvider = "xai"
-	InferenceProviderZAI         InferenceProvider = "zai"
-	InferenceProviderGROQ        InferenceProvider = "groq"
-	InferenceProviderOpenRouter  InferenceProvider = "openrouter"
-	InferenceProviderCerebras    InferenceProvider = "cerebras"
-	InferenceProviderVenice      InferenceProvider = "venice"
-	InferenceProviderChutes      InferenceProvider = "chutes"
-	InferenceProviderHuggingFace InferenceProvider = "huggingface"
-	InferenceAIHubMix            InferenceProvider = "aihubmix"
-	InferenceKimiCoding          InferenceProvider = "kimi-coding"
-	InferenceProviderCopilot     InferenceProvider = "copilot"
-	InferenceProviderVercel      InferenceProvider = "vercel"
+	InferenceProviderOpenAI           InferenceProvider = "openai"
+	InferenceProviderAnthropic        InferenceProvider = "anthropic"
+	InferenceProviderSynthetic        InferenceProvider = "synthetic"
+	InferenceProviderGemini           InferenceProvider = "gemini"
+	InferenceProviderAzure            InferenceProvider = "azure"
+	InferenceProviderBedrock          InferenceProvider = "bedrock"
+	InferenceProviderBedrockEurope    InferenceProvider = "bedrock-europe"
+	InferenceProviderVertexAI         InferenceProvider = "vertexai"
+	InferenceProviderXAI              InferenceProvider = "xai"
+	InferenceProviderZAI              InferenceProvider = "zai"
+	InferenceProviderDeepSeek         InferenceProvider = "deepseek"
+	InferenceProviderZhipu            InferenceProvider = "zhipu"
+	InferenceProviderZhipuCoding      InferenceProvider = "zhipu-coding"
+	InferenceProviderGROQ             InferenceProvider = "groq"
+	InferenceProviderOpenRouter       InferenceProvider = "openrouter"
+	InferenceProviderCerebras         InferenceProvider = "cerebras"
+	InferenceProviderVenice           InferenceProvider = "venice"
+	InferenceProviderChutes           InferenceProvider = "chutes"
+	InferenceProviderHuggingFace      InferenceProvider = "huggingface"
+	InferenceAIHubMix                 InferenceProvider = "aihubmix"
+	InferenceKimiCoding               InferenceProvider = "kimi-coding"
+	InferenceProviderCopilot          InferenceProvider = "copilot"
+	InferenceProviderCortecs          InferenceProvider = "cortecs"
+	InferenceProviderVercel           InferenceProvider = "vercel"
+	InferenceProviderMiniMax          InferenceProvider = "minimax"
+	InferenceProviderMiniMaxChina     InferenceProvider = "minimax-china"
+	InferenceProviderIoNet            InferenceProvider = "ionet"
+	InferenceProviderQiniuCloud       InferenceProvider = "qiniucloud"
+	InferenceProviderAvian            InferenceProvider = "avian"
+	InferenceProviderNebius           InferenceProvider = "nebius"
+	InferenceProviderNeuralwatt       InferenceProvider = "neuralwatt"
+	InferenceProviderOpenCodeZen      InferenceProvider = "opencode-zen"
+	InferenceProviderOpenCodeGo       InferenceProvider = "opencode-go"
+	InferenceProviderAlibabaSingapore InferenceProvider = "alibaba-singapore"
+	InferenceProviderAlibabaUS        InferenceProvider = "alibaba-us"
+	InferenceProviderFireworks        InferenceProvider = "fireworks"
+	InferenceProviderBaseten          InferenceProvider = "baseten"
+	InferenceProviderMoonshot         InferenceProvider = "moonshot"
 )
 
 // Provider represents an AI provider configuration.
@@ -79,7 +98,7 @@ type Model struct {
 	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	SupportsImages         bool         `json:"supports_attachments"`
-	Options                ModelOptions `json:"options"`
+	Options                ModelOptions `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.
@@ -91,9 +110,12 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderGemini,
 		InferenceProviderAzure,
 		InferenceProviderBedrock,
+		InferenceProviderBedrockEurope,
 		InferenceProviderVertexAI,
 		InferenceProviderXAI,
 		InferenceProviderZAI,
+		InferenceProviderZhipu,
+		InferenceProviderZhipuCoding,
 		InferenceProviderGROQ,
 		InferenceProviderOpenRouter,
 		InferenceProviderCerebras,
@@ -103,7 +125,19 @@ func KnownProviders() []InferenceProvider {
 		InferenceAIHubMix,
 		InferenceKimiCoding,
 		InferenceProviderCopilot,
+		InferenceProviderCortecs,
 		InferenceProviderVercel,
+		InferenceProviderMiniMax,
+		InferenceProviderMiniMaxChina,
+		InferenceProviderQiniuCloud,
+		InferenceProviderAvian,
+		InferenceProviderNebius,
+		InferenceProviderNeuralwatt,
+		InferenceProviderOpenCodeZen,
+		InferenceProviderOpenCodeGo,
+		InferenceProviderFireworks,
+		InferenceProviderBaseten,
+		InferenceProviderMoonshot,
 	}
 }
 
