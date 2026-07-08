@@ -86,7 +86,7 @@ func main() {
 	if !strings.Contains(address, ":") {
 		address = ":" + address
 	}
-	address = strings.TrimPrefix("tcp://", address)
+	address = strings.TrimPrefix(address, "tcp://")
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
