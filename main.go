@@ -86,9 +86,7 @@ func main() {
 	address := cmp.Or(os.Getenv("CATWALK_PORT"), "8080")
 	switch {
 	case strings.HasPrefix(address, "tcp://"):
-		if u, err := url.Parse(address); err == nil {
-			address = ":" + u.Port()
-		}
+		address = ":8080"
 	default:
 		address = ":" + address
 	}
