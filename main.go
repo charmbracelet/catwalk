@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"charm.land/catwalk/internal/providers"
@@ -81,7 +82,10 @@ func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 }
 
 func main() {
-	port := cmp.Or(os.Getenv("CATWALK_PORT"), "8080")
+	address := cmp.Or(os.Getenv("CATWALK_PORT"), "8080")
+	if !strings.Contains(address, ":") {
+		address = ":" + address
+	}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
@@ -91,14 +95,14 @@ func main() {
 	mux.Handle("/metrics", promhttp.Handler())
 
 	server := &http.Server{
-		Addr:         ":" + port,
+		Addr:         address,
 		Handler:      mux,
 		ReadTimeout:  15 * time.Second,
 		WriteTimeout: 15 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}
 
-	log.Printf("Server starting on :%s\n", port)
+	log.Printf("Server starting on %s\n", address)
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatal("Server failed to start:", err)
 	}
