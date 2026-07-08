@@ -235,6 +235,9 @@ func main() {
 	veniceProvider.DefaultSmallModelID = bestSmallModelID(candidateModels)
 
 	slices.SortFunc(veniceProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 
