@@ -73,10 +73,14 @@ func prettyName(id string) string {
 }
 
 func contextWindow(modelID string) int64 {
-	if strings.Contains(modelID, "grok-4") {
+	switch {
+	case strings.Contains(modelID, "grok-4.5"):
+		return 500_000
+	case strings.Contains(modelID, "grok-4"):
 		return 200_000
+	default:
+		return 131_072
 	}
-	return 131_072
 }
 
 func roundCost(v float64) float64 {
