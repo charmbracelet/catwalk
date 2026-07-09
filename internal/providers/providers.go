@@ -105,6 +105,9 @@ var scalewayConfig []byte
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
+//go:embed configs/unorouter.json
+var unoRouterConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -167,6 +170,7 @@ var providerRegistry = []ProviderFunc{
 	openRouterProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
+	unoRouterProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -282,6 +286,10 @@ func miniMaxChinaProvider() catwalk.Provider {
 
 func moonshotProvider() catwalk.Provider {
 	return loadProviderFromConfig(moonshotConfig)
+}
+
+func unoRouterProvider() catwalk.Provider {
+	return loadProviderFromConfig(unoRouterConfig)
 }
 
 func nebiusProvider() catwalk.Provider {
