@@ -2387,6 +2387,24 @@
       "supports_attachments": true
     },
     {
+      "id": "meta/muse-spark-1.1",
+      "name": "Muse Spark 1.1",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 4.25,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.15,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "nvidia/nemotron-3-super-120b-a12b",
       "name": "NVIDIA Nemotron 3 Super 120B A12B",
       "cost_per_1m_in": 0.15,
@@ -2861,7 +2879,7 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-235b-a22b-thinking",
+      "id": "alibaba/qwen3-vl-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
@@ -2879,7 +2897,7 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-vl-thinking",
+      "id": "alibaba/qwen3-235b-a22b-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
