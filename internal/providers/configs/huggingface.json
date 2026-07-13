@@ -4,7 +4,7 @@
   "api_key": "$HF_TOKEN",
   "api_endpoint": "https://router.huggingface.co/v1",
   "type": "openai-compat",
-  "default_large_model_id": "moonshotai/Kimi-K2.7-Code:fireworks-ai",
+  "default_large_model_id": "zai-org/GLM-5.2:fireworks-ai",
   "default_small_model_id": "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
   "models": [
     {
@@ -15,18 +15,6 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 196608,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "MiniMaxAI/MiniMax-M3:fireworks-ai",
-      "name": "MiniMaxAI/MiniMax-M3 (fireworks-ai)",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 512000,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
@@ -243,6 +231,18 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 202752,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-5.2:fireworks-ai",
+      "name": "zai-org/GLM-5.2 (fireworks-ai)",
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
