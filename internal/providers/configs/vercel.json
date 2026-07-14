@@ -38,18 +38,6 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic/claude-3.5-haiku",
-      "name": "Claude 3.5 Haiku",
-      "cost_per_1m_in": 0.8,
-      "cost_per_1m_out": 4,
-      "cost_per_1m_in_cached": 1,
-      "cost_per_1m_out_cached": 0.08,
-      "context_window": 200000,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "anthropic/claude-fable-5",
       "name": "Claude Fable 5",
       "cost_per_1m_in": 10,
@@ -452,18 +440,6 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 256000,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "mistral/devstral-small",
-      "name": "Devstral Small 1.1",
-      "cost_per_1m_in": 0.1,
-      "cost_per_1m_out": 0.3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 64000,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -1997,36 +1973,6 @@
       "supports_attachments": true
     },
     {
-      "id": "meituan/longcat-flash-chat",
-      "name": "LongCat Flash Chat",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 100000,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "meituan/longcat-flash-thinking-2601",
-      "name": "LongCat Flash Thinking 2601",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32768,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
       "id": "mistral/magistral-medium",
       "name": "Magistral Medium 2509",
       "cost_per_1m_in": 2,
@@ -2109,42 +2055,6 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
-    },
-    {
-      "id": "xiaomi/mimo-v2-flash",
-      "name": "MiMo V2 Flash",
-      "cost_per_1m_in": 0.1,
-      "cost_per_1m_out": 0.3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.01,
-      "context_window": 262144,
-      "default_max_tokens": 32000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "xiaomi/mimo-v2-pro",
-      "name": "MiMo V2 Pro",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2,
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
     },
     {
       "id": "xiaomi/mimo-v2.5-pro",
@@ -2597,18 +2507,6 @@
       "supports_attachments": true
     },
     {
-      "id": "mistral/pixtral-large",
-      "name": "Pixtral Large",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 4000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "alibaba/qwen-3-32b",
       "name": "Qwen 3 32B",
       "cost_per_1m_in": 0.16,
@@ -2891,7 +2789,7 @@
       "supports_attachments": false
     },
     {
-      "id": "alibaba/qwen3-vl-instruct",
+      "id": "alibaba/qwen3-vl-235b-a22b-instruct",
       "name": "Qwen3 VL 235B A22B Instruct",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 1.6,
@@ -2903,7 +2801,7 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-vl-235b-a22b-instruct",
+      "id": "alibaba/qwen3-vl-instruct",
       "name": "Qwen3 VL 235B A22B Instruct",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 1.6,
@@ -3038,18 +2936,6 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "arcee-ai/trinity-large-preview",
-      "name": "Trinity Large Preview",
-      "cost_per_1m_in": 0.25,
-      "cost_per_1m_out": 1,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131000,
-      "default_max_tokens": 131000,
-      "can_reason": false,
       "supports_attachments": false
     },
     {
