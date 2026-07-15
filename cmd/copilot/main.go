@@ -107,6 +107,8 @@ func run() error {
 			strings.HasPrefix(m.ID, "lark") ||
 			strings.HasPrefix(m.ID, "mai-code") ||
 			strings.HasPrefix(m.ID, "auto-model") ||
+			strings.HasPrefix(m.ID, "exec-agent") ||
+			strings.HasPrefix(m.ID, "search-agent") ||
 			m.ID == "gpt-4-o-preview" ||
 			m.ID == "trajectory-compaction"
 	})
