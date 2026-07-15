@@ -185,12 +185,54 @@
       "supports_attachments": true
     },
     {
+      "id": "anthropic/claude-opus-4.7-fast",
+      "name": "Claude Opus 4.7 (Fast)",
+      "cost_per_1m_in": 30,
+      "cost_per_1m_out": 150,
+      "cost_per_1m_in_cached": 37.5,
+      "cost_per_1m_out_cached": 3,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "anthropic/claude-opus-4.8",
       "name": "Claude Opus 4.8",
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 25,
       "cost_per_1m_in_cached": 6.25,
       "cost_per_1m_out_cached": 0.5,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "anthropic/claude-opus-4.8-fast",
+      "name": "Claude Opus 4.8 (Fast)",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
+      "cost_per_1m_in_cached": 12.5,
+      "cost_per_1m_out_cached": 1,
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -316,8 +358,8 @@
     {
       "id": "deepseek/deepseek-v3.1",
       "name": "DeepSeek V3.1",
-      "cost_per_1m_in": 0.21,
-      "cost_per_1m_out": 0.79,
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 0.95,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.13,
       "context_window": 163840,
