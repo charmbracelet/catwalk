@@ -126,6 +126,9 @@ var zhipuConfig []byte
 //go:embed configs/zhipu-coding.json
 var zhipuCodingConfig []byte
 
+//go:embed configs/aimlapi.json
+var aiMLAPIConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -144,6 +147,7 @@ var providerRegistry = []ProviderFunc{
 
 	// The remaining will be in alphabetical order.
 	aiHubMixProvider,
+	aiMLAPIProvider,
 	alibabaSingaporeProvider,
 	alibabaUnitedStatesProvider,
 	basetenProvider,
@@ -346,4 +350,8 @@ func zhipuProvider() catwalk.Provider {
 
 func zhipuCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(zhipuCodingConfig)
+}
+
+func aiMLAPIProvider() catwalk.Provider {
+	return loadProviderFromConfig(aiMLAPIConfig)
 }
