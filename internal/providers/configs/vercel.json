@@ -1991,30 +1991,6 @@
       "supports_attachments": false
     },
     {
-      "id": "meta/llama-3.2-11b",
-      "name": "Llama 3.2 11B Vision Instruct",
-      "cost_per_1m_in": 0.16,
-      "cost_per_1m_out": 0.16,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "meta/llama-3.2-90b",
-      "name": "Llama 3.2 90B Vision Instruct",
-      "cost_per_1m_in": 0.72,
-      "cost_per_1m_out": 0.72,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "meta/llama-3.3-70b",
       "name": "Llama 3.3 70B Instruct",
       "cost_per_1m_in": 0.72,
