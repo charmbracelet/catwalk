@@ -844,8 +844,8 @@
     {
       "id": "inkling",
       "name": "Inkling",
-      "cost_per_1m_in": 2.3375,
-      "cost_per_1m_out": 5.85,
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 5.0625,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
