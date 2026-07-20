@@ -94,9 +94,12 @@
       "default_max_tokens": 32768,
       "can_reason": true,
       "reasoning_levels": [
+        "none",
+        "minimal",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
