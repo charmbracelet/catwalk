@@ -135,13 +135,16 @@ func main() {
 				// Baseten supports the full reasoning_effort range for
 				// DeepSeek V4 Pro and GPT OSS 120B.
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
-				defaultReasoning = "medium"
+				defaultReasoning = "medium" //nolint:goconst
 			case "zai-org/GLM-5.2":
 				// GLM 5.2 supports a reduced reasoning_effort range.
 				reasoningLevels = []string{"none", "high", "max"}
 				defaultReasoning = "high"
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
+			case "thinkingmachines/inkling":
+				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
+				defaultReasoning = "medium"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoning = "medium"
