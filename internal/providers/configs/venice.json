@@ -722,6 +722,30 @@
       "supports_attachments": true
     },
     {
+      "id": "gemini-3-5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "cost_per_1m_in": 0.375,
+      "cost_per_1m_out": 3.125,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "name": "Gemini 3.6 Flash",
+      "cost_per_1m_in": 1.875,
+      "cost_per_1m_out": 9.375,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "gemma-4-uncensored",
       "name": "Gemma 4 Uncensored",
       "cost_per_1m_in": 0.1625,
@@ -1274,6 +1298,22 @@
       "default_max_tokens": 32768,
       "can_reason": true,
       "supports_attachments": false
+    },
+    {
+      "id": "qwen3-6-35b-a3b",
+      "name": "Qwen 3.6 35B A3B",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 1,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": false,
+      "options": {
+        "temperature": 1,
+        "top_p": 0.95
+      }
     },
     {
       "id": "e2ee-qwen3-6-35b-a3b",
