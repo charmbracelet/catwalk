@@ -58,6 +58,10 @@ jobs:
         run: go run ./cmd/ionet/main.go
         continue-on-error: true
 
+      - name: LLM Gateway
+        run: go run ./cmd/llmgateway/main.go
+        continue-on-error: true
+
       - name: OpenCode Go
         run: go run ./cmd/opencode-go/main.go
         continue-on-error: true
