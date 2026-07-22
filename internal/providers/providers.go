@@ -66,6 +66,9 @@ var huggingFaceConfig []byte
 //go:embed configs/ionet.json
 var ioNetConfig []byte
 
+//go:embed configs/kenari.json
+var kenariConfig []byte
+
 //go:embed configs/kimi.json
 var kimiCodingConfig []byte
 
@@ -160,6 +163,7 @@ var providerRegistry = []ProviderFunc{
 	groqProvider,
 	huggingFaceProvider,
 	ioNetProvider,
+	kenariProvider,
 	nebiusProvider,
 	neuralwattProvider,
 	openCodeGoProvider,
@@ -266,6 +270,10 @@ func huggingFaceProvider() catwalk.Provider {
 
 func ioNetProvider() catwalk.Provider {
 	return loadProviderFromConfig(ioNetConfig)
+}
+
+func kenariProvider() catwalk.Provider {
+	return loadProviderFromConfig(kenariConfig)
 }
 
 func kimiCodingProvider() catwalk.Provider {
