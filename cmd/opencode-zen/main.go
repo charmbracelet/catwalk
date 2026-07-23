@@ -197,7 +197,10 @@ func main() {
 		zenProvider.Models = append(zenProvider.Models, m)
 	}
 
-	slices.SortFunc(zenProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(zenProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

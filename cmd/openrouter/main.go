@@ -390,7 +390,10 @@ func main() {
 		openRouterProvider.Models = append(openRouterProvider.Models, m)
 	}
 
-	slices.SortFunc(openRouterProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(openRouterProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

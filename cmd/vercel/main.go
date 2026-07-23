@@ -187,7 +187,10 @@ func main() {
 		vercelProvider.Models = append(vercelProvider.Models, m)
 	}
 
-	slices.SortFunc(vercelProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(vercelProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 
