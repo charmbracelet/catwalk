@@ -1309,7 +1309,7 @@
       "context_window": 256000,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false,
+      "supports_attachments": true,
       "options": {
         "temperature": 1,
         "top_p": 0.95
