@@ -2951,18 +2951,6 @@
       "supports_attachments": false
     },
     {
-      "id": "alibaba/qwen3-vl-instruct",
-      "name": "Qwen3 VL 235B A22B Instruct",
-      "cost_per_1m_in": 0.4,
-      "cost_per_1m_out": 1.6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 129024,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "alibaba/qwen3-vl-235b-a22b-instruct",
       "name": "Qwen3 VL 235B A22B Instruct",
       "cost_per_1m_in": 0.4,
@@ -2975,7 +2963,19 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-vl-thinking",
+      "id": "alibaba/qwen3-vl-instruct",
+      "name": "Qwen3 VL 235B A22B Instruct",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 1.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 129024,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "alibaba/qwen3-235b-a22b-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
@@ -2993,7 +2993,7 @@
       "supports_attachments": true
     },
     {
-      "id": "alibaba/qwen3-235b-a22b-thinking",
+      "id": "alibaba/qwen3-vl-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "cost_per_1m_in": 0.4,
       "cost_per_1m_out": 4,
