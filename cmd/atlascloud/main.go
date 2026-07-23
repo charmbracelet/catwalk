@@ -40,6 +40,7 @@ type Model struct {
 	ContextLength     int64           `json:"context_length"`
 	MaxOutputLength   int64           `json:"max_output_length,omitempty"`
 	SupportedFeatures []string        `json:"supported_features,omitempty"`
+	DiscountToUser    float64         `json:"discount_to_user,omitempty"`
 	Pricing           json.RawMessage `json:"pricing"`
 }
 
@@ -148,6 +149,10 @@ func main() {
 		if !slices.Contains(model.SupportedFeatures, "tools") {
 			continue
 		}
+		if model.DiscountToUser < 0 || model.DiscountToUser > 1 {
+			fmt.Printf("Skipping model %s: invalid user discount %g\n", model.ID, model.DiscountToUser)
+			continue
+		}
 
 		pricing, err := extractBasePricing(model.Pricing)
 		if err != nil {
@@ -155,9 +160,10 @@ func main() {
 			continue
 		}
 
-		costPer1MIn := roundCost(parsePrice(pricing.Prompt) * 1_000_000)
-		costPer1MOut := roundCost(parsePrice(pricing.Completion) * 1_000_000)
-		costPer1MCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * 1_000_000)
+		priceMultiplier := 1 - model.DiscountToUser
+		costPer1MIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
+		costPer1MOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
+		costPer1MCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
 
 		supportsImages := slices.Contains(model.InputModalities, "image")
 
