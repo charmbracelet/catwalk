@@ -4,7 +4,7 @@
   "type": "bedrock",
   "api_key": "",
   "api_endpoint": "",
-  "default_large_model_id": "us.anthropic.claude-sonnet-4-6",
+  "default_large_model_id": "us.anthropic.claude-opus-5",
   "default_small_model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [
     {
@@ -57,6 +57,20 @@
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "us.anthropic.claude-opus-5",
+      "name": "Claude Opus 5",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 25,
+      "cost_per_1m_in_cached": 6.25,
+      "cost_per_1m_out_cached": 0.5,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "medium", "high", "xhigh", "max"],
+      "default_reasoning_effort": "high",
       "supports_attachments": true
     },
     {
