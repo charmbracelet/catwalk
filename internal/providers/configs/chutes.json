@@ -64,9 +64,9 @@
     {
       "id": "zai-org/GLM-5.2-TEE",
       "name": "GLM-5.2-TEE",
-      "cost_per_1m_in": 1.4,
-      "cost_per_1m_out": 4.4,
-      "cost_per_1m_in_cached": 0.7,
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 3.95,
+      "cost_per_1m_in_cached": 0.625,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
       "default_max_tokens": 65535,
