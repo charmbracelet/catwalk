@@ -4,7 +4,7 @@
   "api_key": "$VENICE_API_KEY",
   "api_endpoint": "https://api.venice.ai/api/v1",
   "type": "openai-compat",
-  "default_large_model_id": "claude-opus-4-7-fast",
+  "default_large_model_id": "claude-fable-5",
   "default_small_model_id": "deepseek-v4-flash",
   "models": [
     {
@@ -90,18 +90,6 @@
       "name": "Claude Opus 4.7",
       "cost_per_1m_in": 6,
       "cost_per_1m_out": 30,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "claude-opus-4-7-fast",
-      "name": "Claude Opus 4.7 Fast",
-      "cost_per_1m_in": 36,
-      "cost_per_1m_out": 180,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
@@ -1405,6 +1393,18 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "seed-2-1-turbo",
+      "name": "Seed 2.1 Turbo",
+      "cost_per_1m_in": 0.625,
+      "cost_per_1m_out": 3.125,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
       "supports_attachments": true
     },
     {
