@@ -15,7 +15,8 @@
       "cost_per_1m_in_cached": 0.12,
       "cost_per_1m_out_cached": 0.375,
       "context_window": 1000000,
-      "default_max_tokens": 512000
+      "default_max_tokens": 512000,
+      "supports_attachments": true
     },
     {
       "id": "MiniMax-M2.7-highspeed",
