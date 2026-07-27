@@ -60,6 +60,18 @@
       "supports_attachments": false
     },
     {
+      "id": "accounts/fireworks/models/kimi-k3",
+      "name": "Kimi K3",
+      "cost_per_1m_in": 3.00,
+      "cost_per_1m_out": 15.00,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.30,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "accounts/fireworks/models/kimi-k2p7-code",
       "name": "Kimi K2.7 Code",
       "cost_per_1m_in": 0.95,
