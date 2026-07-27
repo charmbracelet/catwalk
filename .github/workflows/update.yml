@@ -28,6 +28,10 @@ jobs:
         run: go run ./cmd/aihubmix/main.go
         continue-on-error: true
 
+      - name: Atlas Cloud
+        run: go run ./cmd/atlascloud/main.go
+        continue-on-error: true
+
       - name: Avian
         run: go run ./cmd/avian/main.go
         continue-on-error: true
