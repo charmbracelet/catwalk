@@ -68,6 +68,18 @@
       "supports_attachments": false
     },
     {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "cost_per_1m_in": 0.144,
+      "cost_per_1m_out": 0.42,
+      "cost_per_1m_in_cached": 0.036,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262128,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "kimi-k2.6",
       "name": "Kimi K2.6",
       "cost_per_1m_in": 0.69,
