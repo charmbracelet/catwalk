@@ -271,6 +271,9 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
+		if strings.HasSuffix(model.ID, ":batch") {
+			continue
+		}
 		if model.ContextLength < 20000 {
 			continue
 		}
