@@ -156,9 +156,6 @@ func main() {
 		case "zai-org/GLM-5.2", "moonshotai/Kimi-K2.7-Code":
 			// Reasoning burns tokens fast on these models; cap output.
 			maxTokens = 32768
-		case "moonshotai/Kimi-K3":
-			// API advertises 1048576 but the chat endpoint rejects max_tokens above 262144.
-			maxTokens = 262144
 		}
 
 		m := catwalk.Model{
