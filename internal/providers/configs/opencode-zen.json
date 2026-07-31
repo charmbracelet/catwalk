@@ -260,7 +260,7 @@
     },
     {
       "id": "deepseek-v4-flash-free",
-      "name": "DeepSeek V4 Flash Free",
+      "name": "DeepSeek V4 Flash Free (New)",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -655,10 +655,10 @@
     {
       "id": "gpt-5.6-luna",
       "name": "GPT-5.6 Luna",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 6,
-      "cost_per_1m_in_cached": 0.1,
-      "cost_per_1m_out_cached": 1.25,
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0.02,
+      "cost_per_1m_out_cached": 0.25,
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,

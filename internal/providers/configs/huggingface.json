@@ -58,11 +58,11 @@
     {
       "id": "google/gemma-4-31B-it:cerebras",
       "name": "google/gemma-4-31B-it (cerebras)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.99,
+      "cost_per_1m_out": 1.49,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
+      "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
@@ -116,22 +116,10 @@
       "supports_attachments": false
     },
     {
-      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4:fireworks-ai",
-      "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4 (fireworks-ai)",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "openai/gpt-oss-120b:cerebras",
       "name": "openai/gpt-oss-120b (cerebras)",
-      "cost_per_1m_in": 0.25,
-      "cost_per_1m_out": 0.69,
+      "cost_per_1m_in": 0.35,
+      "cost_per_1m_out": 0.75,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
@@ -214,11 +202,11 @@
     {
       "id": "zai-org/GLM-4.7:cerebras",
       "name": "zai-org/GLM-4.7 (cerebras)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 2.25,
+      "cost_per_1m_out": 2.75,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 204800,
+      "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
