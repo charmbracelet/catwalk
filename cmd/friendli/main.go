@@ -45,11 +45,12 @@ type FriendliFeatures struct {
 	StructuredOutput bool `json:"structured_output"`
 }
 
-// ReasoningOpt represents a reasoning control option.
+// ReasoningOpt represents a reasoning control option from the Friendli API.
 type ReasoningOpt struct {
-	Type string `json:"type"`
-	Min  int64  `json:"min,omitempty"`
-	Max  int64  `json:"max,omitempty"`
+	Type   string   `json:"type"`
+	Values []string `json:"values,omitempty"`
+	Min    int64    `json:"min,omitempty"`
+	Max    int64    `json:"max,omitempty"`
 }
 
 // ModelsResponse is the response from the Friendli models endpoint.
@@ -120,6 +121,50 @@ func displayName(id string) string {
 	return id
 }
 
+// reasoningLevels maps Friendli reasoning_options to catwalk reasoning_levels.
+//
+// Friendli reasoning_options can contain:
+//   - {"type": "toggle"} — on/off control via chat_template_kwargs.enable_thinking
+//   - {"type": "effort", "values": [...]} — explicit effort levels the API accepts
+//   - {"type": "budget_tokens", "min": -1, "max": N} — thinking budget in tokens
+//
+// Mapping to catwalk:
+//   - effort + toggle: levels = ["none"] + effort_values, default = first effort value
+//   - effort only:      levels = effort_values, default = first effort value
+//   - toggle + budget:  levels = ["none", "high"], default = "high"
+//   - budget only:      no levels (always reasoning, nothing to toggle)
+func reasoningLevels(opts []ReasoningOpt) (levels []string, defaultEffort string) {
+	var hasToggle, hasEffort bool
+	var effortValues []string
+	for _, o := range opts {
+		switch o.Type {
+		case "toggle":
+			hasToggle = true
+		case "effort":
+			hasEffort = true
+			effortValues = o.Values
+		}
+	}
+
+	switch {
+	case hasEffort:
+		if hasToggle {
+			levels = append(levels, "none")
+		}
+		levels = append(levels, effortValues...)
+		if len(effortValues) > 0 {
+			defaultEffort = effortValues[0]
+		}
+	case hasToggle:
+		// Toggle-only models: map to a simple on/off using "none" and "high".
+		levels = []string{"none", "high"}
+		defaultEffort = "high"
+	default:
+		// Always reasoning (budget_tokens only, or no options). No levels.
+	}
+	return levels, defaultEffort
+}
+
 func main() {
 	modelsResp, err := fetchFriendliModels()
 	if err != nil {
@@ -150,17 +195,21 @@ func main() {
 			continue
 		}
 
+		levels, defaultEffort := reasoningLevels(model.ReasoningOptions)
+
 		m := catwalk.Model{
-			ID:                 model.ID,
-			Name:               displayName(model.ID),
-			CostPer1MIn:        parsePrice(model.Pricing.Input),
-			CostPer1MOut:       parsePrice(model.Pricing.Output),
-			CostPer1MInCached:  parsePrice(model.Pricing.InputCacheRead),
-			CostPer1MOutCached: 0,
-			ContextWindow:      model.ContextLength,
-			DefaultMaxTokens:   model.MaxCompletionTokens,
-			CanReason:          model.Reasoning,
-			SupportsImages:     hasModality(model, "image"),
+			ID:                     model.ID,
+			Name:                   displayName(model.ID),
+			CostPer1MIn:            parsePrice(model.Pricing.Input),
+			CostPer1MOut:           parsePrice(model.Pricing.Output),
+			CostPer1MInCached:      parsePrice(model.Pricing.InputCacheRead),
+			CostPer1MOutCached:     0,
+			ContextWindow:          model.ContextLength,
+			DefaultMaxTokens:       model.MaxCompletionTokens,
+			CanReason:              model.Reasoning,
+			ReasoningLevels:        levels,
+			DefaultReasoningEffort: defaultEffort,
+			SupportsImages:         hasModality(model, "image"),
 		}
 
 		friendliProvider.Models = append(friendliProvider.Models, m)
