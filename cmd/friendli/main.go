@@ -128,40 +128,31 @@ func displayName(id string) string {
 //   - {"type": "effort", "values": [...]} — explicit effort levels the API accepts
 //   - {"type": "budget_tokens", "min": -1, "max": N} — thinking budget in tokens
 //
-// Mapping to catwalk:
-//   - effort + toggle: levels = ["none"] + effort_values, default = first effort value
-//   - effort only:      levels = effort_values, default = first effort value
-//   - toggle + budget:  levels = ["none", "high"], default = "high"
-//   - budget only:      no levels (always reasoning, nothing to toggle)
+// Only models with an "effort" option get reasoning_levels, because catwalk's
+// reasoning_levels map to reasoning_effort values that Crush sends to the API.
+// Toggle-only and budget-only models do not accept reasoning_effort, so they
+// get no levels — Crush controls them via the Think toggle instead.
 func reasoningLevels(opts []ReasoningOpt) (levels []string, defaultEffort string) {
-	var hasToggle, hasEffort bool
+	var hasToggle bool
 	var effortValues []string
 	for _, o := range opts {
 		switch o.Type {
 		case "toggle":
 			hasToggle = true
 		case "effort":
-			hasEffort = true
 			effortValues = o.Values
 		}
 	}
 
-	switch {
-	case hasEffort:
-		if hasToggle {
-			levels = append(levels, "none")
-		}
-		levels = append(levels, effortValues...)
-		if len(effortValues) > 0 {
-			defaultEffort = effortValues[0]
-		}
-	case hasToggle:
-		// Toggle-only models: map to a simple on/off using "none" and "high".
-		levels = []string{"none", "high"}
-		defaultEffort = "high"
-	default:
-		// Always reasoning (budget_tokens only, or no options). No levels.
+	if len(effortValues) == 0 {
+		return nil, ""
 	}
+
+	if hasToggle {
+		levels = append(levels, "none")
+	}
+	levels = append(levels, effortValues...)
+	defaultEffort = effortValues[0]
 	return levels, defaultEffort
 }
 
