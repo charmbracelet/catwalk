@@ -59,11 +59,6 @@ type ModelsResponse struct {
 }
 
 func fetchFriendliModels() (*ModelsResponse, error) {
-	apiKey := os.Getenv("FRIENDLI_API_KEY")
-	if apiKey == "" {
-		return nil, fmt.Errorf("FRIENDLI_API_KEY environment variable is not set")
-	}
-
 	client := &http.Client{Timeout: 30 * time.Second}
 	req, _ := http.NewRequestWithContext(
 		context.Background(),
@@ -72,7 +67,9 @@ func fetchFriendliModels() (*ModelsResponse, error) {
 		nil,
 	)
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
-	req.Header.Set("Authorization", "Bearer "+apiKey)
+	if apiKey := os.Getenv("FRIENDLI_API_KEY"); apiKey != "" {
+		req.Header.Set("Authorization", "Bearer "+apiKey)
+	}
 
 	resp, err := client.Do(req)
 	if err != nil {
@@ -123,15 +120,10 @@ func displayName(id string) string {
 
 // reasoningLevels maps Friendli reasoning_options to catwalk reasoning_levels.
 //
-// Friendli reasoning_options can contain:
-//   - {"type": "toggle"} — on/off control via chat_template_kwargs.enable_thinking
-//   - {"type": "effort", "values": [...]} — explicit effort levels the API accepts
-//   - {"type": "budget_tokens", "min": -1, "max": N} — thinking budget in tokens
-//
 // Only models with an "effort" option get reasoning_levels, because catwalk's
-// reasoning_levels map to reasoning_effort values that Crush sends to the API.
-// Toggle-only and budget-only models do not accept reasoning_effort, so they
-// get no levels — Crush controls them via the Think toggle instead.
+// reasoning_levels correspond to reasoning_effort values that Crush sends to
+// the API. Toggle-only and budget-only models do not accept reasoning_effort,
+// so they get no levels — Crush controls them via the Think toggle instead.
 func reasoningLevels(opts []ReasoningOpt) (levels []string, defaultEffort string) {
 	var hasToggle bool
 	var effortValues []string
