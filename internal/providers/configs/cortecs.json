@@ -8,6 +8,24 @@
   "default_small_model_id": "glm-4.7-flash",
   "models": [
     {
+      "id": "deepseek-v4-flash-0731",
+      "name": "deepseek-v4-flash-0731",
+      "cost_per_1m_in": 0.224,
+      "cost_per_1m_out": 0.269,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "kimi-k3",
       "name": "kimi-k3",
       "cost_per_1m_in": 2.693,
@@ -566,24 +584,6 @@
       "supports_attachments": true
     },
     {
-      "id": "nemotron-3-super-120b-a12b",
-      "name": "nemotron-3-super-120b-a12b",
-      "cost_per_1m_in": 0.266,
-      "cost_per_1m_out": 0.799,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
       "id": "qwen3-coder-next",
       "name": "qwen3-coder-next",
       "cost_per_1m_in": 0.15,
@@ -610,24 +610,6 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 202752,
       "default_max_tokens": 20275,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "deepseek-chat-v3.1",
-      "name": "deepseek-chat-v3.1",
-      "cost_per_1m_in": 0.177,
-      "cost_per_1m_out": 0.71,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 164000,
-      "default_max_tokens": 16400,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -832,8 +814,8 @@
     {
       "id": "qwen3-vl-235b-a22b",
       "name": "qwen3-vl-235b-a22b",
-      "cost_per_1m_in": 0.186,
-      "cost_per_1m_out": 1.686,
+      "cost_per_1m_in": 0.554,
+      "cost_per_1m_out": 2.8,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
@@ -1088,42 +1070,6 @@
       "supports_attachments": true
     },
     {
-      "id": "magistral-small-2509",
-      "name": "magistral-small-2509",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 1.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 12800,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "magistral-medium-2509",
-      "name": "magistral-medium-2509",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 12800,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "hermes-4-70b",
       "name": "hermes-4-70b",
       "cost_per_1m_in": 0.116,
@@ -1156,8 +1102,8 @@
     {
       "id": "gpt-oss-120b",
       "name": "gpt-oss-120b",
-      "cost_per_1m_in": 0.035,
-      "cost_per_1m_out": 0.177,
+      "cost_per_1m_in": 0.08,
+      "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131000,
@@ -1288,8 +1234,8 @@
     {
       "id": "qwen3-coder-30b-a3b-instruct",
       "name": "qwen3-coder-30b-a3b-instruct",
-      "cost_per_1m_in": 0.053,
-      "cost_per_1m_out": 0.222,
+      "cost_per_1m_in": 0.06,
+      "cost_per_1m_out": 0.22,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
@@ -1474,18 +1420,6 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 12800,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "mistral-small-2506",
-      "name": "mistral-small-2506",
-      "cost_per_1m_in": 0.1,
-      "cost_per_1m_out": 0.3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -1682,8 +1616,8 @@
       "cost_per_1m_out": 0.13,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
+      "context_window": 128000,
+      "default_max_tokens": 12800,
       "can_reason": false,
       "supports_attachments": false
     },
