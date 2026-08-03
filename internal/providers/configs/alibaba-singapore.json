@@ -113,7 +113,7 @@
       "context_window": 1000000,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "glm-5.2",
