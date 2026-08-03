@@ -28,9 +28,9 @@
     {
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
-      "cost_per_1m_in": 0.0945,
-      "cost_per_1m_out": 0.189,
-      "cost_per_1m_in_cached": 0.0189,
+      "cost_per_1m_in": 0.0805,
+      "cost_per_1m_out": 0.161,
+      "cost_per_1m_in_cached": 0.0165,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 393216,
