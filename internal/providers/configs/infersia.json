@@ -1,0 +1,76 @@
+{
+  "name": "Infersia",
+  "id": "infersia",
+  "api_key": "$INFERSIA_API_KEY",
+  "api_endpoint": "https://api.infersia.com/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "deepseek/deepseek-v4-flash-0731",
+  "default_small_model_id": "qwen/qwen3-8b",
+  "models": [
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "name": "DeepSeek V4 Flash",
+      "cost_per_1m_in": 0.02,
+      "cost_per_1m_out": 0.04,
+      "cost_per_1m_in_cached": 0.006,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "max"
+      ],
+      "default_reasoning_effort": "none",
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen/qwen3-14b",
+      "name": "Qwen3 14B",
+      "cost_per_1m_in": 0.09,
+      "cost_per_1m_out": 0.22,
+      "cost_per_1m_in_cached": 0.0225,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 16384,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen/qwen3-8b",
+      "name": "Qwen3 8B",
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.15,
+      "cost_per_1m_in_cached": 0.0125,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 40960,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen/qwen3.6-35b-a3b",
+      "name": "Qwen3.6 35B A3B",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.9,
+      "cost_per_1m_in_cached": 0.025,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "stepfun-ai/step-3.7-flash",
+      "name": "Step 3.7 Flash",
+      "cost_per_1m_in": 0.18,
+      "cost_per_1m_out": 1.05,
+      "cost_per_1m_in_cached": 0.036,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    }
+  ]
+}
