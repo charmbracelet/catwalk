@@ -42,11 +42,9 @@ jobs:
         env:
           BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
 
-      # Friendli: reasoning_options (effort) not yet returned by the API.
-      # Uncomment once the endpoint exposes effort levels.
-      # - name: Friendli
-      #   run: go run ./cmd/friendli/main.go
-      #   continue-on-error: true
+      - name: Friendli
+        run: go run ./cmd/friendli/main.go
+        continue-on-error: true
 
       - name: Neuralwatt
         run: go run ./cmd/neuralwatt/main.go
