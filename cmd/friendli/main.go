@@ -166,9 +166,11 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
-		// Skip deprecated models.
+		// Skip models whose deprecation date has passed.
 		if model.DeprecationDate != nil {
-			continue
+			if depTime, err := time.Parse(time.RFC3339, *model.DeprecationDate); err == nil && time.Now().After(depTime) {
+				continue
+			}
 		}
 		// Skip models without text input or tool calling.
 		if !hasModality(model, "text") {
