@@ -40,7 +40,8 @@ type Pricing struct {
 
 // Architecture describes the modalities a model accepts.
 type Architecture struct {
-	InputModalities []string `json:"input_modalities"`
+	InputModalities  []string `json:"input_modalities"`
+	OutputModalities []string `json:"output_modalities"`
 }
 
 // ModelsResponse is the response structure for the Infersia models API.
@@ -128,6 +129,14 @@ func main() {
 		// The ":free" variants are rate-limited rather than differently
 		// capable, and listing both would show the same model twice.
 		if strings.HasSuffix(model.ID, ":free") {
+			continue
+		}
+
+		// Crush sends chat completions, so only models that return text
+		// belong in this list. The catalogue also carries rerankers, which
+		// answer a different endpoint entirely — listing one here would put
+		// a model in the picker that returns 404 to everything Crush sends.
+		if !slices.Contains(model.Architecture.OutputModalities, "text") {
 			continue
 		}
 
