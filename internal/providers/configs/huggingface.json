@@ -5,7 +5,7 @@
   "api_endpoint": "https://router.huggingface.co/v1",
   "type": "openai-compat",
   "default_large_model_id": "zai-org/GLM-5.2:fireworks-ai",
-  "default_small_model_id": "google/gemma-4-31B-it:cerebras",
+  "default_small_model_id": "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
   "models": [
     {
       "id": "MiniMaxAI/MiniMax-M2.7:fireworks-ai",
@@ -20,13 +20,25 @@
       "supports_attachments": false
     },
     {
-      "id": "MiniMaxAI/MiniMax-M3:fireworks-ai",
-      "name": "MiniMaxAI/MiniMax-M3 (fireworks-ai)",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
+      "id": "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
+      "name": "deepseek-ai/DeepSeek-V4-Flash (fireworks-ai)",
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.28,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 512000,
+      "context_window": 1048576,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731:fireworks-ai",
+      "name": "deepseek-ai/DeepSeek-V4-Flash-0731 (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
@@ -39,18 +51,6 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "google/gemma-4-31B-it:cerebras",
-      "name": "google/gemma-4-31B-it (cerebras)",
-      "cost_per_1m_in": 0.99,
-      "cost_per_1m_out": 1.49,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
       "supports_attachments": false
