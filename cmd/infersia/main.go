@@ -132,11 +132,22 @@ func main() {
 			continue
 		}
 
-		// Crush sends chat completions, so only models that return text
-		// belong in this list. The catalogue also carries rerankers, which
-		// answer a different endpoint entirely — listing one here would put
-		// a model in the picker that returns 404 to everything Crush sends.
-		if !slices.Contains(model.Architecture.OutputModalities, "text") {
+		// Crush sends chat completions, so a model belongs in this list only
+		// if it takes text in AND returns text out. Both sides are load-bearing.
+		//
+		// Testing the output alone was not enough. It correctly rejected the
+		// rerankers this filter was written for, but speech-to-text is
+		// audio->text: its output modality IS text, so it passed, and Crush
+		// would have listed a transcription model, sent it a chat completion
+		// and got a 404 — with a context window of 448, which is a decoder-token
+		// ceiling for one 30-second audio chunk and has nothing to do with a
+		// prompt.
+		//
+		// A two-sided test rather than a skip-list of known-bad modalities: a
+		// skip-list is what let this through, and it fails open on whatever
+		// modality comes next.
+		if !slices.Contains(model.Architecture.InputModalities, "text") ||
+			!slices.Contains(model.Architecture.OutputModalities, "text") {
 			continue
 		}
 
