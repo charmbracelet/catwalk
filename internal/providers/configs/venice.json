@@ -1420,18 +1420,6 @@
       "supports_attachments": true
     },
     {
-      "id": "e2ee-qwen3-30b-a3b-p",
-      "name": "Qwen3 30B A3B",
-      "cost_per_1m_in": 0.19,
-      "cost_per_1m_out": 0.69,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "qwen3-vl-235b-a22b",
       "name": "Qwen3 VL 235B",
       "cost_per_1m_in": 0.21,
