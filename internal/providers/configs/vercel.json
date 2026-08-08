@@ -405,8 +405,9 @@
       "default_max_tokens": 384000,
       "can_reason": true,
       "reasoning_levels": [
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "default_reasoning_effort": "high",
       "supports_attachments": false
@@ -422,8 +423,9 @@
       "default_max_tokens": 384000,
       "can_reason": true,
       "reasoning_levels": [
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "default_reasoning_effort": "high",
       "supports_attachments": false
@@ -439,8 +441,9 @@
       "default_max_tokens": 1048600,
       "can_reason": true,
       "reasoning_levels": [
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "default_reasoning_effort": "high",
       "supports_attachments": false

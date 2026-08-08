@@ -104,7 +104,7 @@ func main() {
 		if goModel.Reasoning {
 			switch {
 			case strings.Contains(goModel.ID, "deepseek-v4"):
-				reasoningLevels = []string{"high", "xhigh"}
+				reasoningLevels = []string{"low", "high", "max"}
 				defaultReasoningEffort = "high"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}
