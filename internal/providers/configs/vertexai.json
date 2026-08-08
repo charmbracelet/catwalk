@@ -33,7 +33,8 @@
       "can_reason": true,
       "reasoning_levels": ["low", "medium", "high"],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.1-pro-preview-customtools",
@@ -47,7 +48,8 @@
       "can_reason": true,
       "reasoning_levels": ["low", "medium", "high"],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "gemini-3-pro-preview",
@@ -61,7 +63,8 @@
       "can_reason": true,
       "reasoning_levels": ["low", "high"],
       "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "gemini-3-flash-preview",
@@ -75,7 +78,8 @@
       "can_reason": true,
       "reasoning_levels": ["minimal", "low", "medium", "high"],
       "default_reasoning_effort": "minimal",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "gemini-2.5-pro",
@@ -87,7 +91,8 @@
       "context_window": 1048576,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "gemini-2.5-flash",
@@ -99,7 +104,8 @@
       "context_window": 1048576,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "claude-sonnet-4-6",
@@ -113,7 +119,8 @@
       "can_reason": true,
       "reasoning_levels": ["low", "medium", "high", "max"],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "claude-sonnet-4-5-20250929",
@@ -125,7 +132,8 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "claude-opus-4-6",
@@ -139,7 +147,8 @@
       "can_reason": true,
       "reasoning_levels": ["low", "medium", "high", "max"],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "claude-opus-4-5-20251101",
@@ -151,7 +160,8 @@
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     },
     {
       "id": "claude-haiku-4-5-20251001",
@@ -164,7 +174,8 @@
       "default_max_tokens": 32000,
       "can_reason": true,
       "has_reasoning_efforts": false,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "max_attachments": 10
     }
   ]
 }
