@@ -27,6 +27,21 @@ jobs:
     permissions:
       id-token: write
     steps:
+      - name: notify deploy started
+        continue-on-error: true
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_DEPLOY_BOT_TOKEN }}
+          TEXT: >-
+            :rocket: catwalk deploy started —
+            `${{ github.ref_name }}` @ `${{ github.sha }}`
+            by ${{ github.actor }}
+            (<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|run>)
+        run: |
+          jq -n --arg channel "#catwalk-deploy-staging" --arg text "$TEXT" \
+            '{channel: $channel, text: $text}' \
+          | curl -sS -X POST https://slack.com/api/chat.postMessage \
+              -H "Authorization: Bearer $SLACK_TOKEN" \
+              -H "Content-Type: application/json" -d @-
       - uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Update
@@ -52,3 +67,30 @@ jobs:
             --image=us-east1-docker.pkg.dev/devel-416316/charm/catwalk:${{ github.sha }}-devel \
             --quiet
         name: deploy to cloud run
+
+  notify:
+    name: Notify deploy result
+    runs-on: ubuntu-latest
+    needs: [goreleaser, deploy]
+    if: always()
+    steps:
+      - name: notify deploy result
+        continue-on-error: true
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_DEPLOY_BOT_TOKEN }}
+          BUILD_RESULT: ${{ needs.goreleaser.result }}
+          DEPLOY_RESULT: ${{ needs.deploy.result }}
+          REF_NAME: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "$BUILD_RESULT" = "success" ] && [ "$DEPLOY_RESULT" = "success" ]; then
+            TEXT=":white_check_mark: catwalk deploy succeeded — \`$REF_NAME\` @ \`$SHA\` (<$RUN_URL|run>)"
+          else
+            TEXT=":x: catwalk deploy FAILED — \`$REF_NAME\` @ \`$SHA\` (build: $BUILD_RESULT, deploy: $DEPLOY_RESULT) (<$RUN_URL|run>)"
+          fi
+          jq -n --arg channel "#catwalk-deploy-staging" --arg text "$TEXT" \
+            '{channel: $channel, text: $text}' \
+          | curl -sS -X POST https://slack.com/api/chat.postMessage \
+              -H "Authorization: Bearer $SLACK_TOKEN" \
+              -H "Content-Type: application/json" -d @-
