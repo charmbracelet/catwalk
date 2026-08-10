@@ -131,7 +131,7 @@ func main() {
 		)
 		if canReason {
 			switch model.ID {
-			case "deepseek-ai/DeepSeek-V4-Pro", "openai/gpt-oss-120b":
+			case "deepseek-ai/DeepSeek-V4-Flash-0731", "deepseek-ai/DeepSeek-V4-Pro", "openai/gpt-oss-120b":
 				// Baseten supports the full reasoning_effort range for
 				// DeepSeek V4 Pro and GPT OSS 120B.
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
