@@ -227,6 +227,27 @@
       "supports_attachments": true
     },
     {
+      "id": "anthropic/claude-opus-5-fast",
+      "name": "Claude Opus 5 (Fast)",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
+      "cost_per_1m_in_cached": 12.5,
+      "cost_per_1m_out_cached": 1,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "anthropic/claude-sonnet-4",
       "name": "Claude Sonnet 4",
       "cost_per_1m_in": 3,
@@ -414,10 +435,10 @@
     {
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
-      "cost_per_1m_in": 0.13,
-      "cost_per_1m_out": 0.26,
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.028,
+      "cost_per_1m_out_cached": 0.04,
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -1291,18 +1312,6 @@
       "supports_attachments": true
     },
     {
-      "id": "openai/gpt-5.1-instant",
-      "name": "GPT-5.1 Instant",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.13,
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "openai/gpt-5.1-codex",
       "name": "GPT-5.1-Codex",
       "cost_per_1m_in": 1.25,
@@ -1318,18 +1327,6 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "openai/gpt-5.3-chat",
-      "name": "GPT-5.3 Chat",
-      "cost_per_1m_in": 1.75,
-      "cost_per_1m_out": 14,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.175,
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -1495,13 +1492,13 @@
       "supports_attachments": true
     },
     {
-      "id": "google/gemma-4-26b-a4b-it",
-      "name": "Gemma 4 26B A4B IT",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.6,
+      "id": "google/gemma-4-31b-it",
+      "name": "Gemma 4 31B IT",
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.015,
-      "context_window": 262144,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
       "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [
@@ -1513,13 +1510,13 @@
       "supports_attachments": true
     },
     {
-      "id": "google/gemma-4-31b-it",
-      "name": "Gemma 4 31B IT",
-      "cost_per_1m_in": 0.14,
-      "cost_per_1m_out": 0.4,
+      "id": "google/gemma-4-26b-a4b-it",
+      "name": "Google Gemma 4 26B A4B",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
+      "cost_per_1m_out_cached": 0.015,
+      "context_window": 262144,
       "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [

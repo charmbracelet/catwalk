@@ -604,8 +604,8 @@
     {
       "id": "openai-gpt-56-luna",
       "name": "GPT-5.6 Luna",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in": 0.26667,
+      "cost_per_1m_out": 1.6,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
@@ -622,8 +622,8 @@
     {
       "id": "openai-gpt-56-luna-pro",
       "name": "GPT-5.6 Luna Pro",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in": 0.26667,
+      "cost_per_1m_out": 1.6,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
