@@ -3158,6 +3158,18 @@
       "supports_attachments": false
     },
     {
+      "id": "lfm-2.5-2.6b-free",
+      "name": "Lfm 2.5 2.6b (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "ling-3.0-flash-free",
       "name": "Ling 3.0 Flash (free)",
       "cost_per_1m_in": 0,

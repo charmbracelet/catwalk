@@ -1066,8 +1066,8 @@
     {
       "id": "xiaomi-mimo-v2-5",
       "name": "MiMo-V2.5",
-      "cost_per_1m_in": 0.14,
-      "cost_per_1m_out": 0.28,
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 2,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
