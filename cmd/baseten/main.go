@@ -131,17 +131,24 @@ func main() {
 		)
 		if canReason {
 			switch model.ID {
-			case "deepseek-ai/DeepSeek-V4-Pro", "openai/gpt-oss-120b":
+			case "deepseek-ai/DeepSeek-V4-Flash-0731", "deepseek-ai/DeepSeek-V4-Pro", "openai/gpt-oss-120b":
 				// Baseten supports the full reasoning_effort range for
 				// DeepSeek V4 Pro and GPT OSS 120B.
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
-				defaultReasoning = "medium"
+				defaultReasoning = "medium" //nolint:goconst
 			case "zai-org/GLM-5.2":
 				// GLM 5.2 supports a reduced reasoning_effort range.
 				reasoningLevels = []string{"none", "high", "max"}
 				defaultReasoning = "high"
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
+			case "moonshotai/Kimi-K3":
+				// Kimi K3 always thinks; effort is low/high/max, defaulting to max.
+				reasoningLevels = []string{"low", "high", "max"}
+				defaultReasoning = "max"
+			case "thinkingmachines/inkling":
+				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
+				defaultReasoning = "medium"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoning = "medium"
@@ -174,6 +181,9 @@ func main() {
 	}
 
 	slices.SortFunc(basetenProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

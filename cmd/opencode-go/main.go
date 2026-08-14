@@ -104,7 +104,7 @@ func main() {
 		if goModel.Reasoning {
 			switch {
 			case strings.Contains(goModel.ID, "deepseek-v4"):
-				reasoningLevels = []string{"high", "xhigh"}
+				reasoningLevels = []string{"low", "high", "max"}
 				defaultReasoningEffort = "high"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}
@@ -129,7 +129,10 @@ func main() {
 		goProvider.Models = append(goProvider.Models, m)
 	}
 
-	slices.SortFunc(goProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(goProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

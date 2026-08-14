@@ -157,7 +157,10 @@ func main() {
 			case strings.HasPrefix(model.ID, "anthropic/"):
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
 				defaultReasoning = "medium"
-			case strings.HasPrefix(model.ID, "deepseek/deepseek-v4") || model.ID == "zai/glm-5.2":
+			case strings.HasPrefix(model.ID, "deepseek/deepseek-v4"):
+				reasoningLevels = []string{"low", "high", "max"}
+				defaultReasoning = "high"
+			case model.ID == "zai/glm-5.2":
 				reasoningLevels = []string{"high", "xhigh"}
 				defaultReasoning = "high"
 			default:
@@ -187,7 +190,10 @@ func main() {
 		vercelProvider.Models = append(vercelProvider.Models, m)
 	}
 
-	slices.SortFunc(vercelProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(vercelProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

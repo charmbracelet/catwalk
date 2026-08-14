@@ -8,6 +8,20 @@
   "default_small_model_id": "gemini-3-flash-preview",
   "models": [
     {
+      "id": "gemini-3.6-flash",
+      "name": "Gemini 3.6 Flash",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.15,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": ["minimal", "low", "medium", "high"],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "cost_per_1m_in": 1.5,

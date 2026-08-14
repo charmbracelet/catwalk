@@ -58,6 +58,7 @@ tasks:
     aliases: [generate, gen]
     cmds:
       - task: gen:aihubmix
+      - task: gen:atlascloud
       - task: gen:avian
       - task: gen:baseten
       - task: gen:chutes
@@ -79,6 +80,11 @@ tasks:
     desc: Generate aihubmix provider configurations
     cmds:
       - go run cmd/aihubmix/main.go
+
+  gen:atlascloud:
+    desc: Generate Atlas Cloud provider configurations
+    cmds:
+      - go run cmd/atlascloud/main.go
 
   gen:avian:
     desc: Generate avian provider configurations

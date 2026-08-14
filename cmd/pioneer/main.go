@@ -121,6 +121,9 @@ func main() {
 	}
 
 	slices.SortFunc(models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

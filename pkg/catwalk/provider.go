@@ -60,6 +60,7 @@ const (
 	InferenceProviderBaseten          InferenceProvider = "baseten"
 	InferenceProviderMoonshot         InferenceProvider = "moonshot"
 	InferenceProviderUmans            InferenceProvider = "umans"
+	InferenceProviderAtlasCloud       InferenceProvider = "atlascloud"
 )
 
 // Provider represents an AI provider configuration.
@@ -139,7 +140,11 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderFireworks,
 		InferenceProviderBaseten,
 		InferenceProviderMoonshot,
+<<<<<<< HEAD
 		InferenceProviderUmans,
+=======
+		InferenceProviderAtlasCloud,
+>>>>>>> upstream/main
 	}
 }
 

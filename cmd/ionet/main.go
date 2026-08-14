@@ -109,7 +109,10 @@ func main() {
 		provider.Models = append(provider.Models, m)
 	}
 
-	slices.SortFunc(provider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(provider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

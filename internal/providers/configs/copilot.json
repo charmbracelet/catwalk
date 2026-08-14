@@ -79,6 +79,18 @@
       "supports_attachments": true
     },
     {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 264000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "claude-sonnet-4.5",
       "name": "Claude Sonnet 4.5",
       "cost_per_1m_in": 0,
@@ -115,30 +127,6 @@
       "supports_attachments": true
     },
     {
-      "id": "gemini-2.5-pro",
-      "name": "Gemini 2.5 Pro",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 64000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "gemini-3-flash-preview",
-      "name": "Gemini 3 Flash (Preview)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 64000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "gemini-3.1-pro-preview",
       "name": "Gemini 3.1 Pro",
       "cost_per_1m_in": 0,
@@ -153,6 +141,18 @@
     {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 264000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gemini-3.6-flash",
+      "name": "Gemini 3.6 Flash",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
@@ -295,6 +295,54 @@
       "supports_attachments": true
     },
     {
+      "id": "gpt-5.6-luna",
+      "name": "GPT-5.6 Luna",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 328000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "name": "GPT-5.6 Sol",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "name": "GPT-5.6 Terra",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "grok-4.5",
+      "name": "Grok 4.5",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 328000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "cost_per_1m_in": 0,
@@ -303,6 +351,18 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 32000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
       "can_reason": false,
       "supports_attachments": true
     }
