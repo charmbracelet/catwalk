@@ -298,8 +298,8 @@
     {
       "id": "gemini-3.5-flash",
       "name": "gemini-3.5-flash",
-      "cost_per_1m_in": 1.331,
-      "cost_per_1m_out": 7.987,
+      "cost_per_1m_in": 1.48,
+      "cost_per_1m_out": 8.886,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
