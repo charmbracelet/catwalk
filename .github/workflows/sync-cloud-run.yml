@@ -20,6 +20,7 @@ jobs:
     permissions:
       id-token: write # for GCP Workload Identity Federation
       contents: read
+      packages: read # pull the release image from ghcr
     steps:
       - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
         name: gcp auth
@@ -32,6 +33,8 @@ jobs:
         name: setup crane
       - name: copy image ghcr -> prod artifact registry
         run: |
+          crane auth login ghcr.io -u ${{ github.actor }} --password-stdin \
+            <<< "${{ secrets.GITHUB_TOKEN }}"
           gcloud auth configure-docker us-east1-docker.pkg.dev --quiet
           crane copy \
             ghcr.io/charmbracelet/catwalk:${{ inputs.tag }} \
