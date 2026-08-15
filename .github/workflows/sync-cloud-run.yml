@@ -1,46 +1,22 @@
-name: deploy production
+name: sync cloud run
+
+# Manual escape hatch: copies a released image from ghcr to the prod
+# Artifact Registry and deploys it to Cloud Run. Same steps as the
+# deploy-cloud-run release job — use when a release deploy needs to be
+# re-run or rolled back to a specific tag.
 
 on:
-  push:
-    tags:
-      - v*.*.*
-
-concurrency:
-  group: goreleaser
-  cancel-in-progress: true
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to deploy (e.g. v0.51.27)"
+        required: true
+        type: string
 
 jobs:
-  goreleaser:
-    uses: charmbracelet/meta/.github/workflows/goreleaser.yml@main
-    with:
-      go_version: stable
-    secrets:
-      docker_username: ${{ secrets.DOCKERHUB_USERNAME }}
-      docker_token: ${{ secrets.DOCKERHUB_TOKEN }}
-      goreleaser_key: ${{ secrets.GORELEASER_KEY }}
-      gh_pat: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-
-  deploy:
-    name: Run deploy workflow
-    runs-on: ubuntu-latest
-    needs: [goreleaser]
-    steps:
-      - uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: Update
-          repo: charmbracelet/infra-prod
-          ref: main
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          inputs: |
-            {
-              "app": "catwalk",
-              "image": "ghcr.io/charmbracelet/catwalk:${{ github.ref_name }}"
-            }
-
-  deploy-cloud-run:
+  sync-cloud-run:
     name: Deploy to Cloud Run (prod)
     runs-on: ubuntu-latest
-    needs: [goreleaser]
     permissions:
       id-token: write # for GCP Workload Identity Federation
       contents: read
@@ -58,14 +34,14 @@ jobs:
         run: |
           gcloud auth configure-docker us-east1-docker.pkg.dev --quiet
           crane copy \
-            ghcr.io/charmbracelet/catwalk:${{ github.ref_name }} \
-            us-east1-docker.pkg.dev/infra-415616/charm/catwalk:${{ github.ref_name }}
+            ghcr.io/charmbracelet/catwalk:${{ inputs.tag }} \
+            us-east1-docker.pkg.dev/infra-415616/charm/catwalk:${{ inputs.tag }}
       - name: deploy to cloud run
         run: |
           gcloud run deploy catwalk \
             --project=infra-415616 \
             --region=us-east1 \
-            --image=us-east1-docker.pkg.dev/infra-415616/charm/catwalk:${{ github.ref_name }} \
+            --image=us-east1-docker.pkg.dev/infra-415616/charm/catwalk:${{ inputs.tag }} \
             --quiet
       - name: verify
         run: |
