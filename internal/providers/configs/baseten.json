@@ -36,7 +36,7 @@
       "cost_per_1m_out": 3.48,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.145,
-      "context_window": 262144,
+      "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
       "reasoning_levels": [
@@ -97,7 +97,7 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "zai-org/GLM-5.2-Fast",
@@ -115,7 +115,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "thinkingmachines/inkling",
