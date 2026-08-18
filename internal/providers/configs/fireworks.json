@@ -58,20 +58,6 @@
       "supports_attachments": false
     },
     {
-      "id": "accounts/fireworks/models/glm-5p1",
-      "name": "GLM 5.1",
-      "cost_per_1m_in": 1.40,
-      "cost_per_1m_out": 4.40,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.26,
-      "context_window": 202800,
-      "default_max_tokens": 131072,
-      "can_reason": true,
-      "reasoning_levels": ["high", "max"],
-      "default_reasoning_effort": "max",
-      "supports_attachments": false
-    },
-    {
       "id": "accounts/fireworks/models/kimi-k3",
       "name": "Kimi K3",
       "cost_per_1m_in": 3.00,
