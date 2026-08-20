@@ -8,6 +8,18 @@
   "default_small_model_id": "deepseek-ai/deepseek-v4-flash",
   "models": [
     {
+      "id": "deepseek-ai/DeepSeek-V3.1",
+      "name": "DeepSeek V3.1",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.95,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.13,
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
       "name": "DeepSeek V3.1 Terminus",
       "cost_per_1m_in": 0.3,
@@ -76,30 +88,6 @@
       "cost_per_1m_out_cached": 0.13,
       "context_window": 1048576,
       "default_max_tokens": 104857,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "deepseek-ai/deepseek-v4-pro-0813",
-      "name": "DeepSeek V4 Pro 0813",
-      "cost_per_1m_in": 1.32,
-      "cost_per_1m_out": 3.96,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.132,
-      "context_window": 1048576,
-      "default_max_tokens": 104857,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.1",
-      "name": "DeepSeek-V3.1",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 0.95,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.13,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -250,18 +238,6 @@
     {
       "id": "moonshotai/kimi-k2.6",
       "name": "Kimi K2.6",
-      "cost_per_1m_in": 0.95,
-      "cost_per_1m_out": 4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.16,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "moonshotai/kimi-k2.7-code",
-      "name": "Kimi K2.7 Code",
       "cost_per_1m_in": 0.95,
       "cost_per_1m_out": 4,
       "cost_per_1m_in_cached": 0,

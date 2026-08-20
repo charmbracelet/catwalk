@@ -123,7 +123,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 512000,
-      "default_max_tokens": 56500,
+      "default_max_tokens": 65500,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -880,10 +880,10 @@
     {
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
-      "cost_per_1m_in": 0.154,
-      "cost_per_1m_out": 0.308,
+      "cost_per_1m_in": 0.142,
+      "cost_per_1m_out": 0.284,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.00308,
+      "cost_per_1m_out_cached": 0.0284,
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -916,10 +916,10 @@
     {
       "id": "deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
-      "cost_per_1m_in": 0.464,
-      "cost_per_1m_out": 0.928,
+      "cost_per_1m_in": 1.69,
+      "cost_per_1m_out": 3.38,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.00385,
+      "cost_per_1m_out_cached": 0.14027,
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -1925,18 +1925,6 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "glm-5.2-free",
-      "name": "GLM 5.2 (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 12800,
-      "can_reason": false,
       "supports_attachments": false
     },
     {
@@ -4276,10 +4264,10 @@
     {
       "id": "qwen3.7-flash",
       "name": "Qwen3.7 Flash",
-      "cost_per_1m_in": 0.282,
-      "cost_per_1m_out": 1.128,
-      "cost_per_1m_in_cached": 0.3525,
-      "cost_per_1m_out_cached": 0.0564,
+      "cost_per_1m_in": 0.0282,
+      "cost_per_1m_out": 0.1128,
+      "cost_per_1m_in_cached": 0.03525,
+      "cost_per_1m_out_cached": 0.00564,
       "context_window": 991000,
       "default_max_tokens": 64000,
       "can_reason": true,
