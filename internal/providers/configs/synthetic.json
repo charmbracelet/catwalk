@@ -92,6 +92,18 @@
       "supports_attachments": true
     },
     {
+      "id": "hf:Qwen/Qwen3.8-27B",
+      "name": "Qwen3.8 27B",
+      "cost_per_1m_in": 0.45,
+      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in_cached": 0.09,
+      "cost_per_1m_out_cached": 0.09,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "hf:openai/gpt-oss-120b",
       "name": "gpt oss 120b",
       "cost_per_1m_in": 0.1,
