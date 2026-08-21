@@ -22,6 +22,21 @@ jobs:
       contents: read
       packages: read # pull the release image from ghcr
     steps:
+      - name: notify sync started
+        continue-on-error: true
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_DEPLOY_BOT_TOKEN }}
+          TEXT: >-
+            :wrench: catwalk MANUAL prod sync started —
+            `${{ inputs.tag }}`
+            by ${{ github.actor }}
+            (<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|run>)
+        run: |
+          jq -n --arg channel "#catwalk-deploy-prod" --arg text "$TEXT" \
+            '{channel: $channel, text: $text}' \
+          | curl -sS -X POST https://slack.com/api/chat.postMessage \
+              -H "Authorization: Bearer $SLACK_TOKEN" \
+              -H "Content-Type: application/json" -d @-
       - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
         name: gcp auth
         with:
@@ -54,3 +69,22 @@ jobs:
             [ "$code" = "200" ] || { echo "$host health=$code"; exit 1; }
             echo "$host health=200"
           done
+      - name: notify sync result
+        if: always()
+        continue-on-error: true
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_DEPLOY_BOT_TOKEN }}
+          JOB_STATUS: ${{ job.status }}
+          TAG: ${{ inputs.tag }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "$JOB_STATUS" = "success" ]; then
+            TEXT=":white_check_mark: catwalk MANUAL prod sync succeeded — \`$TAG\`, healthy on both hosts (<$RUN_URL|run>)"
+          else
+            TEXT=":x: catwalk MANUAL prod sync FAILED — \`$TAG\` (status: $JOB_STATUS) (<$RUN_URL|run>)"
+          fi
+          jq -n --arg channel "#catwalk-deploy-prod" --arg text "$TEXT" \
+            '{channel: $channel, text: $text}' \
+          | curl -sS -X POST https://slack.com/api/chat.postMessage \
+              -H "Authorization: Bearer $SLACK_TOKEN" \
+              -H "Content-Type: application/json" -d @-
