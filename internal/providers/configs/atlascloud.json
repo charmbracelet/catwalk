@@ -92,6 +92,18 @@
       "supports_attachments": false
     },
     {
+      "id": "deepseek-ai/deepseek-v4-pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "cost_per_1m_in": 1.32,
+      "cost_per_1m_out": 3.96,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.132,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "zai-org/GLM-4.6",
       "name": "GLM 4.6",
       "cost_per_1m_in": 0.6,
