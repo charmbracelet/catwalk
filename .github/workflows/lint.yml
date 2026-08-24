@@ -8,5 +8,6 @@ jobs:
   lint:
     uses: charmbracelet/meta/.github/workflows/lint.yml@main
     with:
-      golangci_version: v2.9
+      golangci_version: v2.13.1
+      golangci_path: '.golangci.yml'
       os: '["ubuntu-latest"]'

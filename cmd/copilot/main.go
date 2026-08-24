@@ -159,7 +159,7 @@ func fetchCopilotModels() ([]Model, error) {
 	}
 
 	// Step 1: Fetch API token from the token endpoint
-	tokenURL := "https://api.github.com/copilot_internal/v2/token" //nolint:gosec
+	tokenURL := "https://api.github.com/copilot_internal/v2/token"
 	tokenReq, err := http.NewRequestWithContext(ctx, "GET", tokenURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("unable to create token request: %w", err)
