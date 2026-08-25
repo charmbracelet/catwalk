@@ -167,6 +167,12 @@ tasks:
       - go run cmd/xai/main.go
 
   update:
-    desc: Trigger the update workflow on GitHub
+    desc: Trigger the update workflow on GitHub (pass OPEN=1 to open the run in the browser)
     cmds:
       - gh workflow run update.yml
+      - |
+        if [ "{{.OPEN}}" = "1" ]; then
+          sleep 3
+          URL="$(gh run list --workflow=update.yml --limit=1 --json=url --jq='.[0].url')"
+          {{if eq OS "windows"}}start ""{{else if eq OS "darwin"}}open{{else}}xdg-open{{end}} "$URL"
+        fi
