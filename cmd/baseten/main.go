@@ -131,9 +131,13 @@ func main() {
 		)
 		if canReason {
 			switch model.ID {
-			case "deepseek-ai/DeepSeek-V4-Flash-0731", "deepseek-ai/DeepSeek-V4-Pro", "openai/gpt-oss-120b":
-				// Baseten supports the full reasoning_effort range for
-				// DeepSeek V4 Pro and GPT OSS 120B.
+			case "deepseek-ai/DeepSeek-V4-Flash", "deepseek-ai/DeepSeek-V4-Pro":
+				reasoningLevels = []string{"high", "xhigh"}
+				defaultReasoning = "high" //nolint:goconst
+			case "deepseek-ai/DeepSeek-V4-Flash-0731", "deepseek-ai/DeepSeek-V4-Pro-0813":
+				reasoningLevels = []string{"none", "low", "high", "max"}
+				defaultReasoning = "high" //nolint:goconst
+			case "openai/gpt-oss-120b":
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
 				defaultReasoning = "medium" //nolint:goconst
 			case "zai-org/GLM-5.2":
@@ -160,6 +164,8 @@ func main() {
 		case "zai-org/GLM-5.2", "moonshotai/Kimi-K2.7-Code":
 			// Reasoning burns tokens fast on these models; cap output.
 			maxTokens = 32768
+		case "deepseek-ai/DeepSeek-V4-Flash-0731":
+			maxTokens = 384000
 		}
 
 		m := catwalk.Model{
