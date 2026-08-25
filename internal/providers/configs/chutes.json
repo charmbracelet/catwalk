@@ -28,9 +28,9 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731-TEE",
       "name": "DeepSeek-V4-Flash-0731-TEE",
-      "cost_per_1m_in": 0.14,
-      "cost_per_1m_out": 0.28,
-      "cost_per_1m_in_cached": 0.014,
+      "cost_per_1m_in": 0.44,
+      "cost_per_1m_out": 1.32,
+      "cost_per_1m_in_cached": 0.044,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
       "default_max_tokens": 131072,

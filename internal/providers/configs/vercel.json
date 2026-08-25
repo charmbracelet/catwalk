@@ -490,10 +490,10 @@
     {
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
-      "cost_per_1m_in": 1.32,
-      "cost_per_1m_out": 3.96,
+      "cost_per_1m_in": 0.66,
+      "cost_per_1m_out": 1.98,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.132,
+      "cost_per_1m_out_cached": 0.066,
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -1303,14 +1303,32 @@
       "supports_attachments": false
     },
     {
+      "id": "openai/gpt-oss-safeguard-120b",
+      "name": "GPT OSS Safeguard 120B",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "openai/gpt-oss-safeguard-20b",
       "name": "GPT OSS Safeguard 20B",
-      "cost_per_1m_in": 0.075,
-      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in": 0.07,
+      "cost_per_1m_out": 0.2,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.037,
-      "context_window": 131072,
-      "default_max_tokens": 65536,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 16000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -2413,42 +2431,6 @@
       "supports_attachments": true
     },
     {
-      "id": "mistral/magistral-medium",
-      "name": "Magistral Medium 2509",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "mistral/magistral-small",
-      "name": "Magistral Small 2509",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 1.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "inception/mercury-2",
       "name": "Mercury 2",
       "cost_per_1m_in": 0.25,
@@ -2641,6 +2623,24 @@
       "supports_attachments": true
     },
     {
+      "id": "minimax/minimax-m3-free",
+      "name": "MiniMax M3 (Free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "minimax/minimax-m2.7",
       "name": "Minimax M2.7",
       "cost_per_1m_in": 0.3,
@@ -2649,6 +2649,24 @@
       "cost_per_1m_out_cached": 0.06,
       "context_window": 204800,
       "default_max_tokens": 131000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "minimax/minimax-m2.7-free",
+      "name": "Minimax M2.7 (Free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 196608,
+      "default_max_tokens": 196608,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -2901,30 +2919,12 @@
     {
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "Nemotron 3.5 Lightning 30B",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.2,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1000000,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "nvidia/nemotron-3.5-lightning-free",
-      "name": "Nemotron 3.5 Lightning 30B (Free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 262144,
+      "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -3577,18 +3577,6 @@
       "supports_attachments": false
     },
     {
-      "id": "arcee-ai/trinity-mini",
-      "name": "Trinity Mini",
-      "cost_per_1m_in": 0.045,
-      "cost_per_1m_out": 0.15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 131072,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "openai/o1",
       "name": "o1",
       "cost_per_1m_in": 15,
@@ -3649,24 +3637,6 @@
       "cost_per_1m_out": 80,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 200000,
-      "default_max_tokens": 100000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "openai/o3-deep-research",
-      "name": "o3-deep-research",
-      "cost_per_1m_in": 10,
-      "cost_per_1m_out": 40,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 2.5,
       "context_window": 200000,
       "default_max_tokens": 100000,
       "can_reason": true,
