@@ -139,7 +139,7 @@
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
-      "reasoning_levels": ["none", "high", "xhigh"],
+      "reasoning_levels": ["none", "low", "high", "max"],
       "default_reasoning_effort": "high",
       "supports_attachments": false
     },
@@ -167,7 +167,7 @@
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
-      "reasoning_levels": ["none", "low", "high", "xhigh"],
+      "reasoning_levels": ["none", "low", "high", "max"],
       "default_reasoning_effort": "high",
       "supports_attachments": false
     },
