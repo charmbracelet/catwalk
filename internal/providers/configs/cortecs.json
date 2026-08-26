@@ -496,8 +496,8 @@
     {
       "id": "mistral-medium-3.5",
       "name": "mistral-medium-3.5",
-      "cost_per_1m_in": 1.5,
-      "cost_per_1m_out": 5,
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 6.4,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
