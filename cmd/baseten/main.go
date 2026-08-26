@@ -141,9 +141,11 @@ func main() {
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
 				defaultReasoning = "medium" //nolint:goconst
 			case "zai-org/GLM-5.2":
-				// GLM 5.2 supports a reduced reasoning_effort range.
 				reasoningLevels = []string{"none", "high", "max"}
-				defaultReasoning = "high"
+				defaultReasoning = "max"
+			case "zai-org/GLM-5.3", "zai-org/GLM-5.3-Flash":
+				reasoningLevels = []string{"low", "high", "max"}
+				defaultReasoning = "max"
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
 			case "moonshotai/Kimi-K3":
