@@ -4,8 +4,8 @@
   "api_key": "$ALIBABA_SINGAPORE_API_KEY",
   "api_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
   "type": "openai-compat",
-  "default_large_model_id": "qwen3.6-plus",
-  "default_small_model_id": "qwen3.6-flash",
+  "default_large_model_id": "qwen3.8-max",
+  "default_small_model_id": "qwen3.8-flash",
   "models": [
     {
       "id": "qwen3.5-35b-a3b",
@@ -112,6 +112,18 @@
       "cost_per_1m_out_cached": 0.25,
       "context_window": 1000000,
       "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3.8-flash",
+      "name": "Qwen3.8-Flash",
+      "cost_per_1m_in": 0.16,
+      "cost_per_1m_out": 0.47,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.016,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "can_reason": true,
       "supports_attachments": true
     },
