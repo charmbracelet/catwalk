@@ -30,6 +30,9 @@ var basetenConfig []byte
 //go:embed configs/avian.json
 var avianConfig []byte
 
+//go:embed configs/synthorai.json
+var synthoraiConfig []byte
+
 //go:embed configs/azure.json
 var azureConfig []byte
 
@@ -152,6 +155,7 @@ var providerRegistry = []ProviderFunc{
 	atlasCloudProvider,
 	basetenProvider,
 	avianProvider,
+	synthoraiProvider,
 	azureProvider,
 	bedrockUnitedStatesProvider,
 	bedrockEuropeProvider,
@@ -222,6 +226,10 @@ func basetenProvider() catwalk.Provider {
 
 func avianProvider() catwalk.Provider {
 	return loadProviderFromConfig(avianConfig)
+}
+
+func synthoraiProvider() catwalk.Provider {
+	return loadProviderFromConfig(synthoraiConfig)
 }
 
 func azureProvider() catwalk.Provider {
