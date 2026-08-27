@@ -801,10 +801,10 @@
     {
       "id": "zai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
-      "cost_per_1m_in": 0.075,
-      "cost_per_1m_out": 0.25,
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.5,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.015,
+      "cost_per_1m_out_cached": 0.03,
       "context_window": 1000000,
       "default_max_tokens": 131000,
       "can_reason": true,
