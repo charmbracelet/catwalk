@@ -118,7 +118,7 @@
     {
       "id": "qwen3.8-flash",
       "name": "Qwen3.8-Flash",
-      "cost_per_1m_in": 0.16,
+      "cost_per_1m_in": 0.15,
       "cost_per_1m_out": 0.47,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.016,
