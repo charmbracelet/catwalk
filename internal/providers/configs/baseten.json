@@ -111,6 +111,24 @@
       "supports_attachments": true
     },
     {
+      "id": "zai-org/GLM-5.3",
+      "name": "GLM 5.3",
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.14,
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "max",
+      "supports_attachments": false
+    },
+    {
       "id": "zai-org/GLM-5.3-Flash",
       "name": "GLM 5.3 Flash",
       "cost_per_1m_in": 0.15,
