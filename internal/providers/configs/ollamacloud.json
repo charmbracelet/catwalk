@@ -1,0 +1,95 @@
+{
+  "name": "Ollama Cloud",
+  "id": "ollamacloud",
+  "type": "ollama-cloud",
+  "api_key": "",
+  "api_endpoint": "https://ollama.com",
+  "default_large_model_id": "gpt-oss:120b-cloud",
+  "default_small_model_id": "gpt-oss:20b-cloud",
+  "models": [
+    {
+      "id": "deepseek-v3.1:671b-cloud",
+      "name": "DeepSeek V3.1 671B",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-oss:20b-cloud",
+      "name": "GPT-OSS 20B",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-oss:120b-cloud",
+      "name": "GPT-OSS 120B",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k2:1t-cloud",
+      "name": "Kimi K2 1T",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3-coder:480b-cloud",
+      "name": "Qwen3 Coder 480B",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-4.6:cloud",
+      "name": "GLM 4.6",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "minimax-m2:cloud",
+      "name": "Minimax M2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 128000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}
