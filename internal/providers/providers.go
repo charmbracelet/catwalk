@@ -45,6 +45,9 @@ var cerebrasConfig []byte
 //go:embed configs/chutes.json
 var chutesConfig []byte
 
+//go:embed configs/coralbricks.json
+var coralBricksConfig []byte
+
 //go:embed configs/copilot.json
 var copilotConfig []byte
 
@@ -157,6 +160,7 @@ var providerRegistry = []ProviderFunc{
 	bedrockEuropeProvider,
 	cerebrasProvider,
 	chutesProvider,
+	coralBricksProvider,
 	copilotProvider,
 	cortecsProvider,
 	deepSeekProvider,
@@ -242,6 +246,10 @@ func cerebrasProvider() catwalk.Provider {
 
 func chutesProvider() catwalk.Provider {
 	return loadProviderFromConfig(chutesConfig)
+}
+
+func coralBricksProvider() catwalk.Provider {
+	return loadProviderFromConfig(coralBricksConfig)
 }
 
 func copilotProvider() catwalk.Provider {

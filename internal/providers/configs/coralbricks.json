@@ -1,0 +1,47 @@
+{
+  "name": "CoralBricks",
+  "id": "coralbricks",
+  "api_key": "$CORALBRICKS_API_KEY",
+  "api_endpoint": "https://inference.coralbricks.ai/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "glm-5.3-fp4",
+  "default_small_model_id": "gpt-oss-120b",
+  "models": [
+    {
+      "id": "glm-5.3-fp4",
+      "name": "GLM 5.3",
+      "cost_per_1m_in": 1.12,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "cost_per_1m_in": 0.12,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}
