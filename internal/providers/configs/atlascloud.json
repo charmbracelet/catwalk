@@ -140,18 +140,6 @@
       "supports_attachments": false
     },
     {
-      "id": "zai-org/glm-5-turbo",
-      "name": "GLM 5 Turbo",
-      "cost_per_1m_in": 1.2,
-      "cost_per_1m_out": 4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.24,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "zai-org/glm-5.1",
       "name": "GLM 5.1",
       "cost_per_1m_in": 1.26,
@@ -172,6 +160,18 @@
       "cost_per_1m_out_cached": 0.234,
       "context_window": 1048576,
       "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/glm-5.3",
+      "name": "GLM 5.3",
+      "cost_per_1m_in": 1.4,
+      "cost_per_1m_out": 4.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.26,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
       "can_reason": false,
       "supports_attachments": false
     },
@@ -294,18 +294,6 @@
       "default_max_tokens": 19660,
       "can_reason": false,
       "supports_attachments": false
-    },
-    {
-      "id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "name": "Qwen3 VL 235B A22B Thinking",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.5,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "can_reason": false,
-      "supports_attachments": true
     },
     {
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
