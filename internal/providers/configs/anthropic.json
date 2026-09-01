@@ -8,8 +8,22 @@
   "default_small_model_id": "claude-haiku-4-5-20251001",
   "models": [
     {
-      "id": "claude-mythos-5",
-      "name": "Claude Mythos 5",
+      "id": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
+      "cost_per_1m_in_cached": 12.5,
+      "cost_per_1m_out_cached": 0.25,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "medium", "high", "xhigh", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
       "cost_per_1m_in": 10,
       "cost_per_1m_out": 50,
       "cost_per_1m_in_cached": 12.5,
@@ -180,8 +194,22 @@
       "supports_attachments": true
     },
     {
-      "id": "claude-fable-5",
-      "name": "Claude Fable 5",
+      "id": "claude-mythos-5-1",
+      "name": "Claude Mythos 5.1",
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
+      "cost_per_1m_in_cached": 12.5,
+      "cost_per_1m_out_cached": 0.25,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "medium", "high", "xhigh", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-mythos-5",
+      "name": "Claude Mythos 5",
       "cost_per_1m_in": 10,
       "cost_per_1m_out": 50,
       "cost_per_1m_in_cached": 12.5,
