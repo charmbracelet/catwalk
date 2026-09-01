@@ -2551,6 +2551,24 @@
       "supports_attachments": false
     },
     {
+      "id": "xiaomi/mimo-v2.5-pro-ultraspeed",
+      "name": "MiMo V2.5 Pro UltraSpeed",
+      "cost_per_1m_in": 1.305,
+      "cost_per_1m_out": 2.61,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0108,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "minimax/minimax-m2",
       "name": "MiniMax M2",
       "cost_per_1m_in": 0.3,
