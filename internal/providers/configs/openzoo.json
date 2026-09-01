@@ -1,0 +1,47 @@
+{
+  "name": "OpenZoo",
+  "id": "openzoo",
+  "api_key": "$OPENZOO_API_KEY",
+  "api_endpoint": "https://api.openzoo.fun/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "z-ai/glm-5.3-flash",
+  "default_small_model_id": "qwen/qwen3.7-flash",
+  "models": [
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "cost_per_1m_in": 0.075,
+      "cost_per_1m_out": 0.25,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1310720,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen/qwen3.7-flash",
+      "name": "Qwen 3.7 Flash",
+      "cost_per_1m_in": 0.03,
+      "cost_per_1m_out": 0.13,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "cost_per_1m_in": 0.08,
+      "cost_per_1m_out": 0.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}
