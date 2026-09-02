@@ -127,10 +127,10 @@
       "can_reason": true,
       "reasoning_levels": [
         "low",
-        "medium",
-        "high"
+        "high",
+        "max"
       ],
-      "default_reasoning_effort": "medium",
+      "default_reasoning_effort": "high",
       "supports_attachments": false
     },
     {
@@ -145,10 +145,10 @@
       "can_reason": true,
       "reasoning_levels": [
         "low",
-        "medium",
-        "high"
+        "high",
+        "max"
       ],
-      "default_reasoning_effort": "medium",
+      "default_reasoning_effort": "high",
       "supports_attachments": true
     },
     {
@@ -487,10 +487,10 @@
       "can_reason": true,
       "reasoning_levels": [
         "low",
-        "high",
-        "max"
+        "medium",
+        "high"
       ],
-      "default_reasoning_effort": "high",
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -578,7 +578,7 @@
       "reasoning_levels": [
         "low",
         "medium",
-        "high"
+        "xhigh"
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
@@ -596,9 +596,9 @@
       "reasoning_levels": [
         "low",
         "medium",
-        "high"
+        "xhigh"
       ],
-      "default_reasoning_effort": "medium",
+      "default_reasoning_effort": "xhigh",
       "supports_attachments": true
     }
   ]
