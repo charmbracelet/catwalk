@@ -170,9 +170,18 @@ func main() {
 				case strings.Contains(zenModel.ID, "deepseek-v4"):
 					reasoningLevels = []string{"low", "high", "max"}
 					defaultReasoningEffort = "high"
-				case zenModel.ID == "x-preview-f-free":
+				case zenModel.ID == "glm-5.3":
 					reasoningLevels = []string{"low", "high", "max"}
 					defaultReasoningEffort = "high"
+				case zenModel.ID == "glm-5.3-flash":
+					reasoningLevels = []string{"low", "high", "max"}
+					defaultReasoningEffort = "high"
+				case zenModel.ID == "qwen3.8-flash":
+					reasoningLevels = []string{"low", "medium", "xhigh"}
+					defaultReasoningEffort = "medium"
+				case zenModel.ID == "qwen3.8-max":
+					reasoningLevels = []string{"low", "medium", "xhigh"}
+					defaultReasoningEffort = "xhigh"
 				default:
 					reasoningLevels = []string{"low", "medium", "high"}
 					defaultReasoningEffort = "medium"
