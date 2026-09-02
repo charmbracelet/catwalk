@@ -145,7 +145,7 @@ func main() {
 				defaultReasoning = "max"
 			case "zai-org/GLM-5.3", "zai-org/GLM-5.3-Flash":
 				reasoningLevels = []string{"low", "high", "max"}
-				defaultReasoning = "max"
+				defaultReasoning = "high"
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
 			case "moonshotai/Kimi-K3":
