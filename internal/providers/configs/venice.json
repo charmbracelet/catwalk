@@ -932,6 +932,18 @@
       "supports_attachments": true
     },
     {
+      "id": "gemini-3-8-flash",
+      "name": "Gemini 3.8 Flash",
+      "cost_per_1m_in": 0.9375,
+      "cost_per_1m_out": 4.6875,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "gemma-4-uncensored",
       "name": "Gemma 4 Uncensored",
       "cost_per_1m_in": 0.1625,
