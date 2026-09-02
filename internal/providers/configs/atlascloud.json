@@ -140,18 +140,6 @@
       "supports_attachments": false
     },
     {
-      "id": "zai-org/glm-5",
-      "name": "GLM 5",
-      "cost_per_1m_in": 0.95,
-      "cost_per_1m_out": 3.15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.19,
-      "context_window": 202752,
-      "default_max_tokens": 20275,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "zai-org/glm-5.1",
       "name": "GLM 5.1",
       "cost_per_1m_in": 1.26,
@@ -166,10 +154,10 @@
     {
       "id": "zai-org/glm-5.2",
       "name": "GLM 5.2",
-      "cost_per_1m_in": 1.26,
-      "cost_per_1m_out": 3.96,
+      "cost_per_1m_in": 0.938,
+      "cost_per_1m_out": 2.948,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.234,
+      "cost_per_1m_out_cached": 0.1742,
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "can_reason": false,
