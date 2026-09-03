@@ -10,10 +10,10 @@
     {
       "id": "moonshotai/kimi-k2-instruct-0905",
       "name": "Kimi K2 0905",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0.5,
-      "cost_per_1m_out_cached": 0.5,
+      "cost_per_token_in": 1e-06,
+      "cost_per_token_out": 3e-06,
+      "cost_per_token_in_cached": 5e-07,
+      "cost_per_token_out_cached": 5e-07,
       "context_window": 131072,
       "can_reason": true,
       "reasoning_levels": [
@@ -27,8 +27,8 @@
     {
       "id": "qwen/qwen3-32b",
       "name": "Qwen3 32B",
-      "cost_per_1m_in": 0.29,
-      "cost_per_1m_out": 0.59,
+      "cost_per_token_in": 2.9e-07,
+      "cost_per_token_out": 5.9e-07,
       "context_window": 131072,
       "default_max_tokens": 10000
     }

@@ -90,13 +90,13 @@ func hasModality(m BasetenModel, modality string) bool {
 	return slices.Contains(m.InputModalities, modality)
 }
 
-// parsePrice converts a per-token price string to cost per 1M tokens.
+// parsePrice parses a per-token price string.
 func parsePrice(perToken string) float64 {
 	var v float64
 	if err := json.Unmarshal([]byte(perToken), &v); err != nil {
 		return 0
 	}
-	return math.Round(v*1e6*1e5) / 1e5
+	return math.Round(v*1e11) / 1e11
 }
 
 func main() {
@@ -173,10 +173,10 @@ func main() {
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.Name,
-			CostPer1MIn:            parsePrice(model.Pricing.Prompt),
-			CostPer1MOut:           parsePrice(model.Pricing.Completion),
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     parsePrice(model.Pricing.InputCacheRead),
+			CostPerTokenIn:         parsePrice(model.Pricing.Prompt),
+			CostPerTokenOut:        parsePrice(model.Pricing.Completion),
+			CostPerTokenInCached:   0,
+			CostPerTokenOutCached:  parsePrice(model.Pricing.InputCacheRead),
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,
 			CanReason:              canReason,

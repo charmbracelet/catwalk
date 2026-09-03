@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"io"
 	"log"
-	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -154,27 +153,27 @@ func main() {
 				contextLength = fallbackContextLength
 			}
 
-			// Calculate pricing (convert from per-token to per-1M tokens)
-			var costPer1MIn, costPer1MOut float64
+			// Convert pricing from per-million to per-token dollars.
+			var costPerTokenIn, costPerTokenOut float64
 			if provider.Pricing != nil {
-				costPer1MIn = math.Round(provider.Pricing.Input*1e5) / 1e5
-				costPer1MOut = math.Round(provider.Pricing.Output*1e5) / 1e5
+				costPerTokenIn = provider.Pricing.Input / 1_000_000
+				costPerTokenOut = provider.Pricing.Output / 1_000_000
 			}
 
 			// Set default max tokens (conservative estimate)
 			defaultMaxTokens := min(contextLength/4, 8192)
 
 			m := catwalk.Model{
-				ID:                 modelID,
-				Name:               modelName,
-				CostPer1MIn:        costPer1MIn,
-				CostPer1MOut:       costPer1MOut,
-				CostPer1MInCached:  0, // Not provided by HF Router
-				CostPer1MOutCached: 0, // Not provided by HF Router
-				ContextWindow:      contextLength,
-				DefaultMaxTokens:   defaultMaxTokens,
-				CanReason:          false, // Not provided by HF Router
-				SupportsImages:     false, // Not provided by HF Router
+				ID:                    modelID,
+				Name:                  modelName,
+				CostPerTokenIn:        costPerTokenIn,
+				CostPerTokenOut:       costPerTokenOut,
+				CostPerTokenInCached:  0, // Not provided by HF Router
+				CostPerTokenOutCached: 0, // Not provided by HF Router
+				ContextWindow:         contextLength,
+				DefaultMaxTokens:      defaultMaxTokens,
+				CanReason:             false, // Not provided by HF Router
+				SupportsImages:        false, // Not provided by HF Router
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)

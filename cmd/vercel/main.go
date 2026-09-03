@@ -109,41 +109,41 @@ func main() {
 		}
 
 		// Parse pricing
-		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
-		costPer1MIn := 0.0
-		costPer1MOut := 0.0
-		costPer1MInCached := 0.0
-		costPer1MOutCached := 0.0
+		roundCost := func(v float64) float64 { return math.Round(v*1e11) / 1e11 }
+		costPerTokenIn := 0.0
+		costPerTokenOut := 0.0
+		costPerTokenInCached := 0.0
+		costPerTokenOutCached := 0.0
 
 		if model.Pricing.Input != "" {
 			costPrompt, err := strconv.ParseFloat(model.Pricing.Input, 64)
 			if err == nil {
-				costPer1MIn = roundCost(costPrompt * 1_000_000)
+				costPerTokenIn = roundCost(costPrompt)
 			}
 		}
 
 		if model.Pricing.Output != "" {
 			costCompletion, err := strconv.ParseFloat(model.Pricing.Output, 64)
 			if err == nil {
-				costPer1MOut = roundCost(costCompletion * 1_000_000)
+				costPerTokenOut = roundCost(costCompletion)
 			}
 		}
 
 		// NOTE: catwalk's naming is confusing (see providers.go in hyper):
-		// - cost_per_1m_in_cached  = cache CREATION (write)
-		// - cost_per_1m_out_cached = cache READ
+		// - cost_per_token_in_cached  = cache CREATION (write)
+		// - cost_per_token_out_cached = cache READ
 		// Vercel's API uses the intuitive names, so we map them accordingly.
 		if model.Pricing.InputCacheRead != "" {
 			costCacheRead, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 			if err == nil {
-				costPer1MOutCached = roundCost(costCacheRead * 1_000_000)
+				costPerTokenOutCached = roundCost(costCacheRead)
 			}
 		}
 
 		if model.Pricing.InputCacheWrite != "" {
 			costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 			if err == nil {
-				costPer1MInCached = roundCost(costCacheWrite * 1_000_000)
+				costPerTokenInCached = roundCost(costCacheWrite)
 			}
 		}
 
@@ -175,10 +175,10 @@ func main() {
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.Name,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      costPer1MInCached,
-			CostPer1MOutCached:     costPer1MOutCached,
+			CostPerTokenIn:         costPerTokenIn,
+			CostPerTokenOut:        costPerTokenOut,
+			CostPerTokenInCached:   costPerTokenInCached,
+			CostPerTokenOutCached:  costPerTokenOutCached,
 			ContextWindow:          model.ContextWindow,
 			DefaultMaxTokens:       cmp.Or(model.MaxTokens, model.ContextWindow/10),
 			CanReason:              canReason,

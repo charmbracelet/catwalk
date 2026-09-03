@@ -23,14 +23,18 @@
 
 ## Model cost fields
 
+Model costs are in **dollars per token** (`cost_per_token_in`,
+`cost_per_token_out`). Provider pages usually quote per-million prices
+(e.g. "$3/M") — divide by 1,000,000 before putting them in the config.
+
 The cached cost fields in provider configs are counterintuitive:
 
-- `cost_per_1m_in_cached` = cache **creation** (write) price
-- `cost_per_1m_out_cached` = cache **read** price
+- `cost_per_token_in_cached` = cache **creation** (write) price
+- `cost_per_token_out_cached` = cache **read** price
 
 Providers usually advertise a single discounted "cached" price (e.g.
 "$0.044/M cached") — that is the cache **read** price, so it goes in
-`cost_per_1m_out_cached`. Leave `cost_per_1m_in_cached` at 0 unless the
+`cost_per_token_out_cached`. Leave `cost_per_token_in_cached` at 0 unless the
 provider explicitly prices cache writes (Anthropic-style).
 
 ## Adding more provider commands

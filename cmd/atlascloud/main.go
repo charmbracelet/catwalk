@@ -60,7 +60,7 @@ func parsePrice(s string) float64 {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e5) / 1e5
+	return math.Round(v*1e11) / 1e11
 }
 
 // extractBasePricing returns the base pricing tier regardless of whether the
@@ -161,9 +161,9 @@ func main() {
 		}
 
 		priceMultiplier := 1 - model.DiscountToUser
-		costPer1MIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
-		costPer1MOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
-		costPer1MCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
+		costPerTokenIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier)
+		costPerTokenOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier)
+		costPerTokenCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier)
 
 		supportsImages := slices.Contains(model.InputModalities, "image")
 
@@ -183,14 +183,14 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                 model.ID,
-			Name:               model.Name,
-			CostPer1MIn:        costPer1MIn,
-			CostPer1MOut:       costPer1MOut,
-			CostPer1MOutCached: costPer1MCacheRead,
-			ContextWindow:      model.ContextLength,
-			DefaultMaxTokens:   defaultMaxTokens,
-			SupportsImages:     supportsImages,
+			ID:                    model.ID,
+			Name:                  model.Name,
+			CostPerTokenIn:        costPerTokenIn,
+			CostPerTokenOut:       costPerTokenOut,
+			CostPerTokenOutCached: costPerTokenCacheRead,
+			ContextWindow:         model.ContextLength,
+			DefaultMaxTokens:      defaultMaxTokens,
+			SupportsImages:        supportsImages,
 		}
 
 		atlasCloudProvider.Models = append(atlasCloudProvider.Models, m)

@@ -107,21 +107,21 @@ func main() {
 		}
 
 		// Convert pricing from string to float64
-		var costPer1MIn, costPer1MOut float64
+		var costPerTokenIn, costPerTokenOut float64
 
 		// Handle prompt price conversion
 		promptPrice, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
 		if err != nil {
 			promptPrice = 0.0
 		}
-		costPer1MIn = math.Round(promptPrice*1_000_000*100) / 100 // Round to 2 decimal places
+		costPerTokenIn = math.Round(promptPrice*1e11) / 1e11
 
 		// Handle completion price conversion
 		completionPrice, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 		if err != nil {
 			completionPrice = 0.0
 		}
-		costPer1MOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
+		costPerTokenOut = math.Round(completionPrice*1e11) / 1e11
 
 		var (
 			supportsImages   = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
@@ -137,10 +137,10 @@ func main() {
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.DisplayName,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     0,
+			CostPerTokenIn:         costPerTokenIn,
+			CostPerTokenOut:        costPerTokenOut,
+			CostPerTokenInCached:   0,
+			CostPerTokenOutCached:  0,
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
 			CanReason:              canReason,

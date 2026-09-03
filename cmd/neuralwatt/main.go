@@ -56,7 +56,7 @@ type ModelsResponse struct {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e5) / 1e5
+	return math.Round(v*1e11) / 1e11
 }
 
 func ptrDeref[T any](v *T, fallback T) T {
@@ -170,10 +170,10 @@ func main() {
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   name,
-			CostPer1MIn:            roundCost(costIn),
-			CostPer1MOut:           roundCost(costOut),
-			CostPer1MInCached:      roundCost(costInCached),
-			CostPer1MOutCached:     roundCost(costOutCached),
+			CostPerTokenIn:         roundCost(costIn / 1_000_000),
+			CostPerTokenOut:        roundCost(costOut / 1_000_000),
+			CostPerTokenInCached:   roundCost(costInCached / 1_000_000),
+			CostPerTokenOutCached:  roundCost(costOutCached / 1_000_000),
 			ContextWindow:          model.MaxModelLen,
 			DefaultMaxTokens:       defaultMaxTokens,
 			CanReason:              meta.Capabilities.Reasoning,
