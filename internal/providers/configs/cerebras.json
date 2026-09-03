@@ -43,6 +43,25 @@
             "supports_attachments": true,
             "temperature": 1,
             "top_p": 0.95
+        },
+        {
+            "id": "qwen-3.8-27b",
+            "name": "Qwen 3.8 27B",
+            "cost_per_1m_in": 0.99,
+            "cost_per_1m_out": 1.49,
+            "context_window": 65536,
+            "default_max_tokens": 25000,
+            "can_reason": true,
+            "reasoning_levels": [
+                "none",
+                "low",
+                "medium",
+                "high"
+            ],
+            "default_reasoning_effort": "high",
+            "supports_attachments": true,
+            "temperature": 1,
+            "top_p": 0.95
         }
     ]
 }
