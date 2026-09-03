@@ -124,14 +124,15 @@ func main() {
 		costPerTokenOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		var (
-			supportsImages   = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
-			canReason        = model.hasFeature("reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
+			supportsImages = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
+			reasoning      = catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		)
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		if model.hasFeature("reasoning") {
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		m := catwalk.Model{
@@ -141,12 +142,10 @@ func main() {
 				Input:  costPerTokenIn,
 				Output: costPerTokenOut,
 			},
-			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		nebiusProvider.Models = append(nebiusProvider.Models, m)

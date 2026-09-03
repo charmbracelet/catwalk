@@ -17,12 +17,20 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "high",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
       "capabilities": {
         "vision": false
       }
@@ -37,12 +45,20 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "high",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
       "capabilities": {
         "vision": false
       }
@@ -57,12 +73,20 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "high",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
       "capabilities": {
         "vision": false
       }
@@ -77,7 +101,9 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }

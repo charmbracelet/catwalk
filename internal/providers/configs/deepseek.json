@@ -1,9 +1,9 @@
 {
   "name": "DeepSeek",
   "id": "deepseek",
-  "type": "openai-compat",
   "api_key": "$DEEPSEEK_API_KEY",
   "api_endpoint": "https://api.deepseek.com/v1",
+  "type": "openai-compat",
   "default_large_model_id": "deepseek-v4-pro",
   "default_small_model_id": "deepseek-v4-flash",
   "models": [
@@ -17,13 +17,24 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
       "capabilities": {
         "vision": false
       }
@@ -38,13 +49,24 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
       "capabilities": {
         "vision": false
       }

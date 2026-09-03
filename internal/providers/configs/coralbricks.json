@@ -16,7 +16,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -30,7 +32,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -44,7 +48,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
