@@ -182,11 +182,13 @@ func main() {
 			canReason            = model.ModelSpec.Capabilities.SupportsReasoning
 			supportsReasonEffort = model.ModelSpec.Capabilities.SupportsReasoningEffort
 		)
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if canReason {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+		}
 		if canReason && supportsReasonEffort {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning.EffortLevels = catwalk.NewEffortLevels("low", "medium", "high")
+			reasoning.DefaultEffortLevel = "medium"
 		}
 
 		options := catwalk.ModelOptions{}
@@ -211,13 +213,11 @@ func main() {
 				Input:  roundCost(model.ModelSpec.Pricing.Input.USD),
 				Output: roundCost(model.ModelSpec.Pricing.Output.USD),
 			},
-			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       model.ModelSpec.MaxCompletionTokens,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			Capabilities:           catwalk.Capabilities{Vision: model.ModelSpec.Capabilities.SupportsVision},
-			Options:                options,
+			ContextWindow:    contextWindow,
+			DefaultMaxTokens: model.ModelSpec.MaxCompletionTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: model.ModelSpec.Capabilities.SupportsVision},
+			Options:          options,
 		}
 
 		veniceProvider.Models = append(veniceProvider.Models, m)

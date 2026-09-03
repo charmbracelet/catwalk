@@ -124,12 +124,12 @@ func main() {
 			continue
 		}
 
-		var (
-			canReason        = hasFeature(model, "reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
-		)
+		canReason := hasFeature(model, "reasoning")
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if canReason {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			var reasoningLevels []string
+			var defaultReasoning string
 			switch model.ID {
 			case "deepseek-ai/DeepSeek-V4-Flash", "deepseek-ai/DeepSeek-V4-Pro":
 				reasoningLevels = []string{"high", "xhigh"}
@@ -159,6 +159,8 @@ func main() {
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoning = "medium"
 			}
+			reasoning.EffortLevels = catwalk.NewEffortLevels(reasoningLevels...)
+			reasoning.DefaultEffortLevel = defaultReasoning
 		}
 
 		maxTokens := model.MaxCompletion
@@ -178,12 +180,10 @@ func main() {
 				Output:   parsePrice(model.Pricing.Completion),
 				CacheHit: parsePrice(model.Pricing.InputCacheRead),
 			},
-			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       maxTokens,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			Capabilities:           catwalk.Capabilities{Vision: hasModality(model, "image")},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: maxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: hasModality(model, "image")},
 		}
 
 		basetenProvider.Models = append(basetenProvider.Models, m)

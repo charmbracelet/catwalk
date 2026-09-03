@@ -158,16 +158,16 @@ func main() {
 		defaultMaxTokens := ctxWindow / 10
 
 		var (
-			canReason             bool
-			reasoningLevels       []string
-			defaultReasoningLevel string
-			supportsImages        = slices.Contains(model.InputModalities, "image")
+			reasoning      = catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+			supportsImages = slices.Contains(model.InputModalities, "image")
 		)
 		switch id {
 		case "grok-4.5":
-			canReason = true
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoningLevel = "high"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "high",
+			}
 		}
 
 		m := catwalk.Model{
@@ -178,12 +178,10 @@ func main() {
 				Output:   priceToDollarsPerToken(model.CompletionTextTokenPrice),
 				CacheHit: priceToDollarsPerToken(model.CachedPromptTextTokenPrc),
 			},
-			ContextWindow:          ctxWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoningLevel,
-			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
+			ContextWindow:    ctxWindow,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		provider.Models = append(provider.Models, m)

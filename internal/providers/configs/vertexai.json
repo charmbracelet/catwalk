@@ -2,8 +2,6 @@
   "name": "Google Vertex AI",
   "id": "vertexai",
   "type": "google-vertex",
-  "api_key": "",
-  "api_endpoint": "",
   "default_large_model_id": "gemini-3.1-pro-preview",
   "default_small_model_id": "gemini-3-flash-preview",
   "models": [
@@ -17,9 +15,28 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       }
@@ -34,9 +51,24 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       }
@@ -51,9 +83,24 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       }
@@ -68,9 +115,20 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "high"],
-      "default_reasoning_effort": "high",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
       "capabilities": {
         "vision": true
       }
@@ -85,9 +143,28 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 50000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "minimal",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "minimal"
+      },
       "capabilities": {
         "vision": true
       }
@@ -102,7 +179,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 50000,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -117,7 +196,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 50000,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -133,9 +214,28 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 50000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "max"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       }
@@ -151,7 +251,9 @@
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -167,9 +269,28 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 126000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "max"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       }
@@ -185,7 +306,9 @@
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -201,8 +324,9 @@
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
-      "can_reason": true,
-      "has_reasoning_efforts": false,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }

@@ -192,6 +192,7 @@ func main() {
 			},
 			ContextWindow:    model.ContextLength,
 			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
 			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
