@@ -82,9 +82,11 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
+		reasoningSettings := catwalk.ReasoningSettingsNone
 		var reasoningLevels []string
 		var defaultReasoning string
 		if model.Reasoning {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -98,7 +100,7 @@ func main() {
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.MaxOutput,
-			CanReason:              model.Reasoning,
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         false,

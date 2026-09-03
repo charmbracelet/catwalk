@@ -100,11 +100,13 @@ func main() {
 		}
 
 		var (
-			canReason        = hasFeature(m, "reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
+			canReason         = hasFeature(m, "reasoning")
+			reasoningSettings = catwalk.ReasoningSettingsNone
+			reasoningLevels   []string
+			defaultReasoning  string
 		)
 		if canReason {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -117,7 +119,7 @@ func main() {
 			CostPer1MInCached:      roundCost(m.Pricing.InputCacheRead),
 			ContextWindow:          m.ContextLength,
 			DefaultMaxTokens:       m.MaxOutputLength,
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
 			SupportsImages:         hasModality(m, "image"),

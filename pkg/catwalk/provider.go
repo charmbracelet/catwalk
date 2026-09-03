@@ -75,6 +75,23 @@ type Provider struct {
 	DefaultHeaders      map[string]string `json:"default_headers,omitempty"`
 }
 
+// ReasoningSettings describes how reasoning is configured for a model.
+type ReasoningSettings string
+
+// All the supported reasoning settings.
+const (
+	// ReasoningSettingsNone means the model cannot reason.
+	ReasoningSettingsNone ReasoningSettings = "none"
+	// ReasoningSettingsAlways means reasoning is always enabled and
+	// cannot be configured in any way.
+	ReasoningSettingsAlways ReasoningSettings = "always"
+	// ReasoningSettingsThinking means reasoning can be toggled on and off.
+	ReasoningSettingsThinking ReasoningSettings = "thinking"
+	// ReasoningSettingsLevels means reasoning is configured with an effort
+	// level, listed in ReasoningLevels.
+	ReasoningSettingsLevels ReasoningSettings = "reasoning_levels"
+)
+
 // ModelOptions stores extra options for models.
 type ModelOptions struct {
 	Temperature      *float64       `json:"temperature,omitempty"`
@@ -87,19 +104,19 @@ type ModelOptions struct {
 
 // Model represents an AI model configuration.
 type Model struct {
-	ID                     string       `json:"id"`
-	Name                   string       `json:"name"`
-	CostPer1MIn            float64      `json:"cost_per_1m_in"`
-	CostPer1MOut           float64      `json:"cost_per_1m_out"`
-	CostPer1MInCached      float64      `json:"cost_per_1m_in_cached"`
-	CostPer1MOutCached     float64      `json:"cost_per_1m_out_cached"`
-	ContextWindow          int64        `json:"context_window"`
-	DefaultMaxTokens       int64        `json:"default_max_tokens"`
-	CanReason              bool         `json:"can_reason"`
-	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
-	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
-	SupportsImages         bool         `json:"supports_attachments"`
-	Options                ModelOptions `json:"options,omitzero"`
+	ID                     string            `json:"id"`
+	Name                   string            `json:"name"`
+	CostPer1MIn            float64           `json:"cost_per_1m_in"`
+	CostPer1MOut           float64           `json:"cost_per_1m_out"`
+	CostPer1MInCached      float64           `json:"cost_per_1m_in_cached"`
+	CostPer1MOutCached     float64           `json:"cost_per_1m_out_cached"`
+	ContextWindow          int64             `json:"context_window"`
+	DefaultMaxTokens       int64             `json:"default_max_tokens"`
+	ReasoningSettings      ReasoningSettings `json:"reasoning_settings"`
+	ReasoningLevels        []string          `json:"reasoning_levels,omitempty"`
+	DefaultReasoningEffort string            `json:"default_reasoning_effort,omitempty"`
+	SupportsImages         bool              `json:"supports_attachments"`
+	Options                ModelOptions      `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.

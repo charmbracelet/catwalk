@@ -173,8 +173,8 @@ func main() {
 				CostPer1MOutCached: 0, // Not provided by HF Router
 				ContextWindow:      contextLength,
 				DefaultMaxTokens:   defaultMaxTokens,
-				CanReason:          false, // Not provided by HF Router
-				SupportsImages:     false, // Not provided by HF Router
+				ReasoningSettings:  catwalk.ReasoningSettingsNone, // Not provided by HF Router
+				SupportsImages:     false,                         // Not provided by HF Router
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)

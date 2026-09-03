@@ -124,12 +124,14 @@ func main() {
 		costPer1MOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		var (
-			supportsImages   = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
-			canReason        = model.hasFeature("reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
+			supportsImages    = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
+			canReason         = model.hasFeature("reasoning")
+			reasoningSettings = catwalk.ReasoningSettingsNone
+			reasoningLevels   []string
+			defaultReasoning  string
 		)
 		if canReason {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -143,7 +145,7 @@ func main() {
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         supportsImages,

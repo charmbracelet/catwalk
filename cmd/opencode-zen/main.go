@@ -148,7 +148,7 @@ func main() {
 		var costPer1MIn, costPer1MOut, costPer1MInCached, costPer1MOutCached float64
 		var contextWindow, defaultMaxTokens int64 = 200000, 20000
 		var supportsImages bool
-		var canReason bool
+		reasoningSettings := catwalk.ReasoningSettingsNone
 		var reasoningLevels []string
 		var defaultReasoningEffort string
 		modelName := zenModel.ID
@@ -164,7 +164,7 @@ func main() {
 			modelName = enrichment.Name
 
 			if enrichment.Reasoning {
-				canReason = true
+				reasoningSettings = catwalk.ReasoningSettingsLevels
 
 				switch {
 				case strings.Contains(zenModel.ID, "deepseek-v4"):
@@ -201,7 +201,7 @@ func main() {
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       defaultMaxTokens,
 			SupportsImages:         supportsImages,
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoningEffort,
 		}

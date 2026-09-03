@@ -114,11 +114,11 @@ func calculateMaxTokens(contextLength, maxOutput, factor int64) int64 {
 	return maxOutput
 }
 
-func buildReasoningConfig(canReason bool) ([]string, string) {
+func buildReasoningConfig(canReason bool) (catwalk.ReasoningSettings, []string, string) {
 	if !canReason {
-		return nil, ""
+		return catwalk.ReasoningSettingsNone, nil, ""
 	}
-	return []string{"low", "medium", "high"}, "medium"
+	return catwalk.ReasoningSettingsLevels, []string{"low", "medium", "high"}, "medium"
 }
 
 func main() {
@@ -151,7 +151,7 @@ func main() {
 		canReason := hasField(model.Features, "thinking")
 		supportsImages := hasField(model.InputModalities, "image")
 
-		reasoningLevels, defaultReasoning := buildReasoningConfig(canReason)
+		reasoningSettings, reasoningLevels, defaultReasoning := buildReasoningConfig(canReason)
 		maxTokens := calculateMaxTokens(model.ContextLength, model.MaxOutput, maxTokensFactor)
 
 		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
@@ -163,7 +163,7 @@ func main() {
 			CostPer1MOutCached:     parseFloat(model.Pricing.CacheRead),
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         supportsImages,

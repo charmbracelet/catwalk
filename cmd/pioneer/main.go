@@ -96,12 +96,12 @@ func main() {
 		isQwen := strings.Contains(m.ID, "Qwen") || strings.Contains(m.Label, "Qwen3")
 
 		var (
-			canReason        bool
-			reasoningLevels  []string
-			defaultReasoning string
+			reasoningSettings = catwalk.ReasoningSettingsNone
+			reasoningLevels   []string
+			defaultReasoning  string
 		)
 		if isDeepSeek || isQwen {
-			canReason = true
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -113,7 +113,7 @@ func main() {
 			CostPer1MOut:           roundCost(m.OutputPrice),
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
 		}

@@ -16,7 +16,7 @@
       "cost_per_1m_out_cached": 0.2,
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
+      "reasoning_settings": "reasoning_levels",
       "reasoning_levels": [
         "high",
         "xhigh"
@@ -33,7 +33,7 @@
       "cost_per_1m_out_cached": 0.04,
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
+      "reasoning_settings": "reasoning_levels",
       "reasoning_levels": [
         "high",
         "xhigh"
@@ -50,7 +50,7 @@
       "cost_per_1m_out_cached": 0.275,
       "context_window": 1000000,
       "default_max_tokens": 128000,
-      "can_reason": true,
+      "reasoning_settings": "reasoning_levels",
       "reasoning_levels": [
         "high",
         "xhigh"
@@ -67,7 +67,7 @@
       "cost_per_1m_out_cached": 0.206,
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "can_reason": true,
+      "reasoning_settings": "thinking",
       "supports_attachments": true
     }
   ]
