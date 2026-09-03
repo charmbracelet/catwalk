@@ -10,10 +10,10 @@
     {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
-      "cost_per_1m_in": 11,
-      "cost_per_1m_out": 55,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1.1e-05,
+        "output": 5.5e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -22,10 +22,10 @@
     {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1e-06,
+        "output": 5e-06
+      },
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": false,
@@ -34,10 +34,10 @@
     {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 25,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -46,10 +46,10 @@
     {
       "id": "claude-opus-5-fast",
       "name": "Claude Opus 5 (Fast)",
-      "cost_per_1m_in": 10,
-      "cost_per_1m_out": 50,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1e-05,
+        "output": 5e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -58,10 +58,10 @@
     {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 2e-06,
+        "output": 1e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -70,10 +70,10 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek V4 Flash",
-      "cost_per_1m_in": 0.14,
-      "cost_per_1m_out": 0.28,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1.4e-07,
+        "output": 2.8e-07
+      },
       "context_window": 131072,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -88,10 +88,10 @@
     {
       "id": "fastino/Fastino-Nemotron-3.5-Lightning-Finance",
       "name": "Fastino Nemotron 3.5 Lightning Finance",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 0.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 5e-07,
+        "output": 5e-07
+      },
       "context_window": 8192,
       "default_max_tokens": 4096,
       "can_reason": false,
@@ -100,10 +100,10 @@
     {
       "id": "fastino/Fastino-Nemotron-3.5-Lightning-Healthcare",
       "name": "Fastino Nemotron 3.5 Lightning Healthcare",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 0.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 5e-07,
+        "output": 5e-07
+      },
       "context_window": 8192,
       "default_max_tokens": 4096,
       "can_reason": false,
@@ -112,10 +112,10 @@
     {
       "id": "zai-org/GLM-5.2",
       "name": "GLM 5.2",
-      "cost_per_1m_in": 1.4,
-      "cost_per_1m_out": 4.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1.4e-06,
+        "output": 4.4e-06
+      },
       "context_window": 131072,
       "default_max_tokens": 32768,
       "can_reason": false,
@@ -124,10 +124,10 @@
     {
       "id": "gpt-5.5",
       "name": "GPT-5.5",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 30,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 5e-06,
+        "output": 3e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -136,10 +136,10 @@
     {
       "id": "gpt-5.6-luna",
       "name": "GPT-5.6 Luna",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1e-06,
+        "output": 6e-06
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -148,10 +148,10 @@
     {
       "id": "gpt-5.6-sol",
       "name": "GPT-5.6 Sol",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 30,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 5e-06,
+        "output": 3e-05
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -160,10 +160,10 @@
     {
       "id": "gpt-5.6-terra",
       "name": "GPT-5.6 Terra",
-      "cost_per_1m_in": 2.5,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 2.5e-06,
+        "output": 1.5e-05
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -172,10 +172,10 @@
     {
       "id": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -184,10 +184,10 @@
     {
       "id": "moonshotai/Kimi-K3-Fast",
       "name": "Kimi K3 Fast",
-      "cost_per_1m_in": 4.5,
-      "cost_per_1m_out": 22.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 4.5e-06,
+        "output": 2.25e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
@@ -196,10 +196,10 @@
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "name": "Nemotron 3.5 Lightning 30B-A3B",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 0.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 5e-07,
+        "output": 5e-07
+      },
       "context_window": 8192,
       "default_max_tokens": 4096,
       "can_reason": false,
@@ -208,10 +208,10 @@
     {
       "id": "HuggingFaceTB/SmolLM2-360M-Instruct",
       "name": "SmolLM2 360M Instruct",
-      "cost_per_1m_in": 0.01,
-      "cost_per_1m_out": 0.01,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1e-08,
+        "output": 1e-08
+      },
       "context_window": 2048,
       "default_max_tokens": 4096,
       "can_reason": false,

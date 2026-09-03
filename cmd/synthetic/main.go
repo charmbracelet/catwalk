@@ -46,15 +46,6 @@ type ModelsResponse struct {
 	Data []Model `json:"data"`
 }
 
-// ModelPricing is the pricing structure for a model, detailing costs per
-// million tokens for input and output, both cached and uncached.
-type ModelPricing struct {
-	CostPer1MIn        float64 `json:"cost_per_1m_in"`
-	CostPer1MOut       float64 `json:"cost_per_1m_out"`
-	CostPer1MInCached  float64 `json:"cost_per_1m_in_cached"`
-	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
-}
-
 // parsePrice extracts a float from Synthetic's price format (e.g. "$0.00000055").
 func parsePrice(s string) float64 {
 	s = strings.TrimPrefix(s, "$")
@@ -66,15 +57,15 @@ func parsePrice(s string) float64 {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e5) / 1e5
+	return math.Round(v*1e11) / 1e11
 }
 
-func getPricing(model Model) ModelPricing {
-	return ModelPricing{
-		CostPer1MIn:        roundCost(parsePrice(model.Pricing.Prompt) * 1_000_000),
-		CostPer1MOut:       roundCost(parsePrice(model.Pricing.Completion) * 1_000_000),
-		CostPer1MInCached:  roundCost(parsePrice(model.Pricing.InputCacheReads) * 1_000_000),
-		CostPer1MOutCached: roundCost(parsePrice(model.Pricing.InputCacheReads) * 1_000_000),
+func getPricing(model Model) catwalk.Pricing {
+	return catwalk.Pricing{
+		Input:       roundCost(parsePrice(model.Pricing.Prompt)),
+		Output:      roundCost(parsePrice(model.Pricing.Completion)),
+		CacheCreate: roundCost(parsePrice(model.Pricing.InputCacheWrites)),
+		CacheHit:    roundCost(parsePrice(model.Pricing.InputCacheReads)),
 	}
 }
 
@@ -215,10 +206,7 @@ func main() {
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   modelName,
-			CostPer1MIn:            pricing.CostPer1MIn,
-			CostPer1MOut:           pricing.CostPer1MOut,
-			CostPer1MInCached:      pricing.CostPer1MInCached,
-			CostPer1MOutCached:     pricing.CostPer1MOutCached,
+			Pricing:                pricing,
 			ContextWindow:          model.ContextLength,
 			CanReason:              canReason,
 			DefaultReasoningEffort: defaultReasoning,

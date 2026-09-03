@@ -101,8 +101,8 @@ func bestLargeModelID(models []catwalk.Model) string {
 			best = m
 			continue
 		}
-		mCost := m.CostPer1MIn + m.CostPer1MOut
-		bestCost := best.CostPer1MIn + best.CostPer1MOut
+		mCost := m.Pricing.Input + m.Pricing.Output
+		bestCost := best.Pricing.Input + best.Pricing.Output
 		if mCost > bestCost {
 			best = m
 			continue
@@ -125,8 +125,8 @@ func bestSmallModelID(models []catwalk.Model) string {
 			best = m
 			continue
 		}
-		mCost := m.CostPer1MIn + m.CostPer1MOut
-		bestCost := best.CostPer1MIn + best.CostPer1MOut
+		mCost := m.Pricing.Input + m.Pricing.Output
+		bestCost := best.Pricing.Input + best.Pricing.Output
 		if mCost < bestCost {
 			best = m
 			continue
@@ -203,14 +203,14 @@ func main() {
 			}
 		}
 
-		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
+		roundCost := func(v float64) float64 { return math.Round(v*1e11) / 1e11 }
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.ModelSpec.Name,
-			CostPer1MIn:            roundCost(model.ModelSpec.Pricing.Input.USD),
-			CostPer1MOut:           roundCost(model.ModelSpec.Pricing.Output.USD),
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     0,
+			ID:   model.ID,
+			Name: model.ModelSpec.Name,
+			Pricing: catwalk.Pricing{
+				Input:  roundCost(model.ModelSpec.Pricing.Input.USD / 1_000_000),
+				Output: roundCost(model.ModelSpec.Pricing.Output.USD / 1_000_000),
+			},
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       model.ModelSpec.MaxCompletionTokens,
 			CanReason:              canReason,

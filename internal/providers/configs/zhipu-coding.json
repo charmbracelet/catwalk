@@ -10,10 +10,10 @@
     {
       "id": "glm-5.3",
       "name": "GLM-5.3",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "can_reason": true,
@@ -28,9 +28,10 @@
     {
       "id": "glm-5.2",
       "name": "GLM-5.2",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "can_reason": true,
@@ -44,9 +45,11 @@
     {
       "id": "glm-5.1",
       "name": "GLM-5.1",
-      "cost_per_1m_in": 1.4,
-      "cost_per_1m_out": 4.4,
-      "cost_per_1m_in_cached": 0.26,
+      "pricing": {
+        "input": 1.4e-06,
+        "output": 4.4e-06,
+        "cache_create": 2.6e-07
+      },
       "context_window": 204800,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -55,9 +58,11 @@
     {
       "id": "glm-5-turbo",
       "name": "GLM-5-Turbo",
-      "cost_per_1m_in": 1.2,
-      "cost_per_1m_out": 4.0,
-      "cost_per_1m_in_cached": 0.24,
+      "pricing": {
+        "input": 1.2e-06,
+        "output": 4e-06,
+        "cache_create": 2.4e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -66,9 +71,11 @@
     {
       "id": "glm-5",
       "name": "GLM-5",
-      "cost_per_1m_in": 1.0,
-      "cost_per_1m_out": 3.2,
-      "cost_per_1m_in_cached": 0.2,
+      "pricing": {
+        "input": 1e-06,
+        "output": 3.2e-06,
+        "cache_create": 2e-07
+      },
       "context_window": 204800,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -77,9 +84,11 @@
     {
       "id": "glm-4.7",
       "name": "GLM-4.7",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.2,
-      "cost_per_1m_in_cached": 0.11,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.2e-06,
+        "cache_create": 1.1e-07
+      },
       "context_window": 204800,
       "default_max_tokens": 98000,
       "can_reason": true,
@@ -88,9 +97,11 @@
     {
       "id": "glm-4.7-flash",
       "name": "GLM-4.7 Flash",
-      "cost_per_1m_in": 0.07,
-      "cost_per_1m_out": 0.4,
-      "cost_per_1m_in_cached": 0.01,
+      "pricing": {
+        "input": 7e-08,
+        "output": 4e-07,
+        "cache_create": 1e-08
+      },
       "context_window": 200000,
       "default_max_tokens": 65550,
       "can_reason": true,
@@ -99,9 +110,11 @@
     {
       "id": "glm-4.6",
       "name": "GLM-4.6",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.2,
-      "cost_per_1m_in_cached": 0.11,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.2e-06,
+        "cache_create": 1.1e-07
+      },
       "context_window": 204800,
       "default_max_tokens": 102400,
       "can_reason": true,
@@ -110,8 +123,10 @@
     {
       "id": "glm-4.6v",
       "name": "GLM-4.6V",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 0.9,
+      "pricing": {
+        "input": 3e-07,
+        "output": 9e-07
+      },
       "context_window": 131072,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -120,9 +135,11 @@
     {
       "id": "glm-4.5",
       "name": "GLM-4.5",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.2,
-      "cost_per_1m_in_cached": 0.11,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.2e-06,
+        "cache_create": 1.1e-07
+      },
       "context_window": 131072,
       "default_max_tokens": 49152,
       "can_reason": true,
@@ -131,9 +148,11 @@
     {
       "id": "glm-4.5-air",
       "name": "GLM-4.5-Air",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 1.1,
-      "cost_per_1m_in_cached": 0.03,
+      "pricing": {
+        "input": 2e-07,
+        "output": 1.1e-06,
+        "cache_create": 3e-08
+      },
       "context_window": 131072,
       "default_max_tokens": 49152,
       "can_reason": true,
@@ -142,9 +161,11 @@
     {
       "id": "glm-4.5v",
       "name": "GLM-4.5V",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 1.8,
-      "cost_per_1m_in_cached": 0.11,
+      "pricing": {
+        "input": 6e-07,
+        "output": 1.8e-06,
+        "cache_create": 1.1e-07
+      },
       "context_window": 65536,
       "default_max_tokens": 8192,
       "can_reason": true,

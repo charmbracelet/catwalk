@@ -10,10 +10,11 @@
     {
       "id": "grok-4.20",
       "name": "Grok 4.20",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 2.5e-06,
+        "cache_hit": 2e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": false,
@@ -22,10 +23,11 @@
     {
       "id": "grok-4.20-non-reasoning",
       "name": "Grok 4.20 Non-Reasoning",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 2.5e-06,
+        "cache_hit": 2e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": false,
@@ -34,10 +36,11 @@
     {
       "id": "grok-4.3",
       "name": "Grok 4.3",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 2.5e-06,
+        "cache_hit": 2e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": false,
@@ -46,10 +49,11 @@
     {
       "id": "grok-4.5",
       "name": "Grok 4.5",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.3,
+      "pricing": {
+        "input": 2e-06,
+        "output": 6e-06,
+        "cache_hit": 3e-07
+      },
       "context_window": 500000,
       "default_max_tokens": 50000,
       "can_reason": true,
@@ -64,10 +68,11 @@
     {
       "id": "grok-4.6",
       "name": "grok-4.6",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 2e-06,
+        "output": 6e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": false,
@@ -76,10 +81,11 @@
     {
       "id": "grok-build-0.1",
       "name": "Grok Build 0.1",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2,
+      "pricing": {
+        "input": 1e-06,
+        "output": 2e-06,
+        "cache_hit": 2e-07
+      },
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,

@@ -10,10 +10,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V3.2-TEE",
       "name": "DeepSeek-V3.2-TEE",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 1,
-      "cost_per_1m_in_cached": 0.1,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1e-06,
+        "output": 1e-06,
+        "cache_create": 1e-07
+      },
       "context_window": 131072,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -28,10 +29,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731-TEE",
       "name": "DeepSeek-V4-Flash-0731-TEE",
-      "cost_per_1m_in": 0.44,
-      "cost_per_1m_out": 1.32,
-      "cost_per_1m_in_cached": 0.044,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 4.4e-07,
+        "output": 1.32e-06,
+        "cache_create": 4.4e-08
+      },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
@@ -46,10 +48,11 @@
     {
       "id": "zai-org/GLM-5.1-TEE",
       "name": "GLM-5.1-TEE",
-      "cost_per_1m_in": 0.98,
-      "cost_per_1m_out": 3.08,
-      "cost_per_1m_in_cached": 0.098,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 9.8e-07,
+        "output": 3.08e-06,
+        "cache_create": 9.8e-08
+      },
       "context_window": 202752,
       "default_max_tokens": 65535,
       "can_reason": true,
@@ -64,10 +67,11 @@
     {
       "id": "zai-org/GLM-5.2-TEE",
       "name": "GLM-5.2-TEE",
-      "cost_per_1m_in": 1.25,
-      "cost_per_1m_out": 3.95,
-      "cost_per_1m_in_cached": 0.125,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 3.95e-06,
+        "cache_create": 1.25e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 65535,
       "can_reason": true,
@@ -82,10 +86,11 @@
     {
       "id": "moonshotai/Kimi-K2.6-TEE",
       "name": "Kimi-K2.6-TEE",
-      "cost_per_1m_in": 0.58,
-      "cost_per_1m_out": 3.4,
-      "cost_per_1m_in_cached": 0.058,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 5.8e-07,
+        "output": 3.4e-06,
+        "cache_create": 5.8e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 65535,
       "can_reason": true,
@@ -100,10 +105,11 @@
     {
       "id": "moonshotai/Kimi-K3-TEE",
       "name": "Kimi-K3-TEE",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 0.3,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_create": 3e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 65535,
       "can_reason": true,
@@ -118,10 +124,11 @@
     {
       "id": "Qwen/Qwen3-235B-A22B-Thinking-2507-TEE",
       "name": "Qwen3-235B-A22B-Thinking-2507-TEE",
-      "cost_per_1m_in": 0.2989,
-      "cost_per_1m_out": 1.1957,
-      "cost_per_1m_in_cached": 0.02989,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 2.989e-07,
+        "output": 1.1957e-06,
+        "cache_create": 2.989e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -136,10 +143,11 @@
     {
       "id": "Qwen/Qwen3-32B-TEE",
       "name": "Qwen3-32B-TEE",
-      "cost_per_1m_in": 0.104,
-      "cost_per_1m_out": 0.416,
-      "cost_per_1m_in_cached": 0.0104,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1.04e-07,
+        "output": 4.16e-07,
+        "cache_create": 1.04e-08
+      },
       "context_window": 40960,
       "default_max_tokens": 40960,
       "can_reason": true,
@@ -154,10 +162,11 @@
     {
       "id": "Qwen/Qwen3.5-397B-A17B-TEE",
       "name": "Qwen3.5-397B-A17B-TEE",
-      "cost_per_1m_in": 0.45,
-      "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0.045,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 4.5e-07,
+        "output": 3e-06,
+        "cache_create": 4.5e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -172,10 +181,11 @@
     {
       "id": "Qwen/Qwen3.6-27B-TEE",
       "name": "Qwen3.6-27B-TEE",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 2,
-      "cost_per_1m_in_cached": 0.03,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 3e-07,
+        "output": 2e-06,
+        "cache_create": 3e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -190,10 +200,11 @@
     {
       "id": "Qwen/Qwen3.8-27B-TEE",
       "name": "Qwen3.8-27B-TEE",
-      "cost_per_1m_in": 0.32,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0.032,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 3.2e-07,
+        "output": 2.5e-06,
+        "cache_create": 3.2e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -208,10 +219,11 @@
     {
       "id": "google/gemma-4-31B-turbo-TEE",
       "name": "gemma-4-31B-turbo-TEE",
-      "cost_per_1m_in": 0.12,
-      "cost_per_1m_out": 0.37,
-      "cost_per_1m_in_cached": 0.012,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1.2e-07,
+        "output": 3.7e-07,
+        "cache_create": 1.2e-08
+      },
       "context_window": 131072,
       "default_max_tokens": 65536,
       "can_reason": true,

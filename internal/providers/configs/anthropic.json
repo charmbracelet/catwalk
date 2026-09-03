@@ -10,10 +10,12 @@
     {
       "id": "claude-fable-5-1",
       "name": "Claude Fable 5.1",
-      "cost_per_1m_in": 10,
-      "cost_per_1m_out": 50,
-      "cost_per_1m_in_cached": 12.5,
-      "cost_per_1m_out_cached": 0.25,
+      "pricing": {
+        "input": 1e-05,
+        "output": 5e-05,
+        "cache_create": 1.25e-05,
+        "cache_hit": 2.5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -24,10 +26,12 @@
     {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
-      "cost_per_1m_in": 10,
-      "cost_per_1m_out": 50,
-      "cost_per_1m_in_cached": 12.5,
-      "cost_per_1m_out_cached": 1,
+      "pricing": {
+        "input": 1e-05,
+        "output": 5e-05,
+        "cache_create": 1.25e-05,
+        "cache_hit": 1e-06
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -38,10 +42,12 @@
     {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 25,
-      "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -52,10 +58,12 @@
     {
       "id": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 25,
-      "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -66,10 +74,12 @@
     {
       "id": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 25,
-      "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -80,10 +90,12 @@
     {
       "id": "claude-opus-4-6",
       "name": "Claude Opus 4.6",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 25,
-      "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -94,10 +106,12 @@
     {
       "id": "claude-opus-4-5-20251101",
       "name": "Claude Opus 4.5",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 25,
-      "cost_per_1m_in_cached": 6.25,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -108,10 +122,12 @@
     {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 2.5,
-      "cost_per_1m_out_cached": 0.2,
+      "pricing": {
+        "input": 2e-06,
+        "output": 1e-05,
+        "cache_create": 2.5e-06,
+        "cache_hit": 2e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -122,10 +138,12 @@
     {
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 3.75,
-      "cost_per_1m_out_cached": 0.3,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_create": 3.75e-06,
+        "cache_hit": 3e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -136,10 +154,12 @@
     {
       "id": "claude-sonnet-4-5-20250929",
       "name": "Claude Sonnet 4.5",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 3.75,
-      "cost_per_1m_out_cached": 0.3,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_create": 3.75e-06,
+        "cache_hit": 3e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -148,10 +168,12 @@
     {
       "id": "claude-haiku-4-5-20251001",
       "name": "Claude Haiku 4.5",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 5,
-      "cost_per_1m_in_cached": 1.25,
-      "cost_per_1m_out_cached": 0.1,
+      "pricing": {
+        "input": 1e-06,
+        "output": 5e-06,
+        "cache_create": 1.25e-06,
+        "cache_hit": 1e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -160,10 +182,12 @@
     {
       "id": "claude-opus-4-1-20250805",
       "name": "Claude Opus 4.1",
-      "cost_per_1m_in": 15,
-      "cost_per_1m_out": 75,
-      "cost_per_1m_in_cached": 18.75,
-      "cost_per_1m_out_cached": 1.5,
+      "pricing": {
+        "input": 1.5e-05,
+        "output": 7.5e-05,
+        "cache_create": 1.875e-05,
+        "cache_hit": 1.5e-06
+      },
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": true,
@@ -172,10 +196,12 @@
     {
       "id": "claude-opus-4-20250514",
       "name": "Claude Opus 4",
-      "cost_per_1m_in": 15,
-      "cost_per_1m_out": 75,
-      "cost_per_1m_in_cached": 18.75,
-      "cost_per_1m_out_cached": 1.5,
+      "pricing": {
+        "input": 1.5e-05,
+        "output": 7.5e-05,
+        "cache_create": 1.875e-05,
+        "cache_hit": 1.5e-06
+      },
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": true,
@@ -184,10 +210,12 @@
     {
       "id": "claude-sonnet-4-20250514",
       "name": "Claude Sonnet 4",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 3.75,
-      "cost_per_1m_out_cached": 0.3,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_create": 3.75e-06,
+        "cache_hit": 3e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -196,10 +224,12 @@
     {
       "id": "claude-mythos-5-1",
       "name": "Claude Mythos 5.1",
-      "cost_per_1m_in": 10,
-      "cost_per_1m_out": 50,
-      "cost_per_1m_in_cached": 12.5,
-      "cost_per_1m_out_cached": 0.25,
+      "pricing": {
+        "input": 1e-05,
+        "output": 5e-05,
+        "cache_create": 1.25e-05,
+        "cache_hit": 2.5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -210,10 +240,12 @@
     {
       "id": "claude-mythos-5",
       "name": "Claude Mythos 5",
-      "cost_per_1m_in": 10,
-      "cost_per_1m_out": 50,
-      "cost_per_1m_in_cached": 12.5,
-      "cost_per_1m_out_cached": 1,
+      "pricing": {
+        "input": 1e-05,
+        "output": 5e-05,
+        "cache_create": 1.25e-05,
+        "cache_hit": 1e-06
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
