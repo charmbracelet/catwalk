@@ -10,10 +10,11 @@
     {
       "id": "accounts/fireworks/models/qwen3p8-max",
       "name": "Qwen 3.8 Max",
-      "cost_per_token_in": 2e-06,
-      "cost_per_token_out": 6e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.5e-07,
+      "pricing": {
+        "input": 2e-06,
+        "output": 6e-06,
+        "cache_hit": 2.5e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -22,10 +23,11 @@
     {
       "id": "accounts/fireworks/models/qwen3p7-plus",
       "name": "Qwen3.7-Plus",
-      "cost_per_token_in": 4e-07,
-      "cost_per_token_out": 1.6e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 8e-08,
+      "pricing": {
+        "input": 4e-07,
+        "output": 1.6e-06,
+        "cache_hit": 8e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -34,10 +36,11 @@
     {
       "id": "accounts/fireworks/models/glm-5p2",
       "name": "GLM-5.2",
-      "cost_per_token_in": 1.4e-06,
-      "cost_per_token_out": 4.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.4e-07,
+      "pricing": {
+        "input": 1.4e-06,
+        "output": 4.4e-06,
+        "cache_hit": 1.4e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
@@ -48,10 +51,11 @@
     {
       "id": "accounts/fireworks/models/glm-5p3",
       "name": "GLM-5.3",
-      "cost_per_token_in": 1.4e-06,
-      "cost_per_token_out": 4.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.6e-07,
+      "pricing": {
+        "input": 1.4e-06,
+        "output": 4.4e-06,
+        "cache_hit": 2.6e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -62,10 +66,11 @@
     {
       "id": "accounts/fireworks/models/glm-5p3-flash",
       "name": "GLM-5.3 Flash",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.9e-08,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 5e-07,
+        "cache_hit": 2.9e-08
+      },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
@@ -76,10 +81,11 @@
     {
       "id": "accounts/fireworks/models/kimi-k3",
       "name": "Kimi K3",
-      "cost_per_token_in": 3e-06,
-      "cost_per_token_out": 1.5e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 3e-07,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_hit": 3e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
@@ -94,10 +100,11 @@
     {
       "id": "accounts/fireworks/models/kimi-k2p7-code",
       "name": "Kimi K2.7 Code",
-      "cost_per_token_in": 9.5e-07,
-      "cost_per_token_out": 4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.9e-07,
+      "pricing": {
+        "input": 9.5e-07,
+        "output": 4e-06,
+        "cache_hit": 1.9e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 262000,
       "can_reason": false,
@@ -106,10 +113,11 @@
     {
       "id": "accounts/fireworks/models/kimi-k2p6",
       "name": "Kimi K2.6",
-      "cost_per_token_in": 9.5e-07,
-      "cost_per_token_out": 4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.6e-07,
+      "pricing": {
+        "input": 9.5e-07,
+        "output": 4e-06,
+        "cache_hit": 1.6e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 262000,
       "can_reason": true,
@@ -118,10 +126,11 @@
     {
       "id": "accounts/fireworks/models/minimax-m3",
       "name": "Minimax M3",
-      "cost_per_token_in": 3e-07,
-      "cost_per_token_out": 1.2e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 5.9e-08,
+      "pricing": {
+        "input": 3e-07,
+        "output": 1.2e-06,
+        "cache_hit": 5.9e-08
+      },
       "context_window": 512000,
       "default_max_tokens": 512000,
       "can_reason": true,
@@ -132,10 +141,11 @@
     {
       "id": "accounts/fireworks/models/minimax-m2p7",
       "name": "MiniMax M2.7",
-      "cost_per_token_in": 3e-07,
-      "cost_per_token_out": 1.2e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 5.9e-08,
+      "pricing": {
+        "input": 3e-07,
+        "output": 1.2e-06,
+        "cache_hit": 5.9e-08
+      },
       "context_window": 196608,
       "default_max_tokens": 196608,
       "can_reason": true,
@@ -146,10 +156,11 @@
     {
       "id": "accounts/fireworks/models/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
-      "cost_per_token_in": 1.74e-06,
-      "cost_per_token_out": 3.48e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.45e-07,
+      "pricing": {
+        "input": 1.74e-06,
+        "output": 3.48e-06,
+        "cache_hit": 1.45e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -160,10 +171,11 @@
     {
       "id": "accounts/fireworks/models/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
-      "cost_per_token_in": 1.32e-06,
-      "cost_per_token_out": 3.96e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 4.4e-08,
+      "pricing": {
+        "input": 1.32e-06,
+        "output": 3.96e-06,
+        "cache_hit": 4.4e-08
+      },
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -174,10 +186,11 @@
     {
       "id": "accounts/fireworks/models/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
-      "cost_per_token_in": 1.4e-07,
-      "cost_per_token_out": 2.8e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 3e-08,
+      "pricing": {
+        "input": 1.4e-07,
+        "output": 2.8e-07,
+        "cache_hit": 3e-08
+      },
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -188,10 +201,11 @@
     {
       "id": "accounts/fireworks/models/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
-      "cost_per_token_in": 2.2e-07,
-      "cost_per_token_out": 6.6e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 7e-09,
+      "pricing": {
+        "input": 2.2e-07,
+        "output": 6.6e-07,
+        "cache_hit": 7e-09
+      },
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -202,10 +216,11 @@
     {
       "id": "accounts/fireworks/models/gpt-oss-120b",
       "name": "gpt-oss-120b",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 6e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.4e-08,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 6e-07,
+        "cache_hit": 1.4e-08
+      },
       "context_window": 131072,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -216,10 +231,11 @@
     {
       "id": "accounts/fireworks/models/gpt-oss-20b",
       "name": "gpt-oss-20b",
-      "cost_per_token_in": 7e-08,
-      "cost_per_token_out": 3e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 3.5e-08,
+      "pricing": {
+        "input": 7e-08,
+        "output": 3e-07,
+        "cache_hit": 3.5e-08
+      },
       "context_window": 131072,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -230,10 +246,11 @@
     {
       "id": "accounts/fireworks/models/inkling",
       "name": "Inkling",
-      "cost_per_token_in": 1e-06,
-      "cost_per_token_out": 4.05e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.7e-07,
+      "pricing": {
+        "input": 1e-06,
+        "output": 4.05e-06,
+        "cache_hit": 1.7e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -244,10 +261,11 @@
     {
       "id": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
       "name": "Nemotron Lightning 3.5 30B A3B",
-      "cost_per_token_in": 5e-08,
-      "cost_per_token_out": 2e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1e-08,
+      "pricing": {
+        "input": 5e-08,
+        "output": 2e-07,
+        "cache_hit": 1e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -258,10 +276,11 @@
     {
       "id": "accounts/fireworks/models/nemotron-3-ultra-nvfp4",
       "name": "NVIDIA Nemotron 3 Ultra NVFP4",
-      "cost_per_token_in": 6e-07,
-      "cost_per_token_out": 2.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.19e-07,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.4e-06,
+        "cache_hit": 1.19e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": true,

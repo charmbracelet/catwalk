@@ -46,15 +46,6 @@ type ModelsResponse struct {
 	Data []Model `json:"data"`
 }
 
-// ModelPricing is the pricing structure for a model, detailing costs per
-// token for input and output, both cached and uncached.
-type ModelPricing struct {
-	CostPerTokenIn        float64 `json:"cost_per_token_in"`
-	CostPerTokenOut       float64 `json:"cost_per_token_out"`
-	CostPerTokenInCached  float64 `json:"cost_per_token_in_cached"`
-	CostPerTokenOutCached float64 `json:"cost_per_token_out_cached"`
-}
-
 // parsePrice extracts a float from Synthetic's price format (e.g. "$0.00000055").
 func parsePrice(s string) float64 {
 	s = strings.TrimPrefix(s, "$")
@@ -69,12 +60,12 @@ func roundCost(v float64) float64 {
 	return math.Round(v*1e11) / 1e11
 }
 
-func getPricing(model Model) ModelPricing {
-	return ModelPricing{
-		CostPerTokenIn:        roundCost(parsePrice(model.Pricing.Prompt)),
-		CostPerTokenOut:       roundCost(parsePrice(model.Pricing.Completion)),
-		CostPerTokenInCached:  roundCost(parsePrice(model.Pricing.InputCacheReads)),
-		CostPerTokenOutCached: roundCost(parsePrice(model.Pricing.InputCacheReads)),
+func getPricing(model Model) catwalk.Pricing {
+	return catwalk.Pricing{
+		Input:       roundCost(parsePrice(model.Pricing.Prompt)),
+		Output:      roundCost(parsePrice(model.Pricing.Completion)),
+		CacheCreate: roundCost(parsePrice(model.Pricing.InputCacheWrites)),
+		CacheHit:    roundCost(parsePrice(model.Pricing.InputCacheReads)),
 	}
 }
 
@@ -215,10 +206,7 @@ func main() {
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   modelName,
-			CostPerTokenIn:         pricing.CostPerTokenIn,
-			CostPerTokenOut:        pricing.CostPerTokenOut,
-			CostPerTokenInCached:   pricing.CostPerTokenInCached,
-			CostPerTokenOutCached:  pricing.CostPerTokenOutCached,
+			Pricing:                pricing,
 			ContextWindow:          model.ContextLength,
 			CanReason:              canReason,
 			DefaultReasoningEffort: defaultReasoning,

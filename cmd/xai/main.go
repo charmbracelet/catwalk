@@ -171,12 +171,13 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     id,
-			Name:                   prettyName(id),
-			CostPerTokenIn:         priceToDollarsPerToken(model.PromptTextTokenPrice),
-			CostPerTokenOut:        priceToDollarsPerToken(model.CompletionTextTokenPrice),
-			CostPerTokenInCached:   0,
-			CostPerTokenOutCached:  priceToDollarsPerToken(model.CachedPromptTextTokenPrc),
+			ID:   id,
+			Name: prettyName(id),
+			Pricing: catwalk.Pricing{
+				Input:    priceToDollarsPerToken(model.PromptTextTokenPrice),
+				Output:   priceToDollarsPerToken(model.CompletionTextTokenPrice),
+				CacheHit: priceToDollarsPerToken(model.CachedPromptTextTokenPrc),
+			},
 			ContextWindow:          ctxWindow,
 			DefaultMaxTokens:       defaultMaxTokens,
 			CanReason:              canReason,

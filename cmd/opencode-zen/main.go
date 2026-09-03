@@ -144,7 +144,7 @@ func main() {
 	for _, zenModel := range zenModels {
 		enrichment, hasEnrichment := enrichmentData[zenModel.ID]
 
-		var costPerTokenIn, costPerTokenOut, costPerTokenInCached, costPerTokenOutCached float64
+		var costInput, costOutput, costCacheCreate, costCacheHit float64
 		var contextWindow, defaultMaxTokens int64 = 200000, 20000
 		var supportsImages bool
 		var canReason bool
@@ -153,10 +153,10 @@ func main() {
 		modelName := zenModel.ID
 
 		if hasEnrichment {
-			costPerTokenIn = enrichment.Cost.Input / 1_000_000
-			costPerTokenOut = enrichment.Cost.Output / 1_000_000
-			costPerTokenInCached = enrichment.Cost.CacheRead / 1_000_000
-			costPerTokenOutCached = enrichment.Cost.CacheWrite / 1_000_000
+			costInput = enrichment.Cost.Input / 1_000_000
+			costOutput = enrichment.Cost.Output / 1_000_000
+			costCacheCreate = enrichment.Cost.CacheWrite / 1_000_000
+			costCacheHit = enrichment.Cost.CacheRead / 1_000_000
 			contextWindow = enrichment.Limit.Context
 			defaultMaxTokens = enrichment.Limit.Output
 			supportsImages = enrichment.Attachment
@@ -191,12 +191,14 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     zenModel.ID,
-			Name:                   modelName,
-			CostPerTokenIn:         costPerTokenIn,
-			CostPerTokenOut:        costPerTokenOut,
-			CostPerTokenInCached:   costPerTokenInCached,
-			CostPerTokenOutCached:  costPerTokenOutCached,
+			ID:   zenModel.ID,
+			Name: modelName,
+			Pricing: catwalk.Pricing{
+				Input:       costInput,
+				Output:      costOutput,
+				CacheCreate: costCacheCreate,
+				CacheHit:    costCacheHit,
+			},
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       defaultMaxTokens,
 			SupportsImages:         supportsImages,

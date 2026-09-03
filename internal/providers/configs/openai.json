@@ -10,10 +10,12 @@
     {
       "id": "gpt-5.6-sol",
       "name": "GPT-5.6 Sol",
-      "cost_per_token_in": 4e-06,
-      "cost_per_token_out": 2e-05,
-      "cost_per_token_in_cached": 5e-06,
-      "cost_per_token_out_cached": 4e-07,
+      "pricing": {
+        "input": 4e-06,
+        "output": 2e-05,
+        "cache_create": 5e-06,
+        "cache_hit": 4e-07
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -24,10 +26,12 @@
     {
       "id": "gpt-5.6-terra",
       "name": "GPT-5.6 Terra",
-      "cost_per_token_in": 2e-06,
-      "cost_per_token_out": 1.2e-05,
-      "cost_per_token_in_cached": 2.5e-06,
-      "cost_per_token_out_cached": 2e-07,
+      "pricing": {
+        "input": 2e-06,
+        "output": 1.2e-05,
+        "cache_create": 2.5e-06,
+        "cache_hit": 2e-07
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -38,10 +42,12 @@
     {
       "id": "gpt-5.6-luna",
       "name": "GPT-5.6 Luna",
-      "cost_per_token_in": 2e-07,
-      "cost_per_token_out": 1.2e-06,
-      "cost_per_token_in_cached": 2.5e-07,
-      "cost_per_token_out_cached": 2e-08,
+      "pricing": {
+        "input": 2e-07,
+        "output": 1.2e-06,
+        "cache_create": 2.5e-07,
+        "cache_hit": 2e-08
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -52,10 +58,11 @@
     {
       "id": "gpt-5.5",
       "name": "GPT-5.5",
-      "cost_per_token_in": 5e-06,
-      "cost_per_token_out": 3e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 5e-06,
+        "output": 3e-05,
+        "cache_hit": 5e-07
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -66,10 +73,10 @@
     {
       "id": "gpt-5.5-pro",
       "name": "GPT-5.5 Pro",
-      "cost_per_token_in": 3e-05,
-      "cost_per_token_out": 0.00018,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3e-05,
+        "output": 0.00018
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -80,10 +87,11 @@
     {
       "id": "gpt-5.4",
       "name": "GPT-5.4",
-      "cost_per_token_in": 2.5e-06,
-      "cost_per_token_out": 1.5e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.5e-07,
+      "pricing": {
+        "input": 2.5e-06,
+        "output": 1.5e-05,
+        "cache_hit": 2.5e-07
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -94,10 +102,10 @@
     {
       "id": "gpt-5.4-pro",
       "name": "GPT-5.4 Pro",
-      "cost_per_token_in": 3e-05,
-      "cost_per_token_out": 0.00018,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3e-05,
+        "output": 0.00018
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -108,10 +116,11 @@
     {
       "id": "gpt-5.4-mini",
       "name": "GPT-5.4 Mini",
-      "cost_per_token_in": 7.5e-07,
-      "cost_per_token_out": 4.5e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 7.5e-08,
+      "pricing": {
+        "input": 7.5e-07,
+        "output": 4.5e-06,
+        "cache_hit": 7.5e-08
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -122,10 +131,11 @@
     {
       "id": "gpt-5.4-nano",
       "name": "GPT-5.4 Nano",
-      "cost_per_token_in": 2e-07,
-      "cost_per_token_out": 1.25e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2e-08,
+      "pricing": {
+        "input": 2e-07,
+        "output": 1.25e-06,
+        "cache_hit": 2e-08
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -136,10 +146,12 @@
     {
       "id": "gpt-5.3-codex",
       "name": "GPT-5.3 Codex",
-      "cost_per_token_in": 1.75e-06,
-      "cost_per_token_out": 1.4e-05,
-      "cost_per_token_in_cached": 1.75e-07,
-      "cost_per_token_out_cached": 1.75e-07,
+      "pricing": {
+        "input": 1.75e-06,
+        "output": 1.4e-05,
+        "cache_create": 1.75e-07,
+        "cache_hit": 1.75e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -150,10 +162,12 @@
     {
       "id": "gpt-5.2",
       "name": "GPT-5.2",
-      "cost_per_token_in": 1.75e-06,
-      "cost_per_token_out": 1.4e-05,
-      "cost_per_token_in_cached": 1.75e-07,
-      "cost_per_token_out_cached": 1.75e-07,
+      "pricing": {
+        "input": 1.75e-06,
+        "output": 1.4e-05,
+        "cache_create": 1.75e-07,
+        "cache_hit": 1.75e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -164,10 +178,12 @@
     {
       "id": "gpt-5.2-codex",
       "name": "GPT-5.2 Codex",
-      "cost_per_token_in": 1.75e-06,
-      "cost_per_token_out": 1.4e-05,
-      "cost_per_token_in_cached": 1.75e-07,
-      "cost_per_token_out_cached": 1.75e-07,
+      "pricing": {
+        "input": 1.75e-06,
+        "output": 1.4e-05,
+        "cache_create": 1.75e-07,
+        "cache_hit": 1.75e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -178,10 +194,12 @@
     {
       "id": "gpt-5.1",
       "name": "GPT-5.1",
-      "cost_per_token_in": 1.25e-06,
-      "cost_per_token_out": 1e-05,
-      "cost_per_token_in_cached": 1.25e-07,
-      "cost_per_token_out_cached": 1.25e-07,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 1e-05,
+        "cache_create": 1.25e-07,
+        "cache_hit": 1.25e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -192,10 +210,12 @@
     {
       "id": "gpt-5.1-codex",
       "name": "GPT-5.1 Codex",
-      "cost_per_token_in": 1.25e-06,
-      "cost_per_token_out": 1e-05,
-      "cost_per_token_in_cached": 1.25e-07,
-      "cost_per_token_out_cached": 1.25e-07,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 1e-05,
+        "cache_create": 1.25e-07,
+        "cache_hit": 1.25e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -206,10 +226,12 @@
     {
       "id": "gpt-5.1-codex-max",
       "name": "GPT-5.1 Codex Max",
-      "cost_per_token_in": 1.25e-06,
-      "cost_per_token_out": 1e-05,
-      "cost_per_token_in_cached": 1.25e-07,
-      "cost_per_token_out_cached": 1.25e-07,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 1e-05,
+        "cache_create": 1.25e-07,
+        "cache_hit": 1.25e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -220,10 +242,12 @@
     {
       "id": "gpt-5.1-codex-mini",
       "name": "GPT-5.1 Codex Mini",
-      "cost_per_token_in": 2.5e-07,
-      "cost_per_token_out": 2e-06,
-      "cost_per_token_in_cached": 2.5e-08,
-      "cost_per_token_out_cached": 2.5e-08,
+      "pricing": {
+        "input": 2.5e-07,
+        "output": 2e-06,
+        "cache_create": 2.5e-08,
+        "cache_hit": 2.5e-08
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -234,10 +258,12 @@
     {
       "id": "gpt-5-codex",
       "name": "GPT-5 Codex",
-      "cost_per_token_in": 1.25e-06,
-      "cost_per_token_out": 1e-05,
-      "cost_per_token_in_cached": 1.25e-07,
-      "cost_per_token_out_cached": 1.25e-07,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 1e-05,
+        "cache_create": 1.25e-07,
+        "cache_hit": 1.25e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -248,10 +274,12 @@
     {
       "id": "gpt-5",
       "name": "GPT-5",
-      "cost_per_token_in": 1.25e-06,
-      "cost_per_token_out": 1e-05,
-      "cost_per_token_in_cached": 1.25e-07,
-      "cost_per_token_out_cached": 1.25e-07,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 1e-05,
+        "cache_create": 1.25e-07,
+        "cache_hit": 1.25e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -262,10 +290,12 @@
     {
       "id": "gpt-5-mini",
       "name": "GPT-5 Mini",
-      "cost_per_token_in": 2.5e-07,
-      "cost_per_token_out": 2e-06,
-      "cost_per_token_in_cached": 2.5e-08,
-      "cost_per_token_out_cached": 2.5e-08,
+      "pricing": {
+        "input": 2.5e-07,
+        "output": 2e-06,
+        "cache_create": 2.5e-08,
+        "cache_hit": 2.5e-08
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -276,10 +306,12 @@
     {
       "id": "gpt-5-nano",
       "name": "GPT-5 Nano",
-      "cost_per_token_in": 5e-08,
-      "cost_per_token_out": 4e-07,
-      "cost_per_token_in_cached": 5e-09,
-      "cost_per_token_out_cached": 5e-09,
+      "pricing": {
+        "input": 5e-08,
+        "output": 4e-07,
+        "cache_create": 5e-09,
+        "cache_hit": 5e-09
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -290,10 +322,11 @@
     {
       "id": "o4-mini",
       "name": "o4 Mini",
-      "cost_per_token_in": 1.1e-06,
-      "cost_per_token_out": 4.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.75e-07,
+      "pricing": {
+        "input": 1.1e-06,
+        "output": 4.4e-06,
+        "cache_hit": 2.75e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
@@ -304,10 +337,11 @@
     {
       "id": "o3",
       "name": "o3",
-      "cost_per_token_in": 2e-06,
-      "cost_per_token_out": 8e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 2e-06,
+        "output": 8e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
@@ -318,10 +352,11 @@
     {
       "id": "gpt-4.1",
       "name": "GPT-4.1",
-      "cost_per_token_in": 2e-06,
-      "cost_per_token_out": 8e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 2e-06,
+        "output": 8e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1047576,
       "default_max_tokens": 16384,
       "can_reason": false,
@@ -330,10 +365,11 @@
     {
       "id": "gpt-4.1-mini",
       "name": "GPT-4.1 Mini",
-      "cost_per_token_in": 4e-07,
-      "cost_per_token_out": 1.6e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1e-07,
+      "pricing": {
+        "input": 4e-07,
+        "output": 1.6e-06,
+        "cache_hit": 1e-07
+      },
       "context_window": 1047576,
       "default_max_tokens": 16384,
       "can_reason": false,
@@ -342,10 +378,11 @@
     {
       "id": "gpt-4.1-nano",
       "name": "GPT-4.1 Nano",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 4e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.5e-08,
+      "pricing": {
+        "input": 1e-07,
+        "output": 4e-07,
+        "cache_hit": 2.5e-08
+      },
       "context_window": 1047576,
       "default_max_tokens": 16384,
       "can_reason": false,
@@ -354,10 +391,11 @@
     {
       "id": "o3-mini",
       "name": "o3 Mini",
-      "cost_per_token_in": 1.1e-06,
-      "cost_per_token_out": 4.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 5.5e-07,
+      "pricing": {
+        "input": 1.1e-06,
+        "output": 4.4e-06,
+        "cache_hit": 5.5e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 50000,
       "can_reason": true,
@@ -368,10 +406,11 @@
     {
       "id": "gpt-4o",
       "name": "GPT-4o",
-      "cost_per_token_in": 2.5e-06,
-      "cost_per_token_out": 1e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.25e-06,
+      "pricing": {
+        "input": 2.5e-06,
+        "output": 1e-05,
+        "cache_hit": 1.25e-06
+      },
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
@@ -380,10 +419,11 @@
     {
       "id": "gpt-4o-mini",
       "name": "GPT-4o-mini",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 6e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 7.5e-08,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 6e-07,
+        "cache_hit": 7.5e-08
+      },
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,

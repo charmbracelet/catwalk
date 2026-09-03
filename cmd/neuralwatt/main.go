@@ -140,8 +140,8 @@ func main() {
 
 		costIn := ptrDeref(meta.Pricing.InputPerMillion, 0)
 		costOut := ptrDeref(meta.Pricing.OutputPerMillion, 0)
-		costInCached := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
-		costOutCached := ptrDeref(meta.Pricing.CachedOutputPerMillion, 0)
+		costCacheCreate := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
+		costCacheHit := ptrDeref(meta.Pricing.CachedOutputPerMillion, 0)
 
 		var defaultMaxTokens int64
 		if meta.Limits.MaxOutputTokens != nil {
@@ -168,12 +168,14 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   name,
-			CostPerTokenIn:         roundCost(costIn / 1_000_000),
-			CostPerTokenOut:        roundCost(costOut / 1_000_000),
-			CostPerTokenInCached:   roundCost(costInCached / 1_000_000),
-			CostPerTokenOutCached:  roundCost(costOutCached / 1_000_000),
+			ID:   model.ID,
+			Name: name,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(costIn / 1_000_000),
+				Output:      roundCost(costOut / 1_000_000),
+				CacheCreate: roundCost(costCacheCreate / 1_000_000),
+				CacheHit:    roundCost(costCacheHit / 1_000_000),
+			},
 			ContextWindow:          model.MaxModelLen,
 			DefaultMaxTokens:       defaultMaxTokens,
 			CanReason:              meta.Capabilities.Reasoning,

@@ -155,12 +155,14 @@ func main() {
 		maxTokens := calculateMaxTokens(model.ContextLength, model.MaxOutput, maxTokensFactor)
 
 		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
-			ID:                     model.ModelID,
-			Name:                   model.ModelName,
-			CostPerTokenIn:         roundCost(parseFloat(model.Pricing.Input) / 1_000_000),
-			CostPerTokenOut:        roundCost(parseFloat(model.Pricing.Output) / 1_000_000),
-			CostPerTokenInCached:   roundCost(parseFloat(model.Pricing.CacheWrite) / 1_000_000),
-			CostPerTokenOutCached:  roundCost(parseFloat(model.Pricing.CacheRead) / 1_000_000),
+			ID:   model.ModelID,
+			Name: model.ModelName,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(parseFloat(model.Pricing.Input) / 1_000_000),
+				Output:      roundCost(parseFloat(model.Pricing.Output) / 1_000_000),
+				CacheCreate: roundCost(parseFloat(model.Pricing.CacheWrite) / 1_000_000),
+				CacheHit:    roundCost(parseFloat(model.Pricing.CacheRead) / 1_000_000),
+			},
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,
 			CanReason:              canReason,

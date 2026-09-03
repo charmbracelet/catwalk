@@ -10,10 +10,10 @@
     {
       "id": "deepseek-v4-pro-0813",
       "name": "deepseek-v4-pro-0813",
-      "cost_per_token_in": 1.795e-06,
-      "cost_per_token_out": 3.59e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.795e-06,
+        "output": 3.59e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -28,10 +28,10 @@
     {
       "id": "glm-5.3",
       "name": "glm-5.3",
-      "cost_per_token_in": 1.257e-06,
-      "cost_per_token_out": 3.949e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.257e-06,
+        "output": 3.949e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -46,10 +46,10 @@
     {
       "id": "qwen3.8-flash-next",
       "name": "qwen3.8-flash-next",
-      "cost_per_token_in": 1.8e-07,
-      "cost_per_token_out": 4.49e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.8e-07,
+        "output": 4.49e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -64,10 +64,10 @@
     {
       "id": "glm-5.3-flash",
       "name": "glm-5.3-flash",
-      "cost_per_token_in": 1.8e-07,
-      "cost_per_token_out": 4.49e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.8e-07,
+        "output": 4.49e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -82,10 +82,10 @@
     {
       "id": "qwen3.8-27b",
       "name": "qwen3.8-27b",
-      "cost_per_token_in": 3e-07,
-      "cost_per_token_out": 2.2e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3e-07,
+        "output": 2.2e-06
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -100,10 +100,10 @@
     {
       "id": "gemini-3.7-flash",
       "name": "gemini-3.7-flash",
-      "cost_per_token_in": 6.73e-07,
-      "cost_per_token_out": 3.366e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.73e-07,
+        "output": 3.366e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -118,10 +118,10 @@
     {
       "id": "gemini-3.6-flash",
       "name": "gemini-3.6-flash",
-      "cost_per_token_in": 6.73e-07,
-      "cost_per_token_out": 3.366e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.73e-07,
+        "output": 3.366e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -136,10 +136,10 @@
     {
       "id": "qwen3.8-2.4t-a95b",
       "name": "qwen3.8-2.4t-a95b",
-      "cost_per_token_in": 2.244e-06,
-      "cost_per_token_out": 5.386e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.244e-06,
+        "output": 5.386e-06
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -154,10 +154,10 @@
     {
       "id": "gemini-3.5-flash-lite",
       "name": "gemini-3.5-flash-lite",
-      "cost_per_token_in": 2.96e-07,
-      "cost_per_token_out": 2.468e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.96e-07,
+        "output": 2.468e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -172,10 +172,10 @@
     {
       "id": "deepseek-v4-flash-0731",
       "name": "deepseek-v4-flash-0731",
-      "cost_per_token_in": 1.17e-07,
-      "cost_per_token_out": 2.51e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.17e-07,
+        "output": 2.51e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -190,10 +190,10 @@
     {
       "id": "kimi-k3",
       "name": "kimi-k3",
-      "cost_per_token_in": 2.693e-06,
-      "cost_per_token_out": 1.3464e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.693e-06,
+        "output": 1.3464e-05
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -208,10 +208,10 @@
     {
       "id": "claude-opus-5",
       "name": "claude-opus-5",
-      "cost_per_token_in": 4.937e-06,
-      "cost_per_token_out": 2.4684e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.937e-06,
+        "output": 2.4684e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "can_reason": true,
@@ -226,10 +226,10 @@
     {
       "id": "gpt-5.6-sol",
       "name": "gpt-5.6-sol",
-      "cost_per_token_in": 4.937e-06,
-      "cost_per_token_out": 2.9621e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.937e-06,
+        "output": 2.9621e-05
+      },
       "context_window": 1050000,
       "default_max_tokens": 105000,
       "can_reason": true,
@@ -244,10 +244,10 @@
     {
       "id": "gpt-5.6-terra",
       "name": "gpt-5.6-terra",
-      "cost_per_token_in": 1.975e-06,
-      "cost_per_token_out": 1.1848e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.975e-06,
+        "output": 1.1848e-05
+      },
       "context_window": 1050000,
       "default_max_tokens": 105000,
       "can_reason": true,
@@ -262,10 +262,10 @@
     {
       "id": "gpt-5.6-luna",
       "name": "gpt-5.6-luna",
-      "cost_per_token_in": 1.97e-07,
-      "cost_per_token_out": 1.185e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.97e-07,
+        "output": 1.185e-06
+      },
       "context_window": 1050000,
       "default_max_tokens": 105000,
       "can_reason": true,
@@ -280,10 +280,10 @@
     {
       "id": "apertus-70b",
       "name": "apertus-70b",
-      "cost_per_token_in": 1.25e-06,
-      "cost_per_token_out": 2e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 2e-06
+      },
       "context_window": 65536,
       "default_max_tokens": 6553,
       "can_reason": true,
@@ -298,10 +298,10 @@
     {
       "id": "claude-sonnet-5",
       "name": "claude-sonnet-5",
-      "cost_per_token_in": 1.975e-06,
-      "cost_per_token_out": 9.874e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.975e-06,
+        "output": 9.874e-06
+      },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "can_reason": true,
@@ -316,10 +316,10 @@
     {
       "id": "gemma-4-31b-it",
       "name": "gemma-4-31b-it",
-      "cost_per_token_in": 2e-07,
-      "cost_per_token_out": 3.5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2e-07,
+        "output": 3.5e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "can_reason": true,
@@ -334,10 +334,10 @@
     {
       "id": "glm-5.2",
       "name": "glm-5.2",
-      "cost_per_token_in": 1.077e-06,
-      "cost_per_token_out": 3.77e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.077e-06,
+        "output": 3.77e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -352,10 +352,10 @@
     {
       "id": "kimi-k2.7-code",
       "name": "kimi-k2.7-code",
-      "cost_per_token_in": 6.73e-07,
-      "cost_per_token_out": 3.142e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.73e-07,
+        "output": 3.142e-06
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -370,10 +370,10 @@
     {
       "id": "minimax-m3",
       "name": "minimax-m3",
-      "cost_per_token_in": 3.55e-07,
-      "cost_per_token_out": 1.775e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.55e-07,
+        "output": 1.775e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -388,10 +388,10 @@
     {
       "id": "qwen3.6-27b",
       "name": "qwen3.6-27b",
-      "cost_per_token_in": 4e-07,
-      "cost_per_token_out": 2.7e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4e-07,
+        "output": 2.7e-06
+      },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "can_reason": true,
@@ -406,10 +406,10 @@
     {
       "id": "cosmos3-super-reasoner",
       "name": "cosmos3-super-reasoner",
-      "cost_per_token_in": 8.9e-08,
-      "cost_per_token_out": 2.66e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.9e-08,
+        "output": 2.66e-07
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": true,
@@ -424,10 +424,10 @@
     {
       "id": "claude-opus4-8",
       "name": "claude-opus4-8",
-      "cost_per_token_in": 4.881e-06,
-      "cost_per_token_out": 2.4404e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.881e-06,
+        "output": 2.4404e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "can_reason": true,
@@ -442,10 +442,10 @@
     {
       "id": "gemini-3.5-flash",
       "name": "gemini-3.5-flash",
-      "cost_per_token_in": 1.48e-06,
-      "cost_per_token_out": 8.886e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.48e-06,
+        "output": 8.886e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -460,10 +460,10 @@
     {
       "id": "gemini-3.1-flash-lite",
       "name": "gemini-3.1-flash-lite",
-      "cost_per_token_in": 2.44e-07,
-      "cost_per_token_out": 1.464e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.44e-07,
+        "output": 1.464e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -478,10 +478,10 @@
     {
       "id": "qwen3.6-35b-a3b",
       "name": "qwen3.6-35b-a3b",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 5e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "can_reason": true,
@@ -496,10 +496,10 @@
     {
       "id": "glm-5v-turbo",
       "name": "glm-5v-turbo",
-      "cost_per_token_in": 1.065e-06,
-      "cost_per_token_out": 3.55e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.065e-06,
+        "output": 3.55e-06
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
@@ -514,10 +514,10 @@
     {
       "id": "glm-5-turbo",
       "name": "glm-5-turbo",
-      "cost_per_token_in": 1.065e-06,
-      "cost_per_token_out": 3.55e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.065e-06,
+        "output": 3.55e-06
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
@@ -532,10 +532,10 @@
     {
       "id": "gemma-4-26b-a4b-it",
       "name": "gemma-4-26b-a4b-it",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1e-07,
+        "output": 5e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "can_reason": true,
@@ -550,10 +550,10 @@
     {
       "id": "deepseek-v4-pro",
       "name": "deepseek-v4-pro",
-      "cost_per_token_in": 1.553e-06,
-      "cost_per_token_out": 3.106e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.553e-06,
+        "output": 3.106e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -568,10 +568,10 @@
     {
       "id": "mistral-medium-3.5",
       "name": "mistral-medium-3.5",
-      "cost_per_token_in": 1.25e-06,
-      "cost_per_token_out": 6.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.25e-06,
+        "output": 6.4e-06
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": true,
@@ -586,10 +586,10 @@
     {
       "id": "nvidia-nemotron-3-nano-omni",
       "name": "nvidia-nemotron-3-nano-omni",
-      "cost_per_token_in": 5.3e-08,
-      "cost_per_token_out": 2.13e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.3e-08,
+        "output": 2.13e-07
+      },
       "context_window": 300000,
       "default_max_tokens": 30000,
       "can_reason": true,
@@ -604,10 +604,10 @@
     {
       "id": "gpt-5.4",
       "name": "gpt-5.4",
-      "cost_per_token_in": 2.601e-06,
-      "cost_per_token_out": 1.3872e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.601e-06,
+        "output": 1.3872e-05
+      },
       "context_window": 1050000,
       "default_max_tokens": 105000,
       "can_reason": true,
@@ -622,10 +622,10 @@
     {
       "id": "kimi-k2.6",
       "name": "kimi-k2.6",
-      "cost_per_token_in": 6.94e-07,
-      "cost_per_token_out": 3.034e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.94e-07,
+        "output": 3.034e-06
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -640,10 +640,10 @@
     {
       "id": "claude-opus4-7",
       "name": "claude-opus4-7",
-      "cost_per_token_in": 4.881e-06,
-      "cost_per_token_out": 2.4404e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.881e-06,
+        "output": 2.4404e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "can_reason": true,
@@ -658,10 +658,10 @@
     {
       "id": "minimax-m2.7",
       "name": "minimax-m2.7",
-      "cost_per_token_in": 6e-07,
-      "cost_per_token_out": 2.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.4e-06
+      },
       "context_window": 196608,
       "default_max_tokens": 19660,
       "can_reason": true,
@@ -676,10 +676,10 @@
     {
       "id": "glm-5.1",
       "name": "glm-5.1",
-      "cost_per_token_in": 1.242e-06,
-      "cost_per_token_out": 3.903e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.242e-06,
+        "output": 3.903e-06
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
@@ -694,10 +694,10 @@
     {
       "id": "qwen3.5-122b-a10b",
       "name": "qwen3.5-122b-a10b",
-      "cost_per_token_in": 4.44e-07,
-      "cost_per_token_out": 3.106e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.44e-07,
+        "output": 3.106e-06
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -712,10 +712,10 @@
     {
       "id": "qwen3.5-9b",
       "name": "qwen3.5-9b",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 1.5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1e-07,
+        "output": 1.5e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -730,10 +730,10 @@
     {
       "id": "qwen3-coder-next",
       "name": "qwen3-coder-next",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 8e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 8e-07
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": true,
@@ -748,10 +748,10 @@
     {
       "id": "glm-5",
       "name": "glm-5",
-      "cost_per_token_in": 8.87e-07,
-      "cost_per_token_out": 2.84e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.87e-07,
+        "output": 2.84e-06
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
@@ -766,10 +766,10 @@
     {
       "id": "qwen3.5-397b-a17b",
       "name": "qwen3.5-397b-a17b",
-      "cost_per_token_in": 6e-07,
-      "cost_per_token_out": 3.6e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6e-07,
+        "output": 3.6e-06
+      },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "can_reason": true,
@@ -784,10 +784,10 @@
     {
       "id": "deepseek-v3.2",
       "name": "deepseek-v3.2",
-      "cost_per_token_in": 2.66e-07,
-      "cost_per_token_out": 4.44e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.66e-07,
+        "output": 4.44e-07
+      },
       "context_window": 163840,
       "default_max_tokens": 16384,
       "can_reason": true,
@@ -802,10 +802,10 @@
     {
       "id": "mistral-small-2603",
       "name": "mistral-small-2603",
-      "cost_per_token_in": 1.28e-07,
-      "cost_per_token_out": 5.1e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.28e-07,
+        "output": 5.1e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -820,10 +820,10 @@
     {
       "id": "minimax-m2.5",
       "name": "minimax-m2.5",
-      "cost_per_token_in": 2.66e-07,
-      "cost_per_token_out": 1.065e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.66e-07,
+        "output": 1.065e-06
+      },
       "context_window": 196000,
       "default_max_tokens": 19600,
       "can_reason": true,
@@ -838,10 +838,10 @@
     {
       "id": "claude-4-6-sonnet",
       "name": "claude-4-6-sonnet",
-      "cost_per_token_in": 2.869e-06,
-      "cost_per_token_out": 1.4309e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.869e-06,
+        "output": 1.4309e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "can_reason": true,
@@ -856,10 +856,10 @@
     {
       "id": "glm-4.7-flash",
       "name": "glm-4.7-flash",
-      "cost_per_token_in": 7.2e-08,
-      "cost_per_token_out": 4.29e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 7.2e-08,
+        "output": 4.29e-07
+      },
       "context_window": 203000,
       "default_max_tokens": 20300,
       "can_reason": false,
@@ -868,10 +868,10 @@
     {
       "id": "kimi-k2.5",
       "name": "kimi-k2.5",
-      "cost_per_token_in": 4.44e-07,
-      "cost_per_token_out": 2.485e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.44e-07,
+        "output": 2.485e-06
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -886,10 +886,10 @@
     {
       "id": "claude-opus4-6",
       "name": "claude-opus4-6",
-      "cost_per_token_in": 4.769e-06,
-      "cost_per_token_out": 2.3843e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.769e-06,
+        "output": 2.3843e-05
+      },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "can_reason": true,
@@ -904,10 +904,10 @@
     {
       "id": "minimax-m2",
       "name": "minimax-m2",
-      "cost_per_token_in": 3.13e-07,
-      "cost_per_token_out": 1.261e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.13e-07,
+        "output": 1.261e-06
+      },
       "context_window": 400000,
       "default_max_tokens": 40000,
       "can_reason": true,
@@ -922,10 +922,10 @@
     {
       "id": "glm-4.7",
       "name": "glm-4.7",
-      "cost_per_token_in": 7e-07,
-      "cost_per_token_out": 2.5e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 7e-07,
+        "output": 2.5e-06
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
@@ -940,10 +940,10 @@
     {
       "id": "minimax-m2.1",
       "name": "minimax-m2.1",
-      "cost_per_token_in": 3.22e-07,
-      "cost_per_token_out": 1.288e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.22e-07,
+        "output": 1.288e-06
+      },
       "context_window": 196000,
       "default_max_tokens": 19600,
       "can_reason": true,
@@ -958,10 +958,10 @@
     {
       "id": "qwen3-vl-235b-a22b",
       "name": "qwen3-vl-235b-a22b",
-      "cost_per_token_in": 5.54e-07,
-      "cost_per_token_out": 2.8e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.54e-07,
+        "output": 2.8e-06
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": true,
@@ -976,10 +976,10 @@
     {
       "id": "nvidia-nemotron-3-nano-30b-a3b",
       "name": "nvidia-nemotron-3-nano-30b-a3b",
-      "cost_per_token_in": 5.4e-08,
-      "cost_per_token_out": 2.15e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.4e-08,
+        "output": 2.15e-07
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": true,
@@ -994,10 +994,10 @@
     {
       "id": "claude-opus4-5",
       "name": "claude-opus4-5",
-      "cost_per_token_in": 4.769e-06,
-      "cost_per_token_out": 2.3849e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.769e-06,
+        "output": 2.3849e-05
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": true,
@@ -1012,10 +1012,10 @@
     {
       "id": "qwen3-next-80b-a3b-thinking",
       "name": "qwen3-next-80b-a3b-thinking",
-      "cost_per_token_in": 1.34e-07,
-      "cost_per_token_out": 1.073e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.34e-07,
+        "output": 1.073e-06
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1030,10 +1030,10 @@
     {
       "id": "devstral-2512",
       "name": "devstral-2512",
-      "cost_per_token_in": 4.29e-07,
-      "cost_per_token_out": 2.147e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.29e-07,
+        "output": 2.147e-06
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
@@ -1042,10 +1042,10 @@
     {
       "id": "nova-2-lite",
       "name": "nova-2-lite",
-      "cost_per_token_in": 3.35e-07,
-      "cost_per_token_out": 2.822e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.35e-07,
+        "output": 2.822e-06
+      },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "can_reason": true,
@@ -1060,10 +1060,10 @@
     {
       "id": "gpt-oss-safeguard-120b",
       "name": "gpt-oss-safeguard-120b",
-      "cost_per_token_in": 1.61e-07,
-      "cost_per_token_out": 6.26e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.61e-07,
+        "output": 6.26e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1078,10 +1078,10 @@
     {
       "id": "mistral-large-2512",
       "name": "mistral-large-2512",
-      "cost_per_token_in": 5e-07,
-      "cost_per_token_out": 1.5e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5e-07,
+        "output": 1.5e-06
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
@@ -1090,10 +1090,10 @@
     {
       "id": "ministral-8b-2512",
       "name": "ministral-8b-2512",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 1.5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 1.5e-07
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
@@ -1102,10 +1102,10 @@
     {
       "id": "ministral-3b-2512",
       "name": "ministral-3b-2512",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 1e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1e-07,
+        "output": 1e-07
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
@@ -1114,10 +1114,10 @@
     {
       "id": "ministral-14b-2512",
       "name": "ministral-14b-2512",
-      "cost_per_token_in": 2e-07,
-      "cost_per_token_out": 2e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2e-07,
+        "output": 2e-07
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
@@ -1126,10 +1126,10 @@
     {
       "id": "gpt-5.1",
       "name": "gpt-5.1",
-      "cost_per_token_in": 1.234e-06,
-      "cost_per_token_out": 9.838e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.234e-06,
+        "output": 9.838e-06
+      },
       "context_window": 400000,
       "default_max_tokens": 40000,
       "can_reason": true,
@@ -1144,10 +1144,10 @@
     {
       "id": "nemotron-nano-v2-12b",
       "name": "nemotron-nano-v2-12b",
-      "cost_per_token_in": 2.15e-07,
-      "cost_per_token_out": 6.35e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.15e-07,
+        "output": 6.35e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1162,10 +1162,10 @@
     {
       "id": "claude-haiku-4-5",
       "name": "claude-haiku-4-5",
-      "cost_per_token_in": 8.94e-07,
-      "cost_per_token_out": 4.472e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.94e-07,
+        "output": 4.472e-06
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": true,
@@ -1180,10 +1180,10 @@
     {
       "id": "claude-4-5-sonnet",
       "name": "claude-4-5-sonnet",
-      "cost_per_token_in": 2.683e-06,
-      "cost_per_token_out": 1.3416e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.683e-06,
+        "output": 1.3416e-05
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": true,
@@ -1198,10 +1198,10 @@
     {
       "id": "hermes-4-70b",
       "name": "hermes-4-70b",
-      "cost_per_token_in": 1.16e-07,
-      "cost_per_token_out": 3.58e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.16e-07,
+        "output": 3.58e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": false,
@@ -1210,10 +1210,10 @@
     {
       "id": "gpt-5",
       "name": "gpt-5",
-      "cost_per_token_in": 1.234e-06,
-      "cost_per_token_out": 9.838e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.234e-06,
+        "output": 9.838e-06
+      },
       "context_window": 400000,
       "default_max_tokens": 40000,
       "can_reason": true,
@@ -1228,10 +1228,10 @@
     {
       "id": "gpt-oss-120b",
       "name": "gpt-oss-120b",
-      "cost_per_token_in": 8e-08,
-      "cost_per_token_out": 4e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8e-08,
+        "output": 4e-07
+      },
       "context_window": 131000,
       "default_max_tokens": 13100,
       "can_reason": true,
@@ -1246,10 +1246,10 @@
     {
       "id": "qwen3-30b-a3b-instruct-2507",
       "name": "qwen3-30b-a3b-instruct-2507",
-      "cost_per_token_in": 8.9e-08,
-      "cost_per_token_out": 2.68e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.9e-08,
+        "output": 2.68e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "can_reason": true,
@@ -1264,10 +1264,10 @@
     {
       "id": "gpt-oss-20b",
       "name": "gpt-oss-20b",
-      "cost_per_token_in": 4e-08,
-      "cost_per_token_out": 1.5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4e-08,
+        "output": 1.5e-07
+      },
       "context_window": 131000,
       "default_max_tokens": 13100,
       "can_reason": true,
@@ -1282,10 +1282,10 @@
     {
       "id": "mistral-7b-instruct-v0.3",
       "name": "mistral-7b-instruct-v0.3",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 1e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1e-07,
+        "output": 1e-07
+      },
       "context_window": 127000,
       "default_max_tokens": 12700,
       "can_reason": false,
@@ -1294,10 +1294,10 @@
     {
       "id": "mistral-large-2402",
       "name": "mistral-large-2402",
-      "cost_per_token_in": 3.846e-06,
-      "cost_per_token_out": 1.1627e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.846e-06,
+        "output": 1.1627e-05
+      },
       "context_window": 32000,
       "default_max_tokens": 3200,
       "can_reason": true,
@@ -1312,10 +1312,10 @@
     {
       "id": "pixtral-large-2502",
       "name": "pixtral-large-2502",
-      "cost_per_token_in": 1.789e-06,
-      "cost_per_token_out": 5.366e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.789e-06,
+        "output": 5.366e-06
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1330,10 +1330,10 @@
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
       "name": "mistral-small-3.2-24b-instruct-2506",
-      "cost_per_token_in": 9e-08,
-      "cost_per_token_out": 2.8e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 9e-08,
+        "output": 2.8e-07
+      },
       "context_window": 131000,
       "default_max_tokens": 13100,
       "can_reason": false,
@@ -1342,10 +1342,10 @@
     {
       "id": "qwen3-32b",
       "name": "qwen3-32b",
-      "cost_per_token_in": 8.9e-08,
-      "cost_per_token_out": 2.68e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.9e-08,
+        "output": 2.68e-07
+      },
       "context_window": 40000,
       "default_max_tokens": 4000,
       "can_reason": true,
@@ -1360,10 +1360,10 @@
     {
       "id": "qwen3-235b-a22b-instruct-2507",
       "name": "qwen3-235b-a22b-instruct-2507",
-      "cost_per_token_in": 6.2e-08,
-      "cost_per_token_out": 4.08e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.2e-08,
+        "output": 4.08e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "can_reason": true,
@@ -1378,10 +1378,10 @@
     {
       "id": "qwen3-coder-30b-a3b-instruct",
       "name": "qwen3-coder-30b-a3b-instruct",
-      "cost_per_token_in": 6e-08,
-      "cost_per_token_out": 2.2e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6e-08,
+        "output": 2.2e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -1396,10 +1396,10 @@
     {
       "id": "gpt-4.1",
       "name": "gpt-4.1",
-      "cost_per_token_in": 1.968e-06,
-      "cost_per_token_out": 7.872e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.968e-06,
+        "output": 7.872e-06
+      },
       "context_window": 1047576,
       "default_max_tokens": 104757,
       "can_reason": true,
@@ -1414,10 +1414,10 @@
     {
       "id": "gpt-4.1-mini",
       "name": "gpt-4.1-mini",
-      "cost_per_token_in": 3.9e-07,
-      "cost_per_token_out": 1.53e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.9e-07,
+        "output": 1.53e-06
+      },
       "context_window": 1047576,
       "default_max_tokens": 104757,
       "can_reason": true,
@@ -1432,10 +1432,10 @@
     {
       "id": "gpt-4.1-nano",
       "name": "gpt-4.1-nano",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 3.9e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1e-07,
+        "output": 3.9e-07
+      },
       "context_window": 1047576,
       "default_max_tokens": 104757,
       "can_reason": true,
@@ -1450,10 +1450,10 @@
     {
       "id": "nova-micro-v1",
       "name": "nova-micro-v1",
-      "cost_per_token_in": 3.6e-08,
-      "cost_per_token_out": 1.43e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.6e-08,
+        "output": 1.43e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1468,10 +1468,10 @@
     {
       "id": "nova-lite-v1",
       "name": "nova-lite-v1",
-      "cost_per_token_in": 6.2e-08,
-      "cost_per_token_out": 2.47e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.2e-08,
+        "output": 2.47e-07
+      },
       "context_window": 300000,
       "default_max_tokens": 30000,
       "can_reason": true,
@@ -1486,10 +1486,10 @@
     {
       "id": "nova-pro-v1",
       "name": "nova-pro-v1",
-      "cost_per_token_in": 8.24e-07,
-      "cost_per_token_out": 3.295e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.24e-07,
+        "output": 3.295e-06
+      },
       "context_window": 300000,
       "default_max_tokens": 30000,
       "can_reason": true,
@@ -1504,10 +1504,10 @@
     {
       "id": "claude-sonnet-4",
       "name": "claude-sonnet-4",
-      "cost_per_token_in": 2.601e-06,
-      "cost_per_token_out": 1.301e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.601e-06,
+        "output": 1.301e-05
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": true,
@@ -1522,10 +1522,10 @@
     {
       "id": "llama-3.1-nemotron-ultra-253b-v1",
       "name": "llama-3.1-nemotron-ultra-253b-v1",
-      "cost_per_token_in": 5.37e-07,
-      "cost_per_token_out": 1.61e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.37e-07,
+        "output": 1.61e-06
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1540,10 +1540,10 @@
     {
       "id": "mistral-small-2503",
       "name": "mistral-small-2503",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 3e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1e-07,
+        "output": 3e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": false,
@@ -1552,10 +1552,10 @@
     {
       "id": "gemini-2.5-flash",
       "name": "gemini-2.5-flash",
-      "cost_per_token_in": 2.68e-07,
-      "cost_per_token_out": 2.236e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.68e-07,
+        "output": 2.236e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -1570,10 +1570,10 @@
     {
       "id": "gemini-2.5-pro",
       "name": "gemini-2.5-pro",
-      "cost_per_token_in": 1.342e-06,
-      "cost_per_token_out": 8.944e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.342e-06,
+        "output": 8.944e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -1588,10 +1588,10 @@
     {
       "id": "gemma-3-27b-it",
       "name": "gemma-3-27b-it",
-      "cost_per_token_in": 8.9e-08,
-      "cost_per_token_out": 2.68e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.9e-08,
+        "output": 2.68e-07
+      },
       "context_window": 131000,
       "default_max_tokens": 13100,
       "can_reason": true,
@@ -1606,10 +1606,10 @@
     {
       "id": "deepseek-r1-0528",
       "name": "deepseek-r1-0528",
-      "cost_per_token_in": 5.85e-07,
-      "cost_per_token_out": 2.307e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.85e-07,
+        "output": 2.307e-06
+      },
       "context_window": 164000,
       "default_max_tokens": 16400,
       "can_reason": true,
@@ -1624,10 +1624,10 @@
     {
       "id": "codestral-2508",
       "name": "codestral-2508",
-      "cost_per_token_in": 3e-07,
-      "cost_per_token_out": 9e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3e-07,
+        "output": 9e-07
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
@@ -1636,10 +1636,10 @@
     {
       "id": "llama-3.3-70b-instruct",
       "name": "llama-3.3-70b-instruct",
-      "cost_per_token_in": 1.16e-07,
-      "cost_per_token_out": 3.58e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.16e-07,
+        "output": 3.58e-07
+      },
       "context_window": 131000,
       "default_max_tokens": 13100,
       "can_reason": true,
@@ -1654,10 +1654,10 @@
     {
       "id": "gpt-4o",
       "name": "gpt-4o",
-      "cost_per_token_in": 2.387e-06,
-      "cost_per_token_out": 9.547e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.387e-06,
+        "output": 9.547e-06
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1672,10 +1672,10 @@
     {
       "id": "gpt-5-mini",
       "name": "gpt-5-mini",
-      "cost_per_token_in": 2.5e-07,
-      "cost_per_token_out": 1.968e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.5e-07,
+        "output": 1.968e-06
+      },
       "context_window": 400000,
       "default_max_tokens": 40000,
       "can_reason": true,
@@ -1690,10 +1690,10 @@
     {
       "id": "gpt-5-nano",
       "name": "gpt-5-nano",
-      "cost_per_token_in": 5.4e-08,
-      "cost_per_token_out": 3.94e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.4e-08,
+        "output": 3.94e-07
+      },
       "context_window": 400000,
       "default_max_tokens": 40000,
       "can_reason": true,
@@ -1708,10 +1708,10 @@
     {
       "id": "hermes-4-405b",
       "name": "hermes-4-405b",
-      "cost_per_token_in": 8.94e-07,
-      "cost_per_token_out": 2.683e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.94e-07,
+        "output": 2.683e-06
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": false,
@@ -1720,10 +1720,10 @@
     {
       "id": "mistral-nemo-instruct-2407",
       "name": "mistral-nemo-instruct-2407",
-      "cost_per_token_in": 1.3e-07,
-      "cost_per_token_out": 1.3e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.3e-07,
+        "output": 1.3e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": false,
@@ -1732,10 +1732,10 @@
     {
       "id": "llama-3.1-405b-instruct",
       "name": "llama-3.1-405b-instruct",
-      "cost_per_token_in": 1.75e-06,
-      "cost_per_token_out": 1.75e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.75e-06,
+        "output": 1.75e-06
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1750,10 +1750,10 @@
     {
       "id": "gpt-4o-mini",
       "name": "gpt-4o-mini",
-      "cost_per_token_in": 1.43e-07,
-      "cost_per_token_out": 5.73e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.43e-07,
+        "output": 5.73e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -1768,10 +1768,10 @@
     {
       "id": "llama-3.1-8b-instruct",
       "name": "llama-3.1-8b-instruct",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 1.5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 1.5e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,

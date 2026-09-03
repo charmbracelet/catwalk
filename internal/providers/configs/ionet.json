@@ -10,10 +10,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek: DeepSeek V3.2",
-      "cost_per_token_in": 1.4301e-06,
-      "cost_per_token_out": 2.4063e-06,
-      "cost_per_token_in_cached": 7.1505e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.4301e-06,
+        "output": 2.4063e-06,
+        "cache_create": 7.1505e-07
+      },
       "context_window": 163840,
       "default_max_tokens": 16384,
       "can_reason": true,
@@ -22,10 +23,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek: DeepSeek V4 Flash",
-      "cost_per_token_in": 1.99e-07,
-      "cost_per_token_out": 5.12e-07,
-      "cost_per_token_in_cached": 9.95e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.99e-07,
+        "output": 5.12e-07,
+        "cache_create": 9.95e-08
+      },
       "context_window": 32768,
       "default_max_tokens": 3276,
       "can_reason": true,
@@ -34,10 +36,11 @@
     {
       "id": "MiniMaxAI/MiniMax-M2.7",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
-      "cost_per_token_in": 4.26e-07,
-      "cost_per_token_out": 1.62e-06,
-      "cost_per_token_in_cached": 2.13e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.26e-07,
+        "output": 1.62e-06,
+        "cache_create": 2.13e-07
+      },
       "context_window": 262100,
       "default_max_tokens": 6553,
       "can_reason": false,
@@ -46,10 +49,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
-      "cost_per_token_in": 1.96e-07,
-      "cost_per_token_out": 5.34e-07,
-      "cost_per_token_in_cached": 9.8e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.96e-07,
+        "output": 5.34e-07,
+        "cache_create": 9.8e-08
+      },
       "context_window": 262100,
       "default_max_tokens": 6553,
       "can_reason": true,
@@ -58,10 +62,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek: DeepSeek V4 Pro",
-      "cost_per_token_in": 1.618e-06,
-      "cost_per_token_out": 3.288e-06,
-      "cost_per_token_in_cached": 8.09e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.618e-06,
+        "output": 3.288e-06,
+        "cache_create": 8.09e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 60000,
       "can_reason": true,
@@ -70,10 +75,11 @@
     {
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Google: Gemma 4 26B A4B",
-      "cost_per_token_in": 1.16e-07,
-      "cost_per_token_out": 3.8e-07,
-      "cost_per_token_in_cached": 5.8e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.16e-07,
+        "output": 3.8e-07,
+        "cache_create": 5.8e-08
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": true,
@@ -82,10 +88,11 @@
     {
       "id": "Intel/Qwen3-Coder-480B-A35B-Instruct-int4-mixed-ar",
       "name": "Intel: Qwen3 Coder 480B A35B Instruct INT4 Mixed AR",
-      "cost_per_token_in": 4.45e-07,
-      "cost_per_token_out": 2.145e-06,
-      "cost_per_token_in_cached": 2.225e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 4.45e-07,
+        "output": 2.145e-06,
+        "cache_create": 2.225e-07
+      },
       "context_window": 106000,
       "default_max_tokens": 10600,
       "can_reason": false,
@@ -94,10 +101,11 @@
     {
       "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
       "name": "Meta-Llama: Llama 4 Maverick 17B 128E Instruct FP8",
-      "cost_per_token_in": 2.74e-07,
-      "cost_per_token_out": 8.992e-07,
-      "cost_per_token_in_cached": 1.37e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.74e-07,
+        "output": 8.992e-07,
+        "cache_create": 1.37e-07
+      },
       "context_window": 430000,
       "default_max_tokens": 43000,
       "can_reason": true,
@@ -106,10 +114,11 @@
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Meta: Llama 3.3 70B Instruct",
-      "cost_per_token_in": 6.066e-07,
-      "cost_per_token_out": 1.0386e-06,
-      "cost_per_token_in_cached": 3.033e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.066e-07,
+        "output": 1.0386e-06,
+        "cache_create": 3.033e-07
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": true,
@@ -118,10 +127,11 @@
     {
       "id": "MiniMaxAI/MiniMax-M2.5",
       "name": "MiniMaxAI/MiniMax-M2.5",
-      "cost_per_token_in": 2.94e-07,
-      "cost_per_token_out": 1.176e-06,
-      "cost_per_token_in_cached": 1.47e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 2.94e-07,
+        "output": 1.176e-06,
+        "cache_create": 1.47e-07
+      },
       "context_window": 196600,
       "default_max_tokens": 19660,
       "can_reason": false,
@@ -130,10 +140,11 @@
     {
       "id": "moonshotai/Kimi-K2-Instruct-0905",
       "name": "MoonshotAI: Kimi K2 Instruct 0905",
-      "cost_per_token_in": 5.7e-07,
-      "cost_per_token_out": 2.3e-06,
-      "cost_per_token_in_cached": 2.85e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.7e-07,
+        "output": 2.3e-06,
+        "cache_create": 2.85e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
@@ -142,10 +153,11 @@
     {
       "id": "moonshotai/Kimi-K2-Thinking",
       "name": "MoonshotAI: Kimi K2 Thinking",
-      "cost_per_token_in": 6e-07,
-      "cost_per_token_out": 2.5e-06,
-      "cost_per_token_in_cached": 3e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.5e-06,
+        "cache_create": 3e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -154,10 +166,11 @@
     {
       "id": "moonshotai/Kimi-K2.5",
       "name": "MoonshotAI: Kimi K2.5",
-      "cost_per_token_in": 5.284e-07,
-      "cost_per_token_out": 2.785e-06,
-      "cost_per_token_in_cached": 2.642e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.284e-07,
+        "output": 2.785e-06,
+        "cache_create": 2.642e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -166,10 +179,11 @@
     {
       "id": "moonshotai/Kimi-K2.6",
       "name": "MoonshotAI: Kimi K2.6",
-      "cost_per_token_in": 7.6744e-07,
-      "cost_per_token_out": 3.43436e-06,
-      "cost_per_token_in_cached": 3.8372e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 7.6744e-07,
+        "output": 3.43436e-06,
+        "cache_create": 3.8372e-07
+      },
       "context_window": 262142,
       "default_max_tokens": 26214,
       "can_reason": true,
@@ -178,10 +192,11 @@
     {
       "id": "moonshotai/Kimi-K2.7-Code",
       "name": "MoonshotAI: Kimi K2.7 Code",
-      "cost_per_token_in": 1.026e-06,
-      "cost_per_token_out": 4.53e-06,
-      "cost_per_token_in_cached": 5.13e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.026e-06,
+        "output": 4.53e-06,
+        "cache_create": 5.13e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
@@ -190,10 +205,11 @@
     {
       "id": "moonshotai/Kimi-K3",
       "name": "MoonshotAI: Kimi K3",
-      "cost_per_token_in": 3.18e-06,
-      "cost_per_token_out": 1.59e-05,
-      "cost_per_token_in_cached": 1.59e-06,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.18e-06,
+        "output": 1.59e-05,
+        "cache_create": 1.59e-06
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": false,
@@ -202,10 +218,11 @@
     {
       "id": "openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b",
-      "cost_per_token_in": 1.88e-07,
-      "cost_per_token_out": 7e-07,
-      "cost_per_token_in_cached": 9.4e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.88e-07,
+        "output": 7e-07,
+        "cache_create": 9.4e-08
+      },
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": true,
@@ -220,10 +237,11 @@
     {
       "id": "openai/gpt-oss-20b",
       "name": "OpenAI: gpt-oss-20b",
-      "cost_per_token_in": 6.7e-08,
-      "cost_per_token_out": 2.4e-07,
-      "cost_per_token_in_cached": 3.35e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.7e-08,
+        "output": 2.4e-07,
+        "cache_create": 3.35e-08
+      },
       "context_window": 64000,
       "default_max_tokens": 6400,
       "can_reason": true,
@@ -238,10 +256,11 @@
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
-      "cost_per_token_in": 1.175e-07,
-      "cost_per_token_out": 1.136e-06,
-      "cost_per_token_in_cached": 5.875e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.175e-07,
+        "output": 1.136e-06,
+        "cache_create": 5.875e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
@@ -250,10 +269,11 @@
     {
       "id": "Qwen/Qwen3.6-27B",
       "name": "Qwen: Qwen3.6 27B",
-      "cost_per_token_in": 3.99e-07,
-      "cost_per_token_out": 3.19e-06,
-      "cost_per_token_in_cached": 1.995e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.99e-07,
+        "output": 3.19e-06,
+        "cache_create": 1.995e-07
+      },
       "context_window": 32768,
       "default_max_tokens": 3276,
       "can_reason": false,
@@ -262,10 +282,11 @@
     {
       "id": "Qwen/Qwen3.6-35B-A3B",
       "name": "Qwen: Qwen3.6 35B A3B",
-      "cost_per_token_in": 1.872e-07,
-      "cost_per_token_out": 1.24675e-06,
-      "cost_per_token_in_cached": 9.36e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.872e-07,
+        "output": 1.24675e-06,
+        "cache_create": 9.36e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
@@ -274,10 +295,11 @@
     {
       "id": "Qwen/Qwen3.8-27B",
       "name": "Qwen: Qwen3.8 27B",
-      "cost_per_token_in": 3.9e-07,
-      "cost_per_token_out": 2.99e-06,
-      "cost_per_token_in_cached": 1.95e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 3.9e-07,
+        "output": 2.99e-06,
+        "cache_create": 1.95e-07
+      },
       "context_window": 65536,
       "default_max_tokens": 6553,
       "can_reason": false,
@@ -286,10 +308,11 @@
     {
       "id": "XiaomiMiMo/MiMo-V2.5",
       "name": "Xiaomi: MiMo-V2.5",
-      "cost_per_token_in": 1.934e-07,
-      "cost_per_token_out": 6.268e-07,
-      "cost_per_token_in_cached": 9.67e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.934e-07,
+        "output": 6.268e-07,
+        "cache_create": 9.67e-08
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": false,
@@ -298,10 +321,11 @@
     {
       "id": "zai-org/GLM-4.6",
       "name": "Z.ai: GLM 4.6",
-      "cost_per_token_in": 5.36e-07,
-      "cost_per_token_out": 2.07e-06,
-      "cost_per_token_in_cached": 2.68e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 5.36e-07,
+        "output": 2.07e-06,
+        "cache_create": 2.68e-07
+      },
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": true,
@@ -310,10 +334,11 @@
     {
       "id": "zai-org/GLM-4.7",
       "name": "Z.ai: GLM 4.7",
-      "cost_per_token_in": 8.8e-07,
-      "cost_per_token_out": 2.37e-06,
-      "cost_per_token_in_cached": 4.4e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.8e-07,
+        "output": 2.37e-06,
+        "cache_create": 4.4e-07
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
@@ -322,10 +347,11 @@
     {
       "id": "zai-org/GLM-4.7-Flash",
       "name": "Z.ai: GLM 4.7 Flash",
-      "cost_per_token_in": 6.263e-08,
-      "cost_per_token_out": 4e-07,
-      "cost_per_token_in_cached": 3.131e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 6.263e-08,
+        "output": 4e-07,
+        "cache_create": 3.131e-08
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "can_reason": true,
@@ -334,10 +360,11 @@
     {
       "id": "zai-org/GLM-5",
       "name": "Z.ai: GLM 5",
-      "cost_per_token_in": 8.5e-07,
-      "cost_per_token_out": 2.774e-06,
-      "cost_per_token_in_cached": 4.25e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 8.5e-07,
+        "output": 2.774e-06,
+        "cache_create": 4.25e-07
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "can_reason": true,
@@ -346,10 +373,11 @@
     {
       "id": "zai-org/GLM-5.1",
       "name": "Z.ai: GLM 5.1",
-      "cost_per_token_in": 1.29e-06,
-      "cost_per_token_out": 4.22e-06,
-      "cost_per_token_in_cached": 6.45e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.29e-06,
+        "output": 4.22e-06,
+        "cache_create": 6.45e-07
+      },
       "context_window": 202750,
       "default_max_tokens": 3276,
       "can_reason": true,
@@ -358,10 +386,11 @@
     {
       "id": "zai-org/GLM-5.2",
       "name": "Z.ai: GLM 5.2",
-      "cost_per_token_in": 1.552e-06,
-      "cost_per_token_out": 4.884e-06,
-      "cost_per_token_in_cached": 7.76e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.552e-06,
+        "output": 4.884e-06,
+        "cache_create": 7.76e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 13107,
       "can_reason": true,
@@ -370,10 +399,11 @@
     {
       "id": "zai-org/GLM-5.3",
       "name": "Z.ai: GLM 5.3",
-      "cost_per_token_in": 1.39e-06,
-      "cost_per_token_out": 4.4e-06,
-      "cost_per_token_in_cached": 6.95e-07,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.39e-06,
+        "output": 4.4e-06,
+        "cache_create": 6.95e-07
+      },
       "context_window": 262144,
       "default_max_tokens": 13107,
       "can_reason": true,
@@ -382,10 +412,11 @@
     {
       "id": "zai-org/GLM-5.3-Flash",
       "name": "Z.ai: GLM 5.3 Flash",
-      "cost_per_token_in": 1.48e-07,
-      "cost_per_token_out": 4.9399e-07,
-      "cost_per_token_in_cached": 7.4e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.48e-07,
+        "output": 4.9399e-07,
+        "cache_create": 7.4e-08
+      },
       "context_window": 262144,
       "default_max_tokens": 13107,
       "can_reason": true,
@@ -394,10 +425,11 @@
     {
       "id": "zai-org/GLM-4.5-Air",
       "name": "Z.ai: GLM-4.5-Air",
-      "cost_per_token_in": 1.65e-07,
-      "cost_per_token_out": 9.75e-07,
-      "cost_per_token_in_cached": 8.25e-08,
-      "cost_per_token_out_cached": 0,
+      "pricing": {
+        "input": 1.65e-07,
+        "output": 9.75e-07,
+        "cache_create": 8.25e-08
+      },
       "context_window": 131070,
       "default_max_tokens": 13107,
       "can_reason": true,

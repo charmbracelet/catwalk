@@ -82,8 +82,8 @@ func main() {
 		roundCost := func(v float64) float64 { return math.Round(v*1e11) / 1e11 }
 		costPerTokenIn := roundCost(model.InputTokenPrice)
 		costPerTokenOut := roundCost(model.OutputTokenPrice)
-		costPerTokenInCached := roundCost(model.CacheReadTokenPrice)
-		costPerTokenOutCached := roundCost(model.CacheWriteTokenPrice)
+		costCacheCreate := roundCost(model.CacheWriteTokenPrice)
+		costCacheHit := roundCost(model.CacheReadTokenPrice)
 
 		switch model.ID {
 		case "google/gemma-4-26b-a4b-it":
@@ -91,12 +91,14 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.Name,
-			CostPerTokenIn:         costPerTokenIn,
-			CostPerTokenOut:        costPerTokenOut,
-			CostPerTokenInCached:   costPerTokenInCached,
-			CostPerTokenOutCached:  costPerTokenOutCached,
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:       costPerTokenIn,
+				Output:      costPerTokenOut,
+				CacheCreate: costCacheCreate,
+				CacheHit:    costCacheHit,
+			},
 			ContextWindow:          int64(model.ContextWindow),
 			DefaultMaxTokens:       int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
 			CanReason:              isReasoningModel(model.ID),

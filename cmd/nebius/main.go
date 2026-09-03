@@ -135,12 +135,12 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.DisplayName,
-			CostPerTokenIn:         costPerTokenIn,
-			CostPerTokenOut:        costPerTokenOut,
-			CostPerTokenInCached:   0,
-			CostPerTokenOutCached:  0,
+			ID:   model.ID,
+			Name: model.DisplayName,
+			Pricing: catwalk.Pricing{
+				Input:  costPerTokenIn,
+				Output: costPerTokenOut,
+			},
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
 			CanReason:              canReason,

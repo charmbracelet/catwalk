@@ -164,16 +164,16 @@ func main() {
 			defaultMaxTokens := min(contextLength/4, 8192)
 
 			m := catwalk.Model{
-				ID:                    modelID,
-				Name:                  modelName,
-				CostPerTokenIn:        costPerTokenIn,
-				CostPerTokenOut:       costPerTokenOut,
-				CostPerTokenInCached:  0, // Not provided by HF Router
-				CostPerTokenOutCached: 0, // Not provided by HF Router
-				ContextWindow:         contextLength,
-				DefaultMaxTokens:      defaultMaxTokens,
-				CanReason:             false, // Not provided by HF Router
-				SupportsImages:        false, // Not provided by HF Router
+				ID:   modelID,
+				Name: modelName,
+				Pricing: catwalk.Pricing{
+					Input:  costPerTokenIn,
+					Output: costPerTokenOut,
+				},
+				ContextWindow:    contextLength,
+				DefaultMaxTokens: defaultMaxTokens,
+				CanReason:        false, // Not provided by HF Router
+				SupportsImages:   false, // Not provided by HF Router
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)

@@ -21,21 +21,31 @@
 - File permissions: Use 0o600 for sensitive config files
 - Always format code with `gofumpt`
 
-## Model cost fields
+## Model pricing
 
-Model costs are in **dollars per token** (`cost_per_token_in`,
-`cost_per_token_out`). Provider pages usually quote per-million prices
-(e.g. "$3/M") — divide by 1,000,000 before putting them in the config.
+Model pricing lives in a nested `pricing` object and is in **dollars per
+token**:
 
-The cached cost fields in provider configs are counterintuitive:
+```json
+"pricing": {
+  "input": 1e-05,
+  "output": 5e-05,
+  "cache_create": 1.25e-05,
+  "cache_hit": 2.5e-07
+}
+```
 
-- `cost_per_token_in_cached` = cache **creation** (write) price
-- `cost_per_token_out_cached` = cache **read** price
+Provider pages usually quote per-million prices (e.g. "$3/M") — divide by
+1,000,000 before putting them in the config.
+
+- `cache_create` = cache **creation** (write) price
+- `cache_hit` = cache **read** price
 
 Providers usually advertise a single discounted "cached" price (e.g.
 "$0.044/M cached") — that is the cache **read** price, so it goes in
-`cost_per_token_out_cached`. Leave `cost_per_token_in_cached` at 0 unless the
-provider explicitly prices cache writes (Anthropic-style).
+`cache_hit`. Omit `cache_create` (or leave it at 0) unless the provider
+explicitly prices cache writes (Anthropic-style). Zero-valued cache fields
+are omitted from the configs.
 
 ## Adding more provider commands
 

@@ -85,14 +85,19 @@ type ModelOptions struct {
 	ProviderOptions  map[string]any `json:"provider_options,omitempty"`
 }
 
+// Pricing stores the per-token pricing of a model in US dollars.
+type Pricing struct {
+	Input       float64 `json:"input"`
+	Output      float64 `json:"output"`
+	CacheCreate float64 `json:"cache_create,omitempty"`
+	CacheHit    float64 `json:"cache_hit,omitempty"`
+}
+
 // Model represents an AI model configuration.
 type Model struct {
 	ID                     string       `json:"id"`
 	Name                   string       `json:"name"`
-	CostPerTokenIn         float64      `json:"cost_per_token_in"`
-	CostPerTokenOut        float64      `json:"cost_per_token_out"`
-	CostPerTokenInCached   float64      `json:"cost_per_token_in_cached"`
-	CostPerTokenOutCached  float64      `json:"cost_per_token_out_cached"`
+	Pricing                Pricing      `json:"pricing"`
 	ContextWindow          int64        `json:"context_window"`
 	DefaultMaxTokens       int64        `json:"default_max_tokens"`
 	CanReason              bool         `json:"can_reason"`

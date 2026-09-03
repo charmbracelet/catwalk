@@ -132,13 +132,13 @@ func main() {
 		}
 
 		model := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.ID,
-			ContextWindow:          detailData.ContextSize,
-			CostPerTokenIn:         detailData.Pricing.InputToken / 1_000_000,
-			CostPerTokenOut:        detailData.Pricing.OutputToken / 1_000_000,
-			CostPerTokenInCached:   0,
-			CostPerTokenOutCached:  0,
+			ID:            model.ID,
+			Name:          model.ID,
+			ContextWindow: detailData.ContextSize,
+			Pricing: catwalk.Pricing{
+				Input:  detailData.Pricing.InputToken / 1_000_000,
+				Output: detailData.Pricing.OutputToken / 1_000_000,
+			},
 			DefaultMaxTokens:       model.ContextSize / 10,
 			CanReason:              canReason,
 			DefaultReasoningEffort: defaultReasoning,

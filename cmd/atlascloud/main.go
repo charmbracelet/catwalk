@@ -183,14 +183,16 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                    model.ID,
-			Name:                  model.Name,
-			CostPerTokenIn:        costPerTokenIn,
-			CostPerTokenOut:       costPerTokenOut,
-			CostPerTokenOutCached: costPerTokenCacheRead,
-			ContextWindow:         model.ContextLength,
-			DefaultMaxTokens:      defaultMaxTokens,
-			SupportsImages:        supportsImages,
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:    costPerTokenIn,
+				Output:   costPerTokenOut,
+				CacheHit: costPerTokenCacheRead,
+			},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: defaultMaxTokens,
+			SupportsImages:   supportsImages,
 		}
 
 		atlasCloudProvider.Models = append(atlasCloudProvider.Models, m)

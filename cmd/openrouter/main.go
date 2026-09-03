@@ -93,42 +93,33 @@ type ModelsResponse struct {
 	Data []Model `json:"data"`
 }
 
-// ModelPricing is the pricing structure for a model, detailing costs per
-// token for input and output, both cached and uncached.
-type ModelPricing struct {
-	CostPerTokenIn        float64 `json:"cost_per_token_in"`
-	CostPerTokenOut       float64 `json:"cost_per_token_out"`
-	CostPerTokenInCached  float64 `json:"cost_per_token_in_cached"`
-	CostPerTokenOutCached float64 `json:"cost_per_token_out_cached"`
-}
-
 func roundCost(v float64) float64 {
 	return math.Round(v*1e11) / 1e11
 }
 
-func getPricing(model Model) ModelPricing {
-	pricing := ModelPricing{}
+func getPricing(model Model) catwalk.Pricing {
+	pricing := catwalk.Pricing{}
 	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
 	if err != nil {
 		costPrompt = 0.0
 	}
-	pricing.CostPerTokenIn = roundCost(costPrompt)
+	pricing.Input = roundCost(costPrompt)
 	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 	if err != nil {
 		costCompletion = 0.0
 	}
-	pricing.CostPerTokenOut = roundCost(costCompletion)
+	pricing.Output = roundCost(costCompletion)
 
-	costPromptCached, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
+	costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 	if err != nil {
-		costPromptCached = 0.0
+		costCacheWrite = 0.0
 	}
-	pricing.CostPerTokenInCached = roundCost(costPromptCached)
-	costCompletionCached, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
+	pricing.CacheCreate = roundCost(costCacheWrite)
+	costCacheRead, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 	if err != nil {
-		costCompletionCached = 0.0
+		costCacheRead = 0.0
 	}
-	pricing.CostPerTokenOutCached = roundCost(costCompletionCached)
+	pricing.CacheHit = roundCost(costCacheRead)
 	return pricing
 }
 
@@ -302,10 +293,7 @@ func main() {
 			m := catwalk.Model{
 				ID:                     model.ID,
 				Name:                   model.Name,
-				CostPerTokenIn:         pricing.CostPerTokenIn,
-				CostPerTokenOut:        pricing.CostPerTokenOut,
-				CostPerTokenInCached:   pricing.CostPerTokenInCached,
-				CostPerTokenOutCached:  pricing.CostPerTokenOutCached,
+				Pricing:                pricing,
 				ContextWindow:          model.ContextLength,
 				CanReason:              canReason,
 				DefaultReasoningEffort: defaultReasoning,
@@ -337,28 +325,28 @@ func main() {
 		}
 
 		// Use the best endpoint's configuration
-		pricing := ModelPricing{}
+		pricing := catwalk.Pricing{}
 		costPrompt, err := strconv.ParseFloat(bestEndpoint.Pricing.Prompt, 64)
 		if err != nil {
 			costPrompt = 0.0
 		}
-		pricing.CostPerTokenIn = roundCost(costPrompt)
+		pricing.Input = roundCost(costPrompt)
 		costCompletion, err := strconv.ParseFloat(bestEndpoint.Pricing.Completion, 64)
 		if err != nil {
 			costCompletion = 0.0
 		}
-		pricing.CostPerTokenOut = roundCost(costCompletion)
+		pricing.Output = roundCost(costCompletion)
 
-		costPromptCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
+		costCacheWrite, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
 		if err != nil {
-			costPromptCached = 0.0
+			costCacheWrite = 0.0
 		}
-		pricing.CostPerTokenInCached = roundCost(costPromptCached)
-		costCompletionCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
+		pricing.CacheCreate = roundCost(costCacheWrite)
+		costCacheRead, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
 		if err != nil {
-			costCompletionCached = 0.0
+			costCacheRead = 0.0
 		}
-		pricing.CostPerTokenOutCached = roundCost(costCompletionCached)
+		pricing.CacheHit = roundCost(costCacheRead)
 
 		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
@@ -372,10 +360,7 @@ func main() {
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.Name,
-			CostPerTokenIn:         pricing.CostPerTokenIn,
-			CostPerTokenOut:        pricing.CostPerTokenOut,
-			CostPerTokenInCached:   pricing.CostPerTokenInCached,
-			CostPerTokenOutCached:  pricing.CostPerTokenOutCached,
+			Pricing:                pricing,
 			ContextWindow:          bestEndpoint.ContextLength,
 			CanReason:              canReason,
 			DefaultReasoningEffort: defaultReasoning,

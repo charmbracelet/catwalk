@@ -171,12 +171,13 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.Name,
-			CostPerTokenIn:         parsePrice(model.Pricing.Prompt),
-			CostPerTokenOut:        parsePrice(model.Pricing.Completion),
-			CostPerTokenInCached:   0,
-			CostPerTokenOutCached:  parsePrice(model.Pricing.InputCacheRead),
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:    parsePrice(model.Pricing.Prompt),
+				Output:   parsePrice(model.Pricing.Completion),
+				CacheHit: parsePrice(model.Pricing.InputCacheRead),
+			},
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,
 			CanReason:              canReason,

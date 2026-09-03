@@ -10,10 +10,12 @@
     {
       "id": "us.anthropic.claude-sonnet-5",
       "name": "Claude Sonnet 5",
-      "cost_per_token_in": 3e-06,
-      "cost_per_token_out": 1.5e-05,
-      "cost_per_token_in_cached": 3.75e-06,
-      "cost_per_token_out_cached": 3e-07,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_create": 3.75e-06,
+        "cache_hit": 3e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -24,10 +26,12 @@
     {
       "id": "us.anthropic.claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
-      "cost_per_token_in": 3e-06,
-      "cost_per_token_out": 1.5e-05,
-      "cost_per_token_in_cached": 3.75e-06,
-      "cost_per_token_out_cached": 3e-07,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_create": 3.75e-06,
+        "cache_hit": 3e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -38,10 +42,12 @@
     {
       "id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "name": "Claude Sonnet 4.5",
-      "cost_per_token_in": 3e-06,
-      "cost_per_token_out": 1.5e-05,
-      "cost_per_token_in_cached": 3.75e-06,
-      "cost_per_token_out_cached": 3e-07,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_create": 3.75e-06,
+        "cache_hit": 3e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -50,10 +56,12 @@
     {
       "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
       "name": "Claude Haiku 4.5",
-      "cost_per_token_in": 1e-06,
-      "cost_per_token_out": 5e-06,
-      "cost_per_token_in_cached": 1.25e-06,
-      "cost_per_token_out_cached": 1e-07,
+      "pricing": {
+        "input": 1e-06,
+        "output": 5e-06,
+        "cache_create": 1.25e-06,
+        "cache_hit": 1e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -62,10 +70,12 @@
     {
       "id": "us.anthropic.claude-opus-5",
       "name": "Claude Opus 5",
-      "cost_per_token_in": 5e-06,
-      "cost_per_token_out": 2.5e-05,
-      "cost_per_token_in_cached": 6.25e-06,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -76,10 +86,12 @@
     {
       "id": "us.anthropic.claude-opus-4-8",
       "name": "Claude Opus 4.8",
-      "cost_per_token_in": 5e-06,
-      "cost_per_token_out": 2.5e-05,
-      "cost_per_token_in_cached": 6.25e-06,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -90,10 +102,12 @@
     {
       "id": "us.anthropic.claude-opus-4-7",
       "name": "Claude Opus 4.7",
-      "cost_per_token_in": 5e-06,
-      "cost_per_token_out": 2.5e-05,
-      "cost_per_token_in_cached": 6.25e-06,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -104,10 +118,12 @@
     {
       "id": "us.anthropic.claude-opus-4-6-v1",
       "name": "Claude Opus 4.6",
-      "cost_per_token_in": 5e-06,
-      "cost_per_token_out": 2.5e-05,
-      "cost_per_token_in_cached": 6.25e-06,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -118,10 +134,12 @@
     {
       "id": "us.anthropic.claude-opus-4-5-20251101-v1:0",
       "name": "Claude Opus 4.5",
-      "cost_per_token_in": 5e-06,
-      "cost_per_token_out": 2.5e-05,
-      "cost_per_token_in_cached": 6.25e-06,
-      "cost_per_token_out_cached": 5e-07,
+      "pricing": {
+        "input": 5e-06,
+        "output": 2.5e-05,
+        "cache_create": 6.25e-06,
+        "cache_hit": 5e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 64000,
       "can_reason": true,
@@ -130,10 +148,12 @@
     {
       "id": "us.anthropic.claude-opus-4-1-20250805-v1:0",
       "name": "Claude Opus 4.1",
-      "cost_per_token_in": 1.5e-05,
-      "cost_per_token_out": 7.5e-05,
-      "cost_per_token_in_cached": 1.875e-05,
-      "cost_per_token_out_cached": 1.5e-06,
+      "pricing": {
+        "input": 1.5e-05,
+        "output": 7.5e-05,
+        "cache_create": 1.875e-05,
+        "cache_hit": 1.5e-06
+      },
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": true,
@@ -142,10 +162,12 @@
     {
       "id": "us.anthropic.claude-fable-5",
       "name": "Claude Fable 5",
-      "cost_per_token_in": 1e-05,
-      "cost_per_token_out": 5e-05,
-      "cost_per_token_in_cached": 1.25e-05,
-      "cost_per_token_out_cached": 1e-06,
+      "pricing": {
+        "input": 1e-05,
+        "output": 5e-05,
+        "cache_create": 1.25e-05,
+        "cache_hit": 1e-06
+      },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,

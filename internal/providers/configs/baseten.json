@@ -10,10 +10,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek V4 Flash 0731",
-      "cost_per_token_in": 1.3e-07,
-      "cost_per_token_out": 2.6e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.8e-08,
+      "pricing": {
+        "input": 1.3e-07,
+        "output": 2.6e-07,
+        "cache_hit": 2.8e-08
+      },
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -29,10 +30,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
-      "cost_per_token_in": 1.74e-06,
-      "cost_per_token_out": 3.48e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.45e-07,
+      "pricing": {
+        "input": 1.74e-06,
+        "output": 3.48e-06,
+        "cache_hit": 1.45e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -46,10 +48,11 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek V4 Pro 0813",
-      "cost_per_token_in": 1.32e-06,
-      "cost_per_token_out": 3.96e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.32e-07,
+      "pricing": {
+        "input": 1.32e-06,
+        "output": 3.96e-06,
+        "cache_hit": 1.32e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -65,10 +68,11 @@
     {
       "id": "zai-org/GLM-4.7",
       "name": "GLM 4.7",
-      "cost_per_token_in": 6e-07,
-      "cost_per_token_out": 2.2e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.2e-07,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.2e-06,
+        "cache_hit": 1.2e-07
+      },
       "context_window": 200000,
       "default_max_tokens": 200000,
       "can_reason": false,
@@ -77,10 +81,11 @@
     {
       "id": "zai-org/GLM-5.2",
       "name": "GLM 5.2",
-      "cost_per_token_in": 1.4e-06,
-      "cost_per_token_out": 4.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.4e-07,
+      "pricing": {
+        "input": 1.4e-06,
+        "output": 4.4e-06,
+        "cache_hit": 1.4e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -95,10 +100,11 @@
     {
       "id": "zai-org/GLM-5.2-Fast",
       "name": "GLM 5.2 Fast",
-      "cost_per_token_in": 2.1e-06,
-      "cost_per_token_out": 6.6e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 2.1e-07,
+      "pricing": {
+        "input": 2.1e-06,
+        "output": 6.6e-06,
+        "cache_hit": 2.1e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -113,10 +119,11 @@
     {
       "id": "zai-org/GLM-5.3",
       "name": "GLM 5.3",
-      "cost_per_token_in": 1.4e-06,
-      "cost_per_token_out": 4.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.4e-07,
+      "pricing": {
+        "input": 1.4e-06,
+        "output": 4.4e-06,
+        "cache_hit": 1.4e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -131,10 +138,11 @@
     {
       "id": "zai-org/GLM-5.3-Flash",
       "name": "GLM 5.3 Flash",
-      "cost_per_token_in": 1.5e-07,
-      "cost_per_token_out": 5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 3e-08,
+      "pricing": {
+        "input": 1.5e-07,
+        "output": 5e-07,
+        "cache_hit": 3e-08
+      },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
@@ -149,10 +157,11 @@
     {
       "id": "thinkingmachines/inkling",
       "name": "Inkling",
-      "cost_per_token_in": 1e-06,
-      "cost_per_token_out": 4.05e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.7e-07,
+      "pricing": {
+        "input": 1e-06,
+        "output": 4.05e-06,
+        "cache_hit": 1.7e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -170,10 +179,11 @@
     {
       "id": "thinkingmachines/inkling-small",
       "name": "Inkling Small",
-      "cost_per_token_in": 5e-07,
-      "cost_per_token_out": 1.2e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1e-07,
+      "pricing": {
+        "input": 5e-07,
+        "output": 1.2e-06,
+        "cache_hit": 1e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -188,10 +198,11 @@
     {
       "id": "moonshotai/Kimi-K2.6",
       "name": "Kimi K2.6",
-      "cost_per_token_in": 9.5e-07,
-      "cost_per_token_out": 4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.6e-07,
+      "pricing": {
+        "input": 9.5e-07,
+        "output": 4e-06,
+        "cache_hit": 1.6e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 262000,
       "can_reason": true,
@@ -206,10 +217,11 @@
     {
       "id": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
-      "cost_per_token_in": 9.5e-07,
-      "cost_per_token_out": 4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.6e-07,
+      "pricing": {
+        "input": 9.5e-07,
+        "output": 4e-06,
+        "cache_hit": 1.6e-07
+      },
       "context_window": 262000,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -218,10 +230,11 @@
     {
       "id": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
-      "cost_per_token_in": 3e-06,
-      "cost_per_token_out": 1.5e-05,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 3e-07,
+      "pricing": {
+        "input": 3e-06,
+        "output": 1.5e-05,
+        "cache_hit": 3e-07
+      },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -236,10 +249,11 @@
     {
       "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
       "name": "Nemotron Ultra",
-      "cost_per_token_in": 6e-07,
-      "cost_per_token_out": 2.4e-06,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1.2e-07,
+      "pricing": {
+        "input": 6e-07,
+        "output": 2.4e-06,
+        "cache_hit": 1.2e-07
+      },
       "context_window": 202800,
       "default_max_tokens": 202800,
       "can_reason": true,
@@ -254,10 +268,11 @@
     {
       "id": "openai/gpt-oss-120b",
       "name": "OpenAI GPT 120B",
-      "cost_per_token_in": 1e-07,
-      "cost_per_token_out": 5e-07,
-      "cost_per_token_in_cached": 0,
-      "cost_per_token_out_cached": 1e-07,
+      "pricing": {
+        "input": 1e-07,
+        "output": 5e-07,
+        "cache_hit": 1e-07
+      },
       "context_window": 128072,
       "default_max_tokens": 128072,
       "can_reason": true,

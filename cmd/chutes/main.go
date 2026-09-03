@@ -110,11 +110,13 @@ func main() {
 		}
 
 		model := catwalk.Model{
-			ID:                     m.ID,
-			Name:                   modelDisplayName(m.ID),
-			CostPerTokenIn:         roundCost(m.Pricing.Prompt / 1_000_000),
-			CostPerTokenOut:        roundCost(m.Pricing.Completion / 1_000_000),
-			CostPerTokenInCached:   roundCost(m.Pricing.InputCacheRead / 1_000_000),
+			ID:   m.ID,
+			Name: modelDisplayName(m.ID),
+			Pricing: catwalk.Pricing{
+				Input:    roundCost(m.Pricing.Prompt / 1_000_000),
+				Output:   roundCost(m.Pricing.Completion / 1_000_000),
+				CacheHit: roundCost(m.Pricing.InputCacheRead / 1_000_000),
+			},
 			ContextWindow:          m.ContextLength,
 			DefaultMaxTokens:       m.MaxOutputLength,
 			CanReason:              canReason,
