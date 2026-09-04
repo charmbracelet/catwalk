@@ -182,9 +182,14 @@ func main() {
 			canReason            = model.ModelSpec.Capabilities.SupportsReasoning
 			supportsReasonEffort = model.ModelSpec.Capabilities.SupportsReasoningEffort
 		)
+		reasoningSettings := catwalk.ReasoningSettingsNone
 		var reasoningLevels []string
 		var defaultReasoning string
+		if canReason {
+			reasoningSettings = catwalk.ReasoningSettingsThinking
+		}
 		if canReason && supportsReasonEffort {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -213,7 +218,7 @@ func main() {
 			CostPer1MOutCached:     0,
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       model.ModelSpec.MaxCompletionTokens,
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         model.ModelSpec.Capabilities.SupportsVision,

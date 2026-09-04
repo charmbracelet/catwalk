@@ -125,11 +125,13 @@ func main() {
 		}
 
 		var (
-			canReason        = hasFeature(model, "reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
+			canReason         = hasFeature(model, "reasoning")
+			reasoningSettings = catwalk.ReasoningSettingsNone
+			reasoningLevels   []string
+			defaultReasoning  string
 		)
 		if canReason {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			switch model.ID {
 			case "deepseek-ai/DeepSeek-V4-Flash", "deepseek-ai/DeepSeek-V4-Pro":
 				reasoningLevels = []string{"high", "xhigh"}
@@ -148,6 +150,7 @@ func main() {
 				defaultReasoning = "high"
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
+				reasoningSettings = catwalk.ReasoningSettingsThinking
 			case "moonshotai/Kimi-K3":
 				// Kimi K3 always thinks; effort is low/high/max, defaulting to max.
 				reasoningLevels = []string{"low", "high", "max"}
@@ -179,7 +182,7 @@ func main() {
 			CostPer1MOutCached:     parsePrice(model.Pricing.InputCacheRead),
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         hasModality(model, "image"),

@@ -197,9 +197,11 @@ func main() {
 
 		// Check if model supports reasoning
 		canReason := slices.Contains(model.SupportedFeatures, "reasoning")
+		reasoningSettings := catwalk.ReasoningSettingsNone
 		var reasoningLevels []string
 		var defaultReasoning string
 		if canReason {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -220,7 +222,7 @@ func main() {
 			CostPer1MInCached:      pricing.CostPer1MInCached,
 			CostPer1MOutCached:     pricing.CostPer1MOutCached,
 			ContextWindow:          model.ContextLength,
-			CanReason:              canReason,
+			ReasoningSettings:      reasoningSettings,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
 			SupportsImages:         supportsImages,

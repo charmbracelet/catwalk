@@ -99,9 +99,11 @@ func main() {
 		costPer1MOut := math.Round(goModel.Cost.Output*100) / 100
 		costPer1MInCached := math.Round(goModel.Cost.CacheRead*100) / 100
 
+		reasoningSettings := catwalk.ReasoningSettingsNone
 		var reasoningLevels []string
 		var defaultReasoningEffort string
 		if goModel.Reasoning {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			switch {
 			case strings.Contains(goModel.ID, "deepseek-v4"):
 				reasoningLevels = []string{"low", "high", "max"}
@@ -133,7 +135,7 @@ func main() {
 			ContextWindow:          goModel.Limit.Context,
 			DefaultMaxTokens:       goModel.Limit.Output,
 			SupportsImages:         goModel.Attachment,
-			CanReason:              goModel.Reasoning,
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoningEffort,
 		}

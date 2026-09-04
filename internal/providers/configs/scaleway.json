@@ -16,7 +16,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "can_reason": true,
+      "reasoning_settings": "thinking",
       "supports_attachments": true
     },
     {
@@ -28,7 +28,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 16384,
-      "can_reason": true,
+      "reasoning_settings": "thinking",
       "supports_attachments": true
     },
     {
@@ -40,7 +40,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "can_reason": true,
+      "reasoning_settings": "thinking",
       "supports_attachments": true
     },
     {
@@ -52,7 +52,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 32768,
-      "can_reason": true
+      "reasoning_settings": "thinking"
     },
     {
       "id": "mistral-medium-3.5-128b",
@@ -63,7 +63,7 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "can_reason": true
+      "reasoning_settings": "thinking"
     },
     {
       "id": "llama-3.3-70b-instruct",
@@ -73,7 +73,8 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 100000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "reasoning_settings": "none"
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -83,7 +84,8 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "reasoning_settings": "none"
     },
     {
       "id": "qwen3-coder-30b-a3b-instruct",
@@ -93,7 +95,8 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
-      "default_max_tokens": 32768
+      "default_max_tokens": 32768,
+      "reasoning_settings": "none"
     },
     {
       "id": "voxtral-small-24b-2507",
@@ -103,7 +106,8 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 32000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "reasoning_settings": "none"
     },
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
@@ -114,7 +118,8 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 128000,
       "default_max_tokens": 32768,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "reasoning_settings": "none"
     },
     {
       "id": "devstral-2-123b-instruct-2512",
@@ -124,7 +129,8 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 256000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "reasoning_settings": "none"
     },
     {
       "id": "gemma-3-27b-it",
@@ -135,7 +141,8 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 40000,
       "default_max_tokens": 8192,
-      "supports_attachments": true
+      "supports_attachments": true,
+      "reasoning_settings": "none"
     }
   ]
 }

@@ -71,10 +71,15 @@ func main() {
 		}
 
 		var (
-			reasoningLevels  []string
-			defaultReasoning string
+			reasoningSettings = catwalk.ReasoningSettingsNone
+			reasoningLevels   []string
+			defaultReasoning  string
 		)
+		if isReasoningModel(model.ID) {
+			reasoningSettings = catwalk.ReasoningSettingsThinking
+		}
 		if supportsReasoningLevels(model.ID) {
+			reasoningSettings = catwalk.ReasoningSettingsLevels
 			reasoningLevels = []string{"low", "medium", "high"}
 			defaultReasoning = "medium"
 		}
@@ -100,7 +105,7 @@ func main() {
 			CostPer1MOutCached:     costPer1MOutCached,
 			ContextWindow:          int64(model.ContextWindow),
 			DefaultMaxTokens:       int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
-			CanReason:              isReasoningModel(model.ID),
+			ReasoningSettings:      reasoningSettings,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         model.SupportsImagesInput,

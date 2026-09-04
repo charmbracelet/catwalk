@@ -150,15 +150,20 @@ func main() {
 			defaultMaxTokens = model.MaxModelLen / 10
 		}
 
+		reasoningSettings := catwalk.ReasoningSettingsNone
 		var reasoningLevels []string
 		var defaultReasoning string
-		if meta.Capabilities.Reasoning && meta.Capabilities.ReasoningEffort {
-			if strings.HasPrefix(model.ID, "glm-5.2") {
-				reasoningLevels = []string{"minimal", "high", "xhigh"}
-				defaultReasoning = "xhigh"
-			} else {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoning = "medium"
+		if meta.Capabilities.Reasoning {
+			reasoningSettings = catwalk.ReasoningSettingsThinking
+			if meta.Capabilities.ReasoningEffort {
+				reasoningSettings = catwalk.ReasoningSettingsLevels
+				if strings.HasPrefix(model.ID, "glm-5.2") {
+					reasoningLevels = []string{"minimal", "high", "xhigh"}
+					defaultReasoning = "xhigh"
+				} else {
+					reasoningLevels = []string{"low", "medium", "high"}
+					defaultReasoning = "medium"
+				}
 			}
 		}
 
@@ -176,7 +181,7 @@ func main() {
 			CostPer1MOutCached:     roundCost(costOutCached),
 			ContextWindow:          model.MaxModelLen,
 			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              meta.Capabilities.Reasoning,
+			ReasoningSettings:      reasoningSettings,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
 			SupportsImages:         meta.Capabilities.Vision,
