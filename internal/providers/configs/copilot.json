@@ -319,6 +319,18 @@
       "supports_attachments": true
     },
     {
+      "id": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "grok-4.5",
       "name": "Grok 4.5",
       "cost_per_1m_in": 0,
