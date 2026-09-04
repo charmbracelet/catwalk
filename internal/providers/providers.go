@@ -42,6 +42,9 @@ var bedrockEuropeConfig []byte
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
 
+//go:embed configs/cheapestinference.json
+var cheapestInferenceConfig []byte
+
 //go:embed configs/chutes.json
 var chutesConfig []byte
 
@@ -159,6 +162,7 @@ var providerRegistry = []ProviderFunc{
 	bedrockUnitedStatesProvider,
 	bedrockEuropeProvider,
 	cerebrasProvider,
+	cheapestInferenceProvider,
 	chutesProvider,
 	coralBricksProvider,
 	copilotProvider,
@@ -242,6 +246,10 @@ func bedrockEuropeProvider() catwalk.Provider {
 
 func cerebrasProvider() catwalk.Provider {
 	return loadProviderFromConfig(cerebrasConfig)
+}
+
+func cheapestInferenceProvider() catwalk.Provider {
+	return loadProviderFromConfig(cheapestInferenceConfig)
 }
 
 func chutesProvider() catwalk.Provider {
