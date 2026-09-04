@@ -1,0 +1,47 @@
+{
+  "name": "GreenPT",
+  "id": "greenpt",
+  "api_key": "$GREENPT_API_KEY",
+  "api_endpoint": "https://api.greenpt.ai/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "glm-5.2",
+  "default_small_model_id": "kimi-k2.7-code",
+  "models": [
+    {
+      "id": "glm-5.2",
+      "name": "GLM-5.2",
+      "cost_per_1m_in": 1.254,
+      "cost_per_1m_out": 5.016,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.3135,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "cost_per_1m_in": 0.941,
+      "cost_per_1m_out": 4.389,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.1881,
+      "context_window": 262144,
+      "default_max_tokens": 262144,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "cost_per_1m_in": 3.762,
+      "cost_per_1m_out": 18.81,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.9405,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "can_reason": true,
+      "supports_attachments": true
+    }
+  ]
+}
