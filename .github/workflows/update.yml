@@ -82,6 +82,10 @@ jobs:
         run: go run ./cmd/pioneer/main.go
         continue-on-error: true
 
+      - name: Synthorai
+        run: go run ./cmd/synthorai/main.go
+        continue-on-error: true
+
       - name: Venice
         run: go run ./cmd/venice/main.go
         continue-on-error: true
