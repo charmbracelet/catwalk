@@ -1,0 +1,40 @@
+{
+  "name": "Corti",
+  "id": "corti",
+  "api_key": "$CORTI_BEARER",
+  "api_endpoint": "https://ai.eu.corti.app/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "corti-s1",
+  "default_small_model_id": "corti-s1-mini",
+  "models": [
+    {
+      "id": "corti-s1",
+      "name": "Corti S1",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 8,
+      "cost_per_1m_in_cached": 0.2,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "corti-s1-mini",
+      "name": "Corti S1 Mini",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 0.1,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 16384,
+      "can_reason": true,
+      "supports_attachments": true
+    }
+  ]
+}
