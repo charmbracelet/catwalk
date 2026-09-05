@@ -75,6 +75,9 @@ var ioNetConfig []byte
 //go:embed configs/kimi.json
 var kimiCodingConfig []byte
 
+//go:embed configs/kunavo.json
+var kunavoConfig []byte
+
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
 
@@ -168,6 +171,7 @@ var providerRegistry = []ProviderFunc{
 	groqProvider,
 	huggingFaceProvider,
 	ioNetProvider,
+	kunavoProvider,
 	nebiusProvider,
 	neuralwattProvider,
 	openCodeGoProvider,
@@ -286,6 +290,10 @@ func ioNetProvider() catwalk.Provider {
 
 func kimiCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(kimiCodingConfig)
+}
+
+func kunavoProvider() catwalk.Provider {
+	return loadProviderFromConfig(kunavoConfig)
 }
 
 func miniMaxProvider() catwalk.Provider {
