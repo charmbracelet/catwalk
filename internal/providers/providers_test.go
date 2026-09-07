@@ -3,6 +3,8 @@ package providers
 import (
 	"slices"
 	"testing"
+
+	"charm.land/catwalk/pkg/catwalk"
 )
 
 func TestValidDefaultModels(t *testing.T) {
@@ -19,5 +21,23 @@ func TestValidDefaultModels(t *testing.T) {
 				t.Errorf("Default small model %q not found in provider %q", p.DefaultSmallModelID, p.Name)
 			}
 		})
+	}
+}
+
+func TestKnownProvidersMatchesRegistry(t *testing.T) {
+	known := catwalk.KnownProviders()
+
+	registered := make([]catwalk.InferenceProvider, 0, len(providerRegistry))
+	for _, p := range GetAll() {
+		registered = append(registered, p.ID)
+		if !slices.Contains(known, p.ID) {
+			t.Errorf("Provider %q is registered but missing from catwalk.KnownProviders()", p.ID)
+		}
+	}
+
+	for _, id := range known {
+		if !slices.Contains(registered, id) {
+			t.Errorf("Provider %q is in catwalk.KnownProviders() but is not registered", id)
+		}
 	}
 }
