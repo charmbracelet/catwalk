@@ -11,8 +11,8 @@
       "id": "deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek-V3.2",
       "pricing": {
-        "input": 3e-07,
-        "output": 4.5e-07
+        "input": 0.3,
+        "output": 0.45
       },
       "context_window": 163000,
       "default_max_tokens": 16300,
@@ -29,8 +29,8 @@
       "id": "deepseek-ai/DeepSeek-V3.2-fast",
       "name": "DeepSeek-V3.2 (fast)",
       "pricing": {
-        "input": 4e-07,
-        "output": 2e-06
+        "input": 0.4,
+        "output": 2
       },
       "context_window": 8000,
       "default_max_tokens": 800,
@@ -47,8 +47,8 @@
       "id": "zai-org/GLM-5",
       "name": "GLM-5",
       "pricing": {
-        "input": 1e-06,
-        "output": 3.2e-06
+        "input": 1,
+        "output": 3.2
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -65,8 +65,8 @@
       "id": "NousResearch/Hermes-4-405B",
       "name": "Hermes-4-405B",
       "pricing": {
-        "input": 1e-06,
-        "output": 3e-06
+        "input": 1,
+        "output": 3
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
@@ -83,8 +83,8 @@
       "id": "NousResearch/Hermes-4-70B",
       "name": "Hermes-4-70B",
       "pricing": {
-        "input": 1.3e-07,
-        "output": 4e-07
+        "input": 0.13,
+        "output": 0.4
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
@@ -101,8 +101,8 @@
       "id": "PrimeIntellect/INTELLECT-3",
       "name": "INTELLECT-3",
       "pricing": {
-        "input": 2e-07,
-        "output": 1.1e-06
+        "input": 0.2,
+        "output": 1.1
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
@@ -119,8 +119,8 @@
       "id": "moonshotai/Kimi-K2.5",
       "name": "Kimi-K2.5",
       "pricing": {
-        "input": 5e-07,
-        "output": 2.5e-06
+        "input": 0.5,
+        "output": 2.5
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -137,8 +137,8 @@
       "id": "moonshotai/Kimi-K2.5-fast",
       "name": "Kimi-K2.5 (fast)",
       "pricing": {
-        "input": 5e-07,
-        "output": 2.5e-06
+        "input": 0.5,
+        "output": 2.5
       },
       "context_window": 8000,
       "default_max_tokens": 800,
@@ -155,8 +155,8 @@
       "id": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Llama-3.3-70B-Instruct",
       "pricing": {
-        "input": 1.3e-07,
-        "output": 4e-07
+        "input": 0.13,
+        "output": 0.4
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
@@ -167,8 +167,8 @@
       "id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
       "name": "Meta-Llama-3.1-8B-Instruct",
       "pricing": {
-        "input": 2e-08,
-        "output": 6e-08
+        "input": 0.02,
+        "output": 0.06
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
@@ -179,8 +179,8 @@
       "id": "MiniMaxAI/MiniMax-M2.5",
       "name": "MiniMax-M2.5",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06
+        "input": 0.3,
+        "output": 1.2
       },
       "context_window": 196608,
       "default_max_tokens": 19660,
@@ -197,8 +197,8 @@
       "id": "MiniMaxAI/MiniMax-M2.5-fast",
       "name": "MiniMax-M2.5 (fast)",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06
+        "input": 0.3,
+        "output": 1.2
       },
       "context_window": 8000,
       "default_max_tokens": 800,
@@ -215,8 +215,8 @@
       "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
       "name": "Nemotron-3-Nano-30B-A3B",
       "pricing": {
-        "input": 6e-08,
-        "output": 2.4e-07
+        "input": 0.06,
+        "output": 0.24
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -233,8 +233,8 @@
       "id": "nvidia/nemotron-3-super-120b-a12b",
       "name": "Nemotron-3-Super-120b-a12b",
       "pricing": {
-        "input": 3e-07,
-        "output": 9e-07
+        "input": 0.3,
+        "output": 0.9
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -251,8 +251,8 @@
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "name": "Qwen3-235B-A22B-Instruct-2507",
       "pricing": {
-        "input": 2e-07,
-        "output": 6e-07
+        "input": 0.2,
+        "output": 0.6
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -263,8 +263,8 @@
       "id": "Qwen/Qwen3-235B-A22B-Thinking-2507-fast",
       "name": "Qwen3-235B-A22B-Thinking-2507 (fast)",
       "pricing": {
-        "input": 5e-07,
-        "output": 2e-06
+        "input": 0.5,
+        "output": 2
       },
       "context_window": 8000,
       "default_max_tokens": 800,
@@ -281,8 +281,8 @@
       "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
       "name": "Qwen3-30B-A3B-Instruct-2507",
       "pricing": {
-        "input": 1e-07,
-        "output": 3e-07
+        "input": 0.1,
+        "output": 0.3
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -293,8 +293,8 @@
       "id": "Qwen/Qwen3-32B",
       "name": "Qwen3-32B",
       "pricing": {
-        "input": 1e-07,
-        "output": 3e-07
+        "input": 0.1,
+        "output": 0.3
       },
       "context_window": 40960,
       "default_max_tokens": 4096,
@@ -311,8 +311,8 @@
       "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
       "name": "Qwen3-Next-80B-A3B-Thinking",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 1.2e-06
+        "input": 0.15,
+        "output": 1.2
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -329,8 +329,8 @@
       "id": "Qwen/Qwen3-Next-80B-A3B-Thinking-fast",
       "name": "Qwen3-Next-80B-A3B-Thinking (fast)",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 1.2e-06
+        "input": 0.15,
+        "output": 1.2
       },
       "context_window": 8000,
       "default_max_tokens": 800,
@@ -347,8 +347,8 @@
       "id": "Qwen/Qwen3.5-397B-A17B",
       "name": "Qwen3.5-397B-A17B",
       "pricing": {
-        "input": 6e-07,
-        "output": 3.6e-06
+        "input": 0.6,
+        "output": 3.6
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -365,8 +365,8 @@
       "id": "Qwen/Qwen3.5-397B-A17B-fast",
       "name": "Qwen3.5-397B-A17B (fast)",
       "pricing": {
-        "input": 6e-07,
-        "output": 3.6e-06
+        "input": 0.6,
+        "output": 3.6
       },
       "context_window": 8000,
       "default_max_tokens": 800,
@@ -383,8 +383,8 @@
       "id": "openai/gpt-oss-120b",
       "name": "gpt-oss-120b",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 6e-07
+        "input": 0.15,
+        "output": 0.6
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
@@ -401,8 +401,8 @@
       "id": "openai/gpt-oss-120b-fast",
       "name": "gpt-oss-120b (fast)",
       "pricing": {
-        "input": 1e-07,
-        "output": 5e-07
+        "input": 0.1,
+        "output": 0.5
       },
       "context_window": 8000,
       "default_max_tokens": 800,

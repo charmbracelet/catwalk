@@ -93,9 +93,9 @@ func main() {
 			ID:   model.ID,
 			Name: model.DisplayName,
 			Pricing: catwalk.Pricing{
-				Input:    model.Pricing.InputPerMillion / 1_000_000,
-				Output:   model.Pricing.OutputPerMillion / 1_000_000,
-				CacheHit: model.Pricing.CacheReadPerMillion / 1_000_000,
+				Input:    model.Pricing.InputPerMillion,
+				Output:   model.Pricing.OutputPerMillion,
+				CacheHit: model.Pricing.CacheReadPerMillion,
 			},
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.MaxOutput,

@@ -11,8 +11,8 @@
       "id": "AiHubmix-Phi-4-mini-reasoning",
       "name": "Aihubmix Phi 4 Mini (reasoning)",
       "pricing": {
-        "input": 1.2e-07,
-        "output": 1.2e-07
+        "input": 0.12,
+        "output": 0.12
       },
       "context_window": 128000,
       "default_max_tokens": 4000,
@@ -23,8 +23,8 @@
       "id": "ByteDance-Seed/Seed-OSS-36B-Instruct",
       "name": "Seed Oss 36B Instruct",
       "pricing": {
-        "input": 2e-07,
-        "output": 5.34e-07
+        "input": 0.2,
+        "output": 0.534
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -35,8 +35,8 @@
       "id": "DeepSeek-V3",
       "name": "DeepSeek V3",
       "pricing": {
-        "input": 2.72e-07,
-        "output": 1.088e-06
+        "input": 0.272,
+        "output": 1.088
       },
       "context_window": 1638000,
       "default_max_tokens": 163800,
@@ -47,8 +47,8 @@
       "id": "DeepSeek-V3.1-Terminus",
       "name": "DeepSeek V3.1 Terminus",
       "pricing": {
-        "input": 5.6e-07,
-        "output": 1.68e-06
+        "input": 0.56,
+        "output": 1.68
       },
       "context_window": 160000,
       "default_max_tokens": 32000,
@@ -59,8 +59,8 @@
       "id": "DeepSeek-V3.1-Think",
       "name": "DeepSeek V3.1 Thinking",
       "pricing": {
-        "input": 5.6e-07,
-        "output": 1.68e-06
+        "input": 0.56,
+        "output": 1.68
       },
       "context_window": 128000,
       "default_max_tokens": 32000,
@@ -77,8 +77,8 @@
       "id": "ERNIE-X1.1-Preview",
       "name": "ERNIE X1.1 Preview",
       "pricing": {
-        "input": 1.36e-07,
-        "output": 5.44e-07
+        "input": 0.136,
+        "output": 0.544
       },
       "context_window": 119000,
       "default_max_tokens": 11900,
@@ -95,8 +95,8 @@
       "id": "agnes-2.5-flash",
       "name": "Agnes 2.5 Flash",
       "pricing": {
-        "input": 3e-08,
-        "output": 1.5e-07
+        "input": 0.03,
+        "output": 0.15
       },
       "context_window": 512000,
       "default_max_tokens": 65500,
@@ -113,9 +113,9 @@
       "id": "agnes-2.5-pro",
       "name": "Agnes 2.5 Pro",
       "pricing": {
-        "input": 4.5e-07,
-        "output": 9e-07,
-        "cache_hit": 3.78e-09
+        "input": 0.45,
+        "output": 0.9,
+        "cache_hit": 0.00378
       },
       "context_window": 1000000,
       "default_max_tokens": 65536,
@@ -132,9 +132,9 @@
       "id": "agnes-2.5-pro-alpha",
       "name": "Agnes 2.5 Pro Alpha",
       "pricing": {
-        "input": 4.5e-07,
-        "output": 9e-07,
-        "cache_hit": 3.78e-09
+        "input": 0.45,
+        "output": 0.9,
+        "cache_hit": 0.00378
       },
       "context_window": 1000000,
       "default_max_tokens": 65536,
@@ -151,8 +151,8 @@
       "id": "aihub-Phi-4-mini-instruct",
       "name": "Aihub Phi 4 Mini Instruct",
       "pricing": {
-        "input": 1.2e-07,
-        "output": 4.8e-07
+        "input": 0.12,
+        "output": 0.48
       },
       "context_window": 128000,
       "default_max_tokens": 4000,
@@ -163,8 +163,8 @@
       "id": "aihub-Phi-4-multimodal-instruct",
       "name": "Aihub Phi 4 Multimodal Instruct",
       "pricing": {
-        "input": 1.2e-07,
-        "output": 4.8e-07
+        "input": 0.12,
+        "output": 0.48
       },
       "context_window": 128000,
       "default_max_tokens": 4000,
@@ -175,10 +175,10 @@
       "id": "anthropic-opus-4-6",
       "name": "Anthropic Opus 4.6",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -195,8 +195,8 @@
       "id": "auto",
       "name": "Auto",
       "pricing": {
-        "input": 2e-06,
-        "output": 2e-06
+        "input": 2,
+        "output": 2
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -213,9 +213,9 @@
       "id": "baidu-deepseek-v4-pro-0813",
       "name": "Baidu DeepSeek V4 Pro 0813",
       "pricing": {
-        "input": 1.268e-06,
-        "output": 3.804e-06,
-        "cache_hit": 1.268e-07
+        "input": 1.268,
+        "output": 3.804,
+        "cache_hit": 0.1268
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -232,8 +232,8 @@
       "id": "claude-3-7-sonnet",
       "name": "Claude 3.7 Sonnet",
       "pricing": {
-        "input": 3.3e-06,
-        "output": 1.65e-05
+        "input": 3.3,
+        "output": 16.5
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -250,10 +250,10 @@
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
-        "input": 1.1e-05,
-        "output": 5.5e-05,
-        "cache_create": 1.375e-05,
-        "cache_hit": 1.1e-06
+        "input": 11,
+        "output": 55,
+        "cache_create": 13.75,
+        "cache_hit": 1.1
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -270,10 +270,10 @@
       "id": "claude-fable-5-1",
       "name": "Claude Fable 5.1",
       "pricing": {
-        "input": 1.1e-05,
-        "output": 5.5e-05,
-        "cache_create": 1.375e-05,
-        "cache_hit": 2.75e-07
+        "input": 11,
+        "output": 55,
+        "cache_create": 13.75,
+        "cache_hit": 0.275
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -290,10 +290,10 @@
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "pricing": {
-        "input": 1.1e-06,
-        "output": 5.5e-06,
-        "cache_create": 1.375e-06,
-        "cache_hit": 1.1e-07
+        "input": 1.1,
+        "output": 5.5,
+        "cache_create": 1.375,
+        "cache_hit": 0.11
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -310,8 +310,8 @@
       "id": "claude-opus-4-1",
       "name": "Claude Opus 4.1",
       "pricing": {
-        "input": 1.65e-05,
-        "output": 8.25e-05
+        "input": 16.5,
+        "output": 82.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -328,10 +328,10 @@
       "id": "claude-opus-4-5",
       "name": "Claude Opus 4.5",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -348,10 +348,10 @@
       "id": "claude-opus-4-5-think",
       "name": "Claude Opus 4.5 Thinking",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -368,10 +368,10 @@
       "id": "claude-opus-4-6",
       "name": "Claude Opus 4.6",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -388,10 +388,10 @@
       "id": "claude-opus-4-6-think",
       "name": "Claude Opus 4.6 Thinking",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -408,10 +408,10 @@
       "id": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -428,10 +428,10 @@
       "id": "claude-opus-4-7-think",
       "name": "Claude Opus 4.7 Thinking",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -448,10 +448,10 @@
       "id": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -468,10 +468,10 @@
       "id": "claude-opus-4-8-think",
       "name": "Claude Opus 4.8 Thinking",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -488,10 +488,10 @@
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -508,10 +508,10 @@
       "id": "claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "pricing": {
-        "input": 3.3e-06,
-        "output": 1.65e-05,
-        "cache_create": 4.125e-06,
-        "cache_hit": 3.3e-07
+        "input": 3.3,
+        "output": 16.5,
+        "cache_create": 4.125,
+        "cache_hit": 0.33
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -528,10 +528,10 @@
       "id": "claude-sonnet-4-5-think",
       "name": "Claude Sonnet 4.5 Thinking",
       "pricing": {
-        "input": 3.3e-06,
-        "output": 1.65e-05,
-        "cache_create": 4.125e-06,
-        "cache_hit": 3.3e-07
+        "input": 3.3,
+        "output": 16.5,
+        "cache_create": 4.125,
+        "cache_hit": 0.33
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -548,10 +548,10 @@
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3.75e-06,
-        "cache_hit": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 3.75,
+        "cache_hit": 0.3
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -568,10 +568,10 @@
       "id": "claude-sonnet-4-6-think",
       "name": "Claude Sonnet 4.6 Thinking",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3.75e-06,
-        "cache_hit": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 3.75,
+        "cache_hit": 0.3
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -588,10 +588,10 @@
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "pricing": {
-        "input": 2e-06,
-        "output": 1e-05,
-        "cache_create": 2.5e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -626,9 +626,9 @@
       "id": "coding-kimi-k3",
       "name": "Coding Kimi K3",
       "pricing": {
-        "input": 4.4e-07,
-        "output": 1.61333e-06,
-        "cache_hit": 6.6e-08
+        "input": 0.44,
+        "output": 1.61333,
+        "cache_hit": 0.066
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -663,8 +663,8 @@
       "id": "coding-minimax-m2",
       "name": "Coding MiniMax M2",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 13100,
@@ -699,8 +699,8 @@
       "id": "coding-minimax-m2.1",
       "name": "Coding MiniMax M2.1",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 13100,
@@ -735,8 +735,8 @@
       "id": "coding-minimax-m2.5",
       "name": "Coding MiniMax M2.5",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 13100,
@@ -771,8 +771,8 @@
       "id": "coding-minimax-m2.5-highspeed",
       "name": "Coding MiniMax M2.5 Highspeed",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 13100,
@@ -789,8 +789,8 @@
       "id": "coding-minimax-m2.7",
       "name": "Coding MiniMax M2.7",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 13100,
@@ -825,8 +825,8 @@
       "id": "coding-minimax-m2.7-highspeed",
       "name": "Coding MiniMax M2.7 Highspeed",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 13100,
@@ -843,8 +843,8 @@
       "id": "coding-minimax-m3",
       "name": "Coding MiniMax M3",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 13100,
@@ -879,8 +879,8 @@
       "id": "command-a-plus-05-2026",
       "name": "Command A Plus 05 2026",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1e-05
+        "input": 2.5,
+        "output": 10
       },
       "context_window": 128000,
       "default_max_tokens": 64000,
@@ -897,9 +897,9 @@
       "id": "deepseek-v3.2",
       "name": "DeepSeek V3.2",
       "pricing": {
-        "input": 3.02e-07,
-        "output": 4.53e-07,
-        "cache_hit": 3.02e-08
+        "input": 0.302,
+        "output": 0.453,
+        "cache_hit": 0.0302
       },
       "context_window": 128000,
       "default_max_tokens": 64000,
@@ -916,9 +916,9 @@
       "id": "deepseek-v3.2-think",
       "name": "DeepSeek V3.2 Thinking",
       "pricing": {
-        "input": 3.02e-07,
-        "output": 4.53e-07,
-        "cache_hit": 3.02e-08
+        "input": 0.302,
+        "output": 0.453,
+        "cache_hit": 0.0302
       },
       "context_window": 128000,
       "default_max_tokens": 64000,
@@ -935,9 +935,9 @@
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "pricing": {
-        "input": 1.42e-07,
-        "output": 2.84e-07,
-        "cache_hit": 2.84e-08
+        "input": 0.142,
+        "output": 0.284,
+        "cache_hit": 0.0284
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -954,9 +954,9 @@
       "id": "deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "pricing": {
-        "input": 1.42e-07,
-        "output": 2.84e-07,
-        "cache_hit": 2.84e-08
+        "input": 0.142,
+        "output": 0.284,
+        "cache_hit": 0.0284
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -973,9 +973,9 @@
       "id": "deepseek-v4-flash-0731-fast",
       "name": "DeepSeek V4 Flash 0731 Fast",
       "pricing": {
-        "input": 2.8e-07,
-        "output": 1.4e-06,
-        "cache_hit": 7e-08
+        "input": 0.28,
+        "output": 1.4,
+        "cache_hit": 0.07
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -992,9 +992,9 @@
       "id": "deepseek-v4-flash-vision-exp",
       "name": "DeepSeek V4 Flash Vision Exp",
       "pricing": {
-        "input": 1.42e-07,
-        "output": 2.84e-07,
-        "cache_hit": 2.84e-08
+        "input": 0.142,
+        "output": 0.284,
+        "cache_hit": 0.0284
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -1011,9 +1011,9 @@
       "id": "deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
       "pricing": {
-        "input": 1.69e-06,
-        "output": 3.38e-06,
-        "cache_hit": 1.4027e-07
+        "input": 1.69,
+        "output": 3.38,
+        "cache_hit": 0.14027
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -1030,9 +1030,9 @@
       "id": "deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "pricing": {
-        "input": 6.918e-07,
-        "output": 2.0754e-06,
-        "cache_hit": 2.306e-08
+        "input": 0.6918,
+        "output": 2.0754,
+        "cache_hit": 0.02306
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -1061,9 +1061,9 @@
       "id": "doubao-deepseek-v4-flash-0731",
       "name": "Doubao Deepseek V4 Flash 0731",
       "pricing": {
-        "input": 4.226e-07,
-        "output": 1.2678e-06,
-        "cache_hit": 1.4085e-07
+        "input": 0.4226,
+        "output": 1.2678,
+        "cache_hit": 0.14085
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -1080,9 +1080,9 @@
       "id": "doubao-seed-1-6",
       "name": "Doubao Seed 1.6",
       "pricing": {
-        "input": 1.8e-07,
-        "output": 1.8e-06,
-        "cache_hit": 3.6e-08
+        "input": 0.18,
+        "output": 1.8,
+        "cache_hit": 0.036
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -1093,9 +1093,9 @@
       "id": "doubao-seed-1-6-flash",
       "name": "Doubao Seed 1.6 Flash",
       "pricing": {
-        "input": 4.4e-08,
-        "output": 4.4e-07,
-        "cache_hit": 8.8e-09
+        "input": 0.044,
+        "output": 0.44,
+        "cache_hit": 0.0088
       },
       "context_window": 256000,
       "default_max_tokens": 33000,
@@ -1106,9 +1106,9 @@
       "id": "doubao-seed-1-6-lite",
       "name": "Doubao Seed 1.6 Lite",
       "pricing": {
-        "input": 8.2e-08,
-        "output": 6.56e-07,
-        "cache_hit": 1.64e-08
+        "input": 0.082,
+        "output": 0.656,
+        "cache_hit": 0.0164
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -1119,9 +1119,9 @@
       "id": "doubao-seed-1-6-thinking",
       "name": "Doubao Seed 1.6 Thinking",
       "pricing": {
-        "input": 1.8e-07,
-        "output": 1.8e-06,
-        "cache_hit": 3.6e-08
+        "input": 0.18,
+        "output": 1.8,
+        "cache_hit": 0.036
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -1132,9 +1132,9 @@
       "id": "doubao-seed-1-8",
       "name": "Doubao Seed 1.8",
       "pricing": {
-        "input": 1.0959e-07,
-        "output": 2.7398e-07,
-        "cache_hit": 2.192e-08
+        "input": 0.10959,
+        "output": 0.27398,
+        "cache_hit": 0.02192
       },
       "context_window": 256000,
       "default_max_tokens": 64000,
@@ -1151,9 +1151,9 @@
       "id": "doubao-seed-2-0-code-preview",
       "name": "Doubao Seed 2.0 Code Preview",
       "pricing": {
-        "input": 4.822e-07,
-        "output": 2.411e-06,
-        "cache_hit": 9.644e-08
+        "input": 0.4822,
+        "output": 2.411,
+        "cache_hit": 0.09644
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
@@ -1170,9 +1170,9 @@
       "id": "doubao-seed-2-0-lite-260215",
       "name": "Doubao Seed 2.0 Lite 260215",
       "pricing": {
-        "input": 9.041e-08,
-        "output": 5.4246e-07,
-        "cache_hit": 1.808e-08
+        "input": 0.09041,
+        "output": 0.54246,
+        "cache_hit": 0.01808
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -1189,9 +1189,9 @@
       "id": "doubao-seed-2-0-lite-260428",
       "name": "Doubao Seed 2.0 Lite 260428",
       "pricing": {
-        "input": 9.041e-08,
-        "output": 5.4246e-07,
-        "cache_hit": 1.808e-08
+        "input": 0.09041,
+        "output": 0.54246,
+        "cache_hit": 0.01808
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -1208,9 +1208,9 @@
       "id": "doubao-seed-2-0-mini",
       "name": "Doubao Seed 2.0 Mini",
       "pricing": {
-        "input": 3.014e-08,
-        "output": 3.0136e-07,
-        "cache_hit": 6.03e-09
+        "input": 0.03014,
+        "output": 0.30136,
+        "cache_hit": 0.00603
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -1227,9 +1227,9 @@
       "id": "doubao-seed-2-0-mini-260428",
       "name": "Doubao Seed 2.0 Mini 260428",
       "pricing": {
-        "input": 2.82e-08,
-        "output": 2.82e-07,
-        "cache_hit": 5.64e-09
+        "input": 0.0282,
+        "output": 0.282,
+        "cache_hit": 0.00564
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -1246,9 +1246,9 @@
       "id": "doubao-seed-2-0-pro",
       "name": "Doubao Seed 2.0 Pro",
       "pricing": {
-        "input": 4.822e-07,
-        "output": 2.411e-06,
-        "cache_hit": 9.644e-08
+        "input": 0.4822,
+        "output": 2.411,
+        "cache_hit": 0.09644
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
@@ -1265,9 +1265,9 @@
       "id": "doubao-seed-2-1-pro",
       "name": "Doubao Seed 2.1 Pro",
       "pricing": {
-        "input": 9.295e-07,
-        "output": 4.6475e-06,
-        "cache_hit": 1.859e-07
+        "input": 0.9295,
+        "output": 4.6475,
+        "cache_hit": 0.1859
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1284,9 +1284,9 @@
       "id": "doubao-seed-2-1-turbo",
       "name": "Doubao Seed 2.1 Turbo",
       "pricing": {
-        "input": 4.6475e-07,
-        "output": 2.32375e-06,
-        "cache_hit": 9.295e-08
+        "input": 0.46475,
+        "output": 2.32375,
+        "cache_hit": 0.09295
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1303,8 +1303,8 @@
       "id": "ernie-4.5",
       "name": "ERNIE 4.5",
       "pricing": {
-        "input": 6.8e-08,
-        "output": 2.72e-07
+        "input": 0.068,
+        "output": 0.272
       },
       "context_window": 160000,
       "default_max_tokens": 64000,
@@ -1315,8 +1315,8 @@
       "id": "ernie-4.5-turbo-latest",
       "name": "ERNIE 4.5 Turbo",
       "pricing": {
-        "input": 1.1e-07,
-        "output": 4.4e-07
+        "input": 0.11,
+        "output": 0.44
       },
       "context_window": 135000,
       "default_max_tokens": 12000,
@@ -1327,8 +1327,8 @@
       "id": "ernie-4.5-turbo-vl",
       "name": "ERNIE 4.5 Turbo VL",
       "pricing": {
-        "input": 4e-07,
-        "output": 1.2e-06
+        "input": 0.4,
+        "output": 1.2
       },
       "context_window": 139000,
       "default_max_tokens": 16000,
@@ -1339,9 +1339,9 @@
       "id": "ernie-5.0",
       "name": "ERNIE 5.0",
       "pricing": {
-        "input": 8.2192e-07,
-        "output": 3.28768e-06,
-        "cache_hit": 8.2192e-07
+        "input": 0.82192,
+        "output": 3.28768,
+        "cache_hit": 0.82192
       },
       "context_window": 119000,
       "default_max_tokens": 11900,
@@ -1358,9 +1358,9 @@
       "id": "ernie-5.0-thinking-exp",
       "name": "ERNIE 5.0 Thinking Exp",
       "pricing": {
-        "input": 8.2192e-07,
-        "output": 3.28768e-06,
-        "cache_hit": 8.2192e-07
+        "input": 0.82192,
+        "output": 3.28768,
+        "cache_hit": 0.82192
       },
       "context_window": 119000,
       "default_max_tokens": 11900,
@@ -1377,9 +1377,9 @@
       "id": "ernie-5.0-thinking-preview",
       "name": "ERNIE 5.0 Thinking Preview",
       "pricing": {
-        "input": 8.22e-07,
-        "output": 3.288e-06,
-        "cache_hit": 8.22e-07
+        "input": 0.822,
+        "output": 3.288,
+        "cache_hit": 0.822
       },
       "context_window": 183000,
       "default_max_tokens": 64000,
@@ -1396,9 +1396,9 @@
       "id": "ernie-5.1",
       "name": "ERNIE 5.1",
       "pricing": {
-        "input": 5.634e-07,
-        "output": 2.5353e-06,
-        "cache_hit": 5.634e-07
+        "input": 0.5634,
+        "output": 2.5353,
+        "cache_hit": 0.5634
       },
       "context_window": 119000,
       "default_max_tokens": 11900,
@@ -1415,8 +1415,8 @@
       "id": "ernie-x1-turbo",
       "name": "ERNIE X1 Turbo",
       "pricing": {
-        "input": 1.36e-07,
-        "output": 5.44e-07
+        "input": 0.136,
+        "output": 0.544
       },
       "context_window": 50500,
       "default_max_tokens": 5050,
@@ -1433,9 +1433,9 @@
       "id": "gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.499e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.499,
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1446,9 +1446,9 @@
       "id": "gemini-2.5-flash-image",
       "name": "Gemini 2.5 Flash Image",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.499e-06,
-        "cache_hit": 3e-07
+        "input": 0.3,
+        "output": 2.499,
+        "cache_hit": 0.3
       },
       "context_window": 32800,
       "default_max_tokens": 8000,
@@ -1459,9 +1459,9 @@
       "id": "gemini-2.5-flash-lite",
       "name": "Gemini 2.5 Flash Lite",
       "pricing": {
-        "input": 1e-07,
-        "output": 4e-07,
-        "cache_hit": 1e-08
+        "input": 0.1,
+        "output": 0.4,
+        "cache_hit": 0.01
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1472,9 +1472,9 @@
       "id": "gemini-2.5-flash-lite-nothink",
       "name": "Gemini 2.5 Flash Lite (no think)",
       "pricing": {
-        "input": 1e-07,
-        "output": 4e-07,
-        "cache_hit": 1e-08
+        "input": 0.1,
+        "output": 0.4,
+        "cache_hit": 0.01
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1485,9 +1485,9 @@
       "id": "gemini-2.5-flash-lite-preview-09-2025",
       "name": "Gemini 2.5 Flash Lite Preview 09 2025",
       "pricing": {
-        "input": 1e-07,
-        "output": 4e-07,
-        "cache_hit": 1e-08
+        "input": 0.1,
+        "output": 0.4,
+        "cache_hit": 0.01
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1498,9 +1498,9 @@
       "id": "gemini-2.5-flash-lite-preview-09-2025-nothink",
       "name": "Gemini 2.5 Flash Lite Preview 09 2025 (no think)",
       "pricing": {
-        "input": 1e-07,
-        "output": 4e-07,
-        "cache_hit": 1e-08
+        "input": 0.1,
+        "output": 0.4,
+        "cache_hit": 0.01
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1511,9 +1511,9 @@
       "id": "gemini-2.5-flash-nothink",
       "name": "Gemini 2.5 Flash (no think)",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.499e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.499,
+        "cache_hit": 0.03
       },
       "context_window": 1047576,
       "default_max_tokens": 65536,
@@ -1524,9 +1524,9 @@
       "id": "gemini-2.5-flash-preview-05-20-nothink",
       "name": "Gemini 2.5 Flash Preview 05-20 (no think)",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.499e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.499,
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1537,9 +1537,9 @@
       "id": "gemini-2.5-flash-preview-05-20-search",
       "name": "Gemini 2.5 Flash Preview 05-20 Search",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.499e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.499,
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1550,9 +1550,9 @@
       "id": "gemini-2.5-flash-preview-09-2025",
       "name": "Gemini 2.5 Flash Preview 09 2025",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.499e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.499,
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1563,9 +1563,9 @@
       "id": "gemini-2.5-flash-search",
       "name": "Gemini 2.5 Flash Search",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.499e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.499,
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1576,9 +1576,9 @@
       "id": "gemini-2.5-pro",
       "name": "Gemini 2.5 Pro",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1595,9 +1595,9 @@
       "id": "gemini-2.5-pro-preview-05-06",
       "name": "Gemini 2.5 Pro Preview 05-06",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1614,9 +1614,9 @@
       "id": "gemini-2.5-pro-preview-06-05",
       "name": "Gemini 2.5 Pro Preview 06-05",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1633,9 +1633,9 @@
       "id": "gemini-2.5-pro-search",
       "name": "Gemini 2.5 Pro Search",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1652,9 +1652,9 @@
       "id": "gemini-3-flash-preview",
       "name": "Gemini 3 Flash Preview",
       "pricing": {
-        "input": 5e-07,
-        "output": 3e-06,
-        "cache_hit": 5e-08
+        "input": 0.5,
+        "output": 3,
+        "cache_hit": 0.05
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -1689,9 +1689,9 @@
       "id": "gemini-3-flash-preview-search",
       "name": "Gemini 3 Flash Preview Search",
       "pricing": {
-        "input": 5e-07,
-        "output": 3e-06,
-        "cache_hit": 5e-08
+        "input": 0.5,
+        "output": 3,
+        "cache_hit": 0.05
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -1708,9 +1708,9 @@
       "id": "gemini-3.1-flash-lite",
       "name": "Gemini 3.1 Flash Lite",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 1.5e-06,
-        "cache_hit": 2.5e-07
+        "input": 0.25,
+        "output": 1.5,
+        "cache_hit": 0.25
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -1727,9 +1727,9 @@
       "id": "gemini-3.1-flash-lite-nothink",
       "name": "Gemini 3.1 Flash Lite (no think)",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 1.5e-06,
-        "cache_hit": 2.5e-07
+        "input": 0.25,
+        "output": 1.5,
+        "cache_hit": 0.25
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -1746,9 +1746,9 @@
       "id": "gemini-3.1-pro-preview",
       "name": "Gemini 3.1 Pro Preview",
       "pricing": {
-        "input": 2e-06,
-        "output": 1.2e-05,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 12,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -1765,9 +1765,9 @@
       "id": "gemini-3.1-pro-preview-customtools",
       "name": "Gemini 3.1 Pro Preview Customtools",
       "pricing": {
-        "input": 2e-06,
-        "output": 1.2e-05,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 12,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -1784,9 +1784,9 @@
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 9e-06,
-        "cache_hit": 1.5e-07
+        "input": 1.5,
+        "output": 9,
+        "cache_hit": 0.15
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -1803,9 +1803,9 @@
       "id": "gemini-3.5-flash-lite",
       "name": "Gemini 3.5 Flash Lite",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.5e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.5,
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1840,9 +1840,9 @@
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 7.5e-06,
-        "cache_hit": 1.5e-07
+        "input": 1.5,
+        "output": 7.5,
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1877,9 +1877,9 @@
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
       "pricing": {
-        "input": 7.5e-07,
-        "output": 3.75e-06,
-        "cache_hit": 7.5e-08
+        "input": 0.75,
+        "output": 3.75,
+        "cache_hit": 0.075
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1914,9 +1914,9 @@
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "pricing": {
-        "input": 7.5e-07,
-        "output": 3.75e-06,
-        "cache_hit": 7.5e-08
+        "input": 0.75,
+        "output": 3.75,
+        "cache_hit": 0.075
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1975,9 +1975,9 @@
       "id": "glm-4.5v",
       "name": "GLM 4.5 Vision",
       "pricing": {
-        "input": 2.74e-07,
-        "output": 8.22e-07,
-        "cache_hit": 2.74e-07
+        "input": 0.274,
+        "output": 0.822,
+        "cache_hit": 0.274
       },
       "context_window": 64000,
       "default_max_tokens": 16384,
@@ -1988,9 +1988,9 @@
       "id": "glm-4.6",
       "name": "GLM 4.6",
       "pricing": {
-        "input": 2.7397e-07,
-        "output": 1.0959e-06,
-        "cache_hit": 5.48e-08
+        "input": 0.27397,
+        "output": 1.0959,
+        "cache_hit": 0.0548
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -2007,9 +2007,9 @@
       "id": "glm-4.6v",
       "name": "GLM 4.6 Vision",
       "pricing": {
-        "input": 1.37e-07,
-        "output": 4.11e-07,
-        "cache_hit": 2.74e-08
+        "input": 0.137,
+        "output": 0.411,
+        "cache_hit": 0.0274
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -2020,9 +2020,9 @@
       "id": "glm-4.7",
       "name": "GLM 4.7",
       "pricing": {
-        "input": 2.7397e-07,
-        "output": 1.0959e-06,
-        "cache_hit": 5.48e-08
+        "input": 0.27397,
+        "output": 1.0959,
+        "cache_hit": 0.0548
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -2039,9 +2039,9 @@
       "id": "glm-5",
       "name": "GLM 5",
       "pricing": {
-        "input": 8.8e-07,
-        "output": 2.816e-06,
-        "cache_hit": 1.76e-07
+        "input": 0.88,
+        "output": 2.816,
+        "cache_hit": 0.176
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -2058,9 +2058,9 @@
       "id": "glm-5-turbo",
       "name": "GLM 5 Turbo",
       "pricing": {
-        "input": 1.2e-06,
-        "output": 3.9996e-06,
-        "cache_hit": 2.4e-07
+        "input": 1.2,
+        "output": 3.9996,
+        "cache_hit": 0.24
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -2077,9 +2077,9 @@
       "id": "glm-5.1",
       "name": "GLM 5.1",
       "pricing": {
-        "input": 8.45e-07,
-        "output": 3.38e-06,
-        "cache_hit": 1.8311e-07
+        "input": 0.845,
+        "output": 3.38,
+        "cache_hit": 0.18311
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -2096,9 +2096,9 @@
       "id": "glm-5.2",
       "name": "GLM 5.2",
       "pricing": {
-        "input": 1.1268e-06,
-        "output": 3.9438e-06,
-        "cache_hit": 2.817e-07
+        "input": 1.1268,
+        "output": 3.9438,
+        "cache_hit": 0.2817
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -2115,9 +2115,9 @@
       "id": "glm-5.2-fast-preview",
       "name": "GLM 5.2 Fast Preview",
       "pricing": {
-        "input": 2.254e-06,
-        "output": 7.889e-06,
-        "cache_hit": 5.635e-07
+        "input": 2.254,
+        "output": 7.889,
+        "cache_hit": 0.5635
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -2134,9 +2134,9 @@
       "id": "glm-5.3",
       "name": "GLM 5.3",
       "pricing": {
-        "input": 1.1268e-06,
-        "output": 3.9438e-06,
-        "cache_hit": 2.817e-07
+        "input": 1.1268,
+        "output": 3.9438,
+        "cache_hit": 0.2817
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -2153,9 +2153,9 @@
       "id": "glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "pricing": {
-        "input": 1.1268e-07,
-        "output": 3.9438e-07,
-        "cache_hit": 2.817e-08
+        "input": 0.11268,
+        "output": 0.39438,
+        "cache_hit": 0.02817
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -2172,9 +2172,9 @@
       "id": "glm-5v-turbo",
       "name": "GLM 5 Vision Turbo",
       "pricing": {
-        "input": 7.042e-07,
-        "output": 3.09848e-06,
-        "cache_hit": 1.6901e-07
+        "input": 0.7042,
+        "output": 3.09848,
+        "cache_hit": 0.16901
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -2185,9 +2185,9 @@
       "id": "gpt-4.1",
       "name": "GPT 4.1",
       "pricing": {
-        "input": 2e-06,
-        "output": 8e-06,
-        "cache_hit": 5e-07
+        "input": 2,
+        "output": 8,
+        "cache_hit": 0.5
       },
       "context_window": 1047576,
       "default_max_tokens": 32768,
@@ -2210,9 +2210,9 @@
       "id": "gpt-4.1-mini",
       "name": "GPT 4.1 Mini",
       "pricing": {
-        "input": 4e-07,
-        "output": 1.6e-06,
-        "cache_hit": 1e-07
+        "input": 0.4,
+        "output": 1.6,
+        "cache_hit": 0.1
       },
       "context_window": 1047576,
       "default_max_tokens": 32768,
@@ -2235,9 +2235,9 @@
       "id": "gpt-4.1-nano",
       "name": "GPT 4.1 Nano",
       "pricing": {
-        "input": 1e-07,
-        "output": 4e-07,
-        "cache_hit": 2.5e-08
+        "input": 0.1,
+        "output": 0.4,
+        "cache_hit": 0.025
       },
       "context_window": 1047576,
       "default_max_tokens": 32768,
@@ -2260,9 +2260,9 @@
       "id": "gpt-4o",
       "name": "GPT 4o",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-06
+        "input": 2.5,
+        "output": 10,
+        "cache_hit": 1.25
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2273,9 +2273,9 @@
       "id": "gpt-4o-2024-11-20",
       "name": "GPT 4o 2024 11-20",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-06
+        "input": 2.5,
+        "output": 10,
+        "cache_hit": 1.25
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2286,8 +2286,8 @@
       "id": "gpt-4o-audio-preview",
       "name": "GPT 4o Audio Preview",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1e-05
+        "input": 2.5,
+        "output": 10
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2310,9 +2310,9 @@
       "id": "gpt-4o-mini",
       "name": "GPT 4o Mini",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 6e-07,
-        "cache_hit": 7.5e-08
+        "input": 0.15,
+        "output": 0.6,
+        "cache_hit": 0.075
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2323,9 +2323,9 @@
       "id": "gpt-4o-mini-search-preview",
       "name": "GPT 4o Mini Search Preview",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 6e-07,
-        "cache_hit": 7.5e-08
+        "input": 0.15,
+        "output": 0.6,
+        "cache_hit": 0.075
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2336,9 +2336,9 @@
       "id": "gpt-4o-search-preview",
       "name": "GPT 4o Search Preview",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-06
+        "input": 2.5,
+        "output": 10,
+        "cache_hit": 1.25
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2349,9 +2349,9 @@
       "id": "gpt-5",
       "name": "GPT 5",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2368,9 +2368,9 @@
       "id": "gpt-5-chat-latest",
       "name": "GPT 5 Chat",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2381,9 +2381,9 @@
       "id": "gpt-5-codex",
       "name": "GPT-5-Codex",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2400,9 +2400,9 @@
       "id": "gpt-5-mini",
       "name": "GPT 5 Mini",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 2e-06,
-        "cache_hit": 2.5e-08
+        "input": 0.25,
+        "output": 2,
+        "cache_hit": 0.025
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2419,9 +2419,9 @@
       "id": "gpt-5-nano",
       "name": "GPT 5 Nano",
       "pricing": {
-        "input": 5e-08,
-        "output": 4e-07,
-        "cache_hit": 5e-09
+        "input": 0.05,
+        "output": 0.4,
+        "cache_hit": 0.005
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2438,8 +2438,8 @@
       "id": "gpt-5-pro",
       "name": "GPT 5 Pro",
       "pricing": {
-        "input": 1.5e-05,
-        "output": 0.00012
+        "input": 15,
+        "output": 120
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2456,9 +2456,9 @@
       "id": "gpt-5.1",
       "name": "GPT 5.1",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2475,9 +2475,9 @@
       "id": "gpt-5.1-chat-latest",
       "name": "GPT 5.1 Chat",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2488,9 +2488,9 @@
       "id": "gpt-5.1-codex",
       "name": "GPT-5.1-Codex",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2507,9 +2507,9 @@
       "id": "gpt-5.1-codex-max",
       "name": "GPT-5.1-Codex Max",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2526,9 +2526,9 @@
       "id": "gpt-5.1-codex-mini",
       "name": "GPT-5.1-Codex Mini",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 2e-06,
-        "cache_hit": 2.5e-08
+        "input": 0.25,
+        "output": 2,
+        "cache_hit": 0.025
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2545,9 +2545,9 @@
       "id": "gpt-5.2",
       "name": "GPT 5.2",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_hit": 1.75e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_hit": 0.175
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2564,9 +2564,9 @@
       "id": "gpt-5.2-chat-latest",
       "name": "GPT 5.2 Chat",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_hit": 1.75e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_hit": 0.175
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2577,9 +2577,9 @@
       "id": "gpt-5.2-codex",
       "name": "GPT-5.2-Codex",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_hit": 1.75e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_hit": 0.175
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2596,9 +2596,9 @@
       "id": "gpt-5.2-high",
       "name": "GPT 5.2 High",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_hit": 1.75e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_hit": 0.175
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2615,9 +2615,9 @@
       "id": "gpt-5.2-low",
       "name": "GPT 5.2 Low",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_hit": 1.75e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_hit": 0.175
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2634,9 +2634,9 @@
       "id": "gpt-5.2-pro",
       "name": "GPT 5.2 Pro",
       "pricing": {
-        "input": 2.1e-05,
-        "output": 0.000168,
-        "cache_hit": 2.1e-06
+        "input": 21,
+        "output": 168,
+        "cache_hit": 2.1
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2653,9 +2653,9 @@
       "id": "gpt-5.3-chat-latest",
       "name": "GPT 5.3 Chat",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_hit": 1.75e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_hit": 0.175
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2666,9 +2666,9 @@
       "id": "gpt-5.3-codex",
       "name": "GPT-5.3-Codex",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_hit": 1.75e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_hit": 0.175
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2685,9 +2685,9 @@
       "id": "gpt-5.4",
       "name": "GPT 5.4",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1.5e-05,
-        "cache_hit": 2.5e-07
+        "input": 2.5,
+        "output": 15,
+        "cache_hit": 0.25
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2704,9 +2704,9 @@
       "id": "gpt-5.4-high",
       "name": "GPT 5.4 High",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1.5e-05,
-        "cache_hit": 2.5e-07
+        "input": 2.5,
+        "output": 15,
+        "cache_hit": 0.25
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2723,9 +2723,9 @@
       "id": "gpt-5.4-low",
       "name": "GPT 5.4 Low",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1.5e-05,
-        "cache_hit": 2.5e-07
+        "input": 2.5,
+        "output": 15,
+        "cache_hit": 0.25
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2742,9 +2742,9 @@
       "id": "gpt-5.4-mini",
       "name": "GPT 5.4 Mini",
       "pricing": {
-        "input": 7.5e-07,
-        "output": 4.5e-06,
-        "cache_hit": 7.5e-08
+        "input": 0.75,
+        "output": 4.5,
+        "cache_hit": 0.075
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2755,9 +2755,9 @@
       "id": "gpt-5.4-nano",
       "name": "GPT 5.4 Nano",
       "pricing": {
-        "input": 2e-07,
-        "output": 1.25e-06,
-        "cache_hit": 2e-08
+        "input": 0.2,
+        "output": 1.25,
+        "cache_hit": 0.02
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -2774,9 +2774,9 @@
       "id": "gpt-5.4-pro",
       "name": "GPT 5.4 Pro",
       "pricing": {
-        "input": 3e-05,
-        "output": 0.00018,
-        "cache_hit": 3e-05
+        "input": 30,
+        "output": 180,
+        "cache_hit": 30
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2793,9 +2793,9 @@
       "id": "gpt-5.5",
       "name": "GPT 5.5",
       "pricing": {
-        "input": 5e-06,
-        "output": 3e-05,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 30,
+        "cache_hit": 0.5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2830,9 +2830,9 @@
       "id": "gpt-5.5-pro",
       "name": "GPT 5.5 Pro",
       "pricing": {
-        "input": 3e-05,
-        "output": 0.00018,
-        "cache_hit": 3e-05
+        "input": 30,
+        "output": 180,
+        "cache_hit": 30
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2849,10 +2849,10 @@
       "id": "gpt-5.6-luna",
       "name": "GPT 5.6 Luna",
       "pricing": {
-        "input": 2e-07,
-        "output": 1.2e-06,
-        "cache_create": 2.5e-07,
-        "cache_hit": 2e-08
+        "input": 0.2,
+        "output": 1.2,
+        "cache_create": 0.25,
+        "cache_hit": 0.02
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2869,10 +2869,10 @@
       "id": "gpt-5.6-sol",
       "name": "GPT 5.6 Sol",
       "pricing": {
-        "input": 4e-06,
-        "output": 2e-05,
-        "cache_create": 5e-06,
-        "cache_hit": 4e-07
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.4
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2889,10 +2889,10 @@
       "id": "gpt-5.6-sol-disc",
       "name": "GPT 5.6 Sol Disc",
       "pricing": {
-        "input": 4e-06,
-        "output": 2e-05,
-        "cache_create": 5e-06,
-        "cache_hit": 4e-07
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.4
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2909,10 +2909,10 @@
       "id": "gpt-5.6-terra",
       "name": "GPT 5.6 Terra",
       "pricing": {
-        "input": 2e-06,
-        "output": 1.2e-05,
-        "cache_create": 2.5e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 12,
+        "cache_create": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2929,9 +2929,9 @@
       "id": "gpt-audio-1.5",
       "name": "GPT Audio 1.5",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1e-05,
-        "cache_hit": 2.5e-06
+        "input": 2.5,
+        "output": 10,
+        "cache_hit": 2.5
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -2948,9 +2948,9 @@
       "id": "gpt-chat-latest",
       "name": "GPT Chat",
       "pricing": {
-        "input": 5e-06,
-        "output": 3e-05,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 30,
+        "cache_hit": 0.5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2967,8 +2967,8 @@
       "id": "gpt-oss-120b",
       "name": "gpt-oss-120b",
       "pricing": {
-        "input": 1.8e-07,
-        "output": 9e-07
+        "input": 0.18,
+        "output": 0.9
       },
       "context_window": 131072,
       "default_max_tokens": 32768,
@@ -2985,8 +2985,8 @@
       "id": "gpt-oss-20b",
       "name": "gpt-oss-20b",
       "pricing": {
-        "input": 1.1e-07,
-        "output": 5.5e-07
+        "input": 0.11,
+        "output": 0.55
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -3015,9 +3015,9 @@
       "id": "grok-4",
       "name": "Grok 4",
       "pricing": {
-        "input": 3.3e-06,
-        "output": 1.65e-05,
-        "cache_hit": 8.25e-07
+        "input": 3.3,
+        "output": 16.5,
+        "cache_hit": 0.825
       },
       "context_window": 256000,
       "default_max_tokens": 64000,
@@ -3034,9 +3034,9 @@
       "id": "grok-4-1-fast-non-reasoning",
       "name": "Grok 4.1 Fast",
       "pricing": {
-        "input": 2e-07,
-        "output": 5e-07,
-        "cache_hit": 5e-08
+        "input": 0.2,
+        "output": 0.5,
+        "cache_hit": 0.05
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3047,9 +3047,9 @@
       "id": "grok-4-1-fast-reasoning",
       "name": "Grok 4.1 Fast (reasoning)",
       "pricing": {
-        "input": 2e-07,
-        "output": 5e-07,
-        "cache_hit": 5e-08
+        "input": 0.2,
+        "output": 0.5,
+        "cache_hit": 0.05
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3066,9 +3066,9 @@
       "id": "grok-4-20-non-reasoning",
       "name": "Grok 4 20",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.2
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3085,9 +3085,9 @@
       "id": "grok-4-20-reasoning",
       "name": "Grok 4 20 (reasoning)",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.2
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3104,9 +3104,9 @@
       "id": "grok-4-fast-non-reasoning",
       "name": "Grok 4 Fast",
       "pricing": {
-        "input": 2e-07,
-        "output": 5e-07,
-        "cache_hit": 5e-08
+        "input": 0.2,
+        "output": 0.5,
+        "cache_hit": 0.05
       },
       "context_window": 2000000,
       "default_max_tokens": 30000,
@@ -3117,9 +3117,9 @@
       "id": "grok-4-fast-reasoning",
       "name": "Grok 4 Fast (reasoning)",
       "pricing": {
-        "input": 2e-07,
-        "output": 5e-07,
-        "cache_hit": 5e-08
+        "input": 0.2,
+        "output": 0.5,
+        "cache_hit": 0.05
       },
       "context_window": 2000000,
       "default_max_tokens": 30000,
@@ -3136,9 +3136,9 @@
       "id": "grok-4.20-beta-0309-non-reasoning",
       "name": "Grok 4.20 Beta 0309",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.2
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3155,9 +3155,9 @@
       "id": "grok-4.20-beta-0309-reasoning",
       "name": "Grok 4.20 Beta 0309 (reasoning)",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.2
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3174,9 +3174,9 @@
       "id": "grok-4.20-multi-agent-0309",
       "name": "Grok 4.20 Multi Agent 0309",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.2
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3193,9 +3193,9 @@
       "id": "grok-4.20-multi-agent-beta-0309",
       "name": "Grok 4.20 Multi Agent Beta 0309",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.2
       },
       "context_window": 2000000,
       "default_max_tokens": 200000,
@@ -3212,9 +3212,9 @@
       "id": "grok-4.3",
       "name": "Grok 4.3",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 2.5e-06,
-        "cache_hit": 2e-07
+        "input": 1.25,
+        "output": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -3231,9 +3231,9 @@
       "id": "grok-4.5",
       "name": "Grok 4.5",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 5e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.5
       },
       "context_window": 500000,
       "default_max_tokens": 50000,
@@ -3250,9 +3250,9 @@
       "id": "grok-4.6",
       "name": "Grok 4.6",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 5e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.5
       },
       "context_window": 500000,
       "default_max_tokens": 50000,
@@ -3269,9 +3269,9 @@
       "id": "grok-build-0.1",
       "name": "Grok Build 0.1",
       "pricing": {
-        "input": 1e-06,
-        "output": 2e-06,
-        "cache_hit": 2e-07
+        "input": 1,
+        "output": 2,
+        "cache_hit": 0.2
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -3288,9 +3288,9 @@
       "id": "grok-code-fast-1",
       "name": "Grok Code Fast 1",
       "pricing": {
-        "input": 1e-06,
-        "output": 2e-06,
-        "cache_hit": 2e-07
+        "input": 1,
+        "output": 2,
+        "cache_hit": 0.2
       },
       "context_window": 256000,
       "default_max_tokens": 10000,
@@ -3307,9 +3307,9 @@
       "id": "hy3",
       "name": "Hy3",
       "pricing": {
-        "input": 1.562e-07,
-        "output": 6.248e-07,
-        "cache_hit": 3.905e-08
+        "input": 0.1562,
+        "output": 0.6248,
+        "cache_hit": 0.03905
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
@@ -3344,9 +3344,9 @@
       "id": "hy3-preview",
       "name": "Hy3 Preview",
       "pricing": {
-        "input": 1.7e-07,
-        "output": 5.6666e-07,
-        "cache_hit": 5.1e-08
+        "input": 0.17,
+        "output": 0.56666,
+        "cache_hit": 0.051
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
@@ -3363,9 +3363,9 @@
       "id": "hy4-preview",
       "name": "Hy4 Preview",
       "pricing": {
-        "input": 8.45e-07,
-        "output": 2.535e-06,
-        "cache_hit": 4.225e-08
+        "input": 0.845,
+        "output": 2.535,
+        "cache_hit": 0.04225
       },
       "context_window": 1024000,
       "default_max_tokens": 64000,
@@ -3382,8 +3382,8 @@
       "id": "jina-deepsearch-v1",
       "name": "Jina Deepsearch V1",
       "pricing": {
-        "input": 5e-08,
-        "output": 5e-08
+        "input": 0.05,
+        "output": 0.05
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -3418,8 +3418,8 @@
       "id": "kat-dev",
       "name": "Kat Dev",
       "pricing": {
-        "input": 1.37e-07,
-        "output": 5.48e-07
+        "input": 0.137,
+        "output": 0.548
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -3448,8 +3448,8 @@
       "id": "kimi-k2-0711",
       "name": "Kimi K2 0711",
       "pricing": {
-        "input": 5.4e-07,
-        "output": 2.16e-06
+        "input": 0.54,
+        "output": 2.16
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -3460,9 +3460,9 @@
       "id": "kimi-k2-thinking",
       "name": "Kimi K2 Thinking",
       "pricing": {
-        "input": 5.48e-07,
-        "output": 2.192e-06,
-        "cache_hit": 1.37e-07
+        "input": 0.548,
+        "output": 2.192,
+        "cache_hit": 0.137
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -3479,9 +3479,9 @@
       "id": "kimi-k2-turbo-preview",
       "name": "Kimi K2 Turbo Preview",
       "pricing": {
-        "input": 1.2e-06,
-        "output": 4.8e-06,
-        "cache_hit": 3e-07
+        "input": 1.2,
+        "output": 4.8,
+        "cache_hit": 0.3
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -3492,9 +3492,9 @@
       "id": "kimi-k2.5",
       "name": "Kimi K2.5",
       "pricing": {
-        "input": 6e-07,
-        "output": 3e-06,
-        "cache_hit": 1.05e-07
+        "input": 0.6,
+        "output": 3,
+        "cache_hit": 0.105
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -3511,9 +3511,9 @@
       "id": "kimi-k2.6",
       "name": "Kimi K2.6",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 3.9995e-06,
-        "cache_hit": 1.6084e-07
+        "input": 0.95,
+        "output": 3.9995,
+        "cache_hit": 0.16084
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
@@ -3530,9 +3530,9 @@
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 3.9995e-06,
-        "cache_hit": 1.6084e-07
+        "input": 0.95,
+        "output": 3.9995,
+        "cache_hit": 0.16084
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
@@ -3549,9 +3549,9 @@
       "id": "kimi-k2.7-code-highspeed",
       "name": "Kimi K2.7 Code Highspeed",
       "pricing": {
-        "input": 1.9e-06,
-        "output": 7.999e-06,
-        "cache_hit": 3.2167e-07
+        "input": 1.9,
+        "output": 7.999,
+        "cache_hit": 0.32167
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
@@ -3568,9 +3568,9 @@
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_hit": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_hit": 0.3
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -3647,8 +3647,8 @@
       "id": "llama-4-maverick",
       "name": "Llama 4 Maverick",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 1048576,
       "default_max_tokens": 32000,
@@ -3659,8 +3659,8 @@
       "id": "llama-4-scout",
       "name": "Llama 4 Scout",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -3671,8 +3671,8 @@
       "id": "mai-thinking-1",
       "name": "Mai Thinking 1",
       "pricing": {
-        "input": 2e-06,
-        "output": 8e-06
+        "input": 2,
+        "output": 8
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -3689,9 +3689,9 @@
       "id": "mercury-2.5-preview",
       "name": "Mercury 2.5 Preview",
       "pricing": {
-        "input": 2e-07,
-        "output": 7.5e-07,
-        "cache_hit": 2e-08
+        "input": 0.2,
+        "output": 0.75,
+        "cache_hit": 0.02
       },
       "context_window": 260000,
       "default_max_tokens": 26000,
@@ -3720,9 +3720,9 @@
       "id": "mimo-v2-omni",
       "name": "MiMo V2 Omni",
       "pricing": {
-        "input": 4.4e-07,
-        "output": 2.2e-06,
-        "cache_hit": 8.8e-08
+        "input": 0.44,
+        "output": 2.2,
+        "cache_hit": 0.088
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -3733,9 +3733,9 @@
       "id": "mimo-v2-pro",
       "name": "MiMo V2 Pro",
       "pricing": {
-        "input": 1.1e-06,
-        "output": 3.3e-06,
-        "cache_hit": 2.2e-07
+        "input": 1.1,
+        "output": 3.3,
+        "cache_hit": 0.22
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -3746,8 +3746,8 @@
       "id": "minimax-m2",
       "name": "MiniMax M2",
       "pricing": {
-        "input": 2.88e-07,
-        "output": 1.152e-06
+        "input": 0.288,
+        "output": 1.152
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -3764,8 +3764,8 @@
       "id": "minimax-m2.1",
       "name": "MiniMax M2.1",
       "pricing": {
-        "input": 2.88e-07,
-        "output": 1.152e-06
+        "input": 0.288,
+        "output": 1.152
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -3782,8 +3782,8 @@
       "id": "minimax-m2.5",
       "name": "MiniMax M2.5",
       "pricing": {
-        "input": 2.88e-07,
-        "output": 1.152e-06
+        "input": 0.288,
+        "output": 1.152
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -3800,8 +3800,8 @@
       "id": "minimax-m2.5-highspeed",
       "name": "MiniMax M2.5 Highspeed",
       "pricing": {
-        "input": 2.88e-07,
-        "output": 1.152e-06
+        "input": 0.288,
+        "output": 1.152
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -3818,9 +3818,9 @@
       "id": "minimax-m2.7",
       "name": "MiniMax M2.7",
       "pricing": {
-        "input": 2.958e-07,
-        "output": 1.1832e-06,
-        "cache_hit": 5.916e-08
+        "input": 0.2958,
+        "output": 1.1832,
+        "cache_hit": 0.05916
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -3849,8 +3849,8 @@
       "id": "minimax-m3",
       "name": "MiniMax M3",
       "pricing": {
-        "input": 2.88e-07,
-        "output": 1.152e-06
+        "input": 0.288,
+        "output": 1.152
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -3879,8 +3879,8 @@
       "id": "mistral-large-3",
       "name": "Mistral Large 3",
       "pricing": {
-        "input": 5e-07,
-        "output": 1.5e-06
+        "input": 0.5,
+        "output": 1.5
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -3891,8 +3891,8 @@
       "id": "muse-spark-1.1",
       "name": "Muse Spark 1.1",
       "pricing": {
-        "input": 1.375e-06,
-        "output": 4.675e-06
+        "input": 1.375,
+        "output": 4.675
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -3909,8 +3909,8 @@
       "id": "muse-spark-1.2",
       "name": "Muse Spark 1.2",
       "pricing": {
-        "input": 1.375e-06,
-        "output": 4.675e-06
+        "input": 1.375,
+        "output": 4.675
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -4035,9 +4035,9 @@
       "id": "nvidia-nemotron-3-super-120b-a12b",
       "name": "Nvidia Nemotron 3 Super 120B A12B",
       "pricing": {
-        "input": 1.1e-07,
-        "output": 5.5e-07,
-        "cache_hit": 2.75e-08
+        "input": 0.11,
+        "output": 0.55,
+        "cache_hit": 0.0275
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -4054,9 +4054,9 @@
       "id": "o3",
       "name": "O3",
       "pricing": {
-        "input": 2e-06,
-        "output": 8e-06,
-        "cache_hit": 5e-07
+        "input": 2,
+        "output": 8,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 100000,
@@ -4073,9 +4073,9 @@
       "id": "o3-mini",
       "name": "O3 Mini",
       "pricing": {
-        "input": 1.1e-06,
-        "output": 4.4e-06,
-        "cache_hit": 5.5e-07
+        "input": 1.1,
+        "output": 4.4,
+        "cache_hit": 0.55
       },
       "context_window": 200000,
       "default_max_tokens": 100000,
@@ -4092,9 +4092,9 @@
       "id": "o3-pro",
       "name": "O3 Pro",
       "pricing": {
-        "input": 2e-05,
-        "output": 8e-05,
-        "cache_hit": 2e-05
+        "input": 20,
+        "output": 80,
+        "cache_hit": 20
       },
       "context_window": 200000,
       "default_max_tokens": 100000,
@@ -4111,9 +4111,9 @@
       "id": "o4-mini",
       "name": "O4 Mini",
       "pricing": {
-        "input": 1.1e-06,
-        "output": 4.4e-06,
-        "cache_hit": 2.75e-07
+        "input": 1.1,
+        "output": 4.4,
+        "cache_hit": 0.275
       },
       "context_window": 200000,
       "default_max_tokens": 100000,
@@ -4142,8 +4142,8 @@
       "id": "qwen3-235b-a22b",
       "name": "Qwen3 235B A22B",
       "pricing": {
-        "input": 2.8e-07,
-        "output": 1.12e-06
+        "input": 0.28,
+        "output": 1.12
       },
       "context_window": 131100,
       "default_max_tokens": 13110,
@@ -4154,8 +4154,8 @@
       "id": "qwen3-235b-a22b-instruct-2507",
       "name": "Qwen3 235B A22B Instruct 2507",
       "pricing": {
-        "input": 2.8e-07,
-        "output": 1.12e-06
+        "input": 0.28,
+        "output": 1.12
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -4166,8 +4166,8 @@
       "id": "qwen3-235b-a22b-thinking-2507",
       "name": "Qwen3 235B A22B Thinking 2507",
       "pricing": {
-        "input": 2.8e-07,
-        "output": 2.8e-06
+        "input": 0.28,
+        "output": 2.8
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -4184,9 +4184,9 @@
       "id": "qwen3-coder-30b-a3b-instruct",
       "name": "Qwen3 Coder 30B A3B Instruct",
       "pricing": {
-        "input": 2e-07,
-        "output": 8e-07,
-        "cache_hit": 2e-07
+        "input": 0.2,
+        "output": 0.8,
+        "cache_hit": 0.2
       },
       "context_window": 2000000,
       "default_max_tokens": 262000,
@@ -4197,9 +4197,9 @@
       "id": "qwen3-coder-480b-a35b-instruct",
       "name": "Qwen3 Coder 480B A35B Instruct",
       "pricing": {
-        "input": 8.2e-07,
-        "output": 3.28e-06,
-        "cache_hit": 8.2e-07
+        "input": 0.82,
+        "output": 3.28,
+        "cache_hit": 0.82
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -4210,9 +4210,9 @@
       "id": "qwen3-coder-flash",
       "name": "Qwen3 Coder Flash",
       "pricing": {
-        "input": 1.36e-07,
-        "output": 5.44e-07,
-        "cache_hit": 1.36e-07
+        "input": 0.136,
+        "output": 0.544,
+        "cache_hit": 0.136
       },
       "context_window": 256000,
       "default_max_tokens": 65536,
@@ -4223,9 +4223,9 @@
       "id": "qwen3-coder-next",
       "name": "Qwen3 Coder Next",
       "pricing": {
-        "input": 1.37e-07,
-        "output": 5.48e-07,
-        "cache_hit": 1.37e-07
+        "input": 0.137,
+        "output": 0.548,
+        "cache_hit": 0.137
       },
       "context_window": 2000000,
       "default_max_tokens": 64000,
@@ -4236,9 +4236,9 @@
       "id": "qwen3-coder-plus",
       "name": "Qwen3 Coder Plus",
       "pricing": {
-        "input": 5.4e-07,
-        "output": 2.16e-06,
-        "cache_hit": 1.08e-07
+        "input": 0.54,
+        "output": 2.16,
+        "cache_hit": 0.108
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -4249,9 +4249,9 @@
       "id": "qwen3-coder-plus-2025-07-22",
       "name": "Qwen3 Coder Plus 2025 07-22",
       "pricing": {
-        "input": 5.4e-07,
-        "output": 2.16e-06,
-        "cache_hit": 5.4e-07
+        "input": 0.54,
+        "output": 2.16,
+        "cache_hit": 0.54
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -4262,10 +4262,10 @@
       "id": "qwen3-max",
       "name": "Qwen3 Max",
       "pricing": {
-        "input": 4.508e-07,
-        "output": 1.8032e-06,
-        "cache_create": 5.635e-07,
-        "cache_hit": 9.016e-08
+        "input": 0.4508,
+        "output": 1.8032,
+        "cache_create": 0.5635,
+        "cache_hit": 0.09016
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -4276,10 +4276,10 @@
       "id": "qwen3-max-2026-01-23",
       "name": "Qwen3 Max 2026 01-23",
       "pricing": {
-        "input": 4.508e-07,
-        "output": 1.8032e-06,
-        "cache_create": 5.635e-07,
-        "cache_hit": 9.016e-08
+        "input": 0.4508,
+        "output": 1.8032,
+        "cache_create": 0.5635,
+        "cache_hit": 0.09016
       },
       "context_window": 252000,
       "default_max_tokens": 32000,
@@ -4296,8 +4296,8 @@
       "id": "qwen3-next-80b-a3b-instruct",
       "name": "Qwen3 Next 80B A3B Instruct",
       "pricing": {
-        "input": 1.38e-07,
-        "output": 5.52e-07
+        "input": 0.138,
+        "output": 0.552
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -4308,8 +4308,8 @@
       "id": "qwen3-next-80b-a3b-thinking",
       "name": "Qwen3 Next 80B A3B Thinking",
       "pricing": {
-        "input": 1.42e-07,
-        "output": 1.42e-06
+        "input": 0.142,
+        "output": 1.42
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -4326,8 +4326,8 @@
       "id": "qwen3-vl-235b-a22b-instruct",
       "name": "Qwen3 VL 235B A22B Instruct",
       "pricing": {
-        "input": 2.74e-07,
-        "output": 1.096e-06
+        "input": 0.274,
+        "output": 1.096
       },
       "context_window": 131000,
       "default_max_tokens": 33000,
@@ -4338,8 +4338,8 @@
       "id": "qwen3-vl-235b-a22b-thinking",
       "name": "Qwen3 VL 235B A22B Thinking",
       "pricing": {
-        "input": 2.74e-07,
-        "output": 2.74e-06
+        "input": 0.274,
+        "output": 2.74
       },
       "context_window": 131000,
       "default_max_tokens": 33000,
@@ -4356,8 +4356,8 @@
       "id": "qwen3-vl-30b-a3b-instruct",
       "name": "Qwen3 VL 30B A3B Instruct",
       "pricing": {
-        "input": 1.028e-07,
-        "output": 4.112e-07
+        "input": 0.1028,
+        "output": 0.4112
       },
       "context_window": 128000,
       "default_max_tokens": 32000,
@@ -4368,8 +4368,8 @@
       "id": "qwen3-vl-30b-a3b-thinking",
       "name": "Qwen3 VL 30B A3B Thinking",
       "pricing": {
-        "input": 1.028e-07,
-        "output": 1.028e-06
+        "input": 0.1028,
+        "output": 1.028
       },
       "context_window": 128000,
       "default_max_tokens": 32000,
@@ -4386,9 +4386,9 @@
       "id": "qwen3-vl-flash",
       "name": "Qwen3 VL Flash",
       "pricing": {
-        "input": 2.06e-08,
-        "output": 2.06e-07,
-        "cache_hit": 4.12e-09
+        "input": 0.0206,
+        "output": 0.206,
+        "cache_hit": 0.00412
       },
       "context_window": 254000,
       "default_max_tokens": 32000,
@@ -4399,9 +4399,9 @@
       "id": "qwen3-vl-flash-2026-01-22",
       "name": "Qwen3 VL Flash 2026 01-22",
       "pricing": {
-        "input": 2.06e-08,
-        "output": 2.06e-07,
-        "cache_hit": 2.06e-08
+        "input": 0.0206,
+        "output": 0.206,
+        "cache_hit": 0.0206
       },
       "context_window": 254000,
       "default_max_tokens": 32000,
@@ -4412,9 +4412,9 @@
       "id": "qwen3-vl-plus",
       "name": "Qwen3 VL Plus",
       "pricing": {
-        "input": 1.37e-07,
-        "output": 1.37e-06,
-        "cache_hit": 2.74e-08
+        "input": 0.137,
+        "output": 1.37,
+        "cache_hit": 0.0274
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -4425,9 +4425,9 @@
       "id": "qwen3.5-122b-a10b",
       "name": "Qwen3.5 122B A10B",
       "pricing": {
-        "input": 1.126e-07,
-        "output": 9.008e-07,
-        "cache_hit": 1.126e-07
+        "input": 0.1126,
+        "output": 0.9008,
+        "cache_hit": 0.1126
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4444,9 +4444,9 @@
       "id": "qwen3.5-27b",
       "name": "Qwen3.5 27B",
       "pricing": {
-        "input": 8.46e-08,
-        "output": 6.768e-07,
-        "cache_hit": 8.46e-08
+        "input": 0.0846,
+        "output": 0.6768,
+        "cache_hit": 0.0846
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4463,9 +4463,9 @@
       "id": "qwen3.5-35b-a3b",
       "name": "Qwen3.5 35B A3B",
       "pricing": {
-        "input": 5.64e-08,
-        "output": 4.512e-07,
-        "cache_hit": 5.64e-08
+        "input": 0.0564,
+        "output": 0.4512,
+        "cache_hit": 0.0564
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4482,9 +4482,9 @@
       "id": "qwen3.5-397b-a17b",
       "name": "Qwen3.5 397B A17B",
       "pricing": {
-        "input": 1.644e-07,
-        "output": 9.864e-07,
-        "cache_hit": 1.644e-07
+        "input": 0.1644,
+        "output": 0.9864,
+        "cache_hit": 0.1644
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4501,10 +4501,10 @@
       "id": "qwen3.5-flash",
       "name": "Qwen3.5 Flash",
       "pricing": {
-        "input": 2.82e-08,
-        "output": 2.82e-07,
-        "cache_create": 3.525e-08,
-        "cache_hit": 2.82e-09
+        "input": 0.0282,
+        "output": 0.282,
+        "cache_create": 0.03525,
+        "cache_hit": 0.00282
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4521,10 +4521,10 @@
       "id": "qwen3.5-plus",
       "name": "Qwen3.5 Plus",
       "pricing": {
-        "input": 1.096e-07,
-        "output": 6.576e-07,
-        "cache_create": 1.37e-07,
-        "cache_hit": 1.096e-08
+        "input": 0.1096,
+        "output": 0.6576,
+        "cache_create": 0.137,
+        "cache_hit": 0.01096
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4541,8 +4541,8 @@
       "id": "qwen3.6-27b",
       "name": "Qwen3.6 27B",
       "pricing": {
-        "input": 4.22e-07,
-        "output": 2.532e-06
+        "input": 0.422,
+        "output": 2.532
       },
       "context_window": 254000,
       "default_max_tokens": 64000,
@@ -4559,9 +4559,9 @@
       "id": "qwen3.6-35b-a3b",
       "name": "Qwen3.6 35B A3B",
       "pricing": {
-        "input": 2.54e-07,
-        "output": 1.524e-06,
-        "cache_hit": 2.54e-07
+        "input": 0.254,
+        "output": 1.524,
+        "cache_hit": 0.254
       },
       "context_window": 254000,
       "default_max_tokens": 64000,
@@ -4578,10 +4578,10 @@
       "id": "qwen3.6-flash",
       "name": "Qwen3.6 Flash",
       "pricing": {
-        "input": 1.69e-07,
-        "output": 1.014e-06,
-        "cache_create": 2.1125e-07,
-        "cache_hit": 1.69e-08
+        "input": 0.169,
+        "output": 1.014,
+        "cache_create": 0.21125,
+        "cache_hit": 0.0169
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4598,10 +4598,10 @@
       "id": "qwen3.6-max-preview",
       "name": "Qwen3.6 Max Preview",
       "pricing": {
-        "input": 1.268e-06,
-        "output": 7.608e-06,
-        "cache_create": 1.585e-06,
-        "cache_hit": 1.268e-07
+        "input": 1.268,
+        "output": 7.608,
+        "cache_create": 1.585,
+        "cache_hit": 0.1268
       },
       "context_window": 240000,
       "default_max_tokens": 64000,
@@ -4618,10 +4618,10 @@
       "id": "qwen3.6-plus",
       "name": "Qwen3.6 Plus",
       "pricing": {
-        "input": 2.82e-07,
-        "output": 1.692e-06,
-        "cache_create": 3.525e-07,
-        "cache_hit": 2.82e-08
+        "input": 0.282,
+        "output": 1.692,
+        "cache_create": 0.3525,
+        "cache_hit": 0.0282
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4656,10 +4656,10 @@
       "id": "qwen3.7-flash",
       "name": "Qwen3.7 Flash",
       "pricing": {
-        "input": 2.82e-08,
-        "output": 1.128e-07,
-        "cache_create": 3.525e-08,
-        "cache_hit": 5.64e-09
+        "input": 0.0282,
+        "output": 0.1128,
+        "cache_create": 0.03525,
+        "cache_hit": 0.00564
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4676,10 +4676,10 @@
       "id": "qwen3.7-max",
       "name": "Qwen3.7 Max",
       "pricing": {
-        "input": 1.69e-06,
-        "output": 5.07e-06,
-        "cache_create": 2.1125e-06,
-        "cache_hit": 1.69e-07
+        "input": 1.69,
+        "output": 5.07,
+        "cache_create": 2.1125,
+        "cache_hit": 0.169
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4696,10 +4696,10 @@
       "id": "qwen3.7-plus",
       "name": "Qwen3.7 Plus",
       "pricing": {
-        "input": 2.82e-07,
-        "output": 1.128e-06,
-        "cache_create": 3.525e-07,
-        "cache_hit": 5.64e-08
+        "input": 0.282,
+        "output": 1.128,
+        "cache_create": 0.3525,
+        "cache_hit": 0.0564
       },
       "context_window": 991000,
       "default_max_tokens": 64000,
@@ -4716,9 +4716,9 @@
       "id": "qwen3.8-2.4t-a95b",
       "name": "Qwen3.8 2.4t A95B",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_hit": 5e-07
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.5
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -4735,10 +4735,10 @@
       "id": "qwen3.8-flash",
       "name": "Qwen3.8 Flash",
       "pricing": {
-        "input": 1.126e-07,
-        "output": 3.8003e-07,
-        "cache_create": 1.7594e-07,
-        "cache_hit": 1.408e-08
+        "input": 0.1126,
+        "output": 0.38003,
+        "cache_create": 0.17594,
+        "cache_hit": 0.01408
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -4755,10 +4755,10 @@
       "id": "qwen3.8-max",
       "name": "Qwen3.8 Max",
       "pricing": {
-        "input": 1.69e-06,
-        "output": 5.07e-06,
-        "cache_create": 2.1125e-06,
-        "cache_hit": 1.69e-07
+        "input": 1.69,
+        "output": 5.07,
+        "cache_create": 2.1125,
+        "cache_hit": 0.169
       },
       "context_window": 991000,
       "default_max_tokens": 128000,
@@ -4775,10 +4775,10 @@
       "id": "qwen3.8-max-2026-09-02",
       "name": "Qwen3.8 Max 2026 09-02",
       "pricing": {
-        "input": 1.69e-06,
-        "output": 5.07e-06,
-        "cache_create": 2.1125e-06,
-        "cache_hit": 1.69e-07
+        "input": 1.69,
+        "output": 5.07,
+        "cache_create": 2.1125,
+        "cache_hit": 0.169
       },
       "context_window": 991000,
       "default_max_tokens": 128000,
@@ -4795,10 +4795,10 @@
       "id": "qwen3.8-max-preview",
       "name": "Qwen3.8 Max Preview",
       "pricing": {
-        "input": 3.38e-07,
-        "output": 1.014e-06,
-        "cache_create": 4.225e-07,
-        "cache_hit": 6.76e-08
+        "input": 0.338,
+        "output": 1.014,
+        "cache_create": 0.4225,
+        "cache_hit": 0.0676
       },
       "context_window": 983616,
       "default_max_tokens": 131072,
@@ -4815,8 +4815,8 @@
       "id": "step-3.5-flash",
       "name": "Step 3.5 Flash",
       "pricing": {
-        "input": 1.1e-07,
-        "output": 3.3e-07
+        "input": 0.11,
+        "output": 0.33
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -4827,9 +4827,9 @@
       "id": "step-3.7-flash",
       "name": "Step 3.7 Flash",
       "pricing": {
-        "input": 2.2e-07,
-        "output": 1.32e-06,
-        "cache_hit": 4.4e-08
+        "input": 0.22,
+        "output": 1.32,
+        "cache_hit": 0.044
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -4864,9 +4864,9 @@
       "id": "xiaomi-mimo-v2.5",
       "name": "Xiaomi Mimo V2.5",
       "pricing": {
-        "input": 1.55e-07,
-        "output": 3.1e-07,
-        "cache_hit": 3.1e-09
+        "input": 0.155,
+        "output": 0.31,
+        "cache_hit": 0.0031
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -4889,9 +4889,9 @@
       "id": "xiaomi-mimo-v2.5-pro",
       "name": "Xiaomi Mimo V2.5 Pro",
       "pricing": {
-        "input": 4.8e-07,
-        "output": 9.6e-07,
-        "cache_hit": 3.84e-09
+        "input": 0.48,
+        "output": 0.96,
+        "cache_hit": 0.00384
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,

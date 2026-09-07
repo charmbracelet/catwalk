@@ -84,11 +84,11 @@ func contextWindow(modelID string) int64 {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 func priceToDollarsPerToken(centsPerHundredMillion int64) float64 {
-	return roundCost(float64(centsPerHundredMillion) / 10_000_000_000)
+	return roundCost(float64(centsPerHundredMillion) / 10_000)
 }
 
 func fetchXAIModels() (*ModelsResponse, error) {

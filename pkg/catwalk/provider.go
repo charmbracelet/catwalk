@@ -85,7 +85,7 @@ type ModelOptions struct {
 	ProviderOptions  map[string]any `json:"provider_options,omitempty"`
 }
 
-// Pricing stores the per-token pricing of a model in US dollars.
+// Pricing stores the pricing of a model in US dollars per 1M tokens.
 type Pricing struct {
 	Input       float64 `json:"input"`
 	Output      float64 `json:"output"`

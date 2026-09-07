@@ -56,7 +56,7 @@ type ModelsResponse struct {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 func ptrDeref[T any](v *T, fallback T) T {
@@ -171,10 +171,10 @@ func main() {
 			ID:   model.ID,
 			Name: name,
 			Pricing: catwalk.Pricing{
-				Input:       roundCost(costIn / 1_000_000),
-				Output:      roundCost(costOut / 1_000_000),
-				CacheCreate: roundCost(costCacheCreate / 1_000_000),
-				CacheHit:    roundCost(costCacheHit / 1_000_000),
+				Input:       roundCost(costIn),
+				Output:      roundCost(costOut),
+				CacheCreate: roundCost(costCacheCreate),
+				CacheHit:    roundCost(costCacheHit),
 			},
 			ContextWindow:          model.MaxModelLen,
 			DefaultMaxTokens:       defaultMaxTokens,

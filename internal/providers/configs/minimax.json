@@ -11,10 +11,10 @@
       "id": "MiniMax-M3",
       "name": "MiniMax-M3",
       "pricing": {
-        "input": 6e-07,
-        "output": 2.4e-06,
-        "cache_create": 1.2e-07,
-        "cache_hit": 3.75e-07
+        "input": 0.6,
+        "output": 2.4,
+        "cache_create": 0.12,
+        "cache_hit": 0.375
       },
       "context_window": 1000000,
       "default_max_tokens": 512000
@@ -23,10 +23,10 @@
       "id": "MiniMax-M2.7-highspeed",
       "name": "MiniMax-M2.7-highspeed",
       "pricing": {
-        "input": 6e-07,
-        "output": 2.4e-06,
-        "cache_create": 6e-08,
-        "cache_hit": 3.75e-07
+        "input": 0.6,
+        "output": 2.4,
+        "cache_create": 0.06,
+        "cache_hit": 0.375
       },
       "context_window": 200000,
       "default_max_tokens": 128000
@@ -35,10 +35,10 @@
       "id": "MiniMax-M2.7",
       "name": "MiniMax-M2.7",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06,
-        "cache_create": 6e-08,
-        "cache_hit": 3.75e-07
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.06,
+        "cache_hit": 0.375
       },
       "context_window": 200000,
       "default_max_tokens": 128000
@@ -47,10 +47,10 @@
       "id": "MiniMax-M2.5-highspeed",
       "name": "MiniMax-M2.5-highspeed",
       "pricing": {
-        "input": 6e-07,
-        "output": 2.4e-06,
-        "cache_create": 3e-08,
-        "cache_hit": 3.75e-07
+        "input": 0.6,
+        "output": 2.4,
+        "cache_create": 0.03,
+        "cache_hit": 0.375
       },
       "context_window": 200000,
       "default_max_tokens": 128000
@@ -59,10 +59,10 @@
       "id": "MiniMax-M2.5",
       "name": "MiniMax-M2.5",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06,
-        "cache_create": 3e-08,
-        "cache_hit": 3.75e-07
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.03,
+        "cache_hit": 0.375
       },
       "context_window": 200000,
       "default_max_tokens": 128000
@@ -71,10 +71,10 @@
       "id": "MiniMax-M2.1-highspeed",
       "name": "MiniMax-M2.1-highspeed",
       "pricing": {
-        "input": 6e-07,
-        "output": 2.4e-06,
-        "cache_create": 3e-08,
-        "cache_hit": 3.75e-07
+        "input": 0.6,
+        "output": 2.4,
+        "cache_create": 0.03,
+        "cache_hit": 0.375
       },
       "context_window": 200000,
       "default_max_tokens": 128000
@@ -83,10 +83,10 @@
       "id": "MiniMax-M2.1",
       "name": "MiniMax-M2.1",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06,
-        "cache_create": 3e-08,
-        "cache_hit": 3.75e-07
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.03,
+        "cache_hit": 0.375
       },
       "context_window": 200000,
       "default_max_tokens": 128000
@@ -95,10 +95,10 @@
       "id": "MiniMax-M2",
       "name": "MiniMax-M2",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06,
-        "cache_create": 3e-08,
-        "cache_hit": 3.75e-07
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.03,
+        "cache_hit": 0.375
       },
       "context_window": 200000,
       "default_max_tokens": 20000

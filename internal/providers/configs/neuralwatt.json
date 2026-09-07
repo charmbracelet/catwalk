@@ -11,9 +11,9 @@
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "pricing": {
-        "input": 1.4e-07,
-        "output": 2.8e-07,
-        "cache_create": 2.8e-08
+        "input": 0.14,
+        "output": 0.28,
+        "cache_create": 0.028
       },
       "context_window": 1048560,
       "default_max_tokens": 65536,
@@ -30,9 +30,9 @@
       "id": "deepseek-v4-flash-flex",
       "name": "DeepSeek V4 Flash (flex)",
       "pricing": {
-        "input": 1.4e-07,
-        "output": 2.8e-07,
-        "cache_create": 2.8e-08
+        "input": 0.14,
+        "output": 0.28,
+        "cache_create": 0.028
       },
       "context_window": 1048560,
       "default_max_tokens": 65536,
@@ -49,9 +49,9 @@
       "id": "glm-5.3",
       "name": "GLM 5.3",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -68,9 +68,9 @@
       "id": "glm-5.2",
       "name": "GLM-5.2",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -87,9 +87,9 @@
       "id": "glm-5.2-fast",
       "name": "GLM-5.2 (fast)",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -106,9 +106,9 @@
       "id": "glm-5.2-flex",
       "name": "GLM-5.2 (flex)",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -125,9 +125,9 @@
       "id": "glm-5.2-short",
       "name": "GLM-5.2 (short)",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 199984,
       "default_max_tokens": 32000,
@@ -144,9 +144,9 @@
       "id": "glm-5.2-short-fast",
       "name": "GLM-5.2 (short, fast)",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 199984,
       "default_max_tokens": 32000,
@@ -163,9 +163,9 @@
       "id": "glm-5.2-short-fast-flex",
       "name": "GLM-5.2 (short, fast, flex)",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 199984,
       "default_max_tokens": 32000,
@@ -182,9 +182,9 @@
       "id": "glm-5.2-short-flex",
       "name": "GLM-5.2 (short, flex)",
       "pricing": {
-        "input": 1.45e-06,
-        "output": 4.5e-06,
-        "cache_create": 1.45e-07
+        "input": 1.45,
+        "output": 4.5,
+        "cache_create": 0.145
       },
       "context_window": 199984,
       "default_max_tokens": 32000,
@@ -201,9 +201,9 @@
       "id": "gemma-4-31b",
       "name": "Gemma 4 31B",
       "pricing": {
-        "input": 1.44e-07,
-        "output": 4.2e-07,
-        "cache_create": 1.44e-08
+        "input": 0.144,
+        "output": 0.42,
+        "cache_create": 0.0144
       },
       "context_window": 262128,
       "default_max_tokens": 16384,
@@ -220,9 +220,9 @@
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 9.5e-08
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.095
       },
       "context_window": 262128,
       "default_max_tokens": 26212,
@@ -233,9 +233,9 @@
       "id": "kimi-k2.7-code-flex",
       "name": "Kimi K2.7 Code (flex)",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 9.5e-08
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.095
       },
       "context_window": 262128,
       "default_max_tokens": 26212,
@@ -246,9 +246,9 @@
       "id": "kimi-k2.7-code-fast",
       "name": "Kimi K2.7 Code Fast",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 9.5e-08
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.095
       },
       "context_window": 262128,
       "default_max_tokens": 26212,
@@ -259,9 +259,9 @@
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -278,9 +278,9 @@
       "id": "kimi-k3-flex",
       "name": "Kimi K3 (flex)",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -297,9 +297,9 @@
       "id": "kimi-k3-fast",
       "name": "Kimi K3 Fast",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -310,9 +310,9 @@
       "id": "qwen3.6-35b",
       "name": "Qwen3.6 35B",
       "pricing": {
-        "input": 2.9e-07,
-        "output": 1.15e-06,
-        "cache_create": 2.9e-08
+        "input": 0.29,
+        "output": 1.15,
+        "cache_create": 0.029
       },
       "context_window": 131056,
       "default_max_tokens": 13105,
@@ -329,9 +329,9 @@
       "id": "qwen3.6-35b-fast",
       "name": "Qwen3.6 35B Fast",
       "pricing": {
-        "input": 2.9e-07,
-        "output": 1.15e-06,
-        "cache_create": 2.9e-08
+        "input": 0.29,
+        "output": 1.15,
+        "cache_create": 0.029
       },
       "context_window": 131056,
       "default_max_tokens": 13105,

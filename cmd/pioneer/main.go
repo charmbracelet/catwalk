@@ -34,7 +34,7 @@ type PioneerResponse struct {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 func main() {
@@ -110,8 +110,8 @@ func main() {
 			ID:   m.ID,
 			Name: m.Label,
 			Pricing: catwalk.Pricing{
-				Input:  roundCost(m.InputPrice / 1_000_000),
-				Output: roundCost(m.OutputPrice / 1_000_000),
+				Input:  roundCost(m.InputPrice),
+				Output: roundCost(m.OutputPrice),
 			},
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       defaultMaxTokens,

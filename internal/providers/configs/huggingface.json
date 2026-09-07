@@ -11,8 +11,8 @@
       "id": "MiniMaxAI/MiniMax-M3:fireworks-ai",
       "name": "MiniMaxAI/MiniMax-M3 (fireworks-ai)",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06
+        "input": 0.3,
+        "output": 1.2
       },
       "context_window": 512000,
       "default_max_tokens": 8192,
@@ -59,8 +59,8 @@
       "id": "google/gemma-4-31B-it:cerebras",
       "name": "google/gemma-4-31B-it (cerebras)",
       "pricing": {
-        "input": 9.9e-07,
-        "output": 1.49e-06
+        "input": 0.99,
+        "output": 1.49
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
@@ -83,8 +83,8 @@
       "id": "moonshotai/Kimi-K2.6:fireworks-ai",
       "name": "moonshotai/Kimi-K2.6 (fireworks-ai)",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06
+        "input": 0.95,
+        "output": 4
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
@@ -95,8 +95,8 @@
       "id": "moonshotai/Kimi-K2.7-Code:fireworks-ai",
       "name": "moonshotai/Kimi-K2.7-Code (fireworks-ai)",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06
+        "input": 0.95,
+        "output": 4
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
@@ -107,8 +107,8 @@
       "id": "moonshotai/Kimi-K3:fireworks-ai",
       "name": "moonshotai/Kimi-K3 (fireworks-ai)",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05
+        "input": 3,
+        "output": 15
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
@@ -119,8 +119,8 @@
       "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4:fireworks-ai",
       "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4 (fireworks-ai)",
       "pricing": {
-        "input": 6e-07,
-        "output": 2.4e-06
+        "input": 0.6,
+        "output": 2.4
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
@@ -143,8 +143,8 @@
       "id": "openai/gpt-oss-120b:cerebras",
       "name": "openai/gpt-oss-120b (cerebras)",
       "pricing": {
-        "input": 3.5e-07,
-        "output": 7.5e-07
+        "input": 0.35,
+        "output": 0.75
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
@@ -155,8 +155,8 @@
       "id": "openai/gpt-oss-120b:fireworks-ai",
       "name": "openai/gpt-oss-120b (fireworks-ai)",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 6e-07
+        "input": 0.15,
+        "output": 0.6
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
@@ -167,8 +167,8 @@
       "id": "openai/gpt-oss-120b:groq",
       "name": "openai/gpt-oss-120b (groq)",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 7.5e-07
+        "input": 0.15,
+        "output": 0.75
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
@@ -179,8 +179,8 @@
       "id": "openai/gpt-oss-20b:groq",
       "name": "openai/gpt-oss-20b (groq)",
       "pricing": {
-        "input": 1e-07,
-        "output": 5e-07
+        "input": 0.1,
+        "output": 0.5
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
@@ -215,8 +215,8 @@
       "id": "zai-org/GLM-5.2:fireworks-ai",
       "name": "zai-org/GLM-5.2 (fireworks-ai)",
       "pricing": {
-        "input": 1.4e-06,
-        "output": 4.4e-06
+        "input": 1.4,
+        "output": 4.4
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,

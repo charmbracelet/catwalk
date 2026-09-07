@@ -90,13 +90,13 @@ func hasModality(m BasetenModel, modality string) bool {
 	return slices.Contains(m.InputModalities, modality)
 }
 
-// parsePrice parses a per-token price string.
+// parsePrice converts a per-token price string to cost per 1M tokens.
 func parsePrice(perToken string) float64 {
 	var v float64
 	if err := json.Unmarshal([]byte(perToken), &v); err != nil {
 		return 0
 	}
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e6*1e5) / 1e5
 }
 
 func main() {

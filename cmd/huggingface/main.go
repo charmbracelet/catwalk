@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -153,11 +154,11 @@ func main() {
 				contextLength = fallbackContextLength
 			}
 
-			// Convert pricing from per-million to per-token dollars.
+			// Calculate pricing (convert from per-token to per-1M tokens)
 			var costPerTokenIn, costPerTokenOut float64
 			if provider.Pricing != nil {
-				costPerTokenIn = provider.Pricing.Input / 1_000_000
-				costPerTokenOut = provider.Pricing.Output / 1_000_000
+				costPerTokenIn = math.Round(provider.Pricing.Input*1e5) / 1e5
+				costPerTokenOut = math.Round(provider.Pricing.Output*1e5) / 1e5
 			}
 
 			// Set default max tokens (conservative estimate)

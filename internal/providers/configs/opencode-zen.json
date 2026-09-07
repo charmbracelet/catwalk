@@ -29,10 +29,10 @@
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
-        "input": 1e-05,
-        "output": 5e-05,
-        "cache_create": 1e-06,
-        "cache_hit": 1.25e-05
+        "input": 10,
+        "output": 50,
+        "cache_create": 1,
+        "cache_hit": 12.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -49,10 +49,10 @@
       "id": "claude-fable-5-1",
       "name": "Claude Fable 5.1",
       "pricing": {
-        "input": 1e-05,
-        "output": 5e-05,
-        "cache_create": 2.5e-07,
-        "cache_hit": 1.25e-05
+        "input": 10,
+        "output": 50,
+        "cache_create": 0.25,
+        "cache_hit": 12.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -69,10 +69,10 @@
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "pricing": {
-        "input": 1e-06,
-        "output": 5e-06,
-        "cache_create": 1e-07,
-        "cache_hit": 1.25e-06
+        "input": 1,
+        "output": 5,
+        "cache_create": 0.1,
+        "cache_hit": 1.25
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -89,10 +89,10 @@
       "id": "claude-opus-4-5",
       "name": "Claude Opus 4.5",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 5e-07,
-        "cache_hit": 6.25e-06
+        "input": 5,
+        "output": 25,
+        "cache_create": 0.5,
+        "cache_hit": 6.25
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -109,10 +109,10 @@
       "id": "claude-opus-4-6",
       "name": "Claude Opus 4.6",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 5e-07,
-        "cache_hit": 6.25e-06
+        "input": 5,
+        "output": 25,
+        "cache_create": 0.5,
+        "cache_hit": 6.25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -129,10 +129,10 @@
       "id": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 5e-07,
-        "cache_hit": 6.25e-06
+        "input": 5,
+        "output": 25,
+        "cache_create": 0.5,
+        "cache_hit": 6.25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -149,10 +149,10 @@
       "id": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 5e-07,
-        "cache_hit": 6.25e-06
+        "input": 5,
+        "output": 25,
+        "cache_create": 0.5,
+        "cache_hit": 6.25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -169,10 +169,10 @@
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 5e-07,
-        "cache_hit": 6.25e-06
+        "input": 5,
+        "output": 25,
+        "cache_create": 0.5,
+        "cache_hit": 6.25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -189,10 +189,10 @@
       "id": "claude-sonnet-4",
       "name": "Claude Sonnet 4",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07,
-        "cache_hit": 3.75e-06
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3,
+        "cache_hit": 3.75
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -209,10 +209,10 @@
       "id": "claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07,
-        "cache_hit": 3.75e-06
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3,
+        "cache_hit": 3.75
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -229,10 +229,10 @@
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07,
-        "cache_hit": 3.75e-06
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3,
+        "cache_hit": 3.75
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -249,10 +249,10 @@
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "pricing": {
-        "input": 2e-06,
-        "output": 1e-05,
-        "cache_create": 2e-07,
-        "cache_hit": 2.5e-06
+        "input": 2,
+        "output": 10,
+        "cache_create": 0.2,
+        "cache_hit": 2.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -269,9 +269,9 @@
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "pricing": {
-        "input": 1.4e-07,
-        "output": 2.8e-07,
-        "cache_create": 3e-08
+        "input": 0.14,
+        "output": 0.28,
+        "cache_create": 0.03
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -306,9 +306,9 @@
       "id": "deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
       "pricing": {
-        "input": 1.74e-06,
-        "output": 3.84e-06,
-        "cache_create": 1.4e-07
+        "input": 1.74,
+        "output": 3.84,
+        "cache_create": 0.14
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -325,9 +325,9 @@
       "id": "glm-5",
       "name": "GLM-5",
       "pricing": {
-        "input": 1e-06,
-        "output": 3.2e-06,
-        "cache_create": 2e-07
+        "input": 1,
+        "output": 3.2,
+        "cache_create": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -344,9 +344,9 @@
       "id": "glm-5.1",
       "name": "GLM-5.1",
       "pricing": {
-        "input": 1.4e-06,
-        "output": 4.4e-06,
-        "cache_create": 2.6e-07
+        "input": 1.4,
+        "output": 4.4,
+        "cache_create": 0.26
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -363,9 +363,9 @@
       "id": "glm-5.2",
       "name": "GLM-5.2",
       "pricing": {
-        "input": 1.4e-06,
-        "output": 4.4e-06,
-        "cache_create": 2.6e-07
+        "input": 1.4,
+        "output": 4.4,
+        "cache_create": 0.26
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -382,9 +382,9 @@
       "id": "gpt-5",
       "name": "GPT-5",
       "pricing": {
-        "input": 1.07e-06,
-        "output": 8.5e-06,
-        "cache_create": 1.1e-07
+        "input": 1.07,
+        "output": 8.5,
+        "cache_create": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -401,9 +401,9 @@
       "id": "gpt-5-codex",
       "name": "GPT-5 Codex",
       "pricing": {
-        "input": 1.07e-06,
-        "output": 8.5e-06,
-        "cache_create": 1.1e-07
+        "input": 1.07,
+        "output": 8.5,
+        "cache_create": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -420,9 +420,9 @@
       "id": "gpt-5-nano",
       "name": "GPT-5 Nano",
       "pricing": {
-        "input": 5e-08,
-        "output": 4e-07,
-        "cache_create": 1e-08
+        "input": 0.05,
+        "output": 0.4,
+        "cache_create": 0.01
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -439,9 +439,9 @@
       "id": "gpt-5.1",
       "name": "GPT-5.1",
       "pricing": {
-        "input": 1.07e-06,
-        "output": 8.5e-06,
-        "cache_create": 1.1e-07
+        "input": 1.07,
+        "output": 8.5,
+        "cache_create": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -458,9 +458,9 @@
       "id": "gpt-5.1-codex",
       "name": "GPT-5.1 Codex",
       "pricing": {
-        "input": 1.07e-06,
-        "output": 8.5e-06,
-        "cache_create": 1.1e-07
+        "input": 1.07,
+        "output": 8.5,
+        "cache_create": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -477,9 +477,9 @@
       "id": "gpt-5.1-codex-max",
       "name": "GPT-5.1 Codex Max",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_create": 1.3e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_create": 0.13
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -496,9 +496,9 @@
       "id": "gpt-5.1-codex-mini",
       "name": "GPT-5.1 Codex Mini",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 2e-06,
-        "cache_create": 3e-08
+        "input": 0.25,
+        "output": 2,
+        "cache_create": 0.03
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -515,9 +515,9 @@
       "id": "gpt-5.2",
       "name": "GPT-5.2",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_create": 1.8e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_create": 0.18
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -534,9 +534,9 @@
       "id": "gpt-5.2-codex",
       "name": "GPT-5.2 Codex",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_create": 1.8e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_create": 0.18
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -553,9 +553,9 @@
       "id": "gpt-5.3-codex",
       "name": "GPT-5.3 Codex",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_create": 1.8e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_create": 0.18
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -572,9 +572,9 @@
       "id": "gpt-5.3-codex-spark",
       "name": "GPT-5.3 Codex Spark",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.4e-05,
-        "cache_create": 1.8e-07
+        "input": 1.75,
+        "output": 14,
+        "cache_create": 0.18
       },
       "context_window": 128000,
       "default_max_tokens": 128000,
@@ -591,9 +591,9 @@
       "id": "gpt-5.4",
       "name": "GPT-5.4",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1.5e-05,
-        "cache_create": 2.5e-07
+        "input": 2.5,
+        "output": 15,
+        "cache_create": 0.25
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -610,9 +610,9 @@
       "id": "gpt-5.4-mini",
       "name": "GPT-5.4 Mini",
       "pricing": {
-        "input": 7.5e-07,
-        "output": 4.5e-06,
-        "cache_create": 8e-08
+        "input": 0.75,
+        "output": 4.5,
+        "cache_create": 0.08
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -629,9 +629,9 @@
       "id": "gpt-5.4-nano",
       "name": "GPT-5.4 Nano",
       "pricing": {
-        "input": 2e-07,
-        "output": 1.25e-06,
-        "cache_create": 2e-08
+        "input": 0.2,
+        "output": 1.25,
+        "cache_create": 0.02
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -648,9 +648,9 @@
       "id": "gpt-5.4-pro",
       "name": "GPT-5.4 Pro",
       "pricing": {
-        "input": 3e-05,
-        "output": 0.00018,
-        "cache_create": 3e-05
+        "input": 30,
+        "output": 180,
+        "cache_create": 30
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -667,9 +667,9 @@
       "id": "gpt-5.5",
       "name": "GPT-5.5",
       "pricing": {
-        "input": 5e-06,
-        "output": 3e-05,
-        "cache_create": 5e-07
+        "input": 5,
+        "output": 30,
+        "cache_create": 0.5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -686,9 +686,9 @@
       "id": "gpt-5.5-pro",
       "name": "GPT-5.5 Pro",
       "pricing": {
-        "input": 3e-05,
-        "output": 0.00018,
-        "cache_create": 3e-05
+        "input": 30,
+        "output": 180,
+        "cache_create": 30
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -705,10 +705,10 @@
       "id": "gpt-5.6-luna",
       "name": "GPT-5.6 Luna",
       "pricing": {
-        "input": 2e-07,
-        "output": 1.2e-06,
-        "cache_create": 2e-08,
-        "cache_hit": 2.5e-07
+        "input": 0.2,
+        "output": 1.2,
+        "cache_create": 0.02,
+        "cache_hit": 0.25
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -725,10 +725,10 @@
       "id": "gpt-5.6-sol",
       "name": "GPT-5.6 Sol (50% Off)",
       "pricing": {
-        "input": 2e-06,
-        "output": 1e-05,
-        "cache_create": 2e-07,
-        "cache_hit": 2.5e-06
+        "input": 2,
+        "output": 10,
+        "cache_create": 0.2,
+        "cache_hit": 2.5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -745,10 +745,10 @@
       "id": "gpt-5.6-terra",
       "name": "GPT-5.6 Terra",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1.5e-05,
-        "cache_create": 2.5e-07,
-        "cache_hit": 3.13e-06
+        "input": 2.5,
+        "output": 15,
+        "cache_create": 0.25,
+        "cache_hit": 3.13
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -765,9 +765,9 @@
       "id": "gemini-3-flash",
       "name": "Gemini 3 Flash",
       "pricing": {
-        "input": 5e-07,
-        "output": 3e-06,
-        "cache_create": 5e-08
+        "input": 0.5,
+        "output": 3,
+        "cache_create": 0.05
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -784,9 +784,9 @@
       "id": "gemini-3.1-pro",
       "name": "Gemini 3.1 Pro Preview",
       "pricing": {
-        "input": 2e-06,
-        "output": 1.2e-05,
-        "cache_create": 2e-07
+        "input": 2,
+        "output": 12,
+        "cache_create": 0.2
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -803,9 +803,9 @@
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 9e-06,
-        "cache_create": 1.5e-07
+        "input": 1.5,
+        "output": 9,
+        "cache_create": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -822,9 +822,9 @@
       "id": "gemini-3.5-flash-lite",
       "name": "Gemini 3.5 Flash Lite",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.5e-06,
-        "cache_create": 3e-08
+        "input": 0.3,
+        "output": 2.5,
+        "cache_create": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -841,9 +841,9 @@
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 7.5e-06,
-        "cache_create": 1.5e-07
+        "input": 1.5,
+        "output": 7.5,
+        "cache_create": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -860,9 +860,9 @@
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 7.5e-06,
-        "cache_create": 1.5e-07
+        "input": 1.5,
+        "output": 7.5,
+        "cache_create": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -879,9 +879,9 @@
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 7.5e-06,
-        "cache_create": 1.5e-07
+        "input": 1.5,
+        "output": 7.5,
+        "cache_create": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -898,9 +898,9 @@
       "id": "grok-4.5",
       "name": "Grok 4.5",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_create": 3e-07
+        "input": 2,
+        "output": 6,
+        "cache_create": 0.3
       },
       "context_window": 500000,
       "default_max_tokens": 500000,
@@ -917,9 +917,9 @@
       "id": "grok-4.6",
       "name": "Grok 4.6",
       "pricing": {
-        "input": 2e-06,
-        "output": 6e-06,
-        "cache_create": 5e-07
+        "input": 2,
+        "output": 6,
+        "cache_create": 0.5
       },
       "context_window": 500000,
       "default_max_tokens": 500000,
@@ -936,9 +936,9 @@
       "id": "grok-build-0.1",
       "name": "Grok Build 0.1",
       "pricing": {
-        "input": 1e-06,
-        "output": 2e-06,
-        "cache_create": 2e-07
+        "input": 1,
+        "output": 2,
+        "cache_create": 0.2
       },
       "context_window": 256000,
       "default_max_tokens": 256000,
@@ -955,9 +955,9 @@
       "id": "kimi-k2.5",
       "name": "Kimi K2.5",
       "pricing": {
-        "input": 6e-07,
-        "output": 3e-06,
-        "cache_create": 8e-08
+        "input": 0.6,
+        "output": 3,
+        "cache_create": 0.08
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -974,9 +974,9 @@
       "id": "kimi-k2.6",
       "name": "Kimi K2.6",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 1.6e-07
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.16
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -993,9 +993,9 @@
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 1.9e-07
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.19
       },
       "context_window": 262144,
       "default_max_tokens": 262144,
@@ -1012,9 +1012,9 @@
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -1085,9 +1085,9 @@
       "id": "minimax-m2.5",
       "name": "MiniMax-M2.5",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06,
-        "cache_create": 6e-08
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.06
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -1104,9 +1104,9 @@
       "id": "minimax-m2.7",
       "name": "MiniMax-M2.7",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06,
-        "cache_create": 6e-08
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.06
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -1123,9 +1123,9 @@
       "id": "minimax-m3",
       "name": "MiniMax-M3",
       "pricing": {
-        "input": 3e-07,
-        "output": 1.2e-06,
-        "cache_create": 6e-08
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.06
       },
       "context_window": 512000,
       "default_max_tokens": 128000,
@@ -1142,9 +1142,9 @@
       "id": "muse-spark-1.2",
       "name": "Muse Spark 1.2",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 4.25e-06,
-        "cache_create": 1.5e-07
+        "input": 1.25,
+        "output": 4.25,
+        "cache_create": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -1233,10 +1233,10 @@
       "id": "qwen3.5-plus",
       "name": "Qwen3.5 Plus",
       "pricing": {
-        "input": 2e-07,
-        "output": 1.2e-06,
-        "cache_create": 2e-08,
-        "cache_hit": 2.5e-07
+        "input": 0.2,
+        "output": 1.2,
+        "cache_create": 0.02,
+        "cache_hit": 0.25
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -1253,10 +1253,10 @@
       "id": "qwen3.6-plus",
       "name": "Qwen3.6 Plus",
       "pricing": {
-        "input": 5e-07,
-        "output": 3e-06,
-        "cache_create": 5e-08,
-        "cache_hit": 6.3e-07
+        "input": 0.5,
+        "output": 3,
+        "cache_create": 0.05,
+        "cache_hit": 0.63
       },
       "context_window": 262144,
       "default_max_tokens": 65536,

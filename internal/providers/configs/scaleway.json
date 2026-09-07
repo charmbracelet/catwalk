@@ -11,8 +11,8 @@
       "id": "qwen3.5-397b-a17b",
       "name": "Qwen 3.5 397B A17B",
       "pricing": {
-        "input": 6e-07,
-        "output": 3.6e-06
+        "input": 0.6,
+        "output": 3.6
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
@@ -23,8 +23,8 @@
       "id": "qwen3.6-35b-a3b",
       "name": "Qwen 3.6 35B A3B",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 1.5e-06
+        "input": 0.25,
+        "output": 1.5
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -35,8 +35,8 @@
       "id": "gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B IT",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 5e-07
+        "input": 0.25,
+        "output": 0.5
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
@@ -47,8 +47,8 @@
       "id": "gpt-oss-120b",
       "name": "GPT OSS 120B",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 6e-07
+        "input": 0.15,
+        "output": 0.6
       },
       "context_window": 128000,
       "default_max_tokens": 32768,
@@ -58,8 +58,8 @@
       "id": "mistral-medium-3.5-128b",
       "name": "Mistral Medium 3.5 128B",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 7.5e-06
+        "input": 1.5,
+        "output": 7.5
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
@@ -69,8 +69,8 @@
       "id": "llama-3.3-70b-instruct",
       "name": "Llama 3.3 70B Instruct",
       "pricing": {
-        "input": 9e-07,
-        "output": 9e-07
+        "input": 0.9,
+        "output": 0.9
       },
       "context_window": 100000,
       "default_max_tokens": 16384
@@ -79,8 +79,8 @@
       "id": "qwen3-235b-a22b-instruct-2507",
       "name": "Qwen 3 235B A22B Instruct 2507",
       "pricing": {
-        "input": 7.5e-07,
-        "output": 2.25e-06
+        "input": 0.75,
+        "output": 2.25
       },
       "context_window": 256000,
       "default_max_tokens": 16384
@@ -89,8 +89,8 @@
       "id": "qwen3-coder-30b-a3b-instruct",
       "name": "Qwen 3 Coder 30B A3B Instruct",
       "pricing": {
-        "input": 2e-07,
-        "output": 8e-07
+        "input": 0.2,
+        "output": 0.8
       },
       "context_window": 128000,
       "default_max_tokens": 32768
@@ -99,8 +99,8 @@
       "id": "voxtral-small-24b-2507",
       "name": "Voxtral Small 24B 2507",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 3.5e-07
+        "input": 0.15,
+        "output": 0.35
       },
       "context_window": 32000,
       "default_max_tokens": 16384
@@ -109,8 +109,8 @@
       "id": "mistral-small-3.2-24b-instruct-2506",
       "name": "Mistral Small 3.2 24B Instruct 2506",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 3.5e-07
+        "input": 0.15,
+        "output": 0.35
       },
       "context_window": 128000,
       "default_max_tokens": 32768,
@@ -120,8 +120,8 @@
       "id": "devstral-2-123b-instruct-2512",
       "name": "Devstral 2 123B Instruct 2512",
       "pricing": {
-        "input": 4e-07,
-        "output": 2e-06
+        "input": 0.4,
+        "output": 2
       },
       "context_window": 256000,
       "default_max_tokens": 16384
@@ -130,8 +130,8 @@
       "id": "gemma-3-27b-it",
       "name": "Gemma 3 27B IT",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 5e-07
+        "input": 0.25,
+        "output": 0.5
       },
       "context_window": 40000,
       "default_max_tokens": 8192,

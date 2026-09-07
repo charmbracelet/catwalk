@@ -11,8 +11,8 @@
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
-        "input": 1.1e-05,
-        "output": 5.5e-05
+        "input": 11,
+        "output": 55
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -23,8 +23,8 @@
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "pricing": {
-        "input": 1e-06,
-        "output": 5e-06
+        "input": 1,
+        "output": 5
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
@@ -35,8 +35,8 @@
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05
+        "input": 5,
+        "output": 25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -47,8 +47,8 @@
       "id": "claude-opus-5-fast",
       "name": "Claude Opus 5 (Fast)",
       "pricing": {
-        "input": 1e-05,
-        "output": 5e-05
+        "input": 10,
+        "output": 50
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -59,8 +59,8 @@
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "pricing": {
-        "input": 2e-06,
-        "output": 1e-05
+        "input": 2,
+        "output": 10
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -71,8 +71,8 @@
       "id": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek V4 Flash",
       "pricing": {
-        "input": 1.4e-07,
-        "output": 2.8e-07
+        "input": 0.14,
+        "output": 0.28
       },
       "context_window": 131072,
       "default_max_tokens": 32768,
@@ -89,8 +89,8 @@
       "id": "fastino/Fastino-Nemotron-3.5-Lightning-Finance",
       "name": "Fastino Nemotron 3.5 Lightning Finance",
       "pricing": {
-        "input": 5e-07,
-        "output": 5e-07
+        "input": 0.5,
+        "output": 0.5
       },
       "context_window": 8192,
       "default_max_tokens": 4096,
@@ -101,8 +101,8 @@
       "id": "fastino/Fastino-Nemotron-3.5-Lightning-Healthcare",
       "name": "Fastino Nemotron 3.5 Lightning Healthcare",
       "pricing": {
-        "input": 5e-07,
-        "output": 5e-07
+        "input": 0.5,
+        "output": 0.5
       },
       "context_window": 8192,
       "default_max_tokens": 4096,
@@ -113,8 +113,8 @@
       "id": "zai-org/GLM-5.2",
       "name": "GLM 5.2",
       "pricing": {
-        "input": 1.4e-06,
-        "output": 4.4e-06
+        "input": 1.4,
+        "output": 4.4
       },
       "context_window": 131072,
       "default_max_tokens": 32768,
@@ -125,8 +125,8 @@
       "id": "gpt-5.5",
       "name": "GPT-5.5",
       "pricing": {
-        "input": 5e-06,
-        "output": 3e-05
+        "input": 5,
+        "output": 30
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -137,8 +137,8 @@
       "id": "gpt-5.6-luna",
       "name": "GPT-5.6 Luna",
       "pricing": {
-        "input": 1e-06,
-        "output": 6e-06
+        "input": 1,
+        "output": 6
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -149,8 +149,8 @@
       "id": "gpt-5.6-sol",
       "name": "GPT-5.6 Sol",
       "pricing": {
-        "input": 5e-06,
-        "output": 3e-05
+        "input": 5,
+        "output": 30
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -161,8 +161,8 @@
       "id": "gpt-5.6-terra",
       "name": "GPT-5.6 Terra",
       "pricing": {
-        "input": 2.5e-06,
-        "output": 1.5e-05
+        "input": 2.5,
+        "output": 15
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -173,8 +173,8 @@
       "id": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05
+        "input": 3,
+        "output": 15
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -185,8 +185,8 @@
       "id": "moonshotai/Kimi-K3-Fast",
       "name": "Kimi K3 Fast",
       "pricing": {
-        "input": 4.5e-06,
-        "output": 2.25e-05
+        "input": 4.5,
+        "output": 22.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -197,8 +197,8 @@
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "name": "Nemotron 3.5 Lightning 30B-A3B",
       "pricing": {
-        "input": 5e-07,
-        "output": 5e-07
+        "input": 0.5,
+        "output": 0.5
       },
       "context_window": 8192,
       "default_max_tokens": 4096,
@@ -209,8 +209,8 @@
       "id": "HuggingFaceTB/SmolLM2-360M-Instruct",
       "name": "SmolLM2 360M Instruct",
       "pricing": {
-        "input": 1e-08,
-        "output": 1e-08
+        "input": 0.01,
+        "output": 0.01
       },
       "context_window": 2048,
       "default_max_tokens": 4096,

@@ -109,7 +109,7 @@ func main() {
 		}
 
 		// Parse pricing
-		roundCost := func(v float64) float64 { return math.Round(v*1e11) / 1e11 }
+		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
 		costInput := 0.0
 		costOutput := 0.0
 		costCacheCreate := 0.0
@@ -118,28 +118,28 @@ func main() {
 		if model.Pricing.Input != "" {
 			costPrompt, err := strconv.ParseFloat(model.Pricing.Input, 64)
 			if err == nil {
-				costInput = roundCost(costPrompt)
+				costInput = roundCost(costPrompt * 1_000_000)
 			}
 		}
 
 		if model.Pricing.Output != "" {
 			costCompletion, err := strconv.ParseFloat(model.Pricing.Output, 64)
 			if err == nil {
-				costOutput = roundCost(costCompletion)
+				costOutput = roundCost(costCompletion * 1_000_000)
 			}
 		}
 
 		if model.Pricing.InputCacheRead != "" {
 			costCacheRead, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 			if err == nil {
-				costCacheHit = roundCost(costCacheRead)
+				costCacheHit = roundCost(costCacheRead * 1_000_000)
 			}
 		}
 
 		if model.Pricing.InputCacheWrite != "" {
 			costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 			if err == nil {
-				costCacheCreate = roundCost(costCacheWrite)
+				costCacheCreate = roundCost(costCacheWrite * 1_000_000)
 			}
 		}
 

@@ -14,8 +14,8 @@
             "id": "gpt-oss-120b",
             "name": "OpenAI GPT OSS",
             "pricing": {
-              "input": 3.5e-07,
-              "output": 7.5e-07
+              "input": 0.35,
+              "output": 0.75
             },
             "context_window": 131072,
             "default_max_tokens": 25000,
@@ -32,8 +32,8 @@
             "id": "gemma-4-31b",
             "name": "Gemma 4 31B",
             "pricing": {
-              "input": 9.9e-07,
-              "output": 1.49e-06
+              "input": 0.99,
+              "output": 1.49
             },
             "context_window": 131072,
             "default_max_tokens": 25000,

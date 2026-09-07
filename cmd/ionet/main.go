@@ -79,11 +79,11 @@ func main() {
 			defaultReasoning = "medium"
 		}
 
-		roundCost := func(v float64) float64 { return math.Round(v*1e11) / 1e11 }
-		costPerTokenIn := roundCost(model.InputTokenPrice)
-		costPerTokenOut := roundCost(model.OutputTokenPrice)
-		costCacheCreate := roundCost(model.CacheWriteTokenPrice)
-		costCacheHit := roundCost(model.CacheReadTokenPrice)
+		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
+		costPerTokenIn := roundCost(model.InputTokenPrice * 1_000_000)
+		costPerTokenOut := roundCost(model.OutputTokenPrice * 1_000_000)
+		costCacheCreate := roundCost(model.CacheWriteTokenPrice * 1_000_000)
+		costCacheHit := roundCost(model.CacheReadTokenPrice * 1_000_000)
 
 		switch model.ID {
 		case "google/gemma-4-26b-a4b-it":

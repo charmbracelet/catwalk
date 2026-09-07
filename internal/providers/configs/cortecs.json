@@ -11,8 +11,8 @@
       "id": "deepseek-v4-pro-0813",
       "name": "deepseek-v4-pro-0813",
       "pricing": {
-        "input": 1.795e-06,
-        "output": 3.59e-06
+        "input": 1.795,
+        "output": 3.59
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -29,8 +29,8 @@
       "id": "glm-5.3",
       "name": "glm-5.3",
       "pricing": {
-        "input": 1.257e-06,
-        "output": 3.949e-06
+        "input": 1.257,
+        "output": 3.949
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -47,8 +47,8 @@
       "id": "qwen3.8-flash-next",
       "name": "qwen3.8-flash-next",
       "pricing": {
-        "input": 1.8e-07,
-        "output": 4.49e-07
+        "input": 0.18,
+        "output": 0.449
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -65,8 +65,8 @@
       "id": "glm-5.3-flash",
       "name": "glm-5.3-flash",
       "pricing": {
-        "input": 1.8e-07,
-        "output": 4.49e-07
+        "input": 0.18,
+        "output": 0.449
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -83,8 +83,8 @@
       "id": "qwen3.8-27b",
       "name": "qwen3.8-27b",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.2e-06
+        "input": 0.3,
+        "output": 2.2
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -101,8 +101,8 @@
       "id": "gemini-3.7-flash",
       "name": "gemini-3.7-flash",
       "pricing": {
-        "input": 6.73e-07,
-        "output": 3.366e-06
+        "input": 0.673,
+        "output": 3.366
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -119,8 +119,8 @@
       "id": "gemini-3.6-flash",
       "name": "gemini-3.6-flash",
       "pricing": {
-        "input": 6.73e-07,
-        "output": 3.366e-06
+        "input": 0.673,
+        "output": 3.366
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -137,8 +137,8 @@
       "id": "qwen3.8-2.4t-a95b",
       "name": "qwen3.8-2.4t-a95b",
       "pricing": {
-        "input": 2.244e-06,
-        "output": 5.386e-06
+        "input": 2.244,
+        "output": 5.386
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -155,8 +155,8 @@
       "id": "gemini-3.5-flash-lite",
       "name": "gemini-3.5-flash-lite",
       "pricing": {
-        "input": 2.96e-07,
-        "output": 2.468e-06
+        "input": 0.296,
+        "output": 2.468
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -173,8 +173,8 @@
       "id": "deepseek-v4-flash-0731",
       "name": "deepseek-v4-flash-0731",
       "pricing": {
-        "input": 1.17e-07,
-        "output": 2.51e-07
+        "input": 0.117,
+        "output": 0.251
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -191,8 +191,8 @@
       "id": "kimi-k3",
       "name": "kimi-k3",
       "pricing": {
-        "input": 2.693e-06,
-        "output": 1.3464e-05
+        "input": 2.693,
+        "output": 13.464
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -209,8 +209,8 @@
       "id": "claude-opus-5",
       "name": "claude-opus-5",
       "pricing": {
-        "input": 4.937e-06,
-        "output": 2.4684e-05
+        "input": 4.937,
+        "output": 24.684
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -227,8 +227,8 @@
       "id": "gpt-5.6-sol",
       "name": "gpt-5.6-sol",
       "pricing": {
-        "input": 4.937e-06,
-        "output": 2.9621e-05
+        "input": 4.937,
+        "output": 29.621
       },
       "context_window": 1050000,
       "default_max_tokens": 105000,
@@ -245,8 +245,8 @@
       "id": "gpt-5.6-terra",
       "name": "gpt-5.6-terra",
       "pricing": {
-        "input": 1.975e-06,
-        "output": 1.1848e-05
+        "input": 1.975,
+        "output": 11.848
       },
       "context_window": 1050000,
       "default_max_tokens": 105000,
@@ -263,8 +263,8 @@
       "id": "gpt-5.6-luna",
       "name": "gpt-5.6-luna",
       "pricing": {
-        "input": 1.97e-07,
-        "output": 1.185e-06
+        "input": 0.197,
+        "output": 1.185
       },
       "context_window": 1050000,
       "default_max_tokens": 105000,
@@ -281,8 +281,8 @@
       "id": "apertus-70b",
       "name": "apertus-70b",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 2e-06
+        "input": 1.25,
+        "output": 2
       },
       "context_window": 65536,
       "default_max_tokens": 6553,
@@ -299,8 +299,8 @@
       "id": "claude-sonnet-5",
       "name": "claude-sonnet-5",
       "pricing": {
-        "input": 1.975e-06,
-        "output": 9.874e-06
+        "input": 1.975,
+        "output": 9.874
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -317,8 +317,8 @@
       "id": "gemma-4-31b-it",
       "name": "gemma-4-31b-it",
       "pricing": {
-        "input": 2e-07,
-        "output": 3.5e-07
+        "input": 0.2,
+        "output": 0.35
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -335,8 +335,8 @@
       "id": "glm-5.2",
       "name": "glm-5.2",
       "pricing": {
-        "input": 1.077e-06,
-        "output": 3.77e-06
+        "input": 1.077,
+        "output": 3.77
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -353,8 +353,8 @@
       "id": "kimi-k2.7-code",
       "name": "kimi-k2.7-code",
       "pricing": {
-        "input": 6.73e-07,
-        "output": 3.142e-06
+        "input": 0.673,
+        "output": 3.142
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -371,8 +371,8 @@
       "id": "minimax-m3",
       "name": "minimax-m3",
       "pricing": {
-        "input": 3.55e-07,
-        "output": 1.775e-06
+        "input": 0.355,
+        "output": 1.775
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -389,8 +389,8 @@
       "id": "qwen3.6-27b",
       "name": "qwen3.6-27b",
       "pricing": {
-        "input": 4e-07,
-        "output": 2.7e-06
+        "input": 0.4,
+        "output": 2.7
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -407,8 +407,8 @@
       "id": "cosmos3-super-reasoner",
       "name": "cosmos3-super-reasoner",
       "pricing": {
-        "input": 8.9e-08,
-        "output": 2.66e-07
+        "input": 0.089,
+        "output": 0.266
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -425,8 +425,8 @@
       "id": "claude-opus4-8",
       "name": "claude-opus4-8",
       "pricing": {
-        "input": 4.881e-06,
-        "output": 2.4404e-05
+        "input": 4.881,
+        "output": 24.404
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -443,8 +443,8 @@
       "id": "gemini-3.5-flash",
       "name": "gemini-3.5-flash",
       "pricing": {
-        "input": 1.48e-06,
-        "output": 8.886e-06
+        "input": 1.48,
+        "output": 8.886
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -461,8 +461,8 @@
       "id": "gemini-3.1-flash-lite",
       "name": "gemini-3.1-flash-lite",
       "pricing": {
-        "input": 2.44e-07,
-        "output": 1.464e-06
+        "input": 0.244,
+        "output": 1.464
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -479,8 +479,8 @@
       "id": "qwen3.6-35b-a3b",
       "name": "qwen3.6-35b-a3b",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 5e-07
+        "input": 0.15,
+        "output": 0.5
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -497,8 +497,8 @@
       "id": "glm-5v-turbo",
       "name": "glm-5v-turbo",
       "pricing": {
-        "input": 1.065e-06,
-        "output": 3.55e-06
+        "input": 1.065,
+        "output": 3.55
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -515,8 +515,8 @@
       "id": "glm-5-turbo",
       "name": "glm-5-turbo",
       "pricing": {
-        "input": 1.065e-06,
-        "output": 3.55e-06
+        "input": 1.065,
+        "output": 3.55
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -533,8 +533,8 @@
       "id": "gemma-4-26b-a4b-it",
       "name": "gemma-4-26b-a4b-it",
       "pricing": {
-        "input": 1e-07,
-        "output": 5e-07
+        "input": 0.1,
+        "output": 0.5
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -551,8 +551,8 @@
       "id": "deepseek-v4-pro",
       "name": "deepseek-v4-pro",
       "pricing": {
-        "input": 1.553e-06,
-        "output": 3.106e-06
+        "input": 1.553,
+        "output": 3.106
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -569,8 +569,8 @@
       "id": "mistral-medium-3.5",
       "name": "mistral-medium-3.5",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 6.4e-06
+        "input": 1.25,
+        "output": 6.4
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -587,8 +587,8 @@
       "id": "nvidia-nemotron-3-nano-omni",
       "name": "nvidia-nemotron-3-nano-omni",
       "pricing": {
-        "input": 5.3e-08,
-        "output": 2.13e-07
+        "input": 0.053,
+        "output": 0.213
       },
       "context_window": 300000,
       "default_max_tokens": 30000,
@@ -605,8 +605,8 @@
       "id": "gpt-5.4",
       "name": "gpt-5.4",
       "pricing": {
-        "input": 2.601e-06,
-        "output": 1.3872e-05
+        "input": 2.601,
+        "output": 13.872
       },
       "context_window": 1050000,
       "default_max_tokens": 105000,
@@ -623,8 +623,8 @@
       "id": "kimi-k2.6",
       "name": "kimi-k2.6",
       "pricing": {
-        "input": 6.94e-07,
-        "output": 3.034e-06
+        "input": 0.694,
+        "output": 3.034
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -641,8 +641,8 @@
       "id": "claude-opus4-7",
       "name": "claude-opus4-7",
       "pricing": {
-        "input": 4.881e-06,
-        "output": 2.4404e-05
+        "input": 4.881,
+        "output": 24.404
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -659,8 +659,8 @@
       "id": "minimax-m2.7",
       "name": "minimax-m2.7",
       "pricing": {
-        "input": 6e-07,
-        "output": 2.4e-06
+        "input": 0.6,
+        "output": 2.4
       },
       "context_window": 196608,
       "default_max_tokens": 19660,
@@ -677,8 +677,8 @@
       "id": "glm-5.1",
       "name": "glm-5.1",
       "pricing": {
-        "input": 1.242e-06,
-        "output": 3.903e-06
+        "input": 1.242,
+        "output": 3.903
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -695,8 +695,8 @@
       "id": "qwen3.5-122b-a10b",
       "name": "qwen3.5-122b-a10b",
       "pricing": {
-        "input": 4.44e-07,
-        "output": 3.106e-06
+        "input": 0.444,
+        "output": 3.106
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -713,8 +713,8 @@
       "id": "qwen3.5-9b",
       "name": "qwen3.5-9b",
       "pricing": {
-        "input": 1e-07,
-        "output": 1.5e-07
+        "input": 0.1,
+        "output": 0.15
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -731,8 +731,8 @@
       "id": "qwen3-coder-next",
       "name": "qwen3-coder-next",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 8e-07
+        "input": 0.15,
+        "output": 0.8
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -749,8 +749,8 @@
       "id": "glm-5",
       "name": "glm-5",
       "pricing": {
-        "input": 8.87e-07,
-        "output": 2.84e-06
+        "input": 0.887,
+        "output": 2.84
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -767,8 +767,8 @@
       "id": "qwen3.5-397b-a17b",
       "name": "qwen3.5-397b-a17b",
       "pricing": {
-        "input": 6e-07,
-        "output": 3.6e-06
+        "input": 0.6,
+        "output": 3.6
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -785,8 +785,8 @@
       "id": "deepseek-v3.2",
       "name": "deepseek-v3.2",
       "pricing": {
-        "input": 2.66e-07,
-        "output": 4.44e-07
+        "input": 0.266,
+        "output": 0.444
       },
       "context_window": 163840,
       "default_max_tokens": 16384,
@@ -803,8 +803,8 @@
       "id": "mistral-small-2603",
       "name": "mistral-small-2603",
       "pricing": {
-        "input": 1.28e-07,
-        "output": 5.1e-07
+        "input": 0.128,
+        "output": 0.51
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -821,8 +821,8 @@
       "id": "minimax-m2.5",
       "name": "minimax-m2.5",
       "pricing": {
-        "input": 2.66e-07,
-        "output": 1.065e-06
+        "input": 0.266,
+        "output": 1.065
       },
       "context_window": 196000,
       "default_max_tokens": 19600,
@@ -839,8 +839,8 @@
       "id": "claude-4-6-sonnet",
       "name": "claude-4-6-sonnet",
       "pricing": {
-        "input": 2.869e-06,
-        "output": 1.4309e-05
+        "input": 2.869,
+        "output": 14.309
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -857,8 +857,8 @@
       "id": "glm-4.7-flash",
       "name": "glm-4.7-flash",
       "pricing": {
-        "input": 7.2e-08,
-        "output": 4.29e-07
+        "input": 0.072,
+        "output": 0.429
       },
       "context_window": 203000,
       "default_max_tokens": 20300,
@@ -869,8 +869,8 @@
       "id": "kimi-k2.5",
       "name": "kimi-k2.5",
       "pricing": {
-        "input": 4.44e-07,
-        "output": 2.485e-06
+        "input": 0.444,
+        "output": 2.485
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -887,8 +887,8 @@
       "id": "claude-opus4-6",
       "name": "claude-opus4-6",
       "pricing": {
-        "input": 4.769e-06,
-        "output": 2.3843e-05
+        "input": 4.769,
+        "output": 23.843
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -905,8 +905,8 @@
       "id": "minimax-m2",
       "name": "minimax-m2",
       "pricing": {
-        "input": 3.13e-07,
-        "output": 1.261e-06
+        "input": 0.313,
+        "output": 1.261
       },
       "context_window": 400000,
       "default_max_tokens": 40000,
@@ -923,8 +923,8 @@
       "id": "glm-4.7",
       "name": "glm-4.7",
       "pricing": {
-        "input": 7e-07,
-        "output": 2.5e-06
+        "input": 0.7,
+        "output": 2.5
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -941,8 +941,8 @@
       "id": "minimax-m2.1",
       "name": "minimax-m2.1",
       "pricing": {
-        "input": 3.22e-07,
-        "output": 1.288e-06
+        "input": 0.322,
+        "output": 1.288
       },
       "context_window": 196000,
       "default_max_tokens": 19600,
@@ -959,8 +959,8 @@
       "id": "qwen3-vl-235b-a22b",
       "name": "qwen3-vl-235b-a22b",
       "pricing": {
-        "input": 5.54e-07,
-        "output": 2.8e-06
+        "input": 0.554,
+        "output": 2.8
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -977,8 +977,8 @@
       "id": "nvidia-nemotron-3-nano-30b-a3b",
       "name": "nvidia-nemotron-3-nano-30b-a3b",
       "pricing": {
-        "input": 5.4e-08,
-        "output": 2.15e-07
+        "input": 0.054,
+        "output": 0.215
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -995,8 +995,8 @@
       "id": "claude-opus4-5",
       "name": "claude-opus4-5",
       "pricing": {
-        "input": 4.769e-06,
-        "output": 2.3849e-05
+        "input": 4.769,
+        "output": 23.849
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -1013,8 +1013,8 @@
       "id": "qwen3-next-80b-a3b-thinking",
       "name": "qwen3-next-80b-a3b-thinking",
       "pricing": {
-        "input": 1.34e-07,
-        "output": 1.073e-06
+        "input": 0.134,
+        "output": 1.073
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1031,8 +1031,8 @@
       "id": "devstral-2512",
       "name": "devstral-2512",
       "pricing": {
-        "input": 4.29e-07,
-        "output": 2.147e-06
+        "input": 0.429,
+        "output": 2.147
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1043,8 +1043,8 @@
       "id": "nova-2-lite",
       "name": "nova-2-lite",
       "pricing": {
-        "input": 3.35e-07,
-        "output": 2.822e-06
+        "input": 0.335,
+        "output": 2.822
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -1061,8 +1061,8 @@
       "id": "gpt-oss-safeguard-120b",
       "name": "gpt-oss-safeguard-120b",
       "pricing": {
-        "input": 1.61e-07,
-        "output": 6.26e-07
+        "input": 0.161,
+        "output": 0.626
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1079,8 +1079,8 @@
       "id": "mistral-large-2512",
       "name": "mistral-large-2512",
       "pricing": {
-        "input": 5e-07,
-        "output": 1.5e-06
+        "input": 0.5,
+        "output": 1.5
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1091,8 +1091,8 @@
       "id": "ministral-8b-2512",
       "name": "ministral-8b-2512",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 1.5e-07
+        "input": 0.15,
+        "output": 0.15
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1103,8 +1103,8 @@
       "id": "ministral-3b-2512",
       "name": "ministral-3b-2512",
       "pricing": {
-        "input": 1e-07,
-        "output": 1e-07
+        "input": 0.1,
+        "output": 0.1
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1115,8 +1115,8 @@
       "id": "ministral-14b-2512",
       "name": "ministral-14b-2512",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-07
+        "input": 0.2,
+        "output": 0.2
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1127,8 +1127,8 @@
       "id": "gpt-5.1",
       "name": "gpt-5.1",
       "pricing": {
-        "input": 1.234e-06,
-        "output": 9.838e-06
+        "input": 1.234,
+        "output": 9.838
       },
       "context_window": 400000,
       "default_max_tokens": 40000,
@@ -1145,8 +1145,8 @@
       "id": "nemotron-nano-v2-12b",
       "name": "nemotron-nano-v2-12b",
       "pricing": {
-        "input": 2.15e-07,
-        "output": 6.35e-07
+        "input": 0.215,
+        "output": 0.635
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1163,8 +1163,8 @@
       "id": "claude-haiku-4-5",
       "name": "claude-haiku-4-5",
       "pricing": {
-        "input": 8.94e-07,
-        "output": 4.472e-06
+        "input": 0.894,
+        "output": 4.472
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -1181,8 +1181,8 @@
       "id": "claude-4-5-sonnet",
       "name": "claude-4-5-sonnet",
       "pricing": {
-        "input": 2.683e-06,
-        "output": 1.3416e-05
+        "input": 2.683,
+        "output": 13.416
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -1199,8 +1199,8 @@
       "id": "hermes-4-70b",
       "name": "hermes-4-70b",
       "pricing": {
-        "input": 1.16e-07,
-        "output": 3.58e-07
+        "input": 0.116,
+        "output": 0.358
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1211,8 +1211,8 @@
       "id": "gpt-5",
       "name": "gpt-5",
       "pricing": {
-        "input": 1.234e-06,
-        "output": 9.838e-06
+        "input": 1.234,
+        "output": 9.838
       },
       "context_window": 400000,
       "default_max_tokens": 40000,
@@ -1229,8 +1229,8 @@
       "id": "gpt-oss-120b",
       "name": "gpt-oss-120b",
       "pricing": {
-        "input": 8e-08,
-        "output": 4e-07
+        "input": 0.08,
+        "output": 0.4
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -1247,8 +1247,8 @@
       "id": "qwen3-30b-a3b-instruct-2507",
       "name": "qwen3-30b-a3b-instruct-2507",
       "pricing": {
-        "input": 8.9e-08,
-        "output": 2.68e-07
+        "input": 0.089,
+        "output": 0.268
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -1265,8 +1265,8 @@
       "id": "gpt-oss-20b",
       "name": "gpt-oss-20b",
       "pricing": {
-        "input": 4e-08,
-        "output": 1.5e-07
+        "input": 0.04,
+        "output": 0.15
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -1283,8 +1283,8 @@
       "id": "mistral-7b-instruct-v0.3",
       "name": "mistral-7b-instruct-v0.3",
       "pricing": {
-        "input": 1e-07,
-        "output": 1e-07
+        "input": 0.1,
+        "output": 0.1
       },
       "context_window": 127000,
       "default_max_tokens": 12700,
@@ -1295,8 +1295,8 @@
       "id": "mistral-large-2402",
       "name": "mistral-large-2402",
       "pricing": {
-        "input": 3.846e-06,
-        "output": 1.1627e-05
+        "input": 3.846,
+        "output": 11.627
       },
       "context_window": 32000,
       "default_max_tokens": 3200,
@@ -1313,8 +1313,8 @@
       "id": "pixtral-large-2502",
       "name": "pixtral-large-2502",
       "pricing": {
-        "input": 1.789e-06,
-        "output": 5.366e-06
+        "input": 1.789,
+        "output": 5.366
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1331,8 +1331,8 @@
       "id": "mistral-small-3.2-24b-instruct-2506",
       "name": "mistral-small-3.2-24b-instruct-2506",
       "pricing": {
-        "input": 9e-08,
-        "output": 2.8e-07
+        "input": 0.09,
+        "output": 0.28
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -1343,8 +1343,8 @@
       "id": "qwen3-32b",
       "name": "qwen3-32b",
       "pricing": {
-        "input": 8.9e-08,
-        "output": 2.68e-07
+        "input": 0.089,
+        "output": 0.268
       },
       "context_window": 40000,
       "default_max_tokens": 4000,
@@ -1361,8 +1361,8 @@
       "id": "qwen3-235b-a22b-instruct-2507",
       "name": "qwen3-235b-a22b-instruct-2507",
       "pricing": {
-        "input": 6.2e-08,
-        "output": 4.08e-07
+        "input": 0.062,
+        "output": 0.408
       },
       "context_window": 262000,
       "default_max_tokens": 26200,
@@ -1379,8 +1379,8 @@
       "id": "qwen3-coder-30b-a3b-instruct",
       "name": "qwen3-coder-30b-a3b-instruct",
       "pricing": {
-        "input": 6e-08,
-        "output": 2.2e-07
+        "input": 0.06,
+        "output": 0.22
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -1397,8 +1397,8 @@
       "id": "gpt-4.1",
       "name": "gpt-4.1",
       "pricing": {
-        "input": 1.968e-06,
-        "output": 7.872e-06
+        "input": 1.968,
+        "output": 7.872
       },
       "context_window": 1047576,
       "default_max_tokens": 104757,
@@ -1415,8 +1415,8 @@
       "id": "gpt-4.1-mini",
       "name": "gpt-4.1-mini",
       "pricing": {
-        "input": 3.9e-07,
-        "output": 1.53e-06
+        "input": 0.39,
+        "output": 1.53
       },
       "context_window": 1047576,
       "default_max_tokens": 104757,
@@ -1433,8 +1433,8 @@
       "id": "gpt-4.1-nano",
       "name": "gpt-4.1-nano",
       "pricing": {
-        "input": 1e-07,
-        "output": 3.9e-07
+        "input": 0.1,
+        "output": 0.39
       },
       "context_window": 1047576,
       "default_max_tokens": 104757,
@@ -1451,8 +1451,8 @@
       "id": "nova-micro-v1",
       "name": "nova-micro-v1",
       "pricing": {
-        "input": 3.6e-08,
-        "output": 1.43e-07
+        "input": 0.036,
+        "output": 0.143
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1469,8 +1469,8 @@
       "id": "nova-lite-v1",
       "name": "nova-lite-v1",
       "pricing": {
-        "input": 6.2e-08,
-        "output": 2.47e-07
+        "input": 0.062,
+        "output": 0.247
       },
       "context_window": 300000,
       "default_max_tokens": 30000,
@@ -1487,8 +1487,8 @@
       "id": "nova-pro-v1",
       "name": "nova-pro-v1",
       "pricing": {
-        "input": 8.24e-07,
-        "output": 3.295e-06
+        "input": 0.824,
+        "output": 3.295
       },
       "context_window": 300000,
       "default_max_tokens": 30000,
@@ -1505,8 +1505,8 @@
       "id": "claude-sonnet-4",
       "name": "claude-sonnet-4",
       "pricing": {
-        "input": 2.601e-06,
-        "output": 1.301e-05
+        "input": 2.601,
+        "output": 13.01
       },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -1523,8 +1523,8 @@
       "id": "llama-3.1-nemotron-ultra-253b-v1",
       "name": "llama-3.1-nemotron-ultra-253b-v1",
       "pricing": {
-        "input": 5.37e-07,
-        "output": 1.61e-06
+        "input": 0.537,
+        "output": 1.61
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1541,8 +1541,8 @@
       "id": "mistral-small-2503",
       "name": "mistral-small-2503",
       "pricing": {
-        "input": 1e-07,
-        "output": 3e-07
+        "input": 0.1,
+        "output": 0.3
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1553,8 +1553,8 @@
       "id": "gemini-2.5-flash",
       "name": "gemini-2.5-flash",
       "pricing": {
-        "input": 2.68e-07,
-        "output": 2.236e-06
+        "input": 0.268,
+        "output": 2.236
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -1571,8 +1571,8 @@
       "id": "gemini-2.5-pro",
       "name": "gemini-2.5-pro",
       "pricing": {
-        "input": 1.342e-06,
-        "output": 8.944e-06
+        "input": 1.342,
+        "output": 8.944
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -1589,8 +1589,8 @@
       "id": "gemma-3-27b-it",
       "name": "gemma-3-27b-it",
       "pricing": {
-        "input": 8.9e-08,
-        "output": 2.68e-07
+        "input": 0.089,
+        "output": 0.268
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -1607,8 +1607,8 @@
       "id": "deepseek-r1-0528",
       "name": "deepseek-r1-0528",
       "pricing": {
-        "input": 5.85e-07,
-        "output": 2.307e-06
+        "input": 0.585,
+        "output": 2.307
       },
       "context_window": 164000,
       "default_max_tokens": 16400,
@@ -1625,8 +1625,8 @@
       "id": "codestral-2508",
       "name": "codestral-2508",
       "pricing": {
-        "input": 3e-07,
-        "output": 9e-07
+        "input": 0.3,
+        "output": 0.9
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -1637,8 +1637,8 @@
       "id": "llama-3.3-70b-instruct",
       "name": "llama-3.3-70b-instruct",
       "pricing": {
-        "input": 1.16e-07,
-        "output": 3.58e-07
+        "input": 0.116,
+        "output": 0.358
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -1655,8 +1655,8 @@
       "id": "gpt-4o",
       "name": "gpt-4o",
       "pricing": {
-        "input": 2.387e-06,
-        "output": 9.547e-06
+        "input": 2.387,
+        "output": 9.547
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1673,8 +1673,8 @@
       "id": "gpt-5-mini",
       "name": "gpt-5-mini",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 1.968e-06
+        "input": 0.25,
+        "output": 1.968
       },
       "context_window": 400000,
       "default_max_tokens": 40000,
@@ -1691,8 +1691,8 @@
       "id": "gpt-5-nano",
       "name": "gpt-5-nano",
       "pricing": {
-        "input": 5.4e-08,
-        "output": 3.94e-07
+        "input": 0.054,
+        "output": 0.394
       },
       "context_window": 400000,
       "default_max_tokens": 40000,
@@ -1709,8 +1709,8 @@
       "id": "hermes-4-405b",
       "name": "hermes-4-405b",
       "pricing": {
-        "input": 8.94e-07,
-        "output": 2.683e-06
+        "input": 0.894,
+        "output": 2.683
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1721,8 +1721,8 @@
       "id": "mistral-nemo-instruct-2407",
       "name": "mistral-nemo-instruct-2407",
       "pricing": {
-        "input": 1.3e-07,
-        "output": 1.3e-07
+        "input": 0.13,
+        "output": 0.13
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1733,8 +1733,8 @@
       "id": "llama-3.1-405b-instruct",
       "name": "llama-3.1-405b-instruct",
       "pricing": {
-        "input": 1.75e-06,
-        "output": 1.75e-06
+        "input": 1.75,
+        "output": 1.75
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1751,8 +1751,8 @@
       "id": "gpt-4o-mini",
       "name": "gpt-4o-mini",
       "pricing": {
-        "input": 1.43e-07,
-        "output": 5.73e-07
+        "input": 0.143,
+        "output": 0.573
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -1769,8 +1769,8 @@
       "id": "llama-3.1-8b-instruct",
       "name": "llama-3.1-8b-instruct",
       "pricing": {
-        "input": 1.5e-07,
-        "output": 1.5e-07
+        "input": 0.15,
+        "output": 0.15
       },
       "context_window": 128000,
       "default_max_tokens": 12800,

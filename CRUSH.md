@@ -24,19 +24,19 @@
 ## Model pricing
 
 Model pricing lives in a nested `pricing` object and is in **dollars per
-token**:
+1M tokens**:
 
 ```json
 "pricing": {
-  "input": 1e-05,
-  "output": 5e-05,
-  "cache_create": 1.25e-05,
-  "cache_hit": 2.5e-07
+  "input": 10,
+  "output": 50,
+  "cache_create": 12.5,
+  "cache_hit": 0.25
 }
 ```
 
-Provider pages usually quote per-million prices (e.g. "$3/M") — divide by
-1,000,000 before putting them in the config.
+Provider pages usually quote per-million prices (e.g. "$3/M") — that is
+exactly what goes in the config.
 
 - `cache_create` = cache **creation** (write) price
 - `cache_hit` = cache **read** price

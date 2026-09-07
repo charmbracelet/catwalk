@@ -136,8 +136,8 @@ func main() {
 			Name:          model.ID,
 			ContextWindow: detailData.ContextSize,
 			Pricing: catwalk.Pricing{
-				Input:  detailData.Pricing.InputToken / 1_000_000,
-				Output: detailData.Pricing.OutputToken / 1_000_000,
+				Input:  detailData.Pricing.InputToken,
+				Output: detailData.Pricing.OutputToken,
 			},
 			DefaultMaxTokens:       model.ContextSize / 10,
 			CanReason:              canReason,

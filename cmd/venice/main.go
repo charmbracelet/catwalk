@@ -203,13 +203,13 @@ func main() {
 			}
 		}
 
-		roundCost := func(v float64) float64 { return math.Round(v*1e11) / 1e11 }
+		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
 		m := catwalk.Model{
 			ID:   model.ID,
 			Name: model.ModelSpec.Name,
 			Pricing: catwalk.Pricing{
-				Input:  roundCost(model.ModelSpec.Pricing.Input.USD / 1_000_000),
-				Output: roundCost(model.ModelSpec.Pricing.Output.USD / 1_000_000),
+				Input:  roundCost(model.ModelSpec.Pricing.Input.USD),
+				Output: roundCost(model.ModelSpec.Pricing.Output.USD),
 			},
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       model.ModelSpec.MaxCompletionTokens,

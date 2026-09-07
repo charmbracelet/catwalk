@@ -11,10 +11,10 @@
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
       "pricing": {
-        "input": 7.5e-07,
-        "output": 3.75e-06,
-        "cache_create": 7.5e-08,
-        "cache_hit": 3.75e-06
+        "input": 0.75,
+        "output": 3.75,
+        "cache_create": 0.075,
+        "cache_hit": 3.75
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -27,9 +27,9 @@
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 7.5e-06,
-        "cache_hit": 1.5e-07
+        "input": 1.5,
+        "output": 7.5,
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -42,9 +42,9 @@
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "pricing": {
-        "input": 1.5e-06,
-        "output": 9e-06,
-        "cache_hit": 1e-06
+        "input": 1.5,
+        "output": 9,
+        "cache_hit": 1
       },
       "context_window": 1048576,
       "default_max_tokens": 64000,
@@ -57,10 +57,10 @@
       "id": "gemini-3.5-flash-lite",
       "name": "Gemini 3.5 Flash-Lite",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.5e-06,
-        "cache_create": 3e-08,
-        "cache_hit": 2.5e-06
+        "input": 0.3,
+        "output": 2.5,
+        "cache_create": 0.03,
+        "cache_hit": 2.5
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -73,9 +73,9 @@
       "id": "gemini-3.1-pro-preview-customtools",
       "name": "Gemini 3.1 Pro",
       "pricing": {
-        "input": 2e-06,
-        "output": 1.2e-05,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 12,
+        "cache_hit": 0.2
       },
       "context_window": 1048576,
       "default_max_tokens": 64000,
@@ -88,10 +88,10 @@
       "id": "gemini-3.1-flash-lite",
       "name": "Gemini 3.1 Flash-Lite",
       "pricing": {
-        "input": 2.5e-07,
-        "output": 1.5e-06,
-        "cache_create": 2.5e-08,
-        "cache_hit": 1.5e-06
+        "input": 0.25,
+        "output": 1.5,
+        "cache_create": 0.025,
+        "cache_hit": 1.5
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -104,9 +104,9 @@
       "id": "gemini-3-pro-preview",
       "name": "Gemini 3 Pro",
       "pricing": {
-        "input": 2e-06,
-        "output": 1.2e-05,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 12,
+        "cache_hit": 0.2
       },
       "context_window": 1048576,
       "default_max_tokens": 64000,
@@ -119,9 +119,9 @@
       "id": "gemini-3-flash-preview",
       "name": "Gemini 3 Flash",
       "pricing": {
-        "input": 5e-07,
-        "output": 3e-06,
-        "cache_hit": 5e-08
+        "input": 0.5,
+        "output": 3,
+        "cache_hit": 0.05
       },
       "context_window": 1048576,
       "default_max_tokens": 50000,
@@ -134,9 +134,9 @@
       "id": "gemini-2.5-pro",
       "name": "Gemini 2.5 Pro",
       "pricing": {
-        "input": 1.25e-06,
-        "output": 1e-05,
-        "cache_hit": 1.25e-07
+        "input": 1.25,
+        "output": 10,
+        "cache_hit": 0.125
       },
       "context_window": 1048576,
       "default_max_tokens": 50000,
@@ -147,9 +147,9 @@
       "id": "gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "pricing": {
-        "input": 3e-07,
-        "output": 2.5e-06,
-        "cache_hit": 3e-08
+        "input": 0.3,
+        "output": 2.5,
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 50000,

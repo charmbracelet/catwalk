@@ -97,7 +97,7 @@ func hasField(s, field string) bool {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 func parseFloat(p *float64) float64 {
@@ -158,10 +158,10 @@ func main() {
 			ID:   model.ModelID,
 			Name: model.ModelName,
 			Pricing: catwalk.Pricing{
-				Input:       roundCost(parseFloat(model.Pricing.Input) / 1_000_000),
-				Output:      roundCost(parseFloat(model.Pricing.Output) / 1_000_000),
-				CacheCreate: roundCost(parseFloat(model.Pricing.CacheWrite) / 1_000_000),
-				CacheHit:    roundCost(parseFloat(model.Pricing.CacheRead) / 1_000_000),
+				Input:       roundCost(parseFloat(model.Pricing.Input)),
+				Output:      roundCost(parseFloat(model.Pricing.Output)),
+				CacheCreate: roundCost(parseFloat(model.Pricing.CacheWrite)),
+				CacheHit:    roundCost(parseFloat(model.Pricing.CacheRead)),
 			},
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,

@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -94,9 +95,9 @@ func main() {
 	}
 
 	for _, goModel := range goModels {
-		costPerTokenIn := goModel.Cost.Input / 1_000_000
-		costPerTokenOut := goModel.Cost.Output / 1_000_000
-		costCacheHit := goModel.Cost.CacheRead / 1_000_000
+		costPerTokenIn := math.Round(goModel.Cost.Input*100) / 100
+		costPerTokenOut := math.Round(goModel.Cost.Output*100) / 100
+		costCacheHit := math.Round(goModel.Cost.CacheRead*100) / 100
 
 		var reasoningLevels []string
 		var defaultReasoningEffort string

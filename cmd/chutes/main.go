@@ -39,7 +39,7 @@ type ModelsResponse struct {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 func hasFeature(m ChutesModel, feature string) bool {
@@ -113,9 +113,9 @@ func main() {
 			ID:   m.ID,
 			Name: modelDisplayName(m.ID),
 			Pricing: catwalk.Pricing{
-				Input:    roundCost(m.Pricing.Prompt / 1_000_000),
-				Output:   roundCost(m.Pricing.Completion / 1_000_000),
-				CacheHit: roundCost(m.Pricing.InputCacheRead / 1_000_000),
+				Input:    roundCost(m.Pricing.Prompt),
+				Output:   roundCost(m.Pricing.Completion),
+				CacheHit: roundCost(m.Pricing.InputCacheRead),
 			},
 			ContextWindow:          m.ContextLength,
 			DefaultMaxTokens:       m.MaxOutputLength,

@@ -57,15 +57,15 @@ func parsePrice(s string) float64 {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 func getPricing(model Model) catwalk.Pricing {
 	return catwalk.Pricing{
-		Input:       roundCost(parsePrice(model.Pricing.Prompt)),
-		Output:      roundCost(parsePrice(model.Pricing.Completion)),
-		CacheCreate: roundCost(parsePrice(model.Pricing.InputCacheWrites)),
-		CacheHit:    roundCost(parsePrice(model.Pricing.InputCacheReads)),
+		Input:       roundCost(parsePrice(model.Pricing.Prompt) * 1_000_000),
+		Output:      roundCost(parsePrice(model.Pricing.Completion) * 1_000_000),
+		CacheCreate: roundCost(parsePrice(model.Pricing.InputCacheWrites) * 1_000_000),
+		CacheHit:    roundCost(parsePrice(model.Pricing.InputCacheReads) * 1_000_000),
 	}
 }
 

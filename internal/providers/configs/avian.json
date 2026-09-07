@@ -11,9 +11,9 @@
       "id": "deepseek/deepseek-v3.2",
       "name": "DeepSeek V3.2 (Legacy)",
       "pricing": {
-        "input": 2.3e-07,
-        "output": 3.3e-07,
-        "cache_create": 1.2e-08
+        "input": 0.23,
+        "output": 0.33,
+        "cache_create": 0.012
       },
       "context_window": 163840,
       "default_max_tokens": 65536,
@@ -30,9 +30,9 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "pricing": {
-        "input": 8.05e-08,
-        "output": 1.61e-07,
-        "cache_create": 1.65e-08
+        "input": 0.0805,
+        "output": 0.161,
+        "cache_create": 0.0165
       },
       "context_window": 1000000,
       "default_max_tokens": 393216,
@@ -49,9 +49,9 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
       "pricing": {
-        "input": 1.305e-06,
-        "output": 2.61e-06,
-        "cache_create": 1.0875e-07
+        "input": 1.305,
+        "output": 2.61,
+        "cache_create": 0.10875
       },
       "context_window": 1000000,
       "default_max_tokens": 393216,
@@ -68,9 +68,9 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "pricing": {
-        "input": 5.94e-07,
-        "output": 1.782e-06,
-        "cache_create": 1.98e-08
+        "input": 0.594,
+        "output": 1.782,
+        "cache_create": 0.0198
       },
       "context_window": 1000000,
       "default_max_tokens": 393216,
@@ -87,9 +87,9 @@
       "id": "z-ai/glm-4.7",
       "name": "GLM-4.7",
       "pricing": {
-        "input": 3.88e-07,
-        "output": 1.806e-06,
-        "cache_create": 9.7e-08
+        "input": 0.388,
+        "output": 1.806,
+        "cache_create": 0.097
       },
       "context_window": 202752,
       "default_max_tokens": 131072,
@@ -100,9 +100,9 @@
       "id": "z-ai/glm-5",
       "name": "GLM-5",
       "pricing": {
-        "input": 5.16e-07,
-        "output": 2.322e-06,
-        "cache_create": 1.29e-07
+        "input": 0.516,
+        "output": 2.322,
+        "cache_create": 0.129
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -113,9 +113,9 @@
       "id": "z-ai/glm-5.1",
       "name": "GLM-5.1",
       "pricing": {
-        "input": 7.43e-07,
-        "output": 2.971e-06,
-        "cache_create": 1.86e-07
+        "input": 0.743,
+        "output": 2.971,
+        "cache_create": 0.186
       },
       "context_window": 202752,
       "default_max_tokens": 202752,
@@ -126,9 +126,9 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM-5.2",
       "pricing": {
-        "input": 4.95e-07,
-        "output": 1.733e-06,
-        "cache_create": 1.24e-07
+        "input": 0.495,
+        "output": 1.733,
+        "cache_create": 0.124
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -139,9 +139,9 @@
       "id": "moonshotai/kimi-k2.5",
       "name": "Kimi K2.5",
       "pricing": {
-        "input": 4.5e-07,
-        "output": 2.2e-06,
-        "cache_create": 2.25e-07
+        "input": 0.45,
+        "output": 2.2,
+        "cache_create": 0.225
       },
       "context_window": 262144,
       "default_max_tokens": 262144,
@@ -152,9 +152,9 @@
       "id": "moonshotai/kimi-k2.6",
       "name": "Kimi K2.6",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 1.6e-07
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.16
       },
       "context_window": 262144,
       "default_max_tokens": 262144,
@@ -165,9 +165,9 @@
       "id": "xiaomi/mimo-v2.5-pro",
       "name": "MiMo-V2.5 Pro",
       "pricing": {
-        "input": 4.35e-07,
-        "output": 8.7e-07,
-        "cache_create": 3.6e-09
+        "input": 0.435,
+        "output": 0.87,
+        "cache_create": 0.0036
       },
       "context_window": 1050000,
       "default_max_tokens": 131072,
@@ -184,9 +184,9 @@
       "id": "xiaomi/mimo-v2.5",
       "name": "MiMo-V2.5 Small",
       "pricing": {
-        "input": 2e-07,
-        "output": 4e-07,
-        "cache_create": 5e-08
+        "input": 0.2,
+        "output": 0.4,
+        "cache_create": 0.05
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -203,9 +203,9 @@
       "id": "minimax/minimax-m2.5",
       "name": "MiniMax M2.5",
       "pricing": {
-        "input": 2.7e-07,
-        "output": 1.08e-06,
-        "cache_create": 1.5e-07
+        "input": 0.27,
+        "output": 1.08,
+        "cache_create": 0.15
       },
       "context_window": 196608,
       "default_max_tokens": 131072,

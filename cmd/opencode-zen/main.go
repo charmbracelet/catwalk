@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"slices"
@@ -153,10 +154,10 @@ func main() {
 		modelName := zenModel.ID
 
 		if hasEnrichment {
-			costInput = enrichment.Cost.Input / 1_000_000
-			costOutput = enrichment.Cost.Output / 1_000_000
-			costCacheCreate = enrichment.Cost.CacheWrite / 1_000_000
-			costCacheHit = enrichment.Cost.CacheRead / 1_000_000
+			costInput = math.Round(enrichment.Cost.Input*100) / 100
+			costOutput = math.Round(enrichment.Cost.Output*100) / 100
+			costCacheCreate = math.Round(enrichment.Cost.CacheWrite*100) / 100
+			costCacheHit = math.Round(enrichment.Cost.CacheRead*100) / 100
 			contextWindow = enrichment.Limit.Context
 			defaultMaxTokens = enrichment.Limit.Output
 			supportsImages = enrichment.Attachment

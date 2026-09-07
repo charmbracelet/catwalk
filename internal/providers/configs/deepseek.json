@@ -11,9 +11,9 @@
       "id": "deepseek-v4-flash",
       "name": "DeepSeek-V4-Flash",
       "pricing": {
-        "input": 1.4e-07,
-        "output": 2.8e-07,
-        "cache_create": 2.8e-09
+        "input": 0.14,
+        "output": 0.28,
+        "cache_create": 0.0028
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -30,9 +30,9 @@
       "id": "deepseek-v4-pro",
       "name": "DeepSeek-V4-Pro",
       "pricing": {
-        "input": 4.35e-07,
-        "output": 8.7e-07,
-        "cache_create": 3.625e-09
+        "input": 0.435,
+        "output": 0.87,
+        "cache_create": 0.003625
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,

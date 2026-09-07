@@ -114,14 +114,14 @@ func main() {
 		if err != nil {
 			promptPrice = 0.0
 		}
-		costPerTokenIn = math.Round(promptPrice*1e11) / 1e11
+		costPerTokenIn = math.Round(promptPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		// Handle completion price conversion
 		completionPrice, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 		if err != nil {
 			completionPrice = 0.0
 		}
-		costPerTokenOut = math.Round(completionPrice*1e11) / 1e11
+		costPerTokenOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		var (
 			supportsImages   = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")

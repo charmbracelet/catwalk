@@ -94,7 +94,7 @@ type ModelsResponse struct {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 func getPricing(model Model) catwalk.Pricing {
@@ -103,23 +103,23 @@ func getPricing(model Model) catwalk.Pricing {
 	if err != nil {
 		costPrompt = 0.0
 	}
-	pricing.Input = roundCost(costPrompt)
+	pricing.Input = roundCost(costPrompt * 1_000_000)
 	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 	if err != nil {
 		costCompletion = 0.0
 	}
-	pricing.Output = roundCost(costCompletion)
+	pricing.Output = roundCost(costCompletion * 1_000_000)
 
 	costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 	if err != nil {
 		costCacheWrite = 0.0
 	}
-	pricing.CacheCreate = roundCost(costCacheWrite)
+	pricing.CacheCreate = roundCost(costCacheWrite * 1_000_000)
 	costCacheRead, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 	if err != nil {
 		costCacheRead = 0.0
 	}
-	pricing.CacheHit = roundCost(costCacheRead)
+	pricing.CacheHit = roundCost(costCacheRead * 1_000_000)
 	return pricing
 }
 
@@ -330,23 +330,23 @@ func main() {
 		if err != nil {
 			costPrompt = 0.0
 		}
-		pricing.Input = roundCost(costPrompt)
+		pricing.Input = roundCost(costPrompt * 1_000_000)
 		costCompletion, err := strconv.ParseFloat(bestEndpoint.Pricing.Completion, 64)
 		if err != nil {
 			costCompletion = 0.0
 		}
-		pricing.Output = roundCost(costCompletion)
+		pricing.Output = roundCost(costCompletion * 1_000_000)
 
 		costCacheWrite, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
 		if err != nil {
 			costCacheWrite = 0.0
 		}
-		pricing.CacheCreate = roundCost(costCacheWrite)
+		pricing.CacheCreate = roundCost(costCacheWrite * 1_000_000)
 		costCacheRead, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
 		if err != nil {
 			costCacheRead = 0.0
 		}
-		pricing.CacheHit = roundCost(costCacheRead)
+		pricing.CacheHit = roundCost(costCacheRead * 1_000_000)
 
 		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")

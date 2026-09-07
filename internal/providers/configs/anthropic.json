@@ -11,10 +11,10 @@
       "id": "claude-fable-5-1",
       "name": "Claude Fable 5.1",
       "pricing": {
-        "input": 1e-05,
-        "output": 5e-05,
-        "cache_create": 1.25e-05,
-        "cache_hit": 2.5e-07
+        "input": 10,
+        "output": 50,
+        "cache_create": 12.5,
+        "cache_hit": 0.25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -27,10 +27,10 @@
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
-        "input": 1e-05,
-        "output": 5e-05,
-        "cache_create": 1.25e-05,
-        "cache_hit": 1e-06
+        "input": 10,
+        "output": 50,
+        "cache_create": 12.5,
+        "cache_hit": 1
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -43,10 +43,10 @@
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -59,10 +59,10 @@
       "id": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -75,10 +75,10 @@
       "id": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -91,10 +91,10 @@
       "id": "claude-opus-4-6",
       "name": "Claude Opus 4.6",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 128000,
@@ -107,10 +107,10 @@
       "id": "claude-opus-4-5-20251101",
       "name": "Claude Opus 4.5",
       "pricing": {
-        "input": 5e-06,
-        "output": 2.5e-05,
-        "cache_create": 6.25e-06,
-        "cache_hit": 5e-07
+        "input": 5,
+        "output": 25,
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -123,10 +123,10 @@
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "pricing": {
-        "input": 2e-06,
-        "output": 1e-05,
-        "cache_create": 2.5e-06,
-        "cache_hit": 2e-07
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -139,10 +139,10 @@
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3.75e-06,
-        "cache_hit": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 3.75,
+        "cache_hit": 0.3
       },
       "context_window": 200000,
       "default_max_tokens": 128000,
@@ -155,10 +155,10 @@
       "id": "claude-sonnet-4-5-20250929",
       "name": "Claude Sonnet 4.5",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3.75e-06,
-        "cache_hit": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 3.75,
+        "cache_hit": 0.3
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -169,10 +169,10 @@
       "id": "claude-haiku-4-5-20251001",
       "name": "Claude Haiku 4.5",
       "pricing": {
-        "input": 1e-06,
-        "output": 5e-06,
-        "cache_create": 1.25e-06,
-        "cache_hit": 1e-07
+        "input": 1,
+        "output": 5,
+        "cache_create": 1.25,
+        "cache_hit": 0.1
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -183,10 +183,10 @@
       "id": "claude-opus-4-1-20250805",
       "name": "Claude Opus 4.1",
       "pricing": {
-        "input": 1.5e-05,
-        "output": 7.5e-05,
-        "cache_create": 1.875e-05,
-        "cache_hit": 1.5e-06
+        "input": 15,
+        "output": 75,
+        "cache_create": 18.75,
+        "cache_hit": 1.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -197,10 +197,10 @@
       "id": "claude-opus-4-20250514",
       "name": "Claude Opus 4",
       "pricing": {
-        "input": 1.5e-05,
-        "output": 7.5e-05,
-        "cache_create": 1.875e-05,
-        "cache_hit": 1.5e-06
+        "input": 15,
+        "output": 75,
+        "cache_create": 18.75,
+        "cache_hit": 1.5
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
@@ -211,10 +211,10 @@
       "id": "claude-sonnet-4-20250514",
       "name": "Claude Sonnet 4",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3.75e-06,
-        "cache_hit": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 3.75,
+        "cache_hit": 0.3
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -225,10 +225,10 @@
       "id": "claude-mythos-5-1",
       "name": "Claude Mythos 5.1",
       "pricing": {
-        "input": 1e-05,
-        "output": 5e-05,
-        "cache_create": 1.25e-05,
-        "cache_hit": 2.5e-07
+        "input": 10,
+        "output": 50,
+        "cache_create": 12.5,
+        "cache_hit": 0.25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -241,10 +241,10 @@
       "id": "claude-mythos-5",
       "name": "Claude Mythos 5",
       "pricing": {
-        "input": 1e-05,
-        "output": 5e-05,
-        "cache_create": 1.25e-05,
-        "cache_hit": 1e-06
+        "input": 10,
+        "output": 50,
+        "cache_create": 12.5,
+        "cache_hit": 1
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,

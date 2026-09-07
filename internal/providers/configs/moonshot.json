@@ -11,9 +11,9 @@
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": {
-        "input": 3e-06,
-        "output": 1.5e-05,
-        "cache_create": 3e-07
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -24,9 +24,9 @@
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 1.9e-07
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.19
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
@@ -37,9 +37,9 @@
       "id": "kimi-k2.7-code-highspeed",
       "name": "Kimi K2.7 Code High Speed",
       "pricing": {
-        "input": 1.9e-06,
-        "output": 8e-06,
-        "cache_create": 3.8e-07
+        "input": 1.9,
+        "output": 8,
+        "cache_create": 0.38
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
@@ -50,9 +50,9 @@
       "id": "kimi-k2.6",
       "name": "Kimi K2.6",
       "pricing": {
-        "input": 9.5e-07,
-        "output": 4e-06,
-        "cache_create": 1.6e-07
+        "input": 0.95,
+        "output": 4,
+        "cache_create": 0.16
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
@@ -63,9 +63,9 @@
       "id": "kimi-k2.5",
       "name": "Kimi K2.5",
       "pricing": {
-        "input": 6e-07,
-        "output": 3e-06,
-        "cache_create": 1e-07
+        "input": 0.6,
+        "output": 3,
+        "cache_create": 0.1
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
@@ -76,8 +76,8 @@
       "id": "moonshot-v1-8k",
       "name": "Moonshot V1 8K",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-06
+        "input": 0.2,
+        "output": 2
       },
       "context_window": 8192,
       "default_max_tokens": 4096,
@@ -88,8 +88,8 @@
       "id": "moonshot-v1-32k",
       "name": "Moonshot V1 32K",
       "pricing": {
-        "input": 1e-06,
-        "output": 3e-06
+        "input": 1,
+        "output": 3
       },
       "context_window": 32768,
       "default_max_tokens": 8192,
@@ -100,8 +100,8 @@
       "id": "moonshot-v1-128k",
       "name": "Moonshot V1 128K",
       "pricing": {
-        "input": 2e-06,
-        "output": 5e-06
+        "input": 2,
+        "output": 5
       },
       "context_window": 131072,
       "default_max_tokens": 16384,
@@ -112,8 +112,8 @@
       "id": "moonshot-v1-8k-vision-preview",
       "name": "Moonshot V1 8K Vision Preview",
       "pricing": {
-        "input": 2e-07,
-        "output": 2e-06
+        "input": 0.2,
+        "output": 2
       },
       "context_window": 8192,
       "default_max_tokens": 4096,
@@ -124,8 +124,8 @@
       "id": "moonshot-v1-32k-vision-preview",
       "name": "Moonshot V1 32K Vision Preview",
       "pricing": {
-        "input": 1e-06,
-        "output": 3e-06
+        "input": 1,
+        "output": 3
       },
       "context_window": 32768,
       "default_max_tokens": 8192,
@@ -136,8 +136,8 @@
       "id": "moonshot-v1-128k-vision-preview",
       "name": "Moonshot V1 128K Vision Preview",
       "pricing": {
-        "input": 2e-06,
-        "output": 5e-06
+        "input": 2,
+        "output": 5
       },
       "context_window": 131072,
       "default_max_tokens": 16384,

@@ -60,7 +60,7 @@ func parsePrice(s string) float64 {
 }
 
 func roundCost(v float64) float64 {
-	return math.Round(v*1e11) / 1e11
+	return math.Round(v*1e5) / 1e5
 }
 
 // extractBasePricing returns the base pricing tier regardless of whether the
@@ -161,9 +161,9 @@ func main() {
 		}
 
 		priceMultiplier := 1 - model.DiscountToUser
-		costPerTokenIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier)
-		costPerTokenOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier)
-		costPerTokenCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier)
+		costPerTokenIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
+		costPerTokenOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
+		costPerTokenCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
 
 		supportsImages := slices.Contains(model.InputModalities, "image")
 
