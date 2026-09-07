@@ -192,7 +192,7 @@ func main() {
 			},
 			ContextWindow:    model.ContextLength,
 			DefaultMaxTokens: defaultMaxTokens,
-			SupportsImages:   supportsImages,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		atlasCloudProvider.Models = append(atlasCloudProvider.Models, m)

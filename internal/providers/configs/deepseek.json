@@ -24,7 +24,9 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-v4-pro",
@@ -43,7 +45,9 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     }
   ]
 }

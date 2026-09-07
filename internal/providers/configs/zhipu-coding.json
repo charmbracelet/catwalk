@@ -23,7 +23,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "xhigh",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-5.2",
@@ -40,7 +42,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "xhigh",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-5.1",
@@ -53,7 +57,9 @@
       "context_window": 204800,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-5-turbo",
@@ -66,7 +72,9 @@
       "context_window": 200000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-5",
@@ -79,7 +87,9 @@
       "context_window": 204800,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-4.7",
@@ -92,7 +102,9 @@
       "context_window": 204800,
       "default_max_tokens": 98000,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-4.7-flash",
@@ -105,7 +117,9 @@
       "context_window": 200000,
       "default_max_tokens": 65550,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-4.6",
@@ -118,7 +132,9 @@
       "context_window": 204800,
       "default_max_tokens": 102400,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-4.6v",
@@ -130,7 +146,9 @@
       "context_window": 131072,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "glm-4.5",
@@ -143,7 +161,9 @@
       "context_window": 131072,
       "default_max_tokens": 49152,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-4.5-air",
@@ -156,7 +176,9 @@
       "context_window": 131072,
       "default_max_tokens": 49152,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-4.5v",
@@ -169,7 +191,9 @@
       "context_window": 65536,
       "default_max_tokens": 8192,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }

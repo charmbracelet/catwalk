@@ -216,7 +216,7 @@ func main() {
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         model.ModelSpec.Capabilities.SupportsVision,
+			Capabilities:           catwalk.Capabilities{Vision: model.ModelSpec.Capabilities.SupportsVision},
 			Options:                options,
 		}
 

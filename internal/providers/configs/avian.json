@@ -24,7 +24,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4-flash",
@@ -43,7 +45,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4-pro",
@@ -62,7 +66,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4-pro-0813",
@@ -81,7 +87,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-4.7",
@@ -94,7 +102,9 @@
       "context_window": 202752,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5",
@@ -107,7 +117,9 @@
       "context_window": 204800,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5.1",
@@ -120,7 +132,9 @@
       "context_window": 202752,
       "default_max_tokens": 202752,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5.2",
@@ -133,7 +147,9 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/kimi-k2.5",
@@ -146,7 +162,9 @@
       "context_window": 262144,
       "default_max_tokens": 262144,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/kimi-k2.6",
@@ -159,7 +177,9 @@
       "context_window": 262144,
       "default_max_tokens": 262144,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "xiaomi/mimo-v2.5-pro",
@@ -178,7 +198,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "xiaomi/mimo-v2.5",
@@ -197,7 +219,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "minimax/minimax-m2.5",
@@ -210,7 +234,9 @@
       "context_window": 196608,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     }
   ]
 }

@@ -102,7 +102,7 @@ func main() {
 			CanReason:              model.Reasoning,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         false,
+			Capabilities:           catwalk.Capabilities{Vision: false},
 		}
 
 		avianProvider.Models = append(avianProvider.Models, m)

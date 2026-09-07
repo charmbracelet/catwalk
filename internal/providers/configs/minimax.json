@@ -17,7 +17,10 @@
         "cache_hit": 0.375
       },
       "context_window": 1000000,
-      "default_max_tokens": 512000
+      "default_max_tokens": 512000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMax-M2.7-highspeed",
@@ -29,7 +32,10 @@
         "cache_hit": 0.375
       },
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMax-M2.7",
@@ -41,7 +47,10 @@
         "cache_hit": 0.375
       },
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMax-M2.5-highspeed",
@@ -53,7 +62,10 @@
         "cache_hit": 0.375
       },
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMax-M2.5",
@@ -65,7 +77,10 @@
         "cache_hit": 0.375
       },
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMax-M2.1-highspeed",
@@ -77,7 +92,10 @@
         "cache_hit": 0.375
       },
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMax-M2.1",
@@ -89,7 +107,10 @@
         "cache_hit": 0.375
       },
       "context_window": 200000,
-      "default_max_tokens": 128000
+      "default_max_tokens": 128000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMax-M2",
@@ -101,7 +122,10 @@
         "cache_hit": 0.375
       },
       "context_window": 200000,
-      "default_max_tokens": 20000
+      "default_max_tokens": 20000,
+      "capabilities": {
+        "vision": false
+      }
     }
   ]
 }

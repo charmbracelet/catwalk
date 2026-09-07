@@ -17,7 +17,9 @@
       "context_window": 256000,
       "default_max_tokens": 16384,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen3.6-35b-a3b",
@@ -29,7 +31,9 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemma-4-26b-a4b-it",
@@ -41,7 +45,9 @@
       "context_window": 256000,
       "default_max_tokens": 16384,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-oss-120b",
@@ -52,7 +58,10 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32768,
-      "can_reason": true
+      "can_reason": true,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistral-medium-3.5-128b",
@@ -63,7 +72,10 @@
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "can_reason": true
+      "can_reason": true,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "llama-3.3-70b-instruct",
@@ -73,7 +85,10 @@
         "output": 0.9
       },
       "context_window": 100000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -83,7 +98,10 @@
         "output": 2.25
       },
       "context_window": 256000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen3-coder-30b-a3b-instruct",
@@ -93,7 +111,10 @@
         "output": 0.8
       },
       "context_window": 128000,
-      "default_max_tokens": 32768
+      "default_max_tokens": 32768,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "voxtral-small-24b-2507",
@@ -103,7 +124,10 @@
         "output": 0.35
       },
       "context_window": 32000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
@@ -114,7 +138,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32768,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "devstral-2-123b-instruct-2512",
@@ -124,7 +150,10 @@
         "output": 2
       },
       "context_window": 256000,
-      "default_max_tokens": 16384
+      "default_max_tokens": 16384,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "gemma-3-27b-it",
@@ -135,7 +164,9 @@
       },
       "context_window": 40000,
       "default_max_tokens": 8192,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }
