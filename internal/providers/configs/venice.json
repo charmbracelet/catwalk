@@ -5,7 +5,7 @@
   "api_endpoint": "https://api.venice.ai/api/v1",
   "type": "openai-compat",
   "default_large_model_id": "claude-fable-5",
-  "default_small_model_id": "e2ee-glm-5-3-flash",
+  "default_small_model_id": "deepseek-v4-flash",
   "models": [
     {
       "id": "aion-labs-aion-3-0",
@@ -550,8 +550,8 @@
     {
       "id": "e2ee-glm-5-3-flash",
       "name": "GLM 5.3 Flash",
-      "cost_per_1m_in": 0.08,
-      "cost_per_1m_out": 0.27,
+      "cost_per_1m_in": 0.16,
+      "cost_per_1m_out": 0.54,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
