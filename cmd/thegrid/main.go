@@ -46,7 +46,7 @@ type Model struct {
 	Attachments         bool         `json:"attachments"`
 	ContextLength       int64        `json:"context_length"`
 	MaxCompletionTokens int64        `json:"max_completion_tokens"`
-	Pricing             Pricing      `json:"pricing"`
+	Pricing             *Pricing     `json:"pricing"`
 	Reasoning           *Reasoning   `json:"reasoning"`
 	ToolCall            bool         `json:"tool_call"`
 }
@@ -104,6 +104,8 @@ func main() {
 		log.Fatal("Error fetching The Grid models:", err)
 	}
 
+	var unpriced int
+
 	for _, model := range modelsResp.Data {
 		// Skip non-text instruments.
 		if !slices.Contains(model.Architecture.InputModalities, "text") ||
@@ -116,14 +118,20 @@ func main() {
 			continue
 		}
 
-		if model.Pricing.USDPer1MTokens <= 0 {
-			fmt.Printf("Skipping instrument %s: no price\n", model.ID)
-			continue
+		// The Grid is market priced and its catalog serves `pricing: null` when
+		// the rate cache is cold, so an absent price is a normal transient state
+		// rather than a reason to drop the instrument. Emit it with a zero cost,
+		// which is what catwalk already carries for unpriced models elsewhere.
+		// Dropping them instead would regenerate this provider with no models at
+		// all the next time the catalog is unpriced.
+		var cost float64
+		if model.Pricing != nil && model.Pricing.USDPer1MTokens > 0 {
+			// A single market rate covers both directions, and The Grid does not
+			// quote a separate cached rate, so all four costs carry it.
+			cost = roundCost(model.Pricing.USDPer1MTokens)
+		} else {
+			unpriced++
 		}
-
-		// A single market rate covers both directions, and The Grid does not
-		// quote a separate cached rate, so all four costs carry it.
-		cost := roundCost(model.Pricing.USDPer1MTokens)
 
 		// DefaultMaxTokens: use half of max_completion_tokens when available,
 		// capped at 15% of context_length; otherwise 10% of context_length.
@@ -182,4 +190,7 @@ func main() {
 	}
 
 	fmt.Printf("Generated thegrid.json with %d instruments\n", len(theGridProvider.Models))
+	if unpriced > 0 {
+		fmt.Printf("%d of them carried no published price and were written with a zero cost\n", unpriced)
+	}
 }
