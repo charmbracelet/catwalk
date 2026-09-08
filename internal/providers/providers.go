@@ -51,6 +51,9 @@ var coralBricksConfig []byte
 //go:embed configs/copilot.json
 var copilotConfig []byte
 
+//go:embed configs/corti.json
+var cortiConfig []byte
+
 //go:embed configs/cortecs.json
 var cortecsConfig []byte
 
@@ -162,6 +165,7 @@ var providerRegistry = []ProviderFunc{
 	chutesProvider,
 	coralBricksProvider,
 	copilotProvider,
+	cortiProvider,
 	cortecsProvider,
 	deepSeekProvider,
 	fireworksProvider,
@@ -254,6 +258,10 @@ func coralBricksProvider() catwalk.Provider {
 
 func copilotProvider() catwalk.Provider {
 	return loadProviderFromConfig(copilotConfig)
+}
+
+func cortiProvider() catwalk.Provider {
+	return loadProviderFromConfig(cortiConfig)
 }
 
 func cortecsProvider() catwalk.Provider {
