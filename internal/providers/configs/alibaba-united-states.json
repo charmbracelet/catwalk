@@ -68,6 +68,14 @@
       "context_window": 1000000,
       "default_max_tokens": 65536,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     }
   ]
