@@ -1,0 +1,85 @@
+{
+  "name": "CheapestInference",
+  "id": "cheapestinference",
+  "api_key": "$CHEAPESTINFERENCE_API_KEY",
+  "api_endpoint": "https://api.cheapestinference.com/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "kimi-k2.7",
+  "default_small_model_id": "deepseek-v4-flash",
+  "models": [
+    {
+      "id": "kimi-k2.7",
+      "name": "Kimi K2.7",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi K2.6",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "glm-5.2",
+      "name": "GLM 5.2",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 202752,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": ["high", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "mimo-v2.5",
+      "name": "MiMo v2.5",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": true
+    }
+  ]
+}
