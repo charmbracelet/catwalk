@@ -59,6 +59,7 @@ const (
 	InferenceProviderFireworks        InferenceProvider = "fireworks"
 	InferenceProviderBaseten          InferenceProvider = "baseten"
 	InferenceProviderMoonshot         InferenceProvider = "moonshot"
+	InferenceProviderUmans            InferenceProvider = "umans"
 	InferenceProviderAtlasCloud       InferenceProvider = "atlascloud"
 )
 
@@ -139,7 +140,11 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderFireworks,
 		InferenceProviderBaseten,
 		InferenceProviderMoonshot,
+<<<<<<< HEAD
+		InferenceProviderUmans,
+=======
 		InferenceProviderAtlasCloud,
+>>>>>>> upstream/main
 	}
 }
 
