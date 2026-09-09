@@ -25,6 +25,7 @@ const (
 	InferenceProviderAnthropic        InferenceProvider = "anthropic"
 	InferenceProviderSynthetic        InferenceProvider = "synthetic"
 	InferenceProviderGemini           InferenceProvider = "gemini"
+	InferenceProviderGreenPT          InferenceProvider = "greenpt"
 	InferenceProviderAzure            InferenceProvider = "azure"
 	InferenceProviderBedrock          InferenceProvider = "bedrock"
 	InferenceProviderBedrockEurope    InferenceProvider = "bedrock-europe"
@@ -109,6 +110,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderSynthetic,
 		InferenceProviderAnthropic,
 		InferenceProviderGemini,
+		InferenceProviderGreenPT,
 		InferenceProviderAzure,
 		InferenceProviderBedrock,
 		InferenceProviderBedrockEurope,
