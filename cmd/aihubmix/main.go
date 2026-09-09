@@ -104,7 +104,7 @@ func parseFloat(p *float64) float64 {
 	if p == nil {
 		return 0
 	}
-	return roundCost(*p)
+	return *p
 }
 
 func calculateMaxTokens(contextLength, maxOutput, factor int64) int64 {
@@ -155,12 +155,14 @@ func main() {
 		maxTokens := calculateMaxTokens(model.ContextLength, model.MaxOutput, maxTokensFactor)
 
 		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
-			ID:                     model.ModelID,
-			Name:                   model.ModelName,
-			CostPer1MIn:            parseFloat(model.Pricing.Input),
-			CostPer1MOut:           parseFloat(model.Pricing.Output),
-			CostPer1MInCached:      parseFloat(model.Pricing.CacheWrite),
-			CostPer1MOutCached:     parseFloat(model.Pricing.CacheRead),
+			ID:   model.ModelID,
+			Name: model.ModelName,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(parseFloat(model.Pricing.Input)),
+				Output:      roundCost(parseFloat(model.Pricing.Output)),
+				CacheCreate: roundCost(parseFloat(model.Pricing.CacheWrite)),
+				CacheHit:    roundCost(parseFloat(model.Pricing.CacheRead)),
+			},
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,
 			CanReason:              canReason,

@@ -90,12 +90,13 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.DisplayName,
-			CostPer1MIn:            model.Pricing.InputPerMillion,
-			CostPer1MOut:           model.Pricing.OutputPerMillion,
-			CostPer1MInCached:      model.Pricing.CacheReadPerMillion,
-			CostPer1MOutCached:     0,
+			ID:   model.ID,
+			Name: model.DisplayName,
+			Pricing: catwalk.Pricing{
+				Input:    model.Pricing.InputPerMillion,
+				Output:   model.Pricing.OutputPerMillion,
+				CacheHit: model.Pricing.CacheReadPerMillion,
+			},
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       model.MaxOutput,
 			CanReason:              model.Reasoning,

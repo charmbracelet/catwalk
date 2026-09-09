@@ -95,9 +95,9 @@ func main() {
 	}
 
 	for _, goModel := range goModels {
-		costPer1MIn := math.Round(goModel.Cost.Input*100) / 100
-		costPer1MOut := math.Round(goModel.Cost.Output*100) / 100
-		costPer1MInCached := math.Round(goModel.Cost.CacheRead*100) / 100
+		costPerTokenIn := math.Round(goModel.Cost.Input*100) / 100
+		costPerTokenOut := math.Round(goModel.Cost.Output*100) / 100
+		costCacheHit := math.Round(goModel.Cost.CacheRead*100) / 100
 
 		var reasoningLevels []string
 		var defaultReasoningEffort string
@@ -125,11 +125,13 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     goModel.ID,
-			Name:                   goModel.Name,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      costPer1MInCached,
+			ID:   goModel.ID,
+			Name: goModel.Name,
+			Pricing: catwalk.Pricing{
+				Input:    costPerTokenIn,
+				Output:   costPerTokenOut,
+				CacheHit: costCacheHit,
+			},
 			ContextWindow:          goModel.Limit.Context,
 			DefaultMaxTokens:       goModel.Limit.Output,
 			SupportsImages:         goModel.Attachment,

@@ -161,9 +161,9 @@ func main() {
 		}
 
 		priceMultiplier := 1 - model.DiscountToUser
-		costPer1MIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
-		costPer1MOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
-		costPer1MCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
+		costPerTokenIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
+		costPerTokenOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
+		costPerTokenCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
 
 		supportsImages := slices.Contains(model.InputModalities, "image")
 
@@ -183,14 +183,16 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                 model.ID,
-			Name:               model.Name,
-			CostPer1MIn:        costPer1MIn,
-			CostPer1MOut:       costPer1MOut,
-			CostPer1MOutCached: costPer1MCacheRead,
-			ContextWindow:      model.ContextLength,
-			DefaultMaxTokens:   defaultMaxTokens,
-			SupportsImages:     supportsImages,
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:    costPerTokenIn,
+				Output:   costPerTokenOut,
+				CacheHit: costPerTokenCacheRead,
+			},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: defaultMaxTokens,
+			SupportsImages:   supportsImages,
 		}
 
 		atlasCloudProvider.Models = append(atlasCloudProvider.Models, m)
