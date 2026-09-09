@@ -1,0 +1,119 @@
+{
+  "name": "The Grid",
+  "id": "thegrid",
+  "api_key": "$THEGRID_API_KEY",
+  "api_endpoint": "https://api.thegrid.ai/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "agent-max",
+  "default_small_model_id": "text-standard",
+  "models": [
+    {
+      "id": "agent-max",
+      "name": "Agent Max",
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "cost_per_1m_in": 1.5885,
+      "cost_per_1m_out": 1.5885,
+      "cost_per_1m_in_cached": 1.5885,
+      "cost_per_1m_out_cached": 1.5885,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "agent-prime",
+      "name": "Agent Prime",
+      "context_window": 196608,
+      "default_max_tokens": 30000,
+      "cost_per_1m_in": 0.1422,
+      "cost_per_1m_out": 0.1422,
+      "cost_per_1m_in_cached": 0.1422,
+      "cost_per_1m_out_cached": 0.1422,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "agent-standard",
+      "name": "Agent Standard",
+      "context_window": 128000,
+      "default_max_tokens": 16000,
+      "cost_per_1m_in": 0.02,
+      "cost_per_1m_out": 0.02,
+      "cost_per_1m_in_cached": 0.02,
+      "cost_per_1m_out_cached": 0.02,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "code-max",
+      "name": "Code Max",
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "cost_per_1m_in": 1.7553,
+      "cost_per_1m_out": 1.7553,
+      "cost_per_1m_in_cached": 1.7553,
+      "cost_per_1m_out_cached": 1.7553,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "code-prime",
+      "name": "Code Prime",
+      "context_window": 196608,
+      "default_max_tokens": 30000,
+      "cost_per_1m_in": 0.1493,
+      "cost_per_1m_out": 0.1493,
+      "cost_per_1m_in_cached": 0.1493,
+      "cost_per_1m_out_cached": 0.1493,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "code-standard",
+      "name": "Code Standard",
+      "context_window": 128000,
+      "default_max_tokens": 16000,
+      "cost_per_1m_in": 0.0288,
+      "cost_per_1m_out": 0.0288,
+      "cost_per_1m_in_cached": 0.0288,
+      "cost_per_1m_out_cached": 0.0288,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "text-max",
+      "name": "Text Max",
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "cost_per_1m_in": 1.68,
+      "cost_per_1m_out": 1.68,
+      "cost_per_1m_in_cached": 1.68,
+      "cost_per_1m_out_cached": 1.68,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "text-prime",
+      "name": "Text Prime",
+      "context_window": 196608,
+      "default_max_tokens": 30000,
+      "cost_per_1m_in": 0.1017,
+      "cost_per_1m_out": 0.1017,
+      "cost_per_1m_in_cached": 0.1017,
+      "cost_per_1m_out_cached": 0.1017,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "text-standard",
+      "name": "Text Standard",
+      "context_window": 128000,
+      "default_max_tokens": 16000,
+      "cost_per_1m_in": 0.03,
+      "cost_per_1m_out": 0.03,
+      "cost_per_1m_in_cached": 0.03,
+      "cost_per_1m_out_cached": 0.03,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}
