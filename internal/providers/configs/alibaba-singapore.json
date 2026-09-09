@@ -17,6 +17,14 @@
       "context_window": 256000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -29,6 +37,14 @@
       "context_window": 256000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -41,6 +57,14 @@
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -53,6 +77,14 @@
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -65,6 +97,14 @@
       "context_window": 256000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -77,6 +117,14 @@
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -89,6 +137,14 @@
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -101,6 +157,14 @@
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
@@ -113,6 +177,14 @@
       "context_window": 1000000,
       "default_max_tokens": 65536,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -125,6 +197,14 @@
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -137,6 +217,14 @@
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -148,7 +236,14 @@
       "cost_per_1m_out_cached": 0.25,
       "context_window": 1000000,
       "default_max_tokens": 128000,
-      "can_reason": false,
+      "can_reason": true,
+      "reasoning_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": false
     },
     {
