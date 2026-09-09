@@ -87,7 +87,7 @@ func roundCost(v float64) float64 {
 	return math.Round(v*1e5) / 1e5
 }
 
-func priceToDollarsPerMillion(centsPerHundredMillion int64) float64 {
+func priceToDollarsPerToken(centsPerHundredMillion int64) float64 {
 	return roundCost(float64(centsPerHundredMillion) / 10_000)
 }
 
@@ -171,12 +171,13 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     id,
-			Name:                   prettyName(id),
-			CostPer1MIn:            priceToDollarsPerMillion(model.PromptTextTokenPrice),
-			CostPer1MOut:           priceToDollarsPerMillion(model.CompletionTextTokenPrice),
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     priceToDollarsPerMillion(model.CachedPromptTextTokenPrc),
+			ID:   id,
+			Name: prettyName(id),
+			Pricing: catwalk.Pricing{
+				Input:    priceToDollarsPerToken(model.PromptTextTokenPrice),
+				Output:   priceToDollarsPerToken(model.CompletionTextTokenPrice),
+				CacheHit: priceToDollarsPerToken(model.CachedPromptTextTokenPrc),
+			},
 			ContextWindow:          ctxWindow,
 			DefaultMaxTokens:       defaultMaxTokens,
 			CanReason:              canReason,
