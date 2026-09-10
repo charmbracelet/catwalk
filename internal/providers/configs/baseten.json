@@ -126,7 +126,7 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "zai-org/GLM-5.3-Fast",

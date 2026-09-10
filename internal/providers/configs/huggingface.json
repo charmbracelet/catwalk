@@ -34,8 +34,8 @@
     {
       "id": "Qwen/Qwen3.8-27B:cerebras",
       "name": "Qwen/Qwen3.8-27B (cerebras)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.99,
+      "cost_per_1m_out": 1.49,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 65536,
