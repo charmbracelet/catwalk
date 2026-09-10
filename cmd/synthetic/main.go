@@ -211,7 +211,7 @@ func main() {
 			CanReason:              canReason,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         supportsImages,
+			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		// Set max tokens based on max_output_length if available, but cap at

@@ -93,6 +93,13 @@ type Pricing struct {
 	CacheHit    float64 `json:"cache_hit,omitempty"`
 }
 
+// Capabilities describes the capabilities of a model. Each capability is
+// always serialized, even when false, so consumers can distinguish between
+// "unknown" (field absent) and "explicitly unsupported".
+type Capabilities struct {
+	Vision bool `json:"vision"`
+}
+
 // Model represents an AI model configuration.
 type Model struct {
 	ID                     string       `json:"id"`
@@ -103,7 +110,7 @@ type Model struct {
 	CanReason              bool         `json:"can_reason"`
 	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
-	SupportsImages         bool         `json:"supports_attachments"`
+	Capabilities           Capabilities `json:"capabilities"`
 	Options                ModelOptions `json:"options,omitzero"`
 }
 

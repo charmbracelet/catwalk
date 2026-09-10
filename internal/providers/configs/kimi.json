@@ -17,7 +17,9 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "k3-256k",
@@ -29,7 +31,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-for-coding",
@@ -41,7 +45,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-for-coding-highspeed",
@@ -53,7 +59,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }

@@ -17,7 +17,9 @@
       "context_window": 512000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3.8-2.4T-A95B:fireworks-ai",
@@ -29,7 +31,9 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731:fireworks-ai",
@@ -41,7 +45,9 @@
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813:fireworks-ai",
@@ -53,7 +59,9 @@
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "google/gemma-4-31B-it:cerebras",
@@ -65,7 +73,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meta-models/Muse-Glimmer-30B:fireworks-ai",
@@ -77,7 +87,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.6:fireworks-ai",
@@ -89,7 +101,9 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.7-Code:fireworks-ai",
@@ -101,7 +115,9 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K3:fireworks-ai",
@@ -113,7 +129,9 @@
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4:fireworks-ai",
@@ -125,7 +143,9 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:fireworks-ai",
@@ -137,7 +157,9 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-120b:cerebras",
@@ -149,7 +171,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-120b:fireworks-ai",
@@ -161,7 +185,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-120b:groq",
@@ -173,7 +199,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-20b:groq",
@@ -185,7 +213,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-safeguard-20b:groq",
@@ -197,7 +227,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "thinkingmachines/Inkling:fireworks-ai",
@@ -209,7 +241,9 @@
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "zai-org/GLM-5.2:fireworks-ai",
@@ -221,7 +255,9 @@
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "zai-org/GLM-5.3:fireworks-ai",
@@ -233,7 +269,9 @@
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "zai-org/GLM-5.3-Flash:fireworks-ai",
@@ -245,7 +283,9 @@
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     }
   ],
   "default_headers": {

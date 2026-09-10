@@ -23,7 +23,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V3.2-fast",
@@ -41,7 +43,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "zai-org/GLM-5",
@@ -59,7 +63,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "NousResearch/Hermes-4-405B",
@@ -77,7 +83,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "NousResearch/Hermes-4-70B",
@@ -95,7 +103,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "PrimeIntellect/INTELLECT-3",
@@ -113,7 +123,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.5",
@@ -131,7 +143,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.5-fast",
@@ -149,7 +163,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
@@ -161,7 +177,9 @@
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
@@ -173,7 +191,9 @@
       "context_window": 131072,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.5",
@@ -191,7 +211,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.5-fast",
@@ -209,7 +231,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
@@ -227,7 +251,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b",
@@ -245,7 +271,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
@@ -257,7 +285,9 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3-235B-A22B-Thinking-2507-fast",
@@ -275,7 +305,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
@@ -287,7 +319,9 @@
       "context_window": 262144,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3-32B",
@@ -305,7 +339,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
@@ -323,7 +359,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Thinking-fast",
@@ -341,7 +379,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3.5-397B-A17B",
@@ -359,7 +399,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "Qwen/Qwen3.5-397B-A17B-fast",
@@ -377,7 +419,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-120b",
@@ -395,7 +439,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-120b-fast",
@@ -413,7 +459,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     }
   ]
 }

@@ -183,7 +183,7 @@ func main() {
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoningLevel,
-			SupportsImages:         supportsImages,
+			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		provider.Models = append(provider.Models, m)

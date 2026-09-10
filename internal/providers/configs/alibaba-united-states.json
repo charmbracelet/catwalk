@@ -23,7 +23,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-v4-flash-us",
@@ -41,7 +43,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-5.2",
@@ -59,7 +63,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen3.8-max",
@@ -72,7 +78,9 @@
       "context_window": 1000000,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }

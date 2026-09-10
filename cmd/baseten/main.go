@@ -183,7 +183,7 @@ func main() {
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         hasModality(model, "image"),
+			Capabilities:           catwalk.Capabilities{Vision: hasModality(model, "image")},
 		}
 
 		basetenProvider.Models = append(basetenProvider.Models, m)
