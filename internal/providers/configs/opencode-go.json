@@ -10,9 +10,9 @@
     {
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
-      "cost_per_1m_in": 0.22,
-      "cost_per_1m_out": 0.66,
-      "cost_per_1m_in_cached": 0.01,
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -28,9 +28,9 @@
     {
       "id": "deepseek-v4-flash-vision-exp",
       "name": "DeepSeek V4 Flash Vision Exp",
-      "cost_per_1m_in": 0.22,
-      "cost_per_1m_out": 0.66,
-      "cost_per_1m_in_cached": 0.01,
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -60,6 +60,24 @@
       ],
       "default_reasoning_effort": "high",
       "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
     },
     {
       "id": "glm-5",
