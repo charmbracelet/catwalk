@@ -16,7 +16,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "claude-fable-5.1",
@@ -28,7 +30,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "claude-haiku-4.5",
@@ -40,7 +44,9 @@
       "context_window": 200000,
       "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "claude-opus-4.7",
@@ -52,7 +58,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "claude-opus-4.8",
@@ -64,7 +72,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "claude-opus-4.8-fast",
@@ -76,7 +86,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "claude-opus-5",
@@ -88,7 +100,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "claude-sonnet-5",
@@ -100,7 +114,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.5-flash",
@@ -112,7 +128,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.6-flash",
@@ -124,7 +142,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.7-flash",
@@ -136,7 +156,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.8-flash",
@@ -160,7 +182,9 @@
       "context_window": 16384,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "gpt-4",
@@ -172,7 +196,9 @@
       "context_window": 32768,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "gpt-4-0125-preview",
@@ -184,7 +210,9 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "gpt-4.1",
@@ -196,7 +224,9 @@
       "context_window": 128000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-4o",
@@ -208,7 +238,9 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-4o-mini",
@@ -220,7 +252,9 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "gpt-5-mini",
@@ -232,7 +266,9 @@
       "context_window": 264000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.3-codex",
@@ -244,7 +280,9 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.4",
@@ -256,7 +294,9 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.4-mini",
@@ -268,7 +308,9 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.5",
@@ -280,7 +322,9 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.6-luna",
@@ -292,7 +336,9 @@
       "context_window": 328000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.6-sol",
@@ -304,7 +350,9 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.6-terra",
@@ -316,7 +364,9 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-6-astra",
@@ -340,7 +390,9 @@
       "context_window": 328000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "grok-4.6",
@@ -352,7 +404,9 @@
       "context_window": 328000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-k2.7-code",
@@ -364,7 +418,9 @@
       "context_window": 256000,
       "default_max_tokens": 32000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-k3",
@@ -376,7 +432,9 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }

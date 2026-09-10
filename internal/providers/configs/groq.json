@@ -24,7 +24,10 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "default_max_tokens": 10000
+      "default_max_tokens": 10000,
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-32b",
@@ -34,7 +37,10 @@
         "output": 0.59
       },
       "context_window": 131072,
-      "default_max_tokens": 10000
+      "default_max_tokens": 10000,
+      "capabilities": {
+        "vision": false
+      }
     }
   ]
 }

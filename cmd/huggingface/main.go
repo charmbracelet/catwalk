@@ -173,8 +173,8 @@ func main() {
 				},
 				ContextWindow:    contextLength,
 				DefaultMaxTokens: defaultMaxTokens,
-				CanReason:        false, // Not provided by HF Router
-				SupportsImages:   false, // Not provided by HF Router
+				CanReason:        false,                               // Not provided by HF Router
+				Capabilities:     catwalk.Capabilities{Vision: false}, // Not provided by HF Router
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)

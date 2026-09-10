@@ -134,7 +134,7 @@ func main() {
 			},
 			ContextWindow:          goModel.Limit.Context,
 			DefaultMaxTokens:       goModel.Limit.Output,
-			SupportsImages:         goModel.Attachment,
+			Capabilities:           catwalk.Capabilities{Vision: goModel.Attachment},
 			CanReason:              goModel.Reasoning,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoningEffort,

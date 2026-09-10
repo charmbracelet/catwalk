@@ -104,7 +104,7 @@ func main() {
 			CanReason:              isReasoningModel(model.ID),
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         model.SupportsImagesInput,
+			Capabilities:           catwalk.Capabilities{Vision: model.SupportsImagesInput},
 		}
 
 		provider.Models = append(provider.Models, m)

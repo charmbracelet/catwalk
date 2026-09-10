@@ -18,7 +18,9 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-k2.7-code",
@@ -31,7 +33,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-k2.7-code-highspeed",
@@ -44,7 +48,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-k2.6",
@@ -57,7 +63,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-k2.5",
@@ -70,7 +78,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshot-v1-8k",
@@ -82,7 +92,9 @@
       "context_window": 8192,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshot-v1-32k",
@@ -94,7 +106,9 @@
       "context_window": 32768,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshot-v1-128k",
@@ -106,7 +120,9 @@
       "context_window": 131072,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshot-v1-8k-vision-preview",
@@ -118,7 +134,9 @@
       "context_window": 8192,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshot-v1-32k-vision-preview",
@@ -130,7 +148,9 @@
       "context_window": 32768,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshot-v1-128k-vision-preview",
@@ -142,7 +162,9 @@
       "context_window": 131072,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }

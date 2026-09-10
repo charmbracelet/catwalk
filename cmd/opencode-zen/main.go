@@ -202,7 +202,7 @@ func main() {
 			},
 			ContextWindow:          contextWindow,
 			DefaultMaxTokens:       defaultMaxTokens,
-			SupportsImages:         supportsImages,
+			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoningEffort,

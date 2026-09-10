@@ -8,379 +8,19 @@
   "default_small_model_id": "qwen3.8-flash",
   "models": [
     {
-      "id": "qwen3.5-35b-a3b",
-      "name": "Qwen3.5-35B-A3B",
+      "id": "deepseek-v3.2",
+      "name": "DeepSeek-V3.2",
       "pricing": {
-        "input": 0.248,
-        "output": 1.485
+        "input": 0.57,
+        "output": 1.71,
+        "cache_hit": 0.114
       },
-      "context_window": 256000,
+      "context_window": 128000,
       "default_max_tokens": 64000,
       "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.5-27b",
-      "name": "Qwen3.5-27B",
-      "pricing": {
-        "input": 0.6,
-        "output": 3.6
-      },
-      "context_window": 256000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.6-flash",
-      "name": "Qwen3.6-Flash",
-      "pricing": {
-        "input": 1,
-        "output": 4,
-        "cache_create": 1.25,
-        "cache_hit": 0.1
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.6-plus",
-      "name": "Qwen3.6-Plus",
-      "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_create": 2.5,
-        "cache_hit": 0.2
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.6-max-preview",
-      "name": "Qwen3.6-Max",
-      "pricing": {
-        "input": 2,
-        "output": 12,
-        "cache_create": 2.5,
-        "cache_hit": 0.2
-      },
-      "context_window": 256000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "qwen3.7-flash",
-      "name": "Qwen3.7-Flash",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.8,
-        "cache_hit": 0.04
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.7-plus",
-      "name": "Qwen3.7-Plus",
-      "pricing": {
-        "input": 1.2,
-        "output": 4.8,
-        "cache_hit": 0.24
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.7-max",
-      "name": "Qwen3.7-Max",
-      "pricing": {
-        "input": 2.5,
-        "output": 7.5,
-        "cache_hit": 0.5
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "qwen3.8-max",
-      "name": "Qwen3.8-Max",
-      "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_hit": 0.25
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.8-flash",
-      "name": "Qwen3.8-Flash",
-      "pricing": {
-        "input": 0.15,
-        "output": 0.47,
-        "cache_hit": 0.016
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.8-27b",
-      "name": "Qwen3.8-27B",
-      "pricing": {
-        "input": 0.5,
-        "output": 3,
-        "cache_hit": 0.1
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3.8-2.4t-a95b",
-      "name": "Qwen3.8-2.4T-A95B",
-      "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_hit": 0.25
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "glm-5.3",
-      "name": "GLM 5.3",
-      "cost_per_1m_in": 1.4,
-      "cost_per_1m_out": 4.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.28,
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
-    },
-    {
-      "id": "glm-5.2",
-      "name": "GLM 5.2",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.28
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
-    },
-    {
-      "id": "glm-5.1",
-      "name": "GLM 5.1",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.26
-      },
-      "context_window": 200000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
-    },
-    {
-      "id": "kimi-k3",
-      "name": "Kimi K3",
-      "pricing": {
-        "input": 3,
-        "output": 15,
-        "cache_hit": 0.3
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 16000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "max",
-      "supports_attachments": true
-    },
-    {
-      "id": "kimi-k2.7-code",
-      "name": "Kimi K2.7 Code",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_hit": 0.19
-      },
-      "context_window": 256000,
-      "default_max_tokens": 16000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "deepseek-v4-pro",
-      "name": "DeepSeek-V4-Pro",
-      "pricing": {
-        "input": 2.4,
-        "output": 4.8,
-        "cache_hit": 0.2
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
-    },
-    {
-      "id": "deepseek-v4-pro-0813",
-      "name": "DeepSeek-V4-Pro-0813",
-      "pricing": {
-        "input": 1.32,
-        "output": 3.96,
-        "cache_hit": 0.132
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-v4-flash",
@@ -398,7 +38,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-v4-flash-0731",
@@ -417,15 +59,38 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
-      "id": "deepseek-v4.1-flash",
-      "name": "DeepSeek-V4.1-Flash",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.03,
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek-V4-Pro",
+      "pricing": {
+        "input": 2.4,
+        "output": 4.8,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "high",
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "deepseek-v4-pro-0813",
+      "name": "DeepSeek-V4-Pro-0813",
+      "pricing": {
+        "input": 1.32,
+        "output": 3.96,
+        "cache_hit": 0.132
+      },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -435,20 +100,403 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": false
+      }
     },
     {
-      "id": "deepseek-v3.2",
-      "name": "DeepSeek-V3.2",
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek-V4.1-Flash",
       "pricing": {
-        "input": 0.57,
-        "output": 1.71,
-        "cache_hit": 0.114
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.03
       },
-      "context_window": 128000,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "glm-5.1",
+      "name": "GLM 5.1",
+      "pricing": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_hit": 0.26
+      },
+      "context_window": 200000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "high",
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "glm-5.2",
+      "name": "GLM 5.2",
+      "pricing": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_hit": 0.28
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "high",
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM 5.3",
+      "pricing": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_hit": 0.28
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "pricing": {
+        "input": 0.95,
+        "output": 4,
+        "cache_hit": 0.19
+      },
+      "context_window": 256000,
+      "default_max_tokens": 16000,
+      "can_reason": false,
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "pricing": {
+        "input": 3,
+        "output": 15,
+        "cache_hit": 0.3
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 16000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "max",
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "qwen3.5-27b",
+      "name": "Qwen3.5-27B",
+      "pricing": {
+        "input": 0.6,
+        "output": 3.6
+      },
+      "context_window": 256000,
       "default_max_tokens": 64000,
       "can_reason": true,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.5-35b-a3b",
+      "name": "Qwen3.5-35B-A3B",
+      "pricing": {
+        "input": 0.248,
+        "output": 1.485
+      },
+      "context_window": 256000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.6-flash",
+      "name": "Qwen3.6-Flash",
+      "pricing": {
+        "input": 1,
+        "output": 4,
+        "cache_create": 1.25,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.6-max-preview",
+      "name": "Qwen3.6-Max",
+      "pricing": {
+        "input": 2,
+        "output": 12,
+        "cache_create": 2.5,
+        "cache_hit": 0.2
+      },
+      "context_window": 256000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": false
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.6-plus",
+      "name": "Qwen3.6-Plus",
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_create": 2.5,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.7-flash",
+      "name": "Qwen3.7-Flash",
+      "pricing": {
+        "input": 0.2,
+        "output": 0.8,
+        "cache_hit": 0.04
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.7-max",
+      "name": "Qwen3.7-Max",
+      "pricing": {
+        "input": 2.5,
+        "output": 7.5,
+        "cache_hit": 0.5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": false
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.7-plus",
+      "name": "Qwen3.7-Plus",
+      "pricing": {
+        "input": 1.2,
+        "output": 4.8,
+        "cache_hit": 0.24
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.8-2.4t-a95b",
+      "name": "Qwen3.8-2.4T-A95B",
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.25
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": false
+      },
+      "reasoning_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.8-27b",
+      "name": "Qwen3.8-27B",
+      "pricing": {
+        "input": 0.5,
+        "output": 3,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.8-flash",
+      "name": "Qwen3.8-Flash",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache_hit": 0.016
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8-Max",
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.25
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium"
     }
   ]
 }

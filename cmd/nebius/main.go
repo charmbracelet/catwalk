@@ -146,7 +146,7 @@ func main() {
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         supportsImages,
+			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		nebiusProvider.Models = append(nebiusProvider.Models, m)

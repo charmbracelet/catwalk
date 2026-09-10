@@ -181,7 +181,7 @@ func main() {
 			CanReason:              meta.Capabilities.Reasoning,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         meta.Capabilities.Vision,
+			Capabilities:           catwalk.Capabilities{Vision: meta.Capabilities.Vision},
 		}
 
 		neuralwattProvider.Models = append(neuralwattProvider.Models, m)

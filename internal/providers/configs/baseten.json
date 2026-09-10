@@ -25,7 +25,9 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro",
@@ -43,7 +45,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
@@ -63,15 +67,18 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.03,
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.03
+      },
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -81,7 +88,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "zai-org/GLM-4.7",
@@ -94,7 +103,9 @@
       "context_window": 200000,
       "default_max_tokens": 200000,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "zai-org/GLM-5.2",
@@ -113,7 +124,9 @@
         "max"
       ],
       "default_reasoning_effort": "max",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "zai-org/GLM-5.2-Fast",
@@ -132,7 +145,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "zai-org/GLM-5.3",
@@ -151,15 +166,18 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "zai-org/GLM-5.3-Fast",
       "name": "GLM 5.3 Fast",
-      "cost_per_1m_in": 2.1,
-      "cost_per_1m_out": 6.6,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.21,
+      "pricing": {
+        "input": 2.1,
+        "output": 6.6,
+        "cache_hit": 0.21
+      },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "can_reason": true,
@@ -169,7 +187,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
@@ -188,7 +208,9 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "thinkingmachines/inkling",
@@ -210,7 +232,9 @@
         "xhigh"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "thinkingmachines/inkling-small",
@@ -229,7 +253,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.6",
@@ -248,7 +274,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.7-Code",
@@ -261,7 +289,9 @@
       "context_window": 262000,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshotai/Kimi-K3",
@@ -280,7 +310,9 @@
         "max"
       ],
       "default_reasoning_effort": "max",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
@@ -299,7 +331,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-120b",
@@ -322,7 +356,9 @@
         "max"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     }
   ]
 }

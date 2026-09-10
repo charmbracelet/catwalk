@@ -182,7 +182,7 @@ func main() {
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         supportsImages,
+			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		vercelProvider.Models = append(vercelProvider.Models, m)

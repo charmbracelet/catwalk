@@ -18,7 +18,9 @@
       "context_window": 1048576,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-2.5-pro",
@@ -31,7 +33,9 @@
       "context_window": 1048576,
       "default_max_tokens": 50000,
       "can_reason": true,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3-flash-preview",
@@ -51,7 +55,9 @@
         "high"
       ],
       "default_reasoning_effort": "minimal",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3-pro-preview",
@@ -69,7 +75,9 @@
         "high"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.1-flash-lite",
@@ -90,7 +98,9 @@
         "high"
       ],
       "default_reasoning_effort": "minimal",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.1-pro-preview-customtools",
@@ -109,7 +119,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.5-flash",
@@ -129,7 +141,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.5-flash-lite",
@@ -150,7 +164,9 @@
         "high"
       ],
       "default_reasoning_effort": "minimal",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.6-flash",
@@ -170,7 +186,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.7-flash",
@@ -189,7 +207,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gemini-3.8-flash",
@@ -208,7 +228,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }

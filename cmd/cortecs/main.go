@@ -143,7 +143,7 @@ func main() {
 			CanReason:              canReason,
 			DefaultReasoningEffort: defaultReasoning,
 			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         model.hasTag("Image"),
+			Capabilities:           catwalk.Capabilities{Vision: model.hasTag("Image")},
 		}
 		models = append(models, model)
 	}

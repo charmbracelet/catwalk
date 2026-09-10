@@ -24,7 +24,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "aion-labs/aion-3.0",
@@ -43,7 +45,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "aion-labs/aion-3.0-mini",
@@ -62,7 +66,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "amazon/nova-2-lite-v1",
@@ -80,7 +86,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "amazon/nova-lite-v1",
@@ -92,7 +100,9 @@
       "context_window": 300000,
       "default_max_tokens": 2560,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "amazon/nova-micro-v1",
@@ -104,7 +114,9 @@
       "context_window": 128000,
       "default_max_tokens": 2560,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "amazon/nova-premier-v1",
@@ -117,7 +129,9 @@
       "context_window": 1000000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "amazon/nova-pro-v1",
@@ -129,7 +143,9 @@
       "context_window": 300000,
       "default_max_tokens": 2560,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-3-haiku",
@@ -143,7 +159,9 @@
       "context_window": 200000,
       "default_max_tokens": 2048,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-fable-5",
@@ -163,7 +181,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-fable-5.1",
@@ -183,7 +203,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-haiku-4.5",
@@ -203,7 +225,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-opus-4",
@@ -223,7 +247,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-opus-4.1",
@@ -243,7 +269,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-opus-4.5",
@@ -263,7 +291,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-opus-4.6",
@@ -283,7 +313,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-opus-4.7",
@@ -303,7 +335,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-opus-4.8",
@@ -323,7 +357,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-sonnet-4",
@@ -343,7 +379,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-sonnet-4.5",
@@ -363,7 +401,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
@@ -383,7 +423,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-sonnet-5",
@@ -403,7 +445,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "arcee-ai/trinity-large-thinking",
@@ -422,7 +466,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "bytedance-seed/seed-1.6",
@@ -440,7 +486,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "bytedance-seed/seed-1.6-flash",
@@ -458,7 +506,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "bytedance-seed/seed-2-1-turbo",
@@ -476,7 +526,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "bytedance-seed/seed-2.0-code",
@@ -494,7 +546,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "bytedance-seed/seed-2.0-lite",
@@ -512,7 +566,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "bytedance-seed/seed-2.0-mini",
@@ -530,7 +586,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "anthropic/claude-opus-5",
@@ -550,7 +608,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "cohere/command-r-08-2024",
@@ -562,7 +622,9 @@
       "context_window": 128000,
       "default_max_tokens": 2000,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "cohere/command-r-plus-08-2024",
@@ -574,7 +636,9 @@
       "context_window": 128000,
       "default_max_tokens": 2000,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "cohere/north-mini-code:free",
@@ -592,7 +656,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-chat",
@@ -604,7 +670,9 @@
       "context_window": 163840,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-chat-v3-0324",
@@ -616,7 +684,9 @@
       "context_window": 163840,
       "default_max_tokens": 73728,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-chat-v3.1",
@@ -635,7 +705,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v3.1-terminus",
@@ -653,7 +725,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v3.2",
@@ -671,7 +745,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v3.2-exp",
@@ -689,7 +765,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4-flash",
@@ -708,7 +786,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4-flash-0731",
@@ -727,7 +807,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -746,7 +828,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "deepseek/deepseek-v4-pro",
@@ -765,7 +849,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4-pro-0813",
@@ -784,7 +870,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-v4.1-flash",
@@ -803,7 +891,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "deepseek/deepseek-r1",
@@ -821,7 +911,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek/deepseek-r1-0528",
@@ -839,7 +931,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "dots-studio/dots-3-note-preview:free",
@@ -857,7 +951,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-2.5-flash",
@@ -877,7 +973,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-2.5-flash-lite",
@@ -897,7 +995,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-2.5-pro",
@@ -917,7 +1017,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-2.5-pro-preview-05-06",
@@ -937,7 +1039,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-2.5-pro-preview",
@@ -957,7 +1061,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3-flash-preview",
@@ -977,7 +1083,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.1-flash-lite",
@@ -997,7 +1105,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.1-flash-lite-preview",
@@ -1017,7 +1127,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.1-pro-preview",
@@ -1037,7 +1149,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.1-pro-preview-customtools",
@@ -1057,7 +1171,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.5-flash",
@@ -1077,7 +1193,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.5-flash-lite",
@@ -1097,7 +1215,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.6-flash",
@@ -1117,7 +1237,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.7-flash",
@@ -1137,7 +1259,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3.8-flash",
@@ -1157,7 +1281,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemma-3-12b-it",
@@ -1169,7 +1295,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemma-3-27b-it",
@@ -1181,7 +1309,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemma-4-26b-a4b-it",
@@ -1199,7 +1329,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
@@ -1217,7 +1349,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemma-4-31b-it",
@@ -1236,7 +1370,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemma-4-31b-it:free",
@@ -1254,7 +1390,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-3-pro-image",
@@ -1274,7 +1412,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "ibm-granite/granite-4.1-8b",
@@ -1287,7 +1427,9 @@
       "context_window": 131072,
       "default_max_tokens": 58982,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "ibm-granite/granite-4.2-8b",
@@ -1306,7 +1448,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inception/mercury-2",
@@ -1325,7 +1469,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inception/mercury-2.5",
@@ -1344,7 +1490,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inception/mercury-2.5-preview",
@@ -1363,7 +1511,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "kwaipilot/kat-coder-pro-v2",
@@ -1376,7 +1526,9 @@
       "context_window": 262144,
       "default_max_tokens": 72000,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "kwaipilot/kat-coder-pro-v2.5",
@@ -1389,7 +1541,9 @@
       "context_window": 262144,
       "default_max_tokens": 117964,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-fin:free",
@@ -1407,7 +1561,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash",
@@ -1426,7 +1582,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "liquid/lfm-2.5-2.6b:free",
@@ -1444,7 +1602,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meituan/longcat-2.0",
@@ -1463,7 +1623,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meta-llama/llama-3.1-70b-instruct",
@@ -1475,7 +1637,9 @@
       "context_window": 131072,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meta-llama/llama-3.1-8b-instruct",
@@ -1488,7 +1652,9 @@
       "context_window": 131072,
       "default_max_tokens": 58982,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meta-llama/llama-3.3-70b-instruct",
@@ -1501,7 +1667,9 @@
       "context_window": 131072,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "meta-llama/llama-4-maverick",
@@ -1514,7 +1682,9 @@
       "context_window": 524288,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta-llama/llama-4-scout",
@@ -1526,7 +1696,9 @@
       "context_window": 1310720,
       "default_max_tokens": 4096,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta/muse-glimmer-30b",
@@ -1545,7 +1717,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta/muse-spark-1.1",
@@ -1564,7 +1738,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta/muse-spark-1.2",
@@ -1583,7 +1759,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta/muse-spark-1.2-contributor",
@@ -1602,7 +1780,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta/muse-spark-1.3",
@@ -1621,7 +1801,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta/muse-spark-1.3-contributor",
@@ -1640,7 +1822,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "minimax/minimax-m1",
@@ -1658,7 +1842,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "minimax/minimax-m2",
@@ -1676,7 +1862,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "minimax/minimax-m2.1",
@@ -1695,7 +1883,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "minimax/minimax-m2.5",
@@ -1714,7 +1904,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "minimax/minimax-m2.7",
@@ -1733,7 +1925,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "minimax/minimax-m2.7:free",
@@ -1751,7 +1945,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "minimax/minimax-m3",
@@ -1770,7 +1966,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "minimax/minimax-m3:free",
@@ -1788,7 +1986,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mistral-large",
@@ -1801,7 +2001,9 @@
       "context_window": 128000,
       "default_max_tokens": 51200,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistralai/mistral-large-2407",
@@ -1814,7 +2016,9 @@
       "context_window": 131072,
       "default_max_tokens": 52428,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistralai/codestral-2508",
@@ -1827,7 +2031,9 @@
       "context_window": 256000,
       "default_max_tokens": 102400,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistralai/devstral-2512",
@@ -1840,7 +2046,9 @@
       "context_window": 262144,
       "default_max_tokens": 104857,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistralai/ministral-14b-2512",
@@ -1853,7 +2061,9 @@
       "context_window": 262144,
       "default_max_tokens": 104857,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/ministral-3b-2512",
@@ -1866,7 +2076,9 @@
       "context_window": 131072,
       "default_max_tokens": 52428,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/ministral-8b-2512",
@@ -1879,7 +2091,9 @@
       "context_window": 262144,
       "default_max_tokens": 104857,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mistral-large-2512",
@@ -1892,7 +2106,9 @@
       "context_window": 262144,
       "default_max_tokens": 104857,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mistral-medium-3",
@@ -1905,7 +2121,9 @@
       "context_window": 131072,
       "default_max_tokens": 52428,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mistral-medium-3.1",
@@ -1918,7 +2136,9 @@
       "context_window": 131072,
       "default_max_tokens": 52428,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mistral-medium-3-5",
@@ -1936,7 +2156,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mistral-nemo",
@@ -1948,7 +2170,9 @@
       "context_window": 128000,
       "default_max_tokens": 51200,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistralai/mistral-small-3.2-24b-instruct",
@@ -1960,7 +2184,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mistral-small-2603",
@@ -1979,7 +2205,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "mistralai/mixtral-8x22b-instruct",
@@ -1992,7 +2220,9 @@
       "context_window": 65536,
       "default_max_tokens": 26214,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistralai/mistral-saba",
@@ -2005,7 +2235,9 @@
       "context_window": 32768,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "mistralai/voxtral-small-24b-2507",
@@ -2018,7 +2250,9 @@
       "context_window": 32768,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/kimi-k2",
@@ -2030,7 +2264,9 @@
       "context_window": 131072,
       "default_max_tokens": 50176,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/kimi-k2-0905",
@@ -2042,7 +2278,9 @@
       "context_window": 262144,
       "default_max_tokens": 50176,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/kimi-k2-thinking",
@@ -2061,7 +2299,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "moonshotai/kimi-k2.5",
@@ -2080,7 +2320,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshotai/kimi-k2.6",
@@ -2099,7 +2341,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshotai/kimi-k2.7-code",
@@ -2118,7 +2362,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "moonshotai/kimi-k3",
@@ -2137,7 +2383,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "nvidia/nemotron-3-nano-30b-a3b",
@@ -2156,7 +2404,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -2174,7 +2424,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b",
@@ -2192,7 +2444,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -2210,7 +2464,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -2229,7 +2485,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -2247,7 +2505,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/nemotron-3.5-lightning",
@@ -2266,7 +2526,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",
@@ -2284,7 +2546,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nex-agi/nex-n2-mini",
@@ -2303,7 +2567,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "nex-agi/nex-n2-pro",
@@ -2322,7 +2588,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "nex-agi/nex-n2.5-mini:free",
@@ -2337,7 +2605,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "nex-agi/nex-n2.5-pro:free",
@@ -2352,7 +2622,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-audio",
@@ -2364,7 +2636,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-audio-mini",
@@ -2376,7 +2650,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-chat-latest",
@@ -2389,7 +2665,9 @@
       "context_window": 400000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4-turbo",
@@ -2401,7 +2679,9 @@
       "context_window": 128000,
       "default_max_tokens": 2048,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4-turbo-preview",
@@ -2413,7 +2693,9 @@
       "context_window": 128000,
       "default_max_tokens": 2048,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-4.1",
@@ -2426,7 +2708,9 @@
       "context_window": 1047576,
       "default_max_tokens": 471409,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4.1-mini",
@@ -2439,7 +2723,9 @@
       "context_window": 1047576,
       "default_max_tokens": 471409,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4.1-nano",
@@ -2452,7 +2738,9 @@
       "context_window": 1047576,
       "default_max_tokens": 471409,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4o",
@@ -2464,7 +2752,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4o-2024-05-13",
@@ -2476,7 +2766,9 @@
       "context_window": 128000,
       "default_max_tokens": 2048,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4o-2024-08-06",
@@ -2489,7 +2781,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4o-2024-11-20",
@@ -2502,7 +2796,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4o-mini",
@@ -2515,7 +2811,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-4o-mini-2024-07-18",
@@ -2528,7 +2826,9 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5",
@@ -2547,7 +2847,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5-mini",
@@ -2566,7 +2868,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5-nano",
@@ -2585,7 +2889,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5-pro",
@@ -2603,7 +2909,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.1",
@@ -2622,7 +2930,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.1-codex",
@@ -2641,7 +2951,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.1-codex-max",
@@ -2660,7 +2972,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.1-codex-mini",
@@ -2679,7 +2993,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.2",
@@ -2698,7 +3014,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.2-chat",
@@ -2711,7 +3029,9 @@
       "context_window": 128000,
       "default_max_tokens": 16000,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.2-pro",
@@ -2729,7 +3049,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.2-codex",
@@ -2748,7 +3070,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.3-codex",
@@ -2767,7 +3091,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.4",
@@ -2786,7 +3112,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.4-mini",
@@ -2805,7 +3133,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.4-nano",
@@ -2824,7 +3154,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.4-pro",
@@ -2842,7 +3174,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.5",
@@ -2861,7 +3195,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.5-pro",
@@ -2879,7 +3215,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.6-luna",
@@ -2899,7 +3237,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.6-luna-pro",
@@ -2919,7 +3259,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.6-sol",
@@ -2939,7 +3281,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.6-sol-pro",
@@ -2959,7 +3303,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.6-terra",
@@ -2979,7 +3325,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-5.6-terra-pro",
@@ -2999,7 +3347,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-6-astra",
@@ -3019,7 +3369,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-6-astra-pro",
@@ -3039,7 +3391,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-oss-120b",
@@ -3058,7 +3412,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-20b",
@@ -3077,7 +3433,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/gpt-oss-safeguard-20b",
@@ -3096,7 +3454,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/o1",
@@ -3115,7 +3475,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/o3",
@@ -3134,7 +3496,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/o3-mini",
@@ -3153,7 +3517,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/o3-mini-high",
@@ -3172,7 +3538,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "openai/o3-pro",
@@ -3190,7 +3558,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/o4-mini",
@@ -3209,7 +3579,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/o4-mini-high",
@@ -3228,7 +3600,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "poolside/laguna-s-2.1",
@@ -3247,7 +3621,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "poolside/laguna-s-2.1:free",
@@ -3265,7 +3641,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "poolside/laguna-xs-2.1",
@@ -3284,7 +3662,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "poolside/laguna-xs-2.1:free",
@@ -3302,7 +3682,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen-2.5-72b-instruct",
@@ -3314,7 +3696,9 @@
       "context_window": 32768,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen-plus-2025-07-28",
@@ -3326,7 +3710,9 @@
       "context_window": 1000000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen-plus",
@@ -3340,7 +3726,9 @@
       "context_window": 1000000,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen-2.5-7b-instruct",
@@ -3352,7 +3740,9 @@
       "context_window": 32768,
       "default_max_tokens": 14745,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-14b",
@@ -3370,7 +3760,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-235b-a22b",
@@ -3388,7 +3780,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-235b-a22b-2507",
@@ -3400,7 +3794,9 @@
       "context_window": 262144,
       "default_max_tokens": 8192,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-235b-a22b-thinking-2507",
@@ -3418,7 +3814,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-30b-a3b",
@@ -3436,7 +3834,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-30b-a3b-instruct-2507",
@@ -3448,7 +3848,9 @@
       "context_window": 262144,
       "default_max_tokens": 117964,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-30b-a3b-thinking-2507",
@@ -3466,7 +3868,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-32b",
@@ -3484,7 +3888,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-8b",
@@ -3502,7 +3908,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
@@ -3514,7 +3922,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-coder",
@@ -3526,7 +3936,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-coder-flash",
@@ -3540,7 +3952,9 @@
       "context_window": 1000000,
       "default_max_tokens": 32768,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-coder-next",
@@ -3553,7 +3967,9 @@
       "context_window": 262144,
       "default_max_tokens": 117964,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-coder-plus",
@@ -3567,7 +3983,9 @@
       "context_window": 1000000,
       "default_max_tokens": 32768,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-max",
@@ -3581,7 +3999,9 @@
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-max-thinking",
@@ -3599,7 +4019,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-instruct",
@@ -3612,7 +4034,9 @@
       "context_window": 262144,
       "default_max_tokens": 117964,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-thinking",
@@ -3630,7 +4054,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3-vl-235b-a22b-instruct",
@@ -3642,7 +4068,9 @@
       "context_window": 131072,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3-vl-235b-a22b-thinking",
@@ -3660,7 +4088,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3-vl-30b-a3b-instruct",
@@ -3672,7 +4102,9 @@
       "context_window": 262144,
       "default_max_tokens": 117964,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3-vl-30b-a3b-thinking",
@@ -3690,7 +4122,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3-vl-32b-instruct",
@@ -3702,7 +4136,9 @@
       "context_window": 131072,
       "default_max_tokens": 16384,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3-vl-8b-instruct",
@@ -3715,7 +4151,9 @@
       "context_window": 262144,
       "default_max_tokens": 117964,
       "can_reason": false,
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3-vl-8b-thinking",
@@ -3733,7 +4171,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-397b-a17b",
@@ -3751,7 +4191,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-plus-02-15",
@@ -3769,7 +4211,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-plus-20260420",
@@ -3788,7 +4232,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-122b-a10b",
@@ -3806,7 +4252,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-27b",
@@ -3824,7 +4272,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-35b-a3b",
@@ -3843,7 +4293,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-9b",
@@ -3861,7 +4313,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.5-flash-02-23",
@@ -3879,7 +4333,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.6-27b",
@@ -3897,7 +4353,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.6-35b-a3b",
@@ -3916,7 +4374,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.6-flash",
@@ -3935,7 +4395,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.6-max-preview",
@@ -3954,7 +4416,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3.6-plus",
@@ -3973,7 +4437,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.7-flash",
@@ -3993,7 +4459,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.7-max",
@@ -4013,7 +4481,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3.7-plus",
@@ -4033,7 +4503,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.8-2.4t-a95b",
@@ -4052,7 +4524,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "qwen/qwen3.8-27b",
@@ -4071,7 +4545,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.8-flash",
@@ -4091,7 +4567,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.8-max",
@@ -4111,7 +4589,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen/qwen3.8-max-0902",
@@ -4131,7 +4611,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "relace/relace-search",
@@ -4143,7 +4625,9 @@
       "context_window": 256000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "sakana/fugu-max",
@@ -4162,7 +4646,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "sakana/fugu-ultra",
@@ -4181,7 +4667,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "sakana/fugu-ultra-v2",
@@ -4200,7 +4688,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "sakana/sakana-namazu",
@@ -4219,7 +4709,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "x-ai/grok-4.20",
@@ -4238,7 +4730,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "x-ai/grok-4.3",
@@ -4257,7 +4751,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "x-ai/grok-4.5",
@@ -4276,7 +4772,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "x-ai/grok-4.6",
@@ -4295,7 +4793,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "x-ai/grok-build-0.1",
@@ -4314,7 +4814,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "stepfun/step-3.5-flash",
@@ -4332,7 +4834,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "stepfun/step-3.7-flash",
@@ -4351,7 +4855,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "tencent/hy3",
@@ -4370,7 +4876,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "tencent/hy3-preview",
@@ -4389,7 +4897,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "tencent/hy4-preview",
@@ -4408,7 +4918,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "thedrummer/unslopnemo-12b",
@@ -4420,7 +4932,9 @@
       "context_window": 32768,
       "default_max_tokens": 13107,
       "can_reason": false,
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "thinkingmachines/inkling",
@@ -4439,7 +4953,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "thinkingmachines/inkling:free",
@@ -4457,7 +4973,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "thinkingmachines/inkling-small",
@@ -4476,7 +4994,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "thinkingmachines/inkling-small:free",
@@ -4494,7 +5014,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "upstage/solar-pro-3",
@@ -4513,7 +5035,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "upstage/solar-pro4",
@@ -4532,7 +5056,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "xiaomi/mimo-v2.5",
@@ -4551,7 +5077,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "xiaomi/mimo-v2.5-pro",
@@ -4570,7 +5098,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-4.5",
@@ -4589,7 +5119,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-4.5-air",
@@ -4607,7 +5139,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-4.5v",
@@ -4626,7 +5160,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "z-ai/glm-4.6",
@@ -4645,7 +5181,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-4.6v",
@@ -4664,7 +5202,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "z-ai/glm-4.7",
@@ -4683,7 +5223,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-4.7-flash",
@@ -4701,7 +5243,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5",
@@ -4720,7 +5264,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5-turbo",
@@ -4739,7 +5285,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5.1",
@@ -4758,7 +5306,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5.2",
@@ -4777,7 +5327,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5.2:free",
@@ -4795,7 +5347,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5.3",
@@ -4814,7 +5368,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "z-ai/glm-5.3-flash",
@@ -4833,7 +5389,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "z-ai/glm-5v-turbo",
@@ -4852,7 +5410,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-fin",
@@ -4871,7 +5431,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-sante:free",
@@ -4886,7 +5448,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-vl",
@@ -4905,7 +5469,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-vl:free",
@@ -4920,7 +5486,9 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "capabilities": {
+        "vision": true
+      }
     }
   ],
   "default_headers": {
