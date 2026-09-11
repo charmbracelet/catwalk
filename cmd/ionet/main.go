@@ -70,13 +70,14 @@ func main() {
 			continue
 		}
 
-		var (
-			reasoningLevels  []string
-			defaultReasoning string
-		)
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if isReasoningModel(model.ID) {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+		}
 		if supportsReasoningLevels(model.ID) {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			reasoning.EffortLevels = catwalk.NewEffortLevels("low", "medium", "high")
+			reasoning.DefaultEffortLevel = "medium"
 		}
 
 		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
@@ -99,12 +100,10 @@ func main() {
 				CacheCreate: costCacheCreate,
 				CacheHit:    costCacheHit,
 			},
-			ContextWindow:          int64(model.ContextWindow),
-			DefaultMaxTokens:       int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
-			CanReason:              isReasoningModel(model.ID),
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			Capabilities:           catwalk.Capabilities{Vision: model.SupportsImagesInput},
+			ContextWindow:    int64(model.ContextWindow),
+			DefaultMaxTokens: int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: model.SupportsImagesInput},
 		}
 
 		provider.Models = append(provider.Models, m)

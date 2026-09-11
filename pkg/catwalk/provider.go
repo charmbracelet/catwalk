@@ -1,5 +1,7 @@
 package catwalk
 
+import "strings"
+
 // Type represents the type of AI provider.
 type Type string
 
@@ -100,18 +102,69 @@ type Capabilities struct {
 	Vision bool `json:"vision"`
 }
 
+// Thinking describes when a model reasons.
+type Thinking string
+
+// All the supported thinking modes.
+const (
+	// ThinkingAlways means the model always thinks and reasoning cannot be
+	// turned off.
+	ThinkingAlways Thinking = "always"
+	// ThinkingNever means the model cannot think.
+	ThinkingNever Thinking = "never"
+	// ThinkingToggleable means thinking can be turned on and off, and
+	// optionally configured with an effort level.
+	ThinkingToggleable Thinking = "toggleable"
+)
+
+// EffortLevel is a selectable reasoning effort level.
+type EffortLevel struct {
+	Value   string `json:"value"`
+	Display string `json:"display"`
+}
+
+// Reasoning describes how reasoning is configured for a model.
+type Reasoning struct {
+	Thinking Thinking `json:"thinking"`
+	// EffortLevels are the selectable effort levels. Only set for models with
+	// toggleable thinking that support effort levels.
+	EffortLevels []EffortLevel `json:"effort_levels,omitempty"`
+	// DefaultEffortLevel is the effort level used when none is selected. Only
+	// set when EffortLevels is not empty.
+	DefaultEffortLevel string `json:"default_effort_level,omitempty"`
+}
+
+// NewEffortLevels builds effort levels from their values, deriving the
+// display name of each level.
+func NewEffortLevels(values ...string) []EffortLevel {
+	levels := make([]EffortLevel, 0, len(values))
+	for _, value := range values {
+		levels = append(levels, EffortLevel{Value: value, Display: effortLevelDisplay(value)})
+	}
+	return levels
+}
+
+func effortLevelDisplay(value string) string {
+	switch value {
+	case "":
+		return ""
+	case "xhigh":
+		return "X-High"
+	default:
+		return strings.ToUpper(value[:1]) + value[1:]
+	}
+}
+
 // Model represents an AI model configuration.
 type Model struct {
-	ID                     string       `json:"id"`
-	Name                   string       `json:"name"`
-	Pricing                Pricing      `json:"pricing"`
-	ContextWindow          int64        `json:"context_window"`
-	DefaultMaxTokens       int64        `json:"default_max_tokens"`
-	CanReason              bool         `json:"can_reason"`
-	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
-	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
-	Capabilities           Capabilities `json:"capabilities"`
-	Options                ModelOptions `json:"options,omitzero"`
+	ID               string       `json:"id"`
+	Name             string       `json:"name"`
+	Pricing          Pricing      `json:"pricing"`
+	ContextWindow    int64        `json:"context_window"`
+	DefaultMaxTokens int64        `json:"default_max_tokens"`
+	Reasoning        Reasoning    `json:"reasoning"`
+	Capabilities     Capabilities `json:"capabilities"`
+	Options          ModelOptions `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.

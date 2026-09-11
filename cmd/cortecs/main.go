@@ -121,14 +121,13 @@ func main() {
 			continue
 		}
 
-		var (
-			canReason        = model.hasTag("Reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
-		)
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if model.hasTag("Reasoning") {
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		model := catwalk.Model{
@@ -139,11 +138,9 @@ func main() {
 				Input:  detailData.Pricing.InputToken,
 				Output: detailData.Pricing.OutputToken,
 			},
-			DefaultMaxTokens:       model.ContextSize / 10,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			Capabilities:           catwalk.Capabilities{Vision: model.hasTag("Image")},
+			DefaultMaxTokens: model.ContextSize / 10,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: model.hasTag("Image")},
 		}
 		models = append(models, model)
 	}

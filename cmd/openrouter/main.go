@@ -284,21 +284,21 @@ func main() {
 			canReason := slices.Contains(model.SupportedParams, "reasoning")
 			supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
-			var reasoningLevels []string
-			var defaultReasoning string
+			reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 			if canReason {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoning = "medium"
+				reasoning = catwalk.Reasoning{
+					Thinking:           catwalk.ThinkingToggleable,
+					EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+					DefaultEffortLevel: "medium",
+				}
 			}
 			m := catwalk.Model{
-				ID:                     model.ID,
-				Name:                   model.Name,
-				Pricing:                pricing,
-				ContextWindow:          model.ContextLength,
-				CanReason:              canReason,
-				DefaultReasoningEffort: defaultReasoning,
-				ReasoningLevels:        reasoningLevels,
-				Capabilities:           catwalk.Capabilities{Vision: supportsImages},
+				ID:            model.ID,
+				Name:          model.Name,
+				Pricing:       pricing,
+				ContextWindow: model.ContextLength,
+				Reasoning:     reasoning,
+				Capabilities:  catwalk.Capabilities{Vision: supportsImages},
 			}
 			if model.TopProvider.MaxCompletionTokens != nil {
 				m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens / 2
@@ -351,21 +351,21 @@ func main() {
 		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.Name,
-			Pricing:                pricing,
-			ContextWindow:          bestEndpoint.ContextLength,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
+			ID:            model.ID,
+			Name:          model.Name,
+			Pricing:       pricing,
+			ContextWindow: bestEndpoint.ContextLength,
+			Reasoning:     reasoning,
+			Capabilities:  catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		// Set max tokens based on the best endpoint

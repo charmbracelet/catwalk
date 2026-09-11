@@ -188,11 +188,13 @@ func main() {
 
 		// Check if model supports reasoning
 		canReason := slices.Contains(model.SupportedFeatures, "reasoning")
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		// Strip everything before the first / for a cleaner name
@@ -204,14 +206,12 @@ func main() {
 		modelName = strings.ReplaceAll(modelName, "-", " ")
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   modelName,
-			Pricing:                pricing,
-			ContextWindow:          model.ContextLength,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
+			ID:            model.ID,
+			Name:          modelName,
+			Pricing:       pricing,
+			ContextWindow: model.ContextLength,
+			Reasoning:     reasoning,
+			Capabilities:  catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		// Set max tokens based on max_output_length if available, but cap at

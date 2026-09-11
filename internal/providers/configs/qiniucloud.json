@@ -1,9 +1,9 @@
 {
   "name": "QiniuCloud",
   "id": "qiniucloud",
-  "type": "openai-compat",
   "api_key": "$QINIUCLOUD_API_KEY",
   "api_endpoint": "https://api.qnaigc.com/v1",
+  "type": "openai-compat",
   "default_large_model_id": "minimax/minimax-m2.5",
   "default_small_model_id": "glm-4.5",
   "models": [
@@ -18,7 +18,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 128000,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -34,7 +36,9 @@
       },
       "context_window": 200000,
       "default_max_tokens": 128000,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -50,7 +54,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 4096,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -66,7 +72,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 100000,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -82,7 +90,9 @@
       },
       "context_window": 200000,
       "default_max_tokens": 4096,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -98,7 +108,9 @@
       },
       "context_window": 200000,
       "default_max_tokens": 4096,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -114,7 +126,9 @@
       },
       "context_window": 200000,
       "default_max_tokens": 4096,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -130,7 +144,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32000,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -146,7 +162,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32000,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -162,7 +180,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -178,7 +198,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -194,7 +216,9 @@
       },
       "context_window": 262000,
       "default_max_tokens": 4096,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -210,7 +234,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 98304,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -226,7 +252,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 100000,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
