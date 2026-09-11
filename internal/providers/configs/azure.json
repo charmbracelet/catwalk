@@ -42,7 +42,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-5-mini",
@@ -75,7 +76,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-5-nano",
@@ -108,7 +110,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "codex-mini-latest",
@@ -140,7 +143,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o4-mini",
@@ -172,7 +176,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o3",
@@ -204,7 +209,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o3-pro",
@@ -235,7 +241,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.1",
@@ -252,7 +259,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.1-mini",
@@ -269,7 +277,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.1-nano",
@@ -286,7 +295,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.5-preview",
@@ -303,7 +313,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o3-mini",
@@ -352,7 +363,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4o-mini",
@@ -369,7 +381,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     }
   ]
 }

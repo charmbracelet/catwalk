@@ -46,7 +46,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-fable-5",
@@ -87,7 +88,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-5",
@@ -128,7 +130,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-4-8",
@@ -169,7 +172,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-4-7",
@@ -210,7 +214,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-4-6",
@@ -247,7 +252,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-opus-4-5-20251101",
@@ -280,7 +286,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-sonnet-5",
@@ -321,7 +328,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-sonnet-4-6",
@@ -358,7 +366,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-sonnet-4-5-20250929",
@@ -376,7 +385,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-haiku-4-5-20251001",
@@ -394,7 +404,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-opus-4-1-20250805",
@@ -412,7 +423,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-opus-4-20250514",
@@ -430,7 +442,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-sonnet-4-20250514",
@@ -448,7 +461,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-mythos-5-1",
@@ -489,7 +503,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-mythos-5",
@@ -530,7 +545,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     }
   ]
 }

@@ -165,7 +165,11 @@ type Model struct {
 	DefaultMaxTokens int64        `json:"default_max_tokens"`
 	Reasoning        Reasoning    `json:"reasoning"`
 	Capabilities     Capabilities `json:"capabilities"`
-	Options          ModelOptions `json:"options,omitzero"`
+	// MaxAttachments is the maximum number of attachments (e.g. images)
+	// allowed in a single request. Zero means the provider does not
+	// enforce a hard limit; context window limits still apply.
+	MaxAttachments int          `json:"max_attachments,omitempty"`
+	Options        ModelOptions `json:"options,omitzero"`
 }
 
 // EffectiveType returns the endpoint type for this model, falling back to the

@@ -38,7 +38,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.6-flash",
@@ -74,7 +75,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.5-flash",
@@ -110,7 +112,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.5-flash-lite",
@@ -147,7 +150,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.1-pro-preview-customtools",
@@ -179,7 +183,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.1-flash-lite",
@@ -216,7 +221,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3-pro-preview",
@@ -244,7 +250,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3-flash-preview",
@@ -280,7 +287,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-2.5-pro",
@@ -297,7 +305,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-2.5-flash",
@@ -314,7 +323,8 @@
       },
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     }
   ]
 }
