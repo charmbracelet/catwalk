@@ -5,6 +5,20 @@ import (
 	"testing"
 )
 
+func TestValidPricingOverrides(t *testing.T) {
+	for _, p := range GetAll() {
+		t.Run(p.Name, func(t *testing.T) {
+			for _, m := range p.Models {
+				for i, override := range m.PricingOverrides {
+					if err := override.Validate(); err != nil {
+						t.Errorf("model %q pricing_overrides[%d]: %v", m.ID, i, err)
+					}
+				}
+			}
+		})
+	}
+}
+
 func TestValidDefaultModels(t *testing.T) {
 	for _, p := range GetAll() {
 		t.Run(p.Name, func(t *testing.T) {

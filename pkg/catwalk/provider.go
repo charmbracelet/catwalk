@@ -102,16 +102,17 @@ type Capabilities struct {
 
 // Model represents an AI model configuration.
 type Model struct {
-	ID                     string       `json:"id"`
-	Name                   string       `json:"name"`
-	Pricing                Pricing      `json:"pricing"`
-	ContextWindow          int64        `json:"context_window"`
-	DefaultMaxTokens       int64        `json:"default_max_tokens"`
-	CanReason              bool         `json:"can_reason"`
-	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
-	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
-	Capabilities           Capabilities `json:"capabilities"`
-	Options                ModelOptions `json:"options,omitzero"`
+	ID                     string            `json:"id"`
+	Name                   string            `json:"name"`
+	Pricing                Pricing           `json:"pricing"`
+	PricingOverrides       []PricingOverride `json:"pricing_overrides,omitempty"`
+	ContextWindow          int64             `json:"context_window"`
+	DefaultMaxTokens       int64             `json:"default_max_tokens"`
+	CanReason              bool              `json:"can_reason"`
+	ReasoningLevels        []string          `json:"reasoning_levels,omitempty"`
+	DefaultReasoningEffort string            `json:"default_reasoning_effort,omitempty"`
+	Capabilities           Capabilities      `json:"capabilities"`
+	Options                ModelOptions      `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.
