@@ -1,7 +1,7 @@
 {
   "name": "AWS Bedrock Europe",
   "id": "bedrock-europe",
-  "type": "bedrock",
+  "type": "completions",
   "default_large_model_id": "eu.anthropic.claude-opus-5",
   "default_small_model_id": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [

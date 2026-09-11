@@ -147,7 +147,7 @@ func main() {
 		ID:          catwalk.InferenceProviderVenice,
 		APIKey:      "$VENICE_API_KEY",
 		APIEndpoint: "https://api.venice.ai/api/v1",
-		Type:        catwalk.TypeOpenAICompat,
+		Type:        catwalk.TypeCompletions,
 		Models:      []catwalk.Model{},
 	}
 

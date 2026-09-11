@@ -3,7 +3,7 @@
   "id": "venice",
   "api_key": "$VENICE_API_KEY",
   "api_endpoint": "https://api.venice.ai/api/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "claude-fable-5",
   "default_small_model_id": "deepseek-v4-flash",
   "models": [

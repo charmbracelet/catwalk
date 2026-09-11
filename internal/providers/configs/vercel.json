@@ -3,7 +3,7 @@
   "id": "vercel",
   "api_key": "$VERCEL_API_KEY",
   "api_endpoint": "https://ai-gateway.vercel.sh/v1",
-  "type": "vercel",
+  "type": "completions",
   "default_large_model_id": "anthropic/claude-sonnet-4",
   "default_small_model_id": "anthropic/claude-haiku-4.5",
   "models": [

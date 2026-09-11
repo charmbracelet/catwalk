@@ -130,7 +130,7 @@ func main() {
 		ID:                  catwalk.InferenceProvider("pioneer"),
 		APIKey:              "$PIONEER_API_KEY",
 		APIEndpoint:         "https://api.pioneer.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "claude-opus-4-6",
 		DefaultSmallModelID: "Qwen/Qwen3.5-9B",
 		Models:              models,

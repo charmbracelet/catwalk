@@ -95,7 +95,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderNebius,
 		APIKey:              "$NEBIUS_API_KEY",
 		APIEndpoint:         "https://api.tokenfactory.nebius.com/v1", // this is their default region, eu-north1
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/Kimi-K2.5",
 		DefaultSmallModelID: "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
 	}

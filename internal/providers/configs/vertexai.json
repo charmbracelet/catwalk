@@ -1,7 +1,7 @@
 {
   "name": "Google Vertex AI",
   "id": "vertexai",
-  "type": "google-vertex",
+  "type": "completions",
   "default_large_model_id": "gemini-3.1-pro-preview",
   "default_small_model_id": "gemini-3-flash-preview",
   "models": [

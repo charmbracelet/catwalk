@@ -3,7 +3,7 @@
   "id": "kimi-coding",
   "api_key": "$KIMI_CODING_API_KEY",
   "api_endpoint": "https://api.kimi.com/coding",
-  "type": "anthropic",
+  "type": "messages",
   "default_large_model_id": "k3",
   "default_small_model_id": "kimi-for-coding",
   "models": [

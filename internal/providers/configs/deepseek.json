@@ -3,7 +3,7 @@
   "id": "deepseek",
   "api_key": "$DEEPSEEK_API_KEY",
   "api_endpoint": "https://api.deepseek.com/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "deepseek-v4-pro",
   "default_small_model_id": "deepseek-v4-flash",
   "models": [

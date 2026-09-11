@@ -3,7 +3,7 @@
   "id": "cortecs",
   "api_key": "$CORTECS_API_KEY",
   "api_endpoint": "https://api.cortecs.ai/v1",
-  "type": "openai",
+  "type": "responses",
   "default_large_model_id": "qwen3-coder-30b-a3b-instruct",
   "default_small_model_id": "glm-4.7-flash",
   "models": [

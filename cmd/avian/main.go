@@ -75,7 +75,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderAvian,
 		APIKey:              "$AVIAN_API_KEY",
 		APIEndpoint:         "https://api.avian.io/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/kimi-k2.5",
 		DefaultSmallModelID: "deepseek/deepseek-v3.2",
 		Models:              []catwalk.Model{},

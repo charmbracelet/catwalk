@@ -3,7 +3,7 @@
   "id": "azure",
   "api_key": "$AZURE_OPENAI_API_KEY",
   "api_endpoint": "$AZURE_OPENAI_API_ENDPOINT",
-  "type": "azure",
+  "type": "completions",
   "default_large_model_id": "gpt-5",
   "default_small_model_id": "gpt-5-mini",
   "models": [

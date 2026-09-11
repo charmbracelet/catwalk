@@ -87,7 +87,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderVercel,
 		APIKey:              "$VERCEL_API_KEY",
 		APIEndpoint:         "https://ai-gateway.vercel.sh/v1",
-		Type:                catwalk.TypeVercel,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4",
 		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
 		Models:              []catwalk.Model{},

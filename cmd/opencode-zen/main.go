@@ -137,7 +137,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderOpenCodeZen,
 		APIKey:              "$OPENCODE_API_KEY",
 		APIEndpoint:         "https://opencode.ai/zen/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "deepseek-v4-flash-free",
 		DefaultSmallModelID: "deepseek-v4-flash-free",
 	}

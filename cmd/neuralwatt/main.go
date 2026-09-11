@@ -111,7 +111,7 @@ func main() {
 		ID:                  "neuralwatt",
 		APIKey:              "$NEURALWATT_API_KEY",
 		APIEndpoint:         "https://api.neuralwatt.com/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "glm-5.2",
 		DefaultSmallModelID: "glm-5.2-fast",
 	}
