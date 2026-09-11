@@ -80,6 +80,18 @@
       "supports_attachments": false
     },
     {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash:fireworks-ai",
+      "name": "deepseek-ai/DeepSeek-V4.1-Flash (fireworks-ai)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "meta-models/Muse-Glimmer-30B:fireworks-ai",
       "name": "meta-models/Muse-Glimmer-30B (fireworks-ai)",
       "cost_per_1m_in": 0,

@@ -3404,24 +3404,6 @@
       "supports_attachments": true
     },
     {
-      "id": "gpt-audio-1.5",
-      "name": "GPT Audio 1.5",
-      "cost_per_1m_in": 2.5,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
       "id": "gpt-chat-latest",
       "name": "GPT Chat",
       "cost_per_1m_in": 5,
@@ -3860,8 +3842,8 @@
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 25600,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -3869,7 +3851,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "kat-dev",
@@ -3899,7 +3881,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "kimi-k2-0711",
@@ -4148,30 +4130,6 @@
       "supports_attachments": false
     },
     {
-      "id": "mai-image-2.6",
-      "name": "Mai Image 2.6",
-      "cost_per_1m_in": 5,
-      "cost_per_1m_out": 5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 4096,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "mai-image-2.6-flash",
-      "name": "Mai Image 2.6 Flash",
-      "cost_per_1m_in": 1.75,
-      "cost_per_1m_out": 1.75,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 4096,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "mai-thinking-1",
       "name": "Mai Thinking 1",
       "cost_per_1m_in": 2,
@@ -4214,7 +4172,7 @@
       "cost_per_1m_out": 0.5754,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.03836,
-      "context_window": 1000000,
+      "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": false,
       "supports_attachments": true
@@ -4811,7 +4769,7 @@
       "context_window": 262144,
       "default_max_tokens": 65536,
       "can_reason": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3-max-2026-01-23",
@@ -4820,8 +4778,8 @@
       "cost_per_1m_out": 1.8032,
       "cost_per_1m_in_cached": 0.5635,
       "cost_per_1m_out_cached": 0.09016,
-      "context_window": 252000,
-      "default_max_tokens": 32000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -4869,7 +4827,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 33000,
+      "default_max_tokens": 32768,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -4881,7 +4839,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 131072,
-      "default_max_tokens": 33000,
+      "default_max_tokens": 32768,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -4898,8 +4856,8 @@
       "cost_per_1m_out": 0.4112,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 32000,
+      "context_window": 131072,
+      "default_max_tokens": 32768,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -4910,8 +4868,8 @@
       "cost_per_1m_out": 1.028,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 32000,
+      "context_window": 131072,
+      "default_max_tokens": 32768,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -4928,8 +4886,8 @@
       "cost_per_1m_out": 0.206,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.00412,
-      "context_window": 254000,
-      "default_max_tokens": 32000,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -4940,8 +4898,8 @@
       "cost_per_1m_out": 0.206,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 254000,
-      "default_max_tokens": 32000,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -4952,8 +4910,8 @@
       "cost_per_1m_out": 1.37,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.0274,
-      "context_window": 256000,
-      "default_max_tokens": 32000,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
       "can_reason": false,
       "supports_attachments": true
     },
