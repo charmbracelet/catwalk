@@ -3,7 +3,7 @@
   "id": "fireworks",
   "api_key": "$FIREWORKS_API_KEY",
   "api_endpoint": "https://api.fireworks.ai/inference/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "accounts/fireworks/models/deepseek-v4-pro-0813",
   "default_small_model_id": "accounts/fireworks/models/deepseek-v4-flash-0731",
   "models": [

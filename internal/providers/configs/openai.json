@@ -3,7 +3,7 @@
   "id": "openai",
   "api_key": "$OPENAI_API_KEY",
   "api_endpoint": "$OPENAI_API_ENDPOINT",
-  "type": "openai",
+  "type": "responses",
   "default_large_model_id": "gpt-5.6-sol",
   "default_small_model_id": "gpt-5.6-luna",
   "models": [

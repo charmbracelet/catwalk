@@ -136,7 +136,7 @@ func main() {
 		ID:                  catwalk.InferenceAIHubMix,
 		APIKey:              "$AIHUBMIX_API_KEY",
 		APIEndpoint:         "https://aihubmix.com/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: defaultLargeModel,
 		DefaultSmallModelID: defaultSmallModel,
 		DefaultHeaders: map[string]string{

@@ -134,7 +134,7 @@ func run() error {
 		Name:                "GitHub Copilot",
 		Models:              catwalkModels,
 		APIEndpoint:         "https://api.githubcopilot.com",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "claude-sonnet-5",
 		DefaultSmallModelID: "claude-haiku-4.5",
 	}
