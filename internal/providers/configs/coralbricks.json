@@ -20,6 +20,18 @@
       "supports_attachments": false
     },
     {
+      "id": "glm-5.3-flash-fp4",
+      "name": "GLM 5.3 Flash",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "cost_per_1m_in": 3,
