@@ -1,7 +1,7 @@
 {
   "name": "AWS Bedrock US",
   "id": "bedrock",
-  "type": "bedrock",
+  "type": "completions",
   "api_key": "",
   "api_endpoint": "",
   "default_large_model_id": "us.anthropic.claude-opus-5",

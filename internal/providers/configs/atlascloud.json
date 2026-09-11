@@ -3,7 +3,7 @@
   "id": "atlascloud",
   "api_key": "$ATLASCLOUD_API_KEY",
   "api_endpoint": "https://api.atlascloud.ai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "zai-org/glm-5.2",
   "default_small_model_id": "deepseek-ai/deepseek-v4-flash",
   "models": [

@@ -113,7 +113,7 @@ func main() {
 		ID:          catwalk.InferenceProviderHuggingFace,
 		APIKey:      "$HF_TOKEN",
 		APIEndpoint: "https://router.huggingface.co/v1",
-		Type:        catwalk.TypeOpenAICompat,
+		Type:        catwalk.TypeCompletions,
 		Models:      []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",

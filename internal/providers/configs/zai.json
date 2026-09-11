@@ -3,7 +3,7 @@
   "id": "zai",
   "api_key": "$ZAI_API_KEY",
   "api_endpoint": "https://api.z.ai/api/coding/paas/v4",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "glm-5.2",
   "default_small_model_id": "glm-5-turbo",
   "models": [

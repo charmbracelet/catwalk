@@ -1,7 +1,7 @@
 {
   "name": "Anthropic",
   "id": "anthropic",
-  "type": "anthropic",
+  "type": "messages",
   "api_key": "$ANTHROPIC_API_KEY",
   "api_endpoint": "$ANTHROPIC_API_ENDPOINT",
   "default_large_model_id": "claude-sonnet-4-6",

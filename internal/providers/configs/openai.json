@@ -1,7 +1,7 @@
 {
   "name": "OpenAI",
   "id": "openai",
-  "type": "openai",
+  "type": "responses",
   "api_key": "$OPENAI_API_KEY",
   "api_endpoint": "$OPENAI_API_ENDPOINT",
   "default_large_model_id": "gpt-5.6-sol",

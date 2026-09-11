@@ -1,19 +1,17 @@
 package catwalk
 
-// Type represents the type of AI provider.
+// Type represents the API endpoint format a provider (or model) speaks.
 type Type string
 
-// All the supported AI provider types.
+// All the supported API endpoint types.
 const (
-	TypeOpenAI       Type = "openai"
-	TypeOpenAICompat Type = "openai-compat"
-	TypeOpenRouter   Type = "openrouter"
-	TypeVercel       Type = "vercel"
-	TypeAnthropic    Type = "anthropic"
-	TypeGoogle       Type = "google"
-	TypeAzure        Type = "azure"
-	TypeBedrock      Type = "bedrock"
-	TypeVertexAI     Type = "google-vertex"
+	// TypeCompletions is the OpenAI Chat Completions endpoint
+	// (POST /chat/completions).
+	TypeCompletions Type = "completions"
+	// TypeResponses is the OpenAI Responses endpoint (POST /responses).
+	TypeResponses Type = "responses"
+	// TypeMessages is the Anthropic Messages endpoint (POST /messages).
+	TypeMessages Type = "messages"
 )
 
 // InferenceProvider represents the inference provider identifier.
@@ -102,7 +100,10 @@ type Capabilities struct {
 
 // Model represents an AI model configuration.
 type Model struct {
-	ID                     string       `json:"id"`
+	ID string `json:"id"`
+	// Type optionally overrides the provider's endpoint type for this model.
+	// When empty, the provider's Type is used.
+	Type                   Type         `json:"type,omitempty"`
 	Name                   string       `json:"name"`
 	Pricing                Pricing      `json:"pricing"`
 	ContextWindow          int64        `json:"context_window"`
@@ -112,6 +113,15 @@ type Model struct {
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	Capabilities           Capabilities `json:"capabilities"`
 	Options                ModelOptions `json:"options,omitzero"`
+}
+
+// EffectiveType returns the endpoint type for this model, falling back to the
+// provider's Type when the model does not override it.
+func (m Model) EffectiveType(providerType Type) Type {
+	if m.Type != "" {
+		return m.Type
+	}
+	return providerType
 }
 
 // KnownProviders returns all the known inference providers.
@@ -155,17 +165,11 @@ func KnownProviders() []InferenceProvider {
 	}
 }
 
-// KnownProviderTypes returns all the known inference providers types.
+// KnownProviderTypes returns all the known API endpoint types.
 func KnownProviderTypes() []Type {
 	return []Type{
-		TypeOpenAI,
-		TypeOpenAICompat,
-		TypeOpenRouter,
-		TypeVercel,
-		TypeAnthropic,
-		TypeGoogle,
-		TypeAzure,
-		TypeBedrock,
-		TypeVertexAI,
+		TypeCompletions,
+		TypeResponses,
+		TypeMessages,
 	}
 }

@@ -1,7 +1,7 @@
 {
   "name": "Kimi Coding",
   "id": "kimi-coding",
-  "type": "anthropic",
+  "type": "messages",
   "api_key": "$KIMI_CODING_API_KEY",
   "api_endpoint": "https://api.kimi.com/coding",
   "default_large_model_id": "k3",

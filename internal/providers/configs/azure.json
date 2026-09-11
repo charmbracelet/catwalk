@@ -1,7 +1,7 @@
 {
   "name": "Azure OpenAI",
   "id": "azure",
-  "type": "azure",
+  "type": "completions",
   "api_key": "$AZURE_OPENAI_API_KEY",
   "api_endpoint": "$AZURE_OPENAI_API_ENDPOINT",
   "default_large_model_id": "gpt-5",

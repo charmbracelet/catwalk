@@ -3,7 +3,7 @@
   "id": "coralbricks",
   "api_key": "$CORALBRICKS_API_KEY",
   "api_endpoint": "https://inference.coralbricks.ai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "glm-5.3-fp4",
   "default_small_model_id": "gpt-oss-120b",
   "models": [
