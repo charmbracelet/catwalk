@@ -1,11 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "mkdir -p public/v3 && go run ./cmd/dump > public/v3/providers.json",
-  "outputDirectory": "public",
-  "rewrites": [
-    {
-      "source": "/v3/providers",
-      "destination": "/v3/providers.json"
-    }
-  ]
+  "buildCommand": "GOOS=linux go build -o $VERCEL_OUTPUT_FILE ."
 }

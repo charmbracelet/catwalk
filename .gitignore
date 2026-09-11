@@ -37,3 +37,7 @@ dist/
 
 # temp dir
 /tmp
+
+# vercel
+.vercel
+.env*

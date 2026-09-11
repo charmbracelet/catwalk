@@ -82,7 +82,7 @@ func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 }
 
 func main() {
-	address := cmp.Or(os.Getenv("CATWALK_PORT"), "8080")
+	address := cmp.Or(os.Getenv("CATWALK_PORT"), os.Getenv("PORT"), "8080")
 	switch {
 	case strings.HasPrefix(address, "tcp://"):
 		address = ":8080"
@@ -91,6 +91,7 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
+	mux.HandleFunc("/v3/providers", providersHandler)
 	mux.HandleFunc("/v2/providers", providersHandler)
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
 	mux.HandleFunc("/health", health)
