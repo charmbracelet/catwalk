@@ -89,7 +89,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderOpenCodeGo,
 		APIKey:              "$OPENCODE_API_KEY",
 		APIEndpoint:         "https://opencode.ai/zen/go/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "minimax-m2.7",
 		DefaultSmallModelID: "minimax-m2.7",
 	}

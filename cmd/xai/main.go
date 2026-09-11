@@ -143,7 +143,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderXAI,
 		APIKey:              "$XAI_API_KEY",
 		APIEndpoint:         "https://api.x.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "grok-4.5",
 		DefaultSmallModelID: "grok-4.5",
 	}

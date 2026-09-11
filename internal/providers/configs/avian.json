@@ -3,7 +3,7 @@
   "id": "avian",
   "api_key": "$AVIAN_API_KEY",
   "api_endpoint": "https://api.avian.io/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "moonshotai/kimi-k2.5",
   "default_small_model_id": "deepseek/deepseek-v3.2",
   "models": [

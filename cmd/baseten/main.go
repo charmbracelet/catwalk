@@ -110,7 +110,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderBaseten,
 		APIKey:              "$BASETEN_API_KEY",
 		APIEndpoint:         "https://inference.baseten.co/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "deepseek-ai/DeepSeek-V4-Pro",
 		DefaultSmallModelID: "openai/gpt-oss-120b",
 		Models:              []catwalk.Model{},

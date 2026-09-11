@@ -139,7 +139,7 @@ func main() {
 		ID:                  "chutes",
 		APIKey:              "$CHUTES_API_KEY",
 		APIEndpoint:         "https://llm.chutes.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/Kimi-K2.6-TEE",
 		DefaultSmallModelID: "google/gemma-4-31B-turbo-TEE",
 		Models:              models,

@@ -153,7 +153,7 @@ func main() {
 		ID:                  "cortecs",
 		APIKey:              "$CORTECS_API_KEY",
 		APIEndpoint:         "https://api.cortecs.ai/v1",
-		Type:                catwalk.TypeOpenAI,
+		Type:                catwalk.TypeResponses,
 		DefaultLargeModelID: "qwen3-coder-30b-a3b-instruct",
 		DefaultSmallModelID: "glm-4.7-flash",
 		Models:              models,

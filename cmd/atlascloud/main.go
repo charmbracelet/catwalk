@@ -116,7 +116,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderAtlasCloud,
 		APIKey:              "$ATLASCLOUD_API_KEY",
 		APIEndpoint:         "https://api.atlascloud.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "zai-org/glm-5.2",
 		DefaultSmallModelID: "deepseek-ai/deepseek-v4-flash",
 		Models:              []catwalk.Model{},

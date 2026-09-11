@@ -1,7 +1,7 @@
 {
   "name": "Scaleway",
   "id": "scaleway",
-  "type": "openai-compat",
+  "type": "completions",
   "api_key": "$SCW_SECRET_KEY",
   "api_endpoint": "https://api.scaleway.ai/v1",
   "default_large_model_id": "qwen3.6-35b-a3b",
