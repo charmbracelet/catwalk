@@ -146,9 +146,11 @@ func main() {
 		// Check if model supports reasoning
 		canReason := slices.Contains(model.Tags, "reasoning")
 
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if canReason {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			var reasoningLevels []string
+			var defaultReasoning string
 			switch {
 			case strings.HasPrefix(model.ID, "anthropic/"):
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
@@ -163,6 +165,8 @@ func main() {
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoning = "medium"
 			}
+			reasoning.EffortLevels = catwalk.NewEffortLevels(reasoningLevels...)
+			reasoning.DefaultEffortLevel = defaultReasoning
 		}
 
 		// Check if model supports images
@@ -177,12 +181,10 @@ func main() {
 				CacheCreate: costCacheCreate,
 				CacheHit:    costCacheHit,
 			},
-			ContextWindow:          model.ContextWindow,
-			DefaultMaxTokens:       cmp.Or(model.MaxTokens, model.ContextWindow/10),
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
+			ContextWindow:    model.ContextWindow,
+			DefaultMaxTokens: cmp.Or(model.MaxTokens, model.ContextWindow/10),
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		vercelProvider.Models = append(vercelProvider.Models, m)

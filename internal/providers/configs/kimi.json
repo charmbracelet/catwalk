@@ -1,9 +1,9 @@
 {
   "name": "Kimi Coding",
   "id": "kimi-coding",
-  "type": "anthropic",
   "api_key": "$KIMI_CODING_API_KEY",
   "api_endpoint": "https://api.kimi.com/coding",
+  "type": "anthropic",
   "default_large_model_id": "k3",
   "default_small_model_id": "kimi-for-coding",
   "models": [
@@ -16,7 +16,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -30,7 +32,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -44,7 +48,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -58,7 +64,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }

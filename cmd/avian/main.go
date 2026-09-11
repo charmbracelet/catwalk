@@ -82,11 +82,13 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if model.Reasoning {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		m := catwalk.Model{
@@ -97,12 +99,10 @@ func main() {
 				Output:   model.Pricing.OutputPerMillion,
 				CacheHit: model.Pricing.CacheReadPerMillion,
 			},
-			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.MaxOutput,
-			CanReason:              model.Reasoning,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			Capabilities:           catwalk.Capabilities{Vision: false},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: model.MaxOutput,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: false},
 		}
 
 		avianProvider.Models = append(avianProvider.Models, m)
