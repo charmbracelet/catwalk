@@ -82,8 +82,8 @@
     {
       "id": "glm-5.3-flash",
       "name": "glm-5.3-flash",
-      "cost_per_1m_in": 0.18,
-      "cost_per_1m_out": 0.449,
+      "cost_per_1m_in": 0.09,
+      "cost_per_1m_out": 0.314,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
@@ -100,8 +100,8 @@
     {
       "id": "qwen3.8-27b",
       "name": "qwen3.8-27b",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in": 0.09,
+      "cost_per_1m_out": 0.359,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
@@ -190,8 +190,8 @@
     {
       "id": "deepseek-v4-flash-0731",
       "name": "deepseek-v4-flash-0731",
-      "cost_per_1m_in": 0.117,
-      "cost_per_1m_out": 0.251,
+      "cost_per_1m_in": 0.081,
+      "cost_per_1m_out": 0.153,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
