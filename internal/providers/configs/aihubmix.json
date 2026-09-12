@@ -4646,6 +4646,18 @@
       "supports_attachments": true
     },
     {
+      "id": "qwen-3.8-27b",
+      "name": "Qwen 3.8 27B",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 1.65,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "qwen3-235b-a22b",
       "name": "Qwen3 235B A22B",
       "cost_per_1m_in": 0.28,
