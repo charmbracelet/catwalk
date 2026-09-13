@@ -23,7 +23,7 @@
         "max"
       ],
       "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "deepseek-v4-pro",
