@@ -28,7 +28,8 @@
       "default_reasoning_effort": "minimal",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-5-mini",
@@ -50,7 +51,8 @@
       "default_reasoning_effort": "low",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-5-nano",
@@ -72,7 +74,8 @@
       "default_reasoning_effort": "low",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "codex-mini-latest",
@@ -93,7 +96,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o4-mini",
@@ -110,7 +114,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o3",
@@ -131,7 +136,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o3-pro",
@@ -151,7 +157,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.1",
@@ -166,7 +173,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.1-mini",
@@ -181,7 +189,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.1-nano",
@@ -196,7 +205,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4.5-preview",
@@ -211,7 +221,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "o3-mini",
@@ -247,7 +258,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     },
     {
       "id": "gpt-4o-mini",
@@ -263,7 +275,8 @@
       "reasoning_effort": "",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 50
     }
   ]
 }
