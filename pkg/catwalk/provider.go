@@ -111,11 +111,8 @@ type Model struct {
 	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
 	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
 	Capabilities           Capabilities `json:"capabilities"`
-	// MaxAttachments is the maximum number of attachments (e.g. images)
-	// allowed in a single request. Zero means the provider does not
-	// enforce a hard limit; context window limits still apply.
-	MaxAttachments int          `json:"max_attachments,omitempty"`
-	Options        ModelOptions `json:"options,omitzero"`
+	MaxAttachments         int          `json:"max_attachments,omitempty"`
+	Options                ModelOptions `json:"options,omitzero"`
 }
 
 // KnownProviders returns all the known inference providers.
