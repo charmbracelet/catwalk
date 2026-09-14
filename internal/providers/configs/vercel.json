@@ -517,12 +517,12 @@
     {
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.03,
-      "context_window": 1048576,
-      "default_max_tokens": 32768,
+      "cost_per_1m_out_cached": 0.015,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -575,8 +575,44 @@
       "supports_attachments": true
     },
     {
+      "id": "sakana/fugu-max",
+      "name": "Fugu Max",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.25,
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "sakana/fugu-ultra",
       "name": "Fugu Ultra",
+      "cost_per_1m_in": 5,
+      "cost_per_1m_out": 30,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.5,
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "sakana/fugu-ultra-v2",
+      "name": "Fugu Ultra v2",
       "cost_per_1m_in": 5,
       "cost_per_1m_out": 30,
       "cost_per_1m_in_cached": 0,
@@ -2560,6 +2596,42 @@
       "supports_attachments": false
     },
     {
+      "id": "inclusionai/ling-3.0-flash-vl",
+      "name": "Ling 3.0 Flash VL",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-vl-free",
+      "name": "Ling 3.0 Flash VL (Free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 32000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "meta/llama-3.1-70b",
       "name": "Llama 3.1 70B Instruct",
       "cost_per_1m_in": 0.72,
@@ -3756,6 +3828,24 @@
       "cost_per_1m_out_cached": 0.05,
       "context_window": 256000,
       "default_max_tokens": 32000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "bytedance/seed-2.1-turbo",
+      "name": "Seed 2.1 Turbo",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 2.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.1,
+      "context_window": 262144,
+      "default_max_tokens": 262144,
       "can_reason": true,
       "reasoning_levels": [
         "low",
