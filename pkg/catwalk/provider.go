@@ -73,6 +73,14 @@ type Provider struct {
 	DefaultSmallModelID string            `json:"default_small_model_id,omitempty"`
 	Models              []Model           `json:"models,omitempty"`
 	DefaultHeaders      map[string]string `json:"default_headers,omitempty"`
+
+	// SessionAffinityHeader is the name of the HTTP header the provider
+	// requires to carry a stable per-conversation ID, so requests from
+	// the same conversation can be routed together (e.g. for prompt
+	// caching). Clients should send it with one stable ID per
+	// conversation, alongside any standard session headers they already
+	// send. It is empty for providers that have no such requirement.
+	SessionAffinityHeader string `json:"session_affinity_header,omitempty"`
 }
 
 // ModelOptions stores extra options for models.

@@ -133,13 +133,14 @@ func main() {
 	}
 
 	zenProvider := catwalk.Provider{
-		Name:                "OpenCode Zen",
-		ID:                  catwalk.InferenceProviderOpenCodeZen,
-		APIKey:              "$OPENCODE_API_KEY",
-		APIEndpoint:         "https://opencode.ai/zen/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "deepseek-v4-flash-free",
-		DefaultSmallModelID: "deepseek-v4-flash-free",
+		Name:                  "OpenCode Zen",
+		ID:                    catwalk.InferenceProviderOpenCodeZen,
+		APIKey:                "$OPENCODE_API_KEY",
+		APIEndpoint:           "https://opencode.ai/zen/v1",
+		Type:                  catwalk.TypeOpenAICompat,
+		SessionAffinityHeader: "x-opencode-session",
+		DefaultLargeModelID:   "deepseek-v4-flash-free",
+		DefaultSmallModelID:   "deepseek-v4-flash-free",
 	}
 
 	for _, zenModel := range zenModels {
