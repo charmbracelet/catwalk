@@ -23,7 +23,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-fable-5",
@@ -41,7 +42,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-5",
@@ -59,7 +61,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-4-8",
@@ -77,7 +80,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-4-7",
@@ -95,7 +99,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-opus-4-6",
@@ -113,7 +118,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-opus-4-5-20251101",
@@ -131,7 +137,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-sonnet-5",
@@ -149,7 +156,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-sonnet-4-6",
@@ -167,7 +175,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-sonnet-4-5-20250929",
@@ -183,7 +192,8 @@
       "can_reason": true,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-haiku-4-5-20251001",
@@ -199,7 +209,8 @@
       "can_reason": true,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-opus-4-1-20250805",
@@ -215,7 +226,8 @@
       "can_reason": true,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-opus-4-20250514",
@@ -231,7 +243,8 @@
       "can_reason": true,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-sonnet-4-20250514",
@@ -247,7 +260,8 @@
       "can_reason": true,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 100
     },
     {
       "id": "claude-mythos-5-1",
@@ -265,7 +279,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     },
     {
       "id": "claude-mythos-5",
@@ -283,7 +298,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 600
     }
   ]
 }

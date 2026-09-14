@@ -23,7 +23,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.6-flash",
@@ -40,7 +41,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.5-flash",
@@ -57,7 +59,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.5-flash-lite",
@@ -75,7 +78,8 @@
       "default_reasoning_effort": "minimal",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.1-pro-preview-customtools",
@@ -92,7 +96,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.1-flash-lite",
@@ -110,7 +115,8 @@
       "default_reasoning_effort": "minimal",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3-pro-preview",
@@ -127,7 +133,8 @@
       "default_reasoning_effort": "high",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3-flash-preview",
@@ -144,7 +151,8 @@
       "default_reasoning_effort": "minimal",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-2.5-pro",
@@ -159,7 +167,8 @@
       "can_reason": true,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-2.5-flash",
@@ -174,7 +183,8 @@
       "can_reason": true,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 10
     }
   ]
 }

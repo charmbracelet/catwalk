@@ -23,7 +23,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.6-terra",
@@ -41,7 +42,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.6-luna",
@@ -59,7 +61,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.5",
@@ -76,7 +79,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.5-pro",
@@ -92,7 +96,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.4",
@@ -109,7 +114,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.4-pro",
@@ -125,7 +131,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.4-mini",
@@ -142,7 +149,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.4-nano",
@@ -159,7 +167,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.3-codex",
@@ -177,7 +186,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.2",
@@ -195,7 +205,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.2-codex",
@@ -213,7 +224,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.1",
@@ -231,7 +243,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.1-codex",
@@ -249,7 +262,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.1-codex-max",
@@ -267,7 +281,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5.1-codex-mini",
@@ -285,7 +300,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5-codex",
@@ -303,7 +319,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5",
@@ -321,7 +338,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5-mini",
@@ -339,7 +357,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-5-nano",
@@ -357,7 +376,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "o4-mini",
@@ -374,7 +394,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "o3",
@@ -391,7 +412,8 @@
       "default_reasoning_effort": "medium",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-4.1",
@@ -406,7 +428,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-4.1-mini",
@@ -421,7 +444,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-4.1-nano",
@@ -436,7 +460,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "o3-mini",
@@ -468,7 +493,8 @@
       "can_reason": false,
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     },
     {
       "id": "gpt-4o-mini",
@@ -484,7 +510,8 @@
       "reasoning_effort": "",
       "capabilities": {
         "vision": true
-      }
+      },
+      "max_attachments": 1500
     }
   ]
 }
