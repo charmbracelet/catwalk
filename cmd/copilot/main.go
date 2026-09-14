@@ -110,6 +110,7 @@ func run() error {
 			strings.HasPrefix(m.ID, "exec-agent") ||
 			strings.HasPrefix(m.ID, "search-agent") ||
 			strings.HasPrefix(m.ID, "copilot-search") ||
+			strings.HasSuffix(m.ID, "-base") || strings.HasSuffix(m.ID, "-copilot") ||
 			m.ID == "gpt-4-o-preview" ||
 			m.ID == "trajectory-compaction"
 	})
