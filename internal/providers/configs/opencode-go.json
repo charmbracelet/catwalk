@@ -266,6 +266,7 @@
     },
     {
       "id": "gpt-5.6-luna",
+      "type": "responses",
       "name": "GPT-5.6 Luna",
       "pricing": {
         "input": 0.2,
@@ -298,6 +299,7 @@
     },
     {
       "id": "grok-4.5",
+      "type": "responses",
       "name": "Grok 4.5",
       "pricing": {
         "input": 2,
@@ -330,6 +332,7 @@
     },
     {
       "id": "grok-4.6",
+      "type": "responses",
       "name": "Grok 4.6",
       "pricing": {
         "input": 2,
@@ -712,6 +715,7 @@
     },
     {
       "id": "minimax-m2.5",
+      "type": "messages",
       "name": "MiniMax-M2.5",
       "pricing": {
         "input": 0.3,
@@ -744,6 +748,7 @@
     },
     {
       "id": "minimax-m2.7",
+      "type": "messages",
       "name": "MiniMax-M2.7",
       "pricing": {
         "input": 0.3,
@@ -776,6 +781,7 @@
     },
     {
       "id": "minimax-m3",
+      "type": "messages",
       "name": "MiniMax-M3",
       "pricing": {
         "input": 0.3,
@@ -808,6 +814,7 @@
     },
     {
       "id": "muse-spark-1.2-contributor",
+      "type": "responses",
       "name": "Muse Spark 1.2 Contributor",
       "pricing": {
         "input": 0.1,
@@ -839,6 +846,7 @@
     },
     {
       "id": "muse-spark-1.3-contributor",
+      "type": "responses",
       "name": "Muse Spark 1.3 Contributor",
       "pricing": {
         "input": 0.1,
@@ -933,6 +941,7 @@
     },
     {
       "id": "qwen3.6-plus",
+      "type": "messages",
       "name": "Qwen3.6 Plus",
       "pricing": {
         "input": 0.5,
@@ -965,6 +974,7 @@
     },
     {
       "id": "qwen3.7-max",
+      "type": "messages",
       "name": "Qwen3.7 Max",
       "pricing": {
         "input": 2.5,
@@ -997,6 +1007,7 @@
     },
     {
       "id": "qwen3.7-plus",
+      "type": "messages",
       "name": "Qwen3.7 Plus",
       "pricing": {
         "input": 0.4,
@@ -1029,6 +1040,7 @@
     },
     {
       "id": "qwen3.8-flash",
+      "type": "messages",
       "name": "Qwen3.8 Flash",
       "pricing": {
         "input": 0.15,
@@ -1061,6 +1073,7 @@
     },
     {
       "id": "qwen3.8-max",
+      "type": "messages",
       "name": "Qwen3.8 Max",
       "pricing": {
         "input": 2,
