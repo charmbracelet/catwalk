@@ -156,9 +156,7 @@ func effortLevelDisplay(value string) string {
 
 // Model represents an AI model configuration.
 type Model struct {
-	ID string `json:"id"`
-	// Type optionally overrides the provider's endpoint type for this model.
-	// When empty, the provider's Type is used.
+	ID               string       `json:"id"`
 	Type             Type         `json:"type,omitempty"`
 	Name             string       `json:"name"`
 	Pricing          Pricing      `json:"pricing"`
