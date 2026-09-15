@@ -16,7 +16,9 @@
       },
       "context_window": 512000,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -30,7 +32,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -56,7 +60,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -79,7 +85,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -102,7 +110,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -116,7 +126,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -130,7 +142,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -144,7 +158,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -158,7 +174,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -172,7 +190,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -186,7 +206,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -200,7 +222,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -214,7 +238,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -228,7 +254,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -242,7 +270,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -256,7 +286,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -270,7 +302,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -284,7 +318,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -298,7 +334,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -312,7 +350,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }

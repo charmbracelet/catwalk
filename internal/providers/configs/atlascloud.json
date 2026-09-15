@@ -17,7 +17,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -32,7 +34,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -47,7 +51,9 @@
       },
       "context_window": 163840,
       "default_max_tokens": 16384,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -62,7 +68,9 @@
       },
       "context_window": 163840,
       "default_max_tokens": 16384,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -77,7 +85,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -92,7 +102,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -107,7 +119,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -122,7 +136,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -137,7 +153,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -152,7 +170,9 @@
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -167,7 +187,9 @@
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -182,7 +204,9 @@
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -197,7 +221,9 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -212,7 +238,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -240,7 +268,9 @@
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -255,7 +285,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -270,7 +302,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -285,7 +319,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -300,7 +336,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -315,7 +353,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -330,7 +370,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -345,7 +387,9 @@
       },
       "context_window": 1048756,
       "default_max_tokens": 131072,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -360,7 +404,9 @@
       },
       "context_window": 196608,
       "default_max_tokens": 19660,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -375,7 +421,9 @@
       },
       "context_window": 196608,
       "default_max_tokens": 19660,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -390,7 +438,9 @@
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -405,7 +455,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -420,7 +472,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -435,7 +489,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -450,7 +506,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -465,7 +523,9 @@
       },
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -480,7 +540,9 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 32768,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }

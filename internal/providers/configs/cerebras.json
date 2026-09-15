@@ -19,13 +19,24 @@
       },
       "context_window": 131072,
       "default_max_tokens": 25000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -41,13 +52,24 @@
       },
       "context_window": 131072,
       "default_max_tokens": 25000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": false
       }
@@ -61,14 +83,28 @@
       },
       "context_window": 65536,
       "default_max_tokens": 25000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "high",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
       "temperature": 1,
       "top_p": 0.95,
       "capabilities": {

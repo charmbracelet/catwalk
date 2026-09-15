@@ -95,15 +95,13 @@ func main() {
 		isDeepSeek := strings.Contains(m.ID, "deepseek") || strings.Contains(m.Label, "DeepSeek")
 		isQwen := strings.Contains(m.ID, "Qwen") || strings.Contains(m.Label, "Qwen3")
 
-		var (
-			canReason        bool
-			reasoningLevels  []string
-			defaultReasoning string
-		)
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if isDeepSeek || isQwen {
-			canReason = true
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		model := catwalk.Model{
@@ -113,11 +111,9 @@ func main() {
 				Input:  roundCost(m.InputPrice),
 				Output: roundCost(m.OutputPrice),
 			},
-			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
+			ContextWindow:    contextWindow,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
 		}
 		models = append(models, model)
 	}
