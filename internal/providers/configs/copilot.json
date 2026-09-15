@@ -1,7 +1,7 @@
 {
   "name": "GitHub Copilot",
   "id": "copilot",
-  "api_endpoint": "https://api.githubcopilot.com",
+  "api_endpoint": "https://api.individual.githubcopilot.com",
   "type": "completions",
   "default_large_model_id": "claude-sonnet-5",
   "default_small_model_id": "claude-haiku-4.5",
@@ -175,6 +175,22 @@
       },
       "context_window": 264000,
       "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 265536,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "never"
       },
@@ -415,6 +431,23 @@
       }
     },
     {
+      "id": "gpt-6-astra",
+      "type": "responses",
+      "name": "GPT-6 Astra",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "grok-4.5",
       "type": "responses",
       "name": "Grok 4.5",
@@ -467,6 +500,38 @@
     {
       "id": "kimi-k3",
       "name": "Kimi K3",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "kimi-k3-base",
+      "name": "Kimi K3 (GitHub)",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "kimi-k3-copilot",
+      "name": "Kimi K3 (GitHub)",
       "pricing": {
         "input": 0,
         "output": 0
