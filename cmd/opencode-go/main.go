@@ -85,13 +85,14 @@ func main() {
 	}
 
 	goProvider := catwalk.Provider{
-		Name:                "OpenCode Go",
-		ID:                  catwalk.InferenceProviderOpenCodeGo,
-		APIKey:              "$OPENCODE_API_KEY",
-		APIEndpoint:         "https://opencode.ai/zen/go/v1",
-		Type:                catwalk.TypeCompletions,
-		DefaultLargeModelID: "minimax-m2.7",
-		DefaultSmallModelID: "minimax-m2.7",
+		Name:                  "OpenCode Go",
+		ID:                    catwalk.InferenceProviderOpenCodeGo,
+		APIKey:                "$OPENCODE_API_KEY",
+		APIEndpoint:           "https://opencode.ai/zen/go/v1",
+		Type:                  catwalk.TypeCompletions,
+		SessionAffinityHeader: "x-opencode-session",
+		DefaultLargeModelID:   "minimax-m2.7",
+		DefaultSmallModelID:   "minimax-m2.7",
 	}
 
 	for _, goModel := range goModels {
