@@ -130,9 +130,7 @@ func run() error {
 		return strings.Compare(a.ID, b.ID)
 	})
 
-	if apiEndpoint == "" {
-		apiEndpoint = "https://api.githubcopilot.com"
-	}
+	apiEndpoint = cmp.Or(apiEndpoint, "https://api.githubcopilot.com")
 
 	provider := catwalk.Provider{
 		ID:                  catwalk.InferenceProviderCopilot,
