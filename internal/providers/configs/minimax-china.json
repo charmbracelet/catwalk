@@ -1,9 +1,9 @@
 {
   "name": "MiniMax China",
   "id": "minimax-china",
-  "type": "anthropic",
   "api_key": "$MINIMAX_API_KEY",
   "api_endpoint": "https://api.minimaxi.com/anthropic",
+  "type": "anthropic",
   "default_large_model_id": "MiniMax-M2.7",
   "default_small_model_id": "MiniMax-M2.7",
   "models": [
@@ -18,6 +18,9 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 512000,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -33,6 +36,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -48,6 +54,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -63,6 +72,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -78,6 +90,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -93,6 +108,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -108,6 +126,9 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -123,6 +144,9 @@
       },
       "context_window": 196608,
       "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }

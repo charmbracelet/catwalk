@@ -99,14 +99,13 @@ func main() {
 			continue
 		}
 
-		var (
-			canReason        = hasFeature(m, "reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
-		)
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if hasFeature(m, "reasoning") {
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		model := catwalk.Model{
@@ -117,12 +116,10 @@ func main() {
 				Output:   roundCost(m.Pricing.Completion),
 				CacheHit: roundCost(m.Pricing.InputCacheRead),
 			},
-			ContextWindow:          m.ContextLength,
-			DefaultMaxTokens:       m.MaxOutputLength,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			Capabilities:           catwalk.Capabilities{Vision: hasModality(m, "image")},
+			ContextWindow:    m.ContextLength,
+			DefaultMaxTokens: m.MaxOutputLength,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: hasModality(m, "image")},
 		}
 		models = append(models, model)
 	}

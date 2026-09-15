@@ -251,6 +251,7 @@ func modelToCatwalk(m Model) catwalk.Model {
 		Name:             m.Name,
 		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
 		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
+		Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
 		Capabilities:     catwalk.Capabilities{Vision: m.Capabilities.Supports.Vision},
 	}
 }

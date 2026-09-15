@@ -1,9 +1,9 @@
 {
   "name": "Scaleway",
   "id": "scaleway",
-  "type": "openai-compat",
   "api_key": "$SCW_SECRET_KEY",
   "api_endpoint": "https://api.scaleway.ai/v1",
+  "type": "openai-compat",
   "default_large_model_id": "qwen3.6-35b-a3b",
   "default_small_model_id": "gemma-4-26b-a4b-it",
   "models": [
@@ -16,7 +16,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -30,7 +32,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -44,7 +48,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": true
       }
@@ -58,7 +64,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -72,7 +80,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
-      "can_reason": true,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
       "capabilities": {
         "vision": false
       }
@@ -86,6 +96,9 @@
       },
       "context_window": 100000,
       "default_max_tokens": 16384,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -99,6 +112,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -112,6 +128,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -125,6 +144,9 @@
       },
       "context_window": 32000,
       "default_max_tokens": 16384,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -138,6 +160,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }
@@ -151,6 +176,9 @@
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": false
       }
@@ -164,6 +192,9 @@
       },
       "context_window": 40000,
       "default_max_tokens": 8192,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       }

@@ -1,9 +1,9 @@
 {
   "name": "OpenAI",
   "id": "openai",
-  "type": "openai",
   "api_key": "$OPENAI_API_KEY",
   "api_endpoint": "$OPENAI_API_ENDPOINT",
+  "type": "openai",
   "default_large_model_id": "gpt-5.6-sol",
   "default_small_model_id": "gpt-5.6-luna",
   "models": [
@@ -18,9 +18,36 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["none", "low", "medium", "high", "xhigh", "max"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -37,9 +64,36 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["none", "low", "medium", "high", "xhigh", "max"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -56,9 +110,36 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["none", "low", "medium", "high", "xhigh", "max"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -74,9 +155,28 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "xhigh"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -91,9 +191,28 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "xhigh"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -109,9 +228,28 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "xhigh"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -126,9 +264,24 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["medium", "high", "xhigh"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -144,9 +297,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "xhigh"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -162,9 +334,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "xhigh"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -181,9 +372,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -200,9 +410,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -219,9 +448,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -238,9 +486,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -257,9 +524,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -276,9 +562,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -295,9 +600,24 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -314,9 +634,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -333,9 +672,28 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["minimal", "low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -352,9 +710,24 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -371,9 +744,24 @@
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -389,9 +777,24 @@
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -407,9 +810,24 @@
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": true
       },
@@ -425,7 +843,9 @@
       },
       "context_window": 1047576,
       "default_max_tokens": 16384,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       },
@@ -441,7 +861,9 @@
       },
       "context_window": 1047576,
       "default_max_tokens": 16384,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       },
@@ -457,7 +879,9 @@
       },
       "context_window": 1047576,
       "default_max_tokens": 16384,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       },
@@ -473,9 +897,24 @@
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high"],
-      "default_reasoning_effort": "medium",
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": {
         "vision": false
       }
@@ -490,7 +929,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 8192,
-      "can_reason": false,
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       },
@@ -506,8 +947,9 @@
       },
       "context_window": 128000,
       "default_max_tokens": 8192,
-      "can_reason": false,
-      "reasoning_effort": "",
+      "reasoning": {
+        "thinking": "never"
+      },
       "capabilities": {
         "vision": true
       },

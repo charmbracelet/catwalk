@@ -99,9 +99,11 @@ func main() {
 		costPerTokenOut := math.Round(goModel.Cost.Output*100) / 100
 		costCacheHit := math.Round(goModel.Cost.CacheRead*100) / 100
 
-		var reasoningLevels []string
-		var defaultReasoningEffort string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if goModel.Reasoning {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			var reasoningLevels []string
+			var defaultReasoningEffort string
 			switch {
 			case strings.Contains(goModel.ID, "deepseek-v4"):
 				reasoningLevels = []string{"low", "high", "max"}
@@ -122,6 +124,8 @@ func main() {
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoningEffort = "medium"
 			}
+			reasoning.EffortLevels = catwalk.NewEffortLevels(reasoningLevels...)
+			reasoning.DefaultEffortLevel = defaultReasoningEffort
 		}
 
 		m := catwalk.Model{
@@ -132,12 +136,10 @@ func main() {
 				Output:   costPerTokenOut,
 				CacheHit: costCacheHit,
 			},
-			ContextWindow:          goModel.Limit.Context,
-			DefaultMaxTokens:       goModel.Limit.Output,
-			Capabilities:           catwalk.Capabilities{Vision: goModel.Attachment},
-			CanReason:              goModel.Reasoning,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoningEffort,
+			ContextWindow:    goModel.Limit.Context,
+			DefaultMaxTokens: goModel.Limit.Output,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: goModel.Attachment},
 		}
 
 		goProvider.Models = append(goProvider.Models, m)

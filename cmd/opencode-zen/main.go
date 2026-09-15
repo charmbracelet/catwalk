@@ -148,9 +148,7 @@ func main() {
 		var costInput, costOutput, costCacheCreate, costCacheHit float64
 		var contextWindow, defaultMaxTokens int64 = 200000, 20000
 		var supportsImages bool
-		var canReason bool
-		var reasoningLevels []string
-		var defaultReasoningEffort string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		modelName := zenModel.ID
 
 		if hasEnrichment {
@@ -164,8 +162,10 @@ func main() {
 			modelName = enrichment.Name
 
 			if enrichment.Reasoning {
-				canReason = true
+				reasoning.Thinking = catwalk.ThinkingToggleable
 
+				var reasoningLevels []string
+				var defaultReasoningEffort string
 				switch {
 				case strings.Contains(zenModel.ID, "deepseek-v4"):
 					reasoningLevels = []string{"low", "high", "max"}
@@ -186,6 +186,8 @@ func main() {
 					reasoningLevels = []string{"low", "medium", "high"}
 					defaultReasoningEffort = "medium"
 				}
+				reasoning.EffortLevels = catwalk.NewEffortLevels(reasoningLevels...)
+				reasoning.DefaultEffortLevel = defaultReasoningEffort
 			}
 		} else {
 			log.Printf("WARNING: No enrichment found for model %s, using defaults\n", zenModel.ID)
@@ -200,12 +202,10 @@ func main() {
 				CacheCreate: costCacheCreate,
 				CacheHit:    costCacheHit,
 			},
-			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
-			Capabilities:           catwalk.Capabilities{Vision: supportsImages},
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoningEffort,
+			ContextWindow:    contextWindow,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		zenProvider.Models = append(zenProvider.Models, m)

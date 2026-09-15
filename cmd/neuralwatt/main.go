@@ -150,15 +150,17 @@ func main() {
 			defaultMaxTokens = model.MaxModelLen / 10
 		}
 
-		var reasoningLevels []string
-		var defaultReasoning string
-		if meta.Capabilities.Reasoning && meta.Capabilities.ReasoningEffort {
-			if strings.HasPrefix(model.ID, "glm-5.2") {
-				reasoningLevels = []string{"minimal", "high", "xhigh"}
-				defaultReasoning = "xhigh"
-			} else {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoning = "medium"
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if meta.Capabilities.Reasoning {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			if meta.Capabilities.ReasoningEffort {
+				if strings.HasPrefix(model.ID, "glm-5.2") {
+					reasoning.EffortLevels = catwalk.NewEffortLevels("minimal", "high", "xhigh")
+					reasoning.DefaultEffortLevel = "xhigh"
+				} else {
+					reasoning.EffortLevels = catwalk.NewEffortLevels("low", "medium", "high")
+					reasoning.DefaultEffortLevel = "medium"
+				}
 			}
 		}
 
@@ -176,12 +178,10 @@ func main() {
 				CacheCreate: roundCost(costCacheCreate),
 				CacheHit:    roundCost(costCacheHit),
 			},
-			ContextWindow:          model.MaxModelLen,
-			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              meta.Capabilities.Reasoning,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			Capabilities:           catwalk.Capabilities{Vision: meta.Capabilities.Vision},
+			ContextWindow:    model.MaxModelLen,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: meta.Capabilities.Vision},
 		}
 
 		neuralwattProvider.Models = append(neuralwattProvider.Models, m)
