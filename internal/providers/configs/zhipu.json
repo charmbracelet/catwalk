@@ -3,7 +3,7 @@
   "id": "zhipu",
   "api_key": "$ZHIPU_API_KEY",
   "api_endpoint": "https://open.bigmodel.cn/api/paas/v4",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "glm-4.7",
   "default_small_model_id": "glm-4.7-flash",
   "models": [

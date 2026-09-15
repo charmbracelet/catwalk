@@ -3,7 +3,7 @@
   "id": "groq",
   "api_key": "$GROQ_API_KEY",
   "api_endpoint": "https://api.groq.com/openai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "moonshotai/kimi-k2-instruct-0905",
   "default_small_model_id": "qwen/qwen3-32b",
   "models": [

@@ -3,7 +3,7 @@
   "id": "nebius",
   "api_key": "$NEBIUS_API_KEY",
   "api_endpoint": "https://api.tokenfactory.nebius.com/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "moonshotai/Kimi-K2.5",
   "default_small_model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
   "models": [

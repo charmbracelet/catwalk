@@ -77,6 +77,25 @@ type Policy struct {
 
 var versionedModelRegexp = regexp.MustCompile(`-\d{4}-\d{2}-\d{2}$`)
 
+// copilotResponsesModels are the models served through the OpenAI Responses
+// API instead of Chat Completions. All other Copilot models use Chat
+// Completions.
+var copilotResponsesModels = map[string]bool{
+	"gpt-5.2":       true,
+	"gpt-5.2-codex": true,
+	"gpt-5.3-codex": true,
+	"gpt-5.4":       true,
+	"gpt-5.4-mini":  true,
+	"gpt-5.5":       true,
+	"gpt-5-mini":    true,
+	"gpt-5.6-luna":  true,
+	"gpt-5.6-terra": true,
+	"gpt-5.6-sol":   true,
+	"gpt-6-astra":   true,
+	"grok-4.5":      true,
+	"grok-4.6":      true,
+}
+
 func main() {
 	if err := run(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
@@ -134,7 +153,7 @@ func run() error {
 		Name:                "GitHub Copilot",
 		Models:              catwalkModels,
 		APIEndpoint:         "https://api.githubcopilot.com",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "claude-sonnet-5",
 		DefaultSmallModelID: "claude-haiku-4.5",
 	}
@@ -249,11 +268,21 @@ func modelToCatwalk(m Model) catwalk.Model {
 	return catwalk.Model{
 		ID:               m.ID,
 		Name:             m.Name,
+		Type:             modelEndpointType(m.ID),
 		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
 		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
 		Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
 		Capabilities:     catwalk.Capabilities{Vision: m.Capabilities.Supports.Vision},
 	}
+}
+
+// modelEndpointType returns the endpoint type override for the given model, or
+// the empty string when the model uses the provider's default endpoint type.
+func modelEndpointType(modelID string) catwalk.Type {
+	if copilotResponsesModels[modelID] {
+		return catwalk.TypeResponses
+	}
+	return ""
 }
 
 func copilotToken() string {

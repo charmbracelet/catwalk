@@ -3,7 +3,7 @@
   "id": "baseten",
   "api_key": "$BASETEN_API_KEY",
   "api_endpoint": "https://inference.baseten.co/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "deepseek-ai/DeepSeek-V4-Pro",
   "default_small_model_id": "openai/gpt-oss-120b",
   "models": [

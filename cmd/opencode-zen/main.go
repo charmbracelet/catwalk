@@ -137,7 +137,7 @@ func main() {
 		ID:                    catwalk.InferenceProviderOpenCodeZen,
 		APIKey:                "$OPENCODE_API_KEY",
 		APIEndpoint:           "https://opencode.ai/zen/v1",
-		Type:                  catwalk.TypeOpenAICompat,
+		Type:                  catwalk.TypeCompletions,
 		SessionAffinityHeader: "x-opencode-session",
 		DefaultLargeModelID:   "deepseek-v4-flash-free",
 		DefaultSmallModelID:   "deepseek-v4-flash-free",
@@ -197,6 +197,7 @@ func main() {
 		m := catwalk.Model{
 			ID:   zenModel.ID,
 			Name: modelName,
+			Type: modelEndpointType(zenModel.ID),
 			Pricing: catwalk.Pricing{
 				Input:       costInput,
 				Output:      costOutput,
@@ -230,4 +231,36 @@ func main() {
 	}
 
 	fmt.Printf("Generated opencode-zen.json with %d models\n", len(zenProvider.Models))
+}
+
+// modelEndpointType returns the endpoint type override for the given model,
+// or the empty string when the model uses the provider's default endpoint
+// type. See https://opencode.ai/docs/zen.
+func modelEndpointType(modelID string) catwalk.Type {
+	switch {
+	case isMessagesModel(modelID):
+		return catwalk.TypeMessages
+	case isResponsesModel(modelID):
+		return catwalk.TypeResponses
+	default:
+		return ""
+	}
+}
+
+// isMessagesModel reports whether the model is served through the Anthropic
+// Messages API instead of Chat Completions.
+func isMessagesModel(modelID string) bool {
+	return strings.HasPrefix(modelID, "claude-") ||
+		strings.HasPrefix(modelID, "qwen3.5-") ||
+		strings.HasPrefix(modelID, "qwen3.6-") ||
+		strings.HasPrefix(modelID, "qwen3.7-") ||
+		strings.HasPrefix(modelID, "qwen3.8-")
+}
+
+// isResponsesModel reports whether the model is served through the OpenAI
+// Responses API instead of Chat Completions.
+func isResponsesModel(modelID string) bool {
+	return strings.HasPrefix(modelID, "gpt-") ||
+		strings.HasPrefix(modelID, "grok-") ||
+		strings.HasPrefix(modelID, "muse-spark-")
 }
