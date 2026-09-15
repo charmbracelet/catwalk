@@ -185,14 +185,18 @@
     {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
       "context_window": 265536,
       "default_max_tokens": 65536,
-      "can_reason": false,
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-3.5-turbo",
@@ -428,15 +432,20 @@
     },
     {
       "id": "gpt-6-astra",
+      "type": "responses",
       "name": "GPT-6 Astra",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "can_reason": false,
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "grok-4.5",
