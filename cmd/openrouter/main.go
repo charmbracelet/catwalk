@@ -251,7 +251,7 @@ func main() {
 		ID:                  "openrouter",
 		APIKey:              "$OPENROUTER_API_KEY",
 		APIEndpoint:         "https://openrouter.ai/api/v1",
-		Type:                catwalk.TypeOpenRouter,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4.6",
 		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
 		Models:              []catwalk.Model{},

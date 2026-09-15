@@ -3,7 +3,7 @@
   "id": "synthetic",
   "api_key": "$SYNTHETIC_API_KEY",
   "api_endpoint": "https://api.synthetic.new/openai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "syn:large:text",
   "default_small_model_id": "syn:small:text",
   "models": [

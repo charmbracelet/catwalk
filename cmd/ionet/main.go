@@ -45,7 +45,7 @@ func main() {
 		ID:                  "ionet",
 		APIKey:              "$IONET_API_KEY",
 		APIEndpoint:         "https://api.intelligence.io.solutions/api/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/Kimi-K2.5",
 		DefaultSmallModelID: "zai-org/GLM-4.7-Flash",
 	}

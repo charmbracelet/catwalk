@@ -3,7 +3,7 @@
   "id": "gemini",
   "api_key": "$GEMINI_API_KEY",
   "api_endpoint": "$GEMINI_API_ENDPOINT",
-  "type": "google",
+  "type": "completions",
   "default_large_model_id": "gemini-3.1-pro-preview-customtools",
   "default_small_model_id": "gemini-3-flash-preview",
   "models": [

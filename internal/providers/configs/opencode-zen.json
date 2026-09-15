@@ -3,7 +3,7 @@
   "id": "opencode-zen",
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "session_affinity_header": "x-opencode-session",
   "default_large_model_id": "deepseek-v4-flash-free",
   "default_small_model_id": "deepseek-v4-flash-free",
@@ -41,6 +41,7 @@
     },
     {
       "id": "claude-fable-5",
+      "type": "messages",
       "name": "Claude Fable 5",
       "pricing": {
         "input": 10,
@@ -74,6 +75,7 @@
     },
     {
       "id": "claude-fable-5-1",
+      "type": "messages",
       "name": "Claude Fable 5.1",
       "pricing": {
         "input": 10,
@@ -107,6 +109,7 @@
     },
     {
       "id": "claude-haiku-4-5",
+      "type": "messages",
       "name": "Claude Haiku 4.5",
       "pricing": {
         "input": 1,
@@ -140,6 +143,7 @@
     },
     {
       "id": "claude-opus-4-5",
+      "type": "messages",
       "name": "Claude Opus 4.5",
       "pricing": {
         "input": 5,
@@ -173,6 +177,7 @@
     },
     {
       "id": "claude-opus-4-6",
+      "type": "messages",
       "name": "Claude Opus 4.6",
       "pricing": {
         "input": 5,
@@ -206,6 +211,7 @@
     },
     {
       "id": "claude-opus-4-7",
+      "type": "messages",
       "name": "Claude Opus 4.7",
       "pricing": {
         "input": 5,
@@ -239,6 +245,7 @@
     },
     {
       "id": "claude-opus-4-8",
+      "type": "messages",
       "name": "Claude Opus 4.8",
       "pricing": {
         "input": 5,
@@ -272,6 +279,7 @@
     },
     {
       "id": "claude-opus-5",
+      "type": "messages",
       "name": "Claude Opus 5",
       "pricing": {
         "input": 5,
@@ -305,6 +313,7 @@
     },
     {
       "id": "claude-sonnet-4",
+      "type": "messages",
       "name": "Claude Sonnet 4",
       "pricing": {
         "input": 3,
@@ -338,6 +347,7 @@
     },
     {
       "id": "claude-sonnet-4-5",
+      "type": "messages",
       "name": "Claude Sonnet 4.5",
       "pricing": {
         "input": 3,
@@ -371,6 +381,7 @@
     },
     {
       "id": "claude-sonnet-4-6",
+      "type": "messages",
       "name": "Claude Sonnet 4.6",
       "pricing": {
         "input": 3,
@@ -404,6 +415,7 @@
     },
     {
       "id": "claude-sonnet-5",
+      "type": "messages",
       "name": "Claude Sonnet 5",
       "pricing": {
         "input": 2,
@@ -685,6 +697,7 @@
     },
     {
       "id": "gpt-5",
+      "type": "responses",
       "name": "GPT-5",
       "pricing": {
         "input": 1.07,
@@ -717,6 +730,7 @@
     },
     {
       "id": "gpt-5-codex",
+      "type": "responses",
       "name": "GPT-5 Codex",
       "pricing": {
         "input": 1.07,
@@ -749,6 +763,7 @@
     },
     {
       "id": "gpt-5-nano",
+      "type": "responses",
       "name": "GPT-5 Nano",
       "pricing": {
         "input": 0.05,
@@ -781,6 +796,7 @@
     },
     {
       "id": "gpt-5.1",
+      "type": "responses",
       "name": "GPT-5.1",
       "pricing": {
         "input": 1.07,
@@ -813,6 +829,7 @@
     },
     {
       "id": "gpt-5.1-codex",
+      "type": "responses",
       "name": "GPT-5.1 Codex",
       "pricing": {
         "input": 1.07,
@@ -845,6 +862,7 @@
     },
     {
       "id": "gpt-5.1-codex-max",
+      "type": "responses",
       "name": "GPT-5.1 Codex Max",
       "pricing": {
         "input": 1.25,
@@ -877,6 +895,7 @@
     },
     {
       "id": "gpt-5.1-codex-mini",
+      "type": "responses",
       "name": "GPT-5.1 Codex Mini",
       "pricing": {
         "input": 0.25,
@@ -909,6 +928,7 @@
     },
     {
       "id": "gpt-5.2",
+      "type": "responses",
       "name": "GPT-5.2",
       "pricing": {
         "input": 1.75,
@@ -941,6 +961,7 @@
     },
     {
       "id": "gpt-5.2-codex",
+      "type": "responses",
       "name": "GPT-5.2 Codex",
       "pricing": {
         "input": 1.75,
@@ -973,6 +994,7 @@
     },
     {
       "id": "gpt-5.3-codex",
+      "type": "responses",
       "name": "GPT-5.3 Codex",
       "pricing": {
         "input": 1.75,
@@ -1005,6 +1027,7 @@
     },
     {
       "id": "gpt-5.3-codex-spark",
+      "type": "responses",
       "name": "GPT-5.3 Codex Spark",
       "pricing": {
         "input": 1.75,
@@ -1037,6 +1060,7 @@
     },
     {
       "id": "gpt-5.4",
+      "type": "responses",
       "name": "GPT-5.4",
       "pricing": {
         "input": 2.5,
@@ -1069,6 +1093,7 @@
     },
     {
       "id": "gpt-5.4-mini",
+      "type": "responses",
       "name": "GPT-5.4 Mini",
       "pricing": {
         "input": 0.75,
@@ -1101,6 +1126,7 @@
     },
     {
       "id": "gpt-5.4-nano",
+      "type": "responses",
       "name": "GPT-5.4 Nano",
       "pricing": {
         "input": 0.2,
@@ -1133,6 +1159,7 @@
     },
     {
       "id": "gpt-5.4-pro",
+      "type": "responses",
       "name": "GPT-5.4 Pro",
       "pricing": {
         "input": 30,
@@ -1165,6 +1192,7 @@
     },
     {
       "id": "gpt-5.5",
+      "type": "responses",
       "name": "GPT-5.5",
       "pricing": {
         "input": 5,
@@ -1197,6 +1225,7 @@
     },
     {
       "id": "gpt-5.5-pro",
+      "type": "responses",
       "name": "GPT-5.5 Pro",
       "pricing": {
         "input": 30,
@@ -1229,6 +1258,7 @@
     },
     {
       "id": "gpt-5.6-luna",
+      "type": "responses",
       "name": "GPT-5.6 Luna",
       "pricing": {
         "input": 0.2,
@@ -1262,6 +1292,7 @@
     },
     {
       "id": "gpt-5.6-sol",
+      "type": "responses",
       "name": "GPT-5.6 Sol (50% Off)",
       "pricing": {
         "input": 2,
@@ -1295,6 +1326,7 @@
     },
     {
       "id": "gpt-5.6-terra",
+      "type": "responses",
       "name": "GPT-5.6 Terra",
       "pricing": {
         "input": 2.5,
@@ -1572,6 +1604,7 @@
     },
     {
       "id": "grok-4.5",
+      "type": "responses",
       "name": "Grok 4.5",
       "pricing": {
         "input": 2,
@@ -1604,6 +1637,7 @@
     },
     {
       "id": "grok-4.6",
+      "type": "responses",
       "name": "Grok 4.6",
       "pricing": {
         "input": 2,
@@ -1636,6 +1670,7 @@
     },
     {
       "id": "grok-build-0.1",
+      "type": "responses",
       "name": "Grok Build 0.1",
       "pricing": {
         "input": 1,
@@ -1985,6 +2020,7 @@
     },
     {
       "id": "muse-spark-1.2",
+      "type": "responses",
       "name": "Muse Spark 1.2",
       "pricing": {
         "input": 1.25,
@@ -2017,6 +2053,7 @@
     },
     {
       "id": "muse-spark-1.2-contributor-free",
+      "type": "responses",
       "name": "Muse Spark 1.2 Free",
       "pricing": {
         "input": 0,
@@ -2067,6 +2104,7 @@
     },
     {
       "id": "muse-spark-1.3-contributor-free",
+      "type": "responses",
       "name": "Muse Spark 1.3 Free",
       "pricing": {
         "input": 0,
@@ -2160,6 +2198,7 @@
     },
     {
       "id": "qwen3.5-plus",
+      "type": "messages",
       "name": "Qwen3.5 Plus",
       "pricing": {
         "input": 0.2,
@@ -2193,6 +2232,7 @@
     },
     {
       "id": "qwen3.6-plus",
+      "type": "messages",
       "name": "Qwen3.6 Plus",
       "pricing": {
         "input": 0.5,

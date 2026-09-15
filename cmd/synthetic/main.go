@@ -149,7 +149,7 @@ func main() {
 		ID:                  "synthetic",
 		APIKey:              "$SYNTHETIC_API_KEY",
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "syn:large:text",
 		DefaultSmallModelID: "syn:small:text",
 		Models:              []catwalk.Model{},
