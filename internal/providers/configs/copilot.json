@@ -1,7 +1,7 @@
 {
   "name": "GitHub Copilot",
   "id": "copilot",
-  "api_endpoint": "https://api.individual.githubcopilot.com",
+  "api_endpoint": "https://api.githubcopilot.com",
   "type": "completions",
   "default_large_model_id": "claude-sonnet-5",
   "default_small_model_id": "claude-haiku-4.5",
