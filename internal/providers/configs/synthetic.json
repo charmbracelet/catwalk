@@ -10,10 +10,10 @@
     {
       "id": "hf:deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.8,
+      "cost_per_1m_in": 0.6,
       "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0.16,
-      "cost_per_1m_out_cached": 0.16,
+      "cost_per_1m_in_cached": 0.09,
+      "cost_per_1m_out_cached": 0.09,
       "context_window": 524288,
       "default_max_tokens": 32768,
       "can_reason": true,
