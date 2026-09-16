@@ -64,7 +64,7 @@
       "cost_per_1m_out_cached": 0.84,
       "context_window": 1000000,
       "default_max_tokens": 128000,
-      "can_reason": false,
+      "can_reason": true,
       "supports_attachments": false
     },
     {
@@ -76,7 +76,7 @@
       "cost_per_1m_out_cached": 0.35,
       "context_window": 198000,
       "default_max_tokens": 32768,
-      "can_reason": true,
+      "can_reason": false,
       "supports_attachments": false
     },
     {
@@ -88,7 +88,7 @@
       "cost_per_1m_out_cached": 0.35,
       "context_window": 1000000,
       "default_max_tokens": 128000,
-      "can_reason": true,
+      "can_reason": false,
       "supports_attachments": false
     },
     {
@@ -148,7 +148,7 @@
       "cost_per_1m_out_cached": 0.21,
       "context_window": 198000,
       "default_max_tokens": 64000,
-      "can_reason": true,
+      "can_reason": false,
       "supports_attachments": false
     },
     {
@@ -160,7 +160,7 @@
       "cost_per_1m_out_cached": 0.21,
       "context_window": 1000000,
       "default_max_tokens": 64000,
-      "can_reason": true,
+      "can_reason": false,
       "supports_attachments": false
     },
     {
@@ -256,7 +256,7 @@
       "cost_per_1m_out_cached": 0.105,
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "can_reason": false,
+      "can_reason": true,
       "supports_attachments": true
     },
     {
@@ -269,7 +269,7 @@
       "context_window": 256000,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "gemini-3.1-flash-lite",
@@ -305,7 +305,7 @@
       "context_window": 1000000,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "gemini-3.7-flash",
@@ -352,7 +352,7 @@
       "cost_per_1m_out_cached": 0.051,
       "context_window": 198000,
       "default_max_tokens": 16384,
-      "can_reason": false,
+      "can_reason": true,
       "supports_attachments": false
     },
     {
@@ -506,18 +506,6 @@
       "cost_per_1m_out": 21,
       "cost_per_1m_in_cached": 3.5,
       "cost_per_1m_out_cached": 0.35,
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "gpt-5.5-pro",
-      "name": "GPT-5.5 Pro",
-      "cost_per_1m_in": 21,
-      "cost_per_1m_out": 126,
-      "cost_per_1m_in_cached": 21,
-      "cost_per_1m_out_cached": 2.55,
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
