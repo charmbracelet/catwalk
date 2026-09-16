@@ -132,6 +132,9 @@ var zhipuConfig []byte
 //go:embed configs/zhipu-coding.json
 var zhipuCodingConfig []byte
 
+//go:embed configs/cloudflare-workers-ai.json
+var cloudflareWorkersAIConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -180,6 +183,7 @@ var providerRegistry = []ProviderFunc{
 	vertexAIProvider,
 	zhipuProvider,
 	zhipuCodingProvider,
+	cloudflareWorkersAIProvider,
 }
 
 // GetAll returns all registered providers.
@@ -362,4 +366,8 @@ func zhipuProvider() catwalk.Provider {
 
 func zhipuCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(zhipuCodingConfig)
+}
+
+func cloudflareWorkersAIProvider() catwalk.Provider {
+	return loadProviderFromConfig(cloudflareWorkersAIConfig)
 }
