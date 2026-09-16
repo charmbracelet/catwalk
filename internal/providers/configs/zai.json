@@ -19,9 +19,9 @@
       "reasoning_levels": [
         "low",
         "high",
-        "xhigh"
+        "max"
       ],
-      "default_reasoning_effort": "xhigh",
+      "default_reasoning_effort": "max",
       "supports_attachments": true
     },
     {
@@ -37,9 +37,9 @@
       "reasoning_levels": [
         "low",
         "high",
-        "xhigh"
+        "max"
       ],
-      "default_reasoning_effort": "xhigh",
+      "default_reasoning_effort": "max",
       "supports_attachments": false
     },
     {
