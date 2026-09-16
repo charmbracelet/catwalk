@@ -402,16 +402,34 @@
     {
       "id": "accounts/fireworks/models/deepseek-v4p1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.22,
-      "cost_per_1m_out": 0.66,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.007,
+      "pricing": {
+        "input": 0.22,
+        "output": 0.66,
+        "cache_hit": 0.007
+      },
       "context_window": 1048576,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "high", "xhigh"],
-      "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "accounts/fireworks/models/gpt-oss-120b",

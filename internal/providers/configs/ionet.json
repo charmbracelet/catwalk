@@ -102,8 +102,12 @@
       },
       "context_window": 262124,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "always"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "google/gemma-4-26b-a4b-it",

@@ -255,8 +255,12 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
-      "can_reason": false,
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "zai-org/glm-5v-turbo",

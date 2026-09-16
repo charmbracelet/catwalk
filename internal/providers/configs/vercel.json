@@ -1014,14 +1014,27 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "deepseek/deepseek-r1",
@@ -1081,14 +1094,27 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 1000000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "sakana/fugu-ultra",
@@ -1132,14 +1158,27 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 1000000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "zai/glm-4.5",
@@ -1593,14 +1632,27 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 262144,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "zai/glm-5.3-flash",
@@ -3061,14 +3113,27 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "openai/gpt-6-astra-fast",
@@ -3081,14 +3146,27 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "google/gemini-2.5-flash",
@@ -4487,14 +4565,27 @@
       "pricing": {},
       "context_window": 256000,
       "default_max_tokens": 32000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-sante-free",
@@ -4502,14 +4593,27 @@
       "pricing": {},
       "context_window": 256000,
       "default_max_tokens": 32000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-vl",
@@ -4517,14 +4621,27 @@
       "pricing": {},
       "context_window": 256000,
       "default_max_tokens": 32000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "inclusionai/ling-3.0-flash-vl-free",
@@ -4532,14 +4649,27 @@
       "pricing": {},
       "context_window": 256000,
       "default_max_tokens": 32000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "meta/llama-3.1-70b",
@@ -4663,14 +4793,27 @@
       },
       "context_window": 260000,
       "default_max_tokens": 65536,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "inception/mercury-coder-small",
@@ -6674,14 +6817,27 @@
       },
       "context_window": 262144,
       "default_max_tokens": 262144,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "stepfun/step-3.7-flash",

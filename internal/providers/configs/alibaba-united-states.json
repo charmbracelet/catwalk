@@ -45,14 +45,27 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-v4-pro-us",
@@ -92,14 +105,27 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-v4.1-flash",
@@ -111,14 +137,27 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "glm-5.2",
@@ -158,14 +197,27 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "kimi-k2.7-code",
@@ -177,8 +229,12 @@
       },
       "context_window": 256000,
       "default_max_tokens": 16000,
-      "can_reason": false,
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "kimi-k3",
@@ -190,14 +246,27 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 16000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "max",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen3.8-flash",
@@ -209,16 +278,35 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "qwen3.8-max",

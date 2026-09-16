@@ -48,8 +48,12 @@
       },
       "context_window": 65536,
       "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731:fireworks-ai",
@@ -73,8 +77,12 @@
       "pricing": {},
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813:fireworks-ai",
@@ -98,8 +106,12 @@
       "pricing": {},
       "context_window": 1048576,
       "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "google/gemma-4-31B-it:cerebras",

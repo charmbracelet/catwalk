@@ -10,16 +10,43 @@
     {
       "id": "gpt-6-astra",
       "name": "GPT-6 Astra",
-      "cost_per_1m_in": 10,
-      "cost_per_1m_out": 50,
-      "cost_per_1m_in_cached": 12.5,
-      "cost_per_1m_out_cached": 1,
+      "pricing": {
+        "input": 10,
+        "output": 50,
+        "cache_create": 12.5,
+        "cache_hit": 1
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "xhigh", "max"],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "gpt-5.6-sol",
