@@ -98,6 +98,18 @@
       "supports_attachments": false
     },
     {
+      "id": "agents-a1-free",
+      "name": "Agents A1 (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "agnes-2.5-flash",
       "name": "Agnes 2.5 Flash",
       "cost_per_1m_in": 0.03,
@@ -3818,6 +3830,18 @@
       "supports_attachments": false
     },
     {
+      "id": "intern-s2-free",
+      "name": "Intern S2 (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "jina-deepsearch-v1",
       "name": "Jina Deepsearch V1",
       "cost_per_1m_in": 0.05,
@@ -5320,6 +5344,18 @@
       "cost_per_1m_out_cached": 0.044,
       "context_window": 256000,
       "default_max_tokens": 25600,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "union-alpha-free",
+      "name": "Union Alpha (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
       "can_reason": false,
       "supports_attachments": true
     },
