@@ -62,6 +62,7 @@ const (
 	InferenceProviderAtlasCloud       InferenceProvider = "atlascloud"
 	InferenceProviderCoralBricks      InferenceProvider = "coralbricks"
 	InferenceProviderScaleway         InferenceProvider = "scaleway"
+	InferenceProviderYAPI             InferenceProvider = "y-api"
 )
 
 // Provider represents an AI provider configuration.
@@ -148,6 +149,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderAtlasCloud,
 		InferenceProviderCoralBricks,
 		InferenceProviderScaleway,
+		InferenceProviderYAPI,
 	}
 }
 
