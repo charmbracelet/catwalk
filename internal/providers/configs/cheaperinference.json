@@ -77,7 +77,7 @@
       "context_window": 198000,
       "default_max_tokens": 32768,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4.6",
@@ -89,7 +89,7 @@
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4.7",
@@ -101,7 +101,7 @@
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-4.8",
@@ -113,7 +113,7 @@
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-5",
@@ -125,7 +125,7 @@
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "claude-opus-5-fast",
@@ -149,7 +149,7 @@
       "context_window": 198000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-4.6",
@@ -161,7 +161,7 @@
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "claude-sonnet-5",
@@ -197,7 +197,7 @@
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "deepseek-v4-pro",
@@ -226,10 +226,10 @@
     {
       "id": "deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.105,
-      "cost_per_1m_out": 0.42,
-      "cost_per_1m_in_cached": 0.105,
-      "cost_per_1m_out_cached": 0.0021,
+      "cost_per_1m_in": 0.21,
+      "cost_per_1m_out": 0.84,
+      "cost_per_1m_in_cached": 0.21,
+      "cost_per_1m_out_cached": 0.0042,
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "can_reason": true,
@@ -418,14 +418,14 @@
     {
       "id": "glm-5.3-flash",
       "name": "GLM-5.3 Flash",
-      "cost_per_1m_in": 0.080568,
-      "cost_per_1m_out": 0.268535,
-      "cost_per_1m_in_cached": 0.080568,
+      "cost_per_1m_in": 0.072511,
+      "cost_per_1m_out": 0.241706,
+      "cost_per_1m_in_cached": 0.072511,
       "cost_per_1m_out_cached": 0.01275,
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5-mini",
@@ -461,7 +461,7 @@
       "context_window": 256000,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.4",
@@ -473,7 +473,7 @@
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.4-mini",
@@ -485,19 +485,19 @@
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "gpt-5.4-nano",
       "name": "GPT-5.4 Nano",
-      "cost_per_1m_in": 0.14,
-      "cost_per_1m_out": 0.875,
-      "cost_per_1m_in_cached": 0.14,
-      "cost_per_1m_out_cached": 0.014,
+      "cost_per_1m_in": 0.161137,
+      "cost_per_1m_out": 1.007109,
+      "cost_per_1m_in_cached": 0.161137,
+      "cost_per_1m_out_cached": 0.016114,
       "context_window": 400000,
       "default_max_tokens": 128000,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5.5",
@@ -598,14 +598,14 @@
     {
       "id": "muse-spark-1.2",
       "name": "Muse Spark 1.2",
-      "cost_per_1m_in": 1.0625,
-      "cost_per_1m_out": 3.6125,
-      "cost_per_1m_in_cached": 1.0625,
-      "cost_per_1m_out_cached": 0.10625,
+      "cost_per_1m_in": 0.875,
+      "cost_per_1m_out": 2.975,
+      "cost_per_1m_in_cached": 0.875,
+      "cost_per_1m_out_cached": 0.105,
       "context_window": 1048576,
       "default_max_tokens": 943718,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen-3-8-27b",
@@ -629,7 +629,7 @@
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "qwen3-5-35b-a3b",
@@ -641,7 +641,7 @@
       "context_window": 256000,
       "default_max_tokens": 65536,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "qwen3-6-35b-a3b",
@@ -653,7 +653,7 @@
       "context_window": 262144,
       "default_max_tokens": 262144,
       "can_reason": true,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3.6-27b",
