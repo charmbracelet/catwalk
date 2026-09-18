@@ -50,18 +50,6 @@
       "supports_attachments": false
     },
     {
-      "id": "DeepSeek-V3.1-Terminus",
-      "name": "DeepSeek V3.1 Terminus",
-      "cost_per_1m_in": 0.56,
-      "cost_per_1m_out": 1.68,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 160000,
-      "default_max_tokens": 32000,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "DeepSeek-V3.1-Think",
       "name": "DeepSeek V3.1 Thinking",
       "cost_per_1m_in": 0.56,
@@ -3756,30 +3744,6 @@
       "default_max_tokens": 26214,
       "can_reason": false,
       "supports_attachments": true
-    },
-    {
-      "id": "jev-1.13",
-      "name": "Jev 1.13",
-      "cost_per_1m_in": 0.0462,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 64000,
-      "default_max_tokens": 6400,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "jev-latest",
-      "name": "Jev",
-      "cost_per_1m_in": 0.0462,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 64000,
-      "default_max_tokens": 6400,
-      "can_reason": false,
-      "supports_attachments": false
     },
     {
       "id": "jina-deepsearch-v1",
