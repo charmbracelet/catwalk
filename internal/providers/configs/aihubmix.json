@@ -2078,24 +2078,6 @@
       "supports_attachments": true
     },
     {
-      "id": "gemini-3-flash-preview-free",
-      "name": "Gemini 3 Flash Preview (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "gemini-3-flash-preview-search",
       "name": "Gemini 3 Flash Preview Search",
       "cost_per_1m_in": 0.5,
@@ -2294,24 +2276,6 @@
       "supports_attachments": true
     },
     {
-      "id": "gemini-3.5-flash-lite-free",
-      "name": "Gemini 3.5 Flash Lite (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "cost_per_1m_in": 1.5,
@@ -2330,48 +2294,12 @@
       "supports_attachments": true
     },
     {
-      "id": "gemini-3.6-flash-free",
-      "name": "Gemini 3.6 Flash (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
       "cost_per_1m_in": 0.75,
       "cost_per_1m_out": 3.75,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.075,
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "gemini-3.7-flash-free",
-      "name": "Gemini 3.7 Flash (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "can_reason": true,
@@ -2432,34 +2360,10 @@
       "supports_attachments": true
     },
     {
-      "id": "gemma-4-26b-a4b-it-free",
-      "name": "Gemma 4 26B A4B It (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "gemma-4-31b-it",
       "name": "Gemma 4 31B It",
       "cost_per_1m_in": 0.14,
       "cost_per_1m_out": 0.39998,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "gemma-4-31b-it-free",
-      "name": "Gemma 4 31B It (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
@@ -2669,6 +2573,18 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "glm-5.3-flashx",
+      "name": "GLM 5.3 Flashx",
+      "cost_per_1m_in": 0.37,
+      "cost_per_1m_out": 1.25001,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.075,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -3840,6 +3756,30 @@
       "default_max_tokens": 26214,
       "can_reason": false,
       "supports_attachments": true
+    },
+    {
+      "id": "jev-1.13",
+      "name": "Jev 1.13",
+      "cost_per_1m_in": 0.0462,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 64000,
+      "default_max_tokens": 6400,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "jev-latest",
+      "name": "Jev",
+      "cost_per_1m_in": 0.0462,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 64000,
+      "default_max_tokens": 6400,
+      "can_reason": false,
+      "supports_attachments": false
     },
     {
       "id": "jina-deepsearch-v1",
@@ -5309,6 +5249,18 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3.8-omni-flash",
+      "name": "Qwen3.8 Omni Flash",
+      "cost_per_1m_in": 0.1126,
+      "cost_per_1m_out": 0.38003,
+      "cost_per_1m_in_cached": 0.17594,
+      "cost_per_1m_out_cached": 0.01408,
+      "context_window": 991000,
+      "default_max_tokens": 99100,
+      "can_reason": false,
       "supports_attachments": true
     },
     {
