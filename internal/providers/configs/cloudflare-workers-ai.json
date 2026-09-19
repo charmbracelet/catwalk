@@ -1,0 +1,64 @@
+{
+    "name": "Cloudflare Workers AI",
+    "id": "cloudflare-workers-ai",
+    "api_key": "$CLOUDFLARE_API_TOKEN",
+    "api_endpoint": "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/v1",
+    "type": "openai-compat",
+    "default_large_model_id": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+    "default_small_model_id": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "models": [
+        {
+            "id": "@cf/zai-org/glm-5.3-flash",
+            "name": "GLM 5.3 Flash",
+            "cost_per_1m_in": 0.15,
+            "cost_per_1m_out": 0.50,
+            "cost_per_1m_in_cached": 0.03,
+            "context_window": 1048576,
+            "default_max_tokens": 8192,
+            "can_reason": true,
+            "supports_attachments": true
+        },
+        {
+            "id": "@cf/zai-org/glm-5.3",
+            "name": "GLM 5.3",
+            "cost_per_1m_in": 1.40,
+            "cost_per_1m_out": 4.40,
+            "cost_per_1m_in_cached": 0.26,
+            "context_window": 1048576,
+            "default_max_tokens": 8192,
+            "can_reason": true,
+            "supports_attachments": true
+        },
+        {
+            "id": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+            "name": "DeepSeek V4 Flash 0731",
+            "cost_per_1m_in": 0.44,
+            "cost_per_1m_out": 1.32,
+            "cost_per_1m_in_cached": 0.014,
+            "context_window": 1310720,
+            "default_max_tokens": 8192,
+            "can_reason": true,
+            "supports_attachments": true
+        },
+        {
+            "id": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+            "name": "DeepSeek V4 Pro 0813",
+            "cost_per_1m_in": 1.32,
+            "cost_per_1m_out": 3.96,
+            "cost_per_1m_in_cached": 0.044,
+            "context_window": 1048576,
+            "can_reason": true,
+            "supports_attachments": true
+        },
+        {
+            "id": "@cf/moonshotai/kimi-k2.7-code",
+            "name": "Kimi k2.7 Code",
+            "cost_per_1m_in": 0.95,
+            "cost_per_1m_out": 4.00,
+            "cost_per_1m_in_cached": 0.19,
+            "context_window": 262144,
+            "can_reason": true,
+            "supports_attachments": true
+        }
+    ]
+}
