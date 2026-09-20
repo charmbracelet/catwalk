@@ -4,11 +4,11 @@
   "api_key": "$LLMTECH_API_KEY",
   "api_endpoint": "https://api.llmtech.eu/v1",
   "type": "openai",
-  "default_large_model_id": "unsloth/Qwen3.8-27B-NVFP4",
-  "default_small_model_id": "unsloth/Qwen3.8-27B-NVFP4",
+  "default_large_model_id": "nvidia/Qwen3.8-27B-NVFP4",
+  "default_small_model_id": "nvidia/Qwen3.8-27B-NVFP4",
   "models": [
     {
-      "id": "unsloth/Qwen3.8-27B-NVFP4",
+      "id": "nvidia/Qwen3.8-27B-NVFP4",
       "name": "Qwen3.8 27B (NVFP4)",
       "cost_per_1m_in": 0.25,
       "cost_per_1m_out": 2.09,
