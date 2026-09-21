@@ -1294,12 +1294,12 @@
     {
       "id": "qwen3-32b",
       "name": "qwen3-32b",
-      "cost_per_1m_in": 0.08,
-      "cost_per_1m_out": 0.28,
+      "cost_per_1m_in": 0.161,
+      "cost_per_1m_out": 0.626,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 32000,
-      "default_max_tokens": 3200,
+      "context_window": 16384,
+      "default_max_tokens": 1638,
       "can_reason": true,
       "reasoning_levels": [
         "low",
