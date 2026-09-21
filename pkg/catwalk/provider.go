@@ -60,6 +60,8 @@ const (
 	InferenceProviderBaseten          InferenceProvider = "baseten"
 	InferenceProviderMoonshot         InferenceProvider = "moonshot"
 	InferenceProviderAtlasCloud       InferenceProvider = "atlascloud"
+	InferenceProviderCoralBricks      InferenceProvider = "coralbricks"
+	InferenceProviderScaleway         InferenceProvider = "scaleway"
 	InferenceProviderTheGrid          InferenceProvider = "thegrid"
 )
 
@@ -116,6 +118,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderVertexAI,
 		InferenceProviderXAI,
 		InferenceProviderZAI,
+		InferenceProviderDeepSeek,
 		InferenceProviderZhipu,
 		InferenceProviderZhipuCoding,
 		InferenceProviderGROQ,
@@ -131,16 +134,21 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderVercel,
 		InferenceProviderMiniMax,
 		InferenceProviderMiniMaxChina,
+		InferenceProviderIoNet,
 		InferenceProviderQiniuCloud,
 		InferenceProviderAvian,
 		InferenceProviderNebius,
 		InferenceProviderNeuralwatt,
 		InferenceProviderOpenCodeZen,
 		InferenceProviderOpenCodeGo,
+		InferenceProviderAlibabaSingapore,
+		InferenceProviderAlibabaUS,
 		InferenceProviderFireworks,
 		InferenceProviderBaseten,
 		InferenceProviderMoonshot,
 		InferenceProviderAtlasCloud,
+		InferenceProviderCoralBricks,
+		InferenceProviderScaleway,
 		InferenceProviderTheGrid,
 	}
 }

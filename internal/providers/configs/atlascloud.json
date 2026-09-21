@@ -116,6 +116,18 @@
       "supports_attachments": false
     },
     {
+      "id": "deepseek-ai/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.03,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "zai-org/GLM-4.6",
       "name": "GLM 4.6",
       "cost_per_1m_in": 0.6,
@@ -170,10 +182,22 @@
       "cost_per_1m_out": 4.4,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.26,
-      "context_window": 262144,
-      "default_max_tokens": 26214,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "can_reason": false,
       "supports_attachments": false
+    },
+    {
+      "id": "zai-org/glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.03,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": true
     },
     {
       "id": "zai-org/glm-5v-turbo",
