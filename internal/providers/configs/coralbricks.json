@@ -41,7 +41,7 @@
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "can_reason": true,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "gpt-oss-120b",
