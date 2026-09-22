@@ -10,8 +10,8 @@
     {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
-      "cost_per_1m_in": 11,
-      "cost_per_1m_out": 55,
+      "cost_per_1m_in": 10,
+      "cost_per_1m_out": 50,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
