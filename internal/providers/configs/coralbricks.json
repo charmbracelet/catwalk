@@ -5,7 +5,7 @@
   "api_endpoint": "https://inference.coralbricks.ai/v1",
   "type": "openai-compat",
   "default_large_model_id": "glm-5.3-fp4",
-  "default_small_model_id": "gpt-oss-120b",
+  "default_small_model_id": "glm-5.3-flash-fp4",
   "models": [
     {
       "id": "glm-5.3-fp4",
@@ -42,18 +42,6 @@
       "default_max_tokens": 32768,
       "can_reason": true,
       "supports_attachments": true
-    },
-    {
-      "id": "gpt-oss-120b",
-      "name": "GPT-OSS 120B",
-      "cost_per_1m_in": 0.12,
-      "cost_per_1m_out": 0.6,
-      "cost_per_1m_in_cached": 0.18,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": false
     }
   ]
 }
