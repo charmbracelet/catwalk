@@ -152,13 +152,13 @@
       "supports_attachments": false
     },
     {
-      "id": "xiaomi/mimo-v2.5-pro",
-      "name": "MiMo-V2.5 Pro",
-      "cost_per_1m_in": 0.435,
-      "cost_per_1m_out": 0.87,
-      "cost_per_1m_in_cached": 0.0036,
+      "id": "xiaomi/mimo-v2.6-flash",
+      "name": "MiMo-V2.6 Flash",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0.05,
       "cost_per_1m_out_cached": 0,
-      "context_window": 1050000,
+      "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
       "reasoning_levels": [
@@ -170,11 +170,11 @@
       "supports_attachments": false
     },
     {
-      "id": "xiaomi/mimo-v2.5",
-      "name": "MiMo-V2.5 Small",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.4,
-      "cost_per_1m_in_cached": 0.05,
+      "id": "xiaomi/mimo-v2.6-pro",
+      "name": "MiMo-V2.6 Pro",
+      "cost_per_1m_in": 0.435,
+      "cost_per_1m_out": 0.87,
+      "cost_per_1m_in_cached": 0.0036,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
       "default_max_tokens": 131072,
