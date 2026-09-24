@@ -314,8 +314,8 @@
       "cost_per_1m_out": 1.15,
       "cost_per_1m_in_cached": 0.029,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131056,
-      "default_max_tokens": 13105,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -332,8 +332,8 @@
       "cost_per_1m_out": 0.7475,
       "cost_per_1m_in_cached": 0.01885,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131056,
-      "default_max_tokens": 13105,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -350,8 +350,8 @@
       "cost_per_1m_out": 1.15,
       "cost_per_1m_in_cached": 0.029,
       "cost_per_1m_out_cached": 0,
-      "context_window": 131056,
-      "default_max_tokens": 13105,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
       "can_reason": false,
       "supports_attachments": true
     }
