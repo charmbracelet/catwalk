@@ -1,0 +1,200 @@
+{
+  "name": "Kunavo",
+  "id": "kunavo",
+  "api_key": "$KUNAVO_API_KEY",
+  "api_endpoint": "https://api.kunavo.com/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "claude-opus-5",
+  "default_small_model_id": "claude-haiku-4-5",
+  "models": [
+    {
+      "id": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "cost_per_1m_in": 7,
+      "cost_per_1m_out": 35,
+      "cost_per_1m_in_cached": 8.75,
+      "cost_per_1m_out_cached": 0.175,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "cost_per_1m_in": 7,
+      "cost_per_1m_out": 35,
+      "cost_per_1m_in_cached": 8.75,
+      "cost_per_1m_out_cached": 0.7,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 2.5,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 12.5,
+      "cost_per_1m_in_cached": 3.125,
+      "cost_per_1m_out_cached": 0.25,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 2.5,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-4-6",
+      "name": "Claude Opus 4.6",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 2.5,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 2.5,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "cost_per_1m_in": 1.2,
+      "cost_per_1m_out": 6,
+      "cost_per_1m_in_cached": 1.5,
+      "cost_per_1m_out_cached": 0.12,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "cost_per_1m_in": 0.4,
+      "cost_per_1m_out": 2,
+      "cost_per_1m_in_cached": 0.5,
+      "cost_per_1m_out_cached": 0.04,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "cost_per_1m_in": 4,
+      "cost_per_1m_out": 20,
+      "cost_per_1m_in_cached": 5,
+      "cost_per_1m_out_cached": 0.4,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 2.5,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "name": "GPT-5.6 Terra",
+      "cost_per_1m_in": 0.7,
+      "cost_per_1m_out": 4.2,
+      "cost_per_1m_in_cached": 0.875,
+      "cost_per_1m_out_cached": 0.07,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-5-5",
+      "name": "GPT-5.5",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 2,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    }
+  ]
+}
