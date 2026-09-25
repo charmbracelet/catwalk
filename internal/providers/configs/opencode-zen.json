@@ -1394,6 +1394,24 @@
       "supports_attachments": true
     },
     {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8 Max",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 6,
+      "cost_per_1m_in_cached": 0.25,
+      "cost_per_1m_out_cached": 2.5,
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "xhigh",
+      "supports_attachments": true
+    },
+    {
       "id": "space-bunny-free",
       "name": "Space Bunny Free",
       "cost_per_1m_in": 0,
