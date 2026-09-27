@@ -41,3 +41,24 @@ func TestKnownProvidersMatchesRegistry(t *testing.T) {
 		}
 	}
 }
+
+func TestTsubasaConfiguration(t *testing.T) {
+	for _, provider := range GetAll() {
+		if provider.ID != catwalk.InferenceProviderTsubasa {
+			continue
+		}
+		if provider.Type != catwalk.TypeOpenAICompat || provider.APIKey != "$TSUBASA_API_KEY" || provider.APIEndpoint != "https://api.tsubasa.sh/v1" {
+			t.Fatal("Tsubasa must use its named credential and Chat Completions endpoint")
+		}
+		if len(provider.Models) != 2 || provider.DefaultLargeModelID != "tsubasa-pro" || provider.DefaultSmallModelID != "tsubasa-fast" {
+			t.Fatal("Tsubasa must expose both public models with valid defaults")
+		}
+		for _, model := range provider.Models {
+			if model.DefaultMaxTokens <= 0 || model.DefaultMaxTokens > model.ContextWindow || model.SupportsImages {
+				t.Fatal("Tsubasa model limits and text-only capabilities must be valid")
+			}
+		}
+		return
+	}
+	t.Fatal("Tsubasa is missing from the provider registry")
+}
