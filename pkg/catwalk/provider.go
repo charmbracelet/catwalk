@@ -179,6 +179,21 @@ func (m Model) EffectiveType(providerType Type) Type {
 	return providerType
 }
 
+// CanReason reports whether the model supports reasoning at all.
+func (m Model) CanReason() bool {
+	return m.Reasoning.Thinking != "" && m.Reasoning.Thinking != ThinkingNever
+}
+
+// ReasoningEffortLevels returns the selectable reasoning effort values of the
+// model, or nil when it does not support effort levels.
+func (m Model) ReasoningEffortLevels() []string {
+	values := make([]string, 0, len(m.Reasoning.EffortLevels))
+	for _, level := range m.Reasoning.EffortLevels {
+		values = append(values, level.Value)
+	}
+	return values
+}
+
 // KnownProviders returns all the known inference providers.
 func KnownProviders() []InferenceProvider {
 	return []InferenceProvider{
