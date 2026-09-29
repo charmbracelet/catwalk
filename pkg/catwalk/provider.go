@@ -101,6 +101,7 @@ type Pricing struct {
 // "unknown" (field absent) and "explicitly unsupported".
 type Capabilities struct {
 	Vision bool `json:"vision"`
+	Audio  bool `json:"audio"`
 }
 
 // Thinking describes when a model reasons.
