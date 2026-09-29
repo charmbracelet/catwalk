@@ -46,10 +46,10 @@
     {
       "id": "deepseek-ai/DeepSeek-V3.2-Exp",
       "name": "DeepSeek V3.2 Exp",
-      "cost_per_1m_in": 0.27,
-      "cost_per_1m_out": 0.41,
+      "cost_per_1m_in": 0.26,
+      "cost_per_1m_out": 0.38,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.27,
+      "cost_per_1m_out_cached": 0.13,
       "context_window": 163840,
       "default_max_tokens": 16384,
       "can_reason": false,
@@ -78,18 +78,6 @@
       "default_max_tokens": 104857,
       "can_reason": false,
       "supports_attachments": false
-    },
-    {
-      "id": "deepseek-ai/deepseek-v4-flash-vision-exp",
-      "name": "DeepSeek V4 Flash Vision Exp",
-      "cost_per_1m_in": 0.44,
-      "cost_per_1m_out": 1.32,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.028,
-      "context_window": 1048576,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": true
     },
     {
       "id": "deepseek-ai/deepseek-v4-pro",
