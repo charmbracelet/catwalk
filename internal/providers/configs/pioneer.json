@@ -11,8 +11,8 @@
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
-        "input": 11,
-        "output": 55
+        "input": 10,
+        "output": 50
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,

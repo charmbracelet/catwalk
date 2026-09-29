@@ -161,6 +161,40 @@
       }
     },
     {
+      "id": "deepseek-ai/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.03
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4-pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "pricing": {
+        "input": 1.32,
+        "output": 3.96,
+        "cache_hit": 0.132
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
       "id": "zai-org/GLM-4.6",
       "name": "GLM 4.6",
       "pricing": {
@@ -236,8 +270,8 @@
         "output": 4.4,
         "cache_hit": 0.26
       },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "never"
       },
@@ -311,23 +345,6 @@
       },
       "capabilities": {
         "vision": true
-      }
-    },
-    {
-      "id": "kwaipilot/kat-coder-pro-v2",
-      "name": "KAT Coder Pro V2",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.06
-      },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
       }
     },
     {
@@ -532,23 +549,6 @@
       },
       "capabilities": {
         "vision": true
-      }
-    },
-    {
-      "id": "qwen/qwen3.6-plus",
-      "name": "Qwen3.6 Plus",
-      "pricing": {
-        "input": 0.325,
-        "output": 1.95,
-        "cache_hit": 0.0325
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
       }
     }
   ]

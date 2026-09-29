@@ -4,8 +4,8 @@
   "api_key": "$NEURALWATT_API_KEY",
   "api_endpoint": "https://api.neuralwatt.com/v1",
   "type": "completions",
-  "default_large_model_id": "glm-5.2",
-  "default_small_model_id": "glm-5.2-fast",
+  "default_large_model_id": "glm-5.3",
+  "default_small_model_id": "glm-5.3-flash",
   "models": [
     {
       "id": "deepseek-v4-flash",
@@ -16,7 +16,39 @@
         "cache_create": 0.028
       },
       "context_window": 1048560,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "deepseek-v4-flash-speed",
+      "name": "DeepSeek V4 Flash (Speed)",
+      "pricing": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_create": 0.028
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -43,12 +75,12 @@
       "id": "deepseek-v4-flash-flex",
       "name": "DeepSeek V4 Flash (flex)",
       "pricing": {
-        "input": 0.14,
-        "output": 0.28,
-        "cache_create": 0.028
+        "input": 0.091,
+        "output": 0.182,
+        "cache_create": 0.0182
       },
       "context_window": 1048560,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 393216,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -69,6 +101,70 @@
       },
       "capabilities": {
         "vision": false
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_create": 0.015
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash-flex",
+      "name": "DeepSeek V4.1 Flash (flex)",
+      "pricing": {
+        "input": 0.0975,
+        "output": 0.39,
+        "cache_create": 0.00975
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
       }
     },
     {
@@ -107,9 +203,9 @@
       "id": "glm-5.3-flex",
       "name": "GLM 5.3 (flex)",
       "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
+        "input": 0.9425,
+        "output": 2.925,
+        "cache_create": 0.09425
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -130,230 +226,6 @@
           }
         ],
         "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.2",
-      "name": "GLM-5.2",
-      "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
-      },
-      "context_window": 1048560,
-      "default_max_tokens": 104856,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "xhigh"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.2-fast",
-      "name": "GLM-5.2 (fast)",
-      "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
-      },
-      "context_window": 1048560,
-      "default_max_tokens": 104856,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "xhigh"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.2-flex",
-      "name": "GLM-5.2 (flex)",
-      "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
-      },
-      "context_window": 1048560,
-      "default_max_tokens": 104856,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "xhigh"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.2-short",
-      "name": "GLM-5.2 (short)",
-      "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
-      },
-      "context_window": 199984,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "xhigh"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.2-short-fast",
-      "name": "GLM-5.2 (short, fast)",
-      "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
-      },
-      "context_window": 199984,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "xhigh"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.2-short-fast-flex",
-      "name": "GLM-5.2 (short, fast, flex)",
-      "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
-      },
-      "context_window": 199984,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "xhigh"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.2-short-flex",
-      "name": "GLM-5.2 (short, flex)",
-      "pricing": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_create": 0.145
-      },
-      "context_window": 199984,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "xhigh"
       },
       "capabilities": {
         "vision": false
@@ -395,9 +267,9 @@
       "id": "glm-5.3-flash-flex",
       "name": "GLM-5.3 Flash (flex)",
       "pricing": {
-        "input": 0.15,
-        "output": 0.5,
-        "cache_create": 0.03
+        "input": 0.0975,
+        "output": 0.325,
+        "cache_create": 0.0195
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -476,9 +348,9 @@
       "id": "kimi-k2.7-code-flex",
       "name": "Kimi K2.7 Code (flex)",
       "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_create": 0.095
+        "input": 0.6175,
+        "output": 2.6,
+        "cache_create": 0.06175
       },
       "context_window": 262128,
       "default_max_tokens": 26212,
@@ -542,9 +414,9 @@
       "id": "kimi-k3-flex",
       "name": "Kimi K3 (flex)",
       "pricing": {
-        "input": 3,
-        "output": 15,
-        "cache_create": 0.3
+        "input": 1.95,
+        "output": 9.75,
+        "cache_create": 0.195
       },
       "context_window": 1048560,
       "default_max_tokens": 104856,
@@ -623,9 +495,9 @@
       "id": "qwen-3.8-27b-flex",
       "name": "Qwen 3.8 27B (flex)",
       "pricing": {
-        "input": 0.45,
-        "output": 3.2,
-        "cache_create": 0.25
+        "input": 0.2925,
+        "output": 2.08,
+        "cache_create": 0.1625
       },
       "context_window": 262128,
       "default_max_tokens": 131072,
@@ -659,8 +531,8 @@
         "output": 1.15,
         "cache_create": 0.029
       },
-      "context_window": 131056,
-      "default_max_tokens": 13105,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -687,12 +559,12 @@
       "id": "qwen3.6-35b-flex",
       "name": "Qwen3.6 35B (flex)",
       "pricing": {
-        "input": 0.29,
-        "output": 1.15,
-        "cache_create": 0.029
+        "input": 0.1885,
+        "output": 0.7475,
+        "cache_create": 0.01885
       },
-      "context_window": 131056,
-      "default_max_tokens": 13105,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -723,8 +595,8 @@
         "output": 1.15,
         "cache_create": 0.029
       },
-      "context_window": 131056,
-      "default_max_tokens": 13105,
+      "context_window": 262128,
+      "default_max_tokens": 26212,
       "reasoning": {
         "thinking": "never"
       },

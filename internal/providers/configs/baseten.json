@@ -4,8 +4,8 @@
   "api_key": "$BASETEN_API_KEY",
   "api_endpoint": "https://inference.baseten.co/v1",
   "type": "completions",
-  "default_large_model_id": "deepseek-ai/DeepSeek-V4-Pro",
-  "default_small_model_id": "openai/gpt-oss-120b",
+  "default_large_model_id": "zai-org/GLM-5.3",
+  "default_small_model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
   "models": [
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
@@ -35,34 +35,6 @@
           {
             "value": "max",
             "display": "Max"
-          }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Pro",
-      "name": "DeepSeek V4 Pro",
-      "pricing": {
-        "input": 1.74,
-        "output": 3.48,
-        "cache_hit": 0.145
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 262144,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
           }
         ],
         "default_effort_level": "high"
@@ -113,7 +85,7 @@
       "pricing": {
         "input": 0.3,
         "output": 1.2,
-        "cache_hit": 0.03
+        "cache_hit": 0.007
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
@@ -137,23 +109,6 @@
       },
       "capabilities": {
         "vision": true
-      }
-    },
-    {
-      "id": "zai-org/GLM-4.7",
-      "name": "GLM 4.7",
-      "pricing": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_hit": 0.12
-      },
-      "context_window": 200000,
-      "default_max_tokens": 200000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
       }
     },
     {
@@ -317,131 +272,6 @@
       }
     },
     {
-      "id": "thinkingmachines/inkling",
-      "name": "Inkling",
-      "pricing": {
-        "input": 1,
-        "output": 4.05,
-        "cache_hit": 0.17
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "thinkingmachines/inkling-small",
-      "name": "Inkling Small",
-      "pricing": {
-        "input": 0.5,
-        "output": 1.2,
-        "cache_hit": 0.1
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2.6",
-      "name": "Kimi K2.6",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_hit": 0.16
-      },
-      "context_window": 262000,
-      "default_max_tokens": 262000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2.7-Code",
-      "name": "Kimi K2.7 Code",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_hit": 0.16
-      },
-      "context_window": 262000,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "pricing": {
@@ -467,7 +297,7 @@
             "display": "Max"
           }
         ],
-        "default_effort_level": "max"
+        "default_effort_level": "high"
       },
       "capabilities": {
         "vision": true

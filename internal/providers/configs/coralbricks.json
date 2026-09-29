@@ -5,14 +5,15 @@
   "api_endpoint": "https://inference.coralbricks.ai/v1",
   "type": "completions",
   "default_large_model_id": "glm-5.3-fp4",
-  "default_small_model_id": "gpt-oss-120b",
+  "default_small_model_id": "glm-5.3-flash-fp4",
   "models": [
     {
       "id": "glm-5.3-fp4",
       "name": "GLM 5.3",
       "pricing": {
         "input": 1.12,
-        "output": 4.4
+        "output": 4.4,
+        "cache_create": 1.68
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
@@ -28,7 +29,8 @@
       "name": "GLM 5.3 Flash",
       "pricing": {
         "input": 0.15,
-        "output": 0.5
+        "output": 0.5,
+        "cache_create": 0.23
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
@@ -40,11 +42,12 @@
       }
     },
     {
-      "id": "kimi-k3",
-      "name": "Kimi K3",
+      "id": "deepseek-v4.1-flash-fast-fp4",
+      "name": "DeepSeek V4.1 Flash",
       "pricing": {
-        "input": 3,
-        "output": 15
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.09
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
@@ -53,22 +56,6 @@
       },
       "capabilities": {
         "vision": true
-      }
-    },
-    {
-      "id": "gpt-oss-120b",
-      "name": "GPT-OSS 120B",
-      "pricing": {
-        "input": 0.12,
-        "output": 0.6
-      },
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": false
       }
     }
   ]

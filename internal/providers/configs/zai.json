@@ -29,11 +29,11 @@
             "display": "High"
           },
           {
-            "value": "xhigh",
-            "display": "X-High"
+            "value": "max",
+            "display": "Max"
           }
         ],
-        "default_effort_level": "xhigh"
+        "default_effort_level": "max"
       },
       "capabilities": {
         "vision": true
@@ -61,11 +61,11 @@
             "display": "High"
           },
           {
-            "value": "xhigh",
-            "display": "X-High"
+            "value": "max",
+            "display": "Max"
           }
         ],
-        "default_effort_level": "xhigh"
+        "default_effort_level": "max"
       },
       "capabilities": {
         "vision": false

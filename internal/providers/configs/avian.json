@@ -238,40 +238,8 @@
       }
     },
     {
-      "id": "xiaomi/mimo-v2.5-pro",
-      "name": "MiMo-V2.5 Pro",
-      "pricing": {
-        "input": 0.435,
-        "output": 0.87,
-        "cache_create": 0.0036
-      },
-      "context_window": 1050000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "xiaomi/mimo-v2.5",
-      "name": "MiMo-V2.5 Small",
+      "id": "xiaomi/mimo-v2.6-flash",
+      "name": "MiMo-V2.6 Flash",
       "pricing": {
         "input": 0.2,
         "output": 0.4,
@@ -298,8 +266,39 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": true
+        "vision": false
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro",
+      "name": "MiMo-V2.6 Pro",
+      "pricing": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache_create": 0.0036
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false
       }
     },
     {

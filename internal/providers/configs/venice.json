@@ -17,22 +17,7 @@
       "context_window": 128000,
       "default_max_tokens": 32768,
       "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
+        "thinking": "toggleable"
       },
       "capabilities": {
         "vision": false
@@ -48,22 +33,39 @@
       "context_window": 128000,
       "default_max_tokens": 32768,
       "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "aion-labs-aion-3-5",
+      "name": "Aion 3.5",
+      "pricing": {
+        "input": 3.75,
+        "output": 7.5
+      },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "aion-labs-aion-3-5-mini",
+      "name": "Aion 3.5 Mini",
+      "pricing": {
+        "input": 0.875,
+        "output": 1.75
+      },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable"
       },
       "capabilities": {
         "vision": false
@@ -308,6 +310,37 @@
       "pricing": {
         "input": 12,
         "output": 60
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pricing": {
+        "input": 4.8,
+        "output": 24
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1082,37 +1115,6 @@
       }
     },
     {
-      "id": "openai-gpt-52-codex",
-      "name": "GPT-5.2 Codex",
-      "pricing": {
-        "input": 2.19,
-        "output": 17.5
-      },
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "openai-gpt-53-codex",
       "name": "GPT-5.3 Codex",
       "pricing": {
@@ -1364,8 +1366,8 @@
       "id": "openai-gpt-56-sol",
       "name": "GPT-5.6 Sol",
       "pricing": {
-        "input": 2.5,
-        "output": 12.5
+        "input": 5,
+        "output": 25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1395,8 +1397,8 @@
       "id": "openai-gpt-56-sol-pro",
       "name": "GPT-5.6 Sol Pro",
       "pricing": {
-        "input": 2.5,
-        "output": 12.5
+        "input": 5,
+        "output": 25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1521,6 +1523,68 @@
       "pricing": {
         "input": 12.5,
         "output": 62.5
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "openai-gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "pricing": {
+        "input": 0.125,
+        "output": 0.625
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "openai-gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "pricing": {
+        "input": 2.5,
+        "output": 12.5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1885,6 +1949,37 @@
     {
       "id": "grok-4-6",
       "name": "Grok 4.6",
+      "pricing": {
+        "input": 2.27,
+        "output": 6.8
+      },
+      "context_window": 500000,
+      "default_max_tokens": 200000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "grok-4-7",
+      "name": "Grok 4.7",
       "pricing": {
         "input": 2.27,
         "output": 6.8
@@ -2366,37 +2461,6 @@
       },
       "capabilities": {
         "vision": false
-      }
-    },
-    {
-      "id": "mistral-small-2603",
-      "name": "Mistral Small 4",
-      "pricing": {
-        "input": 0.1875,
-        "output": 0.75
-      },
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
       }
     },
     {

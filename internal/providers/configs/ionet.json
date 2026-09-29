@@ -11,9 +11,9 @@
       "id": "deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek: DeepSeek V3.2",
       "pricing": {
-        "input": 1.4301,
-        "output": 2.4063,
-        "cache_hit": 0.71505
+        "input": 1.416,
+        "output": 2.376,
+        "cache_hit": 0.708
       },
       "context_window": 163840,
       "default_max_tokens": 16384,
@@ -28,9 +28,9 @@
       "id": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek: DeepSeek V4 Flash",
       "pricing": {
-        "input": 0.34516,
-        "output": 0.58232,
-        "cache_hit": 0.17258
+        "input": 0.1268,
+        "output": 0.5216,
+        "cache_hit": 0.0634
       },
       "context_window": 32768,
       "default_max_tokens": 3276,
@@ -45,9 +45,9 @@
       "id": "MiniMaxAI/MiniMax-M2.7",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
       "pricing": {
-        "input": 0.418,
-        "output": 1.588,
-        "cache_hit": 0.209
+        "input": 0.474,
+        "output": 1.776,
+        "cache_hit": 0.237
       },
       "context_window": 262100,
       "default_max_tokens": 6553,
@@ -62,9 +62,9 @@
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
       "pricing": {
-        "input": 0.22984,
-        "output": 0.73052,
-        "cache_hit": 0.11492
+        "input": 0.2276,
+        "output": 0.7426,
+        "cache_hit": 0.1138
       },
       "context_window": 262100,
       "default_max_tokens": 6553,
@@ -79,9 +79,9 @@
       "id": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek: DeepSeek V4 Pro",
       "pricing": {
-        "input": 1.702,
-        "output": 3.404,
-        "cache_hit": 0.851
+        "input": 1.736,
+        "output": 3.474,
+        "cache_hit": 0.868
       },
       "context_window": 1048576,
       "default_max_tokens": 60000,
@@ -93,12 +93,29 @@
       }
     },
     {
+      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "name": "DeepSeek: DeepSeek V4 Pro 0813",
+      "pricing": {
+        "input": 1.24,
+        "output": 3.5,
+        "cache_hit": 0.14
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 39321,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek: DeepSeek V4.1 Flash",
       "pricing": {
-        "input": 0.324,
-        "output": 1.296,
-        "cache_hit": 0.162
+        "input": 0.3102,
+        "output": 1.2408,
+        "cache_hit": 0.1551
       },
       "context_window": 262124,
       "default_max_tokens": 13107,
@@ -113,12 +130,29 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Google: Gemma 4 26B A4B",
       "pricing": {
-        "input": 0.098,
-        "output": 0.334,
-        "cache_hit": 0.049
+        "input": 0.0875,
+        "output": 0.315,
+        "cache_hit": 0.04375
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "name": "Google: Gemma 4 31B Instruct",
+      "pricing": {
+        "input": 0.38,
+        "output": 1.15,
+        "cache_hit": 0.19
+      },
+      "context_window": 262144,
+      "default_max_tokens": 1638,
       "reasoning": {
         "thinking": "toggleable"
       },
@@ -164,9 +198,9 @@
       "id": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Meta: Llama 3.3 70B Instruct",
       "pricing": {
-        "input": 0.6066,
-        "output": 1.0386,
-        "cache_hit": 0.3033
+        "input": 0.5466,
+        "output": 1.0226,
+        "cache_hit": 0.2733
       },
       "context_window": 128000,
       "default_max_tokens": 12800,
@@ -181,9 +215,9 @@
       "id": "MiniMaxAI/MiniMax-M2.5",
       "name": "MiniMaxAI/MiniMax-M2.5",
       "pricing": {
-        "input": 0.353,
-        "output": 1.416,
-        "cache_hit": 0.1765
+        "input": 0.347,
+        "output": 1.366,
+        "cache_hit": 0.1735
       },
       "context_window": 196600,
       "default_max_tokens": 19660,
@@ -232,9 +266,9 @@
       "id": "moonshotai/Kimi-K2.5",
       "name": "MoonshotAI: Kimi K2.5",
       "pricing": {
-        "input": 0.5584,
-        "output": 2.935,
-        "cache_hit": 0.2792
+        "input": 0.5284,
+        "output": 2.785,
+        "cache_hit": 0.2642
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -249,9 +283,9 @@
       "id": "moonshotai/Kimi-K2.6",
       "name": "MoonshotAI: Kimi K2.6",
       "pricing": {
-        "input": 0.8373,
-        "output": 3.59392,
-        "cache_hit": 0.41865
+        "input": 0.8297,
+        "output": 3.604,
+        "cache_hit": 0.41485
       },
       "context_window": 262142,
       "default_max_tokens": 26214,
@@ -266,9 +300,9 @@
       "id": "moonshotai/Kimi-K2.7-Code",
       "name": "MoonshotAI: Kimi K2.7 Code",
       "pricing": {
-        "input": 0.882,
-        "output": 3.85,
-        "cache_hit": 0.441
+        "input": 1.072,
+        "output": 4.65,
+        "cache_hit": 0.536
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -283,12 +317,29 @@
       "id": "moonshotai/Kimi-K3",
       "name": "MoonshotAI: Kimi K3",
       "pricing": {
-        "input": 3.21,
-        "output": 15.6,
-        "cache_hit": 1.605
+        "input": 3.3,
+        "output": 16.5,
+        "cache_hit": 1.65
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning",
+      "name": "NVIDIA: Nemotron 3.5 Lightning",
+      "pricing": {
+        "input": 0.06475,
+        "output": 0.195,
+        "cache_hit": 0.03237
+      },
+      "context_window": 262144,
+      "default_max_tokens": 13107,
       "reasoning": {
         "thinking": "never"
       },
@@ -332,9 +383,9 @@
       "id": "openai/gpt-oss-20b",
       "name": "OpenAI: gpt-oss-20b",
       "pricing": {
-        "input": 0.059,
-        "output": 0.206,
-        "cache_hit": 0.0295
+        "input": 0.057,
+        "output": 0.198,
+        "cache_hit": 0.0285
       },
       "context_window": 64000,
       "default_max_tokens": 6400,
@@ -398,9 +449,9 @@
       "id": "Qwen/Qwen3.6-35B-A3B",
       "name": "Qwen: Qwen3.6 35B A3B",
       "pricing": {
-        "input": 0.1952,
-        "output": 1.28675,
-        "cache_hit": 0.0976
+        "input": 0.1672,
+        "output": 1.12675,
+        "cache_hit": 0.0836
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -415,9 +466,9 @@
       "id": "Qwen/Qwen3.8-27B",
       "name": "Qwen: Qwen3.8 27B",
       "pricing": {
-        "input": 0.308,
-        "output": 2.73,
-        "cache_hit": 0.154
+        "input": 0.345,
+        "output": 2.69,
+        "cache_hit": 0.1725
       },
       "context_window": 65536,
       "default_max_tokens": 6553,
@@ -432,9 +483,9 @@
       "id": "XiaomiMiMo/MiMo-V2.5",
       "name": "Xiaomi: MiMo-V2.5",
       "pricing": {
-        "input": 0.2018,
-        "output": 0.6436,
-        "cache_hit": 0.1009
+        "input": 0.1976,
+        "output": 0.6352,
+        "cache_hit": 0.0988
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -449,9 +500,9 @@
       "id": "zai-org/GLM-4.6",
       "name": "Z.ai: GLM 4.6",
       "pricing": {
-        "input": 0.536,
-        "output": 2.07,
-        "cache_hit": 0.268
+        "input": 0.52,
+        "output": 2.0375,
+        "cache_hit": 0.26
       },
       "context_window": 131072,
       "default_max_tokens": 13107,
@@ -466,9 +517,9 @@
       "id": "zai-org/GLM-4.7",
       "name": "Z.ai: GLM 4.7",
       "pricing": {
-        "input": 0.88,
-        "output": 2.37,
-        "cache_hit": 0.44
+        "input": 0.52408,
+        "output": 2.04584,
+        "cache_hit": 0.26204
       },
       "context_window": 202752,
       "default_max_tokens": 20275,
@@ -517,9 +568,9 @@
       "id": "zai-org/GLM-5.1",
       "name": "Z.ai: GLM 5.1",
       "pricing": {
-        "input": 1.358,
-        "output": 4.268,
-        "cache_hit": 0.679
+        "input": 1.302,
+        "output": 4.132,
+        "cache_hit": 0.651
       },
       "context_window": 202750,
       "default_max_tokens": 3276,
@@ -534,9 +585,9 @@
       "id": "zai-org/GLM-5.2",
       "name": "Z.ai: GLM 5.2",
       "pricing": {
-        "input": 1.96,
-        "output": 6.16,
-        "cache_hit": 0.98
+        "input": 1.878,
+        "output": 6.088,
+        "cache_hit": 0.939
       },
       "context_window": 262144,
       "default_max_tokens": 13107,
@@ -551,9 +602,9 @@
       "id": "zai-org/GLM-5.3",
       "name": "Z.ai: GLM 5.3",
       "pricing": {
-        "input": 1.502,
-        "output": 4.752,
-        "cache_hit": 0.751
+        "input": 1.652,
+        "output": 5.192,
+        "cache_hit": 0.826
       },
       "context_window": 262144,
       "default_max_tokens": 13107,
@@ -568,9 +619,9 @@
       "id": "zai-org/GLM-5.3-Flash",
       "name": "Z.ai: GLM 5.3 Flash",
       "pricing": {
-        "input": 0.208,
-        "output": 0.694,
-        "cache_hit": 0.104
+        "input": 0.21,
+        "output": 0.7,
+        "cache_hit": 0.105
       },
       "context_window": 262144,
       "default_max_tokens": 13107,

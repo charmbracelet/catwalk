@@ -139,9 +139,9 @@
       "id": "moonshotai/Kimi-K2.6-TEE",
       "name": "Kimi-K2.6-TEE",
       "pricing": {
-        "input": 0.58,
-        "output": 3.4,
-        "cache_create": 0.058
+        "input": 0.5,
+        "output": 2.85,
+        "cache_create": 0.05
       },
       "context_window": 262144,
       "default_max_tokens": 65535,
@@ -331,9 +331,9 @@
       "id": "Qwen/Qwen3.8-27B-TEE",
       "name": "Qwen3.8-27B-TEE",
       "pricing": {
-        "input": 0.32,
-        "output": 2.5,
-        "cache_create": 0.032
+        "input": 0.24,
+        "output": 2.2,
+        "cache_create": 0.024
       },
       "context_window": 262144,
       "default_max_tokens": 65536,

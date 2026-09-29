@@ -2,8 +2,6 @@
   "name": "AWS Bedrock US",
   "id": "bedrock",
   "type": "completions",
-  "api_key": "",
-  "api_endpoint": "",
   "default_large_model_id": "us.anthropic.claude-opus-5",
   "default_small_model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [
@@ -116,6 +114,47 @@
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "us.anthropic.claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
         "vision": true

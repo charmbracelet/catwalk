@@ -202,7 +202,7 @@
         "cache_hit": 1.5
       },
       "context_window": 200000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -553,6 +553,96 @@
       }
     },
     {
+      "id": "anthropic/claude-opus-5.5",
+      "name": "Claude Opus 5.5",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-5.5-fast",
+      "name": "Claude Opus 5.5 (Fast)",
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.4
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "minimal",
+            "display": "Minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "anthropic/claude-sonnet-4",
       "name": "Claude Sonnet 4",
       "pricing": {
@@ -562,7 +652,7 @@
         "cache_hit": 0.3
       },
       "context_window": 1000000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -912,9 +1002,9 @@
       "id": "deepseek/deepseek-v4-flash-vision-exp",
       "name": "DeepSeek V4 Flash Vision Exp",
       "pricing": {
-        "input": 0.22,
-        "output": 0.66,
-        "cache_hit": 0.007
+        "input": 0.2156,
+        "output": 0.6468,
+        "cache_hit": 0.0068
       },
       "context_window": 1048576,
       "default_max_tokens": 1048576,
@@ -1008,12 +1098,12 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "pricing": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_hit": 0.015
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.007
       },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1053,32 +1143,32 @@
       }
     },
     {
-      "id": "mistral/devstral-2",
-      "name": "Devstral 2",
+      "id": "fireworks/ember-1",
+      "name": "Ember-1",
       "pricing": {
-        "input": 0.4,
-        "output": 2
+        "input": 3,
+        "output": 15,
+        "cache_hit": 0.3
       },
-      "context_window": 256000,
-      "default_max_tokens": 256000,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
       "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "mistral/devstral-small-2",
-      "name": "Devstral Small 2",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "context_window": 256000,
-      "default_max_tokens": 256000,
-      "reasoning": {
-        "thinking": "never"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
         "vision": true
@@ -1313,8 +1403,7 @@
       "name": "GLM 4.7",
       "pricing": {
         "input": 0.6,
-        "output": 2.2,
-        "cache_hit": 0.12
+        "output": 2.2
       },
       "context_window": 200000,
       "default_max_tokens": 120000,
@@ -1530,9 +1619,9 @@
       "id": "zai/glm-5.2-fast",
       "name": "GLM 5.2 Fast",
       "pricing": {
-        "input": 2.1,
-        "output": 6.6,
-        "cache_hit": 0.21
+        "input": 2.8,
+        "output": 8.8,
+        "cache_hit": 0.56
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1664,6 +1753,38 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 131000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "zai/glm-5.3-flashx",
+      "name": "GLM 5.3 FlashX",
+      "pricing": {
+        "input": 0.37,
+        "output": 1.25,
+        "cache_hit": 0.075
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2393,10 +2514,10 @@
       "id": "openai/gpt-5.6-sol",
       "name": "GPT 5.6 Sol",
       "pricing": {
-        "input": 2,
-        "output": 10,
-        "cache_create": 2.5,
-        "cache_hit": 0.2
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.4
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2426,10 +2547,10 @@
       "id": "openai/gpt-5.6-sol-fast",
       "name": "GPT 5.6 Sol (Fast)",
       "pricing": {
-        "input": 4,
-        "output": 20,
-        "cache_create": 5,
-        "cache_hit": 0.4
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.8
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -2526,7 +2647,8 @@
       "name": "GPT OSS 120B",
       "pricing": {
         "input": 0.1,
-        "output": 0.5
+        "output": 0.5,
+        "cache_hit": 0.1
       },
       "context_window": 131072,
       "default_max_tokens": 131072,
@@ -2556,8 +2678,8 @@
       "id": "openai/gpt-oss-20b",
       "name": "GPT OSS 20B",
       "pricing": {
-        "input": 0.05,
-        "output": 0.2
+        "input": 0.03,
+        "output": 0.14
       },
       "context_window": 131072,
       "default_max_tokens": 8192,
@@ -3169,6 +3291,138 @@
       }
     },
     {
+      "id": "openai/gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_create": 0.125,
+        "cache_hit": 0.01
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "openai/gpt-6-luna-fast",
+      "name": "GPT-6 Luna (Fast)",
+      "pricing": {
+        "input": 0.2,
+        "output": 1,
+        "cache_create": 0.25,
+        "cache_hit": 0.02
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.2
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "openai/gpt-6-sol-fast",
+      "name": "GPT-6 Sol (Fast)",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.4
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "google/gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "pricing": {
@@ -3177,7 +3431,7 @@
         "cache_hit": 0.03
       },
       "context_window": 1000000,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3209,7 +3463,7 @@
         "cache_hit": 0.01
       },
       "context_window": 1048576,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3241,7 +3495,7 @@
         "cache_hit": 0.125
       },
       "context_window": 1048576,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3465,7 +3719,7 @@
         "cache_hit": 0.075
       },
       "context_window": 1000000,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3497,7 +3751,7 @@
         "cache_hit": 0.075
       },
       "context_window": 1000000,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3891,6 +4145,38 @@
       }
     },
     {
+      "id": "spacexai/grok-4.7",
+      "name": "Grok 4.7",
+      "pricing": {
+        "input": 1.2,
+        "output": 3.6,
+        "cache_hit": 0.3
+      },
+      "context_window": 500000,
+      "default_max_tokens": 500000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "spacexai/grok-build-0.1",
       "name": "Grok Build 0.1",
       "pricing": {
@@ -3990,7 +4276,7 @@
       "id": "thinkingmachines/inkling-small",
       "name": "Inkling Small",
       "pricing": {
-        "input": 0.5,
+        "input": 0.45,
         "output": 1.2,
         "cache_hit": 0.1
       },
@@ -4027,119 +4313,6 @@
       },
       "context_window": 1000000,
       "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "kwaipilot/kat-coder-pro-v1",
-      "name": "KAT-Coder-Pro V1",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.06
-      },
-      "context_window": 256000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "kwaipilot/kat-coder-air-v2.5",
-      "name": "Kat Coder Air V2.5",
-      "pricing": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_hit": 0.03
-      },
-      "context_window": 256000,
-      "default_max_tokens": 80000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "kwaipilot/kat-coder-pro-v2",
-      "name": "Kat Coder Pro V2",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.06
-      },
-      "context_window": 256000,
-      "default_max_tokens": 256000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "kwaipilot/kat-coder-pro-v2.5",
-      "name": "Kat Coder Pro V2.5",
-      "pricing": {
-        "input": 0.74,
-        "output": 2.96,
-        "cache_hit": 0.15
-      },
-      "context_window": 256000,
-      "default_max_tokens": 80000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4215,11 +4388,10 @@
       "name": "Kimi K2.5",
       "pricing": {
         "input": 0.6,
-        "output": 3,
-        "cache_hit": 0.1
+        "output": 3
       },
-      "context_window": 262114,
-      "default_max_tokens": 262114,
+      "context_window": 256000,
+      "default_max_tokens": 256000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4280,7 +4452,7 @@
       "pricing": {
         "input": 0.95,
         "output": 4,
-        "cache_hit": 0.16
+        "cache_hit": 0.19
       },
       "context_window": 256000,
       "default_max_tokens": 32768,
@@ -4501,8 +4673,9 @@
       "id": "inclusionai/ling-3.0-flash-fin",
       "name": "Ling 3.0 Flash Fin",
       "pricing": {
-        "input": 0,
-        "output": 0
+        "input": 0.06,
+        "output": 0.18,
+        "cache_hit": 0.012
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -4529,8 +4702,8 @@
       }
     },
     {
-      "id": "inclusionai/ling-3.0-flash-fin-free",
-      "name": "Ling 3.0 Flash Fin (Free)",
+      "id": "inclusionai/ling-3.0-flash-sante",
+      "name": "Ling 3.0 Flash Sante",
       "pricing": {
         "input": 0,
         "output": 0
@@ -4560,37 +4733,12 @@
       }
     },
     {
-      "id": "inclusionai/ling-3.0-flash-sante",
-      "name": "Ling 3.0 Flash Sante",
-      "pricing": {},
-      "context_window": 256000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
       "id": "inclusionai/ling-3.0-flash-sante-free",
       "name": "Ling 3.0 Flash Sante (Free)",
-      "pricing": {},
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
       "context_window": 256000,
       "default_max_tokens": 32000,
       "reasoning": {
@@ -4618,35 +4766,11 @@
     {
       "id": "inclusionai/ling-3.0-flash-vl",
       "name": "Ling 3.0 Flash VL",
-      "pricing": {},
-      "context_window": 256000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
+      "pricing": {
+        "input": 0.075,
+        "output": 0.22,
+        "cache_hit": 0.015
       },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "inclusionai/ling-3.0-flash-vl-free",
-      "name": "Ling 3.0 Flash VL (Free)",
-      "pricing": {},
       "context_window": 256000,
       "default_max_tokens": 32000,
       "reasoning": {
@@ -4746,6 +4870,38 @@
       "default_max_tokens": 8192,
       "reasoning": {
         "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "meituan/longcat-2.5-preview",
+      "name": "LongCat 2.5 Preview",
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.006
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
         "vision": true
@@ -4893,6 +5049,102 @@
       },
       "capabilities": {
         "vision": false
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash",
+      "name": "MiMo V2.6 Flash",
+      "pricing": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_hit": 0.0028
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro",
+      "name": "MiMo V2.6 Pro",
+      "pricing": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache_hit": 0.0036
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "name": "MiMo V2.6 Pro UltraSpeed",
+      "pricing": {
+        "input": 4.35,
+        "output": 8.7,
+        "cache_hit": 0.036
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
       }
     },
     {
@@ -5257,9 +5509,10 @@
       "name": "Ministral 14B",
       "pricing": {
         "input": 0.2,
-        "output": 0.2
+        "output": 0.2,
+        "cache_hit": 0.02
       },
-      "context_window": 256000,
+      "context_window": 262144,
       "default_max_tokens": 256000,
       "reasoning": {
         "thinking": "never"
@@ -5273,9 +5526,10 @@
       "name": "Ministral 3B",
       "pricing": {
         "input": 0.1,
-        "output": 0.1
+        "output": 0.1,
+        "cache_hit": 0.01
       },
-      "context_window": 128000,
+      "context_window": 131072,
       "default_max_tokens": 4000,
       "reasoning": {
         "thinking": "never"
@@ -5289,9 +5543,10 @@
       "name": "Ministral 8B",
       "pricing": {
         "input": 0.15,
-        "output": 0.15
+        "output": 0.15,
+        "cache_hit": 0.015
       },
-      "context_window": 128000,
+      "context_window": 262144,
       "default_max_tokens": 4000,
       "reasoning": {
         "thinking": "never"
@@ -5305,7 +5560,8 @@
       "name": "Mistral Codestral",
       "pricing": {
         "input": 0.3,
-        "output": 0.9
+        "output": 0.9,
+        "cache_hit": 0.03
       },
       "context_window": 128000,
       "default_max_tokens": 4000,
@@ -5321,26 +5577,11 @@
       "name": "Mistral Large 3",
       "pricing": {
         "input": 0.5,
-        "output": 1.5
+        "output": 1.5,
+        "cache_hit": 0.05
       },
-      "context_window": 256000,
+      "context_window": 262144,
       "default_max_tokens": 256000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "mistral/mistral-medium",
-      "name": "Mistral Medium 3.1",
-      "pricing": {
-        "input": 0.4,
-        "output": 2
-      },
-      "context_window": 128000,
-      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "never"
       },
@@ -5353,9 +5594,10 @@
       "name": "Mistral Medium Latest",
       "pricing": {
         "input": 1.5,
-        "output": 7.5
+        "output": 7.5,
+        "cache_hit": 0.15
       },
-      "context_window": 256000,
+      "context_window": 262144,
       "default_max_tokens": 256000,
       "reasoning": {
         "thinking": "toggleable",
@@ -5383,26 +5625,27 @@
       "id": "mistral/mistral-nemo",
       "name": "Mistral Nemo 12B",
       "pricing": {
-        "input": 0.15,
-        "output": 0.15
+        "input": 0.04,
+        "output": 0.17
       },
-      "context_window": 128000,
-      "default_max_tokens": 128000,
+      "context_window": 60288,
+      "default_max_tokens": 16000,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": false
       }
     },
     {
       "id": "mistral/mistral-small",
       "name": "Mistral Small",
       "pricing": {
-        "input": 0.1,
-        "output": 0.3
+        "input": 0.15,
+        "output": 0.6,
+        "cache_hit": 0.015
       },
-      "context_window": 32000,
+      "context_window": 262144,
       "default_max_tokens": 4000,
       "reasoning": {
         "thinking": "never"
@@ -5873,22 +6116,6 @@
       }
     },
     {
-      "id": "mistral/pixtral-12b",
-      "name": "Pixtral 12B 2409",
-      "pricing": {
-        "input": 0.15,
-        "output": 0.15
-      },
-      "context_window": 128000,
-      "default_max_tokens": 4000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "alibaba/qwen-3-32b",
       "name": "Qwen 3 32B",
       "pricing": {
@@ -6005,7 +6232,7 @@
       "name": "Qwen 3.5 Plus",
       "pricing": {
         "input": 0.4,
-        "output": 2.5,
+        "output": 2.4,
         "cache_create": 0.5,
         "cache_hit": 0.04
       },
@@ -6300,11 +6527,75 @@
       "pricing": {
         "input": 2,
         "output": 6,
-        "cache_create": 2.5,
         "cache_hit": 0.25
       },
-      "context_window": 1000000,
+      "context_window": 262144,
       "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "alibaba/qwen3.8-max-prime",
+      "name": "Qwen 3.8 Max Prime",
+      "pricing": {
+        "input": 4,
+        "output": 12,
+        "cache_create": 5,
+        "cache_hit": 0.5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "alibaba/qwen3.8-omni-flash",
+      "name": "Qwen 3.8 Omni Flash",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache_hit": 0.016
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6449,8 +6740,8 @@
         "input": 0.15,
         "output": 1.2
       },
-      "context_window": 131072,
-      "default_max_tokens": 32768,
+      "context_window": 262114,
+      "default_max_tokens": 262114,
       "reasoning": {
         "thinking": "never"
       },
@@ -6465,8 +6756,8 @@
         "input": 0.15,
         "output": 1.2
       },
-      "context_window": 131072,
-      "default_max_tokens": 32768,
+      "context_window": 262144,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6936,6 +7227,23 @@
       }
     },
     {
+      "id": "mixedbread/toast-1",
+      "name": "Toast 1",
+      "pricing": {
+        "input": 0.3,
+        "output": 0.72,
+        "cache_hit": 0.036
+      },
+      "context_window": 131000,
+      "default_max_tokens": 4000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
       "id": "arcee-ai/trinity-large-thinking",
       "name": "Trinity Large Thinking",
       "pricing": {
@@ -7152,6 +7460,72 @@
       },
       "context_window": 200000,
       "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "quiverai/arrow-2",
+      "name": "Arrow 2",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.4
+      },
+      "context_window": 131072,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "quiverai/arrow-2-telos",
+      "name": "Arrow 2 Telos",
+      "pricing": {
+        "input": 6,
+        "output": 30,
+        "cache_create": 7.5,
+        "cache_hit": 0.6
+      },
+      "context_window": 131072,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [

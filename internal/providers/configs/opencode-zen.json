@@ -4,7 +4,6 @@
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
   "type": "completions",
-  "session_affinity_header": "x-opencode-session",
   "default_large_model_id": "deepseek-v4-flash-free",
   "default_small_model_id": "deepseek-v4-flash-free",
   "models": [
@@ -312,6 +311,39 @@
       }
     },
     {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 0.2,
+        "cache_hit": 5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "claude-sonnet-4",
       "type": "messages",
       "name": "Claude Sonnet 4",
@@ -572,6 +604,38 @@
       },
       "capabilities": {
         "vision": false
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.01
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
       }
     },
     {
@@ -1332,12 +1396,12 @@
     {
       "id": "gpt-5.6-sol",
       "type": "responses",
-      "name": "GPT-5.6 Sol (50% Off)",
+      "name": "GPT-5.6 Sol",
       "pricing": {
-        "input": 2,
-        "output": 10,
-        "cache_create": 0.2,
-        "cache_hit": 2.5
+        "input": 4,
+        "output": 20,
+        "cache_create": 0.4,
+        "cache_hit": 5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1405,6 +1469,72 @@
         "output": 50,
         "cache_create": 1,
         "cache_hit": 12.5
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_create": 0.01,
+        "cache_hit": 0.13
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 0.2,
+        "cache_hit": 2.5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1728,6 +1858,38 @@
       }
     },
     {
+      "id": "grok-4.7",
+      "name": "Grok 4.7 (30% Off)",
+      "pricing": {
+        "input": 1.4,
+        "output": 4.2,
+        "cache_create": 0.35
+      },
+      "context_window": 500000,
+      "default_max_tokens": 500000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "grok-build-0.1",
       "type": "responses",
       "name": "Grok Build 0.1",
@@ -1951,6 +2113,37 @@
       }
     },
     {
+      "id": "longcat-2.5-preview-free",
+      "name": "LongCat 2.5 Preview Free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "mimo-v2.5-free",
       "name": "MiMo V2.5 Free",
       "pricing": {
@@ -1980,6 +2173,37 @@
       "capabilities": {
         "vision": true,
         "audio": true
+      }
+    },
+    {
+      "id": "mimo-v2.6-flash-free",
+      "name": "MiMo-V2.6-Flash Free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 200000,
+      "default_max_tokens": 32000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
       }
     },
     {
@@ -2337,6 +2561,136 @@
       "capabilities": {
         "vision": true
       }
+    },
+    {
+      "id": "qwen3.8-flash",
+      "name": "Qwen3.8 Flash",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache_create": 0.02,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8 Max",
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_create": 0.25,
+        "cache_hit": 2.5
+      },
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "xhigh"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "space-bunny-free",
+      "name": "Space Bunny Free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 524288,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "jev-1.13",
+      "name": "jev-1.13",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "jev-1.13-free",
+      "name": "jev-1.13-free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     }
-  ]
+  ],
+  "session_affinity_header": "x-opencode-session"
 }

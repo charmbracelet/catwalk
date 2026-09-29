@@ -119,6 +119,22 @@
       }
     },
     {
+      "id": "claude-opus-5.5",
+      "name": "Claude Opus 5.5",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 328000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "pricing": {
@@ -448,6 +464,38 @@
       }
     },
     {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "grok-4.5",
       "type": "responses",
       "name": "Grok 4.5",
@@ -468,6 +516,22 @@
       "id": "grok-4.6",
       "type": "responses",
       "name": "Grok 4.6",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 328000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "grok-4.7",
+      "name": "Grok 4.7",
       "pricing": {
         "input": 0,
         "output": 0

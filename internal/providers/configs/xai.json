@@ -108,6 +108,23 @@
       }
     },
     {
+      "id": "grok-4.7",
+      "name": "grok-4.7",
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.5
+      },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "grok-build-0.1",
       "name": "Grok Build 0.1",
       "pricing": {

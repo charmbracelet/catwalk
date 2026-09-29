@@ -477,8 +477,8 @@
       "id": "deepseek-v4-pro",
       "name": "deepseek-v4-pro",
       "pricing": {
-        "input": 1.553,
-        "output": 3.106
+        "input": 1.526,
+        "output": 3.052
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -539,8 +539,8 @@
       "id": "deepseek-v4.1-flash",
       "name": "deepseek-v4.1-flash",
       "pricing": {
-        "input": 0.449,
-        "output": 1.346
+        "input": 0.269,
+        "output": 1.077
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -899,8 +899,8 @@
         "input": 0.2,
         "output": 0.35
       },
-      "context_window": 262000,
-      "default_max_tokens": 26200,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1067,8 +1067,8 @@
       "id": "glm-5.2",
       "name": "glm-5.2",
       "pricing": {
-        "input": 1.077,
-        "output": 3.77
+        "input": 0.808,
+        "output": 2.908
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -1098,8 +1098,8 @@
       "id": "glm-5.3",
       "name": "glm-5.3",
       "pricing": {
-        "input": 1,
-        "output": 3.5
+        "input": 0.784,
+        "output": 2.968
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -1532,8 +1532,8 @@
       "id": "gpt-5.6-sol",
       "name": "gpt-5.6-sol",
       "pricing": {
-        "input": 4.937,
-        "output": 29.621
+        "input": 3.949,
+        "output": 19.747
       },
       "context_window": 1050000,
       "default_max_tokens": 105000,
@@ -1750,8 +1750,8 @@
       "id": "kimi-k2.6",
       "name": "kimi-k2.6",
       "pricing": {
-        "input": 0.694,
-        "output": 3.034
+        "input": 0.426,
+        "output": 2.666
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -1781,8 +1781,8 @@
       "id": "kimi-k2.7-code",
       "name": "kimi-k2.7-code",
       "pricing": {
-        "input": 0.673,
-        "output": 3.142
+        "input": 0.589,
+        "output": 2.962
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -1837,37 +1837,6 @@
       },
       "capabilities": {
         "vision": true
-      }
-    },
-    {
-      "id": "llama-3.1-405b-instruct",
-      "name": "llama-3.1-405b-instruct",
-      "pricing": {
-        "input": 1.75,
-        "output": 1.75
-      },
-      "context_window": 128000,
-      "default_max_tokens": 12800,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
       }
     },
     {
@@ -1936,8 +1905,8 @@
       "id": "llama-3.3-70b-instruct",
       "name": "llama-3.3-70b-instruct",
       "pricing": {
-        "input": 0.116,
-        "output": 0.358
+        "input": 0.65,
+        "output": 0.65
       },
       "context_window": 131000,
       "default_max_tokens": 13100,
@@ -2091,8 +2060,8 @@
       "id": "minimax-m3",
       "name": "minimax-m3",
       "pricing": {
-        "input": 0.355,
-        "output": 1.775
+        "input": 0.269,
+        "output": 1.077
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -2653,11 +2622,11 @@
       "id": "qwen3-32b",
       "name": "qwen3-32b",
       "pricing": {
-        "input": 0.08,
-        "output": 0.28
+        "input": 0.161,
+        "output": 0.626
       },
-      "context_window": 40000,
-      "default_max_tokens": 4000,
+      "context_window": 16384,
+      "default_max_tokens": 1638,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2997,8 +2966,8 @@
         "input": 0.09,
         "output": 0.359
       },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3030,6 +2999,99 @@
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "gpt-6-sol",
+      "pricing": {
+        "input": 2.154,
+        "output": 10.771
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gpt-6-luna",
+      "name": "gpt-6-luna",
+      "pricing": {
+        "input": 0.108,
+        "output": 0.539
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "claude-opus-5.5",
+      "name": "claude-opus-5.5",
+      "pricing": {
+        "input": 3.949,
+        "output": 19.747
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [

@@ -134,6 +134,38 @@
       }
     },
     {
+      "id": "accounts/fireworks/models/ember-1",
+      "name": "Ember-1",
+      "pricing": {
+        "input": 3,
+        "output": 15,
+        "cache_hit": 0.3
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "accounts/fireworks/models/kimi-k3",
       "name": "Kimi K3",
       "pricing": {
@@ -159,7 +191,7 @@
             "display": "Max"
           }
         ],
-        "default_effort_level": "max"
+        "default_effort_level": "high"
       },
       "capabilities": {
         "vision": true

@@ -111,8 +111,8 @@ func main() {
 		APIKey:              "$BASETEN_API_KEY",
 		APIEndpoint:         "https://inference.baseten.co/v1",
 		Type:                catwalk.TypeCompletions,
-		DefaultLargeModelID: "deepseek-ai/DeepSeek-V4-Pro",
-		DefaultSmallModelID: "openai/gpt-oss-120b",
+		DefaultLargeModelID: "zai-org/GLM-5.3",
+		DefaultSmallModelID: "deepseek-ai/DeepSeek-V4.1-Flash",
 		Models:              []catwalk.Model{},
 	}
 
@@ -149,9 +149,9 @@ func main() {
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
 			case "moonshotai/Kimi-K3":
-				// Kimi K3 always thinks; effort is low/high/max, defaulting to max.
+				// Kimi K3 always thinks; effort is low/high/max, defaulting to high.
 				reasoningLevels = []string{"low", "high", "max"}
-				defaultReasoning = "max"
+				defaultReasoning = "high"
 			case "thinkingmachines/inkling":
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
 				defaultReasoning = "medium"

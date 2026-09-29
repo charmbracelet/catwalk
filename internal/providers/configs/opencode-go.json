@@ -4,7 +4,6 @@
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/go/v1",
   "type": "completions",
-  "session_affinity_header": "x-opencode-session",
   "default_large_model_id": "minimax-m2.7",
   "default_small_model_id": "minimax-m2.7",
   "models": [
@@ -131,70 +130,6 @@
       },
       "capabilities": {
         "vision": true
-      }
-    },
-    {
-      "id": "glm-5",
-      "name": "GLM-5",
-      "pricing": {
-        "input": 1,
-        "output": 3.2,
-        "cache_create": 0.2
-      },
-      "context_window": 202752,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "glm-5.1",
-      "name": "GLM-5.1",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_create": 0.26
-      },
-      "context_window": 202752,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
       }
     },
     {
@@ -327,6 +262,38 @@
       }
     },
     {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_create": 0.01
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "grok-4.5",
       "type": "responses",
       "name": "Grok 4.5",
@@ -363,6 +330,38 @@
       "id": "grok-4.6",
       "type": "responses",
       "name": "Grok 4.6",
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_create": 0.5
+      },
+      "context_window": 500000,
+      "default_max_tokens": 500000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "grok-4.7",
+      "name": "Grok 4.7",
       "pricing": {
         "input": 2,
         "output": 6,
@@ -454,38 +453,6 @@
       },
       "capabilities": {
         "vision": false
-      }
-    },
-    {
-      "id": "kimi-k2.5",
-      "name": "Kimi K2.5",
-      "pricing": {
-        "input": 0.6,
-        "output": 3,
-        "cache_create": 0.1
-      },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
       }
     },
     {
@@ -585,6 +552,37 @@
       }
     },
     {
+      "id": "longcat-2.5-preview-free",
+      "name": "LongCat 2.5 Preview Free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "longcat-2.0",
       "name": "LongCat-2.0",
       "pricing": {
@@ -614,71 +612,6 @@
       },
       "capabilities": {
         "vision": false
-      }
-    },
-    {
-      "id": "mimo-v2-omni",
-      "name": "MiMo V2 Omni",
-      "pricing": {
-        "input": 0.4,
-        "output": 2,
-        "cache_create": 0.08
-      },
-      "context_window": 262144,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "mimo-v2-pro",
-      "name": "MiMo V2 Pro",
-      "pricing": {
-        "input": 1,
-        "output": 3,
-        "cache_create": 0.2
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
       }
     },
     {
@@ -745,16 +678,14 @@
       }
     },
     {
-      "id": "minimax-m2.5",
-      "type": "messages",
-      "name": "MiniMax-M2.5",
+      "id": "mimo-v2.6-flash",
+      "name": "MiMo-V2.6-Flash",
       "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_create": 0.03
+        "input": 0.14,
+        "output": 0.28
       },
-      "context_window": 204800,
-      "default_max_tokens": 65536,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -774,7 +705,38 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": true
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "pricing": {
+        "input": 0.44,
+        "output": 0.87
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
       }
     },
     {
@@ -885,101 +847,6 @@
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "omen-alpha",
-      "name": "Omen Alpha",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.66,
-        "cache_create": 0.04
-      },
-      "context_window": 500000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "ox-alpha-free",
-      "name": "Ox Alpha Free (Unlimited)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3.5-plus",
-      "name": "Qwen3.5 Plus",
-      "pricing": {
-        "input": 0.2,
-        "output": 1.2,
-        "cache_create": 0.02
-      },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1166,6 +1033,38 @@
       "capabilities": {
         "vision": true
       }
+    },
+    {
+      "id": "space-bunny-free",
+      "name": "Space Bunny Free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 524288,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
     }
-  ]
+  ],
+  "session_affinity_header": "x-opencode-session"
 }
