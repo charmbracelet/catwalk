@@ -121,29 +121,26 @@ func main() {
 			continue
 		}
 
-		var (
-			canReason        = model.hasTag("Reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
-		)
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if model.hasTag("Reasoning") {
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		model := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.ID,
-			ContextWindow:          detailData.ContextSize,
-			CostPer1MIn:            detailData.Pricing.InputToken,
-			CostPer1MOut:           detailData.Pricing.OutputToken,
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     0,
-			DefaultMaxTokens:       model.ContextSize / 10,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         model.hasTag("Image"),
+			ID:            model.ID,
+			Name:          model.ID,
+			ContextWindow: detailData.ContextSize,
+			Pricing: catwalk.Pricing{
+				Input:  detailData.Pricing.InputToken,
+				Output: detailData.Pricing.OutputToken,
+			},
+			DefaultMaxTokens: model.ContextSize / 10,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: model.hasTag("Image")},
 		}
 		models = append(models, model)
 	}
@@ -153,7 +150,7 @@ func main() {
 		ID:                  "cortecs",
 		APIKey:              "$CORTECS_API_KEY",
 		APIEndpoint:         "https://api.cortecs.ai/v1",
-		Type:                catwalk.TypeOpenAI,
+		Type:                catwalk.TypeResponses,
 		DefaultLargeModelID: "qwen3-coder-30b-a3b-instruct",
 		DefaultSmallModelID: "glm-4.7-flash",
 		Models:              models,

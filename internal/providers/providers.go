@@ -191,6 +191,12 @@ func GetAll() []catwalk.Provider {
 	return providers
 }
 
+// GetAllV2 returns all registered providers in the legacy v2 schema,
+// derived automatically from the v3 data.
+func GetAllV2() []catwalk.ProviderV2 {
+	return catwalk.ToV2Providers(GetAll())
+}
+
 func loadProviderFromConfig(configData []byte) catwalk.Provider {
 	var p catwalk.Provider
 	if err := json.Unmarshal(configData, &p); err != nil {

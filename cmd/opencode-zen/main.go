@@ -133,39 +133,40 @@ func main() {
 	}
 
 	zenProvider := catwalk.Provider{
-		Name:                "OpenCode Zen",
-		ID:                  catwalk.InferenceProviderOpenCodeZen,
-		APIKey:              "$OPENCODE_API_KEY",
-		APIEndpoint:         "https://opencode.ai/zen/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "deepseek-v4-flash-free",
-		DefaultSmallModelID: "deepseek-v4-flash-free",
+		Name:                  "OpenCode Zen",
+		ID:                    catwalk.InferenceProviderOpenCodeZen,
+		APIKey:                "$OPENCODE_API_KEY",
+		APIEndpoint:           "https://opencode.ai/zen/v1",
+		Type:                  catwalk.TypeCompletions,
+		SessionAffinityHeader: "x-opencode-session",
+		DefaultLargeModelID:   "deepseek-v4-flash-free",
+		DefaultSmallModelID:   "deepseek-v4-flash-free",
 	}
 
 	for _, zenModel := range zenModels {
 		enrichment, hasEnrichment := enrichmentData[zenModel.ID]
 
-		var costPer1MIn, costPer1MOut, costPer1MInCached, costPer1MOutCached float64
+		var costInput, costOutput, costCacheCreate, costCacheHit float64
 		var contextWindow, defaultMaxTokens int64 = 200000, 20000
 		var supportsImages bool
-		var canReason bool
-		var reasoningLevels []string
-		var defaultReasoningEffort string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		modelName := zenModel.ID
 
 		if hasEnrichment {
-			costPer1MIn = math.Round(enrichment.Cost.Input*100) / 100
-			costPer1MOut = math.Round(enrichment.Cost.Output*100) / 100
-			costPer1MInCached = math.Round(enrichment.Cost.CacheRead*100) / 100
-			costPer1MOutCached = math.Round(enrichment.Cost.CacheWrite*100) / 100
+			costInput = math.Round(enrichment.Cost.Input*100) / 100
+			costOutput = math.Round(enrichment.Cost.Output*100) / 100
+			costCacheCreate = math.Round(enrichment.Cost.CacheWrite*100) / 100
+			costCacheHit = math.Round(enrichment.Cost.CacheRead*100) / 100
 			contextWindow = enrichment.Limit.Context
 			defaultMaxTokens = enrichment.Limit.Output
 			supportsImages = enrichment.Attachment
 			modelName = enrichment.Name
 
 			if enrichment.Reasoning {
-				canReason = true
+				reasoning.Thinking = catwalk.ThinkingToggleable
 
+				var reasoningLevels []string
+				var defaultReasoningEffort string
 				switch {
 				case strings.Contains(zenModel.ID, "deepseek-v4"):
 					reasoningLevels = []string{"low", "high", "max"}
@@ -186,24 +187,27 @@ func main() {
 					reasoningLevels = []string{"low", "medium", "high"}
 					defaultReasoningEffort = "medium"
 				}
+				reasoning.EffortLevels = catwalk.NewEffortLevels(reasoningLevels...)
+				reasoning.DefaultEffortLevel = defaultReasoningEffort
 			}
 		} else {
 			log.Printf("WARNING: No enrichment found for model %s, using defaults\n", zenModel.ID)
 		}
 
 		m := catwalk.Model{
-			ID:                     zenModel.ID,
-			Name:                   modelName,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      costPer1MInCached,
-			CostPer1MOutCached:     costPer1MOutCached,
-			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
-			SupportsImages:         supportsImages,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoningEffort,
+			ID:   zenModel.ID,
+			Name: modelName,
+			Type: modelEndpointType(zenModel.ID),
+			Pricing: catwalk.Pricing{
+				Input:       costInput,
+				Output:      costOutput,
+				CacheCreate: costCacheCreate,
+				CacheHit:    costCacheHit,
+			},
+			ContextWindow:    contextWindow,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		zenProvider.Models = append(zenProvider.Models, m)
@@ -227,4 +231,36 @@ func main() {
 	}
 
 	fmt.Printf("Generated opencode-zen.json with %d models\n", len(zenProvider.Models))
+}
+
+// modelEndpointType returns the endpoint type override for the given model,
+// or the empty string when the model uses the provider's default endpoint
+// type. See https://opencode.ai/docs/zen.
+func modelEndpointType(modelID string) catwalk.Type {
+	switch {
+	case isMessagesModel(modelID):
+		return catwalk.TypeMessages
+	case isResponsesModel(modelID):
+		return catwalk.TypeResponses
+	default:
+		return ""
+	}
+}
+
+// isMessagesModel reports whether the model is served through the Anthropic
+// Messages API instead of Chat Completions.
+func isMessagesModel(modelID string) bool {
+	return strings.HasPrefix(modelID, "claude-") ||
+		strings.HasPrefix(modelID, "qwen3.5-") ||
+		strings.HasPrefix(modelID, "qwen3.6-") ||
+		strings.HasPrefix(modelID, "qwen3.7-") ||
+		strings.HasPrefix(modelID, "qwen3.8-")
+}
+
+// isResponsesModel reports whether the model is served through the OpenAI
+// Responses API instead of Chat Completions.
+func isResponsesModel(modelID string) bool {
+	return strings.HasPrefix(modelID, "gpt-") ||
+		strings.HasPrefix(modelID, "grok-") ||
+		strings.HasPrefix(modelID, "muse-spark-")
 }

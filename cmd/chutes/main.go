@@ -99,28 +99,27 @@ func main() {
 			continue
 		}
 
-		var (
-			canReason        = hasFeature(m, "reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
-		)
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if hasFeature(m, "reasoning") {
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		model := catwalk.Model{
-			ID:                     m.ID,
-			Name:                   modelDisplayName(m.ID),
-			CostPer1MIn:            roundCost(m.Pricing.Prompt),
-			CostPer1MOut:           roundCost(m.Pricing.Completion),
-			CostPer1MInCached:      roundCost(m.Pricing.InputCacheRead),
-			ContextWindow:          m.ContextLength,
-			DefaultMaxTokens:       m.MaxOutputLength,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         hasModality(m, "image"),
+			ID:   m.ID,
+			Name: modelDisplayName(m.ID),
+			Pricing: catwalk.Pricing{
+				Input:    roundCost(m.Pricing.Prompt),
+				Output:   roundCost(m.Pricing.Completion),
+				CacheHit: roundCost(m.Pricing.InputCacheRead),
+			},
+			ContextWindow:    m.ContextLength,
+			DefaultMaxTokens: m.MaxOutputLength,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: hasModality(m, "image")},
 		}
 		models = append(models, model)
 	}
@@ -137,7 +136,7 @@ func main() {
 		ID:                  "chutes",
 		APIKey:              "$CHUTES_API_KEY",
 		APIEndpoint:         "https://llm.chutes.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/Kimi-K2.6-TEE",
 		DefaultSmallModelID: "google/gemma-4-31B-turbo-TEE",
 		Models:              models,

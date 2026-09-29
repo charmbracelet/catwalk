@@ -93,42 +93,33 @@ type ModelsResponse struct {
 	Data []Model `json:"data"`
 }
 
-// ModelPricing is the pricing structure for a model, detailing costs per
-// million tokens for input and output, both cached and uncached.
-type ModelPricing struct {
-	CostPer1MIn        float64 `json:"cost_per_1m_in"`
-	CostPer1MOut       float64 `json:"cost_per_1m_out"`
-	CostPer1MInCached  float64 `json:"cost_per_1m_in_cached"`
-	CostPer1MOutCached float64 `json:"cost_per_1m_out_cached"`
-}
-
 func roundCost(v float64) float64 {
 	return math.Round(v*1e5) / 1e5
 }
 
-func getPricing(model Model) ModelPricing {
-	pricing := ModelPricing{}
+func getPricing(model Model) catwalk.Pricing {
+	pricing := catwalk.Pricing{}
 	costPrompt, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
 	if err != nil {
 		costPrompt = 0.0
 	}
-	pricing.CostPer1MIn = roundCost(costPrompt * 1_000_000)
+	pricing.Input = roundCost(costPrompt * 1_000_000)
 	costCompletion, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 	if err != nil {
 		costCompletion = 0.0
 	}
-	pricing.CostPer1MOut = roundCost(costCompletion * 1_000_000)
+	pricing.Output = roundCost(costCompletion * 1_000_000)
 
-	costPromptCached, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
+	costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 	if err != nil {
-		costPromptCached = 0.0
+		costCacheWrite = 0.0
 	}
-	pricing.CostPer1MInCached = roundCost(costPromptCached * 1_000_000)
-	costCompletionCached, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
+	pricing.CacheCreate = roundCost(costCacheWrite * 1_000_000)
+	costCacheRead, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 	if err != nil {
-		costCompletionCached = 0.0
+		costCacheRead = 0.0
 	}
-	pricing.CostPer1MOutCached = roundCost(costCompletionCached * 1_000_000)
+	pricing.CacheHit = roundCost(costCacheRead * 1_000_000)
 	return pricing
 }
 
@@ -260,7 +251,7 @@ func main() {
 		ID:                  "openrouter",
 		APIKey:              "$OPENROUTER_API_KEY",
 		APIEndpoint:         "https://openrouter.ai/api/v1",
-		Type:                catwalk.TypeOpenRouter,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4.6",
 		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
 		Models:              []catwalk.Model{},
@@ -293,24 +284,21 @@ func main() {
 			canReason := slices.Contains(model.SupportedParams, "reasoning")
 			supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
-			var reasoningLevels []string
-			var defaultReasoning string
+			reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 			if canReason {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoning = "medium"
+				reasoning = catwalk.Reasoning{
+					Thinking:           catwalk.ThinkingToggleable,
+					EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+					DefaultEffortLevel: "medium",
+				}
 			}
 			m := catwalk.Model{
-				ID:                     model.ID,
-				Name:                   model.Name,
-				CostPer1MIn:            pricing.CostPer1MIn,
-				CostPer1MOut:           pricing.CostPer1MOut,
-				CostPer1MInCached:      pricing.CostPer1MInCached,
-				CostPer1MOutCached:     pricing.CostPer1MOutCached,
-				ContextWindow:          model.ContextLength,
-				CanReason:              canReason,
-				DefaultReasoningEffort: defaultReasoning,
-				ReasoningLevels:        reasoningLevels,
-				SupportsImages:         supportsImages,
+				ID:            model.ID,
+				Name:          model.Name,
+				Pricing:       pricing,
+				ContextWindow: model.ContextLength,
+				Reasoning:     reasoning,
+				Capabilities:  catwalk.Capabilities{Vision: supportsImages},
 			}
 			if model.TopProvider.MaxCompletionTokens != nil {
 				m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens / 2
@@ -337,50 +325,47 @@ func main() {
 		}
 
 		// Use the best endpoint's configuration
-		pricing := ModelPricing{}
+		pricing := catwalk.Pricing{}
 		costPrompt, err := strconv.ParseFloat(bestEndpoint.Pricing.Prompt, 64)
 		if err != nil {
 			costPrompt = 0.0
 		}
-		pricing.CostPer1MIn = roundCost(costPrompt * 1_000_000)
+		pricing.Input = roundCost(costPrompt * 1_000_000)
 		costCompletion, err := strconv.ParseFloat(bestEndpoint.Pricing.Completion, 64)
 		if err != nil {
 			costCompletion = 0.0
 		}
-		pricing.CostPer1MOut = roundCost(costCompletion * 1_000_000)
+		pricing.Output = roundCost(costCompletion * 1_000_000)
 
-		costPromptCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
+		costCacheWrite, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheWrite, 64)
 		if err != nil {
-			costPromptCached = 0.0
+			costCacheWrite = 0.0
 		}
-		pricing.CostPer1MInCached = roundCost(costPromptCached * 1_000_000)
-		costCompletionCached, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
+		pricing.CacheCreate = roundCost(costCacheWrite * 1_000_000)
+		costCacheRead, err := strconv.ParseFloat(bestEndpoint.Pricing.InputCacheRead, 64)
 		if err != nil {
-			costCompletionCached = 0.0
+			costCacheRead = 0.0
 		}
-		pricing.CostPer1MOutCached = roundCost(costCompletionCached * 1_000_000)
+		pricing.CacheHit = roundCost(costCacheRead * 1_000_000)
 
 		canReason := slices.Contains(bestEndpoint.SupportedParams, "reasoning")
 		supportsImages := slices.Contains(model.Architecture.InputModalities, "image")
 
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.Name,
-			CostPer1MIn:            pricing.CostPer1MIn,
-			CostPer1MOut:           pricing.CostPer1MOut,
-			CostPer1MInCached:      pricing.CostPer1MInCached,
-			CostPer1MOutCached:     pricing.CostPer1MOutCached,
-			ContextWindow:          bestEndpoint.ContextLength,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         supportsImages,
+			ID:            model.ID,
+			Name:          model.Name,
+			Pricing:       pricing,
+			ContextWindow: bestEndpoint.ContextLength,
+			Reasoning:     reasoning,
+			Capabilities:  catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		// Set max tokens based on the best endpoint

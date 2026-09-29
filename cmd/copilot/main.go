@@ -48,6 +48,7 @@ type Model struct {
 	ModelPickerEnabled bool       `json:"model_picker_enabled"`
 	Capabilities       Capability `json:"capabilities"`
 	Policy             *Policy    `json:"policy,omitempty"`
+	SupportedEndpoints []string   `json:"supported_endpoints,omitempty"`
 }
 
 type Capability struct {
@@ -85,7 +86,7 @@ func main() {
 }
 
 func run() error {
-	copilotModels, err := fetchCopilotModels()
+	copilotModels, apiEndpoint, err := fetchCopilotModels()
 	if err != nil {
 		return err
 	}
@@ -134,8 +135,8 @@ func run() error {
 		ID:                  catwalk.InferenceProviderCopilot,
 		Name:                "GitHub Copilot",
 		Models:              catwalkModels,
-		APIEndpoint:         "https://api.githubcopilot.com",
-		Type:                catwalk.TypeOpenAICompat,
+		APIEndpoint:         apiEndpoint,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "claude-sonnet-5",
 		DefaultSmallModelID: "claude-haiku-4.5",
 	}
@@ -150,20 +151,20 @@ func run() error {
 	return nil
 }
 
-func fetchCopilotModels() ([]Model, error) {
+func fetchCopilotModels() ([]Model, string, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
 
 	oauthToken := copilotToken()
 	if oauthToken == "" {
-		return nil, fmt.Errorf("no OAuth token available")
+		return nil, "", fmt.Errorf("no OAuth token available")
 	}
 
 	// Step 1: Fetch API token from the token endpoint
 	tokenURL := "https://api.github.com/copilot_internal/v2/token"
 	tokenReq, err := http.NewRequestWithContext(ctx, "GET", tokenURL, nil)
 	if err != nil {
-		return nil, fmt.Errorf("unable to create token request: %w", err)
+		return nil, "", fmt.Errorf("unable to create token request: %w", err)
 	}
 	tokenReq.Header.Set("Accept", "application/json")
 	tokenReq.Header.Set("Authorization", fmt.Sprintf("token %s", oauthToken))
@@ -175,22 +176,22 @@ func fetchCopilotModels() ([]Model, error) {
 	client := &http.Client{}
 	tokenResp, err := client.Do(tokenReq)
 	if err != nil {
-		return nil, fmt.Errorf("unable to make token request: %w", err)
+		return nil, "", fmt.Errorf("unable to make token request: %w", err)
 	}
 	defer tokenResp.Body.Close() //nolint:errcheck
 
 	tokenBody, err := io.ReadAll(tokenResp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("unable to read token response body: %w", err)
+		return nil, "", fmt.Errorf("unable to read token response body: %w", err)
 	}
 
 	if tokenResp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("unexpected status code from token endpoint: %d", tokenResp.StatusCode)
+		return nil, "", fmt.Errorf("unexpected status code from token endpoint: %d", tokenResp.StatusCode)
 	}
 
 	var tokenData APITokenResponse
 	if err := json.Unmarshal(tokenBody, &tokenData); err != nil {
-		return nil, fmt.Errorf("unable to unmarshal token response: %w", err)
+		return nil, "", fmt.Errorf("unable to unmarshal token response: %w", err)
 	}
 
 	// Convert to APIToken
@@ -205,7 +206,7 @@ func fetchCopilotModels() ([]Model, error) {
 	modelsURL := apiToken.APIEndpoint + "/models"
 	modelsReq, err := http.NewRequestWithContext(ctx, "GET", modelsURL, nil)
 	if err != nil {
-		return nil, fmt.Errorf("unable to create models request: %w", err)
+		return nil, "", fmt.Errorf("unable to create models request: %w", err)
 	}
 	modelsReq.Header.Set("Accept", "application/json")
 	modelsReq.Header.Set("Authorization", fmt.Sprintf("Bearer %s", apiToken.APIKey))
@@ -214,17 +215,17 @@ func fetchCopilotModels() ([]Model, error) {
 
 	modelsResp, err := client.Do(modelsReq)
 	if err != nil {
-		return nil, fmt.Errorf("unable to make models request: %w", err)
+		return nil, "", fmt.Errorf("unable to make models request: %w", err)
 	}
 	defer modelsResp.Body.Close() //nolint:errcheck
 
 	modelsBody, err := io.ReadAll(modelsResp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("unable to read models response body: %w", err)
+		return nil, "", fmt.Errorf("unable to read models response body: %w", err)
 	}
 
 	if modelsResp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("unexpected status code from models endpoint: %d", modelsResp.StatusCode)
+		return nil, "", fmt.Errorf("unexpected status code from models endpoint: %d", modelsResp.StatusCode)
 	}
 
 	// for debugging
@@ -233,9 +234,9 @@ func fetchCopilotModels() ([]Model, error) {
 
 	var data Response
 	if err := json.Unmarshal(modelsBody, &data); err != nil {
-		return nil, fmt.Errorf("unable to unmarshal json: %w", err)
+		return nil, "", fmt.Errorf("unable to unmarshal json: %w", err)
 	}
-	return data.Data, nil
+	return data.Data, apiToken.APIEndpoint, nil
 }
 
 func modelsToCatwalk(m []Model) []catwalk.Model {
@@ -250,10 +251,23 @@ func modelToCatwalk(m Model) catwalk.Model {
 	return catwalk.Model{
 		ID:               m.ID,
 		Name:             m.Name,
+		Type:             modelEndpointType(m),
 		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
 		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
-		SupportsImages:   m.Capabilities.Supports.Vision,
+		Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
+		Capabilities:     catwalk.Capabilities{Vision: m.Capabilities.Supports.Vision},
 	}
+}
+
+// modelEndpointType returns the endpoint type for the given model, derived
+// from the model's supported endpoints as reported by the Copilot API. Models
+// that support the OpenAI Responses API are routed through it; all others use
+// the provider's default endpoint type (Chat Completions).
+func modelEndpointType(m Model) catwalk.Type {
+	if slices.Contains(m.SupportedEndpoints, "/responses") {
+		return catwalk.TypeResponses
+	}
+	return ""
 }
 
 func copilotToken() string {

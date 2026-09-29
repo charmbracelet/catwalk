@@ -75,33 +75,34 @@ func main() {
 		ID:                  catwalk.InferenceProviderAvian,
 		APIKey:              "$AVIAN_API_KEY",
 		APIEndpoint:         "https://api.avian.io/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/kimi-k2.5",
 		DefaultSmallModelID: "deepseek/deepseek-v3.2",
 		Models:              []catwalk.Model{},
 	}
 
 	for _, model := range modelsResp.Data {
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if model.Reasoning {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.DisplayName,
-			CostPer1MIn:            model.Pricing.InputPerMillion,
-			CostPer1MOut:           model.Pricing.OutputPerMillion,
-			CostPer1MInCached:      model.Pricing.CacheReadPerMillion,
-			CostPer1MOutCached:     0,
-			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.MaxOutput,
-			CanReason:              model.Reasoning,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         false,
+			ID:   model.ID,
+			Name: model.DisplayName,
+			Pricing: catwalk.Pricing{
+				Input:    model.Pricing.InputPerMillion,
+				Output:   model.Pricing.OutputPerMillion,
+				CacheHit: model.Pricing.CacheReadPerMillion,
+			},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: model.MaxOutput,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: false},
 		}
 
 		avianProvider.Models = append(avianProvider.Models, m)

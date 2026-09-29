@@ -104,7 +104,7 @@ func parseFloat(p *float64) float64 {
 	if p == nil {
 		return 0
 	}
-	return roundCost(*p)
+	return *p
 }
 
 func calculateMaxTokens(contextLength, maxOutput, factor int64) int64 {
@@ -114,11 +114,15 @@ func calculateMaxTokens(contextLength, maxOutput, factor int64) int64 {
 	return maxOutput
 }
 
-func buildReasoningConfig(canReason bool) ([]string, string) {
+func buildReasoningConfig(canReason bool) catwalk.Reasoning {
 	if !canReason {
-		return nil, ""
+		return catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 	}
-	return []string{"low", "medium", "high"}, "medium"
+	return catwalk.Reasoning{
+		Thinking:           catwalk.ThinkingToggleable,
+		EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+		DefaultEffortLevel: "medium",
+	}
 }
 
 func main() {
@@ -132,7 +136,7 @@ func main() {
 		ID:                  catwalk.InferenceAIHubMix,
 		APIKey:              "$AIHUBMIX_API_KEY",
 		APIEndpoint:         "https://aihubmix.com/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: defaultLargeModel,
 		DefaultSmallModelID: defaultSmallModel,
 		DefaultHeaders: map[string]string{
@@ -151,22 +155,22 @@ func main() {
 		canReason := hasField(model.Features, "thinking")
 		supportsImages := hasField(model.InputModalities, "image")
 
-		reasoningLevels, defaultReasoning := buildReasoningConfig(canReason)
+		reasoning := buildReasoningConfig(canReason)
 		maxTokens := calculateMaxTokens(model.ContextLength, model.MaxOutput, maxTokensFactor)
 
 		aiHubMixProvider.Models = append(aiHubMixProvider.Models, catwalk.Model{
-			ID:                     model.ModelID,
-			Name:                   model.ModelName,
-			CostPer1MIn:            parseFloat(model.Pricing.Input),
-			CostPer1MOut:           parseFloat(model.Pricing.Output),
-			CostPer1MInCached:      parseFloat(model.Pricing.CacheWrite),
-			CostPer1MOutCached:     parseFloat(model.Pricing.CacheRead),
-			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       maxTokens,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         supportsImages,
+			ID:   model.ModelID,
+			Name: model.ModelName,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(parseFloat(model.Pricing.Input)),
+				Output:      roundCost(parseFloat(model.Pricing.Output)),
+				CacheCreate: roundCost(parseFloat(model.Pricing.CacheWrite)),
+				CacheHit:    roundCost(parseFloat(model.Pricing.CacheRead)),
+			},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: maxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		})
 	}
 

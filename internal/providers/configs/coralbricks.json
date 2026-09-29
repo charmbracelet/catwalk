@@ -3,45 +3,60 @@
   "id": "coralbricks",
   "api_key": "$CORALBRICKS_API_KEY",
   "api_endpoint": "https://inference.coralbricks.ai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "glm-5.3-fp4",
   "default_small_model_id": "glm-5.3-flash-fp4",
   "models": [
     {
       "id": "glm-5.3-fp4",
       "name": "GLM 5.3",
-      "cost_per_1m_in": 1.12,
-      "cost_per_1m_out": 4.4,
-      "cost_per_1m_in_cached": 1.68,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 1.12,
+        "output": 4.4,
+        "cache_create": 1.68
+      },
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "glm-5.3-flash-fp4",
       "name": "GLM 5.3 Flash",
-      "cost_per_1m_in": 0.15,
-      "cost_per_1m_out": 0.5,
-      "cost_per_1m_in_cached": 0.23,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_create": 0.23
+      },
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "always"
+      },
+      "capabilities": {
+        "vision": true
+      }
     },
     {
       "id": "deepseek-v4.1-flash-fast-fp4",
       "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0.09,
-      "cost_per_1m_out_cached": 0,
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_create": 0.09
+      },
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": true
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": true
+      }
     }
   ]
 }

@@ -101,8 +101,8 @@ func bestLargeModelID(models []catwalk.Model) string {
 			best = m
 			continue
 		}
-		mCost := m.CostPer1MIn + m.CostPer1MOut
-		bestCost := best.CostPer1MIn + best.CostPer1MOut
+		mCost := m.Pricing.Input + m.Pricing.Output
+		bestCost := best.Pricing.Input + best.Pricing.Output
 		if mCost > bestCost {
 			best = m
 			continue
@@ -125,8 +125,8 @@ func bestSmallModelID(models []catwalk.Model) string {
 			best = m
 			continue
 		}
-		mCost := m.CostPer1MIn + m.CostPer1MOut
-		bestCost := best.CostPer1MIn + best.CostPer1MOut
+		mCost := m.Pricing.Input + m.Pricing.Output
+		bestCost := best.Pricing.Input + best.Pricing.Output
 		if mCost < bestCost {
 			best = m
 			continue
@@ -147,7 +147,7 @@ func main() {
 		ID:          catwalk.InferenceProviderVenice,
 		APIKey:      "$VENICE_API_KEY",
 		APIEndpoint: "https://api.venice.ai/api/v1",
-		Type:        catwalk.TypeOpenAICompat,
+		Type:        catwalk.TypeCompletions,
 		Models:      []catwalk.Model{},
 	}
 
@@ -182,11 +182,13 @@ func main() {
 			canReason            = model.ModelSpec.Capabilities.SupportsReasoning
 			supportsReasonEffort = model.ModelSpec.Capabilities.SupportsReasoningEffort
 		)
-		var reasoningLevels []string
-		var defaultReasoning string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if canReason {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+		}
 		if canReason && supportsReasonEffort {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning.EffortLevels = catwalk.NewEffortLevels("low", "medium", "high")
+			reasoning.DefaultEffortLevel = "medium"
 		}
 
 		options := catwalk.ModelOptions{}
@@ -205,19 +207,17 @@ func main() {
 
 		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.ModelSpec.Name,
-			CostPer1MIn:            roundCost(model.ModelSpec.Pricing.Input.USD),
-			CostPer1MOut:           roundCost(model.ModelSpec.Pricing.Output.USD),
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     0,
-			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       model.ModelSpec.MaxCompletionTokens,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         model.ModelSpec.Capabilities.SupportsVision,
-			Options:                options,
+			ID:   model.ID,
+			Name: model.ModelSpec.Name,
+			Pricing: catwalk.Pricing{
+				Input:  roundCost(model.ModelSpec.Pricing.Input.USD),
+				Output: roundCost(model.ModelSpec.Pricing.Output.USD),
+			},
+			ContextWindow:    contextWindow,
+			DefaultMaxTokens: model.ModelSpec.MaxCompletionTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: model.ModelSpec.Capabilities.SupportsVision},
+			Options:          options,
 		}
 
 		veniceProvider.Models = append(veniceProvider.Models, m)

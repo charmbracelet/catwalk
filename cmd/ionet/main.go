@@ -45,7 +45,7 @@ func main() {
 		ID:                  "ionet",
 		APIKey:              "$IONET_API_KEY",
 		APIEndpoint:         "https://api.intelligence.io.solutions/api/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/Kimi-K2.5",
 		DefaultSmallModelID: "zai-org/GLM-4.7-Flash",
 	}
@@ -70,21 +70,21 @@ func main() {
 			continue
 		}
 
-		var (
-			reasoningLevels  []string
-			defaultReasoning string
-		)
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if isReasoningModel(model.ID) {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+		}
 		if supportsReasoningLevels(model.ID) {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			reasoning.EffortLevels = catwalk.NewEffortLevels("low", "medium", "high")
+			reasoning.DefaultEffortLevel = "medium"
 		}
 
-		// Convert token prices (per token) to cost per 1M tokens
 		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
-		costPer1MIn := roundCost(model.InputTokenPrice * 1_000_000)
-		costPer1MOut := roundCost(model.OutputTokenPrice * 1_000_000)
-		costPer1MCacheRead := roundCost(model.CacheReadTokenPrice * 1_000_000)
-		costPer1MCacheWrite := roundCost(model.CacheWriteTokenPrice * 1_000_000)
+		costPerTokenIn := roundCost(model.InputTokenPrice * 1_000_000)
+		costPerTokenOut := roundCost(model.OutputTokenPrice * 1_000_000)
+		costCacheCreate := roundCost(model.CacheWriteTokenPrice * 1_000_000)
+		costCacheHit := roundCost(model.CacheReadTokenPrice * 1_000_000)
 
 		switch model.ID {
 		case "google/gemma-4-26b-a4b-it":
@@ -92,18 +92,18 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.Name,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      costPer1MCacheWrite,
-			CostPer1MOutCached:     costPer1MCacheRead,
-			ContextWindow:          int64(model.ContextWindow),
-			DefaultMaxTokens:       int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
-			CanReason:              isReasoningModel(model.ID),
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         model.SupportsImagesInput,
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:       costPerTokenIn,
+				Output:      costPerTokenOut,
+				CacheCreate: costCacheCreate,
+				CacheHit:    costCacheHit,
+			},
+			ContextWindow:    int64(model.ContextWindow),
+			DefaultMaxTokens: int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: model.SupportsImagesInput},
 		}
 
 		provider.Models = append(provider.Models, m)

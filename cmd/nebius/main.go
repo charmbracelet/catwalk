@@ -95,7 +95,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderNebius,
 		APIKey:              "$NEBIUS_API_KEY",
 		APIEndpoint:         "https://api.tokenfactory.nebius.com/v1", // this is their default region, eu-north1
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "moonshotai/Kimi-K2.5",
 		DefaultSmallModelID: "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
 	}
@@ -107,46 +107,45 @@ func main() {
 		}
 
 		// Convert pricing from string to float64
-		var costPer1MIn, costPer1MOut float64
+		var costPerTokenIn, costPerTokenOut float64
 
 		// Handle prompt price conversion
 		promptPrice, err := strconv.ParseFloat(model.Pricing.Prompt, 64)
 		if err != nil {
 			promptPrice = 0.0
 		}
-		costPer1MIn = math.Round(promptPrice*1_000_000*100) / 100 // Round to 2 decimal places
+		costPerTokenIn = math.Round(promptPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		// Handle completion price conversion
 		completionPrice, err := strconv.ParseFloat(model.Pricing.Completion, 64)
 		if err != nil {
 			completionPrice = 0.0
 		}
-		costPer1MOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
+		costPerTokenOut = math.Round(completionPrice*1_000_000*100) / 100 // Round to 2 decimal places
 
 		var (
-			supportsImages   = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
-			canReason        = model.hasFeature("reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
+			supportsImages = strings.Contains(strings.ToLower(model.Architecture.Modality), "image")
+			reasoning      = catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		)
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		if model.hasFeature("reasoning") {
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.DisplayName,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     0,
-			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         supportsImages,
+			ID:   model.ID,
+			Name: model.DisplayName,
+			Pricing: catwalk.Pricing{
+				Input:  costPerTokenIn,
+				Output: costPerTokenOut,
+			},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: model.ContextLength / 10, // there is no MaxTokens exposed, so play safe
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		nebiusProvider.Models = append(nebiusProvider.Models, m)

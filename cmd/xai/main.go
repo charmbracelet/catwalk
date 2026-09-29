@@ -87,7 +87,7 @@ func roundCost(v float64) float64 {
 	return math.Round(v*1e5) / 1e5
 }
 
-func priceToDollarsPerMillion(centsPerHundredMillion int64) float64 {
+func priceToDollarsPerToken(centsPerHundredMillion int64) float64 {
 	return roundCost(float64(centsPerHundredMillion) / 10_000)
 }
 
@@ -143,7 +143,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderXAI,
 		APIKey:              "$XAI_API_KEY",
 		APIEndpoint:         "https://api.x.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "grok-4.5",
 		DefaultSmallModelID: "grok-4.5",
 	}
@@ -158,31 +158,30 @@ func main() {
 		defaultMaxTokens := ctxWindow / 10
 
 		var (
-			canReason             bool
-			reasoningLevels       []string
-			defaultReasoningLevel string
-			supportsImages        = slices.Contains(model.InputModalities, "image")
+			reasoning      = catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+			supportsImages = slices.Contains(model.InputModalities, "image")
 		)
 		switch id {
 		case "grok-4.5":
-			canReason = true
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoningLevel = "high"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "high",
+			}
 		}
 
 		m := catwalk.Model{
-			ID:                     id,
-			Name:                   prettyName(id),
-			CostPer1MIn:            priceToDollarsPerMillion(model.PromptTextTokenPrice),
-			CostPer1MOut:           priceToDollarsPerMillion(model.CompletionTextTokenPrice),
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     priceToDollarsPerMillion(model.CachedPromptTextTokenPrc),
-			ContextWindow:          ctxWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoningLevel,
-			SupportsImages:         supportsImages,
+			ID:   id,
+			Name: prettyName(id),
+			Pricing: catwalk.Pricing{
+				Input:    priceToDollarsPerToken(model.PromptTextTokenPrice),
+				Output:   priceToDollarsPerToken(model.CompletionTextTokenPrice),
+				CacheHit: priceToDollarsPerToken(model.CachedPromptTextTokenPrc),
+			},
+			ContextWindow:    ctxWindow,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		provider.Models = append(provider.Models, m)
