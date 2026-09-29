@@ -148,7 +148,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": true
       }
     },
     {

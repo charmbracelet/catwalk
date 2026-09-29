@@ -298,7 +298,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": true
       }
     },
     {

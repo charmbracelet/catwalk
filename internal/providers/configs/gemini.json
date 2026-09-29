@@ -21,7 +21,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -39,7 +40,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -76,7 +78,8 @@
         "default_effort_level": "minimal"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -105,7 +108,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -143,7 +147,8 @@
         "default_effort_level": "minimal"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -176,7 +181,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -213,7 +219,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -251,7 +258,8 @@
         "default_effort_level": "minimal"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -288,7 +296,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -321,7 +330,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     },
@@ -354,7 +364,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": true
       },
       "max_attachments": 10
     }
