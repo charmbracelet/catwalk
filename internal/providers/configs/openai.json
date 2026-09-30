@@ -8,6 +8,20 @@
   "default_small_model_id": "gpt-5.6-luna",
   "models": [
     {
+      "id": "gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 2.5,
+      "cost_per_1m_out_cached": 0.1,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "medium", "high", "xhigh", "max"],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "gpt-6-astra",
       "name": "GPT-6 Astra",
       "cost_per_1m_in": 10,
@@ -32,20 +46,6 @@
       "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": ["none", "low", "medium", "high", "xhigh", "max"],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "gpt-6.1-sol",
-      "name": "GPT-6.1 Sol",
-      "cost_per_1m_in": 2,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 2.5,
-      "cost_per_1m_out_cached": 0.1,
-      "context_window": 1050000,
-      "default_max_tokens": 128000,
-      "can_reason": true,
-      "reasoning_levels": ["low", "medium", "high", "xhigh", "max"],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
