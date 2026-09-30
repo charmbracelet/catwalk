@@ -4,8 +4,8 @@
   "type": "openai",
   "api_key": "$OPENAI_API_KEY",
   "api_endpoint": "$OPENAI_API_ENDPOINT",
-  "default_large_model_id": "gpt-5.6-sol",
-  "default_small_model_id": "gpt-5.6-luna",
+  "default_large_model_id": "gpt-6.1-sol",
+  "default_small_model_id": "gpt-6-luna",
   "models": [
     {
       "id": "gpt-6.1-sol",
