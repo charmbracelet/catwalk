@@ -2967,10 +2967,10 @@
     {
       "id": "xiaomi/mimo-v2.6-flash",
       "name": "MiMo V2.6 Flash",
-      "cost_per_1m_in": 0.14,
-      "cost_per_1m_out": 0.28,
+      "cost_per_1m_in": 0.04,
+      "cost_per_1m_out": 1.28,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.0028,
+      "cost_per_1m_out_cached": 0.04,
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,
