@@ -632,6 +632,24 @@
       "supports_attachments": true
     },
     {
+      "id": "deepseek/deepseek-v4.1-flash-fast",
+      "name": "DeepSeek V4.1 Flash Fast",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.006,
+      "context_window": 1048576,
+      "default_max_tokens": 1000000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
       "id": "deepseek/deepseek-r1",
       "name": "DeepSeek-R1",
       "cost_per_1m_in": 1.35,
