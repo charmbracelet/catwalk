@@ -292,8 +292,8 @@
     {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 12.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
@@ -310,8 +310,8 @@
     {
       "id": "claude-sonnet-5-5",
       "name": "Claude Sonnet 5.5",
-      "cost_per_1m_in": 3.75,
-      "cost_per_1m_out": 18.75,
+      "cost_per_1m_in": 2.5,
+      "cost_per_1m_out": 12.5,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
@@ -448,8 +448,8 @@
     {
       "id": "deepseek-v4-1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.375,
-      "cost_per_1m_out": 1.5,
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1000000,
