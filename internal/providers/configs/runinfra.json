@@ -1,0 +1,71 @@
+{
+  "name": "RunInfra",
+  "id": "runinfra",
+  "type": "openai-compat",
+  "api_key": "$RUNINFRA_API_KEY",
+  "api_endpoint": "https://api.runinfra.ai/v1",
+  "default_large_model_id": "deepseek-v4-1-flash",
+  "default_small_model_id": "nemotron-3-5-lightning-30b",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.58,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.03,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM 5.3 Flash",
+      "cost_per_1m_in": 0.11,
+      "cost_per_1m_out": 0.45,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.03,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "ornith-1-5-35b",
+      "name": "Ornith 1.5 35B",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "nemotron-3-5-lightning-30b",
+      "name": "Nemotron 3.5 Lightning 30B",
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}
