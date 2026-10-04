@@ -23,7 +23,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "xhigh",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "glm-5.3-flash",
@@ -41,7 +41,7 @@
         "xhigh"
       ],
       "default_reasoning_effort": "xhigh",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "glm-5.2",
