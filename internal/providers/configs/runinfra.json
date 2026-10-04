@@ -2,7 +2,7 @@
   "name": "RunInfra",
   "id": "runinfra",
   "type": "openai-compat",
-  "api_key": "$RUNINFRA_API_KEY",
+  "api_key": "$RUNINFRA_GATEWAY_KEY",
   "api_endpoint": "https://api.runinfra.ai/v1",
   "default_large_model_id": "deepseek-v4-1-flash",
   "default_small_model_id": "nemotron-3-5-lightning-30b",
