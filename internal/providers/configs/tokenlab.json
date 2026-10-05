@@ -332,10 +332,10 @@
     {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
-      "cost_per_1m_in": 0.9,
-      "cost_per_1m_out": 4.5,
-      "cost_per_1m_in_cached": 1.125,
-      "cost_per_1m_out_cached": 0.09,
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 3,
+      "cost_per_1m_in_cached": 0.75,
+      "cost_per_1m_out_cached": 0.06,
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -379,6 +379,14 @@
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
@@ -388,9 +396,16 @@
       "cost_per_1m_out": 4.5,
       "cost_per_1m_in_cached": 1.125,
       "cost_per_1m_out_cached": 0.09,
-      "context_window": 200000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
       "supports_attachments": true
     },
     {
