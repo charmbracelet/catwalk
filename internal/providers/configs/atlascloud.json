@@ -8,30 +8,6 @@
   "default_small_model_id": "deepseek-ai/deepseek-v4-flash",
   "models": [
     {
-      "id": "deepseek-ai/DeepSeek-V3.1",
-      "name": "DeepSeek V3.1",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 0.95,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.13,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
-      "name": "DeepSeek V3.1 Terminus",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 0.95,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.13,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "deepseek-ai/deepseek-v3.2",
       "name": "DeepSeek V3.2",
       "cost_per_1m_in": 0.26,
@@ -114,30 +90,6 @@
       "default_max_tokens": 104857,
       "can_reason": false,
       "supports_attachments": true
-    },
-    {
-      "id": "zai-org/GLM-4.6",
-      "name": "GLM 4.6",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.11,
-      "context_window": 202752,
-      "default_max_tokens": 20275,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "zai-org/glm-4.7",
-      "name": "GLM 4.7",
-      "cost_per_1m_in": 0.52,
-      "cost_per_1m_out": 1.85,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.12,
-      "context_window": 202752,
-      "default_max_tokens": 20275,
-      "can_reason": false,
-      "supports_attachments": false
     },
     {
       "id": "zai-org/glm-5.1",
@@ -292,18 +244,6 @@
       "cost_per_1m_out_cached": 0.06,
       "context_window": 196608,
       "default_max_tokens": 19660,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "name": "Qwen3-235B-A22B-Instruct-2507",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.88,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
       "can_reason": false,
       "supports_attachments": false
     },

@@ -2362,8 +2362,8 @@
     {
       "id": "gemma-4-31b-it",
       "name": "Gemma 4 31B It",
-      "cost_per_1m_in": 0.14,
-      "cost_per_1m_out": 0.39998,
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.4,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
