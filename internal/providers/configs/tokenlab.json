@@ -749,7 +749,7 @@
       "cost_per_1m_in": 1,
       "cost_per_1m_out": 3,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.25,
+      "cost_per_1m_out_cached": 0.15,
       "context_window": 500000,
       "default_max_tokens": 131072,
       "can_reason": true,
