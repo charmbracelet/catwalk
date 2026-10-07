@@ -2348,6 +2348,18 @@
       "supports_attachments": true
     },
     {
+      "id": "gemini-nano-banana-2.1",
+      "name": "Gemini Nano Banana 2.1",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.15,
+      "context_window": 65536,
+      "default_max_tokens": 6553,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B It",
       "cost_per_1m_in": 0.14,
