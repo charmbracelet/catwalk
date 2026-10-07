@@ -163,6 +163,9 @@ func main() {
 			case model.ID == "zai/glm-5.2":
 				reasoningLevels = []string{"high", "xhigh"}
 				defaultReasoning = "high"
+			case strings.HasPrefix(model.ID, "mistral/"):
+				reasoningLevels = []string{"none", "high"}
+				defaultReasoning = "high"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoning = "medium"
