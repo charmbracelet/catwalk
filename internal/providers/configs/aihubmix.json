@@ -4364,6 +4364,18 @@
       "supports_attachments": true
     },
     {
+      "id": "mistral-large-4-0",
+      "name": "Mistral Large 4.0",
+      "cost_per_1m_in": 1.36,
+      "cost_per_1m_out": 4.17996,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.13994,
+      "context_window": 524000,
+      "default_max_tokens": 52400,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "mm-minimax-m2.7-highspeed",
       "name": "Mm Minimax M2.7 Highspeed",
       "cost_per_1m_in": 0.1,
