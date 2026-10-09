@@ -71,6 +71,7 @@ tasks:
       - task: gen:opencode-go
       - task: gen:opencode-zen
       - task: gen:openrouter
+      - task: gen:opper
       - task: gen:synthetic
       - task: gen:venice
       - task: gen:vercel
@@ -145,6 +146,11 @@ tasks:
     desc: Generate openrouter provider configurations
     cmds:
       - go run cmd/openrouter/main.go
+
+  gen:opper:
+    desc: Generate Opper provider configurations
+    cmds:
+      - go run cmd/opper/main.go
 
   gen:synthetic:
     desc: Generate synthetic provider configurations
