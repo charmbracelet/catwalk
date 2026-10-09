@@ -8,6 +8,24 @@
   "default_small_model_id": "anthropic/claude-haiku-4.5",
   "models": [
     {
+      "id": "callstack/apex",
+      "name": "Apex",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "quiverai/arrow-2",
       "name": "Arrow 2",
       "cost_per_1m_in": 4,
@@ -457,7 +475,7 @@
       "cost_per_1m_in": 2,
       "cost_per_1m_out": 10,
       "cost_per_1m_in_cached": 2.5,
-      "cost_per_1m_out_cached": 0.2,
+      "cost_per_1m_out_cached": 0.1,
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "can_reason": true,
@@ -625,24 +643,6 @@
       "cost_per_1m_out_cached": 0.007,
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "default_reasoning_effort": "high",
-      "supports_attachments": true
-    },
-    {
-      "id": "deepseek/deepseek-v4.1-flash-fast",
-      "name": "DeepSeek V4.1 Flash Fast",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.006,
-      "context_window": 1048576,
-      "default_max_tokens": 1000000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -2970,10 +2970,10 @@
     {
       "id": "xiaomi/mimo-v2.6-flash",
       "name": "MiMo V2.6 Flash",
-      "cost_per_1m_in": 0.04,
-      "cost_per_1m_out": 1.28,
+      "cost_per_1m_in": 0.14,
+      "cost_per_1m_out": 0.28,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.04,
+      "cost_per_1m_out_cached": 0.0028,
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": true,

@@ -410,6 +410,18 @@
       "supports_attachments": true
     },
     {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0.125,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "claude-opus-4-1",
       "name": "Claude Opus 4.1",
       "cost_per_1m_in": 16.5,
@@ -3604,10 +3616,10 @@
     {
       "id": "grok-4.7",
       "name": "Grok 4.7",
-      "cost_per_1m_in": 2.2,
-      "cost_per_1m_out": 6.6,
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 6,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.55,
+      "cost_per_1m_out_cached": 0.5,
       "context_window": 500000,
       "default_max_tokens": 50000,
       "can_reason": false,
@@ -4370,8 +4382,8 @@
       "cost_per_1m_out": 4.17996,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.13994,
-      "context_window": 524000,
-      "default_max_tokens": 52400,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "can_reason": false,
       "supports_attachments": true
     },
