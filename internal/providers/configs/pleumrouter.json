@@ -1,0 +1,131 @@
+{
+  "name": "PleumRouter",
+  "id": "pleumrouter",
+  "type": "openai-compat",
+  "api_key": "$PLEUMROUTER_API_KEY",
+  "api_endpoint": "https://router.pleum.ai/v1",
+  "default_large_model_id": "claude-opus-4-8",
+  "default_small_model_id": "gemini-2.5-pro",
+  "models": [
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "cost_per_1m_in": 5.15,
+      "cost_per_1m_out": 25.75,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "cost_per_1m_in": 3.09,
+      "cost_per_1m_out": 15.45,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "cost_per_1m_in": 10.3,
+      "cost_per_1m_out": 51.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-5.5",
+      "name": "GPT-5.5",
+      "cost_per_1m_in": 5.15,
+      "cost_per_1m_out": 30.9,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-5.4-pro",
+      "name": "GPT-5.4 Pro",
+      "cost_per_1m_in": 30.9,
+      "cost_per_1m_out": 185.4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro",
+      "cost_per_1m_in": 2.06,
+      "cost_per_1m_out": 12.36,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "name": "Gemini 2.5 Pro",
+      "cost_per_1m_in": 1.2875,
+      "cost_per_1m_out": 10.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "cost_per_1m_in": 0.44805,
+      "cost_per_1m_out": 0.8961,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3-max",
+      "name": "Qwen3-Max",
+      "cost_per_1m_in": 1.236,
+      "cost_per_1m_out": 6.18,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-5.1",
+      "name": "GLM-5.1",
+      "cost_per_1m_in": 1.442,
+      "cost_per_1m_out": 4.532,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 200000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}
