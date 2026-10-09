@@ -111,6 +111,9 @@ var scalewayConfig []byte
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
+//go:embed configs/tokenlab.json
+var tokenLabConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -175,6 +178,7 @@ var providerRegistry = []ProviderFunc{
 	openRouterProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
+	tokenLabProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -334,6 +338,10 @@ func scalewayProvider() catwalk.Provider {
 
 func syntheticProvider() catwalk.Provider {
 	return loadProviderFromConfig(syntheticConfig)
+}
+
+func tokenLabProvider() catwalk.Provider {
+	return loadProviderFromConfig(tokenLabConfig)
 }
 
 func vercelProvider() catwalk.Provider {
