@@ -1,0 +1,58 @@
+{
+  "name": "Wally",
+  "id": "wally",
+  "api_key": "$WALLY_API_KEY",
+  "api_endpoint": "https://inference.runanywhere.ai/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "mimo-v2.6-pro",
+  "default_small_model_id": "glm-5.3-flash",
+  "models": [
+    {
+      "id": "mimo-v2.6-pro",
+      "name": "MiMo V2.6 Pro",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 1.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.01,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.006,
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
+      "can_reason": true,
+      "reasoning_levels": [
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "max",
+      "supports_attachments": true
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3 Flash",
+      "cost_per_1m_in": 0.1,
+      "cost_per_1m_out": 0.35,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.02,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "max",
+      "supports_attachments": false
+    }
+  ]
+}
