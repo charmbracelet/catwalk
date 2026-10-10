@@ -32,18 +32,6 @@
       "supports_attachments": false
     },
     {
-      "id": "Qwen/Qwen3.8-27B:cerebras",
-      "name": "Qwen/Qwen3.8-27B (cerebras)",
-      "cost_per_1m_in": 0.99,
-      "cost_per_1m_out": 1.49,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 65536,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V4.1-Flash (fireworks-ai)",
       "cost_per_1m_in": 0,
@@ -72,18 +60,6 @@
       "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4 (fireworks-ai)",
       "cost_per_1m_in": 0.6,
       "cost_per_1m_out": 2.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 8192,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:fireworks-ai",
-      "name": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 (fireworks-ai)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
