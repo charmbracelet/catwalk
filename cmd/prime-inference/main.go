@@ -5,6 +5,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"math"
@@ -79,7 +80,11 @@ func isInternalDeployment(id string) bool {
 }
 
 func modelDisplayName(id string) string {
-	return strings.SplitN(id, "/", 2)[1]
+	_, name, found := strings.Cut(id, "/")
+	if !found || name == "" {
+		return id
+	}
+	return name
 }
 
 func main() {
@@ -110,6 +115,23 @@ func main() {
 		log.Fatal("Error parsing Prime Inference models response:", err)
 	}
 
+	provider, err := generateProvider(modelsResp)
+	if err != nil {
+		log.Fatal("Error generating Prime Inference provider:", err)
+	}
+
+	data, err := json.MarshalIndent(provider, "", "  ")
+	if err != nil {
+		log.Fatal("Error marshaling Prime Inference provider:", err)
+	}
+	data = append(data, '\n')
+
+	if err := os.WriteFile("./internal/providers/configs/prime-inference.json", data, 0o600); err != nil {
+		log.Fatal("Error writing Prime Inference provider config:", err)
+	}
+}
+
+func generateProvider(modelsResp ModelsResponse) (catwalk.Provider, error) {
 	var models []catwalk.Model
 	for _, m := range modelsResp.Data {
 		if !slices.Contains(m.SupportedParameters, "tools") {
@@ -179,7 +201,7 @@ func main() {
 
 	provider := catwalk.Provider{
 		Name:                "Prime Inference",
-		ID:                  "prime-inference",
+		ID:                  catwalk.InferenceProviderPrimeInference,
 		APIKey:              "$PRIME_API_KEY",
 		APIEndpoint:         "https://api.pinference.ai/api/v1",
 		Type:                catwalk.TypeOpenAICompat,
@@ -188,13 +210,10 @@ func main() {
 		Models:              models,
 	}
 
-	data, err := json.MarshalIndent(provider, "", "  ")
-	if err != nil {
-		log.Fatal("Error marshaling Prime Inference provider:", err)
+	for _, id := range []string{provider.DefaultLargeModelID, provider.DefaultSmallModelID} {
+		if !slices.ContainsFunc(models, func(m catwalk.Model) bool { return m.ID == id }) {
+			return catwalk.Provider{}, fmt.Errorf("default model %q is missing from the eligible catalog; keeping the existing config", id)
+		}
 	}
-	data = append(data, '\n')
-
-	if err := os.WriteFile("./internal/providers/configs/prime-inference.json", data, 0o600); err != nil {
-		log.Fatal("Error writing Prime Inference provider config:", err)
-	}
+	return provider, nil
 }
