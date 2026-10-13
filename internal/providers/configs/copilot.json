@@ -43,14 +43,14 @@
       "supports_attachments": true
     },
     {
-      "id": "claude-opus-4.7",
-      "name": "Claude Opus 4.7",
+      "id": "claude-haiku-5.5",
+      "name": "Claude Haiku 5.5",
       "cost_per_1m_in": 0,
       "cost_per_1m_out": 0,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 264000,
-      "default_max_tokens": 64000,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -123,30 +123,6 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "gemini-3.5-flash",
-      "name": "Gemini 3.5 Flash",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 264000,
-      "default_max_tokens": 64000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "gemini-3.6-flash",
-      "name": "Gemini 3.6 Flash",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 264000,
-      "default_max_tokens": 64000,
       "can_reason": false,
       "supports_attachments": true
     },
@@ -423,18 +399,6 @@
       "cost_per_1m_out_cached": 0,
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "kimi-k2.7-code",
-      "name": "Kimi K2.7 Code",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 32000,
       "can_reason": false,
       "supports_attachments": true
     },
