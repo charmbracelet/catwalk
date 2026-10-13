@@ -206,42 +206,6 @@
       "supports_attachments": true
     },
     {
-      "id": "kimi-k2.7-code",
-      "name": "Kimi K2.7 Code",
-      "cost_per_1m_in": 0.95,
-      "cost_per_1m_out": 4,
-      "cost_per_1m_in_cached": 0.095,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "kimi-k2.7-code-flex",
-      "name": "Kimi K2.7 Code (flex)",
-      "cost_per_1m_in": 0.6175,
-      "cost_per_1m_out": 2.6,
-      "cost_per_1m_in_cached": 0.06175,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
-      "id": "kimi-k2.7-code-fast",
-      "name": "Kimi K2.7 Code Fast",
-      "cost_per_1m_in": 0.95,
-      "cost_per_1m_out": 4,
-      "cost_per_1m_in_cached": 0.095,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "cost_per_1m_in": 3,
