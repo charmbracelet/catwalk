@@ -3025,6 +3025,24 @@
       "supports_attachments": true
     },
     {
+      "id": "google/gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.1,
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "google/gemma-4-31b-it",
       "name": "Gemma 4 31B IT",
       "cost_per_1m_in": 0.14,
@@ -3553,6 +3571,24 @@
       "supports_attachments": true
     },
     {
+      "id": "liquid/lfm2.5-24b-a2b",
+      "name": "LFM2.5-24B-A2B",
+      "cost_per_1m_in": 0.05,
+      "cost_per_1m_out": 0.7,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.025,
+      "context_window": 128000,
+      "default_max_tokens": 8200,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "poolside/laguna-s-2.1",
       "name": "Laguna S 2.1",
       "cost_per_1m_in": 0.09,
@@ -3663,28 +3699,10 @@
     {
       "id": "inclusionai/ling-3.1-flash",
       "name": "Ling 3.1 Flash",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 0.9,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
-      "id": "inclusionai/ling-3.1-flash-free",
-      "name": "Ling 3.1 Flash (Free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
+      "cost_per_1m_out_cached": 0.06,
       "context_window": 262144,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -4363,6 +4381,24 @@
       "cost_per_1m_out_cached": 0.01,
       "context_window": 262144,
       "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning-free",
+      "name": "Nemotron 3.5 Lightning Free",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 65000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
