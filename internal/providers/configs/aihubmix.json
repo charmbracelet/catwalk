@@ -2378,6 +2378,18 @@
       "supports_attachments": true
     },
     {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 10,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.1,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "gemini-nano-banana-2.1",
       "name": "Gemini Nano Banana 2.1",
       "cost_per_1m_in": 1.5,
@@ -2706,18 +2718,6 @@
       "default_max_tokens": 16384,
       "can_reason": false,
       "supports_attachments": true
-    },
-    {
-      "id": "gpt-4o-audio-preview",
-      "name": "GPT 4o Audio Preview",
-      "cost_per_1m_in": 2.5,
-      "cost_per_1m_out": 10,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "can_reason": false,
-      "supports_attachments": false
     },
     {
       "id": "gpt-4o-mini",
@@ -3952,10 +3952,10 @@
     {
       "id": "kimi-k3",
       "name": "Kimi K3",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
+      "cost_per_1m_in": 2.84,
+      "cost_per_1m_out": 14.2,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.3,
+      "cost_per_1m_out_cached": 0.284,
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "can_reason": true,
@@ -3966,18 +3966,6 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": true
-    },
-    {
-      "id": "l3.1-euryale-70b",
-      "name": "L3.1 Euryale 70B",
-      "cost_per_1m_in": 1.48,
-      "cost_per_1m_out": 1.48,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "can_reason": false,
-      "supports_attachments": false
     },
     {
       "id": "laguna-s-2.1",
