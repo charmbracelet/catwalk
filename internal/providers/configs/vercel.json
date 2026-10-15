@@ -80,6 +80,24 @@
       "supports_attachments": true
     },
     {
+      "id": "stealth/cat-jam",
+      "name": "Cat Jam",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": false
+    },
+    {
       "id": "anthropic/claude-fable-5",
       "name": "Claude Fable 5",
       "cost_per_1m_in": 10,
@@ -4301,6 +4319,24 @@
       "supports_attachments": true
     },
     {
+      "id": "meta/muse-spark-open",
+      "name": "Muse Spark Open",
+      "cost_per_1m_in": 1.25,
+      "cost_per_1m_out": 4.25,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.15,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
       "id": "meta/muse-wonder-1.0",
       "name": "Muse Wonder",
       "cost_per_1m_in": 4,
@@ -4335,6 +4371,24 @@
       ],
       "default_reasoning_effort": "medium",
       "supports_attachments": false
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "name": "NVIDIA Nemotron 3.5 Super VL",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.04,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
     },
     {
       "id": "nvidia/nemotron-3-nano-30b-a3b",
@@ -4975,6 +5029,24 @@
       "cost_per_1m_out_cached": 0.04,
       "context_window": 256000,
       "default_max_tokens": 256000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "stepfun/step-5-preview",
+      "name": "Step 5 Preview",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 2.7,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.05,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
       "can_reason": true,
       "reasoning_levels": [
         "low",
