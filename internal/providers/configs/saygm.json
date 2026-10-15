@@ -1,0 +1,136 @@
+{
+  "name": "SayGM",
+  "id": "saygm",
+  "api_key": "$SAYGM_API_KEY",
+  "api_endpoint": "https://api.saygm.com/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "glm-5.3",
+  "default_small_model_id": "deepseek-v4.1-flash",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "cost_per_1m_in": 0.13398,
+      "cost_per_1m_out": 0.53592,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.00268,
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "cost_per_1m_in": 0.784,
+      "cost_per_1m_out": 2.464,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.1456,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "max",
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3 Flash",
+      "cost_per_1m_in": 0.105,
+      "cost_per_1m_out": 0.35,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.021,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "max",
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "cost_per_1m_in": 1.5,
+      "cost_per_1m_out": 7.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.15,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "cost_per_1m_in": 1.2,
+      "cost_per_1m_out": 6.0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.12,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "cost_per_1m_in": 0.06,
+      "cost_per_1m_out": 0.3,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.006,
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "name": "GPT-5.4 Mini",
+      "cost_per_1m_in": 0.45,
+      "cost_per_1m_out": 2.7,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.045,
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    }
+  ]
+}
