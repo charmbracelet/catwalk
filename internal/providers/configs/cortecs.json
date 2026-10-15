@@ -23,7 +23,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-haiku-5.5",
@@ -41,7 +41,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "mistral-large-4-0",
@@ -59,7 +59,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-sonnet-5.5",
@@ -77,7 +77,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-6.1-sol",
@@ -95,7 +95,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-6-sol",
@@ -113,7 +113,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-6-luna",
@@ -131,7 +131,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-opus-5.5",
@@ -149,7 +149,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "deepseek-v4.1-flash",
@@ -167,7 +167,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemini-3.8-flash",
@@ -185,7 +185,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "deepseek-v4-pro-0813",
@@ -239,7 +239,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "glm-5.3-flash",
@@ -257,7 +257,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3.8-27b",
@@ -275,7 +275,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemini-3.7-flash",
@@ -293,7 +293,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemini-3.6-flash",
@@ -311,7 +311,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3.8-2.4t-a95b",
@@ -347,7 +347,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "deepseek-v4-flash-0731",
@@ -383,7 +383,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-opus-5",
@@ -401,7 +401,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5.6-sol",
@@ -419,7 +419,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5.6-terra",
@@ -437,7 +437,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5.6-luna",
@@ -455,7 +455,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "apertus-70b",
@@ -491,7 +491,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemma-4-31b-it",
@@ -509,7 +509,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "glm-5.2",
@@ -545,7 +545,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "minimax-m3",
@@ -563,7 +563,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3.6-27b",
@@ -581,7 +581,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-opus4-8",
@@ -599,7 +599,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemini-3.5-flash",
@@ -617,7 +617,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemini-3.1-flash-lite",
@@ -635,7 +635,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3.6-35b-a3b",
@@ -653,7 +653,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemma-4-26b-a4b-it",
@@ -671,7 +671,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "deepseek-v4-pro",
@@ -707,7 +707,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5.4",
@@ -725,7 +725,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "kimi-k2.6",
@@ -743,7 +743,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-opus4-7",
@@ -761,7 +761,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "glm-5.1",
@@ -797,7 +797,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3-coder-next",
@@ -869,7 +869,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "minimax-m2.5",
@@ -905,7 +905,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "glm-4.7-flash",
@@ -935,7 +935,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "minimax-m2",
@@ -989,7 +989,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "nvidia-nemotron-3-nano-30b-a3b",
@@ -1025,7 +1025,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "devstral-2512",
@@ -1055,7 +1055,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-oss-safeguard-120b",
@@ -1085,7 +1085,7 @@
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "ministral-8b-2512",
@@ -1097,7 +1097,7 @@
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "ministral-3b-2512",
@@ -1109,7 +1109,7 @@
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "ministral-14b-2512",
@@ -1121,7 +1121,7 @@
       "context_window": 256000,
       "default_max_tokens": 25600,
       "can_reason": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5.1",
@@ -1139,7 +1139,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "nemotron-nano-v2-12b",
@@ -1157,7 +1157,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-haiku-4-5",
@@ -1175,7 +1175,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-4-5-sonnet",
@@ -1193,7 +1193,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5",
@@ -1211,7 +1211,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-oss-120b",
@@ -1289,7 +1289,7 @@
       "context_window": 131000,
       "default_max_tokens": 13100,
       "can_reason": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "mistral-large-2402",
@@ -1325,7 +1325,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -1397,7 +1397,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "claude-sonnet-4",
@@ -1415,7 +1415,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-4.1-mini",
@@ -1433,7 +1433,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-4.1-nano",
@@ -1451,7 +1451,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "nova-micro-v1",
@@ -1469,7 +1469,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-4.1",
@@ -1487,7 +1487,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "nova-pro-v1",
@@ -1505,7 +1505,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "mistral-small-2503",
@@ -1517,7 +1517,7 @@
       "context_window": 128000,
       "default_max_tokens": 12800,
       "can_reason": false,
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemini-2.5-flash",
@@ -1535,7 +1535,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemini-2.5-pro",
@@ -1553,7 +1553,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gemma-3-27b-it",
@@ -1571,7 +1571,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "codestral-2508",
@@ -1619,7 +1619,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5-mini",
@@ -1637,7 +1637,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "gpt-5-nano",
@@ -1655,7 +1655,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "hermes-4-405b",
@@ -1697,7 +1697,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
+      "supports_attachments": false
     },
     {
       "id": "llama-3.1-8b-instruct",
