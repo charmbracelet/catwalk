@@ -1,0 +1,47 @@
+{
+  "name": "Linkrra",
+  "id": "linkrra",
+  "api_key": "$LINKRRA_API_KEY",
+  "api_endpoint": "https://pool.linkrra.com/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "gemma-4-26b-a4b-it",
+  "default_small_model_id": "qwen3-coder-30b",
+  "models": [
+    {
+      "id": "gpt-oss-20b",
+      "name": "gpt-oss 20b",
+      "cost_per_1m_in": 0.017,
+      "cost_per_1m_out": 0.085,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "qwen3-coder-30b",
+      "name": "Qwen3 Coder 30b",
+      "cost_per_1m_in": 0.0675,
+      "cost_per_1m_out": 0.27,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 32768,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "gemma-4-26b-a4b-it",
+      "name": "Gemma 4 26b A4b (it)",
+      "cost_per_1m_in": 0.04,
+      "cost_per_1m_out": 0.21,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    }
+  ]
+}
