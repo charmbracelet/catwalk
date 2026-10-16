@@ -158,6 +158,9 @@ func main() {
 			case "thinkingmachines/inkling":
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
 				defaultReasoning = "medium"
+			case "meta-models/muse-spark-open":
+				reasoningLevels = []string{"low", "medium", "high", "xhigh"}
+				defaultReasoning = "xhigh"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoning = "medium"
