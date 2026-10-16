@@ -4,8 +4,8 @@
   "api_key": "$VERCEL_API_KEY",
   "api_endpoint": "https://ai-gateway.vercel.sh/v1",
   "type": "vercel",
-  "default_large_model_id": "anthropic/claude-sonnet-4",
-  "default_small_model_id": "anthropic/claude-haiku-4.5",
+  "default_large_model_id": "deepseek/deepseek-v4.1-flash",
+  "default_small_model_id": "deepseek/deepseek-v4.1-flash",
   "models": [
     {
       "id": "callstack/apex",
