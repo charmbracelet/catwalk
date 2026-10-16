@@ -581,27 +581,6 @@
       "supports_attachments": true
     },
     {
-      "id": "anthropic/claude-sonnet-4",
-      "name": "Claude Sonnet 4",
-      "cost_per_1m_in": 3,
-      "cost_per_1m_out": 15,
-      "cost_per_1m_in_cached": 3.75,
-      "cost_per_1m_out_cached": 0.3,
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "none",
-        "minimal",
-        "low",
-        "medium",
-        "high",
-        "xhigh"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
       "id": "anthropic/claude-sonnet-4.5",
       "name": "Claude Sonnet 4.5",
       "cost_per_1m_in": 3,
@@ -5041,10 +5020,10 @@
     {
       "id": "stepfun/step-5-preview",
       "name": "Step 5 Preview",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 2.7,
+      "cost_per_1m_in": 0.95,
+      "cost_per_1m_out": 2.565,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.05,
+      "cost_per_1m_out_cached": 0.0475,
       "context_window": 1048576,
       "default_max_tokens": 1048576,
       "can_reason": true,
