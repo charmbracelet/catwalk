@@ -947,6 +947,24 @@
       "supports_attachments": true
     },
     {
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.003,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
       "id": "deepseek/deepseek-v4.1-flash-fast",
       "name": "DeepSeek V4.1 Flash Fast",
       "cost_per_1m_in": 0.6,
@@ -5056,10 +5074,10 @@
     {
       "id": "stepfun/step-5-preview",
       "name": "Step 5 Preview",
-      "cost_per_1m_in": 0.95,
-      "cost_per_1m_out": 2.565,
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 2.7,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.0475,
+      "cost_per_1m_out_cached": 0.1,
       "context_window": 1048576,
       "default_max_tokens": 1048576,
       "can_reason": true,
