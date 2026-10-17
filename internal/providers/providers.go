@@ -99,6 +99,9 @@ var openCodeGoConfig []byte
 //go:embed configs/opencode-zen.json
 var openCodeZenConfig []byte
 
+//go:embed configs/powertokens.json
+var powerTokensConfig []byte
+
 //go:embed configs/openrouter.json
 var openRouterConfig []byte
 
@@ -173,6 +176,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
+	powerTokensProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
 	vercelProvider,
@@ -362,4 +366,8 @@ func zhipuProvider() catwalk.Provider {
 
 func zhipuCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(zhipuCodingConfig)
+}
+
+func powerTokensProvider() catwalk.Provider {
+	return loadProviderFromConfig(powerTokensConfig)
 }
