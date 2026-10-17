@@ -72,6 +72,7 @@ tasks:
       - task: gen:opencode-zen
       - task: gen:openrouter
       - task: gen:synthetic
+      - task: gen:trustedrouter
       - task: gen:venice
       - task: gen:vercel
       - task: gen:xai
@@ -150,6 +151,11 @@ tasks:
     desc: Generate synthetic provider configurations
     cmds:
       - go run cmd/synthetic/main.go
+
+  gen:trustedrouter:
+    desc: Generate TrustedRouter provider configurations
+    cmds:
+      - go run cmd/trustedrouter/main.go
 
   gen:venice:
     desc: Generate venice provider configurations
