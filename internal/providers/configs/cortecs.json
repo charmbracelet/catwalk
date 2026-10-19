@@ -226,8 +226,8 @@
     {
       "id": "glm-5.3",
       "name": "glm-5.3",
-      "cost_per_1m_in": 0.784,
-      "cost_per_1m_out": 2.968,
+      "cost_per_1m_in": 0.459,
+      "cost_per_1m_out": 1.836,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
@@ -370,8 +370,8 @@
     {
       "id": "deepseek-v4-flash-0731",
       "name": "deepseek-v4-flash-0731",
-      "cost_per_1m_in": 0.081,
-      "cost_per_1m_out": 0.153,
+      "cost_per_1m_in": 0.074,
+      "cost_per_1m_out": 0.371,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,

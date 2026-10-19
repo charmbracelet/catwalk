@@ -1301,7 +1301,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "coding-xiaomi-mimo-v2.5",
@@ -1431,7 +1431,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.0284,
       "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "default_max_tokens": 393216,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1439,7 +1439,7 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "deepseek-v4-flash-0731",
@@ -1485,7 +1485,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.0031,
       "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "default_max_tokens": 393216,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -1547,6 +1547,18 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "cost_per_1m_in": 0.155,
+      "cost_per_1m_out": 0.62,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0031,
+      "context_window": 1000000,
+      "default_max_tokens": 393216,
+      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -1641,7 +1653,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.02192,
       "context_window": 256000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 128000,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -4229,7 +4241,7 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "mimo-v2.5",
@@ -4253,7 +4265,7 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "mimo-v2.6-flash",
@@ -4820,18 +4832,6 @@
       "supports_attachments": false
     },
     {
-      "id": "qwen3-max",
-      "name": "Qwen3 Max",
-      "cost_per_1m_in": 0.4508,
-      "cost_per_1m_out": 1.8032,
-      "cost_per_1m_in_cached": 0.5635,
-      "cost_per_1m_out_cached": 0.09016,
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "qwen3-max-2026-01-23",
       "name": "Qwen3 Max 2026 01-23",
       "cost_per_1m_in": 0.4508,
@@ -4850,18 +4850,6 @@
       "supports_attachments": false
     },
     {
-      "id": "qwen3-next-80b-a3b-instruct",
-      "name": "Qwen3 Next 80B A3B Instruct",
-      "cost_per_1m_in": 0.138,
-      "cost_per_1m_out": 0.552,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 256000,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
       "id": "qwen3-next-80b-a3b-thinking",
       "name": "Qwen3 Next 80B A3B Thinking",
       "cost_per_1m_in": 0.142,
@@ -4877,90 +4865,6 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3-vl-235b-a22b-instruct",
-      "name": "Qwen3 VL 235B A22B Instruct",
-      "cost_per_1m_in": 0.274,
-      "cost_per_1m_out": 1.096,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3-vl-235b-a22b-thinking",
-      "name": "Qwen3 VL 235B A22B Thinking",
-      "cost_per_1m_in": 0.274,
-      "cost_per_1m_out": 2.74,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3-vl-30b-a3b-instruct",
-      "name": "Qwen3 VL 30B A3B Instruct",
-      "cost_per_1m_in": 0.1028,
-      "cost_per_1m_out": 0.4112,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3-vl-30b-a3b-thinking",
-      "name": "Qwen3 VL 30B A3B Thinking",
-      "cost_per_1m_in": 0.1028,
-      "cost_per_1m_out": 1.028,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3-vl-flash",
-      "name": "Qwen3 VL Flash",
-      "cost_per_1m_in": 0.0206,
-      "cost_per_1m_out": 0.206,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.00412,
-      "context_window": 262144,
-      "default_max_tokens": 32768,
-      "can_reason": false,
-      "supports_attachments": true
-    },
-    {
-      "id": "qwen3-vl-flash-2026-01-22",
-      "name": "Qwen3 VL Flash 2026 01-22",
-      "cost_per_1m_in": 0.0206,
-      "cost_per_1m_out": 0.206,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 32768,
-      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -5138,24 +5042,6 @@
       "supports_attachments": true
     },
     {
-      "id": "qwen3.6-max-preview",
-      "name": "Qwen3.6 Max Preview",
-      "cost_per_1m_in": 1.268,
-      "cost_per_1m_out": 7.608,
-      "cost_per_1m_in_cached": 1.585,
-      "cost_per_1m_out_cached": 0.1268,
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
-    },
-    {
       "id": "qwen3.6-plus",
       "name": "Qwen3.6 Plus",
       "cost_per_1m_in": 0.282,
@@ -5294,6 +5180,18 @@
       "supports_attachments": true
     },
     {
+      "id": "qwen3.8-flash-free",
+      "name": "Qwen3.8 Flash (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "qwen3.8-max",
       "name": "Qwen3.8 Max",
       "cost_per_1m_in": 1.69,
@@ -5327,6 +5225,18 @@
         "high"
       ],
       "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3.8-max-free",
+      "name": "Qwen3.8 Max (free)",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": false,
       "supports_attachments": true
     },
     {
@@ -5441,7 +5351,7 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xiaomi-mimo-v2.5-free",
@@ -5465,7 +5375,7 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "can_reason": false,
-      "supports_attachments": false
+      "supports_attachments": true
     },
     {
       "id": "xiaomi-mimo-v2.6-flash-free",

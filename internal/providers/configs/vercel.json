@@ -935,8 +935,8 @@
       "cost_per_1m_out": 0.3,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.0015,
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -953,8 +953,8 @@
       "cost_per_1m_out": 0.3,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0.0015,
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
       "can_reason": true,
       "reasoning_levels": [
         "low",
@@ -4134,6 +4134,24 @@
       "cost_per_1m_out_cached": 0.06,
       "context_window": 512000,
       "default_max_tokens": 512000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash",
+      "name": "MiniMax-M3.1-Flash",
+      "cost_per_1m_in": 0,
+      "cost_per_1m_out": 0,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 524288,
       "can_reason": true,
       "reasoning_levels": [
         "low",
