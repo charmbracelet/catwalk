@@ -92,6 +92,18 @@
       "supports_attachments": true
     },
     {
+      "id": "deepseek-ai/deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "cost_per_1m_in": 0.3,
+      "cost_per_1m_out": 1.2,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.006,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
       "id": "zai-org/glm-5.1",
       "name": "GLM 5.1",
       "cost_per_1m_in": 1.26,
