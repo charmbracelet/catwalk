@@ -4,9 +4,27 @@
   "api_key": "$ALIBABA_US_API_KEY",
   "api_endpoint": "https://dashscope-us.aliyuncs.com/compatible-mode/v1",
   "type": "openai-compat",
-  "default_large_model_id": "deepseek-v4-pro-0813",
-  "default_small_model_id": "deepseek-v4-flash-us",
+  "default_large_model_id": "qwen3.8-max",
+  "default_small_model_id": "qwen3.8-flash",
   "models": [
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "cost_per_1m_in": 0.283,
+      "cost_per_1m_out": 1.131,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.028,
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
     {
       "id": "deepseek-v4.1-flash",
       "name": "DeepSeek-V4.1-Flash",
