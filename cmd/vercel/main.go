@@ -88,8 +88,8 @@ func main() {
 		APIKey:              "$VERCEL_API_KEY",
 		APIEndpoint:         "https://ai-gateway.vercel.sh/v1",
 		Type:                catwalk.TypeVercel,
-		DefaultLargeModelID: "anthropic/claude-sonnet-4",
-		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
+		DefaultLargeModelID: "deepseek/deepseek-v4.1-flash",
+		DefaultSmallModelID: "deepseek/deepseek-v4.1-flash",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
