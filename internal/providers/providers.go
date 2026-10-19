@@ -12,6 +12,9 @@ import (
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
+//go:embed configs/aistupidlevel.json
+var aiStupidLevelConfig []byte
+
 //go:embed configs/alibaba-singapore.json
 var alibabaSingaporeConfig []byte
 
@@ -150,6 +153,7 @@ var providerRegistry = []ProviderFunc{
 
 	// The remaining will be in alphabetical order.
 	aiHubMixProvider,
+	aiStupidLevelProvider,
 	alibabaSingaporeProvider,
 	alibabaUnitedStatesProvider,
 	atlasCloudProvider,
@@ -202,6 +206,10 @@ func loadProviderFromConfig(configData []byte) catwalk.Provider {
 
 func aiHubMixProvider() catwalk.Provider {
 	return loadProviderFromConfig(aiHubMixConfig)
+}
+
+func aiStupidLevelProvider() catwalk.Provider {
+	return loadProviderFromConfig(aiStupidLevelConfig)
 }
 
 func alibabaSingaporeProvider() catwalk.Provider {
