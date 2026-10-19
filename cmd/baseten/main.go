@@ -137,7 +137,7 @@ func main() {
 			case "deepseek-ai/DeepSeek-V4-Flash-0731", "deepseek-ai/DeepSeek-V4-Pro-0813":
 				reasoningLevels = []string{"none", "low", "high", "max"}
 				defaultReasoning = "high" //nolint:goconst
-			case "deepseek-ai/DeepSeek-V4.1-Flash":
+			case "deepseek-ai/DeepSeek-V4.1-Flash", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "deepseek-ai/DeepSeek-V4.1-Flash-1017-Fast":
 				reasoningLevels = []string{"low", "high", "max"}
 				defaultReasoning = "high" //nolint:goconst
 			case "openai/gpt-oss-120b":
