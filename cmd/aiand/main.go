@@ -3,6 +3,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -17,6 +18,10 @@ import (
 
 	"charm.land/catwalk/pkg/catwalk"
 )
+
+// maxDefaultMaxTokens caps default_max_tokens so a model with a very large
+// output limit does not reserve most of the context window on every request.
+const maxDefaultMaxTokens = 131072
 
 // Model represents a model from the ai& models API.
 type Model struct {
@@ -56,45 +61,36 @@ func main() {
 
 	provider.Models = make([]catwalk.Model, 0, len(resp.Data))
 	for _, model := range resp.Data {
-		// Crush drives an agent, so a model that cannot call tools is no use.
-		if !slices.Contains(model.Capabilities, "tool_calling") {
+		m, err := toCatwalkModel(model)
+		if err != nil {
+			log.Printf("Skipping %s: %v", model.ID, err)
 			continue
 		}
-
-		canReason := slices.Contains(model.Capabilities, "reasoning")
-		m := catwalk.Model{
-			ID:   model.ID,
-			Name: displayName(model),
-			// The API publishes one cached price, the cache read price.
-			CostPer1MIn:        parsePrice(model.InputPer1M),
-			CostPer1MOut:       parsePrice(model.OutputPer1M),
-			CostPer1MOutCached: parsePrice(model.CachedInputPer1M),
-			ContextWindow:      model.ContextWindow,
-			// Capped so a model with a very large output limit does not reserve
-			// most of the context window on every request.
-			DefaultMaxTokens: min(model.MaxOutputTokens, 131072),
-			CanReason:        canReason,
-			SupportsImages:   slices.Contains(model.Capabilities, "vision"),
-		}
-		if canReason {
-			m.ReasoningLevels = model.ReasoningEfforts
-			m.DefaultReasoningEffort = model.ReasoningEffortDefault
-		}
 		provider.Models = append(provider.Models, m)
+	}
+
+	// A config without its default models fails TestValidDefaultModels, so
+	// keep the last good file rather than write one.
+	for _, id := range []string{provider.DefaultLargeModelID, provider.DefaultSmallModelID} {
+		if !slices.ContainsFunc(provider.Models, func(m catwalk.Model) bool { return m.ID == id }) {
+			log.Fatalf("Default model %s is missing from the ai& models API", id)
+		}
 	}
 
 	slices.SortFunc(provider.Models, func(a, b catwalk.Model) int {
 		return strings.Compare(a.ID, b.ID)
 	})
 
-	// Save the JSON in internal/providers/configs/aiand.json
-	data, err := json.MarshalIndent(provider, "", "  ")
-	if err != nil {
+	// Without SetEscapeHTML(false) the provider name is written as "ai\u0026".
+	var buf bytes.Buffer
+	enc := json.NewEncoder(&buf)
+	enc.SetEscapeHTML(false)
+	enc.SetIndent("", "  ")
+	if err := enc.Encode(provider); err != nil {
 		log.Fatal("Error marshaling ai& provider:", err)
 	}
-	data = append(data, '\n')
 
-	if err := os.WriteFile("internal/providers/configs/aiand.json", data, 0o600); err != nil {
+	if err := os.WriteFile("internal/providers/configs/aiand.json", buf.Bytes(), 0o600); err != nil {
 		log.Fatal("Error writing ai& provider config:", err)
 	}
 
@@ -114,12 +110,56 @@ func displayName(model Model) string {
 	return name
 }
 
-func parsePrice(s string) float64 {
+func toCatwalkModel(model Model) (catwalk.Model, error) {
+	in, err := parsePrice(model.InputPer1M)
+	if err != nil {
+		return catwalk.Model{}, fmt.Errorf("input price: %w", err)
+	}
+	out, err := parsePrice(model.OutputPer1M)
+	if err != nil {
+		return catwalk.Model{}, fmt.Errorf("output price: %w", err)
+	}
+	// The API publishes one cached price, the cache read price. A model
+	// without one has no cache discount.
+	var cacheRead float64
+	if model.CachedInputPer1M != "" {
+		if cacheRead, err = parsePrice(model.CachedInputPer1M); err != nil {
+			return catwalk.Model{}, fmt.Errorf("cached input price: %w", err)
+		}
+	}
+	if model.ContextWindow <= 0 || model.MaxOutputTokens <= 0 {
+		return catwalk.Model{}, fmt.Errorf("context_window=%d max_output_tokens=%d", model.ContextWindow, model.MaxOutputTokens)
+	}
+
+	m := catwalk.Model{
+		ID:                 model.ID,
+		Name:               displayName(model),
+		CostPer1MIn:        in,
+		CostPer1MOut:       out,
+		CostPer1MOutCached: cacheRead,
+		ContextWindow:      model.ContextWindow,
+		DefaultMaxTokens:   min(model.MaxOutputTokens, maxDefaultMaxTokens),
+		CanReason:          slices.Contains(model.Capabilities, "reasoning"),
+		SupportsImages:     slices.Contains(model.Capabilities, "vision"),
+	}
+	if m.CanReason {
+		// Crush sends the default on every request, so one the API does not
+		// list would be refused.
+		if !slices.Contains(model.ReasoningEfforts, model.ReasoningEffortDefault) {
+			return catwalk.Model{}, fmt.Errorf("default reasoning effort %q is not one of %v", model.ReasoningEffortDefault, model.ReasoningEfforts)
+		}
+		m.ReasoningLevels = model.ReasoningEfforts
+		m.DefaultReasoningEffort = model.ReasoningEffortDefault
+	}
+	return m, nil
+}
+
+func parsePrice(s string) (float64, error) {
 	v, err := strconv.ParseFloat(s, 64)
 	if err != nil {
-		return 0
+		return 0, fmt.Errorf("invalid price %q: %w", s, err)
 	}
-	return v
+	return v, nil
 }
 
 func fetchModels(apiEndpoint string) (*Response, error) {
