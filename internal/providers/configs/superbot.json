@@ -1,0 +1,39 @@
+{
+  "name": "superbot",
+  "id": "superbot",
+  "type": "openai-compat",
+  "api_key": "$SUPERBOT_API_KEY",
+  "api_endpoint": "https://api.superbot.gg/v1",
+  "default_large_model_id": "superbot",
+  "default_small_model_id": "superbot-fast",
+  "models": [
+    {
+      "id": "superbot",
+      "name": "superbot",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 1.25,
+      "cost_per_1m_out_cached": 0.05,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": ["low", "high", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "superbot-fast",
+      "name": "superbot-fast",
+      "cost_per_1m_in": 1,
+      "cost_per_1m_out": 5,
+      "cost_per_1m_in_cached": 1.25,
+      "cost_per_1m_out_cached": 0.05,
+      "context_window": 500000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": ["low"],
+      "default_reasoning_effort": "low",
+      "supports_attachments": false
+    }
+  ]
+}
