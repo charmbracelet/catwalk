@@ -57,6 +57,7 @@ tasks:
     desc: Generate all provider configurations
     aliases: [generate, gen]
     cmds:
+      - task: gen:aiand
       - task: gen:aihubmix
       - task: gen:atlascloud
       - task: gen:avian
@@ -75,6 +76,11 @@ tasks:
       - task: gen:venice
       - task: gen:vercel
       - task: gen:xai
+
+  gen:aiand:
+    desc: Generate ai& provider configurations
+    cmds:
+      - go run cmd/aiand/main.go
 
   gen:aihubmix:
     desc: Generate aihubmix provider configurations
