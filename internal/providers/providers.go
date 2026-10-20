@@ -10,6 +10,9 @@ import (
 	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
+//go:embed configs/aiand.json
+var aiandConfig []byte
+
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
@@ -39,9 +42,6 @@ var bedrockUnitedStatesConfig []byte
 
 //go:embed configs/bedrock-europe.json
 var bedrockEuropeConfig []byte
-
-//go:embed configs/aiand.json
-var aiandConfig []byte
 
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
@@ -211,6 +211,10 @@ func loadProviderFromConfig(configData []byte) catwalk.Provider {
 	return p
 }
 
+func aiandProvider() catwalk.Provider {
+	return loadProviderFromConfig(aiandConfig)
+}
+
 func aiHubMixProvider() catwalk.Provider {
 	return loadProviderFromConfig(aiHubMixConfig)
 }
@@ -257,10 +261,6 @@ func cerebrasProvider() catwalk.Provider {
 
 func chutesProvider() catwalk.Provider {
 	return loadProviderFromConfig(chutesConfig)
-}
-
-func aiandProvider() catwalk.Provider {
-	return loadProviderFromConfig(aiandConfig)
 }
 
 func coralBricksProvider() catwalk.Provider {
