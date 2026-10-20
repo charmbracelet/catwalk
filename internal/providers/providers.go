@@ -40,6 +40,9 @@ var bedrockUnitedStatesConfig []byte
 //go:embed configs/bedrock-europe.json
 var bedrockEuropeConfig []byte
 
+//go:embed configs/aiand.json
+var aiandConfig []byte
+
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
 
@@ -150,6 +153,7 @@ var providerRegistry = []ProviderFunc{
 	syntheticProvider,
 
 	// The remaining will be in alphabetical order.
+	aiandProvider,
 	aiHubMixProvider,
 	alibabaSingaporeProvider,
 	alibabaUnitedStatesProvider,
@@ -253,6 +257,10 @@ func cerebrasProvider() catwalk.Provider {
 
 func chutesProvider() catwalk.Provider {
 	return loadProviderFromConfig(chutesConfig)
+}
+
+func aiandProvider() catwalk.Provider {
+	return loadProviderFromConfig(aiandConfig)
 }
 
 func coralBricksProvider() catwalk.Provider {

@@ -62,6 +62,10 @@ jobs:
         run: go run ./cmd/ionet/main.go
         continue-on-error: true
 
+      - name: ai&
+        run: go run ./cmd/aiand/main.go
+        continue-on-error: true
+
       - name: OpenCode Go
         run: go run ./cmd/opencode-go/main.go
         continue-on-error: true
