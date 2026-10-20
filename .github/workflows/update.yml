@@ -24,6 +24,10 @@ jobs:
       - name: Go Mod Download
         run: go mod download
 
+      - name: ai&
+        run: go run ./cmd/aiand/main.go
+        continue-on-error: true
+
       - name: AIHubMix
         run: go run ./cmd/aihubmix/main.go
         continue-on-error: true
@@ -60,10 +64,6 @@ jobs:
 
       - name: io.net
         run: go run ./cmd/ionet/main.go
-        continue-on-error: true
-
-      - name: ai&
-        run: go run ./cmd/aiand/main.go
         continue-on-error: true
 
       - name: OpenCode Go
