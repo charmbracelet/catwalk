@@ -90,6 +90,9 @@ var nebiusConfig []byte
 //go:embed configs/neuralwatt.json
 var neuralwattConfig []byte
 
+//go:embed configs/oceantoken.json
+var oceanTokenConfig []byte
+
 //go:embed configs/openai.json
 var openAIConfig []byte
 
@@ -170,6 +173,7 @@ var providerRegistry = []ProviderFunc{
 	ioNetProvider,
 	nebiusProvider,
 	neuralwattProvider,
+	oceanTokenProvider,
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
@@ -306,6 +310,10 @@ func nebiusProvider() catwalk.Provider {
 
 func neuralwattProvider() catwalk.Provider {
 	return loadProviderFromConfig(neuralwattConfig)
+}
+
+func oceanTokenProvider() catwalk.Provider {
+	return loadProviderFromConfig(oceanTokenConfig)
 }
 
 func openAIProvider() catwalk.Provider {
