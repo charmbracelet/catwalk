@@ -123,6 +123,9 @@ var vertexAIConfig []byte
 //go:embed configs/xai.json
 var xAIConfig []byte
 
+//go:embed configs/y-api.json
+var yAPIConfig []byte
+
 //go:embed configs/zai.json
 var zAIConfig []byte
 
@@ -178,6 +181,7 @@ var providerRegistry = []ProviderFunc{
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
+	yAPIProvider,
 	zhipuProvider,
 	zhipuCodingProvider,
 }
@@ -350,6 +354,10 @@ func vertexAIProvider() catwalk.Provider {
 
 func xAIProvider() catwalk.Provider {
 	return loadProviderFromConfig(xAIConfig)
+}
+
+func yAPIProvider() catwalk.Provider {
+	return loadProviderFromConfig(yAPIConfig)
 }
 
 func zAIProvider() catwalk.Provider {
