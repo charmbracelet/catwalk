@@ -4,8 +4,8 @@
   "api_key": "$HF_TOKEN",
   "api_endpoint": "https://router.huggingface.co/v1",
   "type": "openai-compat",
-  "default_large_model_id": "zai-org/GLM-5.2:fireworks-ai",
-  "default_small_model_id": "openai/gpt-oss-20b:groq",
+  "default_large_model_id": "Qwen/Qwen3.8-27B:cerebras",
+  "default_small_model_id": "Qwen/Qwen3.8-27B:cerebras",
   "models": [
     {
       "id": "Qwen/Qwen3.8-27B:cerebras",
