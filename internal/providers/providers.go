@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"log"
 
+	"charm.land/catwalk/internal/v2compat"
 	"charm.land/catwalk/pkg/catwalk"
 )
 
@@ -193,8 +194,8 @@ func GetAll() []catwalk.Provider {
 
 // GetAllV2 returns all registered providers in the legacy v2 schema,
 // derived automatically from the v3 data.
-func GetAllV2() []catwalk.ProviderV2 {
-	return catwalk.ToV2Providers(GetAll())
+func GetAllV2() []v2compat.Provider {
+	return v2compat.FromProviders(GetAll())
 }
 
 func loadProviderFromConfig(configData []byte) catwalk.Provider {

@@ -1,29 +1,31 @@
-package catwalk
+package v2compat
 
 import (
 	"encoding/json"
 	"strings"
 	"testing"
+
+	"charm.land/catwalk/pkg/catwalk"
 )
 
-func TestModelToV2(t *testing.T) {
-	m := Model{
+func TestFromModel(t *testing.T) {
+	m := catwalk.Model{
 		ID:               "gpt-6-astra",
-		Type:             TypeResponses,
+		Type:             catwalk.TypeResponses,
 		Name:             "GPT-6 Astra",
-		Pricing:          Pricing{Input: 10, Output: 50, CacheCreate: 12.5, CacheHit: 1},
+		Pricing:          catwalk.Pricing{Input: 10, Output: 50, CacheCreate: 12.5, CacheHit: 1},
 		ContextWindow:    1050000,
 		DefaultMaxTokens: 128000,
-		Reasoning: Reasoning{
-			Thinking:           ThinkingToggleable,
-			EffortLevels:       NewEffortLevels("low", "medium", "high"),
+		Reasoning: catwalk.Reasoning{
+			Thinking:           catwalk.ThinkingToggleable,
+			EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
 			DefaultEffortLevel: "medium",
 		},
-		Capabilities:   Capabilities{Vision: true},
+		Capabilities:   catwalk.Capabilities{Vision: true},
 		MaxAttachments: 1500,
 	}
 
-	v2 := m.ToV2()
+	v2 := FromModel(m)
 	if v2.CostPer1MIn != 10 || v2.CostPer1MOut != 50 {
 		t.Errorf("pricing mismatch: got in=%v out=%v", v2.CostPer1MIn, v2.CostPer1MOut)
 	}
@@ -50,17 +52,17 @@ func TestModelToV2(t *testing.T) {
 	}
 }
 
-func TestModelToV2NeverThinks(t *testing.T) {
-	m := Model{
+func TestFromModelNeverThinks(t *testing.T) {
+	m := catwalk.Model{
 		ID:               "gpt-4.1",
 		Name:             "GPT-4.1",
-		Pricing:          Pricing{Input: 2, Output: 8},
+		Pricing:          catwalk.Pricing{Input: 2, Output: 8},
 		ContextWindow:    1047576,
 		DefaultMaxTokens: 16384,
-		Reasoning:        Reasoning{Thinking: ThinkingNever},
+		Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
 	}
 
-	v2 := m.ToV2()
+	v2 := FromModel(m)
 	if v2.CanReason {
 		t.Error("expected CanReason to be false")
 	}
@@ -75,28 +77,28 @@ func TestModelToV2NeverThinks(t *testing.T) {
 	}
 }
 
-func TestProviderToV2DropsV3OnlyFields(t *testing.T) {
-	p := Provider{
+func TestFromProviderDropsV3OnlyFields(t *testing.T) {
+	p := catwalk.Provider{
 		Name:                  "OpenAI",
-		ID:                    InferenceProviderOpenAI,
+		ID:                    catwalk.InferenceProviderOpenAI,
 		APIKey:                "$OPENAI_API_KEY",
 		SessionAffinityHeader: "x-opencode-session",
 		DefaultLargeModelID:   "gpt-5.6-sol",
 		DefaultSmallModelID:   "gpt-5.6-luna",
-		Models: []Model{{
+		Models: []catwalk.Model{{
 			ID:               "gpt-5.6-sol",
-			Type:             TypeResponses,
+			Type:             catwalk.TypeResponses,
 			Name:             "GPT-5.6 Sol",
-			Pricing:          Pricing{Input: 4, Output: 20, CacheCreate: 5, CacheHit: 0.4},
+			Pricing:          catwalk.Pricing{Input: 4, Output: 20, CacheCreate: 5, CacheHit: 0.4},
 			ContextWindow:    1050000,
 			DefaultMaxTokens: 128000,
-			Reasoning:        Reasoning{Thinking: ThinkingAlways},
-			Capabilities:     Capabilities{Vision: true},
+			Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingAlways},
+			Capabilities:     catwalk.Capabilities{Vision: true},
 			MaxAttachments:   1500,
 		}},
 	}
 
-	v2 := p.ToV2()
+	v2 := FromProvider(p)
 	if len(v2.Models) != 1 {
 		t.Fatalf("expected 1 model, got %d", len(v2.Models))
 	}
@@ -124,13 +126,13 @@ func TestProviderToV2DropsV3OnlyFields(t *testing.T) {
 	}
 }
 
-func TestToV2ProvidersPreservesOrder(t *testing.T) {
-	ps := []Provider{
-		{Name: "Z", ID: InferenceProviderZAI},
-		{Name: "A", ID: InferenceProviderOpenAI},
+func TestFromProvidersPreservesOrder(t *testing.T) {
+	ps := []catwalk.Provider{
+		{Name: "Z", ID: catwalk.InferenceProviderZAI},
+		{Name: "A", ID: catwalk.InferenceProviderOpenAI},
 	}
-	v2 := ToV2Providers(ps)
-	if len(v2) != 2 || v2[0].ID != InferenceProviderZAI || v2[1].ID != InferenceProviderOpenAI {
+	v2 := FromProviders(ps)
+	if len(v2) != 2 || v2[0].ID != catwalk.InferenceProviderZAI || v2[1].ID != catwalk.InferenceProviderOpenAI {
 		t.Fatalf("order not preserved: %+v", v2)
 	}
 }
