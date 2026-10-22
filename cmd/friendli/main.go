@@ -32,6 +32,11 @@ type FriendliModel struct {
 	DeprecationDate     *string          `json:"deprecation_date,omitempty"`
 }
 
+const (
+	defaultLargeModel = "zai-org/GLM-5.3"
+	defaultSmallModel = "zai-org/GLM-5.3-Flash"
+)
+
 // FriendliPricing contains per-token pricing from the Friendli API.
 type FriendliPricing struct {
 	Input          string `json:"input"`
@@ -145,6 +150,9 @@ func reasoningLevels(opts []ReasoningOpt) (levels []string, defaultEffort string
 	}
 	levels = append(levels, effortValues...)
 	defaultEffort = effortValues[0]
+	if slices.Contains(effortValues, "high") {
+		defaultEffort = "high"
+	}
 	return levels, defaultEffort
 }
 
@@ -160,17 +168,16 @@ func main() {
 		APIKey:              "$FRIENDLI_API_KEY",
 		APIEndpoint:         "https://api.friendli.ai/serverless/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "zai-org/GLM-5.2",
-		DefaultSmallModelID: "deepseek-ai/DeepSeek-V3.2",
+		DefaultLargeModelID: defaultLargeModel,
+		DefaultSmallModelID: defaultSmallModel,
 		Models:              []catwalk.Model{},
 	}
 
 	for _, model := range modelsResp.Data {
-		// Skip models whose deprecation date has passed.
+		// Skip deprecated models, including ones scheduled for removal.
 		if model.DeprecationDate != nil {
-			if depTime, err := time.Parse(time.RFC3339, *model.DeprecationDate); err == nil && time.Now().After(depTime) {
-				continue
-			}
+			fmt.Printf("Skipping deprecated model %s (%s)\n", model.ID, *model.DeprecationDate)
+			continue
 		}
 		// Skip models without text input or tool calling.
 		if !hasModality(model, "text") {
@@ -182,6 +189,13 @@ func main() {
 
 		levels, defaultEffort := reasoningLevels(model.ReasoningOptions)
 
+		// Friendli reports max_completion_tokens equal to the full context
+		// window, so treat that as "no output cap" and play safe.
+		maxTokens := model.MaxCompletionTokens
+		if maxTokens <= 0 || maxTokens >= model.ContextLength {
+			maxTokens = model.ContextLength / 10
+		}
+
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   displayName(model.ID),
@@ -190,7 +204,7 @@ func main() {
 			CostPer1MInCached:      parsePrice(model.Pricing.InputCacheRead),
 			CostPer1MOutCached:     0,
 			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       model.MaxCompletionTokens,
+			DefaultMaxTokens:       maxTokens,
 			CanReason:              model.Reasoning,
 			ReasoningLevels:        levels,
 			DefaultReasoningEffort: defaultEffort,
@@ -198,6 +212,12 @@ func main() {
 		}
 
 		friendliProvider.Models = append(friendliProvider.Models, m)
+	}
+
+	for _, id := range []string{defaultLargeModel, defaultSmallModel} {
+		if !slices.ContainsFunc(friendliProvider.Models, func(m catwalk.Model) bool { return m.ID == id }) {
+			log.Fatalf("Default model %q not found in Friendli catalog", id)
+		}
 	}
 
 	slices.SortFunc(friendliProvider.Models, func(a, b catwalk.Model) int {

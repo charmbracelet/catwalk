@@ -64,6 +64,7 @@ tasks:
       - task: gen:chutes
       - task: gen:copilot
       - task: gen:cortecs
+      - task: gen:friendli
       - task: gen:huggingface
       - task: gen:ionet
       - task: gen:nebius
@@ -110,6 +111,11 @@ tasks:
     desc: Generate cortecs provider configurations
     cmds:
       - go run cmd/cortecs/main.go
+
+  gen:friendli:
+    desc: Generate Friendli provider configurations
+    cmds:
+      - go run cmd/friendli/main.go
 
   gen:huggingface:
     desc: Generate huggingface provider configurations
