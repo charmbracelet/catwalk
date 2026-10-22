@@ -132,6 +132,9 @@ var zhipuConfig []byte
 //go:embed configs/zhipu-coding.json
 var zhipuCodingConfig []byte
 
+//go:embed configs/yolo-auto.json
+var yoloAutoConfig []byte
+
 // ProviderFunc is a function that returns a Provider.
 type ProviderFunc func() catwalk.Provider
 
@@ -178,6 +181,7 @@ var providerRegistry = []ProviderFunc{
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
+	yoloAutoProvider,
 	zhipuProvider,
 	zhipuCodingProvider,
 }
@@ -362,4 +366,8 @@ func zhipuProvider() catwalk.Provider {
 
 func zhipuCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(zhipuCodingConfig)
+}
+
+func yoloAutoProvider() catwalk.Provider {
+	return loadProviderFromConfig(yoloAutoConfig)
 }
