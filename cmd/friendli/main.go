@@ -197,10 +197,10 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   displayName(model.ID),
-			CostPer1MIn:            parsePrice(model.Pricing.Input),
-			CostPer1MOut:           parsePrice(model.Pricing.Output),
+			ID:           model.ID,
+			Name:         displayName(model.ID),
+			CostPer1MIn:  parsePrice(model.Pricing.Input),
+			CostPer1MOut: parsePrice(model.Pricing.Output),
 			// catwalk: in_cached = cache write, out_cached = cache read.
 			// Friendli only prices cache reads.
 			CostPer1MInCached:      0,
