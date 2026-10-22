@@ -32,6 +32,10 @@ url = "https://dl.google.com/go/go1.26.10.darwin-amd64.tar.gz"
 checksum = "sha256:7ecd2d7260e82c59bcbd7f1077a07cee2dea607295b858df67195a1e4e09629b"
 url = "https://dl.google.com/go/go1.26.10.windows-amd64.zip"
 
+[[tools."go:golang.org/x/tools/gopls/internal/analysis/modernize/cmd/modernize"]]
+version = "0.23.0"
+backend = "go:golang.org/x/tools/gopls/internal/analysis/modernize/cmd/modernize"
+
 [[tools.gofumpt]]
 version = "0.10.0"
 backend = "aqua:mvdan/gofumpt"

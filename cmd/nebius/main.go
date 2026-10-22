@@ -28,7 +28,7 @@ type Model struct {
 	Pricing           Pricing  `json:"pricing"`
 	Architecture      struct {
 		Modality string `json:"modality"`
-	} `json:"architecture,omitempty"`
+	} `json:"architecture"`
 }
 
 type Pricing struct {
