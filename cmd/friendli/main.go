@@ -201,8 +201,10 @@ func main() {
 			Name:                   displayName(model.ID),
 			CostPer1MIn:            parsePrice(model.Pricing.Input),
 			CostPer1MOut:           parsePrice(model.Pricing.Output),
-			CostPer1MInCached:      parsePrice(model.Pricing.InputCacheRead),
-			CostPer1MOutCached:     0,
+			// catwalk: in_cached = cache write, out_cached = cache read.
+			// Friendli only prices cache reads.
+			CostPer1MInCached:      0,
+			CostPer1MOutCached:     parsePrice(model.Pricing.InputCacheRead),
 			ContextWindow:          model.ContextLength,
 			DefaultMaxTokens:       maxTokens,
 			CanReason:              model.Reasoning,
