@@ -20,7 +20,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -36,23 +37,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "DeepSeek-V3",
-      "name": "DeepSeek V3",
-      "pricing": {
-        "input": 0.272,
-        "output": 1.088
-      },
-      "context_window": 1638000,
-      "default_max_tokens": 163800,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -83,7 +69,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -114,7 +101,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -130,7 +118,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -161,7 +150,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -193,7 +183,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -225,7 +216,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -256,7 +248,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -272,7 +265,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -322,7 +316,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -386,7 +381,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -417,7 +413,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -448,7 +445,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -479,7 +477,26 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "cc-k2.6-code-preview",
+      "name": "CC K2.6 Code Preview",
+      "pricing": {
+        "input": 0.2,
+        "output": 0.2,
+        "cache_hit": 0.02
+      },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -495,7 +512,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -511,7 +529,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -527,7 +546,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -543,7 +563,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -559,7 +580,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -575,7 +597,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -608,7 +631,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -641,7 +665,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -674,7 +699,27 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_create": 0.125,
+        "cache_hit": 0.01
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -705,7 +750,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -738,7 +784,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -771,7 +818,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -804,7 +852,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -837,7 +886,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -870,7 +920,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -903,7 +954,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -936,7 +988,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -969,7 +1022,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1002,7 +1056,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1020,7 +1075,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1053,7 +1109,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1086,7 +1143,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1119,7 +1177,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1152,7 +1211,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1185,7 +1245,27 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1202,7 +1282,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1234,7 +1315,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1265,7 +1347,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1297,7 +1380,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1328,7 +1412,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1359,7 +1444,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1390,7 +1476,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1421,7 +1508,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1452,7 +1540,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1483,7 +1572,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1514,7 +1604,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1545,7 +1636,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1576,7 +1668,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1608,7 +1701,73 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "coding-glm-5.3-flash",
+      "name": "Coding GLM 5.3 Flash",
+      "pricing": {
+        "input": 0.02817,
+        "output": 0.0986,
+        "cache_hit": 0.00704
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "coding-glm-5.3-flash-free",
+      "name": "Coding GLM 5.3 Flash (free)",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1639,7 +1798,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1671,7 +1831,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1702,7 +1863,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1733,7 +1895,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1764,7 +1927,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1795,7 +1959,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1826,7 +1991,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1857,7 +2023,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1888,7 +2055,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1919,7 +2087,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1950,7 +2119,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1981,7 +2151,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2012,7 +2183,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2043,7 +2215,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2074,104 +2247,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "coding-xiaomi-mimo-v2-pro",
-      "name": "Coding Xiaomi Mimo V2 Pro",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.6,
-        "cache_hit": 0.04
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "coding-xiaomi-mimo-v2.5",
-      "name": "Coding Xiaomi Mimo V2.5",
-      "pricing": {
-        "input": 0.08,
-        "output": 0.16,
-        "cache_hit": 0.0016
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "coding-xiaomi-mimo-v2.5-pro",
-      "name": "Coding Xiaomi Mimo V2.5 Pro",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.4,
-        "cache_hit": 0.0016
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2188,7 +2265,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2205,7 +2283,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2221,7 +2300,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2237,7 +2317,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2268,7 +2349,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2300,39 +2382,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "deepseek-v3.2-think",
-      "name": "DeepSeek V3.2 Thinking",
-      "pricing": {
-        "input": 0.302,
-        "output": 0.453,
-        "cache_hit": 0.0302
-      },
-      "context_window": 128000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2344,7 +2395,7 @@
         "cache_hit": 0.0284
       },
       "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "default_max_tokens": 393216,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2364,7 +2415,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2396,7 +2448,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2428,7 +2481,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2440,7 +2494,7 @@
         "cache_hit": 0.0031
       },
       "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "default_max_tokens": 393216,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2460,7 +2514,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2492,7 +2547,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2524,7 +2580,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2556,7 +2613,26 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "pricing": {
+        "input": 0.155,
+        "output": 0.62,
+        "cache_hit": 0.0031
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2605,7 +2681,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2622,7 +2699,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2639,7 +2717,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2656,7 +2735,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2673,39 +2753,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "doubao-seed-1-8",
-      "name": "Doubao Seed 1.8",
-      "pricing": {
-        "input": 0.10959,
-        "output": 0.27398,
-        "cache_hit": 0.02192
-      },
-      "context_window": 256000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2737,7 +2786,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2769,7 +2819,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2806,44 +2857,12 @@
       }
     },
     {
-      "id": "doubao-seed-2-0-mini",
-      "name": "Doubao Seed 2.0 Mini",
+      "id": "doubao-seed-2-0-mini-260428",
+      "name": "Doubao Seed 2.0 Mini 260428",
       "pricing": {
         "input": 0.03014,
         "output": 0.30136,
         "cache_hit": 0.00603
-      },
-      "context_window": 256000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "doubao-seed-2-0-mini-260428",
-      "name": "Doubao Seed 2.0 Mini 260428",
-      "pricing": {
-        "input": 0.0282,
-        "output": 0.282,
-        "cache_hit": 0.00564
       },
       "context_window": 256000,
       "default_max_tokens": 32000,
@@ -2874,9 +2893,9 @@
       "id": "doubao-seed-2-0-pro",
       "name": "Doubao Seed 2.0 Pro",
       "pricing": {
-        "input": 0.4822,
-        "output": 2.411,
-        "cache_hit": 0.09644
+        "input": 0.4958,
+        "output": 2.479,
+        "cache_hit": 0.09916
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
@@ -2899,16 +2918,17 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "doubao-seed-2-1-pro",
       "name": "Doubao Seed 2.1 Pro",
       "pricing": {
-        "input": 0.845,
-        "output": 4.225,
-        "cache_hit": 0.169
+        "input": 0.9295,
+        "output": 4.6475,
+        "cache_hit": 0.1859
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -2931,7 +2951,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2963,16 +2984,17 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "doubao-seed-2-1-turbo",
       "name": "Doubao Seed 2.1 Turbo",
       "pricing": {
-        "input": 0.4226,
-        "output": 2.113,
-        "cache_hit": 0.08452
+        "input": 0.46475,
+        "output": 2.32375,
+        "cache_hit": 0.09295
       },
       "context_window": 256000,
       "default_max_tokens": 25600,
@@ -2995,7 +3017,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3011,7 +3034,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3027,7 +3051,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3043,7 +3068,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3075,7 +3101,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3107,7 +3134,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3139,7 +3167,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3171,7 +3200,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3202,7 +3232,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3237,7 +3268,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3628,7 +3660,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3636,7 +3669,8 @@
       "name": "Gemini 3.1 Flash Image",
       "pricing": {
         "input": 0.5,
-        "output": 3
+        "output": 3,
+        "cache_hit": 0.05
       },
       "context_window": 131072,
       "default_max_tokens": 32768,
@@ -3659,7 +3693,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3724,7 +3759,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3863,9 +3899,9 @@
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "pricing": {
-        "input": 1.5,
-        "output": 9,
-        "cache_hit": 0.15
+        "input": 0.75,
+        "output": 3.75,
+        "cache_hit": 0.075
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -3929,9 +3965,9 @@
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "pricing": {
-        "input": 1.5,
-        "output": 7.5,
-        "cache_hit": 0.15
+        "input": 0.75,
+        "output": 3.75,
+        "cache_hit": 0.075
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -4025,6 +4061,42 @@
       }
     },
     {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_hit": 0.1
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "gemini-nano-banana-2.1",
+      "name": "Gemini Nano Banana 2.1",
+      "pricing": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_hit": 0.15
+      },
+      "context_window": 65536,
+      "default_max_tokens": 6553,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
       "id": "gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B It",
       "pricing": {
@@ -4037,15 +4109,16 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gemma-4-31b-it",
       "name": "Gemma 4 31B It",
       "pricing": {
-        "input": 0.14,
-        "output": 0.39998
+        "input": 0.2,
+        "output": 0.4
       },
       "context_window": 262144,
       "default_max_tokens": 26214,
@@ -4053,7 +4126,42 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "glm-4.5",
+      "name": "GLM 4.5",
+      "pricing": {
+        "input": 0.4,
+        "output": 1.6
+      },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "glm-4.5-air",
+      "name": "GLM 4.5 Air",
+      "pricing": {
+        "input": 0.14,
+        "output": 0.84
+      },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4069,7 +4177,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4101,7 +4210,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4118,7 +4228,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4150,7 +4261,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4181,7 +4293,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4213,7 +4326,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4245,7 +4359,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4277,7 +4392,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4309,7 +4425,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4341,7 +4458,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -4350,7 +4468,7 @@
       "pricing": {
         "input": 0.11268,
         "output": 0.39438,
-        "cache_hit": 0.02817
+        "cache_hit": 0.0324
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -4373,16 +4491,17 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "glm-5.3-flashx",
       "name": "GLM 5.3 Flashx",
       "pricing": {
-        "input": 0.37,
-        "output": 1.25001,
-        "cache_hit": 0.075
+        "input": 0.282,
+        "output": 0.987,
+        "cache_hit": 0.08037
       },
       "context_window": 1000000,
       "default_max_tokens": 100000,
@@ -4390,7 +4509,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4407,7 +4527,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4424,7 +4545,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4441,7 +4563,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4458,7 +4581,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4475,7 +4599,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4492,24 +4617,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-4o-audio-preview",
-      "name": "GPT 4o Audio Preview",
-      "pricing": {
-        "input": 2.5,
-        "output": 10
-      },
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4526,7 +4635,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4560,7 +4670,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4577,7 +4688,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4609,7 +4721,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4626,7 +4739,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4658,7 +4772,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4690,7 +4805,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4722,7 +4838,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4753,7 +4870,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4785,7 +4903,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4802,7 +4921,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4834,7 +4954,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4866,7 +4987,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4898,7 +5020,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4930,7 +5053,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4947,7 +5071,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -4979,7 +5104,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5011,7 +5137,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5043,7 +5170,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5075,7 +5203,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5092,7 +5221,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5124,7 +5254,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5156,7 +5287,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5188,7 +5320,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5220,7 +5353,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5237,7 +5371,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5269,7 +5404,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5300,7 +5436,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5332,7 +5469,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5363,7 +5501,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5396,7 +5535,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5429,7 +5569,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5462,7 +5603,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5479,7 +5621,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5512,7 +5655,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5545,7 +5689,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5563,7 +5708,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5581,7 +5727,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5618,6 +5765,25 @@
       }
     },
     {
+      "id": "gpt-6.1-sol",
+      "name": "GPT 6.1 Sol",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
       "id": "gpt-chat-latest",
       "name": "GPT Chat",
       "pricing": {
@@ -5646,7 +5812,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5677,7 +5844,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -5708,7 +5876,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -5740,7 +5909,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5757,7 +5927,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5789,7 +5960,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5821,7 +5993,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5853,7 +6026,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5870,7 +6044,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5902,7 +6077,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5934,7 +6110,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5966,7 +6143,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -5998,7 +6176,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6030,7 +6209,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6062,7 +6242,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6094,7 +6275,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6126,16 +6308,17 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "grok-4.7",
       "name": "Grok 4.7",
       "pricing": {
-        "input": 2.2,
-        "output": 6.6,
-        "cache_hit": 0.55
+        "input": 2,
+        "output": 6,
+        "cache_hit": 0.5
       },
       "context_window": 500000,
       "default_max_tokens": 50000,
@@ -6143,7 +6326,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6175,7 +6359,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6207,7 +6392,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6239,7 +6425,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6270,39 +6457,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "hy3-preview",
-      "name": "Hy3 Preview",
-      "pricing": {
-        "input": 0.17,
-        "output": 0.56666,
-        "cache_hit": 0.051
-      },
-      "context_window": 256000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6334,7 +6490,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6350,7 +6507,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6381,7 +6539,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6412,7 +6571,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6428,7 +6588,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6459,23 +6620,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "kimi-k2-0711",
-      "name": "Kimi K2 0711",
-      "pricing": {
-        "input": 0.54,
-        "output": 2.16
-      },
-      "context_window": 131000,
-      "default_max_tokens": 13100,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6507,7 +6653,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6524,7 +6671,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6556,7 +6704,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6588,7 +6737,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6620,7 +6770,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6652,16 +6803,17 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": {
-        "input": 3,
-        "output": 15,
-        "cache_hit": 0.3
+        "input": 2.84,
+        "output": 14.2,
+        "cache_hit": 0.284
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -6684,23 +6836,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "l3.1-euryale-70b",
-      "name": "L3.1 Euryale 70B",
-      "pricing": {
-        "input": 1.48,
-        "output": 1.48
-      },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6717,7 +6854,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6733,7 +6871,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6750,7 +6889,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6766,7 +6906,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6782,7 +6923,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6799,7 +6941,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6815,7 +6958,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6831,7 +6975,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6847,7 +6992,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6863,7 +7009,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6879,7 +7026,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -6911,7 +7059,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6942,7 +7091,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6959,7 +7109,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -6991,25 +7142,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "mimo-v2-flash",
-      "name": "MiMo V2 Flash",
-      "pricing": {
-        "input": 0.1918,
-        "output": 0.5754,
-        "cache_hit": 0.03836
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7025,42 +7159,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "mimo-v2-omni",
-      "name": "MiMo V2 Omni",
-      "pricing": {
-        "input": 0.44,
-        "output": 2.2,
-        "cache_hit": 0.088
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "mimo-v2-pro",
-      "name": "MiMo V2 Pro",
-      "pricing": {
-        "input": 1.1,
-        "output": 3.3,
-        "cache_hit": 0.22
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7095,7 +7195,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7112,7 +7213,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7129,7 +7231,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7146,7 +7249,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7177,7 +7281,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7208,7 +7313,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7239,7 +7345,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7271,7 +7378,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7287,7 +7395,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7318,7 +7427,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7334,7 +7444,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7350,7 +7461,26 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "mistral-large-4-0",
+      "name": "Mistral Large 4.0",
+      "pricing": {
+        "input": 1.36,
+        "output": 4.17996,
+        "cache_hit": 0.13994
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7366,7 +7496,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7467,6 +7598,24 @@
       }
     },
     {
+      "id": "muse-wonder",
+      "name": "Muse Wonder",
+      "pricing": {
+        "input": 4.4,
+        "output": 22,
+        "cache_hit": 0.22
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
       "id": "nemotron-3-nano-30b-a3b-free",
       "name": "Nemotron 3 Nano 30B A3B (free)",
       "pricing": {
@@ -7479,7 +7628,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7512,7 +7662,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7528,7 +7679,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7544,7 +7696,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7560,7 +7713,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7576,7 +7730,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7592,7 +7747,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7608,7 +7764,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7640,7 +7797,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7672,7 +7830,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7704,7 +7863,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7736,7 +7896,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7768,7 +7929,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7784,23 +7946,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-235b-a22b",
-      "name": "Qwen3 235B A22B",
-      "pricing": {
-        "input": 0.28,
-        "output": 1.12
-      },
-      "context_window": 131100,
-      "default_max_tokens": 13110,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7817,7 +7964,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7833,7 +7981,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7864,7 +8013,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -7880,7 +8030,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7896,7 +8047,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7912,7 +8064,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7928,7 +8081,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7945,7 +8099,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -7962,25 +8117,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "qwen3-max",
-      "name": "Qwen3 Max",
-      "pricing": {
-        "input": 0.4508,
-        "output": 1.8032,
-        "cache_create": 0.5635,
-        "cache_hit": 0.09016
-      },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8013,23 +8151,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "qwen3-next-80b-a3b-instruct",
-      "name": "Qwen3 Next 80B A3B Instruct",
-      "pricing": {
-        "input": 0.138,
-        "output": 0.552
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8060,134 +8183,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-vl-235b-a22b-instruct",
-      "name": "Qwen3 VL 235B A22B Instruct",
-      "pricing": {
-        "input": 0.274,
-        "output": 1.096
-      },
-      "context_window": 131000,
-      "default_max_tokens": 33000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-vl-235b-a22b-thinking",
-      "name": "Qwen3 VL 235B A22B Thinking",
-      "pricing": {
-        "input": 0.274,
-        "output": 2.74
-      },
-      "context_window": 131000,
-      "default_max_tokens": 33000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-vl-30b-a3b-instruct",
-      "name": "Qwen3 VL 30B A3B Instruct",
-      "pricing": {
-        "input": 0.1028,
-        "output": 0.4112
-      },
-      "context_window": 128000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-vl-30b-a3b-thinking",
-      "name": "Qwen3 VL 30B A3B Thinking",
-      "pricing": {
-        "input": 0.1028,
-        "output": 1.028
-      },
-      "context_window": 128000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-vl-flash",
-      "name": "Qwen3 VL Flash",
-      "pricing": {
-        "input": 0.0206,
-        "output": 0.206,
-        "cache_hit": 0.00412
-      },
-      "context_window": 254000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-vl-flash-2026-01-22",
-      "name": "Qwen3 VL Flash 2026 01-22",
-      "pricing": {
-        "input": 0.0206,
-        "output": 0.206
-      },
-      "context_window": 254000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8204,7 +8201,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8235,7 +8233,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8266,7 +8265,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8297,7 +8297,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8328,7 +8329,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8361,7 +8363,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8394,7 +8397,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8425,7 +8429,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8456,7 +8461,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8489,40 +8495,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3.6-max-preview",
-      "name": "Qwen3.6 Max Preview",
-      "pricing": {
-        "input": 1.268,
-        "output": 7.608,
-        "cache_create": 1.585,
-        "cache_hit": 0.1268
-      },
-      "context_window": 240000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8555,7 +8529,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8586,7 +8561,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8619,7 +8595,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8652,7 +8629,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8685,7 +8663,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8717,7 +8696,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8734,7 +8714,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8767,7 +8748,25 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "qwen3.8-flash-free",
+      "name": "Qwen3.8 Flash (free)",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8800,7 +8799,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8833,40 +8833,25 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
-      "id": "qwen3.8-max-preview",
-      "name": "Qwen3.8 Max Preview",
+      "id": "qwen3.8-max-free",
+      "name": "Qwen3.8 Max (free)",
       "pricing": {
-        "input": 0.338,
-        "output": 1.014,
-        "cache_create": 0.4225,
-        "cache_hit": 0.0676
+        "input": 0,
+        "output": 0
       },
-      "context_window": 983616,
+      "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
+        "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8884,7 +8869,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8896,12 +8882,13 @@
         "cache_hit": 0.06
       },
       "context_window": 524288,
-      "default_max_tokens": 52428,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -8917,7 +8904,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8934,7 +8922,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8951,7 +8940,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -8967,40 +8957,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "xiaomi-mimo-v2-omni-free",
-      "name": "Xiaomi Mimo V2 Omni (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
         "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "xiaomi-mimo-v2-pro-free",
-      "name": "Xiaomi Mimo V2 Pro (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
+        "audio": false
       }
     },
     {
@@ -9017,24 +8975,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "xiaomi-mimo-v2.5-free",
-      "name": "Xiaomi Mimo V2.5 (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
         "vision": true,
-        "audio": true
+        "audio": false
       }
     },
     {
@@ -9051,23 +8993,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "xiaomi-mimo-v2.5-pro-free",
-      "name": "Xiaomi Mimo V2.5 Pro (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -9083,7 +9010,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -9099,7 +9027,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -9116,7 +9045,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     }
   ],

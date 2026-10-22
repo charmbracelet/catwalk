@@ -88,8 +88,8 @@ func main() {
 		APIKey:              "$VERCEL_API_KEY",
 		APIEndpoint:         "https://ai-gateway.vercel.sh/v1",
 		Type:                catwalk.TypeCompletions,
-		DefaultLargeModelID: "anthropic/claude-sonnet-4",
-		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
+		DefaultLargeModelID: "deepseek/deepseek-v4.1-flash",
+		DefaultSmallModelID: "deepseek/deepseek-v4.1-flash",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
@@ -160,6 +160,9 @@ func main() {
 				defaultReasoning = "high"
 			case model.ID == "zai/glm-5.2":
 				reasoningLevels = []string{"high", "xhigh"}
+				defaultReasoning = "high"
+			case strings.HasPrefix(model.ID, "mistral/"):
+				reasoningLevels = []string{"none", "high"}
 				defaultReasoning = "high"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}

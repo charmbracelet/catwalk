@@ -253,7 +253,7 @@
         "cache_hit": 0.5
       },
       "context_window": 1047576,
-      "default_max_tokens": 50000,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "never"
       },
@@ -357,7 +357,7 @@
         "cache_hit": 1.25
       },
       "context_window": 128000,
-      "default_max_tokens": 20000,
+      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "never"
       },
@@ -375,7 +375,7 @@
         "cache_hit": 0.075
       },
       "context_window": 128000,
-      "default_max_tokens": 20000,
+      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "never"
       },

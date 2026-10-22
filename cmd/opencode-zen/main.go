@@ -139,8 +139,8 @@ func main() {
 		APIEndpoint:           "https://opencode.ai/zen/v1",
 		Type:                  catwalk.TypeCompletions,
 		SessionAffinityHeader: "x-opencode-session",
-		DefaultLargeModelID:   "deepseek-v4-flash-free",
-		DefaultSmallModelID:   "deepseek-v4-flash-free",
+		DefaultLargeModelID:   "mimo-v2.6-flash-free",
+		DefaultSmallModelID:   "mimo-v2.6-flash-free",
 	}
 
 	for _, zenModel := range zenModels {

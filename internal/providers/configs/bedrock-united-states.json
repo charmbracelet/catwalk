@@ -6,6 +6,47 @@
   "default_small_model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [
     {
+      "id": "us.anthropic.claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "us.anthropic.claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "pricing": {
@@ -351,6 +392,47 @@
       "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "us.anthropic.claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "pricing": {
+        "input": 10,
+        "output": 50,
+        "cache_create": 12.5,
+        "cache_hit": 0.25
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
       },
       "capabilities": {
         "vision": true

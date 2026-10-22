@@ -4,15 +4,15 @@
   "api_key": "$ALIBABA_US_API_KEY",
   "api_endpoint": "https://dashscope-us.aliyuncs.com/compatible-mode/v1",
   "type": "completions",
-  "default_large_model_id": "deepseek-v4-pro-us",
-  "default_small_model_id": "deepseek-v4-flash-us",
+  "default_large_model_id": "qwen3.8-max",
+  "default_small_model_id": "qwen3.8-flash",
   "models": [
     {
-      "id": "deepseek-v4-flash-us",
-      "name": "DeepSeek-V4-Flash",
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek-V4.1-Flash-1017",
       "pricing": {
-        "input": 0.138,
-        "output": 0.275,
+        "input": 0.283,
+        "output": 1.131,
         "cache_hit": 0.028
       },
       "context_window": 1000000,
@@ -21,12 +21,80 @@
         "thinking": "toggleable",
         "effort_levels": [
           {
+            "value": "low",
+            "display": "Low"
+          },
+          {
             "value": "high",
             "display": "High"
           },
           {
-            "value": "xhigh",
-            "display": "X-High"
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek-V4.1-Flash",
+      "pricing": {
+        "input": 0.283,
+        "output": 1.131,
+        "cache_hit": 0.028
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "deepseek-v4-pro-0813",
+      "name": "DeepSeek-V4-Pro-0813",
+      "pricing": {
+        "input": 1.272,
+        "output": 3.816,
+        "cache_hit": 0.127
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
           }
         ],
         "default_effort_level": "high"
@@ -68,107 +136,15 @@
       }
     },
     {
-      "id": "deepseek-v4-pro-us",
-      "name": "DeepSeek-V4-Pro",
+      "id": "deepseek-v4-flash-us",
+      "name": "DeepSeek-V4-Flash",
       "pricing": {
-        "input": 1.65,
-        "output": 3.301,
-        "cache_hit": 0.138
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "deepseek-v4-pro-0813",
-      "name": "DeepSeek-V4-Pro-0813",
-      "pricing": {
-        "input": 1.272,
-        "output": 3.816,
-        "cache_hit": 0.127
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "deepseek-v4.1-flash",
-      "name": "DeepSeek-V4.1-Flash",
-      "pricing": {
-        "input": 0.283,
-        "output": 1.131,
+        "input": 0.138,
+        "output": 0.275,
         "cache_hit": 0.028
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "glm-5.2",
-      "name": "GLM 5.2",
-      "pricing": {
-        "input": 1.1,
-        "output": 3.851,
-        "cache_hit": 0.275
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -220,49 +196,45 @@
       }
     },
     {
-      "id": "kimi-k2.7-code",
-      "name": "Kimi K2.7 Code",
+      "id": "glm-5.2",
+      "name": "GLM 5.2",
       "pricing": {
-        "input": 0.8939,
-        "output": 3.7131,
-        "cache_hit": 0.1788
+        "input": 1.1,
+        "output": 3.851,
+        "cache_hit": 0.275
       },
-      "context_window": 256000,
-      "default_max_tokens": 16000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "kimi-k3",
-      "name": "Kimi K3",
-      "pricing": {
-        "input": 2.827,
-        "output": 14.133,
-        "cache_hit": 0.283
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 16000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
           {
             "value": "high",
             "display": "High"
           },
           {
-            "value": "max",
-            "display": "Max"
+            "value": "xhigh",
+            "display": "X-High"
           }
         ],
         "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8-Max",
+      "pricing": {
+        "input": 1.65,
+        "output": 4.951,
+        "cache_hit": 0.206
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable"
       },
       "capabilities": {
         "vision": true
@@ -309,17 +281,49 @@
       }
     },
     {
-      "id": "qwen3.8-max",
-      "name": "Qwen3.8-Max",
+      "id": "kimi-k3",
+      "name": "Kimi K3",
       "pricing": {
-        "input": 1.65,
-        "output": 4.951,
-        "cache_hit": 0.206
+        "input": 2.827,
+        "output": 14.133,
+        "cache_hit": 0.283
       },
-      "context_window": 1000000,
-      "default_max_tokens": 65536,
+      "context_window": 1048576,
+      "default_max_tokens": 16000,
       "reasoning": {
-        "thinking": "toggleable"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "pricing": {
+        "input": 0.8939,
+        "output": 3.7131,
+        "cache_hit": 0.1788
+      },
+      "context_window": 256000,
+      "default_max_tokens": 16000,
+      "reasoning": {
+        "thinking": "never"
       },
       "capabilities": {
         "vision": true

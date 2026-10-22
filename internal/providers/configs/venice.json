@@ -5,8 +5,25 @@
   "api_endpoint": "https://api.venice.ai/api/v1",
   "type": "completions",
   "default_large_model_id": "claude-fable-5",
-  "default_small_model_id": "deepseek-v4-flash",
+  "default_small_model_id": "deepseek-v4-flash-0731",
   "models": [
+    {
+      "id": "abliteration-abliterated-model-large-v2",
+      "name": "Abliterated Large V2",
+      "pricing": {
+        "input": 3,
+        "output": 5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
     {
       "id": "aion-labs-aion-3-0",
       "name": "Aion 3.0",
@@ -20,7 +37,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -36,7 +54,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -52,7 +71,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -68,15 +88,16 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
-        "input": 12,
-        "output": 60
+        "input": 10,
+        "output": 50
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -99,15 +120,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-fable-5-1",
       "name": "Claude Fable 5.1",
       "pricing": {
-        "input": 12,
-        "output": 60
+        "input": 10,
+        "output": 50
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -130,15 +152,48 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-5",
       "name": "Claude Opus 4.5",
       "pricing": {
-        "input": 6,
-        "output": 30
+        "input": 5,
+        "output": 25
       },
       "context_window": 198000,
       "default_max_tokens": 32768,
@@ -146,15 +201,16 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-6",
       "name": "Claude Opus 4.6",
       "pricing": {
-        "input": 6,
-        "output": 30
+        "input": 5,
+        "output": 25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -177,15 +233,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "pricing": {
-        "input": 6,
-        "output": 30
+        "input": 5,
+        "output": 25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -208,15 +265,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "pricing": {
-        "input": 6,
-        "output": 30
+        "input": 5,
+        "output": 25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -239,15 +297,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-8-fast",
       "name": "Claude Opus 4.8 Fast",
       "pricing": {
-        "input": 12,
-        "output": 60
+        "input": 10,
+        "output": 50
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -270,15 +329,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
       "pricing": {
-        "input": 6,
-        "output": 30
+        "input": 5,
+        "output": 25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -301,15 +361,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-5-fast",
       "name": "Claude Opus 5 Fast",
       "pricing": {
-        "input": 12,
-        "output": 60
+        "input": 10,
+        "output": 50
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -332,15 +393,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-5-5",
       "name": "Claude Opus 5.5",
       "pricing": {
-        "input": 4.8,
-        "output": 24
+        "input": 4,
+        "output": 20
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -363,15 +425,48 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "claude-opus-5-5-fast",
+      "name": "Claude Opus 5.5 Fast",
+      "pricing": {
+        "input": 8,
+        "output": 40
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "pricing": {
-        "input": 3.75,
-        "output": 18.75
+        "input": 3,
+        "output": 15
       },
       "context_window": 198000,
       "default_max_tokens": 64000,
@@ -379,43 +474,13 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
-      "pricing": {
-        "input": 3.6,
-        "output": 18
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "claude-sonnet-5",
-      "name": "Claude Sonnet 5",
       "pricing": {
         "input": 3,
         "output": 15
@@ -441,7 +506,72 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "pricing": {
+        "input": 2,
+        "output": 10
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pricing": {
+        "input": 2,
+        "output": 10
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -472,7 +602,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -488,7 +619,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -519,15 +651,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "pricing": {
-        "input": 0.175,
-        "output": 0.35
+        "input": 0.13,
+        "output": 0.26
       },
       "context_window": 1000000,
       "default_max_tokens": 32768,
@@ -550,7 +683,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -581,7 +715,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -597,7 +732,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -613,15 +749,16 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "deepseek-v4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "pricing": {
-        "input": 0.375,
-        "output": 1.5
+        "input": 0.3,
+        "output": 1.2
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -644,7 +781,40 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek v4.1 Flash (1017)",
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -675,7 +845,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -706,38 +877,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "zai-org-glm-4.7-flash",
-      "name": "GLM 4.7 Flash",
-      "pricing": {
-        "input": 0.06,
-        "output": 0.4
-      },
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -768,7 +909,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -799,7 +941,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -830,7 +973,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -861,7 +1005,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -892,7 +1037,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -923,7 +1069,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -954,7 +1101,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -970,7 +1118,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -986,7 +1135,8 @@
         "thinking": "always"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -999,25 +1149,11 @@
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
+        "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1048,15 +1184,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-4o-2024-11-20",
       "name": "GPT-4o",
       "pricing": {
-        "input": 3.125,
-        "output": 12.5
+        "input": 2.5,
+        "output": 10
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -1064,15 +1201,16 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-4o-mini-2024-07-18",
       "name": "GPT-4o Mini",
       "pricing": {
-        "input": 0.1875,
-        "output": 0.75
+        "input": 0.15,
+        "output": 0.6
       },
       "context_window": 128000,
       "default_max_tokens": 16384,
@@ -1080,15 +1218,16 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-52",
       "name": "GPT-5.2",
       "pricing": {
-        "input": 2.19,
-        "output": 17.5
+        "input": 1.75,
+        "output": 14
       },
       "context_window": 256000,
       "default_max_tokens": 65536,
@@ -1111,15 +1250,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-53-codex",
       "name": "GPT-5.3 Codex",
       "pricing": {
-        "input": 2.19,
-        "output": 17.5
+        "input": 1.75,
+        "output": 14
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1142,15 +1282,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-54",
       "name": "GPT-5.4",
       "pricing": {
-        "input": 3.13,
-        "output": 18.8
+        "input": 2.5,
+        "output": 15
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -1173,15 +1314,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-54-mini",
       "name": "GPT-5.4 Mini",
       "pricing": {
-        "input": 0.9375,
-        "output": 5.625
+        "input": 0.75,
+        "output": 4.5
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1204,15 +1346,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-54-pro",
       "name": "GPT-5.4 Pro",
       "pricing": {
-        "input": 37.5,
-        "output": 225
+        "input": 30,
+        "output": 180
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1235,15 +1378,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-55",
       "name": "GPT-5.5",
       "pricing": {
-        "input": 6.25,
-        "output": 37.5
+        "input": 5,
+        "output": 30
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -1266,15 +1410,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-55-pro",
       "name": "GPT-5.5 Pro",
       "pricing": {
-        "input": 37.5,
-        "output": 225
+        "input": 30,
+        "output": 180
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1297,15 +1442,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-56-luna",
       "name": "GPT-5.6 Luna",
       "pricing": {
-        "input": 0.25,
-        "output": 1.5
+        "input": 0.2,
+        "output": 1.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1328,15 +1474,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-56-luna-pro",
       "name": "GPT-5.6 Luna Pro",
       "pricing": {
-        "input": 0.25,
-        "output": 1.5
+        "input": 0.2,
+        "output": 1.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1359,15 +1506,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-56-sol",
       "name": "GPT-5.6 Sol",
       "pricing": {
-        "input": 5,
-        "output": 25
+        "input": 4,
+        "output": 20
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1390,15 +1538,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-56-sol-pro",
       "name": "GPT-5.6 Sol Pro",
       "pricing": {
-        "input": 5,
-        "output": 25
+        "input": 4,
+        "output": 20
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1421,15 +1570,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-56-terra",
       "name": "GPT-5.6 Terra",
       "pricing": {
-        "input": 2.5,
-        "output": 15
+        "input": 2,
+        "output": 12
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1452,15 +1602,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-56-terra-pro",
       "name": "GPT-5.6 Terra Pro",
       "pricing": {
-        "input": 2.5,
-        "output": 15
+        "input": 2,
+        "output": 12
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1483,7 +1634,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1514,15 +1666,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-6-astra-pro",
       "name": "GPT-6 Astra Pro",
       "pricing": {
-        "input": 12.5,
-        "output": 62.5
+        "input": 10,
+        "output": 50
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1545,15 +1698,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-6-luna",
       "name": "GPT-6 Luna",
       "pricing": {
-        "input": 0.125,
-        "output": 0.625
+        "input": 0.1,
+        "output": 0.5
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1576,15 +1730,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "openai-gpt-6-sol",
       "name": "GPT-6 Sol",
       "pricing": {
-        "input": 2.5,
-        "output": 12.5
+        "input": 2,
+        "output": 10
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1607,7 +1762,72 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "openai-gpt-61-sol",
+      "name": "GPT-6.1 Sol",
+      "pricing": {
+        "input": 2,
+        "output": 10
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "openai-gpt-61-sol-ultrafast",
+      "name": "GPT-6.1 Sol Ultrafast",
+      "pricing": {
+        "input": 12,
+        "output": 60
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1775,6 +1995,23 @@
       }
     },
     {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "pricing": {
+        "input": 2.5,
+        "output": 12.5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
       "id": "gemma-4-uncensored",
       "name": "Gemma 4 Uncensored",
       "pricing": {
@@ -1787,7 +2024,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1803,7 +2041,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1834,7 +2073,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1865,7 +2105,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1881,7 +2122,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1912,7 +2154,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1943,7 +2186,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1974,7 +2218,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2005,7 +2250,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2021,7 +2267,40 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "hy4-preview",
+      "name": "Hy4 Preview",
+      "pricing": {
+        "input": 1.0425,
+        "output": 3.12625
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2066,10 +2345,26 @@
       "context_window": 256000,
       "default_max_tokens": 65536,
       "reasoning": {
-        "thinking": "toggleable"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2085,7 +2380,8 @@
         "thinking": "always"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2116,7 +2412,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2147,7 +2444,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2178,7 +2476,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2209,7 +2508,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2240,7 +2540,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2256,7 +2557,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2272,7 +2574,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2303,15 +2606,16 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "mercury-2-5",
       "name": "Mercury 2.5",
       "pricing": {
-        "input": 0.05,
-        "output": 0.1875
+        "input": 0.25,
+        "output": 0.9375
       },
       "context_window": 260000,
       "default_max_tokens": 65536,
@@ -2334,7 +2638,40 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "mercury-3",
+      "name": "Mercury 3",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.35
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2370,6 +2707,38 @@
       }
     },
     {
+      "id": "xiaomi-mimo-v2-6-flash",
+      "name": "MiMo-V2.6-Flash",
+      "pricing": {
+        "input": 0.175,
+        "output": 0.35
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
       "id": "minimax-m25",
       "name": "MiniMax M2.5",
       "pricing": {
@@ -2397,7 +2766,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2428,7 +2798,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2444,7 +2815,40 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "pricing": {
+        "input": 0.1875,
+        "output": 0.75
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2460,7 +2864,72 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "muse-spark-open",
+      "name": "Muse Spark Open",
+      "pricing": {
+        "input": 1.5625,
+        "output": 5.3125
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "muse-wonder",
+      "name": "Muse Wonder",
+      "pricing": {
+        "input": 5,
+        "output": 25
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2476,7 +2945,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2507,7 +2977,40 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "nvidia-nemotron-3-5-super-vl-120b-a12b",
+      "name": "NVIDIA Nemotron 3.5 Super VL 120B",
+      "pricing": {
+        "input": 0.25,
+        "output": 1.25
+      },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2538,7 +3041,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2554,7 +3058,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2585,7 +3090,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2601,7 +3107,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2617,15 +3124,16 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "qwen3-5-35b-a3b",
       "name": "Qwen 3.5 35B A3B",
       "pricing": {
-        "input": 0.3125,
-        "output": 1.25
+        "input": 0.15,
+        "output": 1
       },
       "context_window": 256000,
       "default_max_tokens": 16384,
@@ -2648,7 +3156,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 1,
@@ -2683,38 +3192,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3-5-9b",
-      "name": "Qwen 3.5 9B",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.15
-      },
-      "context_window": 256000,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2745,7 +3224,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 1,
@@ -2765,7 +3245,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 1,
@@ -2785,7 +3266,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2801,7 +3283,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 0.7,
@@ -2821,7 +3304,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2837,7 +3321,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 0.7,
@@ -2857,7 +3342,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2873,7 +3359,8 @@
         "thinking": "always"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2904,7 +3391,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2920,7 +3408,8 @@
         "thinking": "always"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2936,7 +3425,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2952,7 +3442,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2968,7 +3459,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2984,7 +3476,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3000,7 +3493,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3016,7 +3510,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     }
   ]

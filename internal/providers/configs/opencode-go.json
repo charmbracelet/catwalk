@@ -8,14 +8,14 @@
   "default_small_model_id": "minimax-m2.7",
   "models": [
     {
-      "id": "deepseek-v4-flash",
-      "name": "DeepSeek V4 Flash",
+      "id": "beam-free",
+      "name": "Beam Free",
       "pricing": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0,
+        "output": 0
       },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -24,29 +24,30 @@
             "display": "Low"
           },
           {
-            "value": "high",
-            "display": "High"
+            "value": "medium",
+            "display": "Medium"
           },
           {
-            "value": "max",
-            "display": "Max"
+            "value": "high",
+            "display": "High"
           }
         ],
-        "default_effort_level": "high"
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
-      "id": "deepseek-v4-flash-vision-exp",
-      "name": "DeepSeek V4 Flash Vision Exp",
+      "id": "cat-jam-free",
+      "name": "Cat Jam Free",
       "pricing": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0,
+        "output": 0
       },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -55,18 +56,52 @@
             "display": "Low"
           },
           {
-            "value": "high",
-            "display": "High"
+            "value": "medium",
+            "display": "Medium"
           },
           {
-            "value": "max",
-            "display": "Max"
+            "value": "high",
+            "display": "High"
           }
         ],
-        "default_effort_level": "high"
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_create": 0.01
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -98,7 +133,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -129,7 +165,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -161,7 +198,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -193,7 +231,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -225,7 +264,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -258,7 +298,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -290,20 +331,20 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
-      "id": "grok-4.5",
-      "type": "responses",
-      "name": "Grok 4.5",
+      "id": "gemini-4-argon-contributor",
+      "name": "Gemini 4 Argon Contributor",
       "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_create": 0.3
+        "input": 4,
+        "output": 20,
+        "cache_create": 0.2
       },
-      "context_window": 500000,
-      "default_max_tokens": 500000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -323,40 +364,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "grok-4.6",
-      "type": "responses",
-      "name": "Grok 4.6",
-      "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_create": 0.5
-      },
-      "context_window": 500000,
-      "default_max_tokens": 500000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -388,7 +397,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -420,7 +430,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -452,39 +463,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "kimi-k2.6",
-      "name": "Kimi K2.6",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_create": 0.16
-      },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -516,7 +496,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -548,7 +529,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -579,7 +561,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -611,7 +594,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -674,7 +658,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -705,7 +690,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -736,7 +722,40 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "minimax-m3.1-flash-free",
+      "name": "MiniMax M3.1 Flash Free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 512000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -769,7 +788,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -802,7 +822,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -834,7 +855,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -866,73 +888,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3.6-plus",
-      "type": "messages",
-      "name": "Qwen3.6 Plus",
-      "pricing": {
-        "input": 0.5,
-        "output": 3,
-        "cache_create": 0.05
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "qwen3.7-max",
-      "type": "messages",
-      "name": "Qwen3.7 Max",
-      "pricing": {
-        "input": 2.5,
-        "output": 7.5,
-        "cache_create": 0.5
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -965,7 +922,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -998,7 +956,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1031,15 +990,17 @@
         "default_effort_level": "xhigh"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
-      "id": "space-bunny-free",
-      "name": "Space Bunny Free",
+      "id": "space-bunny",
+      "name": "Space Bunny",
       "pricing": {
-        "input": 0,
-        "output": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_create": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 524288,
@@ -1062,7 +1023,73 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "step-5-preview",
+      "name": "Step 5 Preview",
+      "pricing": {
+        "input": 1,
+        "output": 2.7,
+        "cache_create": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "step-5-preview-free",
+      "name": "Step 5 Preview Free",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     }
   ],

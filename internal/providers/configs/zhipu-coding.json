@@ -39,6 +39,38 @@
       }
     },
     {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3 Flash",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_create": 0.03
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "xhigh"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "glm-5.2",
       "name": "GLM-5.2",
       "pricing": {

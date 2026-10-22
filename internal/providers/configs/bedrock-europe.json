@@ -6,6 +6,47 @@
   "default_small_model_id": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [
     {
+      "id": "eu.anthropic.claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pricing": {
+        "input": 2.2,
+        "output": 11,
+        "cache_create": 2.75,
+        "cache_hit": 0.22
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "eu.anthropic.claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "pricing": {

@@ -55,14 +55,14 @@
       }
     },
     {
-      "id": "claude-opus-4.7",
-      "name": "Claude Opus 4.7",
+      "id": "claude-haiku-5.5",
+      "name": "Claude Haiku 5.5",
       "pricing": {
         "input": 0,
         "output": 0
       },
-      "context_window": 264000,
-      "default_max_tokens": 64000,
+      "context_window": 200000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "never"
       },
@@ -151,46 +151,14 @@
       }
     },
     {
-      "id": "gemini-3.5-flash",
-      "name": "Gemini 3.5 Flash",
+      "id": "claude-sonnet-5.5",
+      "name": "Claude Sonnet 5.5",
       "pricing": {
         "input": 0,
         "output": 0
       },
-      "context_window": 264000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gemini-3.6-flash",
-      "name": "Gemini 3.6 Flash",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 264000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gemini-3.7-flash",
-      "name": "Gemini 3.7 Flash",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 264000,
-      "default_max_tokens": 64000,
+      "context_window": 328000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "never"
       },
@@ -201,6 +169,22 @@
     {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 265536,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
       "pricing": {
         "input": 0,
         "output": 0
@@ -311,23 +295,6 @@
       }
     },
     {
-      "id": "gpt-5-mini",
-      "type": "responses",
-      "name": "GPT-5 mini",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 264000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "gpt-5.3-codex",
       "type": "responses",
       "name": "GPT-5.3-Codex",
@@ -345,43 +312,8 @@
       }
     },
     {
-      "id": "gpt-5.4",
-      "type": "responses",
-      "name": "GPT-5.4",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 400000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.4-mini",
-      "type": "responses",
-      "name": "GPT-5.4 mini",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 400000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.5",
-      "type": "responses",
-      "name": "GPT-5.5",
+      "id": "gpt-5.4-nano",
+      "name": "GPT-5.4 nano",
       "pricing": {
         "input": 0,
         "output": 0
@@ -496,14 +428,13 @@
       }
     },
     {
-      "id": "grok-4.5",
-      "type": "responses",
-      "name": "Grok 4.5",
+      "id": "gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
       "pricing": {
         "input": 0,
         "output": 0
       },
-      "context_window": 328000,
+      "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "never"
@@ -538,22 +469,6 @@
       },
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "kimi-k2.7-code",
-      "name": "Kimi K2.7 Code",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "never"
       },

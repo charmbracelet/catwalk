@@ -139,9 +139,9 @@
       "id": "moonshotai/Kimi-K2.6-TEE",
       "name": "Kimi-K2.6-TEE",
       "pricing": {
-        "input": 0.5,
-        "output": 2.85,
-        "cache_create": 0.05
+        "input": 0.45,
+        "output": 1.95,
+        "cache_create": 0.045
       },
       "context_window": 262144,
       "default_max_tokens": 65535,
@@ -171,9 +171,9 @@
       "id": "moonshotai/Kimi-K3-TEE",
       "name": "Kimi-K3-TEE",
       "pricing": {
-        "input": 3,
-        "output": 15,
-        "cache_create": 0.3
+        "input": 1.85,
+        "output": 9.5,
+        "cache_create": 0.185
       },
       "context_window": 1048576,
       "default_max_tokens": 65535,
@@ -299,9 +299,9 @@
       "id": "Qwen/Qwen3.6-27B-TEE",
       "name": "Qwen3.6-27B-TEE",
       "pricing": {
-        "input": 0.3,
+        "input": 0.25,
         "output": 2,
-        "cache_create": 0.03
+        "cache_create": 0.025
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -331,9 +331,9 @@
       "id": "Qwen/Qwen3.8-27B-TEE",
       "name": "Qwen3.8-27B-TEE",
       "pricing": {
-        "input": 0.24,
-        "output": 2.2,
-        "cache_create": 0.024
+        "input": 0.039,
+        "output": 1.25,
+        "cache_create": 0.0039
       },
       "context_window": 262144,
       "default_max_tokens": 65536,

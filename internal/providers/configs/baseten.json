@@ -8,6 +8,38 @@
   "default_small_model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
   "models": [
     {
+      "id": "reflection/Beam-1.0",
+      "name": "Beam",
+      "pricing": {
+        "input": 0.4,
+        "output": 1.2,
+        "cache_hit": 0.04
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false
+      }
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "pricing": {
@@ -88,7 +120,103 @@
         "cache_hit": 0.007
       },
       "context_window": 1048576,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.007
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017-Fast",
+      "name": "DeepSeek V4.1 Flash 1017 Fast",
+      "pricing": {
+        "input": 0.6,
+        "output": 2.4,
+        "cache_hit": 0.014
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-Fast",
+      "name": "DeepSeek V4.1 Flash Fast",
+      "pricing": {
+        "input": 0.6,
+        "output": 2.4,
+        "cache_hit": 0.014
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -298,6 +426,74 @@
           }
         ],
         "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "meta-models/muse-spark-open",
+      "name": "Muse Spark Open",
+      "pricing": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache_hit": 0.15
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "xhigh"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B",
+      "name": "Nemotron Super 3.5",
+      "pricing": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_hit": 0.04
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
         "vision": true

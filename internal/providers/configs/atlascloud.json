@@ -8,40 +8,6 @@
   "default_small_model_id": "deepseek-ai/deepseek-v4-flash",
   "models": [
     {
-      "id": "deepseek-ai/DeepSeek-V3.1",
-      "name": "DeepSeek V3.1",
-      "pricing": {
-        "input": 0.3,
-        "output": 0.95,
-        "cache_hit": 0.13
-      },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
-      "name": "DeepSeek V3.1 Terminus",
-      "pricing": {
-        "input": 0.3,
-        "output": 0.95,
-        "cache_hit": 0.13
-      },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
       "id": "deepseek-ai/deepseek-v3.2",
       "name": "DeepSeek V3.2",
       "pricing": {
@@ -62,9 +28,9 @@
       "id": "deepseek-ai/DeepSeek-V3.2-Exp",
       "name": "DeepSeek V3.2 Exp",
       "pricing": {
-        "input": 0.27,
-        "output": 0.41,
-        "cache_hit": 0.27
+        "input": 0.26,
+        "output": 0.38,
+        "cache_hit": 0.13
       },
       "context_window": 163840,
       "default_max_tokens": 16384,
@@ -107,23 +73,6 @@
       },
       "capabilities": {
         "vision": false
-      }
-    },
-    {
-      "id": "deepseek-ai/deepseek-v4-flash-vision-exp",
-      "name": "DeepSeek V4 Flash Vision Exp",
-      "pricing": {
-        "input": 0.44,
-        "output": 1.32,
-        "cache_hit": 0.028
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
       }
     },
     {
@@ -178,12 +127,12 @@
       }
     },
     {
-      "id": "deepseek-ai/deepseek-v4-pro-0813",
-      "name": "DeepSeek V4 Pro 0813",
+      "id": "deepseek-ai/deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
       "pricing": {
-        "input": 1.32,
-        "output": 3.96,
-        "cache_hit": 0.132
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.006
       },
       "context_window": 1048576,
       "default_max_tokens": 104857,
@@ -191,41 +140,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "zai-org/GLM-4.6",
-      "name": "GLM 4.6",
-      "pricing": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_hit": 0.11
-      },
-      "context_window": 202752,
-      "default_max_tokens": 20275,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "zai-org/glm-4.7",
-      "name": "GLM 4.7",
-      "pricing": {
-        "input": 0.52,
-        "output": 1.85,
-        "cache_hit": 0.12
-      },
-      "context_window": 202752,
-      "default_max_tokens": 20275,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": true
       }
     },
     {
@@ -348,23 +263,6 @@
       }
     },
     {
-      "id": "kwaipilot/kat-coder-pro-v2.5",
-      "name": "KAT Coder Pro V2.5",
-      "pricing": {
-        "input": 0.74,
-        "output": 2.96,
-        "cache_hit": 0.15
-      },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "moonshotai/kimi-k2.5",
       "name": "Kimi K2.5",
       "pricing": {
@@ -442,23 +340,6 @@
       },
       "context_window": 196608,
       "default_max_tokens": 19660,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "name": "Qwen3-235B-A22B-Instruct-2507",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.88,
-        "cache_hit": 0.2
-      },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
       "reasoning": {
         "thinking": "never"
       },

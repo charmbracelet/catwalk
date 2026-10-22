@@ -4,8 +4,8 @@
   "api_key": "$FIREWORKS_API_KEY",
   "api_endpoint": "https://api.fireworks.ai/inference/v1",
   "type": "completions",
-  "default_large_model_id": "accounts/fireworks/models/deepseek-v4-pro-0813",
-  "default_small_model_id": "accounts/fireworks/models/deepseek-v4-flash-0731",
+  "default_large_model_id": "accounts/fireworks/models/glm-5p3",
+  "default_small_model_id": "accounts/fireworks/models/deepseek-v4p1-flash",
   "models": [
     {
       "id": "accounts/fireworks/models/qwen3p8-max",
@@ -21,7 +21,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -38,7 +39,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -66,7 +68,8 @@
         "default_effort_level": "max"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -98,7 +101,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -130,7 +134,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -162,7 +167,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -194,7 +200,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -211,7 +218,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -228,7 +236,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -260,7 +269,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -292,7 +302,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -324,7 +335,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -360,7 +372,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -392,7 +405,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -428,16 +442,17 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "accounts/fireworks/models/deepseek-v4p1-flash",
       "name": "DeepSeek V4.1 Flash",
       "pricing": {
-        "input": 0.22,
-        "output": 0.66,
-        "cache_hit": 0.007
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.006
       },
       "context_window": 1048576,
       "default_max_tokens": 384000,
@@ -453,14 +468,48 @@
             "display": "High"
           },
           {
-            "value": "xhigh",
-            "display": "X-High"
+            "value": "max",
+            "display": "Max"
           }
         ],
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "accounts/fireworks/models/deepseek-v4p1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.006
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 384000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -492,7 +541,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -524,7 +574,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -589,7 +640,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -621,7 +673,45 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "accounts/fireworks/models/muse-spark-open",
+      "name": "Muse Spark Open",
+      "pricing": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache_hit": 0.15
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "xhigh"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
       }
     }
   ]

@@ -136,6 +136,38 @@
       }
     },
     {
+      "id": "deepseek-v4.1-flash-speed",
+      "name": "DeepSeek V4.1 Flash (Speed)",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_create": 0.015
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "deepseek-v4.1-flash-flex",
       "name": "DeepSeek V4.1 Flash (flex)",
       "pricing": {
@@ -328,57 +360,6 @@
       }
     },
     {
-      "id": "kimi-k2.7-code",
-      "name": "Kimi K2.7 Code",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_create": 0.095
-      },
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "kimi-k2.7-code-flex",
-      "name": "Kimi K2.7 Code (flex)",
-      "pricing": {
-        "input": 0.6175,
-        "output": 2.6,
-        "cache_create": 0.06175
-      },
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "kimi-k2.7-code-fast",
-      "name": "Kimi K2.7 Code Fast",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_create": 0.095
-      },
-      "context_window": 262128,
-      "default_max_tokens": 26212,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": {
@@ -454,6 +435,262 @@
       "default_max_tokens": 104856,
       "reasoning": {
         "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "pricing": {
+        "input": 0.87,
+        "output": 1.74,
+        "cache_create": 0.036
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro-flex",
+      "name": "MiMo-V2.6-Pro (flex)",
+      "pricing": {
+        "input": 0.5655,
+        "output": 1.131,
+        "cache_create": 0.0234
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "nw-flash",
+      "name": "Neuralwatt Flash",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_create": 0.015
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "nw-flash-flex",
+      "name": "Neuralwatt Flash (flex)",
+      "pricing": {
+        "input": 0.0975,
+        "output": 0.39,
+        "cache_create": 0.00975
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 393216,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "nw-large",
+      "name": "Neuralwatt Large",
+      "pricing": {
+        "input": 3,
+        "output": 15,
+        "cache_create": 0.3
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 104856,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "nw-large-flex",
+      "name": "Neuralwatt Large (flex)",
+      "pricing": {
+        "input": 1.95,
+        "output": 9.75,
+        "cache_create": 0.195
+      },
+      "context_window": 1048560,
+      "default_max_tokens": 104856,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "nw-small",
+      "name": "Neuralwatt Small",
+      "pricing": {
+        "input": 0.45,
+        "output": 3.2,
+        "cache_create": 0.25
+      },
+      "context_window": 262128,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "nw-small-flex",
+      "name": "Neuralwatt Small (flex)",
+      "pricing": {
+        "input": 0.2925,
+        "output": 2.08,
+        "cache_create": 0.1625
+      },
+      "context_window": 262128,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
         "vision": true

@@ -4,9 +4,50 @@
   "api_key": "$OPENAI_API_KEY",
   "api_endpoint": "$OPENAI_API_ENDPOINT",
   "type": "responses",
-  "default_large_model_id": "gpt-5.6-sol",
-  "default_small_model_id": "gpt-5.6-luna",
+  "default_large_model_id": "gpt-6.1-sol",
+  "default_small_model_id": "gpt-6-luna",
   "models": [
+    {
+      "id": "gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
     {
       "id": "gpt-6-astra",
       "name": "GPT-6 Astra",
@@ -100,7 +141,7 @@
         "input": 0.1,
         "output": 0.5,
         "cache_create": 0.125,
-        "cache_hit": 0.1
+        "cache_hit": 0.01
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -899,39 +940,6 @@
       "max_attachments": 1500
     },
     {
-      "id": "o4-mini",
-      "name": "o4 Mini",
-      "pricing": {
-        "input": 1.1,
-        "output": 4.4,
-        "cache_hit": 0.275
-      },
-      "context_window": 200000,
-      "default_max_tokens": 50000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      },
-      "max_attachments": 1500
-    },
-    {
       "id": "o3",
       "name": "o3",
       "pricing": {
@@ -999,56 +1007,6 @@
         "vision": true
       },
       "max_attachments": 1500
-    },
-    {
-      "id": "gpt-4.1-nano",
-      "name": "GPT-4.1 Nano",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.4,
-        "cache_hit": 0.025
-      },
-      "context_window": 1047576,
-      "default_max_tokens": 16384,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      },
-      "max_attachments": 1500
-    },
-    {
-      "id": "o3-mini",
-      "name": "o3 Mini",
-      "pricing": {
-        "input": 1.1,
-        "output": 4.4,
-        "cache_hit": 0.55
-      },
-      "context_window": 200000,
-      "default_max_tokens": 50000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
     },
     {
       "id": "gpt-4o",
