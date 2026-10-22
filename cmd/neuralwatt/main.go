@@ -111,7 +111,7 @@ func main() {
 		ID:                  "neuralwatt",
 		APIKey:              "$NEURALWATT_API_KEY",
 		APIEndpoint:         "https://api.neuralwatt.com/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "glm-5.3",
 		DefaultSmallModelID: "glm-5.3-flash",
 	}
@@ -140,8 +140,8 @@ func main() {
 
 		costIn := ptrDeref(meta.Pricing.InputPerMillion, 0)
 		costOut := ptrDeref(meta.Pricing.OutputPerMillion, 0)
-		costInCached := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
-		costOutCached := ptrDeref(meta.Pricing.CachedOutputPerMillion, 0)
+		costCacheCreate := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
+		costCacheHit := ptrDeref(meta.Pricing.CachedOutputPerMillion, 0)
 
 		var defaultMaxTokens int64
 		if meta.Limits.MaxOutputTokens != nil {
@@ -150,15 +150,17 @@ func main() {
 			defaultMaxTokens = model.MaxModelLen / 10
 		}
 
-		var reasoningLevels []string
-		var defaultReasoning string
-		if meta.Capabilities.Reasoning && meta.Capabilities.ReasoningEffort {
-			if strings.HasPrefix(model.ID, "glm-5.2") {
-				reasoningLevels = []string{"minimal", "high", "xhigh"}
-				defaultReasoning = "xhigh"
-			} else {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoning = "medium"
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if meta.Capabilities.Reasoning {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			if meta.Capabilities.ReasoningEffort {
+				if strings.HasPrefix(model.ID, "glm-5.2") {
+					reasoning.EffortLevels = catwalk.NewEffortLevels("minimal", "high", "xhigh")
+					reasoning.DefaultEffortLevel = "xhigh"
+				} else {
+					reasoning.EffortLevels = catwalk.NewEffortLevels("low", "medium", "high")
+					reasoning.DefaultEffortLevel = "medium"
+				}
 			}
 		}
 
@@ -168,18 +170,18 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   name,
-			CostPer1MIn:            roundCost(costIn),
-			CostPer1MOut:           roundCost(costOut),
-			CostPer1MInCached:      roundCost(costInCached),
-			CostPer1MOutCached:     roundCost(costOutCached),
-			ContextWindow:          model.MaxModelLen,
-			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              meta.Capabilities.Reasoning,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         meta.Capabilities.Vision,
+			ID:   model.ID,
+			Name: name,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(costIn),
+				Output:      roundCost(costOut),
+				CacheCreate: roundCost(costCacheCreate),
+				CacheHit:    roundCost(costCacheHit),
+			},
+			ContextWindow:    model.MaxModelLen,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: meta.Capabilities.Vision},
 		}
 
 		neuralwattProvider.Models = append(neuralwattProvider.Models, m)

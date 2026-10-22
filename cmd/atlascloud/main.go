@@ -116,7 +116,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderAtlasCloud,
 		APIKey:              "$ATLASCLOUD_API_KEY",
 		APIEndpoint:         "https://api.atlascloud.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "zai-org/glm-5.2",
 		DefaultSmallModelID: "deepseek-ai/deepseek-v4-flash",
 		Models:              []catwalk.Model{},
@@ -161,9 +161,9 @@ func main() {
 		}
 
 		priceMultiplier := 1 - model.DiscountToUser
-		costPer1MIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
-		costPer1MOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
-		costPer1MCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
+		costPerTokenIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
+		costPerTokenOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
+		costPerTokenCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
 
 		supportsImages := slices.Contains(model.InputModalities, "image")
 
@@ -183,14 +183,17 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                 model.ID,
-			Name:               model.Name,
-			CostPer1MIn:        costPer1MIn,
-			CostPer1MOut:       costPer1MOut,
-			CostPer1MOutCached: costPer1MCacheRead,
-			ContextWindow:      model.ContextLength,
-			DefaultMaxTokens:   defaultMaxTokens,
-			SupportsImages:     supportsImages,
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:    costPerTokenIn,
+				Output:   costPerTokenOut,
+				CacheHit: costPerTokenCacheRead,
+			},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
+			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
 		}
 
 		atlasCloudProvider.Models = append(atlasCloudProvider.Models, m)

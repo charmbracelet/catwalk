@@ -3,57 +3,81 @@
   "id": "pioneer",
   "api_key": "$PIONEER_API_KEY",
   "api_endpoint": "https://api.fastino.ai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "claude-opus-5",
   "default_small_model_id": "deepseek-ai/DeepSeek-V4-Flash",
   "models": [
     {
       "id": "fastino/Fastino-Nemotron-3.5-Lightning-Finance",
       "name": "Fastino Nemotron 3.5 Lightning Finance",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 0.5,
-      "cost_per_1m_in_cached": 0.5,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 0.5,
+        "output": 0.5,
+        "cache_create": 0.5,
+        "cache_hit": 0.5
+      },
       "context_window": 8192,
       "default_max_tokens": 4096,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "fastino/Fastino-Nemotron-3.5-Lightning-Healthcare",
       "name": "Fastino Nemotron 3.5 Lightning Healthcare",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 0.5,
-      "cost_per_1m_in_cached": 0.5,
-      "cost_per_1m_out_cached": 0.5,
+      "pricing": {
+        "input": 0.5,
+        "output": 0.5,
+        "cache_create": 0.5,
+        "cache_hit": 0.5
+      },
       "context_window": 8192,
       "default_max_tokens": 4096,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "name": "Nemotron 3.5 Lightning 30B-A3B",
-      "cost_per_1m_in": 0.07,
-      "cost_per_1m_out": 0.2,
-      "cost_per_1m_in_cached": 0.07,
-      "cost_per_1m_out_cached": 0.035,
+      "pricing": {
+        "input": 0.07,
+        "output": 0.2,
+        "cache_create": 0.07,
+        "cache_hit": 0.035
+      },
       "context_window": 8192,
       "default_max_tokens": 4096,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
       "name": "Nemotron 3.5 Super 120B-A12B",
-      "cost_per_1m_in": 0.08,
-      "cost_per_1m_out": 0.45,
-      "cost_per_1m_in_cached": 0.08,
-      "cost_per_1m_out_cached": 0.04,
+      "pricing": {
+        "input": 0.08,
+        "output": 0.45,
+        "cache_create": 0.08,
+        "cache_hit": 0.04
+      },
       "context_window": 262144,
       "default_max_tokens": 4096,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false
+      }
     }
   ]
 }

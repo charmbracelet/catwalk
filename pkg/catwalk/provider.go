@@ -1,19 +1,19 @@
 package catwalk
 
-// Type represents the type of AI provider.
+import "strings"
+
+// Type represents the API endpoint format a provider (or model) speaks.
 type Type string
 
-// All the supported AI provider types.
+// All the supported API endpoint types.
 const (
-	TypeOpenAI       Type = "openai"
-	TypeOpenAICompat Type = "openai-compat"
-	TypeOpenRouter   Type = "openrouter"
-	TypeVercel       Type = "vercel"
-	TypeAnthropic    Type = "anthropic"
-	TypeGoogle       Type = "google"
-	TypeAzure        Type = "azure"
-	TypeBedrock      Type = "bedrock"
-	TypeVertexAI     Type = "google-vertex"
+	// TypeCompletions is the OpenAI Chat Completions endpoint
+	// (POST /chat/completions).
+	TypeCompletions Type = "completions"
+	// TypeResponses is the OpenAI Responses endpoint (POST /responses).
+	TypeResponses Type = "responses"
+	// TypeMessages is the Anthropic Messages endpoint (POST /messages).
+	TypeMessages Type = "messages"
 )
 
 // InferenceProvider represents the inference provider identifier.
@@ -66,15 +66,16 @@ const (
 
 // Provider represents an AI provider configuration.
 type Provider struct {
-	Name                string            `json:"name"`
-	ID                  InferenceProvider `json:"id"`
-	APIKey              string            `json:"api_key,omitempty"`
-	APIEndpoint         string            `json:"api_endpoint,omitempty"`
-	Type                Type              `json:"type,omitempty"`
-	DefaultLargeModelID string            `json:"default_large_model_id,omitempty"`
-	DefaultSmallModelID string            `json:"default_small_model_id,omitempty"`
-	Models              []Model           `json:"models,omitempty"`
-	DefaultHeaders      map[string]string `json:"default_headers,omitempty"`
+	Name                  string            `json:"name"`
+	ID                    InferenceProvider `json:"id"`
+	APIKey                string            `json:"api_key,omitempty"`
+	APIEndpoint           string            `json:"api_endpoint,omitempty"`
+	Type                  Type              `json:"type,omitempty"`
+	DefaultLargeModelID   string            `json:"default_large_model_id,omitempty"`
+	DefaultSmallModelID   string            `json:"default_small_model_id,omitempty"`
+	Models                []Model           `json:"models,omitempty"`
+	DefaultHeaders        map[string]string `json:"default_headers,omitempty"`
+	SessionAffinityHeader string            `json:"session_affinity_header,omitempty"`
 }
 
 // ModelOptions stores extra options for models.
@@ -87,21 +88,111 @@ type ModelOptions struct {
 	ProviderOptions  map[string]any `json:"provider_options,omitempty"`
 }
 
+// Pricing stores the pricing of a model in US dollars per 1M tokens.
+type Pricing struct {
+	Input       float64 `json:"input"`
+	Output      float64 `json:"output"`
+	CacheCreate float64 `json:"cache_create,omitempty"`
+	CacheHit    float64 `json:"cache_hit,omitempty"`
+}
+
+// Capabilities describes the capabilities of a model. Each capability is
+// always serialized, even when false, so consumers can distinguish between
+// "unknown" (field absent) and "explicitly unsupported".
+type Capabilities struct {
+	Vision bool `json:"vision"`
+	Audio  bool `json:"audio"`
+}
+
+// Thinking describes when a model reasons.
+type Thinking string
+
+// All the supported thinking modes.
+const (
+	// ThinkingAlways means the model always thinks and reasoning cannot be
+	// turned off.
+	ThinkingAlways Thinking = "always"
+	// ThinkingNever means the model cannot think.
+	ThinkingNever Thinking = "never"
+	// ThinkingToggleable means thinking can be turned on and off, and
+	// optionally configured with an effort level.
+	ThinkingToggleable Thinking = "toggleable"
+)
+
+// EffortLevel is a selectable reasoning effort level.
+type EffortLevel struct {
+	Value   string `json:"value"`
+	Display string `json:"display"`
+}
+
+// Reasoning describes how reasoning is configured for a model.
+type Reasoning struct {
+	Thinking Thinking `json:"thinking"`
+	// EffortLevels are the selectable effort levels. Only set for models with
+	// toggleable thinking that support effort levels.
+	EffortLevels []EffortLevel `json:"effort_levels,omitempty"`
+	// DefaultEffortLevel is the effort level used when none is selected. Only
+	// set when EffortLevels is not empty.
+	DefaultEffortLevel string `json:"default_effort_level,omitempty"`
+}
+
+// NewEffortLevels builds effort levels from their values, deriving the
+// display name of each level.
+func NewEffortLevels(values ...string) []EffortLevel {
+	levels := make([]EffortLevel, 0, len(values))
+	for _, value := range values {
+		levels = append(levels, EffortLevel{Value: value, Display: effortLevelDisplay(value)})
+	}
+	return levels
+}
+
+func effortLevelDisplay(value string) string {
+	switch value {
+	case "":
+		return ""
+	case "xhigh":
+		return "X-High"
+	default:
+		return strings.ToUpper(value[:1]) + value[1:]
+	}
+}
+
 // Model represents an AI model configuration.
 type Model struct {
-	ID                     string       `json:"id"`
-	Name                   string       `json:"name"`
-	CostPer1MIn            float64      `json:"cost_per_1m_in"`
-	CostPer1MOut           float64      `json:"cost_per_1m_out"`
-	CostPer1MInCached      float64      `json:"cost_per_1m_in_cached"`
-	CostPer1MOutCached     float64      `json:"cost_per_1m_out_cached"`
-	ContextWindow          int64        `json:"context_window"`
-	DefaultMaxTokens       int64        `json:"default_max_tokens"`
-	CanReason              bool         `json:"can_reason"`
-	ReasoningLevels        []string     `json:"reasoning_levels,omitempty"`
-	DefaultReasoningEffort string       `json:"default_reasoning_effort,omitempty"`
-	SupportsImages         bool         `json:"supports_attachments"`
-	Options                ModelOptions `json:"options,omitzero"`
+	ID               string       `json:"id"`
+	Type             Type         `json:"type,omitempty"`
+	Name             string       `json:"name"`
+	Pricing          Pricing      `json:"pricing"`
+	ContextWindow    int64        `json:"context_window"`
+	DefaultMaxTokens int64        `json:"default_max_tokens"`
+	Reasoning        Reasoning    `json:"reasoning"`
+	Capabilities     Capabilities `json:"capabilities"`
+	MaxAttachments   int          `json:"max_attachments,omitempty"`
+	Options          ModelOptions `json:"options,omitzero"`
+}
+
+// EffectiveType returns the endpoint type for this model, falling back to the
+// provider's Type when the model does not override it.
+func (m Model) EffectiveType(providerType Type) Type {
+	if m.Type != "" {
+		return m.Type
+	}
+	return providerType
+}
+
+// CanReason reports whether the model supports reasoning at all.
+func (m Model) CanReason() bool {
+	return m.Reasoning.Thinking != "" && m.Reasoning.Thinking != ThinkingNever
+}
+
+// ReasoningEffortLevels returns the selectable reasoning effort values of the
+// model, or nil when it does not support effort levels.
+func (m Model) ReasoningEffortLevels() []string {
+	values := make([]string, 0, len(m.Reasoning.EffortLevels))
+	for _, level := range m.Reasoning.EffortLevels {
+		values = append(values, level.Value)
+	}
+	return values
 }
 
 // KnownProviders returns all the known inference providers.
@@ -151,17 +242,11 @@ func KnownProviders() []InferenceProvider {
 	}
 }
 
-// KnownProviderTypes returns all the known inference providers types.
+// KnownProviderTypes returns all the known API endpoint types.
 func KnownProviderTypes() []Type {
 	return []Type{
-		TypeOpenAI,
-		TypeOpenAICompat,
-		TypeOpenRouter,
-		TypeVercel,
-		TypeAnthropic,
-		TypeGoogle,
-		TypeAzure,
-		TypeBedrock,
-		TypeVertexAI,
+		TypeCompletions,
+		TypeResponses,
+		TypeMessages,
 	}
 }

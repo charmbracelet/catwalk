@@ -48,7 +48,7 @@ func (c *Client) GetProviders(ctx context.Context, etag string) ([]Provider, err
 	req, err := http.NewRequestWithContext(
 		ctx,
 		http.MethodGet,
-		fmt.Sprintf("%s/v2/providers", c.baseURL),
+		fmt.Sprintf("%s/v3/providers", c.baseURL),
 		nil,
 	)
 	if err != nil {

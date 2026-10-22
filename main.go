@@ -29,6 +29,9 @@ var (
 	providersJSON []byte
 	providersETag string
 
+	providersV2JSON []byte
+	providersV2ETag string
+
 	deprecatedJSON []byte
 )
 
@@ -40,35 +43,43 @@ func init() {
 	}
 	providersETag = etag.Of(providersJSON)
 
-	deprecatedJSON, err = json.Marshal(map[string]any{"error": "This endpoint was removed. Please use /v2/providers instead."})
+	providersV2JSON, err = json.MarshalIndent(providers.GetAllV2(), "", "  ")
+	if err != nil {
+		log.Fatal("Failed to marshal v2 providers:", err)
+	}
+	providersV2ETag = etag.Of(providersV2JSON)
+
+	deprecatedJSON, err = json.Marshal(map[string]any{"error": "This endpoint was removed. Please use /v3/providers instead."})
 	if err != nil {
 		log.Fatal("Failed to marshal deprecated response:", err)
 	}
 }
 
-func providersHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	etag.Response(w, providersETag)
+func providersHandler(data []byte, tag string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		etag.Response(w, tag)
 
-	if r.Method == http.MethodHead {
-		return
-	}
+		if r.Method == http.MethodHead {
+			return
+		}
 
-	if r.Method != http.MethodGet {
-		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-		return
-	}
+		if r.Method != http.MethodGet {
+			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
 
-	counter.Inc()
+		counter.Inc()
 
-	if etag.Matches(r, providersETag) {
-		w.WriteHeader(http.StatusNotModified)
-		return
-	}
+		if etag.Matches(r, tag) {
+			w.WriteHeader(http.StatusNotModified)
+			return
+		}
 
-	if _, err := w.Write(providersJSON); err != nil {
-		log.Printf("Error writing response: %v", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		if _, err := w.Write(data); err != nil {
+			log.Printf("Error writing response: %v", err)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
 	}
 }
 
@@ -91,7 +102,8 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("/v2/providers", providersHandler)
+	mux.HandleFunc("/v3/providers", providersHandler(providersJSON, providersETag))
+	mux.HandleFunc("/v2/providers", providersHandler(providersV2JSON, providersV2ETag))
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
 	mux.HandleFunc("/health", health)
 	mux.HandleFunc("/healthz", health)

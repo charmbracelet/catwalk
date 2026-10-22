@@ -85,23 +85,26 @@ func main() {
 	}
 
 	goProvider := catwalk.Provider{
-		Name:                "OpenCode Go",
-		ID:                  catwalk.InferenceProviderOpenCodeGo,
-		APIKey:              "$OPENCODE_API_KEY",
-		APIEndpoint:         "https://opencode.ai/zen/go/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "minimax-m2.7",
-		DefaultSmallModelID: "minimax-m2.7",
+		Name:                  "OpenCode Go",
+		ID:                    catwalk.InferenceProviderOpenCodeGo,
+		APIKey:                "$OPENCODE_API_KEY",
+		APIEndpoint:           "https://opencode.ai/zen/go/v1",
+		Type:                  catwalk.TypeCompletions,
+		SessionAffinityHeader: "x-opencode-session",
+		DefaultLargeModelID:   "minimax-m2.7",
+		DefaultSmallModelID:   "minimax-m2.7",
 	}
 
 	for _, goModel := range goModels {
-		costPer1MIn := math.Round(goModel.Cost.Input*100) / 100
-		costPer1MOut := math.Round(goModel.Cost.Output*100) / 100
-		costPer1MInCached := math.Round(goModel.Cost.CacheRead*100) / 100
+		costPerTokenIn := math.Round(goModel.Cost.Input*100) / 100
+		costPerTokenOut := math.Round(goModel.Cost.Output*100) / 100
+		costCacheHit := math.Round(goModel.Cost.CacheRead*100) / 100
 
-		var reasoningLevels []string
-		var defaultReasoningEffort string
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if goModel.Reasoning {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			var reasoningLevels []string
+			var defaultReasoningEffort string
 			switch {
 			case strings.Contains(goModel.ID, "deepseek-v4"):
 				reasoningLevels = []string{"low", "high", "max"}
@@ -122,20 +125,23 @@ func main() {
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoningEffort = "medium"
 			}
+			reasoning.EffortLevels = catwalk.NewEffortLevels(reasoningLevels...)
+			reasoning.DefaultEffortLevel = defaultReasoningEffort
 		}
 
 		m := catwalk.Model{
-			ID:                     goModel.ID,
-			Name:                   goModel.Name,
-			CostPer1MIn:            costPer1MIn,
-			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      costPer1MInCached,
-			ContextWindow:          goModel.Limit.Context,
-			DefaultMaxTokens:       goModel.Limit.Output,
-			SupportsImages:         goModel.Attachment,
-			CanReason:              goModel.Reasoning,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoningEffort,
+			ID:   goModel.ID,
+			Name: goModel.Name,
+			Type: modelEndpointType(goModel.ID),
+			Pricing: catwalk.Pricing{
+				Input:    costPerTokenIn,
+				Output:   costPerTokenOut,
+				CacheHit: costCacheHit,
+			},
+			ContextWindow:    goModel.Limit.Context,
+			DefaultMaxTokens: goModel.Limit.Output,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: goModel.Attachment},
 		}
 
 		goProvider.Models = append(goProvider.Models, m)
@@ -159,4 +165,35 @@ func main() {
 	}
 
 	fmt.Printf("Generated opencode-go.json with %d models\n", len(goProvider.Models))
+}
+
+// modelEndpointType returns the endpoint type override for the given model, or
+// the empty string when the model uses the provider's default endpoint type.
+// See https://opencode.ai/docs/go.
+func modelEndpointType(modelID string) catwalk.Type {
+	switch {
+	case isMessagesModel(modelID):
+		return catwalk.TypeMessages
+	case isResponsesModel(modelID):
+		return catwalk.TypeResponses
+	default:
+		return ""
+	}
+}
+
+// isMessagesModel reports whether the model is served through the Anthropic
+// Messages API instead of Chat Completions.
+func isMessagesModel(modelID string) bool {
+	return strings.HasPrefix(modelID, "minimax-") ||
+		strings.HasPrefix(modelID, "qwen3.6-") ||
+		strings.HasPrefix(modelID, "qwen3.7-") ||
+		strings.HasPrefix(modelID, "qwen3.8-")
+}
+
+// isResponsesModel reports whether the model is served through the OpenAI
+// Responses API instead of Chat Completions.
+func isResponsesModel(modelID string) bool {
+	return strings.HasPrefix(modelID, "gpt-") ||
+		strings.HasPrefix(modelID, "grok-") ||
+		strings.HasPrefix(modelID, "muse-spark-")
 }
