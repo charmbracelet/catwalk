@@ -4,21 +4,9 @@
   "api_key": "$FRIENDLI_API_KEY",
   "api_endpoint": "https://api.friendli.ai/serverless/v1",
   "type": "openai-compat",
-  "default_large_model_id": "zai-org/GLM-5.2",
-  "default_small_model_id": "deepseek-ai/DeepSeek-V3.2",
+  "default_large_model_id": "zai-org/GLM-5.3",
+  "default_small_model_id": "zai-org/GLM-5.3-Flash",
   "models": [
-    {
-      "id": "deepseek-ai/DeepSeek-V3.2",
-      "name": "DeepSeek-V3.2",
-      "cost_per_1m_in": 0.5,
-      "cost_per_1m_out": 1.5,
-      "cost_per_1m_in_cached": 0.25,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 163840,
-      "default_max_tokens": 163840,
-      "can_reason": true,
-      "supports_attachments": false
-    },
     {
       "id": "zai-org/GLM-5.1",
       "name": "GLM-5.1",
@@ -27,7 +15,7 @@
       "cost_per_1m_in_cached": 0.26,
       "cost_per_1m_out_cached": 0,
       "context_window": 202752,
-      "default_max_tokens": 202752,
+      "default_max_tokens": 20275,
       "can_reason": true,
       "supports_attachments": false
     },
@@ -39,7 +27,7 @@
       "cost_per_1m_in_cached": 0.26,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 104857,
       "can_reason": true,
       "reasoning_levels": [
         "none",
@@ -50,28 +38,40 @@
       "supports_attachments": false
     },
     {
-      "id": "LGAI-EXAONE/K-EXAONE-236B-A23B",
-      "name": "K-EXAONE-236B-A23B",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 0.8,
-      "cost_per_1m_in_cached": 0.1,
+      "id": "zai-org/GLM-5.3",
+      "name": "GLM-5.3",
+      "cost_per_1m_in": 1.26,
+      "cost_per_1m_out": 3.96,
+      "cost_per_1m_in_cached": 0.234,
       "cost_per_1m_out_cached": 0,
-      "context_window": 262144,
-      "default_max_tokens": 262144,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
       "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
       "supports_attachments": false
     },
     {
-      "id": "MiniMaxAI/MiniMax-M2.5",
-      "name": "MiniMax-M2.5",
-      "cost_per_1m_in": 0.3,
-      "cost_per_1m_out": 1.2,
-      "cost_per_1m_in_cached": 0.06,
+      "id": "zai-org/GLM-5.3-Flash",
+      "name": "GLM-5.3-Flash",
+      "cost_per_1m_in": 0.15,
+      "cost_per_1m_out": 0.5,
+      "cost_per_1m_in_cached": 0.03,
       "cost_per_1m_out_cached": 0,
-      "context_window": 196608,
-      "default_max_tokens": 196608,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
       "can_reason": true,
-      "supports_attachments": false
+      "reasoning_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
     },
     {
       "id": "google/gemma-4-31B-it",
@@ -81,7 +81,7 @@
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 262144,
-      "default_max_tokens": 262144,
+      "default_max_tokens": 26214,
       "can_reason": true,
       "supports_attachments": true
     }
