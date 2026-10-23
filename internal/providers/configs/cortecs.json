@@ -46,8 +46,8 @@
     {
       "id": "deepseek-v4.1-flash-1017",
       "name": "deepseek-v4.1-flash-1017",
-      "cost_per_1m_in": 0.459,
-      "cost_per_1m_out": 1.377,
+      "cost_per_1m_in": 0.25,
+      "cost_per_1m_out": 1,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
       "context_window": 1048576,
@@ -1628,8 +1628,8 @@
       "cost_per_1m_out": 0.13,
       "cost_per_1m_in_cached": 0,
       "cost_per_1m_out_cached": 0,
-      "context_window": 128000,
-      "default_max_tokens": 12800,
+      "context_window": 118000,
+      "default_max_tokens": 11800,
       "can_reason": false,
       "supports_attachments": false
     },
