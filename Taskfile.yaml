@@ -66,6 +66,7 @@ tasks:
       - task: gen:cortecs
       - task: gen:huggingface
       - task: gen:ionet
+      - task: gen:liquid
       - task: gen:nebius
       - task: gen:neuralwatt
       - task: gen:opencode-go
@@ -120,6 +121,11 @@ tasks:
     desc: Generate io.net provider configurations
     cmds:
       - go run cmd/ionet/main.go
+
+  gen:liquid:
+    desc: Generate Liquid Inference provider configurations
+    cmds:
+      - go run cmd/liquid/main.go
 
   gen:nebius:
     desc: Generate Nebius provider configurations
