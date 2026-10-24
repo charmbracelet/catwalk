@@ -1,0 +1,254 @@
+{
+  "name": "Opper",
+  "id": "opper",
+  "api_key": "$OPPER_API_KEY",
+  "api_endpoint": "https://api.opper.ai/v3/compat",
+  "type": "openai-compat",
+  "default_large_model_id": "claude-sonnet-4-6",
+  "default_small_model_id": "gpt-5.4-mini",
+  "models": [
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "cost_per_1m_in": 1.1,
+      "cost_per_1m_out": 5.5,
+      "cost_per_1m_in_cached": 1.375,
+      "cost_per_1m_out_cached": 0.11,
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "cost_per_1m_in": 5.5,
+      "cost_per_1m_out": 27.5,
+      "cost_per_1m_in_cached": 6.875,
+      "cost_per_1m_out_cached": 0.55,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "cost_per_1m_in": 4.4,
+      "cost_per_1m_out": 22,
+      "cost_per_1m_in_cached": 5.5,
+      "cost_per_1m_out_cached": 0.22,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "cost_per_1m_in": 3.3,
+      "cost_per_1m_out": 16.5,
+      "cost_per_1m_in_cached": 4.125,
+      "cost_per_1m_out_cached": 0.33,
+      "context_window": 1000000,
+      "default_max_tokens": 32000,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "cost_per_1m_in": 2.2,
+      "cost_per_1m_out": 11,
+      "cost_per_1m_in_cached": 2.75,
+      "cost_per_1m_out_cached": 0.22,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 4,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "cost_per_1m_in": 1.75,
+      "cost_per_1m_out": 4.939,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.44,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "name": "GPT-5.4 Mini",
+      "cost_per_1m_in": 0.75,
+      "cost_per_1m_out": 4.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.075,
+      "context_window": 400000,
+      "default_max_tokens": 40000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-5.5",
+      "name": "GPT-5.5",
+      "cost_per_1m_in": 5.5,
+      "cost_per_1m_out": 33,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.55,
+      "context_window": 1050000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "cost_per_1m_in": 2.4,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 3,
+      "cost_per_1m_out_cached": 0.12,
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 12,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.2,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "cost_per_1m_in": 0.825,
+      "cost_per_1m_out": 4.125,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0825,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "cost_per_1m_in": 3,
+      "cost_per_1m_out": 15,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "mistral-large-2512",
+      "name": "Mistral Large 3",
+      "cost_per_1m_in": 0.5,
+      "cost_per_1m_out": 1.5,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 256000,
+      "default_max_tokens": 4096,
+      "can_reason": false,
+      "supports_attachments": true
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8-Max",
+      "cost_per_1m_in": 2,
+      "cost_per_1m_out": 6,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.25,
+      "context_window": 983616,
+      "default_max_tokens": 65536,
+      "can_reason": true,
+      "reasoning_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "default_reasoning_effort": "medium",
+      "supports_attachments": true
+    }
+  ]
+}

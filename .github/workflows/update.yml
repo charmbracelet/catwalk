@@ -74,6 +74,10 @@ jobs:
         run: go run ./cmd/openrouter/main.go
         continue-on-error: true
 
+      - name: Opper
+        run: go run ./cmd/opper/main.go
+        continue-on-error: true
+
       - name: Synthetic
         run: go run ./cmd/synthetic/main.go
         continue-on-error: true
