@@ -57,6 +57,9 @@ var cortecsConfig []byte
 //go:embed configs/deepseek.json
 var deepSeekConfig []byte
 
+//go:embed configs/empiriolabs.json
+var empirioLabsConfig []byte
+
 //go:embed configs/fireworks.json
 var fireworksConfig []byte
 
@@ -164,6 +167,7 @@ var providerRegistry = []ProviderFunc{
 	copilotProvider,
 	cortecsProvider,
 	deepSeekProvider,
+	empirioLabsProvider,
 	fireworksProvider,
 	groqProvider,
 	huggingFaceProvider,
@@ -262,6 +266,10 @@ func cortecsProvider() catwalk.Provider {
 
 func deepSeekProvider() catwalk.Provider {
 	return loadProviderFromConfig(deepSeekConfig)
+}
+
+func empirioLabsProvider() catwalk.Provider {
+	return loadProviderFromConfig(empirioLabsConfig)
 }
 
 func fireworksProvider() catwalk.Provider {
