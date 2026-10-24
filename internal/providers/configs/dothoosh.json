@@ -1,0 +1,137 @@
+{
+  "name": "DotHoosh",
+  "id": "dothoosh",
+  "api_key": "$DOTHOOSH_API_KEY",
+  "api_endpoint": "https://gateway.dothoosh.com/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "kimi-k3",
+  "default_small_model_id": "deepseek-flash",
+  "models": [
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "cost_per_1m_in": 1.694004,
+      "cost_per_1m_out": 5.082003,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.05647,
+      "context_window": 1048576,
+      "default_max_tokens": 196608,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "deepseek-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "cost_per_1m_in": 0.385002,
+      "cost_per_1m_out": 1.540002,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.007701,
+      "context_window": 1048576,
+      "default_max_tokens": 196608,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "gemini-3.5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "cost_per_1m_in": 0.385002,
+      "cost_per_1m_out": 3.208335,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.038501,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "cost_per_1m_in": 0.9625,
+      "cost_per_1m_out": 4.812501,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.096252,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "cost_per_1m_in": 2.56667,
+      "cost_per_1m_out": 12.833334,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.128335,
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi K2.6",
+      "cost_per_1m_in": 1.219167,
+      "cost_per_1m_out": 5.133336,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.205334,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "cost_per_1m_in": 1.219167,
+      "cost_per_1m_out": 5.133336,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.243836,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "cost_per_1m_in": 3.850001,
+      "cost_per_1m_out": 19.250001,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.385002,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "can_reason": true,
+      "reasoning_levels": [
+        "low",
+        "high"
+      ],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    }
+  ]
+}
