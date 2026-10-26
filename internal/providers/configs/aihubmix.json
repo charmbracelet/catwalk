@@ -4298,18 +4298,6 @@
       "supports_attachments": true
     },
     {
-      "id": "nemotron-3-super-120b-a12b-free",
-      "name": "Nemotron 3 Super 120B A12B (free)",
-      "cost_per_1m_in": 0,
-      "cost_per_1m_out": 0,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 1048576,
-      "default_max_tokens": 104857,
-      "can_reason": false,
-      "supports_attachments": false
-    },
-    {
       "id": "nemotron-3-ultra-550b-a55b-free",
       "name": "Nemotron 3 Ultra 550B A55B (free)",
       "cost_per_1m_in": 0,
