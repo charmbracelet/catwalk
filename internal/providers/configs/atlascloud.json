@@ -176,6 +176,18 @@
       "supports_attachments": false
     },
     {
+      "id": "tencent/hy4-preview",
+      "name": "Hunyuan 4 Preview",
+      "cost_per_1m_in": 0.834,
+      "cost_per_1m_out": 2.501,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.042,
+      "context_window": 1048576,
+      "default_max_tokens": 32000,
+      "can_reason": false,
+      "supports_attachments": false
+    },
+    {
       "id": "kwaipilot/kat-coder-air-v2.5",
       "name": "KAT Coder Air V2.5",
       "cost_per_1m_in": 0.15,
