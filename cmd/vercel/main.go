@@ -3,6 +3,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -87,8 +88,8 @@ func main() {
 		APIKey:              "$VERCEL_API_KEY",
 		APIEndpoint:         "https://ai-gateway.vercel.sh/v1",
 		Type:                catwalk.TypeVercel,
-		DefaultLargeModelID: "anthropic/claude-sonnet-4",
-		DefaultSmallModelID: "anthropic/claude-haiku-4.5",
+		DefaultLargeModelID: "deepseek/deepseek-v4.1-flash",
+		DefaultSmallModelID: "deepseek/deepseek-v4.1-flash",
 		Models:              []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
@@ -128,17 +129,21 @@ func main() {
 			}
 		}
 
+		// NOTE: catwalk's naming is confusing (see providers.go in hyper):
+		// - cost_per_1m_in_cached  = cache CREATION (write)
+		// - cost_per_1m_out_cached = cache READ
+		// Vercel's API uses the intuitive names, so we map them accordingly.
 		if model.Pricing.InputCacheRead != "" {
-			costCached, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
+			costCacheRead, err := strconv.ParseFloat(model.Pricing.InputCacheRead, 64)
 			if err == nil {
-				costPer1MInCached = roundCost(costCached * 1_000_000)
+				costPer1MOutCached = roundCost(costCacheRead * 1_000_000)
 			}
 		}
 
 		if model.Pricing.InputCacheWrite != "" {
 			costCacheWrite, err := strconv.ParseFloat(model.Pricing.InputCacheWrite, 64)
 			if err == nil {
-				costPer1MOutCached = roundCost(costCacheWrite * 1_000_000)
+				costPer1MInCached = roundCost(costCacheWrite * 1_000_000)
 			}
 		}
 
@@ -148,26 +153,27 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoning string
 		if canReason {
-			// Base reasoning levels supported by most providers
-			reasoningLevels = []string{"low", "medium", "high"}
-			// Anthropic models support extended Vercel reasoning levels
-			if strings.HasPrefix(model.ID, "anthropic/") {
+			switch {
+			case strings.HasPrefix(model.ID, "anthropic/"):
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
+				defaultReasoning = "medium"
+			case strings.HasPrefix(model.ID, "deepseek/deepseek-v4"):
+				reasoningLevels = []string{"low", "high", "max"}
+				defaultReasoning = "high"
+			case model.ID == "zai/glm-5.2":
+				reasoningLevels = []string{"high", "xhigh"}
+				defaultReasoning = "high"
+			case strings.HasPrefix(model.ID, "mistral/"):
+				reasoningLevels = []string{"none", "high"}
+				defaultReasoning = "high"
+			default:
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoning = "medium"
 			}
-			defaultReasoning = "medium"
 		}
 
 		// Check if model supports images
 		supportsImages := slices.Contains(model.Tags, "vision")
-
-		// Calculate default max tokens
-		defaultMaxTokens := model.MaxTokens
-		if defaultMaxTokens == 0 {
-			defaultMaxTokens = model.ContextWindow / 10
-		}
-		if defaultMaxTokens > 8000 {
-			defaultMaxTokens = 8000
-		}
 
 		m := catwalk.Model{
 			ID:                     model.ID,
@@ -177,7 +183,7 @@ func main() {
 			CostPer1MInCached:      costPer1MInCached,
 			CostPer1MOutCached:     costPer1MOutCached,
 			ContextWindow:          model.ContextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
+			DefaultMaxTokens:       cmp.Or(model.MaxTokens, model.ContextWindow/10),
 			CanReason:              canReason,
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
@@ -185,10 +191,12 @@ func main() {
 		}
 
 		vercelProvider.Models = append(vercelProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.ContextWindow)
 	}
 
-	slices.SortFunc(vercelProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(vercelProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 
@@ -197,6 +205,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error marshaling Vercel provider:", err)
 	}
+	data = append(data, '\n')
 
 	if err := os.WriteFile("internal/providers/configs/vercel.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Vercel provider config:", err)

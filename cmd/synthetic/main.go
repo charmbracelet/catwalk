@@ -114,7 +114,7 @@ func applyModelOverrides(model *Model) {
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2-Thinking"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
-	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2.5"):
+	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2.6"):
 		model.SupportedFeatures = []string{"tools", "reasoning"}
 
 	case strings.HasPrefix(model.ID, "hf:moonshotai/Kimi-K2"):
@@ -159,8 +159,8 @@ func main() {
 		APIKey:              "$SYNTHETIC_API_KEY",
 		APIEndpoint:         "https://api.synthetic.new/openai/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "hf:moonshotai/Kimi-K2.5",
-		DefaultSmallModelID: "hf:deepseek-ai/DeepSeek-V3.2",
+		DefaultLargeModelID: "syn:large:text",
+		DefaultSmallModelID: "syn:small:text",
 		Models:              []catwalk.Model{},
 	}
 
@@ -237,11 +237,12 @@ func main() {
 		}
 
 		syntheticProvider.Models = append(syntheticProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n",
-			model.ID, model.ContextLength)
 	}
 
-	slices.SortFunc(syntheticProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(syntheticProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

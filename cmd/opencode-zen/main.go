@@ -138,8 +138,8 @@ func main() {
 		APIKey:              "$OPENCODE_API_KEY",
 		APIEndpoint:         "https://opencode.ai/zen/v1",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "minimax-m2.5-free",
-		DefaultSmallModelID: "minimax-m2.5-free",
+		DefaultLargeModelID: "mimo-v2.6-flash-free",
+		DefaultSmallModelID: "mimo-v2.6-flash-free",
 	}
 
 	for _, zenModel := range zenModels {
@@ -164,9 +164,28 @@ func main() {
 			modelName = enrichment.Name
 
 			if enrichment.Reasoning {
-				reasoningLevels = []string{"low", "medium", "high"}
-				defaultReasoningEffort = "medium"
 				canReason = true
+
+				switch {
+				case strings.Contains(zenModel.ID, "deepseek-v4"):
+					reasoningLevels = []string{"low", "high", "max"}
+					defaultReasoningEffort = "high"
+				case zenModel.ID == "glm-5.3":
+					reasoningLevels = []string{"low", "high", "max"}
+					defaultReasoningEffort = "high"
+				case zenModel.ID == "glm-5.3-flash":
+					reasoningLevels = []string{"low", "high", "max"}
+					defaultReasoningEffort = "high"
+				case zenModel.ID == "qwen3.8-flash":
+					reasoningLevels = []string{"low", "medium", "xhigh"}
+					defaultReasoningEffort = "medium"
+				case zenModel.ID == "qwen3.8-max":
+					reasoningLevels = []string{"low", "medium", "xhigh"}
+					defaultReasoningEffort = "xhigh"
+				default:
+					reasoningLevels = []string{"low", "medium", "high"}
+					defaultReasoningEffort = "medium"
+				}
 			}
 		} else {
 			log.Printf("WARNING: No enrichment found for model %s, using defaults\n", zenModel.ID)
@@ -188,10 +207,12 @@ func main() {
 		}
 
 		zenProvider.Models = append(zenProvider.Models, m)
-		fmt.Printf("Added model %s (%s)\n", zenModel.ID, modelName)
 	}
 
-	slices.SortFunc(zenProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(zenProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

@@ -28,7 +28,7 @@ type Model struct {
 	Pricing           Pricing  `json:"pricing"`
 	Architecture      struct {
 		Modality string `json:"modality"`
-	} `json:"architecture,omitempty"`
+	} `json:"architecture"`
 }
 
 type Pricing struct {
@@ -150,10 +150,12 @@ func main() {
 		}
 
 		nebiusProvider.Models = append(nebiusProvider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.ContextLength)
 	}
 
-	slices.SortFunc(nebiusProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(nebiusProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

@@ -168,9 +168,6 @@ func main() {
 			DefaultReasoningEffort: defaultReasoning,
 			SupportsImages:         supportsImages,
 		})
-
-		fmt.Printf("Added model %s with context window %d\n",
-			model.ModelID, model.ContextLength)
 	}
 
 	if len(aiHubMixProvider.Models) == 0 {

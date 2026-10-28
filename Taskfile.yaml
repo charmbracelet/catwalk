@@ -58,7 +58,9 @@ tasks:
     aliases: [generate, gen]
     cmds:
       - task: gen:aihubmix
+      - task: gen:atlascloud
       - task: gen:avian
+      - task: gen:baseten
       - task: gen:chutes
       - task: gen:copilot
       - task: gen:cortecs
@@ -79,10 +81,20 @@ tasks:
     cmds:
       - go run cmd/aihubmix/main.go
 
+  gen:atlascloud:
+    desc: Generate Atlas Cloud provider configurations
+    cmds:
+      - go run cmd/atlascloud/main.go
+
   gen:avian:
     desc: Generate avian provider configurations
     cmds:
       - go run cmd/avian/main.go
+
+  gen:baseten:
+    desc: Generate baseten provider configurations
+    cmds:
+      - go run cmd/baseten/main.go
 
   gen:chutes:
     desc: Generate chutes provider configurations
@@ -155,6 +167,18 @@ tasks:
       - go run cmd/xai/main.go
 
   update:
-    desc: Trigger the update workflow on GitHub
+    desc: Trigger the update workflow on GitHub (pass OPEN=1 to open the job in the browser)
     cmds:
       - gh workflow run update.yml
+      - |
+        if [ "{{.OPEN}}" = "1" ]; then
+          sleep 3
+          RUN_ID="$(gh run list --workflow=update.yml --limit=1 --json=databaseId --jq='.[0].databaseId')"
+          for i in $(seq 10); do
+            URL="$(gh run view "$RUN_ID" --json=jobs --jq='.jobs[0].url // empty')"
+            [ -n "$URL" ] && break
+            sleep 3
+          done
+          URL="${URL:-$(gh run view "$RUN_ID" --json=url --jq=.url)}"
+          {{if eq OS "windows"}}start ""{{else if eq OS "darwin"}}open{{else}}xdg-open{{end}} "$URL"
+        fi

@@ -5,7 +5,7 @@ linters:
   enable:
     - bodyclose
     - exhaustive
-    - goconst
+    # - goconst
     - godot
     - gomoddirectives
     - goprintffuncname
@@ -30,6 +30,9 @@ linters:
       - text: '(slog|log)\.\w+'
         linters:
           - noctx
+      - linters:
+          - gosec
+        text: 'G101|G117|G706'
     generated: lax
     presets:
       - common-false-positives

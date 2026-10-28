@@ -102,8 +102,26 @@ func main() {
 		var reasoningLevels []string
 		var defaultReasoningEffort string
 		if goModel.Reasoning {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoningEffort = "medium"
+			switch {
+			case strings.Contains(goModel.ID, "deepseek-v4"):
+				reasoningLevels = []string{"low", "high", "max"}
+				defaultReasoningEffort = "high"
+			case goModel.ID == "glm-5.3":
+				reasoningLevels = []string{"low", "high", "max"}
+				defaultReasoningEffort = "high"
+			case goModel.ID == "glm-5.3-flash":
+				reasoningLevels = []string{"low", "high", "max"}
+				defaultReasoningEffort = "high"
+			case goModel.ID == "qwen3.8-flash":
+				reasoningLevels = []string{"low", "medium", "xhigh"}
+				defaultReasoningEffort = "medium"
+			case goModel.ID == "qwen3.8-max":
+				reasoningLevels = []string{"low", "medium", "xhigh"}
+				defaultReasoningEffort = "xhigh"
+			default:
+				reasoningLevels = []string{"low", "medium", "high"}
+				defaultReasoningEffort = "medium"
+			}
 		}
 
 		m := catwalk.Model{
@@ -121,10 +139,12 @@ func main() {
 		}
 
 		goProvider.Models = append(goProvider.Models, m)
-		fmt.Printf("Added model %s (%s)\n", goModel.ID, goModel.Name)
 	}
 
-	slices.SortFunc(goProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(goProvider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

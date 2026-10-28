@@ -3,9 +3,12 @@
 package main
 
 import (
+	"cmp"
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
+	"strings"
 	"time"
 
 	"charm.land/catwalk/internal/providers"
@@ -79,25 +82,36 @@ func providersHandlerDeprecated(w http.ResponseWriter, _ *http.Request) {
 }
 
 func main() {
+	address := cmp.Or(os.Getenv("CATWALK_PORT"), "8080")
+	switch {
+	case strings.HasPrefix(address, "tcp://"):
+		address = ":8080"
+	default:
+		address = ":" + address
+	}
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v2/providers", providersHandler)
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
-	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		_, _ = w.Write([]byte("OK"))
-	})
+	mux.HandleFunc("/health", health)
+	mux.HandleFunc("/healthz", health)
 	mux.Handle("/metrics", promhttp.Handler())
 
 	server := &http.Server{
-		Addr:         ":8080",
+		Addr:         address,
 		Handler:      mux,
 		ReadTimeout:  15 * time.Second,
 		WriteTimeout: 15 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}
 
-	log.Println("Server starting on :8080")
+	log.Printf("Server starting on %s\n", address)
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal("Server failed to start:", err)
+		log.Fatal("Server failed to start: ", err)
 	}
+}
+
+func health(w http.ResponseWriter, _ *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	_, _ = w.Write([]byte("OK"))
 }

@@ -12,8 +12,20 @@ import (
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
+//go:embed configs/alibaba-singapore.json
+var alibabaSingaporeConfig []byte
+
+//go:embed configs/alibaba-united-states.json
+var alibabaUnitedStatesConfig []byte
+
 //go:embed configs/anthropic.json
 var anthropicConfig []byte
+
+//go:embed configs/atlascloud.json
+var atlasCloudConfig []byte
+
+//go:embed configs/baseten.json
+var basetenConfig []byte
 
 //go:embed configs/avian.json
 var avianConfig []byte
@@ -21,14 +33,20 @@ var avianConfig []byte
 //go:embed configs/azure.json
 var azureConfig []byte
 
-//go:embed configs/bedrock.json
-var bedrockConfig []byte
+//go:embed configs/bedrock-united-states.json
+var bedrockUnitedStatesConfig []byte
+
+//go:embed configs/bedrock-europe.json
+var bedrockEuropeConfig []byte
 
 //go:embed configs/cerebras.json
 var cerebrasConfig []byte
 
 //go:embed configs/chutes.json
 var chutesConfig []byte
+
+//go:embed configs/coralbricks.json
+var coralBricksConfig []byte
 
 //go:embed configs/copilot.json
 var copilotConfig []byte
@@ -38,6 +56,9 @@ var cortecsConfig []byte
 
 //go:embed configs/deepseek.json
 var deepSeekConfig []byte
+
+//go:embed configs/fireworks.json
+var fireworksConfig []byte
 
 //go:embed configs/gemini.json
 var geminiConfig []byte
@@ -56,6 +77,9 @@ var kimiCodingConfig []byte
 
 //go:embed configs/minimax.json
 var miniMaxConfig []byte
+
+//go:embed configs/moonshot.json
+var moonshotConfig []byte
 
 //go:embed configs/minimax-china.json
 var miniMaxChinaConfig []byte
@@ -80,6 +104,9 @@ var openRouterConfig []byte
 
 //go:embed configs/qiniucloud.json
 var qiniuCloudConfig []byte
+
+//go:embed configs/scaleway.json
+var scalewayConfig []byte
 
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
@@ -118,18 +145,26 @@ var providerRegistry = []ProviderFunc{
 	kimiCodingProvider,
 	miniMaxProvider,
 	miniMaxChinaProvider,
+	moonshotProvider,
 	syntheticProvider,
 
 	// The remaining will be in alphabetical order.
 	aiHubMixProvider,
+	alibabaSingaporeProvider,
+	alibabaUnitedStatesProvider,
+	atlasCloudProvider,
+	basetenProvider,
 	avianProvider,
 	azureProvider,
-	bedrockProvider,
+	bedrockUnitedStatesProvider,
+	bedrockEuropeProvider,
 	cerebrasProvider,
 	chutesProvider,
+	coralBricksProvider,
 	copilotProvider,
 	cortecsProvider,
 	deepSeekProvider,
+	fireworksProvider,
 	groqProvider,
 	huggingFaceProvider,
 	ioNetProvider,
@@ -139,6 +174,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeZenProvider,
 	openRouterProvider,
 	qiniuCloudProvider,
+	scalewayProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -168,8 +204,24 @@ func aiHubMixProvider() catwalk.Provider {
 	return loadProviderFromConfig(aiHubMixConfig)
 }
 
+func alibabaSingaporeProvider() catwalk.Provider {
+	return loadProviderFromConfig(alibabaSingaporeConfig)
+}
+
+func alibabaUnitedStatesProvider() catwalk.Provider {
+	return loadProviderFromConfig(alibabaUnitedStatesConfig)
+}
+
 func anthropicProvider() catwalk.Provider {
 	return loadProviderFromConfig(anthropicConfig)
+}
+
+func atlasCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(atlasCloudConfig)
+}
+
+func basetenProvider() catwalk.Provider {
+	return loadProviderFromConfig(basetenConfig)
 }
 
 func avianProvider() catwalk.Provider {
@@ -180,8 +232,12 @@ func azureProvider() catwalk.Provider {
 	return loadProviderFromConfig(azureConfig)
 }
 
-func bedrockProvider() catwalk.Provider {
-	return loadProviderFromConfig(bedrockConfig)
+func bedrockUnitedStatesProvider() catwalk.Provider {
+	return loadProviderFromConfig(bedrockUnitedStatesConfig)
+}
+
+func bedrockEuropeProvider() catwalk.Provider {
+	return loadProviderFromConfig(bedrockEuropeConfig)
 }
 
 func cerebrasProvider() catwalk.Provider {
@@ -190,6 +246,10 @@ func cerebrasProvider() catwalk.Provider {
 
 func chutesProvider() catwalk.Provider {
 	return loadProviderFromConfig(chutesConfig)
+}
+
+func coralBricksProvider() catwalk.Provider {
+	return loadProviderFromConfig(coralBricksConfig)
 }
 
 func copilotProvider() catwalk.Provider {
@@ -202,6 +262,10 @@ func cortecsProvider() catwalk.Provider {
 
 func deepSeekProvider() catwalk.Provider {
 	return loadProviderFromConfig(deepSeekConfig)
+}
+
+func fireworksProvider() catwalk.Provider {
+	return loadProviderFromConfig(fireworksConfig)
 }
 
 func geminiProvider() catwalk.Provider {
@@ -232,6 +296,10 @@ func miniMaxChinaProvider() catwalk.Provider {
 	return loadProviderFromConfig(miniMaxChinaConfig)
 }
 
+func moonshotProvider() catwalk.Provider {
+	return loadProviderFromConfig(moonshotConfig)
+}
+
 func nebiusProvider() catwalk.Provider {
 	return loadProviderFromConfig(nebiusConfig)
 }
@@ -258,6 +326,10 @@ func openRouterProvider() catwalk.Provider {
 
 func qiniuCloudProvider() catwalk.Provider {
 	return loadProviderFromConfig(qiniuCloudConfig)
+}
+
+func scalewayProvider() catwalk.Provider {
+	return loadProviderFromConfig(scalewayConfig)
 }
 
 func syntheticProvider() catwalk.Provider {

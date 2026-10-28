@@ -3,6 +3,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -23,6 +24,7 @@ import (
 type Model struct {
 	ID                   string  `json:"id"`
 	Name                 string  `json:"name"`
+	MaxTokens            int     `json:"max_tokens"`
 	ContextWindow        int     `json:"context_window"`
 	SupportsImagesInput  bool    `json:"supports_images_input"`
 	InputTokenPrice      float64 `json:"input_token_price"`
@@ -81,18 +83,23 @@ func main() {
 		roundCost := func(v float64) float64 { return math.Round(v*1e5) / 1e5 }
 		costPer1MIn := roundCost(model.InputTokenPrice * 1_000_000)
 		costPer1MOut := roundCost(model.OutputTokenPrice * 1_000_000)
-		costPer1MInCached := roundCost(model.CacheReadTokenPrice * 1_000_000)
-		costPer1MOutCached := roundCost(model.CacheWriteTokenPrice * 1_000_000)
+		costPer1MCacheRead := roundCost(model.CacheReadTokenPrice * 1_000_000)
+		costPer1MCacheWrite := roundCost(model.CacheWriteTokenPrice * 1_000_000)
+
+		switch model.ID {
+		case "google/gemma-4-26b-a4b-it":
+			model.ContextWindow = max(256000)
+		}
 
 		m := catwalk.Model{
 			ID:                     model.ID,
 			Name:                   model.Name,
 			CostPer1MIn:            costPer1MIn,
 			CostPer1MOut:           costPer1MOut,
-			CostPer1MInCached:      costPer1MInCached,
-			CostPer1MOutCached:     costPer1MOutCached,
+			CostPer1MInCached:      costPer1MCacheWrite,
+			CostPer1MOutCached:     costPer1MCacheRead,
 			ContextWindow:          int64(model.ContextWindow),
-			DefaultMaxTokens:       int64(model.ContextWindow) / 10,
+			DefaultMaxTokens:       int64(cmp.Or(model.MaxTokens, model.ContextWindow) / 10),
 			CanReason:              isReasoningModel(model.ID),
 			ReasoningLevels:        reasoningLevels,
 			DefaultReasoningEffort: defaultReasoning,
@@ -100,10 +107,12 @@ func main() {
 		}
 
 		provider.Models = append(provider.Models, m)
-		fmt.Printf("Added model %s with context window %d\n", model.ID, model.ContextWindow)
 	}
 
-	slices.SortFunc(provider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(provider.Models, func(a, b catwalk.Model) int {
+		if a.Name == b.Name {
+			return strings.Compare(a.ID, b.ID)
+		}
 		return strings.Compare(a.Name, b.Name)
 	})
 

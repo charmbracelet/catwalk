@@ -99,7 +99,20 @@ func run() error {
 	}
 
 	copilotModels = slices.DeleteFunc(copilotModels, func(m Model) bool {
-		return aliasedVersions[m.ID] || versionedModelRegexp.MatchString(m.ID) || strings.Contains(m.ID, "embedding") || strings.HasPrefix(m.ID, "accounts/msft/routers") || strings.HasPrefix(m.ID, "oswe-vscode") || m.ID == "gpt-4-o-preview"
+		return aliasedVersions[m.ID] ||
+			versionedModelRegexp.MatchString(m.ID) ||
+			strings.Contains(m.ID, "embedding") ||
+			strings.HasPrefix(m.ID, "accounts/msft/routers") ||
+			strings.HasPrefix(m.ID, "oswe-vscode") ||
+			strings.HasPrefix(m.ID, "lark") ||
+			strings.HasPrefix(m.ID, "mai-code") ||
+			strings.HasPrefix(m.ID, "auto-model") ||
+			strings.HasPrefix(m.ID, "exec-agent") ||
+			strings.HasPrefix(m.ID, "search-agent") ||
+			strings.HasPrefix(m.ID, "copilot-search") ||
+			strings.HasSuffix(m.ID, "-base") || strings.HasSuffix(m.ID, "-copilot") ||
+			m.ID == "gpt-4-o-preview" ||
+			m.ID == "trajectory-compaction"
 	})
 
 	// Deduplicate by ID (API can return duplicates)
@@ -123,7 +136,7 @@ func run() error {
 		Models:              catwalkModels,
 		APIEndpoint:         "https://api.githubcopilot.com",
 		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "claude-sonnet-4.6",
+		DefaultLargeModelID: "claude-sonnet-5",
 		DefaultSmallModelID: "claude-haiku-4.5",
 	}
 	data, err := json.MarshalIndent(provider, "", "  ")
@@ -147,7 +160,7 @@ func fetchCopilotModels() ([]Model, error) {
 	}
 
 	// Step 1: Fetch API token from the token endpoint
-	tokenURL := "https://api.github.com/copilot_internal/v2/token" //nolint:gosec
+	tokenURL := "https://api.github.com/copilot_internal/v2/token"
 	tokenReq, err := http.NewRequestWithContext(ctx, "GET", tokenURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("unable to create token request: %w", err)
