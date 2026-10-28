@@ -3,7 +3,7 @@
 // old structure.
 package v2compat
 
-import "charm.land/catwalk/pkg/catwalk"
+import "charm.land/catwalk/v3/pkg/catwalk"
 
 // Provider represents the v2 (legacy) provider schema.
 type Provider struct {

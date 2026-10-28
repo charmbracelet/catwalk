@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/internal/providers"
+	"charm.land/catwalk/v3/internal/providers"
 	"github.com/charmbracelet/x/etag"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"

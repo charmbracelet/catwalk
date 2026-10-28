@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"log"
 
-	"charm.land/catwalk/internal/v2compat"
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/internal/v2compat"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 //go:embed configs/aihubmix.json

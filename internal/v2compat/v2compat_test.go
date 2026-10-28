@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 func TestFromModel(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"slices"
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 func TestValidDefaultModels(t *testing.T) {
