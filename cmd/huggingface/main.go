@@ -192,17 +192,15 @@ func main() {
 	// Hugging Face sometimes temporarily removes models, so we provide fallbacks.
 	hfProvider.DefaultLargeModelID = firstAvailableModel(
 		hfProvider.Models,
-		"zai-org/GLM-5.2:fireworks-ai",
-		"moonshotai/Kimi-K2.7-Code:fireworks-ai",
-		"MiniMaxAI/MiniMax-M3:fireworks-ai",
-		"deepseek-ai/DeepSeek-V4-Pro:fireworks-ai",
+		"Qwen/Qwen3.8-27B:cerebras",
+		"openai/gpt-oss-120b:cerebras",
+		"openai/gpt-oss-120b:groq",
 	)
 	hfProvider.DefaultSmallModelID = firstAvailableModel(
 		hfProvider.Models,
-		"deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
-		"google/gemma-4-31B-it:cerebras",
-		"openai/gpt-oss-20b:fireworks-ai",
-		"openai/gpt-oss-20b:groq",
+		"Qwen/Qwen3.8-27B:cerebras",
+		"openai/gpt-oss-120b:cerebras",
+		"openai/gpt-oss-120b:groq",
 	)
 
 	// Save the JSON in internal/providers/configs/huggingface.json

@@ -3,7 +3,7 @@
   "id": "chutes",
   "api_key": "$CHUTES_API_KEY",
   "api_endpoint": "https://llm.chutes.ai/v1",
-  "type": "completions",
+  "type": "openai-compat",
   "default_large_model_id": "moonshotai/Kimi-K2.6-TEE",
   "default_small_model_id": "google/gemma-4-31B-turbo-TEE",
   "models": [
@@ -75,9 +75,9 @@
       "id": "zai-org/GLM-5.1-TEE",
       "name": "GLM-5.1-TEE",
       "pricing": {
-        "input": 0.98,
-        "output": 3.08,
-        "cache_create": 0.098
+        "input": 0.9,
+        "output": 2.9,
+        "cache_create": 0.09
       },
       "context_window": 202752,
       "default_max_tokens": 65535,
@@ -139,9 +139,9 @@
       "id": "moonshotai/Kimi-K2.6-TEE",
       "name": "Kimi-K2.6-TEE",
       "pricing": {
-        "input": 0.45,
-        "output": 1.95,
-        "cache_create": 0.045
+        "input": 0.39,
+        "output": 1.8,
+        "cache_create": 0.039
       },
       "context_window": 262144,
       "default_max_tokens": 65535,
@@ -197,70 +197,6 @@
       },
       "capabilities": {
         "vision": true
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B-Thinking-2507-TEE",
-      "name": "Qwen3-235B-A22B-Thinking-2507-TEE",
-      "pricing": {
-        "input": 0.2989,
-        "output": 1.1957,
-        "cache_create": 0.02989
-      },
-      "context_window": 262144,
-      "default_max_tokens": 262144,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-32B-TEE",
-      "name": "Qwen3-32B-TEE",
-      "pricing": {
-        "input": 0.104,
-        "output": 0.416,
-        "cache_create": 0.0104
-      },
-      "context_window": 40960,
-      "default_max_tokens": 40960,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
       }
     },
     {

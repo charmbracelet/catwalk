@@ -444,6 +444,22 @@
       }
     },
     {
+      "id": "gpt-6.1-terra",
+      "name": "GPT-6.1 Terra",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "grok-4.6",
       "type": "responses",
       "name": "Grok 4.6",

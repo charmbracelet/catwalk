@@ -3,7 +3,7 @@
   "id": "pioneer",
   "api_key": "$PIONEER_API_KEY",
   "api_endpoint": "https://api.fastino.ai/v1",
-  "type": "completions",
+  "type": "openai-compat",
   "default_large_model_id": "claude-opus-5",
   "default_small_model_id": "deepseek-ai/DeepSeek-V4-Flash",
   "models": [
@@ -52,7 +52,7 @@
         "cache_create": 0.07,
         "cache_hit": 0.035
       },
-      "context_window": 8192,
+      "context_window": 65536,
       "default_max_tokens": 4096,
       "reasoning": {
         "thinking": "never"

@@ -3,9 +3,12 @@
   "id": "aihubmix",
   "api_key": "$AIHUBMIX_API_KEY",
   "api_endpoint": "https://aihubmix.com/v1",
-  "type": "completions",
+  "type": "openai-compat",
   "default_large_model_id": "gpt-5",
   "default_small_model_id": "gpt-5-nano",
+  "default_headers": {
+    "APP-Code": "IUFF7106"
+  },
   "models": [
     {
       "id": "AiHubmix-Phi-4-mini-reasoning",
@@ -20,8 +23,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -34,11 +36,25 @@
       "context_window": 256000,
       "default_max_tokens": 32000,
       "reasoning": {
-        "thinking": "never"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -69,8 +85,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -101,8 +116,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -118,8 +132,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -150,8 +163,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -183,8 +195,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -216,8 +227,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -248,8 +258,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -265,8 +274,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -282,8 +290,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -316,8 +323,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -348,41 +354,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "baidu-deepseek-v4-pro-0813",
-      "name": "Baidu DeepSeek V4 Pro 0813",
-      "pricing": {
-        "input": 1.268,
-        "output": 3.804,
-        "cache_hit": 0.1268
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -413,8 +385,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -445,8 +416,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -477,8 +447,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -495,8 +464,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -512,8 +480,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -529,8 +496,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -546,8 +512,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -563,8 +528,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -580,8 +544,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -597,8 +560,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -631,8 +593,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -665,8 +626,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -678,8 +638,8 @@
         "cache_create": 1.375,
         "cache_hit": 0.11
       },
-      "context_window": 204800,
-      "default_max_tokens": 20480,
+      "context_window": 200000,
+      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -699,8 +659,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -718,8 +677,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -750,8 +708,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -764,7 +721,7 @@
         "cache_hit": 0.5
       },
       "context_window": 200000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -784,8 +741,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -798,7 +754,7 @@
         "cache_hit": 0.5
       },
       "context_window": 200000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -818,8 +774,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -831,8 +786,8 @@
         "cache_create": 6.25,
         "cache_hit": 0.5
       },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -852,8 +807,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -865,8 +819,8 @@
         "cache_create": 6.25,
         "cache_hit": 0.5
       },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -886,8 +840,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -899,8 +852,8 @@
         "cache_create": 6.25,
         "cache_hit": 0.5
       },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -920,8 +873,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -933,8 +885,8 @@
         "cache_create": 6.25,
         "cache_hit": 0.5
       },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -954,8 +906,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -967,8 +918,8 @@
         "cache_create": 6.25,
         "cache_hit": 0.5
       },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -988,8 +939,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1001,8 +951,8 @@
         "cache_create": 6.25,
         "cache_hit": 0.5
       },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1022,8 +972,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1056,8 +1005,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1075,8 +1023,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1088,7 +1035,7 @@
         "cache_create": 4.125,
         "cache_hit": 0.33
       },
-      "context_window": 1000000,
+      "context_window": 200000,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
@@ -1109,8 +1056,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1122,7 +1068,7 @@
         "cache_create": 4.125,
         "cache_hit": 0.33
       },
-      "context_window": 1000000,
+      "context_window": 200000,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
@@ -1143,8 +1089,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1157,7 +1102,7 @@
         "cache_hit": 0.3
       },
       "context_window": 1000000,
-      "default_max_tokens": 64000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1177,8 +1122,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1190,8 +1134,8 @@
         "cache_create": 3.75,
         "cache_hit": 0.3
       },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1211,8 +1155,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1245,8 +1188,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1264,8 +1206,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1282,8 +1223,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1315,8 +1255,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1347,8 +1286,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1380,8 +1318,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1412,8 +1349,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1444,8 +1380,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1476,8 +1411,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1508,8 +1442,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1540,8 +1473,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1572,8 +1504,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1604,8 +1535,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1636,8 +1566,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1668,8 +1597,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1701,8 +1629,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1734,8 +1661,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1766,8 +1692,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1798,8 +1723,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1831,8 +1755,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1863,8 +1786,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -1875,7 +1797,7 @@
         "output": 0.2
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1895,8 +1817,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1907,7 +1828,7 @@
         "output": 0
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1927,8 +1848,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1939,7 +1859,7 @@
         "output": 0.2
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1959,8 +1879,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -1971,7 +1890,7 @@
         "output": 0
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1991,8 +1910,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2003,7 +1921,7 @@
         "output": 0.2
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2023,8 +1941,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2035,7 +1952,7 @@
         "output": 0
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2055,8 +1972,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2067,7 +1983,7 @@
         "output": 0.2
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2087,8 +2003,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2099,7 +2014,7 @@
         "output": 0.2
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2119,8 +2034,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2131,7 +2045,7 @@
         "output": 0
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2151,8 +2065,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2163,7 +2076,7 @@
         "output": 0.2
       },
       "context_window": 204800,
-      "default_max_tokens": 13100,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2183,8 +2096,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2194,8 +2106,8 @@
         "input": 0.2,
         "output": 0.2
       },
-      "context_window": 204800,
-      "default_max_tokens": 13100,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2215,8 +2127,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2226,8 +2137,8 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 204800,
-      "default_max_tokens": 13100,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2247,8 +2158,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2265,8 +2175,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2283,8 +2192,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2300,8 +2208,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2317,8 +2224,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2349,8 +2255,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2361,7 +2266,7 @@
         "output": 0.453,
         "cache_hit": 0.0302
       },
-      "context_window": 128000,
+      "context_window": 163840,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
@@ -2382,8 +2287,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2415,8 +2319,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2448,8 +2351,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2481,8 +2383,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2514,8 +2415,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2547,8 +2447,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2580,8 +2479,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -2613,8 +2511,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2631,8 +2528,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2642,26 +2538,25 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 512000,
-      "default_max_tokens": 51200,
+      "context_window": 524288,
+      "default_max_tokens": 52428,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
-      "id": "doubao-deepseek-v4-flash-0731",
-      "name": "Doubao Deepseek V4 Flash 0731",
+      "id": "doubao-seed-1-6",
+      "name": "Doubao Seed 1.6",
       "pricing": {
-        "input": 0.4226,
-        "output": 1.2678,
-        "cache_hit": 0.14085
+        "input": 0.18,
+        "output": 1.8,
+        "cache_hit": 0.036
       },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "context_window": 256000,
+      "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2681,26 +2576,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "doubao-seed-1-6",
-      "name": "Doubao Seed 1.6",
-      "pricing": {
-        "input": 0.18,
-        "output": 1.8,
-        "cache_hit": 0.036
-      },
-      "context_window": 256000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2714,11 +2590,25 @@
       "context_window": 256000,
       "default_max_tokens": 33000,
       "reasoning": {
-        "thinking": "never"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2732,11 +2622,25 @@
       "context_window": 256000,
       "default_max_tokens": 32000,
       "reasoning": {
-        "thinking": "never"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2750,11 +2654,25 @@
       "context_window": 256000,
       "default_max_tokens": 32000,
       "reasoning": {
-        "thinking": "never"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2786,8 +2704,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2799,7 +2716,7 @@
         "cache_hit": 0.01808
       },
       "context_window": 256000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2819,8 +2736,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2832,7 +2748,7 @@
         "cache_hit": 0.01808
       },
       "context_window": 256000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2852,8 +2768,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -2865,7 +2780,7 @@
         "cache_hit": 0.00603
       },
       "context_window": 256000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2885,8 +2800,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -2918,8 +2832,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2951,8 +2864,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -2984,8 +2896,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3017,8 +2928,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3034,8 +2944,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3051,8 +2960,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3068,8 +2976,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3101,8 +3008,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3134,8 +3040,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -3167,8 +3072,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -3200,8 +3104,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -3232,26 +3135,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "gemini-2.5-flash",
-      "name": "Gemini 2.5 Flash",
-      "pricing": {
-        "input": 0.3,
-        "output": 2.499,
-        "cache_hit": 0.03
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": false
       }
     },
     {
@@ -3262,104 +3146,13 @@
         "output": 2.499,
         "cache_hit": 0.03
       },
-      "context_window": 32800,
-      "default_max_tokens": 8000,
+      "context_window": 65536,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "gemini-2.5-flash-lite",
-      "name": "Gemini 2.5 Flash Lite",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.4,
-        "cache_hit": 0.01
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "gemini-2.5-flash-lite-nothink",
-      "name": "Gemini 2.5 Flash Lite (no think)",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.4,
-        "cache_hit": 0.01
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "gemini-2.5-flash-lite-preview-09-2025",
-      "name": "Gemini 2.5 Flash Lite Preview 09 2025",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.4,
-        "cache_hit": 0.01
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "gemini-2.5-flash-lite-preview-09-2025-nothink",
-      "name": "Gemini 2.5 Flash Lite Preview 09 2025 (no think)",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.4,
-        "cache_hit": 0.01
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "gemini-2.5-flash-nothink",
-      "name": "Gemini 2.5 Flash (no think)",
-      "pricing": {
-        "input": 0.3,
-        "output": 2.499,
-        "cache_hit": 0.03
-      },
-      "context_window": 1047576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3376,8 +3169,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3394,26 +3186,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "gemini-2.5-flash-preview-09-2025",
-      "name": "Gemini 2.5 Flash Preview 09 2025",
-      "pricing": {
-        "input": 0.3,
-        "output": 2.499,
-        "cache_hit": 0.03
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3430,8 +3203,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3463,8 +3235,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3496,8 +3267,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3529,8 +3299,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3562,8 +3331,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3575,7 +3343,7 @@
         "cache_hit": 0.05
       },
       "context_window": 1048576,
-      "default_max_tokens": 104857,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3595,8 +3363,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3608,7 +3375,7 @@
         "cache_hit": 0.05
       },
       "context_window": 1048576,
-      "default_max_tokens": 104857,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3628,8 +3395,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3660,8 +3426,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3693,8 +3458,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3705,8 +3469,8 @@
         "output": 1.5,
         "cache_hit": 0.025
       },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3726,8 +3490,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3759,8 +3522,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -3771,8 +3533,8 @@
         "output": 1.5,
         "cache_hit": 0.025
       },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3792,8 +3554,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3804,8 +3565,8 @@
         "output": 12,
         "cache_hit": 0.2
       },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3825,8 +3586,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3837,8 +3597,8 @@
         "output": 12,
         "cache_hit": 0.2
       },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3858,8 +3618,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3891,8 +3650,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3903,8 +3661,8 @@
         "output": 3.75,
         "cache_hit": 0.075
       },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3924,8 +3682,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3957,8 +3714,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -3990,8 +3746,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -4023,8 +3778,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -4056,8 +3810,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -4074,8 +3827,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4092,8 +3844,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4109,8 +3860,23 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
+      }
+    },
+    {
+      "id": "gemma-4-26b-a4b-it-free",
+      "name": "Gemma 4 26B A4B It (free)",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
       }
     },
     {
@@ -4126,8 +3892,23 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
+      }
+    },
+    {
+      "id": "gemma-4-31b-it-free",
+      "name": "Gemma 4 31B It (free)",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": true
       }
     },
     {
@@ -4143,8 +3924,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4160,8 +3940,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4171,14 +3950,13 @@
         "input": 0.274,
         "output": 0.822
       },
-      "context_window": 64000,
+      "context_window": 65536,
       "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4189,8 +3967,8 @@
         "output": 1.0959,
         "cache_hit": 0.0548
       },
-      "context_window": 204800,
-      "default_max_tokens": 20480,
+      "context_window": 200000,
+      "default_max_tokens": 20000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4210,8 +3988,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4222,14 +3999,13 @@
         "output": 0.411,
         "cache_hit": 0.0274
       },
-      "context_window": 128000,
-      "default_max_tokens": 12800,
+      "context_window": 131072,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4261,8 +4037,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4293,8 +4068,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4305,8 +4079,8 @@
         "output": 3.9996,
         "cache_hit": 0.24
       },
-      "context_window": 202752,
-      "default_max_tokens": 20275,
+      "context_window": 204800,
+      "default_max_tokens": 20480,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4326,8 +4100,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4359,8 +4132,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4372,7 +4144,7 @@
         "cache_hit": 0.2817
       },
       "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4392,8 +4164,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4405,7 +4176,7 @@
         "cache_hit": 0.5635
       },
       "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4425,8 +4196,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4437,8 +4207,8 @@
         "output": 3.9438,
         "cache_hit": 0.2817
       },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4458,8 +4228,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -4470,8 +4239,8 @@
         "output": 0.39438,
         "cache_hit": 0.0324
       },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4491,8 +4260,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4509,8 +4277,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4527,8 +4294,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4545,8 +4311,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4563,8 +4328,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4581,8 +4345,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4599,8 +4362,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4617,8 +4379,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4635,8 +4396,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4652,8 +4412,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": true
+        "vision": false
       }
     },
     {
@@ -4670,8 +4429,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4688,8 +4446,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4721,8 +4478,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4733,14 +4489,13 @@
         "output": 10,
         "cache_hit": 0.125
       },
-      "context_window": 400000,
-      "default_max_tokens": 128000,
+      "context_window": 128000,
+      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4772,8 +4527,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4805,8 +4559,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4838,8 +4591,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4850,7 +4602,7 @@
         "output": 120
       },
       "context_window": 400000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 40000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4870,8 +4622,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4903,8 +4654,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4921,8 +4671,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4954,8 +4703,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -4987,8 +4735,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5020,8 +4767,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5053,8 +4799,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5071,8 +4816,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5104,8 +4848,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5137,8 +4880,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5170,8 +4912,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5203,8 +4944,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5221,8 +4961,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5254,8 +4993,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5266,7 +5004,7 @@
         "output": 15,
         "cache_hit": 0.25
       },
-      "context_window": 400000,
+      "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
@@ -5287,8 +5025,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5299,7 +5036,7 @@
         "output": 15,
         "cache_hit": 0.25
       },
-      "context_window": 400000,
+      "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
@@ -5320,8 +5057,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5332,7 +5068,7 @@
         "output": 15,
         "cache_hit": 0.25
       },
-      "context_window": 400000,
+      "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
@@ -5353,8 +5089,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5371,8 +5106,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5404,8 +5138,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5436,8 +5169,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5469,8 +5201,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5501,8 +5232,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5535,8 +5265,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5569,8 +5298,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5603,8 +5331,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5621,8 +5348,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5655,8 +5381,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5689,8 +5414,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5708,8 +5432,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5727,41 +5450,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "gpt-audio-1.5",
-      "name": "GPT Audio 1.5",
-      "pricing": {
-        "input": 2.5,
-        "output": 10,
-        "cache_hit": 2.5
-      },
-      "context_window": 128000,
-      "default_max_tokens": 16384,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -5779,8 +5468,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5791,7 +5479,7 @@
         "output": 30,
         "cache_hit": 0.5
       },
-      "context_window": 1050000,
+      "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
@@ -5812,8 +5500,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5844,8 +5531,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -5856,7 +5542,7 @@
         "output": 0.55
       },
       "context_window": 128000,
-      "default_max_tokens": 12800,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -5876,8 +5562,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -5909,8 +5594,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5921,14 +5605,13 @@
         "output": 0.5,
         "cache_hit": 0.05
       },
-      "context_window": 2000000,
-      "default_max_tokens": 200000,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5939,8 +5622,8 @@
         "output": 0.5,
         "cache_hit": 0.05
       },
-      "context_window": 2000000,
-      "default_max_tokens": 200000,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -5960,8 +5643,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -5972,8 +5654,8 @@
         "output": 6,
         "cache_hit": 0.2
       },
-      "context_window": 2000000,
-      "default_max_tokens": 200000,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -5993,8 +5675,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6005,8 +5686,8 @@
         "output": 6,
         "cache_hit": 0.2
       },
-      "context_window": 2000000,
-      "default_max_tokens": 200000,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6026,59 +5707,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "grok-4-fast-non-reasoning",
-      "name": "Grok 4 Fast",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.5,
-        "cache_hit": 0.05
-      },
-      "context_window": 2000000,
-      "default_max_tokens": 30000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "grok-4-fast-reasoning",
-      "name": "Grok 4 Fast (reasoning)",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.5,
-        "cache_hit": 0.05
-      },
-      "context_window": 2000000,
-      "default_max_tokens": 30000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6110,8 +5739,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6123,7 +5751,7 @@
         "cache_hit": 0.2
       },
       "context_window": 2000000,
-      "default_max_tokens": 200000,
+      "default_max_tokens": 30000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6143,8 +5771,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6155,8 +5782,8 @@
         "output": 6,
         "cache_hit": 0.2
       },
-      "context_window": 2000000,
-      "default_max_tokens": 200000,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6176,8 +5803,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6209,8 +5835,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6222,7 +5847,7 @@
         "cache_hit": 0.2
       },
       "context_window": 1000000,
-      "default_max_tokens": 100000,
+      "default_max_tokens": 30000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6242,8 +5867,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6275,8 +5899,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6308,8 +5931,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6326,8 +5948,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6359,8 +5980,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6392,8 +6012,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6425,40 +6044,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "hy3-free",
-      "name": "Hy3 (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6469,7 +6055,7 @@
         "output": 2.535,
         "cache_hit": 0.04225
       },
-      "context_window": 1024000,
+      "context_window": 1048576,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
@@ -6490,8 +6076,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6507,8 +6092,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6539,8 +6123,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6550,8 +6133,8 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6571,8 +6154,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6588,8 +6170,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6600,7 +6181,7 @@
         "output": 0
       },
       "context_window": 256000,
-      "default_max_tokens": 25600,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6620,8 +6201,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6653,8 +6233,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6666,13 +6245,12 @@
         "cache_hit": 0.3
       },
       "context_window": 262144,
-      "default_max_tokens": 26214,
+      "default_max_tokens": 8192,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6683,8 +6261,8 @@
         "output": 3,
         "cache_hit": 0.105
       },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -6704,8 +6282,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6737,8 +6314,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6770,8 +6346,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6803,8 +6378,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6836,8 +6410,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -6854,8 +6427,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6865,14 +6437,13 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6889,8 +6460,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6906,8 +6476,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6917,14 +6486,13 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 128000,
-      "default_max_tokens": 12800,
+      "context_window": 131072,
+      "default_max_tokens": 13107,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6941,42 +6509,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "ling-3.0-flash-free",
-      "name": "Ling 3.0 Flash (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "ling-3.0-tiny-free",
-      "name": "Ling 3.0 Tiny (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -6992,8 +6525,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7009,8 +6541,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7020,14 +6551,13 @@
         "input": 0.2,
         "output": 0.2
       },
-      "context_window": 131000,
-      "default_max_tokens": 13100,
+      "context_window": 131072,
+      "default_max_tokens": 13107,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7059,8 +6589,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7071,7 +6600,7 @@
         "output": 8
       },
       "context_window": 256000,
-      "default_max_tokens": 25600,
+      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -7091,8 +6620,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7109,8 +6637,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7122,7 +6649,7 @@
         "cache_hit": 0.02
       },
       "context_window": 260000,
-      "default_max_tokens": 26000,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -7142,8 +6669,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7154,49 +6680,12 @@
         "output": 0
       },
       "context_window": 256000,
-      "default_max_tokens": 25600,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "mimo-v2.5",
-      "name": "MiMo V2.5",
-      "pricing": {
-        "input": 0.155,
-        "output": 0.31,
-        "cache_hit": 0.0031
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "mimo-v2.5-pro",
-      "name": "MiMo V2.5 Pro",
-      "pricing": {
-        "input": 0.48,
-        "output": 0.96,
-        "cache_hit": 0.00384
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7213,8 +6702,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7231,8 +6719,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7249,8 +6736,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7281,8 +6767,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7313,8 +6798,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7345,8 +6829,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7356,55 +6839,6 @@
         "input": 0.2958,
         "output": 1.1832,
         "cache_hit": 0.05916
-      },
-      "context_window": 200000,
-      "default_max_tokens": 20000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "minimax-m2.7-free",
-      "name": "MiniMax M2.7 (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 196608,
-      "default_max_tokens": 19660,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "minimax-m3",
-      "name": "MiniMax M3",
-      "pricing": {
-        "input": 0.288,
-        "output": 1.152
       },
       "context_window": 204800,
       "default_max_tokens": 20480,
@@ -7427,25 +6861,38 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
-      "id": "minimax-m3-free",
-      "name": "MiniMax M3 (free)",
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
       "pricing": {
-        "input": 0,
-        "output": 0
+        "input": 0.288,
+        "output": 1.152
       },
-      "context_window": 1048576,
-      "default_max_tokens": 104857,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
-        "thinking": "never"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7461,8 +6908,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7479,8 +6925,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7496,8 +6941,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7507,8 +6951,8 @@
         "input": 1.375,
         "output": 4.675
       },
-      "context_window": 1000000,
-      "default_max_tokens": 100000,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -7528,8 +6972,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -7539,8 +6982,8 @@
         "input": 1.375,
         "output": 4.675
       },
-      "context_window": 1000000,
-      "default_max_tokens": 100000,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -7560,8 +7003,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -7593,8 +7035,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": true
+        "vision": true
       }
     },
     {
@@ -7611,47 +7052,12 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "nemotron-3-nano-30b-a3b-free",
-      "name": "Nemotron 3 Nano 30B A3B (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
       "id": "nemotron-3-nano-omni-30b-a3b-reasoning-free",
       "name": "Nemotron 3 Nano Omni 30B A3B (reasoning) (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      }
-    },
-    {
-      "id": "nemotron-3-super-120b-a12b-free",
-      "name": "Nemotron 3 Super 120B A12B (free)",
       "pricing": {
         "input": 0,
         "output": 0
@@ -7662,8 +7068,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7673,14 +7078,13 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 1000000,
-      "default_max_tokens": 100000,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7690,14 +7094,13 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 128000,
-      "default_max_tokens": 12800,
+      "context_window": 131072,
+      "default_max_tokens": 13107,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7707,48 +7110,13 @@
         "input": 0,
         "output": 0
       },
-      "context_window": 1000000,
-      "default_max_tokens": 100000,
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "nemotron-nano-12b-v2-vl-free",
-      "name": "Nemotron Nano 12B V2 VL (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 128000,
-      "default_max_tokens": 12800,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "nemotron-nano-9b-v2-free",
-      "name": "Nemotron Nano 9B V2 (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 128000,
-      "default_max_tokens": 12800,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7759,13 +7127,12 @@
         "output": 0
       },
       "context_window": 256000,
-      "default_max_tokens": 25600,
+      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7797,8 +7164,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7830,8 +7196,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7863,8 +7228,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7896,8 +7260,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7929,8 +7292,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7946,8 +7308,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7964,8 +7325,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -7976,13 +7336,12 @@
         "output": 1.12
       },
       "context_window": 262144,
-      "default_max_tokens": 26214,
+      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -7993,7 +7352,7 @@
         "output": 2.8
       },
       "context_window": 262144,
-      "default_max_tokens": 26214,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8013,8 +7372,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8024,14 +7382,13 @@
         "input": 0.2,
         "output": 0.8
       },
-      "context_window": 2000000,
-      "default_max_tokens": 262000,
+      "context_window": 262144,
+      "default_max_tokens": 26214,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8042,13 +7399,12 @@
         "output": 3.28
       },
       "context_window": 262000,
-      "default_max_tokens": 26200,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8058,14 +7414,13 @@
         "input": 0.136,
         "output": 0.544
       },
-      "context_window": 256000,
+      "context_window": 1000000,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8075,14 +7430,13 @@
         "input": 0.137,
         "output": 0.548
       },
-      "context_window": 2000000,
-      "default_max_tokens": 64000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8099,8 +7453,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8117,8 +7470,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8130,8 +7482,8 @@
         "cache_create": 0.5635,
         "cache_hit": 0.09016
       },
-      "context_window": 252000,
-      "default_max_tokens": 32000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8151,8 +7503,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8163,7 +7514,7 @@
         "output": 1.42
       },
       "context_window": 256000,
-      "default_max_tokens": 25600,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8183,8 +7534,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8195,14 +7545,13 @@
         "output": 1.37,
         "cache_hit": 0.0274
       },
-      "context_window": 256000,
-      "default_max_tokens": 32000,
+      "context_window": 262144,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8212,8 +7561,8 @@
         "input": 0.1126,
         "output": 0.9008
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8233,8 +7582,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8244,8 +7592,8 @@
         "input": 0.0846,
         "output": 0.6768
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8265,8 +7613,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8276,8 +7623,8 @@
         "input": 0.0564,
         "output": 0.4512
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8297,8 +7644,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8308,8 +7654,8 @@
         "input": 0.1644,
         "output": 0.9864
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8329,8 +7675,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8342,8 +7687,8 @@
         "cache_create": 0.03525,
         "cache_hit": 0.00282
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8363,8 +7708,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8376,8 +7720,8 @@
         "cache_create": 0.137,
         "cache_hit": 0.01096
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8397,8 +7741,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8408,8 +7751,8 @@
         "input": 0.422,
         "output": 2.532
       },
-      "context_window": 254000,
-      "default_max_tokens": 64000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8429,8 +7772,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8440,8 +7782,8 @@
         "input": 0.254,
         "output": 1.524
       },
-      "context_window": 254000,
-      "default_max_tokens": 64000,
+      "context_window": 262144,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8461,8 +7803,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8474,8 +7815,8 @@
         "cache_create": 0.21125,
         "cache_hit": 0.0169
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8495,8 +7836,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8508,8 +7848,8 @@
         "cache_create": 0.3525,
         "cache_hit": 0.0282
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8529,8 +7869,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8561,8 +7900,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8574,8 +7912,8 @@
         "cache_create": 0.03525,
         "cache_hit": 0.00564
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8595,8 +7933,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8608,8 +7945,8 @@
         "cache_create": 2.1125,
         "cache_hit": 0.169
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8629,8 +7966,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8642,8 +7978,8 @@
         "cache_create": 0.3525,
         "cache_hit": 0.0564
       },
-      "context_window": 991000,
-      "default_max_tokens": 64000,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8663,8 +7999,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8675,8 +8010,8 @@
         "output": 6,
         "cache_hit": 0.5
       },
-      "context_window": 262000,
-      "default_max_tokens": 26200,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8696,8 +8031,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8714,8 +8048,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8728,7 +8061,7 @@
         "cache_hit": 0.01408
       },
       "context_window": 1000000,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8748,25 +8081,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "qwen3.8-flash-free",
-      "name": "Qwen3.8 Flash (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8778,8 +8093,8 @@
         "cache_create": 2.1125,
         "cache_hit": 0.169
       },
-      "context_window": 991000,
-      "default_max_tokens": 128000,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8799,8 +8114,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8812,8 +8126,8 @@
         "cache_create": 2.1125,
         "cache_hit": 0.169
       },
-      "context_window": 991000,
-      "default_max_tokens": 128000,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8833,25 +8147,7 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "qwen3.8-max-free",
-      "name": "Qwen3.8 Max (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8869,8 +8165,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8887,8 +8182,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8904,8 +8198,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": false
       }
     },
     {
@@ -8922,8 +8215,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -8940,61 +8232,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "union-alpha-free",
-      "name": "Union Alpha (free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "xiaomi-mimo-v2.5",
-      "name": "Xiaomi Mimo V2.5",
-      "pricing": {
-        "input": 0.155,
-        "output": 0.31,
-        "cache_hit": 0.0031
-      },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "xiaomi-mimo-v2.5-pro",
-      "name": "Xiaomi Mimo V2.5 Pro",
-      "pricing": {
-        "input": 0.48,
-        "output": 0.96,
-        "cache_hit": 0.00384
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -9010,8 +8248,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -9027,8 +8264,7 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true,
-        "audio": false
+        "vision": true
       }
     },
     {
@@ -9045,12 +8281,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false,
-        "audio": false
+        "vision": false
       }
     }
-  ],
-  "default_headers": {
-    "APP-Code": "IUFF7106"
-  }
+  ]
 }

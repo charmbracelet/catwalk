@@ -3,9 +3,13 @@
   "id": "vercel",
   "api_key": "$VERCEL_API_KEY",
   "api_endpoint": "https://ai-gateway.vercel.sh/v1",
-  "type": "completions",
+  "type": "vercel",
   "default_large_model_id": "deepseek/deepseek-v4.1-flash",
   "default_small_model_id": "deepseek/deepseek-v4.1-flash",
+  "default_headers": {
+    "HTTP-Referer": "https://charm.land",
+    "X-Title": "Crush"
+  },
   "models": [
     {
       "id": "callstack/apex",
@@ -1972,7 +1976,22 @@
       "context_window": 128000,
       "default_max_tokens": 8192,
       "reasoning": {
-        "thinking": "always"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
         "vision": false
@@ -2487,44 +2506,12 @@
       "id": "zai/glm-5.3",
       "name": "GLM 5.3",
       "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.14
+        "input": 1.2,
+        "output": 4,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
-      "default_max_tokens": 1000000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "zai/glm-5.3-promo-50",
-      "name": "GLM 5.3 (50% off)",
-      "pricing": {
-        "input": 0.7,
-        "output": 2.2,
-        "cache_hit": 0.13
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3894,38 +3881,6 @@
       }
     },
     {
-      "id": "openai/gpt-3.5-turbo",
-      "name": "GPT-3.5 Turbo",
-      "pricing": {
-        "input": 0.5,
-        "output": 1.5
-      },
-      "context_window": 16385,
-      "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "openai/gpt-4-turbo",
-      "name": "GPT-4 Turbo",
-      "pricing": {
-        "input": 10,
-        "output": 30
-      },
-      "context_window": 128000,
-      "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "openai/gpt-4.1",
       "name": "GPT-4.1",
       "pricing": {
@@ -4033,41 +3988,7 @@
       "pricing": {
         "input": 0.1,
         "output": 0.4,
-        "cache_hit": 0.025
-      },
-      "context_window": 1047576,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "openai/gpt-4.1-nano-batch",
-      "name": "GPT-4.1 nano (Batch)",
-      "pricing": {
-        "input": 0.05,
-        "output": 0.2,
-        "cache_hit": 0.0125
-      },
-      "context_window": 1047576,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "openai/gpt-4.1-nano-fast",
-      "name": "GPT-4.1 nano (Fast)",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.8,
-        "cache_hit": 0.05
+        "cache_hit": 0.03
       },
       "context_window": 1047576,
       "default_max_tokens": 32768,
@@ -4959,6 +4880,72 @@
       }
     },
     {
+      "id": "openai/gpt-6.1-terra",
+      "name": "GPT-6.1 Terra",
+      "pricing": {
+        "input": 1,
+        "output": 5,
+        "cache_create": 1.25,
+        "cache_hit": 0.05
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "openai/gpt-6.1-terra-fast",
+      "name": "GPT-6.1 Terra (Fast)",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "google/gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "pricing": {
@@ -5757,55 +5744,6 @@
       }
     },
     {
-      "id": "spacexai/grok-4.1-fast-non-reasoning",
-      "name": "Grok 4.1 Fast Non-Reasoning",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.5,
-        "cache_hit": 0.05
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 1000000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "spacexai/grok-4.1-fast-reasoning",
-      "name": "Grok 4.1 Fast Reasoning",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.5,
-        "cache_hit": 0.05
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 1000000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "spacexai/grok-4.20-non-reasoning-beta",
       "name": "Grok 4.20 Beta Non-Reasoning",
       "pricing": {
@@ -6575,6 +6513,72 @@
       }
     },
     {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2,
+        "cache_hit": 0.2
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro-highspeed",
+      "name": "Kimi K3.1 Pro Highspeed",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 4,
+        "cache_hit": 0.2
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
       "id": "liquid/lfm2.5-24b-a2b",
       "name": "LFM2.5-24B-A2B",
       "pricing": {
@@ -7214,38 +7218,6 @@
       }
     },
     {
-      "id": "xiaomi/mimo-v2.5-pro-ultraspeed",
-      "name": "MiMo V2.5 Pro UltraSpeed",
-      "pricing": {
-        "input": 1.305,
-        "output": 2.61,
-        "cache_hit": 0.0108
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
       "id": "minimax/minimax-m2",
       "name": "MiniMax M2",
       "pricing": {
@@ -7444,37 +7416,6 @@
       }
     },
     {
-      "id": "minimax/minimax-m2.7-free",
-      "name": "MiniMax M2.7 (Free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 196608,
-      "default_max_tokens": 196608,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
-      }
-    },
-    {
       "id": "minimax/minimax-m2.7-highspeed",
       "name": "MiniMax M2.7 High Speed",
       "pricing": {
@@ -7540,45 +7481,15 @@
       }
     },
     {
-      "id": "minimax/minimax-m3-free",
-      "name": "MiniMax M3 (Free)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
       "id": "minimax/minimax-m3.1-flash",
       "name": "MiniMax-M3.1-Flash",
       "pricing": {
-        "input": 0,
-        "output": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_hit": 0.015
       },
-      "context_window": 1000000,
-      "default_max_tokens": 524288,
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -8225,9 +8136,9 @@
       "id": "amazon/nova-2-lite",
       "name": "Nova 2 Lite",
       "pricing": {
-        "input": 0.3,
-        "output": 2.5,
-        "cache_hit": 0.075
+        "input": 0.33,
+        "output": 2.75,
+        "cache_hit": 0.0825
       },
       "context_window": 1000000,
       "default_max_tokens": 1000000,
@@ -8258,7 +8169,8 @@
       "name": "Nova Lite",
       "pricing": {
         "input": 0.06,
-        "output": 0.24
+        "output": 0.24,
+        "cache_hit": 0.015
       },
       "context_window": 300000,
       "default_max_tokens": 8192,
@@ -8274,7 +8186,8 @@
       "name": "Nova Micro",
       "pricing": {
         "input": 0.035,
-        "output": 0.14
+        "output": 0.14,
+        "cache_hit": 0.0087
       },
       "context_window": 128000,
       "default_max_tokens": 8192,
@@ -8290,7 +8203,8 @@
       "name": "Nova Pro",
       "pricing": {
         "input": 0.8,
-        "output": 3.2
+        "output": 3.2,
+        "cache_hit": 0.2
       },
       "context_window": 300000,
       "default_max_tokens": 8192,
@@ -8682,38 +8596,6 @@
       },
       "context_window": 991000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "alibaba/qwen3.8-flash-next",
-      "name": "Qwen 3.8 Flash Next",
-      "pricing": {
-        "input": 0.12,
-        "output": 0.4,
-        "cache_hit": 0.01
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -9320,7 +9202,8 @@
       "name": "Trinity Large Thinking",
       "pricing": {
         "input": 0.25,
-        "output": 0.8
+        "output": 0.8,
+        "cache_hit": 0.06
       },
       "context_window": 262100,
       "default_max_tokens": 80000,
@@ -9357,7 +9240,22 @@
       "context_window": 200000,
       "default_max_tokens": 100000,
       "reasoning": {
-        "thinking": "always"
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
       },
       "capabilities": {
         "vision": true
@@ -9521,42 +9419,6 @@
       "capabilities": {
         "vision": true
       }
-    },
-    {
-      "id": "openai/o4-mini-fast",
-      "name": "o4-mini (Fast)",
-      "pricing": {
-        "input": 2,
-        "output": 8,
-        "cache_hit": 0.5
-      },
-      "context_window": 200000,
-      "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
     }
-  ],
-  "default_headers": {
-    "HTTP-Referer": "https://charm.land",
-    "X-Title": "Crush"
-  }
+  ]
 }
