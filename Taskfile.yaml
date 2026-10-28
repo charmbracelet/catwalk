@@ -68,6 +68,7 @@ tasks:
       - task: gen:ionet
       - task: gen:nebius
       - task: gen:neuralwatt
+      - task: gen:obscurify
       - task: gen:opencode-go
       - task: gen:opencode-zen
       - task: gen:openrouter
@@ -130,6 +131,11 @@ tasks:
     desc: Generate Neuralwatt provider configurations
     cmds:
       - go run cmd/neuralwatt/main.go
+
+  gen:obscurify:
+    desc: Generate Obscurify.ai provider configurations
+    cmds:
+      - go run cmd/obscurify/main.go
 
   gen:opencode-go:
     desc: Generate OpenCode Go provider configurations

@@ -62,6 +62,10 @@ jobs:
         run: go run ./cmd/ionet/main.go
         continue-on-error: true
 
+      - name: Obscurify.ai
+        run: go run ./cmd/obscurify/main.go
+        continue-on-error: true
+
       - name: OpenCode Go
         run: go run ./cmd/opencode-go/main.go
         continue-on-error: true
