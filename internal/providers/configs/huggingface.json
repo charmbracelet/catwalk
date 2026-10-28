@@ -4,9 +4,21 @@
   "api_key": "$HF_TOKEN",
   "api_endpoint": "https://router.huggingface.co/v1",
   "type": "openai-compat",
-  "default_large_model_id": "openai/gpt-oss-120b:cerebras",
-  "default_small_model_id": "openai/gpt-oss-120b:cerebras",
+  "default_large_model_id": "Qwen/Qwen3.8-27B:cerebras",
+  "default_small_model_id": "Qwen/Qwen3.8-27B:cerebras",
   "models": [
+    {
+      "id": "Qwen/Qwen3.8-27B:cerebras",
+      "name": "Qwen/Qwen3.8-27B (cerebras)",
+      "cost_per_1m_in": 0.99,
+      "cost_per_1m_out": 1.49,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 65536,
+      "default_max_tokens": 8192,
+      "can_reason": false,
+      "supports_attachments": false
+    },
     {
       "id": "openai/gpt-oss-120b:cerebras",
       "name": "openai/gpt-oss-120b (cerebras)",
