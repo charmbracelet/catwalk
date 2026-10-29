@@ -20,18 +20,6 @@
       "supports_attachments": false
     },
     {
-      "id": "DeepSeek-V4.1-Flash",
-      "name": "DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.103,
-      "cost_per_1m_out": 0.715,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.0154,
-      "context_window": 1048576,
-      "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": true
-    },
-    {
       "id": "DeepSeek-V4.1-Flash-1017",
       "name": "DeepSeek V4.1 Flash 1017",
       "cost_per_1m_in": 0.15,
@@ -82,10 +70,10 @@
     {
       "id": "GLM-5.2",
       "name": "GLM 5.2",
-      "cost_per_1m_in": 0.966,
-      "cost_per_1m_out": 3.036,
+      "cost_per_1m_in": 0.7,
+      "cost_per_1m_out": 2.2,
       "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.1449,
+      "cost_per_1m_out_cached": 0.105,
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "can_reason": true,
@@ -208,18 +196,6 @@
       "cost_per_1m_out_cached": 0.03,
       "context_window": 262144,
       "default_max_tokens": 32768,
-      "can_reason": true,
-      "supports_attachments": false
-    },
-    {
-      "id": "Qwen3-8B-FP8",
-      "name": "Qwen 3 8B",
-      "cost_per_1m_in": 0.117,
-      "cost_per_1m_out": 0.455,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.0175,
-      "context_window": 40960,
-      "default_max_tokens": 10240,
       "can_reason": true,
       "supports_attachments": false
     },
