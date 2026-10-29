@@ -3,7 +3,7 @@
   "id": "pioneer",
   "api_key": "$PIONEER_API_KEY",
   "api_endpoint": "https://api.fastino.ai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "claude-opus-5",
   "default_small_model_id": "deepseek-ai/DeepSeek-V4-Flash",
   "models": [
@@ -22,7 +22,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -40,7 +41,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -58,7 +60,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -76,7 +79,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     }
   ]

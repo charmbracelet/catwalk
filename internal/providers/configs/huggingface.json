@@ -3,13 +3,9 @@
   "id": "huggingface",
   "api_key": "$HF_TOKEN",
   "api_endpoint": "https://router.huggingface.co/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "Qwen/Qwen3.8-27B:cerebras",
   "default_small_model_id": "Qwen/Qwen3.8-27B:cerebras",
-  "default_headers": {
-    "HTTP-Referer": "https://charm.land",
-    "X-Title": "Crush"
-  },
   "models": [
     {
       "id": "Qwen/Qwen3.8-27B:cerebras",
@@ -24,7 +20,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -40,7 +37,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -56,7 +54,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -72,7 +71,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -88,8 +88,13 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     }
-  ]
+  ],
+  "default_headers": {
+    "HTTP-Referer": "https://charm.land",
+    "X-Title": "Crush"
+  }
 }

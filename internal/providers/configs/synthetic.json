@@ -13,7 +13,6 @@
       "pricing": {
         "input": 0.6,
         "output": 1.2,
-        "cache_create": 0.03,
         "cache_hit": 0.03
       },
       "context_window": 524288,
@@ -37,7 +36,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -46,7 +46,6 @@
       "pricing": {
         "input": 0.6,
         "output": 1.2,
-        "cache_create": 0.03,
         "cache_hit": 0.03
       },
       "context_window": 524288,
@@ -70,7 +69,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -79,7 +79,6 @@
       "pricing": {
         "input": 0.1,
         "output": 0.5,
-        "cache_create": 0.02,
         "cache_hit": 0.02
       },
       "context_window": 196608,
@@ -103,40 +102,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "hf:zai-org/GLM-5.2",
-      "name": "GLM 5.2",
-      "pricing": {
-        "input": 1,
-        "output": 3,
-        "cache_create": 0.16,
-        "cache_hit": 0.16
-      },
-      "context_window": 524288,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -145,7 +112,6 @@
       "pricing": {
         "input": 1.4,
         "output": 4.4,
-        "cache_create": 0.26,
         "cache_hit": 0.26
       },
       "context_window": 524288,
@@ -169,7 +135,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -178,7 +145,6 @@
       "pricing": {
         "input": 0.15,
         "output": 0.5,
-        "cache_create": 0.04,
         "cache_hit": 0.04
       },
       "context_window": 524288,
@@ -202,7 +168,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -211,7 +178,6 @@
       "pricing": {
         "input": 3,
         "output": 15,
-        "cache_create": 0.45,
         "cache_hit": 0.45
       },
       "context_window": 524288,
@@ -235,7 +201,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -244,7 +211,6 @@
       "pricing": {
         "input": 0.3,
         "output": 1,
-        "cache_create": 0.06,
         "cache_hit": 0.06
       },
       "context_window": 262144,
@@ -268,7 +234,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -277,7 +244,6 @@
       "pricing": {
         "input": 0.45,
         "output": 2.2,
-        "cache_create": 0.09,
         "cache_hit": 0.09
       },
       "context_window": 262144,
@@ -286,7 +252,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -295,7 +262,6 @@
       "pricing": {
         "input": 0.1,
         "output": 0.1,
-        "cache_create": 0.02,
         "cache_hit": 0.02
       },
       "context_window": 131072,
@@ -319,7 +285,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -350,7 +317,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -359,7 +327,6 @@
       "pricing": {
         "input": 0.6,
         "output": 1.2,
-        "cache_create": 0.03,
         "cache_hit": 0.03
       },
       "context_window": 524288,
@@ -383,7 +350,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -392,7 +360,6 @@
       "pricing": {
         "input": 3,
         "output": 15,
-        "cache_create": 0.45,
         "cache_hit": 0.45
       },
       "context_window": 524288,
@@ -416,7 +383,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -425,7 +393,6 @@
       "pricing": {
         "input": 0.1,
         "output": 0.5,
-        "cache_create": 0.02,
         "cache_hit": 0.02
       },
       "context_window": 196608,
@@ -449,7 +416,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -458,7 +426,6 @@
       "pricing": {
         "input": 0.6,
         "output": 1.2,
-        "cache_create": 0.03,
         "cache_hit": 0.03
       },
       "context_window": 524288,
@@ -482,7 +449,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     }
   ]

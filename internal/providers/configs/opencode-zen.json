@@ -3,10 +3,9 @@
   "id": "opencode-zen",
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "mimo-v2.6-flash-free",
   "default_small_model_id": "mimo-v2.6-flash-free",
-  "session_affinity_header": "x-opencode-session",
   "models": [
     {
       "id": "beam-free",
@@ -36,7 +35,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -67,17 +67,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "claude-fable-5",
+      "type": "messages",
       "name": "Claude Fable 5",
       "pricing": {
         "input": 10,
         "output": 50,
-        "cache_create": 1,
-        "cache_hit": 12.5
+        "cache_create": 12.5,
+        "cache_hit": 1
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -100,17 +102,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-fable-5-1",
+      "type": "messages",
       "name": "Claude Fable 5.1",
       "pricing": {
         "input": 10,
         "output": 50,
-        "cache_create": 0.25,
-        "cache_hit": 12.5
+        "cache_create": 12.5,
+        "cache_hit": 0.25
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -133,17 +137,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-haiku-4-5",
+      "type": "messages",
       "name": "Claude Haiku 4.5",
       "pricing": {
         "input": 1,
         "output": 5,
-        "cache_create": 0.1,
-        "cache_hit": 1.25
+        "cache_create": 1.25,
+        "cache_hit": 0.1
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -166,17 +172,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-haiku-5-5",
+      "type": "messages",
       "name": "Claude Haiku 5.5",
       "pricing": {
         "input": 0.1,
         "output": 0.5,
-        "cache_create": 0.01,
-        "cache_hit": 0.13
+        "cache_create": 0.13,
+        "cache_hit": 0.01
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -199,17 +207,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-5",
+      "type": "messages",
       "name": "Claude Opus 4.5",
       "pricing": {
         "input": 5,
         "output": 25,
-        "cache_create": 0.5,
-        "cache_hit": 6.25
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
@@ -232,17 +242,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-6",
+      "type": "messages",
       "name": "Claude Opus 4.6",
       "pricing": {
         "input": 5,
         "output": 25,
-        "cache_create": 0.5,
-        "cache_hit": 6.25
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -265,17 +277,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-7",
+      "type": "messages",
       "name": "Claude Opus 4.7",
       "pricing": {
         "input": 5,
         "output": 25,
-        "cache_create": 0.5,
-        "cache_hit": 6.25
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -298,17 +312,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-4-8",
+      "type": "messages",
       "name": "Claude Opus 4.8",
       "pricing": {
         "input": 5,
         "output": 25,
-        "cache_create": 0.5,
-        "cache_hit": 6.25
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -331,17 +347,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-5",
+      "type": "messages",
       "name": "Claude Opus 5",
       "pricing": {
         "input": 5,
         "output": 25,
-        "cache_create": 0.5,
-        "cache_hit": 6.25
+        "cache_create": 6.25,
+        "cache_hit": 0.5
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -364,17 +382,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-opus-5-5",
+      "type": "messages",
       "name": "Claude Opus 5.5",
       "pricing": {
         "input": 4,
         "output": 20,
-        "cache_create": 0.2,
-        "cache_hit": 5
+        "cache_create": 5,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -397,17 +417,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-sonnet-4-5",
+      "type": "messages",
       "name": "Claude Sonnet 4.5",
       "pricing": {
         "input": 3,
         "output": 15,
-        "cache_create": 0.3,
-        "cache_hit": 3.75
+        "cache_create": 3.75,
+        "cache_hit": 0.3
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -430,17 +452,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-sonnet-4-6",
+      "type": "messages",
       "name": "Claude Sonnet 4.6",
       "pricing": {
         "input": 3,
         "output": 15,
-        "cache_create": 0.3,
-        "cache_hit": 3.75
+        "cache_create": 3.75,
+        "cache_hit": 0.3
       },
       "context_window": 1000000,
       "default_max_tokens": 64000,
@@ -463,17 +487,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-sonnet-5",
+      "type": "messages",
       "name": "Claude Sonnet 5",
       "pricing": {
         "input": 2,
         "output": 10,
-        "cache_create": 0.2,
-        "cache_hit": 2.5
+        "cache_create": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -496,17 +522,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "claude-sonnet-5-5",
+      "type": "messages",
       "name": "Claude Sonnet 5.5",
       "pricing": {
         "input": 2,
         "output": 10,
-        "cache_create": 0.2,
-        "cache_hit": 2.5
+        "cache_create": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -529,7 +557,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -538,7 +567,7 @@
       "pricing": {
         "input": 1.74,
         "output": 3.48,
-        "cache_create": 0.14
+        "cache_hit": 0.14
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -561,7 +590,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -570,7 +600,7 @@
       "pricing": {
         "input": 0.3,
         "output": 1.2,
-        "cache_create": 0.01
+        "cache_hit": 0.01
       },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -593,7 +623,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -624,7 +655,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -655,7 +687,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -664,7 +697,7 @@
       "pricing": {
         "input": 1,
         "output": 3.2,
-        "cache_create": 0.2
+        "cache_hit": 0.2
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -687,7 +720,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -696,7 +730,7 @@
       "pricing": {
         "input": 1.4,
         "output": 4.4,
-        "cache_create": 0.26
+        "cache_hit": 0.26
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -719,7 +753,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -728,7 +763,7 @@
       "pricing": {
         "input": 1.4,
         "output": 4.4,
-        "cache_create": 0.26
+        "cache_hit": 0.26
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -751,7 +786,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -760,7 +796,7 @@
       "pricing": {
         "input": 1.4,
         "output": 4.4,
-        "cache_create": 0.26
+        "cache_hit": 0.26
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -783,7 +819,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -792,7 +829,7 @@
       "pricing": {
         "input": 0.15,
         "output": 0.5,
-        "cache_create": 0.03
+        "cache_hit": 0.03
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -815,7 +852,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -846,16 +884,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5",
+      "type": "responses",
       "name": "GPT-5",
       "pricing": {
         "input": 1.07,
         "output": 8.5,
-        "cache_create": 0.11
+        "cache_hit": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -878,16 +918,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5-codex",
+      "type": "responses",
       "name": "GPT-5 Codex",
       "pricing": {
         "input": 1.07,
         "output": 8.5,
-        "cache_create": 0.11
+        "cache_hit": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -910,16 +952,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5-nano",
+      "type": "responses",
       "name": "GPT-5 Nano",
       "pricing": {
         "input": 0.05,
         "output": 0.4,
-        "cache_create": 0.01
+        "cache_hit": 0.01
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -942,16 +986,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.1",
+      "type": "responses",
       "name": "GPT-5.1",
       "pricing": {
         "input": 1.07,
         "output": 8.5,
-        "cache_create": 0.11
+        "cache_hit": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -974,16 +1020,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.1-codex",
+      "type": "responses",
       "name": "GPT-5.1 Codex",
       "pricing": {
         "input": 1.07,
         "output": 8.5,
-        "cache_create": 0.11
+        "cache_hit": 0.11
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1006,16 +1054,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.1-codex-max",
+      "type": "responses",
       "name": "GPT-5.1 Codex Max",
       "pricing": {
         "input": 1.25,
         "output": 10,
-        "cache_create": 0.13
+        "cache_hit": 0.13
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1038,16 +1088,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.1-codex-mini",
+      "type": "responses",
       "name": "GPT-5.1 Codex Mini",
       "pricing": {
         "input": 0.25,
         "output": 2,
-        "cache_create": 0.03
+        "cache_hit": 0.03
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1070,16 +1122,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.2",
+      "type": "responses",
       "name": "GPT-5.2",
       "pricing": {
         "input": 1.75,
         "output": 14,
-        "cache_create": 0.18
+        "cache_hit": 0.18
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1102,16 +1156,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.2-codex",
+      "type": "responses",
       "name": "GPT-5.2 Codex",
       "pricing": {
         "input": 1.75,
         "output": 14,
-        "cache_create": 0.18
+        "cache_hit": 0.18
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1134,16 +1190,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.3-codex",
+      "type": "responses",
       "name": "GPT-5.3 Codex",
       "pricing": {
         "input": 1.75,
         "output": 14,
-        "cache_create": 0.18
+        "cache_hit": 0.18
       },
       "context_window": 400000,
       "default_max_tokens": 128000,
@@ -1166,16 +1224,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.3-codex-spark",
+      "type": "responses",
       "name": "GPT-5.3 Codex Spark",
       "pricing": {
         "input": 1.75,
         "output": 14,
-        "cache_create": 0.18
+        "cache_hit": 0.18
       },
       "context_window": 128000,
       "default_max_tokens": 128000,
@@ -1198,208 +1258,17 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.4",
+      "type": "responses",
       "name": "GPT-5.4",
       "pricing": {
         "input": 2.5,
         "output": 15,
-        "cache_create": 0.25
-      },
-      "context_window": 1050000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.4-mini",
-      "name": "GPT-5.4 Mini",
-      "pricing": {
-        "input": 0.75,
-        "output": 4.5,
-        "cache_create": 0.08
-      },
-      "context_window": 400000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.4-nano",
-      "name": "GPT-5.4 Nano",
-      "pricing": {
-        "input": 0.2,
-        "output": 1.25,
-        "cache_create": 0.02
-      },
-      "context_window": 400000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.4-pro",
-      "name": "GPT-5.4 Pro",
-      "pricing": {
-        "input": 30,
-        "output": 180,
-        "cache_create": 30
-      },
-      "context_window": 1050000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.5",
-      "name": "GPT-5.5",
-      "pricing": {
-        "input": 5,
-        "output": 30,
-        "cache_create": 0.5
-      },
-      "context_window": 1050000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.5-pro",
-      "name": "GPT-5.5 Pro",
-      "pricing": {
-        "input": 30,
-        "output": 180,
-        "cache_create": 30
-      },
-      "context_window": 1050000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "gpt-5.6-luna",
-      "name": "GPT-5.6 Luna",
-      "pricing": {
-        "input": 0.2,
-        "output": 1.2,
-        "cache_create": 0.02,
         "cache_hit": 0.25
       },
       "context_window": 1050000,
@@ -1423,17 +1292,224 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "type": "responses",
+      "name": "GPT-5.4 Mini",
+      "pricing": {
+        "input": 0.75,
+        "output": 4.5,
+        "cache_hit": 0.08
+      },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "gpt-5.4-nano",
+      "type": "responses",
+      "name": "GPT-5.4 Nano",
+      "pricing": {
+        "input": 0.2,
+        "output": 1.25,
+        "cache_hit": 0.02
+      },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "gpt-5.4-pro",
+      "type": "responses",
+      "name": "GPT-5.4 Pro",
+      "pricing": {
+        "input": 30,
+        "output": 180,
+        "cache_hit": 30
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "gpt-5.5",
+      "type": "responses",
+      "name": "GPT-5.5",
+      "pricing": {
+        "input": 5,
+        "output": 30,
+        "cache_hit": 0.5
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "gpt-5.5-pro",
+      "type": "responses",
+      "name": "GPT-5.5 Pro",
+      "pricing": {
+        "input": 30,
+        "output": 180,
+        "cache_hit": 30
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "type": "responses",
+      "name": "GPT-5.6 Luna",
+      "pricing": {
+        "input": 0.2,
+        "output": 1.2,
+        "cache_create": 0.25,
+        "cache_hit": 0.02
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.6-sol",
+      "type": "responses",
       "name": "GPT-5.6 Sol",
       "pricing": {
         "input": 4,
         "output": 20,
-        "cache_create": 0.4,
-        "cache_hit": 5
+        "cache_create": 5,
+        "cache_hit": 0.4
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1456,17 +1532,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-5.6-terra",
+      "type": "responses",
       "name": "GPT-5.6 Terra",
       "pricing": {
         "input": 2,
         "output": 12,
-        "cache_create": 0.2,
-        "cache_hit": 2.5
+        "cache_create": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1489,17 +1567,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-6-astra",
+      "type": "responses",
       "name": "GPT-6 Astra",
       "pricing": {
         "input": 10,
         "output": 50,
-        "cache_create": 1,
-        "cache_hit": 12.5
+        "cache_create": 12.5,
+        "cache_hit": 1
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1522,17 +1602,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-6-luna",
+      "type": "responses",
       "name": "GPT-6 Luna",
       "pricing": {
         "input": 0.1,
         "output": 0.5,
-        "cache_create": 0.01,
-        "cache_hit": 0.13
+        "cache_create": 0.13,
+        "cache_hit": 0.01
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1555,17 +1637,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-6-sol",
+      "type": "responses",
       "name": "GPT-6 Sol",
       "pricing": {
         "input": 2,
         "output": 10,
-        "cache_create": 0.2,
-        "cache_hit": 2.5
+        "cache_create": 2.5,
+        "cache_hit": 0.2
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1588,17 +1672,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "gpt-6.1-sol",
+      "type": "responses",
       "name": "GPT-6.1 Sol",
       "pricing": {
         "input": 2,
         "output": 10,
-        "cache_create": 0.1,
-        "cache_hit": 2.5
+        "cache_create": 2.5,
+        "cache_hit": 0.1
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
@@ -1621,7 +1707,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1630,7 +1717,7 @@
       "pricing": {
         "input": 0.5,
         "output": 3,
-        "cache_create": 0.05
+        "cache_hit": 0.05
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1653,7 +1740,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1662,7 +1750,7 @@
       "pricing": {
         "input": 2,
         "output": 12,
-        "cache_create": 0.2
+        "cache_hit": 0.2
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1685,7 +1773,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1694,7 +1783,7 @@
       "pricing": {
         "input": 1.5,
         "output": 9,
-        "cache_create": 0.15
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1717,7 +1806,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1726,7 +1816,7 @@
       "pricing": {
         "input": 0.3,
         "output": 2.5,
-        "cache_create": 0.03
+        "cache_hit": 0.03
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1749,7 +1839,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1758,7 +1849,7 @@
       "pricing": {
         "input": 1.5,
         "output": 7.5,
-        "cache_create": 0.15
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1781,7 +1872,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1790,7 +1882,7 @@
       "pricing": {
         "input": 1.5,
         "output": 7.5,
-        "cache_create": 0.15
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1813,7 +1905,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1822,7 +1915,7 @@
       "pricing": {
         "input": 1.5,
         "output": 7.5,
-        "cache_create": 0.15
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1845,7 +1938,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1854,7 +1948,7 @@
       "pricing": {
         "input": 2,
         "output": 10,
-        "cache_create": 0.1
+        "cache_hit": 0.1
       },
       "context_window": 1048576,
       "default_max_tokens": 65536,
@@ -1877,16 +1971,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "grok-4.5",
+      "type": "responses",
       "name": "Grok 4.5",
       "pricing": {
         "input": 2,
         "output": 6,
-        "cache_create": 0.3
+        "cache_hit": 0.3
       },
       "context_window": 500000,
       "default_max_tokens": 500000,
@@ -1909,16 +2005,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "grok-4.6",
+      "type": "responses",
       "name": "Grok 4.6",
       "pricing": {
         "input": 2,
         "output": 6,
-        "cache_create": 0.5
+        "cache_hit": 0.5
       },
       "context_window": 500000,
       "default_max_tokens": 500000,
@@ -1941,16 +2039,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "grok-4.7",
+      "type": "responses",
       "name": "Grok 4.7",
       "pricing": {
         "input": 2,
         "output": 6,
-        "cache_create": 0.5
+        "cache_hit": 0.5
       },
       "context_window": 500000,
       "default_max_tokens": 500000,
@@ -1973,16 +2073,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "grok-build-0.1",
+      "type": "responses",
       "name": "Grok Build 0.1",
       "pricing": {
         "input": 1,
         "output": 2,
-        "cache_create": 0.2
+        "cache_hit": 0.2
       },
       "context_window": 256000,
       "default_max_tokens": 256000,
@@ -2005,7 +2107,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2014,7 +2117,7 @@
       "pricing": {
         "input": 0.6,
         "output": 3,
-        "cache_create": 0.1
+        "cache_hit": 0.1
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -2037,7 +2140,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2046,7 +2150,7 @@
       "pricing": {
         "input": 0.95,
         "output": 4,
-        "cache_create": 0.16
+        "cache_hit": 0.16
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -2069,7 +2173,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2078,7 +2183,7 @@
       "pricing": {
         "input": 0.95,
         "output": 4,
-        "cache_create": 0.19
+        "cache_hit": 0.19
       },
       "context_window": 262144,
       "default_max_tokens": 262144,
@@ -2101,7 +2206,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2110,8 +2216,8 @@
       "pricing": {
         "input": 3,
         "output": 15,
-        "cache_create": 0.3,
-        "cache_hit": 3
+        "cache_create": 3,
+        "cache_hit": 0.3
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -2134,7 +2240,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2165,7 +2272,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2174,7 +2282,7 @@
       "pricing": {
         "input": 0.3,
         "output": 1.2,
-        "cache_create": 0.06
+        "cache_hit": 0.06
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -2197,7 +2305,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2206,7 +2315,7 @@
       "pricing": {
         "input": 0.3,
         "output": 1.2,
-        "cache_create": 0.06
+        "cache_hit": 0.06
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -2229,7 +2338,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2238,7 +2348,7 @@
       "pricing": {
         "input": 0.3,
         "output": 1.2,
-        "cache_create": 0.06
+        "cache_hit": 0.06
       },
       "context_window": 512000,
       "default_max_tokens": 128000,
@@ -2261,7 +2371,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2270,7 +2381,7 @@
       "pricing": {
         "input": 0.68,
         "output": 2.09,
-        "cache_create": 0.07
+        "cache_hit": 0.07
       },
       "context_window": 524288,
       "default_max_tokens": 262144,
@@ -2293,16 +2404,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "muse-spark-1.2",
+      "type": "responses",
       "name": "Muse Spark 1.2",
       "pricing": {
         "input": 1.25,
         "output": 4.25,
-        "cache_create": 0.15
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -2325,16 +2438,18 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "muse-spark-1.3",
+      "type": "responses",
       "name": "Muse Spark 1.3",
       "pricing": {
         "input": 1.25,
         "output": 4.25,
-        "cache_create": 0.15
+        "cache_hit": 0.15
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -2357,7 +2472,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2366,7 +2482,7 @@
       "pricing": {
         "input": 4,
         "output": 20,
-        "cache_create": 0.2
+        "cache_hit": 0.2
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -2389,7 +2505,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2420,7 +2537,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2451,17 +2569,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "qwen3.5-plus",
+      "type": "messages",
       "name": "Qwen3.5 Plus",
       "pricing": {
         "input": 0.2,
         "output": 1.2,
-        "cache_create": 0.02,
-        "cache_hit": 0.25
+        "cache_create": 0.25,
+        "cache_hit": 0.02
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -2484,17 +2604,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "qwen3.6-plus",
+      "type": "messages",
       "name": "Qwen3.6 Plus",
       "pricing": {
         "input": 0.5,
         "output": 3,
-        "cache_create": 0.05,
-        "cache_hit": 0.63
+        "cache_create": 0.63,
+        "cache_hit": 0.05
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -2517,17 +2639,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "qwen3.8-flash",
+      "type": "messages",
       "name": "Qwen3.8 Flash",
       "pricing": {
         "input": 0.15,
         "output": 0.47,
-        "cache_create": 0.02,
-        "cache_hit": 0.2
+        "cache_create": 0.2,
+        "cache_hit": 0.02
       },
       "context_window": 1000000,
       "default_max_tokens": 131072,
@@ -2550,17 +2674,19 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
       "id": "qwen3.8-max",
+      "type": "messages",
       "name": "Qwen3.8 Max",
       "pricing": {
         "input": 2,
         "output": 6,
-        "cache_create": 0.25,
-        "cache_hit": 2.5
+        "cache_create": 2.5,
+        "cache_hit": 0.25
       },
       "context_window": 262144,
       "default_max_tokens": 131072,
@@ -2583,23 +2709,8 @@
         "default_effort_level": "xhigh"
       },
       "capabilities": {
-        "vision": true
-      }
-    },
-    {
-      "id": "claude-opus-5-5-backup",
-      "name": "claude-opus-5-5-backup",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 200000,
-      "default_max_tokens": 20000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2615,7 +2726,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2631,24 +2743,10 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "test",
-      "name": "test",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 200000,
-      "default_max_tokens": 20000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     }
-  ]
+  ],
+  "session_affinity_header": "x-opencode-session"
 }
