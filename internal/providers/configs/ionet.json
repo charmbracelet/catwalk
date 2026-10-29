@@ -3,441 +3,759 @@
   "id": "ionet",
   "api_key": "$IONET_API_KEY",
   "api_endpoint": "https://api.intelligence.io.solutions/api/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "moonshotai/Kimi-K2.5",
   "default_small_model_id": "zai-org/GLM-4.7-Flash",
   "models": [
     {
       "id": "deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek: DeepSeek V3.2",
-      "cost_per_1m_in": 1.4341,
-      "cost_per_1m_out": 2.5143,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.71705,
+      "pricing": {
+        "input": 1.49376,
+        "output": 2.13792,
+        "cache_hit": 0.74688
+      },
       "context_window": 163840,
       "default_max_tokens": 16384,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek: DeepSeek V4 Flash",
-      "cost_per_1m_in": 0.1488,
-      "cost_per_1m_out": 0.3216,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.0744,
+      "pricing": {
+        "input": 0.308,
+        "output": 0.526,
+        "cache_hit": 0.154
+      },
       "context_window": 32768,
       "default_max_tokens": 3276,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.7",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
-      "cost_per_1m_in": 0.424,
-      "cost_per_1m_out": 1.612,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.212,
+      "pricing": {
+        "input": 0.402,
+        "output": 1.488,
+        "cache_hit": 0.201
+      },
       "context_window": 262100,
       "default_max_tokens": 6553,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
-      "cost_per_1m_in": 0.2276,
-      "cost_per_1m_out": 0.7426,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.1138,
+      "pricing": {
+        "input": 0.126,
+        "output": 0.262,
+        "cache_hit": 0.063
+      },
       "context_window": 262100,
       "default_max_tokens": 6553,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek: DeepSeek V4 Pro",
-      "cost_per_1m_in": 1.51466,
-      "cost_per_1m_out": 3.02952,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.75733,
+      "pricing": {
+        "input": 1.568,
+        "output": 3.078,
+        "cache_hit": 0.784
+      },
       "context_window": 1048576,
       "default_max_tokens": 60000,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "name": "DeepSeek: DeepSeek V4 Pro 0813",
+      "pricing": {
+        "input": 1.079,
+        "output": 4.028,
+        "cache_hit": 0.5395
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 39321,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek: DeepSeek V4.1 Flash",
-      "cost_per_1m_in": 0.28,
-      "cost_per_1m_out": 1.09,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.14,
-      "context_window": 262124,
+      "pricing": {
+        "input": 0.308,
+        "output": 1.21,
+        "cache_hit": 0.154
+      },
+      "context_window": 1048320,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Google: Gemma 4 26B A4B",
-      "cost_per_1m_in": 0.098,
-      "cost_per_1m_out": 0.334,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.049,
+      "pricing": {
+        "input": 0.106,
+        "output": 0.328,
+        "cache_hit": 0.053
+      },
       "context_window": 256000,
       "default_max_tokens": 25600,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "google/gemma-4-31b-it",
       "name": "Google: Gemma 4 31B Instruct",
-      "cost_per_1m_in": 0.38,
-      "cost_per_1m_out": 1.15,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.19,
+      "pricing": {
+        "input": 0.309,
+        "output": 0.692,
+        "cache_hit": 0.1545
+      },
       "context_window": 262144,
       "default_max_tokens": 1638,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "Intel/Qwen3-Coder-480B-A35B-Instruct-int4-mixed-ar",
       "name": "Intel: Qwen3 Coder 480B A35B Instruct INT4 Mixed AR",
-      "cost_per_1m_in": 0.445,
-      "cost_per_1m_out": 2.145,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2225,
+      "pricing": {
+        "input": 0.325,
+        "output": 1.25,
+        "cache_hit": 0.1625
+      },
       "context_window": 106000,
       "default_max_tokens": 10600,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
       "name": "Meta-Llama: Llama 4 Maverick 17B 128E Instruct FP8",
-      "cost_per_1m_in": 0.25188,
-      "cost_per_1m_out": 0.82563,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.12594,
+      "pricing": {
+        "input": 0.26875,
+        "output": 0.82625,
+        "cache_hit": 0.13438
+      },
       "context_window": 430000,
       "default_max_tokens": 43000,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Meta: Llama 3.3 70B Instruct",
-      "cost_per_1m_in": 0.5466,
-      "cost_per_1m_out": 1.0226,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2733,
+      "pricing": {
+        "input": 0.585,
+        "output": 0.768,
+        "cache_hit": 0.2925
+      },
       "context_window": 128000,
       "default_max_tokens": 12800,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.5",
       "name": "MiniMaxAI/MiniMax-M2.5",
-      "cost_per_1m_in": 0.353,
-      "cost_per_1m_out": 1.416,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.1765,
+      "pricing": {
+        "input": 0.353,
+        "output": 1.416,
+        "cache_hit": 0.1765
+      },
       "context_window": 196600,
       "default_max_tokens": 19660,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2-Instruct-0905",
       "name": "MoonshotAI: Kimi K2 Instruct 0905",
-      "cost_per_1m_in": 0.57,
-      "cost_per_1m_out": 2.3,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.285,
+      "pricing": {
+        "input": 0.57,
+        "output": 2.3,
+        "cache_hit": 0.285
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2-Thinking",
       "name": "MoonshotAI: Kimi K2 Thinking",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.5,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.3,
+      "pricing": {
+        "input": 0.6,
+        "output": 2.5,
+        "cache_hit": 0.3
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.5",
       "name": "MoonshotAI: Kimi K2.5",
-      "cost_per_1m_in": 0.5284,
-      "cost_per_1m_out": 2.785,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.2642,
+      "pricing": {
+        "input": 0.5384,
+        "output": 2.835,
+        "cache_hit": 0.2692
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.6",
       "name": "MoonshotAI: Kimi K2.6",
-      "cost_per_1m_in": 0.8797,
-      "cost_per_1m_out": 3.704,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.43985,
+      "pricing": {
+        "input": 0.77,
+        "output": 3.582,
+        "cache_hit": 0.385
+      },
       "context_window": 262142,
       "default_max_tokens": 26214,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K2.7-Code",
       "name": "MoonshotAI: Kimi K2.7 Code",
-      "cost_per_1m_in": 1.072,
-      "cost_per_1m_out": 4.65,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.536,
+      "pricing": {
+        "input": 0.992,
+        "output": 4.42,
+        "cache_hit": 0.496
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "moonshotai/Kimi-K3",
       "name": "MoonshotAI: Kimi K3",
-      "cost_per_1m_in": 3.098,
-      "cost_per_1m_out": 16.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 1.549,
+      "pricing": {
+        "input": 2.5228,
+        "output": 17.2638,
+        "cache_hit": 1.2614
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "NVIDIA: Nemotron 3.5 Lightning",
-      "cost_per_1m_in": 0.07125,
-      "cost_per_1m_out": 0.195,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.03563,
+      "pricing": {
+        "input": 0.05167,
+        "output": 0.16,
+        "cache_hit": 0.02583
+      },
       "context_window": 262144,
       "default_max_tokens": 13107,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "name": "NVIDIA: Nemotron 3.5 Super VL",
+      "pricing": {
+        "input": 0.16,
+        "output": 0.48,
+        "cache_hit": 0.08
+      },
+      "context_window": 262144,
+      "default_max_tokens": 13107,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b",
-      "cost_per_1m_in": 0.178,
-      "cost_per_1m_out": 0.68,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.089,
+      "pricing": {
+        "input": 0.168,
+        "output": 0.63,
+        "cache_hit": 0.084
+      },
       "context_window": 131072,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "openai/gpt-oss-20b",
       "name": "OpenAI: gpt-oss-20b",
-      "cost_per_1m_in": 0.057,
-      "cost_per_1m_out": 0.196,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.0285,
+      "pricing": {
+        "input": 0.045,
+        "output": 0.164,
+        "cache_hit": 0.0225
+      },
       "context_window": 64000,
       "default_max_tokens": 6400,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
-      ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
-      "cost_per_1m_in": 0.1175,
-      "cost_per_1m_out": 1.136,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.05875,
+      "pricing": {
+        "input": 0.09925,
+        "output": 1.1825,
+        "cache_hit": 0.04963
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "Qwen/Qwen3.6-27B",
       "name": "Qwen: Qwen3.6 27B",
-      "cost_per_1m_in": 0.343,
-      "cost_per_1m_out": 3.01,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.1715,
+      "pricing": {
+        "input": 0.319,
+        "output": 3.07,
+        "cache_hit": 0.1595
+      },
       "context_window": 32768,
       "default_max_tokens": 3276,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "Qwen/Qwen3.6-35B-A3B",
       "name": "Qwen: Qwen3.6 35B A3B",
-      "cost_per_1m_in": 0.1672,
-      "cost_per_1m_out": 1.10675,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.0836,
+      "pricing": {
+        "input": 0.13,
+        "output": 1,
+        "cache_hit": 0.065
+      },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "name": "Qwen: Qwen3.8 27B",
-      "cost_per_1m_in": 0.345,
-      "cost_per_1m_out": 2.69,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.1725,
+      "pricing": {
+        "input": 0.498,
+        "output": 2.678,
+        "cache_hit": 0.249
+      },
       "context_window": 65536,
       "default_max_tokens": 6553,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "reflection/Beam-1.0-501B-A23B",
+      "name": "Reflection: Beam 1.0",
+      "pricing": {
+        "input": 0.35,
+        "output": 1.12,
+        "cache_hit": 0.175
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 13107,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "tencent/Hy4-preview",
+      "name": "Tencent: Hy4 Preview",
+      "pricing": {
+        "input": 0.82566,
+        "output": 2.47599,
+        "cache_hit": 0.41283
+      },
+      "context_window": 262144,
+      "default_max_tokens": 6553,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.5",
       "name": "Xiaomi: MiMo-V2.5",
-      "cost_per_1m_in": 0.2018,
-      "cost_per_1m_out": 0.6436,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.1009,
+      "pricing": {
+        "input": 0.4,
+        "output": 2,
+        "cache_hit": 0.2
+      },
       "context_window": 1048576,
       "default_max_tokens": 104857,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2.6-Flash",
+      "name": "Xiaomi: MiMo-V2.6-Flash",
+      "pricing": {
+        "input": 0.1402,
+        "output": 0.2884,
+        "cache_hit": 0.0701
+      },
+      "context_window": 1048320,
+      "default_max_tokens": 13107,
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-4.6",
       "name": "Z.ai: GLM 4.6",
-      "cost_per_1m_in": 0.52,
-      "cost_per_1m_out": 2.0375,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.26,
+      "pricing": {
+        "input": 0.52,
+        "output": 2.0375,
+        "cache_hit": 0.26
+      },
       "context_window": 131072,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-4.7",
       "name": "Z.ai: GLM 4.7",
-      "cost_per_1m_in": 0.52408,
-      "cost_per_1m_out": 2.04584,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.26204,
+      "pricing": {
+        "input": 0.52808,
+        "output": 2.07184,
+        "cache_hit": 0.26404
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-4.7-Flash",
       "name": "Z.ai: GLM 4.7 Flash",
-      "cost_per_1m_in": 0.0635,
-      "cost_per_1m_out": 0.4,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.03175,
+      "pricing": {
+        "input": 0.06525,
+        "output": 0.4,
+        "cache_hit": 0.03263
+      },
       "context_window": 200000,
       "default_max_tokens": 20000,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-5",
       "name": "Z.ai: GLM 5",
-      "cost_per_1m_in": 0.86,
-      "cost_per_1m_out": 2.752,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.43,
+      "pricing": {
+        "input": 0.94,
+        "output": 3.008,
+        "cache_hit": 0.47
+      },
       "context_window": 202752,
       "default_max_tokens": 20275,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-5.1",
       "name": "Z.ai: GLM 5.1",
-      "cost_per_1m_in": 1.358,
-      "cost_per_1m_out": 4.268,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.679,
+      "pricing": {
+        "input": 1.38628,
+        "output": 4.35688,
+        "cache_hit": 0.69314
+      },
       "context_window": 202750,
       "default_max_tokens": 3276,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-5.2",
       "name": "Z.ai: GLM 5.2",
-      "cost_per_1m_in": 1.99,
-      "cost_per_1m_out": 6.44,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.995,
+      "pricing": {
+        "input": 1.438,
+        "output": 6,
+        "cache_hit": 0.719
+      },
       "context_window": 262144,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-5.3",
       "name": "Z.ai: GLM 5.3",
-      "cost_per_1m_in": 1.358,
-      "cost_per_1m_out": 4.268,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.679,
+      "pricing": {
+        "input": 1.584,
+        "output": 5.648,
+        "cache_hit": 0.792
+      },
       "context_window": 262144,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "name": "Z.ai: GLM 5.3 Flash",
-      "cost_per_1m_in": 0.21,
-      "cost_per_1m_out": 0.7,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.105,
+      "pricing": {
+        "input": 0.15,
+        "output": 0.88,
+        "cache_hit": 0.075
+      },
       "context_window": 262144,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     },
     {
       "id": "zai-org/GLM-4.5-Air",
       "name": "Z.ai: GLM-4.5-Air",
-      "cost_per_1m_in": 0.15667,
-      "cost_per_1m_out": 0.93667,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0.07833,
+      "pricing": {
+        "input": 0.15667,
+        "output": 0.93667,
+        "cache_hit": 0.07833
+      },
       "context_window": 131070,
       "default_max_tokens": 13107,
-      "can_reason": true,
-      "supports_attachments": false
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
     }
   ]
 }

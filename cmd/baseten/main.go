@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 // BasetenModel represents a model from the Baseten Model APIs endpoint.
@@ -110,9 +110,9 @@ func main() {
 		ID:                  catwalk.InferenceProviderBaseten,
 		APIKey:              "$BASETEN_API_KEY",
 		APIEndpoint:         "https://inference.baseten.co/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "deepseek-ai/DeepSeek-V4-Pro",
-		DefaultSmallModelID: "openai/gpt-oss-120b",
+		Type:                catwalk.TypeCompletions,
+		DefaultLargeModelID: "zai-org/GLM-5.3",
+		DefaultSmallModelID: "deepseek-ai/DeepSeek-V4.1-Flash",
 		Models:              []catwalk.Model{},
 	}
 
@@ -124,18 +124,21 @@ func main() {
 			continue
 		}
 
-		var (
-			canReason        = hasFeature(model, "reasoning")
-			reasoningLevels  []string
-			defaultReasoning string
-		)
+		canReason := hasFeature(model, "reasoning")
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if canReason {
+			reasoning.Thinking = catwalk.ThinkingToggleable
+			var reasoningLevels []string
+			var defaultReasoning string
 			switch model.ID {
 			case "deepseek-ai/DeepSeek-V4-Flash", "deepseek-ai/DeepSeek-V4-Pro":
 				reasoningLevels = []string{"high", "xhigh"}
 				defaultReasoning = "high" //nolint:goconst
 			case "deepseek-ai/DeepSeek-V4-Flash-0731", "deepseek-ai/DeepSeek-V4-Pro-0813":
 				reasoningLevels = []string{"none", "low", "high", "max"}
+				defaultReasoning = "high" //nolint:goconst
+			case "deepseek-ai/DeepSeek-V4.1-Flash", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "deepseek-ai/DeepSeek-V4.1-Flash-1017-Fast":
+				reasoningLevels = []string{"low", "high", "max"}
 				defaultReasoning = "high" //nolint:goconst
 			case "openai/gpt-oss-120b":
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
@@ -155,10 +158,15 @@ func main() {
 			case "thinkingmachines/inkling":
 				reasoningLevels = []string{"none", "minimal", "low", "medium", "high", "xhigh"}
 				defaultReasoning = "medium"
+			case "meta-models/muse-spark-open":
+				reasoningLevels = []string{"low", "medium", "high", "xhigh"}
+				defaultReasoning = "xhigh"
 			default:
 				reasoningLevels = []string{"low", "medium", "high"}
 				defaultReasoning = "medium"
 			}
+			reasoning.EffortLevels = catwalk.NewEffortLevels(reasoningLevels...)
+			reasoning.DefaultEffortLevel = defaultReasoning
 		}
 
 		maxTokens := model.MaxCompletion
@@ -171,18 +179,17 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.Name,
-			CostPer1MIn:            parsePrice(model.Pricing.Prompt),
-			CostPer1MOut:           parsePrice(model.Pricing.Completion),
-			CostPer1MInCached:      0,
-			CostPer1MOutCached:     parsePrice(model.Pricing.InputCacheRead),
-			ContextWindow:          model.ContextLength,
-			DefaultMaxTokens:       maxTokens,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         hasModality(model, "image"),
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:    parsePrice(model.Pricing.Prompt),
+				Output:   parsePrice(model.Pricing.Completion),
+				CacheHit: parsePrice(model.Pricing.InputCacheRead),
+			},
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: maxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: hasModality(model, "image")},
 		}
 
 		basetenProvider.Models = append(basetenProvider.Models, m)

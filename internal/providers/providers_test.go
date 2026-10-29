@@ -1,10 +1,11 @@
 package providers
 
 import (
+	"regexp"
 	"slices"
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 func TestValidDefaultModels(t *testing.T) {
@@ -61,4 +62,21 @@ func TestTsubasaConfiguration(t *testing.T) {
 		return
 	}
 	t.Fatal("Tsubasa is missing from the provider registry")
+}
+
+// validSessionAffinityHeader matches a lowercase HTTP header name (e.g.
+// "x-opencode-session").
+var validSessionAffinityHeader = regexp.MustCompile(`^[a-z][a-z0-9-]*$`)
+
+func TestValidSessionAffinityHeader(t *testing.T) {
+	for _, p := range GetAll() {
+		if p.SessionAffinityHeader == "" {
+			continue
+		}
+		t.Run(p.Name, func(t *testing.T) {
+			if !validSessionAffinityHeader.MatchString(p.SessionAffinityHeader) {
+				t.Errorf("Invalid session affinity header %q in provider %q", p.SessionAffinityHeader, p.Name)
+			}
+		})
+	}
 }
