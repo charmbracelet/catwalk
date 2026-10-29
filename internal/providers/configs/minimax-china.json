@@ -3,7 +3,7 @@
   "id": "minimax-china",
   "api_key": "$MINIMAX_API_KEY",
   "api_endpoint": "https://api.minimaxi.com/anthropic",
-  "type": "anthropic",
+  "type": "messages",
   "default_large_model_id": "MiniMax-M2.7",
   "default_small_model_id": "MiniMax-M2.7",
   "models": [
