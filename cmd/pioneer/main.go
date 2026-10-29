@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 type PioneerModel struct {
@@ -101,30 +101,28 @@ func main() {
 		isDeepSeek := strings.Contains(m.ID, "deepseek") || strings.Contains(m.Label, "DeepSeek")
 		isQwen := strings.Contains(m.ID, "Qwen") || strings.Contains(m.Label, "Qwen3")
 
-		var (
-			canReason        bool
-			reasoningLevels  []string
-			defaultReasoning string
-		)
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if isDeepSeek || isQwen {
-			canReason = true
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		model := catwalk.Model{
-			ID:                     m.ID,
-			Name:                   m.Label,
-			CostPer1MIn:            roundCost(m.InputPrice),
-			CostPer1MOut:           roundCost(m.OutputPrice),
-			CostPer1MInCached:      roundCost(m.CacheWritePrice),
-			CostPer1MOutCached:     roundCost(m.CacheReadPrice),
-			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
-			SupportsImages:         m.SupportsImageInput,
+			ID:   m.ID,
+			Name: m.Label,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(m.InputPrice),
+				Output:      roundCost(m.OutputPrice),
+				CacheCreate: roundCost(m.CacheWritePrice),
+				CacheHit:    roundCost(m.CacheReadPrice),
+			},
+			ContextWindow:    contextWindow,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: m.SupportsImageInput},
 		}
 		models = append(models, model)
 	}
@@ -141,7 +139,7 @@ func main() {
 		ID:                  catwalk.InferenceProvider("pioneer"),
 		APIKey:              "$PIONEER_API_KEY",
 		APIEndpoint:         "https://api.fastino.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "claude-opus-5",
 		DefaultSmallModelID: "deepseek-ai/DeepSeek-V4-Flash",
 		Models:              models,

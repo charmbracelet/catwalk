@@ -1,4 +1,4 @@
-module charm.land/catwalk
+module charm.land/catwalk/v3
 
 go 1.26.10
 
