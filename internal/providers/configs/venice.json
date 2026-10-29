@@ -3,7 +3,7 @@
   "id": "venice",
   "api_key": "$VENICE_API_KEY",
   "api_endpoint": "https://api.venice.ai/api/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "claude-fable-5",
   "default_small_model_id": "deepseek-v4-flash-0731",
   "models": [
@@ -20,7 +20,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -36,7 +37,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -52,7 +54,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -68,7 +71,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -84,7 +88,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -100,7 +105,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -131,7 +137,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -162,7 +169,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -193,7 +201,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -209,7 +218,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -240,7 +250,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -271,7 +282,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -302,7 +314,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -333,7 +346,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -364,7 +378,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -395,7 +410,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -426,7 +442,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -457,7 +474,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -473,7 +491,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -504,7 +523,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -535,7 +555,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -566,7 +587,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -597,7 +619,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -613,7 +636,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -644,7 +668,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -675,7 +700,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -706,7 +732,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -737,7 +764,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -768,7 +796,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -799,7 +828,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -830,7 +860,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -861,7 +892,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -892,7 +924,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -923,7 +956,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -954,7 +988,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -985,7 +1020,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1016,7 +1052,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1047,7 +1084,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1078,7 +1116,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1109,7 +1148,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1140,7 +1180,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1171,7 +1212,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1187,7 +1229,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1203,7 +1246,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1219,7 +1263,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1250,7 +1295,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1266,7 +1312,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1282,7 +1329,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1313,7 +1361,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -1344,7 +1393,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1375,7 +1425,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1406,7 +1457,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1437,7 +1489,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1468,7 +1521,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1499,7 +1553,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1530,7 +1585,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1561,7 +1617,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1592,7 +1649,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1623,7 +1681,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1654,7 +1713,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1685,7 +1745,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1716,7 +1777,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1747,7 +1809,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1778,7 +1841,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1809,7 +1873,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1840,7 +1905,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1871,7 +1937,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1902,7 +1969,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1933,7 +2001,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1964,7 +2033,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -1995,7 +2065,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2011,7 +2082,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2027,7 +2099,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2043,7 +2116,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2059,7 +2133,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2075,7 +2150,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2091,7 +2167,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2107,7 +2184,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2138,7 +2216,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2169,7 +2248,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2185,7 +2265,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2216,7 +2297,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2247,7 +2329,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2278,7 +2361,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2309,7 +2393,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2325,7 +2410,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2356,38 +2442,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
-      }
-    },
-    {
-      "id": "inkling",
-      "name": "Inkling",
-      "pricing": {
-        "input": 0.5625,
-        "output": 1.5
-      },
-      "context_window": 524288,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2418,7 +2474,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2434,7 +2491,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2465,7 +2523,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2496,7 +2555,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2527,7 +2587,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2558,7 +2619,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2589,7 +2651,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2620,7 +2683,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2651,7 +2715,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2667,7 +2732,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2683,7 +2749,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2714,7 +2781,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2745,7 +2813,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2776,7 +2845,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2807,7 +2877,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2838,7 +2909,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2869,7 +2941,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2900,7 +2973,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -2916,7 +2990,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2947,7 +3022,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2963,7 +3039,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -2994,7 +3071,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3025,7 +3103,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3041,7 +3120,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3072,7 +3152,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3088,7 +3169,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3119,7 +3201,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3135,7 +3218,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3166,7 +3250,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3182,7 +3267,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3198,7 +3284,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3229,7 +3316,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 1,
@@ -3264,7 +3352,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3295,7 +3384,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 1,
@@ -3315,7 +3405,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 1,
@@ -3335,7 +3426,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3351,7 +3443,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 0.7,
@@ -3371,7 +3464,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3387,7 +3481,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       },
       "options": {
         "temperature": 0.7,
@@ -3407,7 +3502,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -3423,7 +3519,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3454,7 +3551,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3470,7 +3568,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3486,7 +3585,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3502,7 +3602,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3518,7 +3619,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3534,7 +3636,8 @@
         "thinking": "toggleable"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3550,7 +3653,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -3566,7 +3670,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     }
   ]

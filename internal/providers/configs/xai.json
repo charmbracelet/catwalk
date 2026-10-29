@@ -21,7 +21,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -38,7 +39,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -55,7 +57,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -87,7 +90,8 @@
         "default_effort_level": "high"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -104,7 +108,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -121,7 +126,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -138,7 +144,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     }
   ]

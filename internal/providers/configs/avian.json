@@ -13,7 +13,7 @@
       "pricing": {
         "input": 0.23,
         "output": 0.33,
-        "cache_create": 0.012
+        "cache_hit": 0.012
       },
       "context_window": 163840,
       "default_max_tokens": 65536,
@@ -36,7 +36,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -45,7 +46,7 @@
       "pricing": {
         "input": 0.14,
         "output": 0.28,
-        "cache_create": 0.0028
+        "cache_hit": 0.0028
       },
       "context_window": 1000000,
       "default_max_tokens": 393216,
@@ -68,7 +69,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -77,7 +79,7 @@
       "pricing": {
         "input": 1.305,
         "output": 2.61,
-        "cache_create": 0.10875
+        "cache_hit": 0.10875
       },
       "context_window": 1000000,
       "default_max_tokens": 393216,
@@ -100,7 +102,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -109,7 +112,7 @@
       "pricing": {
         "input": 0.561,
         "output": 1.683,
-        "cache_create": 0.0187
+        "cache_hit": 0.0187
       },
       "context_window": 1000000,
       "default_max_tokens": 393216,
@@ -132,7 +135,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -141,7 +145,7 @@
       "pricing": {
         "input": 0.1275,
         "output": 0.51,
-        "cache_create": 0.00255
+        "cache_hit": 0.00255
       },
       "context_window": 1048576,
       "default_max_tokens": 393216,
@@ -164,7 +168,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -173,7 +178,7 @@
       "pricing": {
         "input": 0.388,
         "output": 1.806,
-        "cache_create": 0.097
+        "cache_hit": 0.097
       },
       "context_window": 202752,
       "default_max_tokens": 131072,
@@ -181,7 +186,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -190,7 +196,7 @@
       "pricing": {
         "input": 0.516,
         "output": 2.322,
-        "cache_create": 0.129
+        "cache_hit": 0.129
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
@@ -198,7 +204,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -207,7 +214,7 @@
       "pricing": {
         "input": 0.743,
         "output": 2.971,
-        "cache_create": 0.186
+        "cache_hit": 0.186
       },
       "context_window": 202752,
       "default_max_tokens": 202752,
@@ -215,7 +222,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -224,7 +232,7 @@
       "pricing": {
         "input": 0.495,
         "output": 1.733,
-        "cache_create": 0.124
+        "cache_hit": 0.124
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -232,7 +240,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -241,7 +250,7 @@
       "pricing": {
         "input": 1.19,
         "output": 3.74,
-        "cache_create": 0.221
+        "cache_hit": 0.221
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -249,7 +258,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -258,7 +268,7 @@
       "pricing": {
         "input": 0.1275,
         "output": 0.425,
-        "cache_create": 0.0255
+        "cache_hit": 0.0255
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -266,7 +276,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -275,7 +286,7 @@
       "pricing": {
         "input": 0.45,
         "output": 2.2,
-        "cache_create": 0.225
+        "cache_hit": 0.225
       },
       "context_window": 262144,
       "default_max_tokens": 262144,
@@ -283,7 +294,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -292,7 +304,7 @@
       "pricing": {
         "input": 0.95,
         "output": 4,
-        "cache_create": 0.16
+        "cache_hit": 0.16
       },
       "context_window": 262144,
       "default_max_tokens": 262144,
@@ -300,7 +312,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -309,7 +322,7 @@
       "pricing": {
         "input": 2.55,
         "output": 12.75,
-        "cache_create": 0.255
+        "cache_hit": 0.255
       },
       "context_window": 1048576,
       "default_max_tokens": 943718,
@@ -317,7 +330,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -326,7 +340,7 @@
       "pricing": {
         "input": 0.36975,
         "output": 0.7395,
-        "cache_create": 0.00306
+        "cache_hit": 0.00306
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -349,7 +363,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -358,7 +373,7 @@
       "pricing": {
         "input": 0.14,
         "output": 0.28,
-        "cache_create": 0.0028
+        "cache_hit": 0.0028
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -381,7 +396,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -390,7 +406,7 @@
       "pricing": {
         "input": 0.36975,
         "output": 0.7395,
-        "cache_create": 0.00306
+        "cache_hit": 0.00306
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -413,7 +429,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -422,7 +439,7 @@
       "pricing": {
         "input": 0.27,
         "output": 1.08,
-        "cache_create": 0.15
+        "cache_hit": 0.15
       },
       "context_window": 196608,
       "default_max_tokens": 131072,
@@ -430,7 +447,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -439,7 +457,7 @@
       "pricing": {
         "input": 0.255,
         "output": 1.02,
-        "cache_create": 0.051
+        "cache_hit": 0.051
       },
       "context_window": 524288,
       "default_max_tokens": 512000,
@@ -447,7 +465,8 @@
         "thinking": "never"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     }
   ]

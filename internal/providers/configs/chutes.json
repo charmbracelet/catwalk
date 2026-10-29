@@ -3,7 +3,7 @@
   "id": "chutes",
   "api_key": "$CHUTES_API_KEY",
   "api_endpoint": "https://llm.chutes.ai/v1",
-  "type": "openai-compat",
+  "type": "completions",
   "default_large_model_id": "moonshotai/Kimi-K2.6-TEE",
   "default_small_model_id": "google/gemma-4-31B-turbo-TEE",
   "models": [
@@ -13,7 +13,7 @@
       "pricing": {
         "input": 1,
         "output": 1,
-        "cache_create": 0.1
+        "cache_hit": 0.1
       },
       "context_window": 131072,
       "default_max_tokens": 65536,
@@ -36,7 +36,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -45,7 +46,7 @@
       "pricing": {
         "input": 0.44,
         "output": 1.32,
-        "cache_create": 0.044
+        "cache_hit": 0.044
       },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -68,7 +69,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -77,7 +79,7 @@
       "pricing": {
         "input": 0.9,
         "output": 2.9,
-        "cache_create": 0.09
+        "cache_hit": 0.09
       },
       "context_window": 202752,
       "default_max_tokens": 65535,
@@ -100,7 +102,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -109,7 +112,7 @@
       "pricing": {
         "input": 1.25,
         "output": 3.95,
-        "cache_create": 0.125
+        "cache_hit": 0.125
       },
       "context_window": 1048576,
       "default_max_tokens": 65535,
@@ -132,7 +135,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": false
+        "vision": false,
+        "audio": false
       }
     },
     {
@@ -141,7 +145,7 @@
       "pricing": {
         "input": 0.39,
         "output": 1.8,
-        "cache_create": 0.039
+        "cache_hit": 0.039
       },
       "context_window": 262144,
       "default_max_tokens": 65535,
@@ -164,7 +168,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -173,7 +178,7 @@
       "pricing": {
         "input": 1.85,
         "output": 9.5,
-        "cache_create": 0.185
+        "cache_hit": 0.185
       },
       "context_window": 1048576,
       "default_max_tokens": 65535,
@@ -196,7 +201,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -205,7 +211,7 @@
       "pricing": {
         "input": 0.45,
         "output": 3,
-        "cache_create": 0.045
+        "cache_hit": 0.045
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -228,7 +234,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -237,7 +244,7 @@
       "pricing": {
         "input": 0.25,
         "output": 2,
-        "cache_create": 0.025
+        "cache_hit": 0.025
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -260,7 +267,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -269,7 +277,7 @@
       "pricing": {
         "input": 0.039,
         "output": 1.25,
-        "cache_create": 0.0039
+        "cache_hit": 0.0039
       },
       "context_window": 262144,
       "default_max_tokens": 65536,
@@ -292,7 +300,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     },
     {
@@ -301,7 +310,7 @@
       "pricing": {
         "input": 0.12,
         "output": 0.37,
-        "cache_create": 0.012
+        "cache_hit": 0.012
       },
       "context_window": 131072,
       "default_max_tokens": 65536,
@@ -324,7 +333,8 @@
         "default_effort_level": "medium"
       },
       "capabilities": {
-        "vision": true
+        "vision": true,
+        "audio": false
       }
     }
   ]
