@@ -136,3 +136,27 @@ func TestFromProvidersPreservesOrder(t *testing.T) {
 		t.Fatalf("order not preserved: %+v", v2)
 	}
 }
+
+func TestFromProviderMapsTypesToV2Names(t *testing.T) {
+	tests := []struct {
+		id   catwalk.InferenceProvider
+		typ  catwalk.Type
+		want catwalk.Type
+	}{
+		{"somecompat", catwalk.TypeCompletions, "openai-compat"},
+		{catwalk.InferenceProviderOpenAI, catwalk.TypeResponses, "openai"},
+		{catwalk.InferenceProviderAnthropic, catwalk.TypeMessages, "anthropic"},
+		{catwalk.InferenceProviderGemini, catwalk.TypeCompletions, "google"},
+		{catwalk.InferenceProviderAzure, catwalk.TypeCompletions, "azure"},
+		{catwalk.InferenceProviderBedrock, catwalk.TypeCompletions, "bedrock"},
+		{catwalk.InferenceProviderBedrockEurope, catwalk.TypeCompletions, "bedrock"},
+		{catwalk.InferenceProviderVertexAI, catwalk.TypeCompletions, "google-vertex"},
+		{catwalk.InferenceProviderOpenRouter, catwalk.TypeCompletions, "openrouter"},
+		{catwalk.InferenceProviderVercel, catwalk.TypeCompletions, "vercel"},
+	}
+	for _, tt := range tests {
+		if got := FromProvider(catwalk.Provider{ID: tt.id, Type: tt.typ}).Type; got != tt.want {
+			t.Errorf("%s/%s: got %q want %q", tt.id, tt.typ, got, tt.want)
+		}
+	}
+}

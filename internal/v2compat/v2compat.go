@@ -61,6 +61,48 @@ func FromModel(m catwalk.Model) Model {
 	return v2
 }
 
+// Legacy v2 type names.
+const (
+	typeOpenAI       catwalk.Type = "openai"
+	typeOpenAICompat catwalk.Type = "openai-compat"
+	typeAnthropic    catwalk.Type = "anthropic"
+	typeGoogle       catwalk.Type = "google"
+	typeAzure        catwalk.Type = "azure"
+	typeBedrock      catwalk.Type = "bedrock"
+	typeVertexAI     catwalk.Type = "google-vertex"
+	typeOpenRouter   catwalk.Type = "openrouter"
+	typeVercel       catwalk.Type = "vercel"
+)
+
+// providerTypes holds providers whose v2 type is more specific than the
+// generic mapping.
+var providerTypes = map[catwalk.InferenceProvider]catwalk.Type{
+	catwalk.InferenceProviderGemini:        typeGoogle,
+	catwalk.InferenceProviderAzure:         typeAzure,
+	catwalk.InferenceProviderBedrock:       typeBedrock,
+	catwalk.InferenceProviderBedrockEurope: typeBedrock,
+	catwalk.InferenceProviderVertexAI:      typeVertexAI,
+	catwalk.InferenceProviderOpenRouter:    typeOpenRouter,
+	catwalk.InferenceProviderVercel:        typeVercel,
+}
+
+// fromType maps a v3 type back to its v2 name. Some providers had a more
+// specific v2 type, which takes precedence over the generic mapping.
+func fromType(id catwalk.InferenceProvider, t catwalk.Type) catwalk.Type {
+	if v2, ok := providerTypes[id]; ok {
+		return v2
+	}
+	switch t {
+	case catwalk.TypeCompletions:
+		return typeOpenAICompat
+	case catwalk.TypeResponses:
+		return typeOpenAI
+	case catwalk.TypeMessages:
+		return typeAnthropic
+	}
+	return t
+}
+
 // FromProvider converts a provider to the legacy v2 schema. The v3-only
 // SessionAffinityHeader field is dropped, as it never existed in v2.
 func FromProvider(p catwalk.Provider) Provider {
@@ -69,7 +111,7 @@ func FromProvider(p catwalk.Provider) Provider {
 		ID:                  p.ID,
 		APIKey:              p.APIKey,
 		APIEndpoint:         p.APIEndpoint,
-		Type:                p.Type,
+		Type:                fromType(p.ID, p.Type),
 		DefaultLargeModelID: p.DefaultLargeModelID,
 		DefaultSmallModelID: p.DefaultSmallModelID,
 		DefaultHeaders:      p.DefaultHeaders,

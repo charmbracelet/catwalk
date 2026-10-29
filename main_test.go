@@ -85,3 +85,26 @@ func newTestMux() http.Handler {
 	mux.HandleFunc("/providers", providersHandlerDeprecated)
 	return mux
 }
+
+func TestProvidersV2NeverReturnsV3Types(t *testing.T) {
+	req := httptest.NewRequest(http.MethodGet, "/v2/providers", nil)
+	rec := httptest.NewRecorder()
+	newTestMux().ServeHTTP(rec, req)
+
+	var providers []struct {
+		ID   string `json:"id"`
+		Type string `json:"type"`
+	}
+	if err := json.Unmarshal(rec.Body.Bytes(), &providers); err != nil {
+		t.Fatal(err)
+	}
+	if len(providers) == 0 {
+		t.Fatal("no providers returned")
+	}
+	for _, p := range providers {
+		switch p.Type {
+		case "completions", "responses", "messages":
+			t.Errorf("provider %q has v3-only type %q", p.ID, p.Type)
+		}
+	}
+}
