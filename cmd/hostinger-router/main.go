@@ -67,12 +67,18 @@ func costPer1M(s string) float64 {
 	return roundCost(v * usdPerCredit * 1_000_000)
 }
 
+// noReasoningEffortIDs lists models that reject reasoning_effort on chat
+// completions ("Reasoning is not enabled for this model") even though the
+// catalog lists it. The Phi reasoning models are matched by prefix.
+var noReasoningEffortIDs = map[string]bool{
+	"claude-fable-5":  true,
+	"claude-opus-5.5": true,
+}
+
 // ignoresReasoningEffort reports whether reasoning_effort must not be sent to
-// the model on chat completions, even though the catalog lists it. Claude
-// models then reply with Anthropic finish reasons (e.g. "tool_use" instead of
-// "tool_calls"), and the Phi reasoning models reject the parameter.
+// the model on chat completions, even though the catalog lists it.
 func ignoresReasoningEffort(id string) bool {
-	return strings.HasPrefix(id, "claude-") || strings.HasPrefix(id, "phi-4")
+	return noReasoningEffortIDs[id] || strings.HasPrefix(id, "phi-4")
 }
 
 func fetchHostingerRouterModels(apiEndpoint string) (*ModelsResponse, error) {
