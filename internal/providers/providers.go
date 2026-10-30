@@ -91,6 +91,9 @@ var nebiusConfig []byte
 //go:embed configs/neuralwatt.json
 var neuralwattConfig []byte
 
+//go:embed configs/liquid.json
+var liquidConfig []byte
+
 //go:embed configs/openai.json
 var openAIConfig []byte
 
@@ -171,6 +174,7 @@ var providerRegistry = []ProviderFunc{
 	ioNetProvider,
 	nebiusProvider,
 	neuralwattProvider,
+	liquidProvider,
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
@@ -369,4 +373,8 @@ func zhipuProvider() catwalk.Provider {
 
 func zhipuCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(zhipuCodingConfig)
+}
+
+func liquidProvider() catwalk.Provider {
+	return loadProviderFromConfig(liquidConfig)
 }
