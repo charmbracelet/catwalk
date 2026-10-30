@@ -1712,72 +1712,6 @@
       }
     },
     {
-      "id": "gemini-3-flash",
-      "name": "Gemini 3 Flash",
-      "pricing": {
-        "input": 0.5,
-        "output": 3,
-        "cache_hit": 0.05
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "gemini-3.1-pro",
-      "name": "Gemini 3.1 Pro Preview",
-      "pricing": {
-        "input": 2,
-        "output": 12,
-        "cache_hit": 0.2
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "pricing": {
@@ -2710,40 +2644,6 @@
       },
       "capabilities": {
         "vision": true,
-        "audio": false
-      }
-    },
-    {
-      "id": "jev-1.13",
-      "name": "jev-1.13",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 200000,
-      "default_max_tokens": 20000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
-    },
-    {
-      "id": "jev-1.13-free",
-      "name": "jev-1.13-free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
-      "context_window": 200000,
-      "default_max_tokens": 20000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
         "audio": false
       }
     }
