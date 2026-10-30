@@ -292,11 +292,10 @@ func tokenFromDisk() string {
 	if err := json.Unmarshal(data, &content); err != nil {
 		return ""
 	}
-	if app, ok := content["github.com:Iv1.b507a08c87ecfe98"]; ok {
-		return app.OAuthToken
-	}
-	if app, ok := content["github.com:Iv1.b507a08c87ecfe98:zed"]; ok {
-		return app.OAuthToken
+	for _, app := range content {
+		if app.OAuthToken != "" {
+			return app.OAuthToken
+		}
 	}
 	return ""
 }
