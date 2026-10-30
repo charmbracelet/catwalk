@@ -7836,11 +7836,11 @@
       "id": "mistral/mistral-large-4",
       "name": "Mistral Large 4",
       "pricing": {
-        "input": 1.36,
-        "output": 4.18,
-        "cache_hit": 0.14
+        "input": 0.7,
+        "output": 2.1,
+        "cache_hit": 0.07
       },
-      "context_window": 524288,
+      "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",

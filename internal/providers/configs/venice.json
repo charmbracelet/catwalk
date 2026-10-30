@@ -479,23 +479,6 @@
       }
     },
     {
-      "id": "claude-sonnet-4-5",
-      "name": "Claude Sonnet 4.5",
-      "pricing": {
-        "input": 3,
-        "output": 15
-      },
-      "context_window": 198000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
-    },
-    {
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "pricing": {
