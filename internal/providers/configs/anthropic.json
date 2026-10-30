@@ -21,32 +21,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     },
     {
@@ -63,32 +46,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     },
     {
@@ -105,32 +71,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "claude-opus-5",
@@ -146,32 +95,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     },
     {
@@ -188,32 +120,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     },
     {
@@ -230,32 +145,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     },
     {
@@ -272,28 +170,14 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 100
     },
     {
@@ -310,24 +194,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 100
     },
     {
@@ -344,32 +217,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "claude-sonnet-5",
@@ -385,32 +241,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     },
     {
@@ -427,28 +266,14 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 100
     },
     {
@@ -462,12 +287,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      },
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true },
       "max_attachments": 100
     },
     {
@@ -481,12 +302,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      },
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true },
       "max_attachments": 100
     },
     {
@@ -503,32 +320,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     },
     {
@@ -545,32 +345,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "max_attachments": 600
     }
   ]

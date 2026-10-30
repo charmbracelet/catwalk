@@ -10,591 +10,298 @@
     {
       "id": "reflection/Beam-1.0",
       "name": "Beam",
-      "pricing": {
-        "input": 0.4,
-        "output": 1.2,
-        "cache_hit": 0.04
-      },
+      "pricing": { "input": 0.4, "output": 1.2, "cache_hit": 0.04 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek V4 Flash 0731",
-      "pricing": {
-        "input": 0.13,
-        "output": 0.26,
-        "cache_hit": 0.028
-      },
+      "pricing": { "input": 0.13, "output": 0.26, "cache_hit": 0.028 },
       "context_window": 1048576,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek V4 Pro 0813",
-      "pricing": {
-        "input": 1.32,
-        "output": 3.96,
-        "cache_hit": 0.132
-      },
+      "pricing": { "input": 1.32, "output": 3.96, "cache_hit": 0.132 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.007
-      },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.007 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "name": "DeepSeek V4.1 Flash 1017",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.007
-      },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.007 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017-Fast",
       "name": "DeepSeek V4.1 Flash 1017 Fast",
-      "pricing": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_hit": 0.014
-      },
+      "pricing": { "input": 0.6, "output": 2.4, "cache_hit": 0.014 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-Fast",
       "name": "DeepSeek V4.1 Flash Fast",
-      "pricing": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_hit": 0.014
-      },
+      "pricing": { "input": 0.6, "output": 2.4, "cache_hit": 0.014 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "zai-org/GLM-5.2",
       "name": "GLM 5.2",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.14
-      },
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.14 },
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "max"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "zai-org/GLM-5.2-Fast",
       "name": "GLM 5.2 Fast",
-      "pricing": {
-        "input": 2.1,
-        "output": 6.6,
-        "cache_hit": 0.21
-      },
+      "pricing": { "input": 2.1, "output": 6.6, "cache_hit": 0.21 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "zai-org/GLM-5.3",
       "name": "GLM 5.3",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.14
-      },
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.14 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "zai-org/GLM-5.3-Fast",
       "name": "GLM 5.3 Fast",
-      "pricing": {
-        "input": 2.1,
-        "output": 6.6,
-        "cache_hit": 0.21
-      },
+      "pricing": { "input": 2.1, "output": 6.6, "cache_hit": 0.21 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "name": "GLM 5.3 Flash",
-      "pricing": {
-        "input": 0.15,
-        "output": 0.5,
-        "cache_hit": 0.03
-      },
+      "pricing": { "input": 0.15, "output": 0.5, "cache_hit": 0.03 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
-      "pricing": {
-        "input": 3,
-        "output": 15,
-        "cache_hit": 0.3
-      },
+      "pricing": { "input": 3, "output": 15, "cache_hit": 0.3 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "meta-models/muse-spark-open",
       "name": "Muse Spark Open",
-      "pricing": {
-        "input": 1.25,
-        "output": 4.25,
-        "cache_hit": 0.15
-      },
+      "pricing": { "input": 1.25, "output": 4.25, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
         ],
         "default_effort_level": "xhigh"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B",
       "name": "Nemotron Super 3.5",
-      "pricing": {
-        "input": 0.2,
-        "output": 0.5,
-        "cache_hit": 0.04
-      },
+      "pricing": { "input": 0.2, "output": 0.5, "cache_hit": 0.04 },
       "context_window": 1048576,
       "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
       "name": "Nemotron Ultra",
-      "pricing": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_hit": 0.12
-      },
+      "pricing": { "input": 0.6, "output": 2.4, "cache_hit": 0.12 },
       "context_window": 202800,
       "default_max_tokens": 202800,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "openai/gpt-oss-120b",
       "name": "OpenAI GPT 120B",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.5,
-        "cache_hit": 0.1
-      },
+      "pricing": { "input": 0.1, "output": 0.5, "cache_hit": 0.1 },
       "context_window": 128072,
       "default_max_tokens": 128072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     }
   ]
 }

@@ -10,332 +10,172 @@
     {
       "id": "deepseek-ai/DeepSeek-V3.2-TEE",
       "name": "DeepSeek-V3.2-TEE",
-      "pricing": {
-        "input": 1,
-        "output": 1,
-        "cache_hit": 0.1
-      },
+      "pricing": { "input": 1, "output": 1, "cache_hit": 0.1 },
       "context_window": 131072,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731-TEE",
       "name": "DeepSeek-V4-Flash-0731-TEE",
-      "pricing": {
-        "input": 0.44,
-        "output": 1.32,
-        "cache_hit": 0.044
-      },
+      "pricing": { "input": 0.44, "output": 1.32, "cache_hit": 0.044 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "zai-org/GLM-5.1-TEE",
       "name": "GLM-5.1-TEE",
-      "pricing": {
-        "input": 0.9,
-        "output": 2.9,
-        "cache_hit": 0.09
-      },
+      "pricing": { "input": 0.9, "output": 2.9, "cache_hit": 0.09 },
       "context_window": 202752,
       "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "zai-org/GLM-5.2-TEE",
       "name": "GLM-5.2-TEE",
-      "pricing": {
-        "input": 1.25,
-        "output": 3.95,
-        "cache_hit": 0.125
-      },
+      "pricing": { "input": 1.25, "output": 3.95, "cache_hit": 0.125 },
       "context_window": 1048576,
       "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "moonshotai/Kimi-K2.6-TEE",
       "name": "Kimi-K2.6-TEE",
-      "pricing": {
-        "input": 0.39,
-        "output": 1.8,
-        "cache_hit": 0.039
-      },
+      "pricing": { "input": 0.39, "output": 1.8, "cache_hit": 0.039 },
       "context_window": 262144,
       "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "moonshotai/Kimi-K3-TEE",
       "name": "Kimi-K3-TEE",
-      "pricing": {
-        "input": 1.85,
-        "output": 9.5,
-        "cache_hit": 0.185
-      },
+      "pricing": { "input": 1.85, "output": 9.5, "cache_hit": 0.185 },
       "context_window": 1048576,
       "default_max_tokens": 65535,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "Qwen/Qwen3.5-397B-A17B-TEE",
       "name": "Qwen3.5-397B-A17B-TEE",
-      "pricing": {
-        "input": 0.45,
-        "output": 3,
-        "cache_hit": 0.045
-      },
+      "pricing": { "input": 0.45, "output": 3, "cache_hit": 0.045 },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "Qwen/Qwen3.6-27B-TEE",
       "name": "Qwen3.6-27B-TEE",
-      "pricing": {
-        "input": 0.25,
-        "output": 2,
-        "cache_hit": 0.025
-      },
+      "pricing": { "input": 0.25, "output": 2, "cache_hit": 0.025 },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "Qwen/Qwen3.8-27B-TEE",
       "name": "Qwen3.8-27B-TEE",
-      "pricing": {
-        "input": 0.039,
-        "output": 1.25,
-        "cache_hit": 0.0039
-      },
+      "pricing": { "input": 0.039, "output": 1.25, "cache_hit": 0.0039 },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "google/gemma-4-31B-turbo-TEE",
       "name": "gemma-4-31B-turbo-TEE",
-      "pricing": {
-        "input": 0.12,
-        "output": 0.37,
-        "cache_hit": 0.012
-      },
+      "pricing": { "input": 0.12, "output": 0.37, "cache_hit": 0.012 },
       "context_window": 131072,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     }
   ]
 }

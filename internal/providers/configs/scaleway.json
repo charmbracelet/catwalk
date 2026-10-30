@@ -10,352 +10,187 @@
     {
       "id": "glm-5.3",
       "name": "GLM 5.3",
-      "pricing": {
-        "input": 2.01,
-        "output": 6.15
-      },
+      "pricing": { "input": 2.01, "output": 6.15 },
       "context_window": 256000,
       "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "max"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "deepseek-v4.1-flash-1017",
       "name": "DeepSeek V4.1 Flash 1017",
-      "pricing": {
-        "input": 0.672,
-        "output": 2.016,
-        "cache_hit": 0.134
-      },
+      "pricing": { "input": 0.672, "output": 2.016, "cache_hit": 0.134 },
       "context_window": 256000,
       "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
-      "pricing": {
-        "input": 0.468,
-        "output": 0.936,
-        "cache_hit": 0.0936
-      },
+      "pricing": { "input": 0.468, "output": 0.936, "cache_hit": 0.0936 },
       "context_window": 256000,
       "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "qwen3.8-27b",
       "name": "Qwen 3.8 27B",
-      "pricing": {
-        "input": 0.684,
-        "output": 3.762,
-        "cache_hit": 0.137
-      },
+      "pricing": { "input": 0.684, "output": 3.762, "cache_hit": 0.137 },
       "context_window": 256000,
       "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
         ],
         "default_effort_level": "xhigh"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "qwen3.5-397b-a17b",
       "name": "Qwen 3.5 397B A17B",
-      "pricing": {
-        "input": 0.6729,
-        "output": 4.0374
-      },
+      "pricing": { "input": 0.6729, "output": 4.0374 },
       "context_window": 256000,
       "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "qwen3.6-35b-a3b",
       "name": "Qwen 3.6 35B A3B",
-      "pricing": {
-        "input": 0.280375,
-        "output": 1.68225
-      },
+      "pricing": { "input": 0.280375, "output": 1.68225 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B IT",
-      "pricing": {
-        "input": 0.280375,
-        "output": 0.56075
-      },
+      "pricing": { "input": 0.280375, "output": 0.56075 },
       "context_window": 256000,
       "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "gpt-oss-120b",
       "name": "GPT OSS 120B",
-      "pricing": {
-        "input": 0.168225,
-        "output": 0.6729
-      },
+      "pricing": { "input": 0.168225, "output": 0.6729 },
       "context_window": 128000,
       "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "mistral-medium-3.5-128b",
       "name": "Mistral Medium 3.5 128B",
-      "pricing": {
-        "input": 1.68225,
-        "output": 8.41125
-      },
+      "pricing": { "input": 1.68225, "output": 8.41125 },
       "context_window": 256000,
       "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "llama-3.3-70b-instruct",
       "name": "Llama 3.3 70B Instruct",
-      "pricing": {
-        "input": 1.00935,
-        "output": 1.00935
-      },
+      "pricing": { "input": 1.00935, "output": 1.00935 },
       "context_window": 100000,
       "default_max_tokens": 16384,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
       "name": "Qwen 3 235B A22B Instruct 2507",
-      "pricing": {
-        "input": 0.841125,
-        "output": 2.523375
-      },
+      "pricing": { "input": 0.841125, "output": 2.523375 },
       "context_window": 260000,
       "default_max_tokens": 16384,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
       "name": "Mistral Small 3.2 24B Instruct 2506",
-      "pricing": {
-        "input": 0.168225,
-        "output": 0.392525
-      },
+      "pricing": { "input": 0.168225, "output": 0.392525 },
       "context_window": 128000,
       "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true }
     }
   ]
 }

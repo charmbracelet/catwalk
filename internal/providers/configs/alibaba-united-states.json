@@ -10,324 +10,173 @@
     {
       "id": "deepseek-v4.1-flash-1017",
       "name": "DeepSeek-V4.1-Flash-1017",
-      "pricing": {
-        "input": 0.283,
-        "output": 1.131,
-        "cache_hit": 0.028
-      },
+      "pricing": { "input": 0.283, "output": 1.131, "cache_hit": 0.028 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "deepseek-v4.1-flash",
       "name": "DeepSeek-V4.1-Flash",
-      "pricing": {
-        "input": 0.283,
-        "output": 1.131,
-        "cache_hit": 0.028
-      },
+      "pricing": { "input": 0.283, "output": 1.131, "cache_hit": 0.028 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "deepseek-v4-pro-0813",
       "name": "DeepSeek-V4-Pro-0813",
-      "pricing": {
-        "input": 1.272,
-        "output": 3.816,
-        "cache_hit": 0.127
-      },
+      "pricing": { "input": 1.272, "output": 3.816, "cache_hit": 0.127 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "deepseek-v4-flash-0731",
       "name": "DeepSeek-V4-Flash-0731",
-      "pricing": {
-        "input": 0.424,
-        "output": 1.272,
-        "cache_hit": 0.042
-      },
+      "pricing": { "input": 0.424, "output": 1.272, "cache_hit": 0.042 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "deepseek-v4-flash-us",
       "name": "DeepSeek-V4-Flash",
-      "pricing": {
-        "input": 0.138,
-        "output": 0.275,
-        "cache_hit": 0.028
-      },
+      "pricing": { "input": 0.138, "output": 0.275, "cache_hit": 0.028 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "glm-5.3",
       "name": "GLM 5.3",
-      "pricing": {
-        "input": 1.1,
-        "output": 3.957,
-        "cache_hit": 0.283
-      },
+      "pricing": { "input": 1.1, "output": 3.957, "cache_hit": 0.283 },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "glm-5.2",
       "name": "GLM 5.2",
-      "pricing": {
-        "input": 1.1,
-        "output": 3.851,
-        "cache_hit": 0.275
-      },
+      "pricing": { "input": 1.1, "output": 3.851, "cache_hit": 0.275 },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "qwen3.8-max",
       "name": "Qwen3.8-Max",
-      "pricing": {
-        "input": 1.65,
-        "output": 4.951,
-        "cache_hit": 0.206
-      },
+      "pricing": { "input": 1.65, "output": 4.951, "cache_hit": 0.206 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
     },
     {
       "id": "qwen3.8-flash",
       "name": "Qwen3.8-Flash",
-      "pricing": {
-        "input": 0.113,
-        "output": 0.382,
-        "cache_hit": 0.014
-      },
+      "pricing": { "input": 0.113, "output": 0.382, "cache_hit": 0.014 },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "kimi-k3",
       "name": "Kimi K3",
-      "pricing": {
-        "input": 2.827,
-        "output": 14.133,
-        "cache_hit": 0.283
-      },
+      "pricing": { "input": 2.827, "output": 14.133, "cache_hit": 0.283 },
       "context_window": 1048576,
       "default_max_tokens": 16000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
-      "pricing": {
-        "input": 0.8939,
-        "output": 3.7131,
-        "cache_hit": 0.1788
-      },
+      "pricing": { "input": 0.8939, "output": 3.7131, "cache_hit": 0.1788 },
       "context_window": 256000,
       "default_max_tokens": 16000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true }
     }
   ]
 }

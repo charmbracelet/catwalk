@@ -10,19 +10,11 @@
     {
       "id": "deepseek-v4.1-flash-fast-fp4",
       "name": "DeepSeek V4.1 Flash",
-      "pricing": {
-        "input": 0.01,
-        "output": 1.2,
-        "cache_create": 0.09
-      },
+      "pricing": { "input": 0.01, "output": 1.2, "cache_create": 0.09 },
       "context_window": 1048576,
       "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
     }
   ]
 }
