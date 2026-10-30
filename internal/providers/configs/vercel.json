@@ -7040,6 +7040,38 @@
       }
     },
     {
+      "id": "inclusionai/ling-3.1-flash-1019",
+      "name": "Ling 3.1 Flash 1019",
+      "pricing": {
+        "input": 0,
+        "output": 0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
       "id": "meta/llama-3.1-70b",
       "name": "Llama 3.1 70B Instruct",
       "pricing": {
