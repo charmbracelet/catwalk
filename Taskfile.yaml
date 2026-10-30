@@ -14,7 +14,8 @@ tasks:
   fmt:
     desc: Format code
     cmds:
-      - go fmt ./...
+      - gofumpt -w .
+      - go run ./cmd/format
 
   test:
     desc: Run tests
