@@ -4,6 +4,7 @@
 
 - `go run .` - Build and run the main HTTP server on :8080
 - `go run ./cmd/{provider-name}` - Build and run a CLI to update the `{provider-name}.json` file
+- `go run ./cmd/format` - Reformat every file in `internal/providers/configs/` (run after updating a config, by hand or via a generator)
 - `go test ./...` - Run all tests
 
 ## Code Style Guidelines
@@ -17,7 +18,7 @@
 - Naming: Use camelCase for unexported, PascalCase for exported
 - Comments: Use `//nolint:directive` for linter exceptions
 - HTTP: Always set timeouts, use context, defer close response bodies
-- JSON: Use `json.MarshalIndent` for pretty output, validate unmarshaling
+- JSON: Generators use `json.MarshalIndent`; `internal/jsonfmt` (via `go run ./cmd/format`) then collapses small objects and arrays onto single lines. Validate unmarshaling
 - File permissions: Use 0o600 for sensitive config files
 - Always format code with `gofumpt`
 
