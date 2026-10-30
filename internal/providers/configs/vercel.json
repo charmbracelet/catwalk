@@ -1884,9 +1884,9 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "pricing": {
-        "input": 0.075,
-        "output": 0.3,
-        "cache_hit": 0.0015
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.007
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
@@ -1917,12 +1917,12 @@
       "id": "deepseek/deepseek-v4.1-flash-1017",
       "name": "DeepSeek V4.1 Flash 1017",
       "pricing": {
-        "input": 0.075,
-        "output": 0.3,
-        "cache_hit": 0.0015
+        "input": 0.3,
+        "output": 1.2,
+        "cache_hit": 0.007
       },
       "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
