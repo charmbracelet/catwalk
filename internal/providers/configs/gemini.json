@@ -38,7 +38,8 @@
       "capabilities": {
         "vision": true,
         "audio": false
-      }
+      },
+      "max_attachments": 10
     },
     {
       "id": "gemini-3.8-flash",
