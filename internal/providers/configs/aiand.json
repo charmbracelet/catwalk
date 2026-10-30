@@ -1,0 +1,333 @@
+{
+  "name": "ai&",
+  "id": "aiand",
+  "api_key": "$AIAND_API_KEY",
+  "api_endpoint": "https://api.aiand.com/v1",
+  "type": "completions",
+  "default_large_model_id": "zai-org/glm-5.3",
+  "default_small_model_id": "zai-org/glm-5.3-flash",
+  "models": [
+    {
+      "id": "deepseek-ai/deepseek-v4-pro",
+      "name": "DeepSeek-V4-Pro",
+      "pricing": {
+        "input": 1,
+        "output": 2.5,
+        "cache_hit": 0.25
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4.1-flash",
+      "name": "DeepSeek-V4.1-Flash",
+      "pricing": {
+        "input": 0.3,
+        "output": 0.6,
+        "cache_hit": 0.02
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "name": "gemma-4-31b-it",
+      "pricing": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_hit": 0.05
+      },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "none"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k3",
+      "name": "kimi-k3",
+      "pricing": {
+        "input": 3,
+        "output": 12.5,
+        "cache_hit": 0.5
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "motif-technologies/motif-3",
+      "name": "Motif-3",
+      "pricing": {
+        "input": 0.5,
+        "output": 2,
+        "cache_hit": 0.2
+      },
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_hit": 0.08
+      },
+      "context_window": 131072,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "qwen/qwen3.6-27b",
+      "name": "qwen3.6-27b",
+      "pricing": {
+        "input": 0.32,
+        "output": 3.2,
+        "cache_hit": 0.2
+      },
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "name": "qwen3.8-27b",
+      "pricing": {
+        "input": 0.4,
+        "output": 3,
+        "cache_hit": 0.2
+      },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          }
+        ],
+        "default_effort_level": "xhigh"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    },
+    {
+      "id": "zai-org/glm-5.3",
+      "name": "glm-5.3",
+      "pricing": {
+        "input": 1,
+        "output": 4,
+        "cache_hit": 0.3
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "zai-org/glm-5.3-flash",
+      "name": "glm-5.3-flash",
+      "pricing": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_hit": 0.03
+      },
+      "context_window": 1048550,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": {
+        "vision": true,
+        "audio": false
+      }
+    }
+  ]
+}
