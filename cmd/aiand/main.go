@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 // maxDefaultMaxTokens caps default_max_tokens so a model with a very large
@@ -35,6 +35,7 @@ type Model struct {
 	InputPer1M             string   `json:"input_per_1m"`
 	OutputPer1M            string   `json:"output_per_1m"`
 	CachedInputPer1M       string   `json:"cached_input_per_1m"`
+	DeprecationDate        *string  `json:"deprecation_date"`
 }
 
 // Response is the response structure for the ai& models API.
@@ -49,7 +50,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderAiand,
 		APIKey:              "$AIAND_API_KEY",
 		APIEndpoint:         "https://api.aiand.com/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "zai-org/glm-5.3",
 		DefaultSmallModelID: "zai-org/glm-5.3-flash",
 	}
@@ -61,6 +62,12 @@ func main() {
 
 	provider.Models = make([]catwalk.Model, 0, len(resp.Data))
 	for _, model := range resp.Data {
+		// A retiring model stays in the API until its cutoff; keep it out of
+		// Crush so nobody starts depending on it.
+		if model.DeprecationDate != nil {
+			log.Printf("Skipping %s: retiring on %s", model.ID, *model.DeprecationDate)
+			continue
+		}
 		m, err := toCatwalkModel(model)
 		if err != nil {
 			log.Printf("Skipping %s: %v", model.ID, err)
@@ -132,24 +139,29 @@ func toCatwalkModel(model Model) (catwalk.Model, error) {
 	}
 
 	m := catwalk.Model{
-		ID:                 model.ID,
-		Name:               displayName(model),
-		CostPer1MIn:        in,
-		CostPer1MOut:       out,
-		CostPer1MOutCached: cacheRead,
-		ContextWindow:      model.ContextWindow,
-		DefaultMaxTokens:   min(model.MaxOutputTokens, maxDefaultMaxTokens),
-		CanReason:          slices.Contains(model.Capabilities, "reasoning"),
-		SupportsImages:     slices.Contains(model.Capabilities, "vision"),
+		ID:   model.ID,
+		Name: displayName(model),
+		Pricing: catwalk.Pricing{
+			Input:    in,
+			Output:   out,
+			CacheHit: cacheRead,
+		},
+		ContextWindow:    model.ContextWindow,
+		DefaultMaxTokens: min(model.MaxOutputTokens, maxDefaultMaxTokens),
+		Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
+		Capabilities:     catwalk.Capabilities{Vision: slices.Contains(model.Capabilities, "vision")},
 	}
-	if m.CanReason {
+	if slices.Contains(model.Capabilities, "reasoning") {
 		// Crush sends the default on every request, so one the API does not
 		// list would be refused.
 		if !slices.Contains(model.ReasoningEfforts, model.ReasoningEffortDefault) {
 			return catwalk.Model{}, fmt.Errorf("default reasoning effort %q is not one of %v", model.ReasoningEffortDefault, model.ReasoningEfforts)
 		}
-		m.ReasoningLevels = model.ReasoningEfforts
-		m.DefaultReasoningEffort = model.ReasoningEffortDefault
+		m.Reasoning = catwalk.Reasoning{
+			Thinking:           catwalk.ThinkingToggleable,
+			EffortLevels:       catwalk.NewEffortLevels(model.ReasoningEfforts...),
+			DefaultEffortLevel: model.ReasoningEffortDefault,
+		}
 	}
 	return m, nil
 }
