@@ -9,541 +9,293 @@
     {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 264000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-fable-5.1",
       "name": "Claude Fable 5.1",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 264000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-haiku-4.5",
       "name": "Claude Haiku 4.5",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-haiku-5.5",
       "name": "Claude Haiku 5.5",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4.8",
       "name": "Claude Opus 4.8",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 264000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4.8-fast",
       "name": "Claude Opus 4.8 (fast mode)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 264000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 264000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-5.5",
       "name": "Claude Opus 5.5",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 264000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-sonnet-5.5",
       "name": "Claude Sonnet 5.5",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 265536,
       "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-4-argon",
       "name": "Gemini 4 Argon",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 265536,
       "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-3.5-turbo",
       "name": "GPT 3.5 Turbo",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 16384,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "gpt-4",
       "name": "GPT 4",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 32768,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "gpt-4-0125-preview",
       "name": "GPT 4 Turbo",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 128000,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "gpt-4.1",
       "name": "GPT-4.1",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 128000,
       "default_max_tokens": 16384,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-4o",
       "name": "GPT-4o",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 128000,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-4o-mini",
       "name": "GPT-4o mini",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 128000,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "gpt-5.3-codex",
       "type": "responses",
       "name": "GPT-5.3-Codex",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.4-nano",
       "type": "responses",
       "name": "GPT-5.4 nano",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.6-luna",
       "type": "responses",
       "name": "GPT-5.6 Luna",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.6-sol",
       "type": "responses",
       "name": "GPT-5.6 Sol",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.6-terra",
       "type": "responses",
       "name": "GPT-5.6 Terra",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6-astra",
       "type": "responses",
       "name": "GPT-6 Astra",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6-luna",
       "type": "responses",
       "name": "GPT-6 Luna",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6-sol",
       "type": "responses",
       "name": "GPT-6 Sol",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6.1-sol",
       "type": "responses",
       "name": "GPT-6.1 Sol",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6.1-terra",
       "type": "responses",
       "name": "GPT-6.1 Terra",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "grok-4.6",
       "type": "responses",
       "name": "Grok 4.6",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "grok-4.7",
       "type": "responses",
       "name": "Grok 4.7",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 328000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "kimi-k3",
       "name": "Kimi K3",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     }
   ]
 }

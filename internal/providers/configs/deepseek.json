@@ -10,66 +10,36 @@
     {
       "id": "deepseek-v4-flash",
       "name": "DeepSeek-V4-Flash",
-      "pricing": {
-        "input": 0.14,
-        "output": 0.28,
-        "cache_create": 0.0028
-      },
+      "pricing": { "input": 0.14, "output": 0.28, "cache_create": 0.0028 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "deepseek-v4-pro",
       "name": "DeepSeek-V4-Pro",
-      "pricing": {
-        "input": 0.435,
-        "output": 0.87,
-        "cache_create": 0.003625
-      },
+      "pricing": { "input": 0.435, "output": 0.87, "cache_create": 0.003625 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     }
   ]
 }

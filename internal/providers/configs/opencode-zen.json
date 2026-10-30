@@ -10,66 +10,36 @@
     {
       "id": "beam-free",
       "name": "Beam Free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "big-pickle",
       "name": "Big Pickle",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "claude-fable-5",
@@ -86,25 +56,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-fable-5-1",
@@ -121,25 +79,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-haiku-4-5",
@@ -156,25 +102,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-haiku-5-5",
@@ -191,25 +125,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4-5",
@@ -226,25 +148,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4-6",
@@ -261,25 +171,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4-7",
@@ -296,25 +194,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4-8",
@@ -331,25 +217,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-5",
@@ -366,25 +240,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-5-5",
@@ -401,25 +263,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-sonnet-4-5",
@@ -436,25 +286,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-sonnet-4-6",
@@ -471,25 +309,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-sonnet-5",
@@ -506,25 +332,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-sonnet-5-5",
@@ -541,930 +355,489 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
-      "pricing": {
-        "input": 1.74,
-        "output": 3.48,
-        "cache_hit": 0.14
-      },
+      "pricing": { "input": 1.74, "output": 3.48, "cache_hit": 0.14 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.01
-      },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.01 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "deepseek-v4.1-flash-free",
       "name": "DeepSeek V4.1 Flash Free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "flint-40b-free",
       "name": "Flint 40B Free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "glm-5",
       "name": "GLM-5",
-      "pricing": {
-        "input": 1,
-        "output": 3.2,
-        "cache_hit": 0.2
-      },
+      "pricing": { "input": 1, "output": 3.2, "cache_hit": 0.2 },
       "context_window": 204800,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "glm-5.1",
       "name": "GLM-5.1",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.26
-      },
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
       "context_window": 204800,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "glm-5.2",
       "name": "GLM-5.2",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.26
-      },
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "glm-5.3",
       "name": "GLM-5.3",
-      "pricing": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_hit": 0.26
-      },
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "glm-5.3-flash",
       "name": "GLM-5.3-Flash",
-      "pricing": {
-        "input": 0.15,
-        "output": 0.5,
-        "cache_hit": 0.03
-      },
+      "pricing": { "input": 0.15, "output": 0.5, "cache_hit": 0.03 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "glm-5.3-flash-free",
       "name": "GLM-5.3-Flash Free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5",
       "type": "responses",
       "name": "GPT-5",
-      "pricing": {
-        "input": 1.07,
-        "output": 8.5,
-        "cache_hit": 0.11
-      },
+      "pricing": { "input": 1.07, "output": 8.5, "cache_hit": 0.11 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5-codex",
       "type": "responses",
       "name": "GPT-5 Codex",
-      "pricing": {
-        "input": 1.07,
-        "output": 8.5,
-        "cache_hit": 0.11
-      },
+      "pricing": { "input": 1.07, "output": 8.5, "cache_hit": 0.11 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5-nano",
       "type": "responses",
       "name": "GPT-5 Nano",
-      "pricing": {
-        "input": 0.05,
-        "output": 0.4,
-        "cache_hit": 0.01
-      },
+      "pricing": { "input": 0.05, "output": 0.4, "cache_hit": 0.01 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.1",
       "type": "responses",
       "name": "GPT-5.1",
-      "pricing": {
-        "input": 1.07,
-        "output": 8.5,
-        "cache_hit": 0.11
-      },
+      "pricing": { "input": 1.07, "output": 8.5, "cache_hit": 0.11 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.1-codex",
       "type": "responses",
       "name": "GPT-5.1 Codex",
-      "pricing": {
-        "input": 1.07,
-        "output": 8.5,
-        "cache_hit": 0.11
-      },
+      "pricing": { "input": 1.07, "output": 8.5, "cache_hit": 0.11 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.1-codex-max",
       "type": "responses",
       "name": "GPT-5.1 Codex Max",
-      "pricing": {
-        "input": 1.25,
-        "output": 10,
-        "cache_hit": 0.13
-      },
+      "pricing": { "input": 1.25, "output": 10, "cache_hit": 0.13 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.1-codex-mini",
       "type": "responses",
       "name": "GPT-5.1 Codex Mini",
-      "pricing": {
-        "input": 0.25,
-        "output": 2,
-        "cache_hit": 0.03
-      },
+      "pricing": { "input": 0.25, "output": 2, "cache_hit": 0.03 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.2",
       "type": "responses",
       "name": "GPT-5.2",
-      "pricing": {
-        "input": 1.75,
-        "output": 14,
-        "cache_hit": 0.18
-      },
+      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.18 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.2-codex",
       "type": "responses",
       "name": "GPT-5.2 Codex",
-      "pricing": {
-        "input": 1.75,
-        "output": 14,
-        "cache_hit": 0.18
-      },
+      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.18 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.3-codex",
       "type": "responses",
       "name": "GPT-5.3 Codex",
-      "pricing": {
-        "input": 1.75,
-        "output": 14,
-        "cache_hit": 0.18
-      },
+      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.18 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.3-codex-spark",
       "type": "responses",
       "name": "GPT-5.3 Codex Spark",
-      "pricing": {
-        "input": 1.75,
-        "output": 14,
-        "cache_hit": 0.18
-      },
+      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.18 },
       "context_window": 128000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "gpt-5.4",
       "type": "responses",
       "name": "GPT-5.4",
-      "pricing": {
-        "input": 2.5,
-        "output": 15,
-        "cache_hit": 0.25
-      },
+      "pricing": { "input": 2.5, "output": 15, "cache_hit": 0.25 },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.4-mini",
       "type": "responses",
       "name": "GPT-5.4 Mini",
-      "pricing": {
-        "input": 0.75,
-        "output": 4.5,
-        "cache_hit": 0.08
-      },
+      "pricing": { "input": 0.75, "output": 4.5, "cache_hit": 0.08 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.4-nano",
       "type": "responses",
       "name": "GPT-5.4 Nano",
-      "pricing": {
-        "input": 0.2,
-        "output": 1.25,
-        "cache_hit": 0.02
-      },
+      "pricing": { "input": 0.2, "output": 1.25, "cache_hit": 0.02 },
       "context_window": 400000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.4-pro",
       "type": "responses",
       "name": "GPT-5.4 Pro",
-      "pricing": {
-        "input": 30,
-        "output": 180,
-        "cache_hit": 30
-      },
+      "pricing": { "input": 30, "output": 180, "cache_hit": 30 },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.5",
       "type": "responses",
       "name": "GPT-5.5",
-      "pricing": {
-        "input": 5,
-        "output": 30,
-        "cache_hit": 0.5
-      },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.5-pro",
       "type": "responses",
       "name": "GPT-5.5 Pro",
-      "pricing": {
-        "input": 30,
-        "output": 180,
-        "cache_hit": 30
-      },
+      "pricing": { "input": 30, "output": 180, "cache_hit": 30 },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.6-luna",
@@ -1481,25 +854,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.6-sol",
@@ -1516,25 +877,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-5.6-terra",
@@ -1551,25 +900,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6-astra",
@@ -1586,25 +923,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6-luna",
@@ -1621,25 +946,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6-sol",
@@ -1656,25 +969,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gpt-6.1-sol",
@@ -1691,458 +992,238 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
-      "pricing": {
-        "input": 1.5,
-        "output": 9,
-        "cache_hit": 0.15
-      },
+      "pricing": { "input": 1.5, "output": 9, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-3.5-flash-lite",
       "name": "Gemini 3.5 Flash Lite",
-      "pricing": {
-        "input": 0.3,
-        "output": 2.5,
-        "cache_hit": 0.03
-      },
+      "pricing": { "input": 0.3, "output": 2.5, "cache_hit": 0.03 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
-      "pricing": {
-        "input": 1.5,
-        "output": 7.5,
-        "cache_hit": 0.15
-      },
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
-      "pricing": {
-        "input": 1.5,
-        "output": 7.5,
-        "cache_hit": 0.15
-      },
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
-      "pricing": {
-        "input": 1.5,
-        "output": 7.5,
-        "cache_hit": 0.15
-      },
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "gemini-4-argon",
       "name": "Gemini 4 Argon",
-      "pricing": {
-        "input": 2,
-        "output": 10,
-        "cache_hit": 0.1
-      },
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "grok-4.5",
       "type": "responses",
       "name": "Grok 4.5",
-      "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_hit": 0.3
-      },
+      "pricing": { "input": 2, "output": 6, "cache_hit": 0.3 },
       "context_window": 500000,
       "default_max_tokens": 500000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "grok-4.6",
       "type": "responses",
       "name": "Grok 4.6",
-      "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_hit": 0.5
-      },
+      "pricing": { "input": 2, "output": 6, "cache_hit": 0.5 },
       "context_window": 500000,
       "default_max_tokens": 500000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "grok-4.7",
       "type": "responses",
       "name": "Grok 4.7",
-      "pricing": {
-        "input": 2,
-        "output": 6,
-        "cache_hit": 0.5
-      },
+      "pricing": { "input": 2, "output": 6, "cache_hit": 0.5 },
       "context_window": 500000,
       "default_max_tokens": 500000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "grok-build-0.1",
       "type": "responses",
       "name": "Grok Build 0.1",
-      "pricing": {
-        "input": 1,
-        "output": 2,
-        "cache_hit": 0.2
-      },
+      "pricing": { "input": 1, "output": 2, "cache_hit": 0.2 },
       "context_window": 256000,
       "default_max_tokens": 256000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "kimi-k2.5",
       "name": "Kimi K2.5",
-      "pricing": {
-        "input": 0.6,
-        "output": 3,
-        "cache_hit": 0.1
-      },
+      "pricing": { "input": 0.6, "output": 3, "cache_hit": 0.1 },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "kimi-k2.6",
       "name": "Kimi K2.6",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_hit": 0.16
-      },
+      "pricing": { "input": 0.95, "output": 4, "cache_hit": 0.16 },
       "context_window": 262144,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
-      "pricing": {
-        "input": 0.95,
-        "output": 4,
-        "cache_hit": 0.19
-      },
+      "pricing": { "input": 0.95, "output": 4, "cache_hit": 0.19 },
       "context_window": 262144,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "kimi-k3",
@@ -2158,354 +1239,185 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "mimo-v2.6-flash-free",
       "name": "MiMo-V2.6-Flash Free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "minimax-m2.5",
       "name": "MiniMax-M2.5",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.06
-      },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
       "context_window": 204800,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "minimax-m2.7",
       "name": "MiniMax-M2.7",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.06
-      },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
       "context_window": 204800,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "minimax-m3",
       "name": "MiniMax-M3",
-      "pricing": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_hit": 0.06
-      },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
       "context_window": 512000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "mistral-large-4",
       "name": "Mistral Large 4",
-      "pricing": {
-        "input": 0.68,
-        "output": 2.09,
-        "cache_hit": 0.07
-      },
+      "pricing": { "input": 0.68, "output": 2.09, "cache_hit": 0.07 },
       "context_window": 524288,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "muse-spark-1.2",
       "type": "responses",
       "name": "Muse Spark 1.2",
-      "pricing": {
-        "input": 1.25,
-        "output": 4.25,
-        "cache_hit": 0.15
-      },
+      "pricing": { "input": 1.25, "output": 4.25, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "muse-spark-1.3",
       "type": "responses",
       "name": "Muse Spark 1.3",
-      "pricing": {
-        "input": 1.25,
-        "output": 4.25,
-        "cache_hit": 0.15
-      },
+      "pricing": { "input": 1.25, "output": 4.25, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "muse-wonder-1.0",
       "name": "Muse Wonder",
-      "pricing": {
-        "input": 4,
-        "output": 20,
-        "cache_hit": 0.2
-      },
+      "pricing": { "input": 4, "output": 20, "cache_hit": 0.2 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "nemotron-3.5-lightning-free",
       "name": "Nemotron 3.5 Lightning Free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 262144,
       "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "nemotron-3.5-super-vl-free",
       "name": "Nemotron 3.5 Super VL Free",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen3.5-plus",
@@ -2522,25 +1434,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen3.6-plus",
@@ -2557,25 +1457,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen3.8-flash",
@@ -2592,25 +1480,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen3.8-max",
@@ -2627,25 +1503,13 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
         ],
         "default_effort_level": "xhigh"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     }
   ],
   "session_affinity_header": "x-opencode-session"

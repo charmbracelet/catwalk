@@ -19,32 +19,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-sonnet-5",
@@ -60,32 +43,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-sonnet-4-6",
@@ -101,28 +67,14 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
@@ -135,12 +87,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
@@ -153,12 +101,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-opus-5-5",
@@ -174,32 +118,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-opus-5",
@@ -215,32 +142,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-opus-4-8",
@@ -256,32 +166,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-opus-4-7",
@@ -297,32 +190,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-opus-4-6-v1",
@@ -338,28 +214,14 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-opus-4-5-20251101-v1:0",
@@ -372,12 +234,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-opus-4-1-20250805-v1:0",
@@ -390,12 +248,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-fable-5-1",
@@ -411,32 +265,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     },
     {
       "id": "us.anthropic.claude-fable-5",
@@ -452,32 +289,15 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "xhigh",
-            "display": "X-High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     }
   ]
 }
