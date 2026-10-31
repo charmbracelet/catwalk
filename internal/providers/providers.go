@@ -172,6 +172,7 @@ var providerRegistry = []ProviderFunc{
 	groqProvider,
 	huggingFaceProvider,
 	ioNetProvider,
+	jzTokenProvider,
 	nebiusProvider,
 	neuralwattProvider,
 	openCodeGoProvider,
@@ -294,6 +295,10 @@ func ioNetProvider() catwalk.Provider {
 	return loadProviderFromConfig(ioNetConfig)
 }
 
+
+func jzTokenProvider() catwalk.Provider {
+	return loadProviderFromConfig(jzTokenConfig)
+}
 func kimiCodingProvider() catwalk.Provider {
 	return loadProviderFromConfig(kimiCodingConfig)
 }
