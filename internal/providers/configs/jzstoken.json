@@ -1,0 +1,81 @@
+{
+  "name": "JZSTOKEN",
+  "id": "jzstoken",
+  "api_key": "$JZSTOKEN_API_KEY",
+  "api_endpoint": "https://jzstoken.com/api/v1",
+  "type": "completions",
+  "default_large_model_id": "claude-sonnet-5",
+  "default_small_model_id": "gpt-5.6-terra",
+  "models": [
+    {
+      "id": "jzs-max-3.0",
+      "name": "JZS Max 3.0",
+      "pricing": {
+        "input": 0.078,
+        "output": 0.3898,
+        "cache_create": 0.078,
+        "cache_hit": 0.0078
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "name": "GPT-5.6 Terra",
+      "pricing": {
+        "input": 0.2339,
+        "output": 1.4033,
+        "cache_create": 0.3508,
+        "cache_hit": 0.0234
+      },
+      "context_window": 258000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "pricing": {
+        "input": 0.7796,
+        "output": 3.8981,
+        "cache_create": 0.9745,
+        "cache_hit": 0.078
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "pricing": {
+        "input": 1.1694,
+        "output": 5.8471,
+        "cache_create": 1.4618,
+        "cache_hit": 0.1169
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8 Max",
+      "pricing": {
+        "input": 1.5592,
+        "output": 4.6777,
+        "cache_create": 1.949,
+        "cache_hit": 0.1949
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
