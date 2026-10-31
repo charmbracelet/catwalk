@@ -73,6 +73,9 @@ var huggingFaceConfig []byte
 //go:embed configs/ionet.json
 var ioNetConfig []byte
 
+//go:embed configs/jzstoken.json
+var jzTokenConfig []byte
+
 //go:embed configs/kimi.json
 var kimiCodingConfig []byte
 
