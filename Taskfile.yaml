@@ -65,6 +65,7 @@ tasks:
       - task: gen:chutes
       - task: gen:copilot
       - task: gen:cortecs
+      - task: gen:dothoosh
       - task: gen:huggingface
       - task: gen:ionet
       - task: gen:nebius
@@ -111,6 +112,11 @@ tasks:
     desc: Generate cortecs provider configurations
     cmds:
       - go run cmd/cortecs/main.go
+
+  gen:dothoosh:
+    desc: Generate dothoosh provider configurations
+    cmds:
+      - go run cmd/dothoosh/main.go
 
   gen:huggingface:
     desc: Generate huggingface provider configurations

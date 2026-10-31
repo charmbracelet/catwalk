@@ -54,6 +54,10 @@ jobs:
         run: go run ./cmd/cortecs/main.go
         continue-on-error: true
 
+      - name: DotHoosh
+        run: go run ./cmd/dothoosh/main.go
+        continue-on-error: true
+
       - name: HuggingFace
         run: go run ./cmd/huggingface/main.go
         continue-on-error: true
