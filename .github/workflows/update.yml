@@ -78,6 +78,10 @@ jobs:
         run: go run ./cmd/synthetic/main.go
         continue-on-error: true
 
+      - name: The Grid
+        run: go run ./cmd/thegrid/main.go
+        continue-on-error: true
+
       - name: Pioneer
         run: go run ./cmd/pioneer/main.go
         continue-on-error: true
