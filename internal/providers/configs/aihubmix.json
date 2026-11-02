@@ -3576,27 +3576,9 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "laguna-s-2.1-free",
-      "name": "Laguna S 2.1 (free)",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 1048576,
-      "default_max_tokens": 262144,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "laguna-xs-2.1",
       "name": "Laguna Xs 2.1",
       "pricing": { "input": 0.1, "output": 0.2, "cache_hit": 0.05 },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "laguna-xs-2.1-free",
-      "name": "Laguna Xs 2.1 (free)",
-      "pricing": { "input": 0, "output": 0 },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "reasoning": { "thinking": "never" },

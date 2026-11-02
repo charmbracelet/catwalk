@@ -8,57 +8,6 @@
   "default_small_model_id": "glm-5.3-flash",
   "models": [
     {
-      "id": "deepseek-v4-flash",
-      "name": "DeepSeek V4 Flash",
-      "pricing": { "input": 0.14, "output": 0.28, "cache_create": 0.028 },
-      "context_window": 1048560,
-      "default_max_tokens": 393216,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "deepseek-v4-flash-speed",
-      "name": "DeepSeek V4 Flash (Speed)",
-      "pricing": { "input": 0.14, "output": 0.28, "cache_create": 0.028 },
-      "context_window": 1048560,
-      "default_max_tokens": 393216,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "deepseek-v4-flash-flex",
-      "name": "DeepSeek V4 Flash (flex)",
-      "pricing": { "input": 0.091, "output": 0.182, "cache_create": 0.0182 },
-      "context_window": 1048560,
-      "default_max_tokens": 393216,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "pricing": { "input": 0.15, "output": 0.6, "cache_create": 0.015 },

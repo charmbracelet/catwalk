@@ -3698,23 +3698,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "poolside/laguna-s-2.1-free",
-      "name": "Laguna S 2.1 Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 256000,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "inclusionai/ling-3.0-flash",
       "name": "Ling 3.0 Flash",
       "pricing": { "input": 0.021, "output": 0.063, "cache_hit": 0.0042 },
@@ -5175,23 +5158,6 @@
       "context_window": 131000,
       "default_max_tokens": 4000,
       "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "arcee-ai/trinity-large-thinking",
-      "name": "Trinity Large Thinking",
-      "pricing": { "input": 0.25, "output": 0.8, "cache_hit": 0.06 },
-      "context_window": 262100,
-      "default_max_tokens": 80000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
       "capabilities": { "vision": false, "audio": false }
     },
     {
