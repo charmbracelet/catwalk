@@ -1,0 +1,91 @@
+{
+  "name": "Runcrate",
+  "id": "runcrate",
+  "api_key": "$RUNCRATE_API_KEY",
+  "api_endpoint": "https://api.runcrate.ai/v1",
+  "type": "openai-compat",
+  "default_large_model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+  "default_small_model_id": "zai-org/GLM-5.3-Flash",
+  "models": [
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash",
+      "cost_per_1m_in": 0.147,
+      "cost_per_1m_out": 0.441,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.00441,
+      "context_window": 1048576,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "high", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "cost_per_1m_in": 0.1029,
+      "cost_per_1m_out": 0.3087,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.002058,
+      "context_window": 1048576,
+      "default_max_tokens": 384000,
+      "can_reason": true,
+      "reasoning_levels": ["low", "high", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "name": "GLM-5.3",
+      "cost_per_1m_in": 0.590625,
+      "cost_per_1m_out": 2.625,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.13125,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": ["low", "high", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": false
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "name": "GLM-5.3 Flash",
+      "cost_per_1m_in": 0.1575,
+      "cost_per_1m_out": 0.525,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0315,
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "reasoning_levels": ["low", "high", "max"],
+      "default_reasoning_effort": "high",
+      "supports_attachments": true
+    },
+    {
+      "id": "Qwen/Qwen3.8-Flash",
+      "name": "Qwen3.8 Flash",
+      "cost_per_1m_in": 0.11865,
+      "cost_per_1m_out": 0.4011,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.01265565,
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "can_reason": true,
+      "supports_attachments": false
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "gpt-oss 120B",
+      "cost_per_1m_in": 0.03885,
+      "cost_per_1m_out": 0.1785,
+      "cost_per_1m_in_cached": 0,
+      "cost_per_1m_out_cached": 0.0058275,
+      "context_window": 131072,
+      "default_max_tokens": 32768,
+      "can_reason": true,
+      "supports_attachments": false
+    }
+  ]
+}
