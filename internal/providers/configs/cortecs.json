@@ -297,23 +297,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "qwen3.8-flash-next",
-      "name": "qwen3.8-flash-next",
-      "pricing": { "input": 0.18, "output": 0.449 },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "glm-5.3-flash",
       "name": "glm-5.3-flash",
       "pricing": { "input": 0.09, "output": 0.314 },
@@ -518,15 +501,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "apertus-70b",
-      "name": "apertus-70b",
-      "pricing": { "input": 1.25, "output": 2 },
-      "context_window": 65536,
-      "default_max_tokens": 6553,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "claude-sonnet-5",
       "name": "claude-sonnet-5",
       "pricing": { "input": 1.975, "output": 9.874 },
@@ -598,8 +572,8 @@
       "id": "minimax-m3",
       "name": "minimax-m3",
       "pricing": { "input": 0.269, "output": 1.077 },
-      "context_window": 1048576,
-      "default_max_tokens": 104857,
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -682,7 +656,7 @@
     {
       "id": "qwen3.6-35b-a3b",
       "name": "qwen3.6-35b-a3b",
-      "pricing": { "input": 0.15, "output": 0.5 },
+      "pricing": { "input": 0.25, "output": 1.5 },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "reasoning": {

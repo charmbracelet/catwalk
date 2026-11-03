@@ -1448,6 +1448,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "zai/glm-5.3-flashx-legal",
+      "name": "GLM 5.3 FlashX Legal",
+      "pricing": { "input": 0.37, "output": 1.25, "cache_hit": 0.075 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "zai/glm-5v-turbo",
       "name": "GLM 5V Turbo",
       "pricing": { "input": 1.2, "output": 4, "cache_hit": 0.24 },
@@ -3845,8 +3862,8 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "meituan/longcat-2.5-preview",
-      "name": "LongCat 2.5 Preview",
+      "id": "meituan/longcat-2.5",
+      "name": "LongCat 2.5",
       "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.006 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -3919,40 +3936,6 @@
       "context_window": 32000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "xiaomi/mimo-v2.5",
-      "name": "MiMo M2.5",
-      "pricing": { "input": 0.119, "output": 0.238, "cache_hit": 0.0025 },
-      "context_window": 1050000,
-      "default_max_tokens": 131100,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "xiaomi/mimo-v2.5-pro",
-      "name": "MiMo V2.5 Pro",
-      "pricing": { "input": 0.3045, "output": 0.609, "cache_hit": 0.0028 },
-      "context_window": 1050000,
-      "default_max_tokens": 131000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
       "capabilities": { "vision": false, "audio": false }
     },
     {
