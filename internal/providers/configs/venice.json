@@ -339,7 +339,7 @@
       "name": "DeepSeek V4 Flash 0423",
       "pricing": { "input": 0.138, "output": 0.275 },
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -356,7 +356,7 @@
       "name": "DeepSeek V4 Flash 0731",
       "pricing": { "input": 0.13, "output": 0.26 },
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -390,7 +390,7 @@
       "name": "DeepSeek V4 Pro",
       "pricing": { "input": 1.65, "output": 3.301 },
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -407,7 +407,7 @@
       "name": "DeepSeek V4 Pro 0813",
       "pricing": { "input": 1.65, "output": 4.95 },
       "context_window": 1000000,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -424,7 +424,7 @@
       "name": "DeepSeek V4.1 Flash",
       "pricing": { "input": 0.3, "output": 1.2 },
       "context_window": 1000000,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -475,7 +475,7 @@
       "name": "DeepSeek v4.1 Flash (1017)",
       "pricing": { "input": 0.3, "output": 1.2 },
       "context_window": 1000000,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1161,7 +1161,7 @@
       "name": "Google Gemma 4 26B A4B Instruct",
       "pricing": { "input": 0.13, "output": 0.4 },
       "context_window": 256000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1178,7 +1178,7 @@
       "name": "Google Gemma 4 31B Instruct",
       "pricing": { "input": 0.12, "output": 0.36 },
       "context_window": 256000,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1580,7 +1580,7 @@
       "name": "MiniMax M3 Preview",
       "pricing": { "input": 0.3, "output": 1.2 },
       "context_window": 524288,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 131072,
       "reasoning": { "thinking": "toggleable" },
       "capabilities": { "vision": true, "audio": false }
     },
@@ -1667,7 +1667,7 @@
       "name": "NVIDIA Nemotron 3.5 Super VL 120B",
       "pricing": { "input": 0.2, "output": 0.5 },
       "context_window": 262144,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 102400,
       "reasoning": { "thinking": "toggleable" },
       "capabilities": { "vision": true, "audio": false }
     },
