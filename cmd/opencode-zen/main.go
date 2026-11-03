@@ -144,6 +144,10 @@ func main() {
 	}
 
 	for _, zenModel := range zenModels {
+		if strings.HasSuffix(zenModel.ID, "-free") {
+			continue
+		}
+
 		enrichment, hasEnrichment := enrichmentData[zenModel.ID]
 
 		var costInput, costOutput, costCacheCreate, costCacheHit float64

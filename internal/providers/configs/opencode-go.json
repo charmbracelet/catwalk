@@ -8,40 +8,6 @@
   "default_small_model_id": "minimax-m2.7",
   "models": [
     {
-      "id": "beam-free",
-      "name": "Beam Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "cat-jam-free",
-      "name": "Cat Jam Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "claude-haiku-5-5",
       "name": "Claude Haiku 5.5",
       "pricing": { "input": 0.1, "output": 0.5, "cache_hit": 0.01 },
@@ -266,23 +232,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "iceman-contributor-free",
-      "name": "Iceman Contributor Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 262144,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "pricing": { "input": 0.95, "output": 4, "cache_hit": 0.19 },
@@ -321,23 +270,6 @@
       "name": "Kimi K3.1 Pro",
       "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
       "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "longcat-2.5-preview-free",
-      "name": "LongCat 2.5 Preview Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
@@ -440,24 +372,6 @@
       "type": "messages",
       "name": "MiniMax M3.1 Flash",
       "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.02 },
-      "context_window": 1000000,
-      "default_max_tokens": 512000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "minimax-m3.1-flash-free",
-      "type": "messages",
-      "name": "MiniMax M3.1 Flash Free",
-      "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
       "default_max_tokens": 512000,
       "reasoning": {
@@ -618,23 +532,6 @@
       "id": "step-5-preview",
       "name": "Step 5 Preview",
       "pricing": { "input": 1, "output": 2.7, "cache_hit": 0.1 },
-      "context_window": 1000000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "step-5-preview-free",
-      "name": "Step 5 Preview Free",
-      "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
       "reasoning": {
