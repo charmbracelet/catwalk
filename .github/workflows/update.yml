@@ -78,7 +78,7 @@ jobs:
         run: go run ./cmd/synthetic/main.go
         continue-on-error: true
 
-      - name: The Grid
+      - name: The Grid AI
         run: go run ./cmd/thegrid/main.go
         continue-on-error: true
 

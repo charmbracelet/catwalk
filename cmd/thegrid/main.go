@@ -1,4 +1,4 @@
-// Package main provides a command-line tool to fetch instruments from The Grid
+// Package main provides a command-line tool to fetch instruments from The Grid AI
 // and generate a configuration file for the provider.
 package main
 
@@ -18,7 +18,7 @@ import (
 	"charm.land/catwalk/pkg/catwalk"
 )
 
-// Pricing is The Grid's price for an instrument. Instruments are market
+// Pricing is The Grid AI's price for an instrument. Instruments are market
 // priced and quoted at a single rate that applies to both input and output
 // tokens, so prompt and completion always carry the same value.
 type Pricing struct {
@@ -38,7 +38,7 @@ type Reasoning struct {
 	SupportedEfforts []string `json:"supported_efforts"`
 }
 
-// Model represents an instrument from The Grid's models API.
+// Model represents an instrument from The Grid AI's models API.
 type Model struct {
 	ID                  string       `json:"id"`
 	DisplayName         string       `json:"display_name"`
@@ -51,7 +51,7 @@ type Model struct {
 	ToolCall            bool         `json:"tool_call"`
 }
 
-// ModelsResponse is the response structure for The Grid's models API.
+// ModelsResponse is the response structure for The Grid AI's models API.
 type ModelsResponse struct {
 	Data []Model `json:"data"`
 }
@@ -89,7 +89,7 @@ func fetchTheGridModels(apiEndpoint string) (*ModelsResponse, error) {
 
 func main() {
 	theGridProvider := catwalk.Provider{
-		Name:                "The Grid",
+		Name:                "The Grid AI",
 		ID:                  catwalk.InferenceProviderTheGrid,
 		APIKey:              "$THEGRID_API_KEY",
 		APIEndpoint:         "https://api.thegrid.ai/v1",
@@ -101,7 +101,7 @@ func main() {
 
 	modelsResp, err := fetchTheGridModels(theGridProvider.APIEndpoint)
 	if err != nil {
-		log.Fatal("Error fetching The Grid models:", err)
+		log.Fatal("Error fetching The Grid AI models:", err)
 	}
 
 	var unpriced int
@@ -118,7 +118,7 @@ func main() {
 			continue
 		}
 
-		// The Grid is market priced and its catalog serves `pricing: null` when
+		// The Grid AI is market priced and its catalog serves `pricing: null` when
 		// the rate cache is cold, so an absent price is a normal transient state
 		// rather than a reason to drop the instrument. Emit it with a zero cost,
 		// which is what catwalk already carries for unpriced models elsewhere.
@@ -126,7 +126,7 @@ func main() {
 		// all the next time the catalog is unpriced.
 		var cost float64
 		if model.Pricing != nil && model.Pricing.USDPer1MTokens > 0 {
-			// A single market rate covers both directions, and The Grid does not
+			// A single market rate covers both directions, and The Grid AI does not
 			// quote a separate cached rate, so all four costs carry it.
 			cost = roundCost(model.Pricing.USDPer1MTokens)
 		} else {
@@ -181,12 +181,12 @@ func main() {
 
 	data, err := json.MarshalIndent(theGridProvider, "", "  ")
 	if err != nil {
-		log.Fatal("Error marshaling The Grid provider:", err)
+		log.Fatal("Error marshaling The Grid AI provider:", err)
 	}
 	data = append(data, '\n')
 
 	if err := os.WriteFile("internal/providers/configs/thegrid.json", data, 0o600); err != nil {
-		log.Fatal("Error writing The Grid provider config:", err)
+		log.Fatal("Error writing The Grid AI provider config:", err)
 	}
 
 	fmt.Printf("Generated thegrid.json with %d instruments\n", len(theGridProvider.Models))
