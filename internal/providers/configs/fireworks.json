@@ -366,7 +366,7 @@
         ],
         "default_effort_level": "xhigh"
       },
-      "capabilities": { "vision": false, "audio": false }
+      "capabilities": { "vision": true, "audio": false }
     }
   ]
 }
