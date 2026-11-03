@@ -1420,6 +1420,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "pulse-alpha-free",
+      "name": "Pulse Alpha Free",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "qwen3.5-plus",
       "type": "messages",
       "name": "Qwen3.5 Plus",

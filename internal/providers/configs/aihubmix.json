@@ -2402,6 +2402,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "glm-5.3-prime",
+      "name": "GLM 5.3 Prime",
+      "pricing": { "input": 2.35, "output": 8.23, "cache_hit": 0.59 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "glm-5v-turbo",
       "name": "GLM 5 Vision Turbo",
       "pricing": { "input": 0.7042, "output": 3.09848, "cache_hit": 0.16901 },
@@ -3072,6 +3081,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gpt-6.1-terra",
+      "name": "GPT 6.1 Terra",
+      "pricing": { "input": 1, "output": 5, "cache_hit": 0.05 },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gpt-chat-latest",
       "name": "GPT Chat",
       "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
@@ -3567,6 +3585,24 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 2, "output": 10.5, "cache_hit": 0.2 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "kimi-k3.1-pro-highspeed",
+      "name": "Kimi K3.1 Pro Highspeed",
+      "pricing": { "input": 4, "output": 21, "cache_hit": 0.2 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "laguna-s-2.1",
       "name": "Laguna S 2.1",
       "pricing": { "input": 0.1, "output": 0.2, "cache_hit": 0.01 },
@@ -3808,6 +3844,15 @@
         ],
         "default_effort_level": "medium"
       },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "minimax-m3.1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "pricing": { "input": 0.165, "output": 0.66, "cache_hit": 0.0165 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -4605,6 +4650,15 @@
       "default_max_tokens": 131072,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "xing4.0-29b-a4b-free",
+      "name": "Xing4.0 29B A4B (free)",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "zai-glm-5-turbo",
