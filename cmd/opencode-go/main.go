@@ -91,8 +91,8 @@ func main() {
 		APIEndpoint:           "https://opencode.ai/zen/go/v1",
 		Type:                  catwalk.TypeCompletions,
 		SessionAffinityHeader: "x-opencode-session",
-		DefaultLargeModelID:   "minimax-m2.7",
-		DefaultSmallModelID:   "minimax-m2.7",
+		DefaultLargeModelID:   "deepseek-v4.1-flash",
+		DefaultSmallModelID:   "deepseek-v4.1-flash",
 	}
 
 	for _, goModel := range goModels {
