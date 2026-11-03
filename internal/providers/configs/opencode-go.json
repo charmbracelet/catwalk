@@ -26,7 +26,7 @@
     },
     {
       "id": "deepseek-v4-pro",
-      "name": "DeepSeek V4 Pro (New)",
+      "name": "DeepSeek V4 Pro",
       "pricing": { "input": 0.66, "output": 1.98, "cache_hit": 0.02 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
