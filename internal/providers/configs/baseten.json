@@ -240,10 +240,10 @@
         "thinking": "toggleable",
         "effort_levels": [
           { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
-        "default_effort_level": "medium"
+        "default_effort_level": "high"
       },
       "capabilities": { "vision": true, "audio": false }
     },

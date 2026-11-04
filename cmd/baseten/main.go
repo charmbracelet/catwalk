@@ -151,8 +151,7 @@ func main() {
 				defaultReasoning = "high"
 			case "moonshotai/Kimi-K2.7-Code":
 				// Kimi K2.7 Code uses binary thinking (no reasoning levels).
-			case "moonshotai/Kimi-K3":
-				// Kimi K3 always thinks; effort is low/high/max, defaulting to high.
+			case "moonshotai/Kimi-K3", "moonshotai/Kimi-K3.1-Pro":
 				reasoningLevels = []string{"low", "high", "max"}
 				defaultReasoning = "high"
 			case "thinkingmachines/inkling":
