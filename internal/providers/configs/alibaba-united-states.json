@@ -153,6 +153,23 @@
       "capabilities": { "vision": true }
     },
     {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 1.837, "output": 9.611, "cache_hit": 0.184 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": { "input": 2.827, "output": 14.133, "cache_hit": 0.283 },
