@@ -1407,7 +1407,7 @@
     {
       "id": "kimi-k3-1-pro",
       "name": "Kimi K3.1 Pro",
-      "pricing": { "input": 3.75, "output": 18.75 },
+      "pricing": { "input": 2, "output": 10 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
