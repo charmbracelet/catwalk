@@ -231,6 +231,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
+      "context_window": 1000000,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "meta-models/muse-spark-open",
       "name": "Muse Spark Open",
       "pricing": { "input": 1.25, "output": 4.25, "cache_hit": 0.15 },

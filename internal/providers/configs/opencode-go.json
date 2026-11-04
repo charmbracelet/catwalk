@@ -215,6 +215,23 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "hy4",
+      "name": "Hy4",
+      "pricing": { "input": 0.83, "output": 2.5, "cache_hit": 0.04 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "hy4-preview",
       "name": "Hy4 preview",
       "pricing": { "input": 0.83, "output": 2.5, "cache_hit": 0.04 },

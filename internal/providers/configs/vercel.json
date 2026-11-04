@@ -941,7 +941,7 @@
     {
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
-      "pricing": { "input": 0.13, "output": 0.26, "cache_hit": 0.028 },
+      "pricing": { "input": 0.0845, "output": 0.169, "cache_hit": 0.0182 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
@@ -958,7 +958,7 @@
     {
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
-      "pricing": { "input": 0.13, "output": 0.26, "cache_hit": 0.028 },
+      "pricing": { "input": 0.0845, "output": 0.169, "cache_hit": 0.0182 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
@@ -1026,7 +1026,7 @@
     {
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.007 },
+      "pricing": { "input": 0.195, "output": 0.78, "cache_hit": 0.0045 },
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "reasoning": {
@@ -1382,7 +1382,7 @@
     {
       "id": "zai/glm-5.3",
       "name": "GLM 5.3",
-      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.14 },
+      "pricing": { "input": 0.91, "output": 2.86, "cache_hit": 0.091 },
       "context_window": 1000000,
       "default_max_tokens": 1000000,
       "reasoning": {
@@ -1416,7 +1416,7 @@
     {
       "id": "zai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
-      "pricing": { "input": 0.15, "output": 0.5, "cache_hit": 0.03 },
+      "pricing": { "input": 0.0975, "output": 0.325, "cache_hit": 0.0195 },
       "context_window": 1000000,
       "default_max_tokens": 131000,
       "reasoning": {
@@ -3588,7 +3588,7 @@
     {
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
-      "pricing": { "input": 3, "output": 15, "cache_hit": 0.3 },
+      "pricing": { "input": 1.95, "output": 9.75, "cache_hit": 0.195 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
@@ -3622,14 +3622,9 @@
     {
       "id": "moonshotai/kimi-k3.1-pro",
       "name": "Kimi K3.1 Pro",
-      "pricing": {
-        "input": 2,
-        "output": 10,
-        "cache_create": 2,
-        "cache_hit": 0.2
-      },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
+      "context_window": 1000000,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
