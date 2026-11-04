@@ -189,7 +189,7 @@
     {
       "id": "mimo-v2.6-pro",
       "name": "MiMo-V2.6-Pro",
-      "pricing": { "input": 0.87, "output": 1.74, "cache_create": 0.036 },
+      "pricing": { "input": 0.435, "output": 0.87, "cache_create": 0.0036 },
       "context_window": 1048560,
       "default_max_tokens": 393216,
       "reasoning": {
@@ -206,7 +206,7 @@
     {
       "id": "mimo-v2.6-pro-flex",
       "name": "MiMo-V2.6-Pro (flex)",
-      "pricing": { "input": 0.5655, "output": 1.131, "cache_create": 0.0234 },
+      "pricing": { "input": 0.28275, "output": 0.5655, "cache_create": 0.00234 },
       "context_window": 1048560,
       "default_max_tokens": 393216,
       "reasoning": {

@@ -958,7 +958,7 @@
     {
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
-      "pricing": { "input": 0.076, "output": 0.153, "cache_hit": 0.014 },
+      "pricing": { "input": 0.13, "output": 0.26, "cache_hit": 0.028 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
@@ -992,9 +992,9 @@
     {
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
-      "pricing": { "input": 0.66, "output": 1.98, "cache_hit": 0.022 },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "pricing": { "input": 1.32, "output": 3.96, "cache_hit": 0.132 },
+      "context_window": 1048600,
+      "default_max_tokens": 1048600,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1349,7 +1349,7 @@
     {
       "id": "zai/glm-5.2",
       "name": "GLM 5.2",
-      "pricing": { "input": 0.8, "output": 2.55, "cache_hit": 0.16 },
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.14 },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {
@@ -3458,23 +3458,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "tencent/hy3",
-      "name": "Hy3",
-      "pricing": { "input": 0.14, "output": 0.58, "cache_hit": 0.035 },
-      "context_window": 262144,
-      "default_max_tokens": 262144,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "thinkingmachines/inkling",
       "name": "Inkling",
       "pricing": { "input": 1, "output": 4.05, "cache_hit": 0.17 },
@@ -5106,6 +5089,40 @@
       "pricing": { "input": 1, "output": 2.7, "cache_hit": 0.1 },
       "context_window": 1048576,
       "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "tencent/hy3",
+      "name": "Tencent Hy3",
+      "pricing": { "input": 0.14, "output": 0.58, "cache_hit": 0.035 },
+      "context_window": 262144,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tencent/hy4",
+      "name": "Tencent Hy4",
+      "pricing": { "input": 0.417, "output": 1.2505, "cache_hit": 0.021 },
+      "context_window": 1024000,
+      "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
