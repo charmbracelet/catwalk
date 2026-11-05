@@ -93,6 +93,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "hf:moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
+      "context_window": 524288,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "hf:Qwen/Qwen3.8-27B",
       "name": "Qwen3.8 27B",
       "pricing": { "input": 0.45, "output": 2.2, "cache_hit": 0.09 },
