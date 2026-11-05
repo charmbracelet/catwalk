@@ -239,6 +239,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gpt-6-luna-decisions",
+      "name": "GPT-6 Luna Decisions",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1000000,
+      "default_max_tokens": 0,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "gpt-6-sol",
       "type": "responses",
       "name": "GPT-6 Sol",
