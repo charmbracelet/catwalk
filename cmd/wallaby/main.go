@@ -46,13 +46,20 @@ type modelCapabilities struct {
 	supportsAttachments bool
 }
 
-var knownCapabilities = map[string]modelCapabilities{
-	"kimi-k3": {
-		contextWindow:       1048576,
-		defaultMaxTokens:    131072,
-		canReason:           true,
-		supportsAttachments: true,
-	},
+// capabilitiesFor returns metadata for a model id. Every Kimi K3 point release
+// shares the same 1M-context / 131K-output envelope, so the generator picks up
+// new models from pricing.json without a code change. Other families return
+// false and are skipped until their metadata is verified.
+func capabilitiesFor(id string) (modelCapabilities, bool) {
+	if strings.HasPrefix(id, "kimi-k3") {
+		return modelCapabilities{
+			contextWindow:       1048576,
+			defaultMaxTokens:    131072,
+			canReason:           true,
+			supportsAttachments: true,
+		}, true
+	}
+	return modelCapabilities{}, false
 }
 
 const (
@@ -109,7 +116,7 @@ func main() {
 	}
 
 	for _, model := range pricing.Models {
-		caps, ok := knownCapabilities[model.ID]
+		caps, ok := capabilitiesFor(model.ID)
 		if !ok {
 			log.Printf("Skipping %s: no verified capability metadata", model.ID)
 			continue
