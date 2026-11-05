@@ -8,6 +8,23 @@
   "default_small_model_id": "glm-4.7-flash",
   "models": [
     {
+      "id": "kimi-k3.1-pro",
+      "name": "kimi-k3.1-pro",
+      "pricing": { "input": 2.749, "output": 13.747 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "minimax-m3.1-flash",
       "name": "minimax-m3.1-flash",
       "pricing": { "input": 0.273, "output": 1.094 },
@@ -555,8 +572,8 @@
       "id": "kimi-k2.7-code",
       "name": "kimi-k2.7-code",
       "pricing": { "input": 0.589, "output": 2.962 },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
+      "context_window": 256000,
+      "default_max_tokens": 25600,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
