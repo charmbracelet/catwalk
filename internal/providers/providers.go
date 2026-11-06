@@ -112,6 +112,9 @@ var scalewayConfig []byte
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
+//go:embed configs/trustedrouter.json
+var trustedRouterConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -176,6 +179,7 @@ var providerRegistry = []ProviderFunc{
 	openRouterProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
+	trustedRouterProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -341,6 +345,10 @@ func scalewayProvider() catwalk.Provider {
 
 func syntheticProvider() catwalk.Provider {
 	return loadProviderFromConfig(syntheticConfig)
+}
+
+func trustedRouterProvider() catwalk.Provider {
+	return loadProviderFromConfig(trustedRouterConfig)
 }
 
 func vercelProvider() catwalk.Provider {
