@@ -112,6 +112,9 @@ var scalewayConfig []byte
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
+//go:embed configs/tsubasa.json
+var tsubasaConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -176,6 +179,7 @@ var providerRegistry = []ProviderFunc{
 	openRouterProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
+	tsubasaProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -341,6 +345,10 @@ func scalewayProvider() catwalk.Provider {
 
 func syntheticProvider() catwalk.Provider {
 	return loadProviderFromConfig(syntheticConfig)
+}
+
+func tsubasaProvider() catwalk.Provider {
+	return loadProviderFromConfig(tsubasaConfig)
 }
 
 func vercelProvider() catwalk.Provider {

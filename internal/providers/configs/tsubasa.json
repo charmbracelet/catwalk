@@ -1,0 +1,45 @@
+{
+  "name": "Tsubasa",
+  "id": "tsubasa",
+  "type": "completions",
+  "api_key": "$TSUBASA_API_KEY",
+  "api_endpoint": "https://api.tsubasa.sh/v1",
+  "default_large_model_id": "tsubasa-pro",
+  "default_small_model_id": "tsubasa-fast",
+  "models": [
+    {
+      "id": "tsubasa-fast",
+      "name": "Tsubasa Fast",
+      "context_window": 32768,
+      "default_max_tokens": 8192,
+      "pricing": {
+        "input": 0.2,
+        "output": 1.0
+      },
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    },
+    {
+      "id": "tsubasa-pro",
+      "name": "Tsubasa Pro",
+      "context_window": 32768,
+      "default_max_tokens": 16384,
+      "pricing": {
+        "input": 0.5,
+        "output": 4.0
+      },
+      "reasoning": {
+        "thinking": "never"
+      },
+      "capabilities": {
+        "vision": false,
+        "audio": false
+      }
+    }
+  ]
+}
