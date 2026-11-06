@@ -143,15 +143,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "tencent/hy4",
-      "name": "Hy4",
-      "pricing": { "input": 0.5838, "output": 1.7507, "cache_hit": 0.0294 },
-      "context_window": 1048576,
-      "default_max_tokens": 32768,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "kwaipilot/kat-coder-air-v2.5",
       "name": "KAT Coder Air V2.5",
       "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.03 },

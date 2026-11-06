@@ -3023,23 +3023,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "google/gemini-3.5-flash-batch",
-      "name": "Gemini 3.5 Flash (Batch)",
-      "pricing": { "input": 0.75, "output": 4.5, "cache_hit": 0.075 },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "google/gemini-3.5-flash-lite",
       "name": "Gemini 3.5 Flash Lite",
       "pricing": { "input": 0.3, "output": 2.5, "cache_hit": 0.03 },
@@ -3111,23 +3094,6 @@
       "id": "google/gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
       "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.075 },
-      "context_window": 1000000,
-      "default_max_tokens": 65535,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "google/gemini-3.7-flash-batch",
-      "name": "Gemini 3.7 Flash (Batch)",
-      "pricing": { "input": 0.375, "output": 1.875, "cache_hit": 0.0375 },
       "context_window": 1000000,
       "default_max_tokens": 65535,
       "reasoning": {
@@ -4969,14 +4935,9 @@
     {
       "id": "alibaba/qwen3.8-27b",
       "name": "Qwen3.8 27B",
-      "pricing": {
-        "input": 0.5,
-        "output": 3,
-        "cache_create": 0.625,
-        "cache_hit": 0.1
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
+      "pricing": { "input": 0.06, "output": 2.3, "cache_hit": 0.059 },
+      "context_window": 262144,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
