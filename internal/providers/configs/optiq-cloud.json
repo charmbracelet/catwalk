@@ -1,0 +1,89 @@
+{
+  "name": "OptiQ Cloud",
+  "id": "optiq-cloud",
+  "api_key": "$OPTIQ_CLOUD_API_KEY",
+  "api_endpoint": "https://cloud.mlx-optiq.com/api/v1",
+  "type": "completions",
+  "default_large_model_id": "glm-5.3",
+  "default_small_model_id": "deepseek-v4.1-flash",
+  "models": [
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "pricing": { "input": 0.15, "output": 0.5, "cache_hit": 0.03 },
+      "context_window": 1048576,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": { "input": 0.1, "output": 0.5, "cache_hit": 0.03 },
+      "context_window": 1040000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "minimax-m3.1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.02 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM 5.3",
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ],
+  "session_affinity_header": "x-session-id"
+}
