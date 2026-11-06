@@ -1321,6 +1321,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "crouton-alpha-free",
+      "name": "Crouton Alpha (free)",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "deepseek-v3.2",
       "name": "DeepSeek V3.2",
       "pricing": { "input": 0.58, "output": 1.68003 },
