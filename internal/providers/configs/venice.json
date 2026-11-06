@@ -437,6 +437,32 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "e2ee-deepseek-v4-1-flash-1017-abliterated",
+      "name": "DeepSeek V4.1 Flash 1017 Abliterated",
+      "pricing": { "input": 0.375, "output": 1.5 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017-ultrafast",
+      "name": "DeepSeek V4.1 Flash 1017 Ultrafast",
+      "pricing": { "input": 3, "output": 12 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "deepseek-v4-1-flash-1017-uncensored",
       "name": "DeepSeek V4.1 Flash 1017 Uncensored",
       "pricing": { "input": 0.33, "output": 1.32 },
