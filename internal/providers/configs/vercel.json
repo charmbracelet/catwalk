@@ -8,6 +8,23 @@
   "default_small_model_id": "deepseek/deepseek-v4.1-flash",
   "models": [
     {
+      "id": "humansand/ampersand-v0.1",
+      "name": "Ampersand v0.1",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "callstack/apex",
       "name": "Apex",
       "pricing": { "input": 0.5, "output": 3, "cache_hit": 0.2 },
@@ -1063,6 +1080,23 @@
       "pricing": { "input": 0.6, "output": 2.4, "cache_hit": 0.014 },
       "context_window": 1048576,
       "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017-ultrafast",
+      "name": "DeepSeek V4.1 Flash 1017 Ultrafast",
+      "pricing": { "input": 2.4, "output": 9.6, "cache_hit": 0.048 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
