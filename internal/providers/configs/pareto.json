@@ -1,0 +1,54 @@
+{
+  "name": "Pareto Inference",
+  "id": "pareto",
+  "api_key": "$PARETO_API_KEY",
+  "api_endpoint": "https://api.paretoinference.com/v1",
+  "type": "completions",
+  "default_large_model_id": "z-ai/glm-5.3-flash",
+  "default_small_model_id": "z-ai/glm-5.3-flash",
+  "models": [
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": { "input": 0.21, "output": 0.84, "cache_hit": 0.0042 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "pricing": { "input": 0.06, "output": 0.2, "cache_hit": 0.012 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash",
+      "name": "MiMo V2.6 Flash",
+      "pricing": { "input": 0.126, "output": 0.252, "cache_hit": 0.00252 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
