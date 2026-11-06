@@ -103,6 +103,9 @@ var openCodeZenConfig []byte
 //go:embed configs/openrouter.json
 var openRouterConfig []byte
 
+//go:embed configs/optiq-cloud.json
+var optiqCloudConfig []byte
+
 //go:embed configs/qiniucloud.json
 var qiniuCloudConfig []byte
 
@@ -174,6 +177,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
+	optiqCloudProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
 	vercelProvider,
@@ -329,6 +333,10 @@ func openCodeZenProvider() catwalk.Provider {
 
 func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
+}
+
+func optiqCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(optiqCloudConfig)
 }
 
 func qiniuCloudProvider() catwalk.Provider {
