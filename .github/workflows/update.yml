@@ -90,6 +90,10 @@ jobs:
         run: go run ./cmd/vercel/main.go
         continue-on-error: true
 
+      - name: Wallaby
+        run: go run ./cmd/wallaby/main.go
+        continue-on-error: true
+
       - name: xAI
         run: go run ./cmd/xai/main.go
         continue-on-error: true
