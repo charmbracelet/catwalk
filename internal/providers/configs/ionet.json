@@ -55,7 +55,7 @@
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek: DeepSeek V4 Pro 0813",
-      "pricing": { "input": 1.0076, "output": 4.142, "cache_hit": 0.5038 },
+      "pricing": { "input": 0.8703, "output": 4.168, "cache_hit": 0.43515 },
       "context_window": 1048576,
       "default_max_tokens": 39321,
       "reasoning": { "thinking": "toggleable" },
@@ -64,7 +64,7 @@
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek: DeepSeek V4.1 Flash",
-      "pricing": { "input": 0.2712, "output": 1.2, "cache_hit": 0.1356 },
+      "pricing": { "input": 0.2262, "output": 0.9634, "cache_hit": 0.1131 },
       "context_window": 1048320,
       "default_max_tokens": 13107,
       "reasoning": { "thinking": "toggleable" },
@@ -118,7 +118,7 @@
     {
       "id": "MiniMaxAI/MiniMax-M2.5",
       "name": "MiniMaxAI/MiniMax-M2.5",
-      "pricing": { "input": 0.353, "output": 1.416, "cache_hit": 0.1765 },
+      "pricing": { "input": 0.293, "output": 1.176, "cache_hit": 0.1465 },
       "context_window": 196600,
       "default_max_tokens": 19660,
       "reasoning": { "thinking": "never" },
@@ -154,7 +154,7 @@
     {
       "id": "moonshotai/Kimi-K2.6",
       "name": "MoonshotAI: Kimi K2.6",
-      "pricing": { "input": 0.7699, "output": 3.632, "cache_hit": 0.38495 },
+      "pricing": { "input": 0.6977, "output": 3.26, "cache_hit": 0.34885 },
       "context_window": 262142,
       "default_max_tokens": 26214,
       "reasoning": { "thinking": "toggleable" },
@@ -163,7 +163,7 @@
     {
       "id": "moonshotai/Kimi-K2.7-Code",
       "name": "MoonshotAI: Kimi K2.7 Code",
-      "pricing": { "input": 0.9924, "output": 4.468, "cache_hit": 0.4962 },
+      "pricing": { "input": 0.96, "output": 4.4, "cache_hit": 0.48 },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "reasoning": { "thinking": "never" },
@@ -181,7 +181,7 @@
     {
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "NVIDIA: Nemotron 3.5 Lightning",
-      "pricing": { "input": 0.05125, "output": 0.17, "cache_hit": 0.02563 },
+      "pricing": { "input": 0.05167, "output": 0.16, "cache_hit": 0.02583 },
       "context_window": 262144,
       "default_max_tokens": 13107,
       "reasoning": { "thinking": "never" },
@@ -190,7 +190,7 @@
     {
       "id": "nvidia/nemotron-3.5-super-vl",
       "name": "NVIDIA: Nemotron 3.5 Super VL",
-      "pricing": { "input": 0.16, "output": 0.48, "cache_hit": 0.08 },
+      "pricing": { "input": 0.2, "output": 0.58, "cache_hit": 0.1 },
       "context_window": 262144,
       "default_max_tokens": 13107,
       "reasoning": { "thinking": "never" },
@@ -199,7 +199,7 @@
     {
       "id": "openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b",
-      "pricing": { "input": 0.188, "output": 0.7, "cache_hit": 0.094 },
+      "pricing": { "input": 0.168, "output": 0.63, "cache_hit": 0.084 },
       "context_window": 131072,
       "default_max_tokens": 13107,
       "reasoning": {
@@ -216,7 +216,7 @@
     {
       "id": "openai/gpt-oss-20b",
       "name": "OpenAI: gpt-oss-20b",
-      "pricing": { "input": 0.0416, "output": 0.1474, "cache_hit": 0.0208 },
+      "pricing": { "input": 0.0418, "output": 0.1474, "cache_hit": 0.0209 },
       "context_window": 64000,
       "default_max_tokens": 6400,
       "reasoning": {
@@ -233,7 +233,7 @@
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
-      "pricing": { "input": 0.10833, "output": 1.28333, "cache_hit": 0.05417 },
+      "pricing": { "input": 0.09925, "output": 1.1825, "cache_hit": 0.04963 },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "reasoning": { "thinking": "never" },
@@ -242,7 +242,7 @@
     {
       "id": "Qwen/Qwen3.6-27B",
       "name": "Qwen: Qwen3.6 27B",
-      "pricing": { "input": 0.319, "output": 3.07, "cache_hit": 0.1595 },
+      "pricing": { "input": 0.293, "output": 3.18, "cache_hit": 0.1465 },
       "context_window": 32768,
       "default_max_tokens": 3276,
       "reasoning": { "thinking": "never" },
@@ -251,7 +251,7 @@
     {
       "id": "Qwen/Qwen3.6-35B-A3B",
       "name": "Qwen: Qwen3.6 35B A3B",
-      "pricing": { "input": 0.15, "output": 1.064, "cache_hit": 0.075 },
+      "pricing": { "input": 0.15, "output": 1.052, "cache_hit": 0.075 },
       "context_window": 262144,
       "default_max_tokens": 26214,
       "reasoning": { "thinking": "never" },
@@ -260,7 +260,7 @@
     {
       "id": "Qwen/Qwen3.8-27B",
       "name": "Qwen: Qwen3.8 27B",
-      "pricing": { "input": 0.348, "output": 2.358, "cache_hit": 0.174 },
+      "pricing": { "input": 0.388, "output": 2.338, "cache_hit": 0.194 },
       "context_window": 65536,
       "default_max_tokens": 6553,
       "reasoning": { "thinking": "never" },
@@ -296,7 +296,7 @@
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Flash",
       "name": "Xiaomi: MiMo-V2.6-Flash",
-      "pricing": { "input": 0.1414, "output": 0.2828, "cache_hit": 0.0707 },
+      "pricing": { "input": 0.147, "output": 0.294, "cache_hit": 0.0735 },
       "context_window": 1048320,
       "default_max_tokens": 13107,
       "reasoning": { "thinking": "never" },
@@ -332,7 +332,7 @@
     {
       "id": "zai-org/GLM-5",
       "name": "Z.ai: GLM 5",
-      "pricing": { "input": 0.94, "output": 3.008, "cache_hit": 0.47 },
+      "pricing": { "input": 0.86, "output": 2.752, "cache_hit": 0.43 },
       "context_window": 202752,
       "default_max_tokens": 20275,
       "reasoning": { "thinking": "toggleable" },
@@ -341,7 +341,7 @@
     {
       "id": "zai-org/GLM-5.1",
       "name": "Z.ai: GLM 5.1",
-      "pricing": { "input": 1.35828, "output": 4.26888, "cache_hit": 0.67914 },
+      "pricing": { "input": 1.28576, "output": 4.04096, "cache_hit": 0.64288 },
       "context_window": 202750,
       "default_max_tokens": 3276,
       "reasoning": { "thinking": "toggleable" },
