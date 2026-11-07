@@ -67,6 +67,9 @@ var geminiConfig []byte
 //go:embed configs/groq.json
 var groqConfig []byte
 
+//go:embed configs/openzoo.json
+var openZooConfig []byte
+
 //go:embed configs/huggingface.json
 var huggingFaceConfig []byte
 
@@ -174,6 +177,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
+	openZooProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
 	vercelProvider,
@@ -281,6 +285,10 @@ func geminiProvider() catwalk.Provider {
 
 func groqProvider() catwalk.Provider {
 	return loadProviderFromConfig(groqConfig)
+}
+
+func openZooProvider() catwalk.Provider {
+	return loadProviderFromConfig(openZooConfig)
 }
 
 func huggingFaceProvider() catwalk.Provider {
