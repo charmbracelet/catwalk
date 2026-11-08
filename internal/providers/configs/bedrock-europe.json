@@ -90,6 +90,30 @@
       "capabilities": { "vision": true }
     },
     {
+      "id": "eu.anthropic.claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "pricing": {
+        "input": 0.11,
+        "output": 0.55,
+        "cache_create": 0.1375,
+        "cache_hit": 0.011
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
       "id": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
       "name": "Claude Haiku 4.5",
       "pricing": {
