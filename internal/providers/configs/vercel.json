@@ -237,6 +237,56 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "anthropic/claude-fable-5.2",
+      "name": "Claude Fable 5.2",
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-fable-5.2-batch",
+      "name": "Claude Fable 5.2 (Batch)",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "anthropic/claude-haiku-4.5",
       "name": "Claude Haiku 4.5",
       "pricing": {
@@ -4248,6 +4298,23 @@
       "context_window": 262144,
       "default_max_tokens": 4000,
       "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "meta/muse-ember",
+      "name": "Muse Ember",
+      "pricing": { "input": 0.1, "output": 0.5, "cache_hit": 0.004 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
