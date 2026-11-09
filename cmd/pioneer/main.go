@@ -15,18 +15,24 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 type PioneerModel struct {
-	ID            string  `json:"id"`
-	Label         string  `json:"label"`
-	ContextWindow int64   `json:"context_window"`
-	InputPrice    float64 `json:"input_price_per_million"`
-	OutputPrice   float64 `json:"output_price_per_million"`
-	TaskType      string  `json:"task_type"`
-	IsChatModel   bool    `json:"is_chat_model"`
-	Tier          string  `json:"tier"`
+	ID                 string  `json:"id"`
+	Label              string  `json:"label"`
+	ContextWindow      int64   `json:"context_window"`
+	InputPrice         float64 `json:"input_price_per_million"`
+	OutputPrice        float64 `json:"output_price_per_million"`
+	TaskType           string  `json:"task_type"`
+	IsChatModel        bool    `json:"is_chat_model"`
+	Tier               string  `json:"tier"`
+	MaxOutputTokens    int64   `json:"max_output_tokens"`
+	CacheReadPrice     float64 `json:"cache_read_price_per_million"`
+	CacheWritePrice    float64 `json:"cache_write_price_per_million"`
+	SupportsInference  bool    `json:"supports_inference"`
+	SupportsImageInput bool    `json:"supports_image_input"`
+	Deprecated         bool    `json:"deprecated"`
 }
 
 type PioneerResponse struct {
@@ -42,7 +48,7 @@ func main() {
 	req, _ := http.NewRequestWithContext(
 		context.Background(),
 		"GET",
-		"https://api.pioneer.ai/base-models",
+		"https://api.fastino.ai/v1/base-models",
 		nil,
 	)
 	req.Header.Set("User-Agent", "Crush-Client/1.0")
@@ -78,44 +84,45 @@ func main() {
 		if m.TaskType != "decoder" {
 			continue
 		}
+		if m.Deprecated || !m.SupportsInference {
+			continue
+		}
 
 		contextWindow := m.ContextWindow
 		if contextWindow == 0 {
 			contextWindow = 8192
 		}
 
-		defaultMaxTokens := contextWindow / 4
-		if defaultMaxTokens > 128000 {
-			defaultMaxTokens = 128000
-		}
-		if defaultMaxTokens < 4096 {
-			defaultMaxTokens = 4096
+		defaultMaxTokens := m.MaxOutputTokens
+		if defaultMaxTokens == 0 {
+			defaultMaxTokens = max(min(contextWindow/4, 128000), 4096)
 		}
 
 		isDeepSeek := strings.Contains(m.ID, "deepseek") || strings.Contains(m.Label, "DeepSeek")
 		isQwen := strings.Contains(m.ID, "Qwen") || strings.Contains(m.Label, "Qwen3")
 
-		var (
-			canReason        bool
-			reasoningLevels  []string
-			defaultReasoning string
-		)
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
 		if isDeepSeek || isQwen {
-			canReason = true
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		model := catwalk.Model{
-			ID:                     m.ID,
-			Name:                   m.Label,
-			CostPer1MIn:            roundCost(m.InputPrice),
-			CostPer1MOut:           roundCost(m.OutputPrice),
-			ContextWindow:          contextWindow,
-			DefaultMaxTokens:       defaultMaxTokens,
-			CanReason:              canReason,
-			DefaultReasoningEffort: defaultReasoning,
-			ReasoningLevels:        reasoningLevels,
+			ID:   m.ID,
+			Name: m.Label,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(m.InputPrice),
+				Output:      roundCost(m.OutputPrice),
+				CacheCreate: roundCost(m.CacheWritePrice),
+				CacheHit:    roundCost(m.CacheReadPrice),
+			},
+			ContextWindow:    contextWindow,
+			DefaultMaxTokens: defaultMaxTokens,
+			Reasoning:        reasoning,
+			Capabilities:     catwalk.Capabilities{Vision: m.SupportsImageInput},
 		}
 		models = append(models, model)
 	}
@@ -131,10 +138,10 @@ func main() {
 		Name:                "Pioneer",
 		ID:                  catwalk.InferenceProvider("pioneer"),
 		APIKey:              "$PIONEER_API_KEY",
-		APIEndpoint:         "https://api.pioneer.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
-		DefaultLargeModelID: "claude-opus-4-6",
-		DefaultSmallModelID: "Qwen/Qwen3.5-9B",
+		APIEndpoint:         "https://api.fastino.ai/v1",
+		Type:                catwalk.TypeCompletions,
+		DefaultLargeModelID: "claude-opus-5",
+		DefaultSmallModelID: "deepseek-ai/DeepSeek-V4-Flash",
 		Models:              models,
 	}
 

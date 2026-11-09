@@ -9,6 +9,8 @@
 version: 2
 pro: true
 
+project_name: catwalk
+
 before:
   hooks:
     - go mod tidy

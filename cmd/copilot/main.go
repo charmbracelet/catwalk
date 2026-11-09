@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 type Response struct {
@@ -48,6 +48,7 @@ type Model struct {
 	ModelPickerEnabled bool       `json:"model_picker_enabled"`
 	Capabilities       Capability `json:"capabilities"`
 	Policy             *Policy    `json:"policy,omitempty"`
+	SupportedEndpoints []string   `json:"supported_endpoints,omitempty"`
 }
 
 type Capability struct {
@@ -110,7 +111,9 @@ func run() error {
 			strings.HasPrefix(m.ID, "exec-agent") ||
 			strings.HasPrefix(m.ID, "search-agent") ||
 			strings.HasPrefix(m.ID, "copilot-search") ||
-			strings.HasSuffix(m.ID, "-base") || strings.HasSuffix(m.ID, "-copilot") ||
+			strings.HasPrefix(m.ID, "gpt-image") ||
+			strings.HasSuffix(m.ID, "-base") ||
+			strings.HasSuffix(m.ID, "-copilot") ||
 			m.ID == "gpt-4-o-preview" ||
 			m.ID == "trajectory-compaction"
 	})
@@ -135,7 +138,7 @@ func run() error {
 		Name:                "GitHub Copilot",
 		Models:              catwalkModels,
 		APIEndpoint:         "https://api.githubcopilot.com",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "claude-sonnet-5",
 		DefaultSmallModelID: "claude-haiku-4.5",
 	}
@@ -250,10 +253,23 @@ func modelToCatwalk(m Model) catwalk.Model {
 	return catwalk.Model{
 		ID:               m.ID,
 		Name:             m.Name,
+		Type:             modelEndpointType(m),
 		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
 		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
-		SupportsImages:   m.Capabilities.Supports.Vision,
+		Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
+		Capabilities:     catwalk.Capabilities{Vision: m.Capabilities.Supports.Vision},
 	}
+}
+
+// modelEndpointType returns the endpoint type for the given model, derived
+// from the model's supported endpoints as reported by the Copilot API. Models
+// that support the OpenAI Responses API are routed through it; all others use
+// the provider's default endpoint type (Chat Completions).
+func modelEndpointType(m Model) catwalk.Type {
+	if slices.Contains(m.SupportedEndpoints, "/responses") {
+		return catwalk.TypeResponses
+	}
+	return ""
 }
 
 func copilotToken() string {
@@ -276,11 +292,10 @@ func tokenFromDisk() string {
 	if err := json.Unmarshal(data, &content); err != nil {
 		return ""
 	}
-	if app, ok := content["github.com:Iv1.b507a08c87ecfe98"]; ok {
-		return app.OAuthToken
-	}
-	if app, ok := content["github.com:Iv1.b507a08c87ecfe98:zed"]; ok {
-		return app.OAuthToken
+	for _, app := range content {
+		if app.OAuthToken != "" {
+			return app.OAuthToken
+		}
 	}
 	return ""
 }
