@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 // SupportedProviders defines which providers we want to support.
@@ -113,7 +113,7 @@ func main() {
 		ID:          catwalk.InferenceProviderHuggingFace,
 		APIKey:      "$HF_TOKEN",
 		APIEndpoint: "https://router.huggingface.co/v1",
-		Type:        catwalk.TypeOpenAICompat,
+		Type:        catwalk.TypeCompletions,
 		Models:      []catwalk.Model{},
 		DefaultHeaders: map[string]string{
 			"HTTP-Referer": "https://charm.land",
@@ -155,26 +155,26 @@ func main() {
 			}
 
 			// Calculate pricing (convert from per-token to per-1M tokens)
-			var costPer1MIn, costPer1MOut float64
+			var costPerTokenIn, costPerTokenOut float64
 			if provider.Pricing != nil {
-				costPer1MIn = math.Round(provider.Pricing.Input*1e5) / 1e5
-				costPer1MOut = math.Round(provider.Pricing.Output*1e5) / 1e5
+				costPerTokenIn = math.Round(provider.Pricing.Input*1e5) / 1e5
+				costPerTokenOut = math.Round(provider.Pricing.Output*1e5) / 1e5
 			}
 
 			// Set default max tokens (conservative estimate)
 			defaultMaxTokens := min(contextLength/4, 8192)
 
 			m := catwalk.Model{
-				ID:                 modelID,
-				Name:               modelName,
-				CostPer1MIn:        costPer1MIn,
-				CostPer1MOut:       costPer1MOut,
-				CostPer1MInCached:  0, // Not provided by HF Router
-				CostPer1MOutCached: 0, // Not provided by HF Router
-				ContextWindow:      contextLength,
-				DefaultMaxTokens:   defaultMaxTokens,
-				CanReason:          false, // Not provided by HF Router
-				SupportsImages:     false, // Not provided by HF Router
+				ID:   modelID,
+				Name: modelName,
+				Pricing: catwalk.Pricing{
+					Input:  costPerTokenIn,
+					Output: costPerTokenOut,
+				},
+				ContextWindow:    contextLength,
+				DefaultMaxTokens: defaultMaxTokens,
+				Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever}, // Not provided by HF Router
+				Capabilities:     catwalk.Capabilities{Vision: false},                // Not provided by HF Router
 			}
 
 			hfProvider.Models = append(hfProvider.Models, m)
@@ -192,17 +192,15 @@ func main() {
 	// Hugging Face sometimes temporarily removes models, so we provide fallbacks.
 	hfProvider.DefaultLargeModelID = firstAvailableModel(
 		hfProvider.Models,
-		"zai-org/GLM-5.2:fireworks-ai",
-		"moonshotai/Kimi-K2.7-Code:fireworks-ai",
-		"MiniMaxAI/MiniMax-M3:fireworks-ai",
-		"deepseek-ai/DeepSeek-V4-Pro:fireworks-ai",
+		"Qwen/Qwen3.8-27B:cerebras",
+		"openai/gpt-oss-120b:cerebras",
+		"openai/gpt-oss-120b:groq",
 	)
 	hfProvider.DefaultSmallModelID = firstAvailableModel(
 		hfProvider.Models,
-		"deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
-		"google/gemma-4-31B-it:cerebras",
-		"openai/gpt-oss-20b:fireworks-ai",
-		"openai/gpt-oss-20b:groq",
+		"Qwen/Qwen3.8-27B:cerebras",
+		"openai/gpt-oss-120b:cerebras",
+		"openai/gpt-oss-120b:groq",
 	)
 
 	// Save the JSON in internal/providers/configs/huggingface.json

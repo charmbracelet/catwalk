@@ -6,7 +6,8 @@ import (
 	"encoding/json"
 	"log"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/internal/v2compat"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 //go:embed configs/aihubmix.json
@@ -102,6 +103,9 @@ var openCodeZenConfig []byte
 //go:embed configs/openrouter.json
 var openRouterConfig []byte
 
+//go:embed configs/pareto.json
+var paretoConfig []byte
+
 //go:embed configs/qiniucloud.json
 var qiniuCloudConfig []byte
 
@@ -176,6 +180,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
+	paretoProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
 	trustedRouterProvider,
@@ -193,6 +198,12 @@ func GetAll() []catwalk.Provider {
 		providers = append(providers, providerFunc())
 	}
 	return providers
+}
+
+// GetAllV2 returns all registered providers in the legacy v2 schema,
+// derived automatically from the v3 data.
+func GetAllV2() []v2compat.Provider {
+	return v2compat.FromProviders(GetAll())
 }
 
 func loadProviderFromConfig(configData []byte) catwalk.Provider {
@@ -326,6 +337,10 @@ func openCodeZenProvider() catwalk.Provider {
 
 func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
+}
+
+func paretoProvider() catwalk.Provider {
+	return loadProviderFromConfig(paretoConfig)
 }
 
 func qiniuCloudProvider() catwalk.Provider {
