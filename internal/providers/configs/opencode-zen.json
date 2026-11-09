@@ -71,6 +71,29 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "claude-fable-5-2",
+      "type": "messages",
+      "name": "Claude Fable 5.2",
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "claude-haiku-4-5",
       "type": "messages",
       "name": "Claude Haiku 4.5",
@@ -331,7 +354,7 @@
         "input": 2,
         "output": 10,
         "cache_create": 2.5,
-        "cache_hit": 0.2
+        "cache_hit": 0.1
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1236,6 +1259,23 @@
       "pricing": { "input": 0.68, "output": 2.09, "cache_hit": 0.07 },
       "context_window": 524288,
       "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "muse-ember-1.0",
+      "name": "Muse Ember 1.0",
+      "pricing": { "input": 0.1, "output": 0.5 },
+      "context_window": 1048576,
+      "default_max_tokens": 270000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
