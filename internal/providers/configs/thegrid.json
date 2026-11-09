@@ -1,0 +1,311 @@
+{
+  "name": "The Grid AI",
+  "id": "thegrid",
+  "api_key": "$THEGRID_API_KEY",
+  "api_endpoint": "https://api.thegrid.ai/v1",
+  "type": "completions",
+  "default_large_model_id": "agent-max",
+  "default_small_model_id": "text-standard",
+  "models": [
+    {
+      "id": "agent-max",
+      "name": "Agent Max",
+      "pricing": { "input": 1.7099, "output": 1.7099, "cache_hit": 1.7099 },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "agent-prime",
+      "name": "Agent Prime",
+      "pricing": { "input": 0.1339, "output": 0.1339, "cache_hit": 0.1339 },
+      "context_window": 196608,
+      "default_max_tokens": 19660,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "agent-standard",
+      "name": "Agent Standard",
+      "pricing": { "input": 0.035, "output": 0.035, "cache_hit": 0.035 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "bytedance-pro-latest",
+      "name": "ByteDance Pro Latest",
+      "pricing": { "input": 0.2072, "output": 0.2072, "cache_hit": 0.2072 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "claude-opus-latest",
+      "name": "Claude Opus Latest",
+      "pricing": { "input": 1.6403, "output": 1.6403, "cache_hit": 1.6403 },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "code-max",
+      "name": "Code Max",
+      "pricing": { "input": 1.5565, "output": 1.5565, "cache_hit": 1.5565 },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "code-prime",
+      "name": "Code Prime",
+      "pricing": { "input": 0.116, "output": 0.116, "cache_hit": 0.116 },
+      "context_window": 196608,
+      "default_max_tokens": 19660,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "code-standard",
+      "name": "Code Standard",
+      "pricing": { "input": 0.0288, "output": 0.0288, "cache_hit": 0.0288 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-pro-latest",
+      "name": "DeepSeek Pro Latest",
+      "pricing": { "input": 0.3319, "output": 0.3319, "cache_hit": 0.3319 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "glm-latest",
+      "name": "GLM Latest",
+      "pricing": { "input": 0.3443, "output": 0.3443, "cache_hit": 0.3443 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-sol-latest",
+      "name": "GPT Sol Latest",
+      "pricing": { "input": 1.5125, "output": 1.5125, "cache_hit": 1.5125 },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-pro-latest",
+      "name": "Gemini Pro Latest",
+      "pricing": { "input": 0.6389, "output": 0.6389, "cache_hit": 0.6389 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "kimi-latest",
+      "name": "Kimi Latest",
+      "pricing": { "input": 0.7203, "output": 0.7203, "cache_hit": 0.7203 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "minimax-latest",
+      "name": "MiniMax Latest",
+      "pricing": { "input": 0.1097, "output": 0.1097, "cache_hit": 0.1097 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "text-max",
+      "name": "Text Max",
+      "pricing": { "input": 1.6634, "output": 1.6634, "cache_hit": 1.6634 },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "text-prime",
+      "name": "Text Prime",
+      "pricing": { "input": 0.0992, "output": 0.0992, "cache_hit": 0.0992 },
+      "context_window": 196608,
+      "default_max_tokens": 19660,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "text-standard",
+      "name": "Text Standard",
+      "pricing": { "input": 0.0295, "output": 0.0295, "cache_hit": 0.0295 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ]
+}
