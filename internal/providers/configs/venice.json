@@ -460,7 +460,7 @@
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": { "vision": false, "audio": false }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "deepseek-v4-1-flash-1017-uncensored",
@@ -1480,57 +1480,6 @@
       "context_window": 128000,
       "default_max_tokens": 4096,
       "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "mercury-2",
-      "name": "Mercury 2",
-      "pricing": { "input": 0.3125, "output": 0.9375 },
-      "context_window": 128000,
-      "default_max_tokens": 50000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "mercury-2-5",
-      "name": "Mercury 2.5",
-      "pricing": { "input": 0.25, "output": 0.9375 },
-      "context_window": 260000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "mercury-3",
-      "name": "Mercury 3",
-      "pricing": { "input": 0.1, "output": 0.35 },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
       "capabilities": { "vision": false, "audio": false }
     },
     {
