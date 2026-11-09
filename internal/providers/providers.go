@@ -103,6 +103,9 @@ var openCodeZenConfig []byte
 //go:embed configs/openrouter.json
 var openRouterConfig []byte
 
+//go:embed configs/pareto.json
+var paretoConfig []byte
+
 //go:embed configs/qiniucloud.json
 var qiniuCloudConfig []byte
 
@@ -177,6 +180,7 @@ var providerRegistry = []ProviderFunc{
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
+	paretoProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
 	tsubasaProvider,
@@ -333,6 +337,10 @@ func openCodeZenProvider() catwalk.Provider {
 
 func openRouterProvider() catwalk.Provider {
 	return loadProviderFromConfig(openRouterConfig)
+}
+
+func paretoProvider() catwalk.Provider {
+	return loadProviderFromConfig(paretoConfig)
 }
 
 func qiniuCloudProvider() catwalk.Provider {

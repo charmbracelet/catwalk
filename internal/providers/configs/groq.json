@@ -21,40 +21,22 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "qwen/qwen3-32b",
       "name": "Qwen3 32B",
-      "pricing": {
-        "input": 0.29,
-        "output": 0.59
-      },
+      "pricing": { "input": 0.29, "output": 0.59 },
       "context_window": 131072,
       "default_max_tokens": 10000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     }
   ]
 }

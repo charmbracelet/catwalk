@@ -8,175 +8,92 @@
     {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
-      "pricing": {
-        "input": 1.5,
-        "output": 9,
-        "cache_hit": 1
-      },
+      "pricing": { "input": 1.5, "output": 9, "cache_hit": 1 },
       "context_window": 1048576,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      },
+      "capabilities": { "vision": true, "audio": true },
       "max_attachments": 10
     },
     {
       "id": "gemini-3.1-pro-preview",
       "name": "Gemini 3.1 Pro (Regular)",
-      "pricing": {
-        "input": 2,
-        "output": 12,
-        "cache_hit": 0.2
-      },
+      "pricing": { "input": 2, "output": 12, "cache_hit": 0.2 },
       "context_window": 1048576,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      },
+      "capabilities": { "vision": true, "audio": true },
       "max_attachments": 10
     },
     {
       "id": "gemini-3.1-pro-preview-customtools",
       "name": "Gemini 3.1 Pro (Optimized for Coding Agents)",
-      "pricing": {
-        "input": 2,
-        "output": 12,
-        "cache_hit": 0.2
-      },
+      "pricing": { "input": 2, "output": 12, "cache_hit": 0.2 },
       "context_window": 1048576,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      },
+      "capabilities": { "vision": true, "audio": true },
       "max_attachments": 10
     },
     {
       "id": "gemini-3-pro-preview",
       "name": "Gemini 3 Pro",
-      "pricing": {
-        "input": 2,
-        "output": 12,
-        "cache_hit": 0.2
-      },
+      "pricing": { "input": 2, "output": 12, "cache_hit": 0.2 },
       "context_window": 1048576,
       "default_max_tokens": 64000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "high"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      },
+      "capabilities": { "vision": true, "audio": true },
       "max_attachments": 10
     },
     {
       "id": "gemini-3-flash-preview",
       "name": "Gemini 3 Flash",
-      "pricing": {
-        "input": 0.5,
-        "output": 3,
-        "cache_hit": 0.05
-      },
+      "pricing": { "input": 0.5, "output": 3, "cache_hit": 0.05 },
       "context_window": 1048576,
       "default_max_tokens": 50000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "minimal",
-            "display": "Minimal"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "minimal"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": true
-      },
+      "capabilities": { "vision": true, "audio": true },
       "max_attachments": 10
     },
     {
@@ -193,29 +110,14 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-sonnet-4-5-20250929",
@@ -228,13 +130,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4-6",
@@ -250,29 +147,14 @@
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          },
-          {
-            "value": "max",
-            "display": "Max"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-opus-4-5-20251101",
@@ -285,13 +167,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 50000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "claude-haiku-4-5-20251001",
@@ -304,13 +181,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": true,
-        "audio": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
     }
   ]
 }

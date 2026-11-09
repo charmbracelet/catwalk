@@ -139,11 +139,15 @@ func main() {
 		APIEndpoint:           "https://opencode.ai/zen/v1",
 		Type:                  catwalk.TypeCompletions,
 		SessionAffinityHeader: "x-opencode-session",
-		DefaultLargeModelID:   "mimo-v2.6-flash-free",
-		DefaultSmallModelID:   "mimo-v2.6-flash-free",
+		DefaultLargeModelID:   "deepseek-v4.1-flash",
+		DefaultSmallModelID:   "deepseek-v4.1-flash",
 	}
 
 	for _, zenModel := range zenModels {
+		if strings.HasSuffix(zenModel.ID, "-free") {
+			continue
+		}
+
 		enrichment, hasEnrichment := enrichmentData[zenModel.ID]
 
 		var costInput, costOutput, costCacheCreate, costCacheHit float64

@@ -18,12 +18,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "z-ai/glm-5",
@@ -36,12 +32,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "minimax/minimax-m2.1",
@@ -54,12 +46,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "moonshotai/kimi-k2-thinking",
@@ -72,12 +60,8 @@
       },
       "context_window": 256000,
       "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "z-ai/glm-4.7",
@@ -90,12 +74,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "minimax/minimax-m2",
@@ -108,12 +88,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "z-ai/glm-4.6",
@@ -126,12 +102,8 @@
       },
       "context_window": 200000,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "deepseek/deepseek-v3.1-terminus",
@@ -144,12 +116,8 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "deepseek-v3.1",
@@ -162,12 +130,8 @@
       },
       "context_window": 128000,
       "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "doubao-seed-2.0-pro",
@@ -180,12 +144,8 @@
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true }
     },
     {
       "id": "doubao-seed-2.0-code",
@@ -198,12 +158,8 @@
       },
       "context_window": 256000,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": true
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true }
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct",
@@ -216,12 +172,8 @@
       },
       "context_window": 262000,
       "default_max_tokens": 4096,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "glm-4.5",
@@ -234,12 +186,8 @@
       },
       "context_window": 131072,
       "default_max_tokens": 98304,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "moonshotai/kimi-k2-0905",
@@ -252,12 +200,8 @@
       },
       "context_window": 256000,
       "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "toggleable"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false }
     }
   ]
 }

@@ -6,110 +6,63 @@
   "api_endpoint": "https://api.cerebras.ai/v1",
   "default_large_model_id": "gpt-oss-120b",
   "default_small_model_id": "gemma-4-31b",
-  "default_headers": {
-    "X-Cerebras-3rd-Party-Integration": "crush"
-  },
+  "default_headers": { "X-Cerebras-3rd-Party-Integration": "crush" },
   "models": [
     {
       "id": "gemma-4-31b",
       "name": "Gemma 4 31B",
-      "pricing": {
-        "input": 0.99,
-        "output": 1.49
-      },
+      "pricing": { "input": 0.99, "output": 1.49 },
       "context_window": 131072,
       "default_max_tokens": 25000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": true
-      },
+      "capabilities": { "vision": true },
       "temperature": 1,
       "top_p": 0.95
     },
     {
       "id": "gpt-oss-120b",
       "name": "OpenAI GPT OSS",
-      "pricing": {
-        "input": 0.35,
-        "output": 0.75
-      },
+      "pricing": { "input": 0.35, "output": 0.75 },
       "context_window": 131072,
       "default_max_tokens": 25000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": {
-        "vision": false
-      }
+      "capabilities": { "vision": false }
     },
     {
       "id": "qwen-3.8-27b",
       "name": "Qwen 3.8 27B",
-      "pricing": {
-        "input": 0.99,
-        "output": 1.49
-      },
+      "pricing": { "input": 0.99, "output": 1.49 },
       "context_window": 65536,
       "default_max_tokens": 25000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
-          {
-            "value": "none",
-            "display": "None"
-          },
-          {
-            "value": "low",
-            "display": "Low"
-          },
-          {
-            "value": "medium",
-            "display": "Medium"
-          },
-          {
-            "value": "high",
-            "display": "High"
-          }
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "high"
       },
       "temperature": 1,
       "top_p": 0.95,
-      "capabilities": {
-        "vision": true
-      }
+      "capabilities": { "vision": true }
     }
   ]
 }

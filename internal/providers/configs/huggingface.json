@@ -10,87 +10,47 @@
     {
       "id": "Qwen/Qwen3.8-27B:cerebras",
       "name": "Qwen/Qwen3.8-27B (cerebras)",
-      "pricing": {
-        "input": 0.99,
-        "output": 1.49
-      },
+      "pricing": { "input": 0.99, "output": 1.49 },
       "context_window": 65536,
       "default_max_tokens": 8192,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "openai/gpt-oss-120b:cerebras",
       "name": "openai/gpt-oss-120b (cerebras)",
-      "pricing": {
-        "input": 0.35,
-        "output": 0.75
-      },
+      "pricing": { "input": 0.35, "output": 0.75 },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "openai/gpt-oss-120b:groq",
       "name": "openai/gpt-oss-120b (groq)",
-      "pricing": {
-        "input": 0.15,
-        "output": 0.75
-      },
+      "pricing": { "input": 0.15, "output": 0.75 },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "openai/gpt-oss-20b:groq",
       "name": "openai/gpt-oss-20b (groq)",
-      "pricing": {
-        "input": 0.1,
-        "output": 0.5
-      },
+      "pricing": { "input": 0.1, "output": 0.5 },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "openai/gpt-oss-safeguard-20b:groq",
       "name": "openai/gpt-oss-safeguard-20b (groq)",
-      "pricing": {
-        "input": 0,
-        "output": 0
-      },
+      "pricing": { "input": 0, "output": 0 },
       "context_window": 131072,
       "default_max_tokens": 8192,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false,
-        "audio": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     }
   ],
   "default_headers": {

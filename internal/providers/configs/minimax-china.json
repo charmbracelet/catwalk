@@ -10,19 +10,11 @@
     {
       "id": "MiniMax-M3",
       "name": "MiniMax-M3",
-      "pricing": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_hit": 0.12
-      },
+      "pricing": { "input": 0.6, "output": 2.4, "cache_hit": 0.12 },
       "context_window": 1000000,
       "default_max_tokens": 512000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "MiniMax-M2.7-highspeed",
@@ -35,12 +27,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "MiniMax-M2.7",
@@ -53,12 +41,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "MiniMax-M2.5-highspeed",
@@ -71,12 +55,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "MiniMax-M2.5",
@@ -89,12 +69,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "MiniMax-M2.1-highspeed",
@@ -107,12 +83,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "MiniMax-M2.1",
@@ -125,12 +97,8 @@
       },
       "context_window": 204800,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     },
     {
       "id": "MiniMax-M2",
@@ -143,12 +111,8 @@
       },
       "context_window": 196608,
       "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "never"
-      },
-      "capabilities": {
-        "vision": false
-      }
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false }
     }
   ]
 }
