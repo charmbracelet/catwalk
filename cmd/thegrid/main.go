@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 // Pricing is The Grid AI's price for an instrument. Instruments are market
@@ -43,7 +43,6 @@ type Model struct {
 	ID                  string       `json:"id"`
 	DisplayName         string       `json:"display_name"`
 	Architecture        Architecture `json:"architecture"`
-	Attachments         bool         `json:"attachments"`
 	ContextLength       int64        `json:"context_length"`
 	MaxCompletionTokens int64        `json:"max_completion_tokens"`
 	Pricing             *Pricing     `json:"pricing"`
@@ -87,13 +86,71 @@ func fetchTheGridModels(apiEndpoint string) (*ModelsResponse, error) {
 	return &mr, nil
 }
 
+// getPricing converts The Grid AI's single market rate into catwalk pricing.
+// The Grid AI does not discount cached input, so a cache hit is billed at the
+// same rate. It does not price cache writes, so cache_create stays empty.
+func getPricing(model Model) (catwalk.Pricing, bool) {
+	// The catalog serves `pricing: null` when the rate cache is cold, which is
+	// a normal transient state rather than a reason to drop the instrument.
+	if model.Pricing == nil || model.Pricing.USDPer1MTokens <= 0 {
+		return catwalk.Pricing{}, false
+	}
+	rate := roundCost(model.Pricing.USDPer1MTokens)
+	return catwalk.Pricing{Input: rate, Output: rate, CacheHit: rate}, true
+}
+
+func getReasoning(model Model) catwalk.Reasoning {
+	r := model.Reasoning
+	if r == nil || (!r.DefaultEnabled && len(r.SupportedEfforts) == 0) {
+		return catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+	}
+
+	// Instruments that reason are toggleable with effort levels, like every
+	// other generated provider. The Grid AI marks some instruments as
+	// mandatory reasoners, but they still accept an effort level per request.
+	reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingToggleable}
+	if len(r.SupportedEfforts) == 0 {
+		return reasoning
+	}
+
+	reasoning.EffortLevels = catwalk.NewEffortLevels(r.SupportedEfforts...)
+	switch {
+	case r.DefaultEffort != "" && slices.Contains(r.SupportedEfforts, r.DefaultEffort):
+		reasoning.DefaultEffortLevel = r.DefaultEffort
+	case slices.Contains(r.SupportedEfforts, "medium"):
+		reasoning.DefaultEffortLevel = "medium"
+	case slices.Contains(r.SupportedEfforts, "high"):
+		reasoning.DefaultEffortLevel = "high"
+	default:
+		reasoning.DefaultEffortLevel = r.SupportedEfforts[0]
+	}
+	return reasoning
+}
+
+// getDefaultMaxTokens uses half of max_completion_tokens when available,
+// capped at 15% of context_length; otherwise 10% of context_length. This
+// matches the heuristic used by the other generators, and avoids instruments
+// whose ceiling equals their whole context window defaulting to an output
+// budget the size of the context.
+func getDefaultMaxTokens(model Model) int64 {
+	if model.MaxCompletionTokens > 0 {
+		maxFromOutput := model.MaxCompletionTokens / 2
+		maxAt15Pct := (model.ContextLength * 15) / 100
+		if maxFromOutput <= maxAt15Pct {
+			return maxFromOutput
+		}
+	}
+	return model.ContextLength / 10
+}
+
+// This is used to generate the thegrid.json config file.
 func main() {
 	theGridProvider := catwalk.Provider{
 		Name:                "The Grid AI",
 		ID:                  catwalk.InferenceProviderTheGrid,
 		APIKey:              "$THEGRID_API_KEY",
 		APIEndpoint:         "https://api.thegrid.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "agent-max",
 		DefaultSmallModelID: "text-standard",
 		Models:              []catwalk.Model{},
@@ -118,72 +175,38 @@ func main() {
 			continue
 		}
 
-		// The Grid AI is market priced and its catalog serves `pricing: null` when
-		// the rate cache is cold, so an absent price is a normal transient state
-		// rather than a reason to drop the instrument. Emit it with a zero cost,
-		// which is what catwalk already carries for unpriced models elsewhere.
-		// Dropping them instead would regenerate this provider with no models at
-		// all the next time the catalog is unpriced.
-		var cost float64
-		if model.Pricing != nil && model.Pricing.USDPer1MTokens > 0 {
-			// A single market rate covers both directions, and The Grid AI does not
-			// quote a separate cached rate, so all four costs carry it.
-			cost = roundCost(model.Pricing.USDPer1MTokens)
-		} else {
+		pricing, priced := getPricing(model)
+		if !priced {
 			unpriced++
 		}
 
-		// DefaultMaxTokens: use half of max_completion_tokens when available,
-		// capped at 15% of context_length; otherwise 10% of context_length.
-		// This matches the heuristic used by the other generators, and avoids
-		// instruments whose ceiling equals their whole context window
-		// defaulting to an output budget the size of the context.
-		var defaultMaxTokens int64
-		if model.MaxCompletionTokens > 0 {
-			maxFromOutput := model.MaxCompletionTokens / 2
-			maxAt15Pct := (model.ContextLength * 15) / 100
-			if maxFromOutput <= maxAt15Pct {
-				defaultMaxTokens = maxFromOutput
-			} else {
-				defaultMaxTokens = model.ContextLength / 10
-			}
-		} else {
-			defaultMaxTokens = model.ContextLength / 10
-		}
-
 		m := catwalk.Model{
-			ID:                 model.ID,
-			Name:               strings.TrimPrefix(model.DisplayName, "The Grid: "),
-			CostPer1MIn:        cost,
-			CostPer1MOut:       cost,
-			CostPer1MInCached:  cost,
-			CostPer1MOutCached: cost,
-			ContextWindow:      model.ContextLength,
-			DefaultMaxTokens:   defaultMaxTokens,
-			SupportsImages:     model.Attachments || slices.Contains(model.Architecture.InputModalities, "image"),
-		}
-
-		if model.Reasoning != nil {
-			m.CanReason = model.Reasoning.DefaultEnabled || len(model.Reasoning.SupportedEfforts) > 0
-			m.ReasoningLevels = model.Reasoning.SupportedEfforts
-			m.DefaultReasoningEffort = model.Reasoning.DefaultEffort
+			ID:               model.ID,
+			Name:             strings.TrimPrefix(model.DisplayName, "The Grid: "),
+			Pricing:          pricing,
+			ContextWindow:    model.ContextLength,
+			DefaultMaxTokens: getDefaultMaxTokens(model),
+			Reasoning:        getReasoning(model),
+			Capabilities: catwalk.Capabilities{
+				Vision: slices.Contains(model.Architecture.InputModalities, "image"),
+			},
 		}
 
 		theGridProvider.Models = append(theGridProvider.Models, m)
 	}
 
-	slices.SortFunc(theGridProvider.Models, func(a catwalk.Model, b catwalk.Model) int {
+	slices.SortFunc(theGridProvider.Models, func(a, b catwalk.Model) int {
 		if a.Name == b.Name {
 			return strings.Compare(a.ID, b.ID)
 		}
 		return strings.Compare(a.Name, b.Name)
 	})
 
+	// Save the JSON in internal/providers/configs/thegrid.json
 	data, err := json.MarshalIndent(theGridProvider, "", "  ")
 	if err != nil {
 		log.Fatal("Error marshaling The Grid AI provider:", err)
 	}
-	data = append(data, '\n')
 
 	if err := os.WriteFile("internal/providers/configs/thegrid.json", data, 0o600); err != nil {
 		log.Fatal("Error writing The Grid AI provider config:", err)
