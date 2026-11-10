@@ -70,6 +70,9 @@ var groqConfig []byte
 //go:embed configs/huggingface.json
 var huggingFaceConfig []byte
 
+//go:embed configs/hubris.json
+var hubrisConfig []byte
+
 //go:embed configs/ionet.json
 var ioNetConfig []byte
 
@@ -171,6 +174,7 @@ var providerRegistry = []ProviderFunc{
 	fireworksProvider,
 	groqProvider,
 	huggingFaceProvider,
+	hubrisProvider,
 	ioNetProvider,
 	nebiusProvider,
 	neuralwattProvider,
@@ -289,6 +293,10 @@ func groqProvider() catwalk.Provider {
 
 func huggingFaceProvider() catwalk.Provider {
 	return loadProviderFromConfig(huggingFaceConfig)
+}
+
+func hubrisProvider() catwalk.Provider {
+	return loadProviderFromConfig(hubrisConfig)
 }
 
 func ioNetProvider() catwalk.Provider {
