@@ -392,26 +392,9 @@
       "capabilities": { "vision": false }
     },
     {
-      "id": "deepseek-v4.1-flash",
-      "name": "DeepSeek-V4.1-Flash",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.03 },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "high", "display": "High" },
-          { "value": "max", "display": "Max" }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": { "vision": true }
-    },
-    {
       "id": "deepseek-v4.1-flash-1017",
       "name": "DeepSeek-V4.1-Flash-1017",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.03 },
+      "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.015 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
