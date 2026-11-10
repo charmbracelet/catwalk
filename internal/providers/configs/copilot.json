@@ -25,6 +25,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "claude-fable-5.2",
+      "name": "Claude Fable 5.2",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "claude-haiku-4.5",
       "name": "Claude Haiku 4.5",
       "pricing": { "input": 0, "output": 0 },
