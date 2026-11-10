@@ -992,7 +992,7 @@
     {
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
-      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
+      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.08 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -1009,7 +1009,7 @@
     {
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
-      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
+      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.08 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -1026,7 +1026,7 @@
     {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
-      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
+      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.08 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {

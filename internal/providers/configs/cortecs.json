@@ -27,7 +27,7 @@
     {
       "id": "minimax-m3.1-flash",
       "name": "minimax-m3.1-flash",
-      "pricing": { "input": 0.273, "output": 1.094 },
+      "pricing": { "input": 0.137, "output": 0.55 },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": {
