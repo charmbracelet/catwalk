@@ -124,6 +124,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gpt-3.5-turbo",
       "name": "GPT 3.5 Turbo",
       "pricing": { "input": 0, "output": 0 },
