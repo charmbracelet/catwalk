@@ -10,7 +10,7 @@
     {
       "id": "deepseek-v4.1-flash-1017",
       "name": "DeepSeek-V4.1-Flash-1017",
-      "pricing": { "input": 0.141, "output": 0.565, "cache_hit": 0.014 },
+      "pricing": { "input": 0.283, "output": 1.131, "cache_hit": 0.006 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {
