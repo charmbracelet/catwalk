@@ -1,0 +1,241 @@
+{
+  "name": "TeamoRouter",
+  "id": "teamorouter",
+  "api_key": "$TEAMOROUTER_API_KEY",
+  "api_endpoint": "https://api.teamorouter.com/v1",
+  "type": "completions",
+  "default_large_model_id": "claude-sonnet-5-5",
+  "default_small_model_id": "deepseek-v4-flash",
+  "default_headers": { "X-Client-Source": "crush-teamorouter" },
+  "models": [
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "pricing": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_create": 0.125,
+        "cache_hit": 0.01
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "gpt-5.5",
+      "name": "GPT-5.5",
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "name": "GPT-5.4 Mini",
+      "pricing": { "input": 0.75, "output": 4.5, "cache_hit": 0.075 },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.075 },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": true }
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek-V4-Pro",
+      "pricing": { "input": 0.66, "output": 1.98, "cache_hit": 0.022 },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek-V4-Flash",
+      "pricing": { "input": 0.44, "output": 1.32, "cache_hit": 0.014 },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": { "vision": false }
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "pricing": { "input": 3, "output": 15, "cache_hit": 0.3 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8 Max",
+      "pricing": {
+        "input": 1.7143,
+        "output": 5.1429,
+        "cache_create": 2.1429,
+        "cache_hit": 0.2143
+      },
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "xhigh"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "qwen3.8-flash",
+      "name": "Qwen3.8 Flash",
+      "pricing": {
+        "input": 0.1143,
+        "output": 0.3857,
+        "cache_create": 0.1786,
+        "cache_hit": 0.0143
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
