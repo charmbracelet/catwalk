@@ -120,23 +120,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "bytedance/seed-1.8",
-      "name": "Bytedance Seed 1.8",
-      "pricing": { "input": 0.25, "output": 2, "cache_hit": 0.05 },
-      "context_window": 256000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "anthropic/claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
@@ -4797,6 +4780,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "alibaba/qwen3.6-35b-a3b",
+      "name": "Qwen 3.6 35B A3B",
+      "pricing": { "input": 0.375, "output": 2.25 },
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "alibaba/qwen3.6-plus",
       "name": "Qwen 3.6 Plus",
       "pricing": {
@@ -5078,7 +5078,7 @@
     {
       "id": "alibaba/qwen3.8-27b",
       "name": "Qwen3.8 27B",
-      "pricing": { "input": 0.06, "output": 2.3, "cache_hit": 0.059 },
+      "pricing": { "input": 0.06, "output": 2.2, "cache_hit": 0.059 },
       "context_window": 262144,
       "default_max_tokens": 262144,
       "reasoning": {
@@ -5120,23 +5120,6 @@
       "pricing": { "input": 0.95, "output": 4, "cache_hit": 0.15 },
       "context_window": 256000,
       "default_max_tokens": 256000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "bytedance/seed-1.6",
-      "name": "Seed 1.6",
-      "pricing": { "input": 0.25, "output": 2, "cache_hit": 0.05 },
-      "context_window": 256000,
-      "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [

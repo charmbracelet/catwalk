@@ -10,11 +10,7 @@
     {
       "id": "claude-fable-5-2",
       "name": "Claude Fable 5.2",
-      "pricing": {
-        "input": 8,
-        "output": 40,
-        "cache_hit": 0.20
-      },
+      "pricing": { "input": 8, "output": 40, "cache_hit": 0.20 },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {

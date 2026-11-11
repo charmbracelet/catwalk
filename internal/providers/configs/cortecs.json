@@ -8,6 +8,23 @@
   "default_small_model_id": "glm-4.7-flash",
   "models": [
     {
+      "id": "gemini-4-carbon",
+      "name": "gemini-4-carbon",
+      "pricing": { "input": 2.001, "output": 10.005 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "kimi-k3.1-pro",
       "name": "kimi-k3.1-pro",
       "pricing": { "input": 1.833, "output": 9.164 },
@@ -778,23 +795,6 @@
       "pricing": { "input": 4.881, "output": 24.404 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "glm-5.1",
-      "name": "glm-5.1",
-      "pricing": { "input": 1.242, "output": 3.903 },
-      "context_window": 202752,
-      "default_max_tokens": 20275,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [

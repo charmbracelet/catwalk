@@ -43,7 +43,7 @@
     },
     {
       "id": "deepseek-v4.1-flash",
-      "name": "DeepSeek V4.1 Flash",
+      "name": "DeepSeek V4.1 Flash 1017",
       "pricing": { "input": 0.15, "output": 0.6 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
