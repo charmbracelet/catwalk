@@ -1182,6 +1182,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "pricing": { "input": 2.5, "output": 12.5 },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemma-4-uncensored",
       "name": "Gemma 4 Uncensored",
       "pricing": { "input": 0.1625, "output": 0.5 },
