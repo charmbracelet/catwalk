@@ -1072,15 +1072,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "mistral-large-2512",
-      "name": "mistral-large-2512",
-      "pricing": { "input": 0.55, "output": 1.65 },
-      "context_window": 256000,
-      "default_max_tokens": 25600,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "ministral-8b-2512",
       "name": "ministral-8b-2512",
       "pricing": { "input": 0.161, "output": 0.161 },
