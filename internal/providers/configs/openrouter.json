@@ -792,7 +792,7 @@
     {
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek: DeepSeek V4 Pro 0423",
-      "pricing": { "input": 0.89908, "output": 1.79816, "cache_hit": 0.07448 },
+      "pricing": { "input": 0.64558, "output": 1.29116, "cache_hit": 0.05348 },
       "context_window": 1048576,
       "default_max_tokens": 196608,
       "reasoning": {
@@ -843,7 +843,7 @@
     {
       "id": "deepseek/deepseek-v4.1-flash-1017",
       "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
-      "pricing": { "input": 0.03, "output": 0.25, "cache_hit": 0.003 },
+      "pricing": { "input": 0.03, "output": 0.25, "cache_hit": 0.005 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -1127,10 +1127,10 @@
       "id": "google/gemini-3.5-flash",
       "name": "Google: Gemini 3.5 Flash",
       "pricing": {
-        "input": 1.5,
-        "output": 9,
-        "cache_create": 0.08333,
-        "cache_hit": 0.15
+        "input": 0.75,
+        "output": 4.5,
+        "cache_create": 0.04167,
+        "cache_hit": 0.075
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
@@ -1171,10 +1171,10 @@
       "id": "google/gemini-3.6-flash",
       "name": "Google: Gemini 3.6 Flash",
       "pricing": {
-        "input": 0.375,
-        "output": 1.875,
-        "cache_create": 0.02083,
-        "cache_hit": 0.0375
+        "input": 0.75,
+        "output": 3.75,
+        "cache_create": 0.04167,
+        "cache_hit": 0.075
       },
       "context_window": 1048576,
       "default_max_tokens": 32768,
@@ -1320,7 +1320,7 @@
     {
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Google: Gemma 4 26B A4B ",
-      "pricing": { "input": 0.029, "output": 0.087, "cache_hit": 0.015 },
+      "pricing": { "input": 0.014, "output": 0.043, "cache_hit": 0.007 },
       "context_window": 262144,
       "default_max_tokens": 16384,
       "reasoning": {
@@ -1391,28 +1391,6 @@
       "pricing": { "input": 1.5, "output": 7.5 },
       "context_window": 65536,
       "default_max_tokens": 29491,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "google/gemini-3-pro-image",
-      "name": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
-      "pricing": {
-        "input": 2,
-        "output": 12,
-        "cache_create": 0.375,
-        "cache_hit": 0.2
-      },
-      "context_window": 131072,
-      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1565,7 +1543,7 @@
     {
       "id": "meta-llama/llama-4-scout",
       "name": "Meta: Llama 4 Scout",
-      "pricing": { "input": 0.15, "output": 0.45 },
+      "pricing": { "input": 0.08, "output": 0.24 },
       "context_window": 327680,
       "default_max_tokens": 147456,
       "reasoning": { "thinking": "never" },
@@ -1727,9 +1705,9 @@
     {
       "id": "minimax/minimax-m2.5",
       "name": "MiniMax: MiniMax M2.5",
-      "pricing": { "input": 0.295, "output": 1.2, "cache_hit": 0.06 },
-      "context_window": 196608,
-      "default_max_tokens": 88473,
+      "pricing": { "input": 0.27, "output": 0.95, "cache_hit": 0.03 },
+      "context_window": 198000,
+      "default_max_tokens": 16384,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1778,9 +1756,9 @@
     {
       "id": "minimax/minimax-m3.1-flash",
       "name": "MiniMax: MiniMax M3.1 Flash",
-      "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.015 },
+      "pricing": { "input": 0.075, "output": 0.3, "cache_hit": 0.0075 },
       "context_window": 1048576,
-      "default_max_tokens": 471859,
+      "default_max_tokens": 262144,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2180,7 +2158,7 @@
       "name": "NVIDIA: Nemotron 3 Ultra",
       "pricing": { "input": 0.5, "output": 2.2, "cache_hit": 0.1 },
       "context_window": 262144,
-      "default_max_tokens": 8192,
+      "default_max_tokens": 117964,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2246,9 +2224,9 @@
     {
       "id": "nvidia/nemotron-3.5-super-vl",
       "name": "NVIDIA: Nemotron 3.5 Super VL",
-      "pricing": { "input": 0.15, "output": 0.47, "cache_hit": 0.02 },
+      "pricing": { "input": 0.1, "output": 0.4, "cache_hit": 0.08 },
       "context_window": 1048576,
-      "default_max_tokens": 471859,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -2635,7 +2613,7 @@
     {
       "id": "openai/gpt-5.4",
       "name": "OpenAI: GPT-5.4",
-      "pricing": { "input": 2.5, "output": 15, "cache_hit": 0.25 },
+      "pricing": { "input": 1.25, "output": 7.5, "cache_hit": 0.125 },
       "context_window": 1050000,
       "default_max_tokens": 64000,
       "reasoning": {
@@ -2669,7 +2647,7 @@
     {
       "id": "openai/gpt-5.4-nano",
       "name": "OpenAI: GPT-5.4 Nano",
-      "pricing": { "input": 0.2, "output": 1.25, "cache_hit": 0.02 },
+      "pricing": { "input": 0.1, "output": 0.625, "cache_hit": 0.01 },
       "context_window": 400000,
       "default_max_tokens": 64000,
       "reasoning": {
@@ -2848,10 +2826,10 @@
       "id": "openai/gpt-5.6-terra-pro",
       "name": "OpenAI: GPT-5.6 Terra Pro",
       "pricing": {
-        "input": 2,
-        "output": 12,
-        "cache_create": 2.5,
-        "cache_hit": 0.2
+        "input": 1,
+        "output": 6,
+        "cache_create": 1.25,
+        "cache_hit": 0.1
       },
       "context_window": 1050000,
       "default_max_tokens": 64000,
@@ -2936,10 +2914,10 @@
       "id": "openai/gpt-6-luna-pro",
       "name": "OpenAI: GPT-6 Luna Pro",
       "pricing": {
-        "input": 0.05,
-        "output": 0.25,
-        "cache_create": 0.0625,
-        "cache_hit": 0.005
+        "input": 0.1,
+        "output": 0.5,
+        "cache_create": 0.125,
+        "cache_hit": 0.01
       },
       "context_window": 1050000,
       "default_max_tokens": 64000,
@@ -3378,9 +3356,9 @@
     {
       "id": "qwen/qwen3-32b",
       "name": "Qwen: Qwen3 32B",
-      "pricing": { "input": 0.14, "output": 0.57 },
-      "context_window": 131072,
-      "default_max_tokens": 58982,
+      "pricing": { "input": 0.08, "output": 0.28 },
+      "context_window": 40960,
+      "default_max_tokens": 8192,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3557,9 +3535,9 @@
     {
       "id": "qwen/qwen3.5-27b",
       "name": "Qwen: Qwen3.5-27B",
-      "pricing": { "input": 0.26, "output": 2.6 },
+      "pricing": { "input": 0.195, "output": 1.56 },
       "context_window": 262144,
-      "default_max_tokens": 40960,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3591,9 +3569,9 @@
     {
       "id": "qwen/qwen3.5-9b",
       "name": "Qwen: Qwen3.5-9B",
-      "pricing": { "input": 0.027, "output": 0.04, "cache_hit": 0.024 },
+      "pricing": { "input": 0.08, "output": 0.13, "cache_hit": 0.04 },
       "context_window": 262144,
-      "default_max_tokens": 20480,
+      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3625,9 +3603,9 @@
     {
       "id": "qwen/qwen3.6-27b",
       "name": "Qwen: Qwen3.6 27B",
-      "pricing": { "input": 0.25, "output": 2, "cache_hit": 0.025 },
+      "pricing": { "input": 0.32, "output": 3.2 },
       "context_window": 262144,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 40960,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3642,7 +3620,7 @@
     {
       "id": "qwen/qwen3.6-35b-a3b",
       "name": "Qwen: Qwen3.6 35B A3B",
-      "pricing": { "input": 0.05, "output": 0.7, "cache_hit": 0.025 },
+      "pricing": { "input": 0.015, "output": 0.137, "cache_hit": 0.013 },
       "context_window": 262144,
       "default_max_tokens": 32768,
       "reasoning": {
@@ -3776,9 +3754,9 @@
     {
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen: Qwen3.8 27B",
-      "pricing": { "input": 0.42, "output": 3, "cache_hit": 0.085 },
-      "context_window": 1000000,
-      "default_max_tokens": 65536,
+      "pricing": { "input": 0.45, "output": 3.2, "cache_hit": 0.25 },
+      "context_window": 1048575,
+      "default_max_tokens": 471858,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4142,7 +4120,7 @@
     {
       "id": "tencent/hy3",
       "name": "Tencent: Hy3",
-      "pricing": { "input": 0.132, "output": 0.528, "cache_hit": 0.033 },
+      "pricing": { "input": 0.0825, "output": 0.33, "cache_hit": 0.02063 },
       "context_window": 262144,
       "default_max_tokens": 64000,
       "reasoning": {
@@ -4193,9 +4171,9 @@
     {
       "id": "tencent/hy4-preview",
       "name": "Tencent: Hy4 preview",
-      "pricing": { "input": 0.834, "output": 2.501, "cache_hit": 0.042 },
+      "pricing": { "input": 0.7506, "output": 2.2509, "cache_hit": 0.0378 },
       "context_window": 1048576,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 32000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4329,9 +4307,9 @@
     {
       "id": "xiaomi/mimo-v2.5-pro",
       "name": "Xiaomi: MiMo-V2.5-Pro",
-      "pricing": { "input": 0.48, "output": 1.8, "cache_hit": 0.096 },
-      "context_window": 262144,
-      "default_max_tokens": 117964,
+      "pricing": { "input": 0.435, "output": 0.87, "cache_hit": 0.0036 },
+      "context_window": 1024000,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4516,8 +4494,8 @@
     {
       "id": "z-ai/glm-5",
       "name": "Z.ai: GLM 5",
-      "pricing": { "input": 0.95, "output": 2.55, "cache_hit": 0.2 },
-      "context_window": 204800,
+      "pricing": { "input": 1, "output": 3.2, "cache_hit": 0.2 },
+      "context_window": 202800,
       "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
@@ -4750,6 +4728,23 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "inclusionai/ling-3.2-flash:free",
+      "name": "inclusionAI: Ling 3.2 Flash (free)",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
     }
   ],
   "default_headers": {
