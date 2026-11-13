@@ -3567,6 +3567,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "thinkingmachines/inkling-2-small",
+      "name": "Inkling 2 Small",
+      "pricing": { "input": 0.3, "output": 1, "cache_hit": 0.03 },
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "thinkingmachines/inkling-small",
       "name": "Inkling Small",
       "pricing": { "input": 0.45, "output": 1.2, "cache_hit": 0.1 },
@@ -3756,23 +3773,6 @@
       "pricing": { "input": 0.05, "output": 0.7, "cache_hit": 0.025 },
       "context_window": 128000,
       "default_max_tokens": 8200,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "poolside/laguna-s-2.1",
-      "name": "Laguna S 2.1",
-      "pricing": { "input": 0.09, "output": 0.18, "cache_hit": 0.009 },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -5258,6 +5258,23 @@
       "default_max_tokens": 4000,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "paperinstruments/ultramarine-1-flash",
+      "name": "Ultramarine 1 Flash",
+      "pricing": { "input": 0.15, "output": 0.5, "cache_hit": 0.03 },
+      "context_window": 1048576,
+      "default_max_tokens": 131000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "openai/o1",
