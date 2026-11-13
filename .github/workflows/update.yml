@@ -42,6 +42,10 @@ jobs:
         env:
           BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
 
+      - name: Liquid
+        run: go run ./cmd/liquid/main.go
+        continue-on-error: true
+
       - name: Neuralwatt
         run: go run ./cmd/neuralwatt/main.go
         continue-on-error: true
