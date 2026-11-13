@@ -127,8 +127,17 @@
       "id": "gemini-4-carbon",
       "name": "Gemini 4 Carbon",
       "pricing": { "input": 0, "output": 0 },
-      "context_window": 1000000,
+      "context_window": 264000,
       "default_max_tokens": 64000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
     },
