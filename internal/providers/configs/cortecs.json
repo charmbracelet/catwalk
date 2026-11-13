@@ -8,6 +8,40 @@
   "default_small_model_id": "glm-4.7-flash",
   "models": [
     {
+      "id": "inkling-2-small",
+      "name": "inkling-2-small",
+      "pricing": { "input": 0.275, "output": 0.918 },
+      "context_window": 1048000,
+      "default_max_tokens": 104800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "name": "gemini-4-hydrogen",
+      "pricing": { "input": 1.515, "output": 7.574 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "gemini-4-carbon",
       "name": "gemini-4-carbon",
       "pricing": { "input": 2.001, "output": 10.005 },

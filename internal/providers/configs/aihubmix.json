@@ -1335,15 +1335,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "crouton-alpha-free",
-      "name": "Crouton Alpha (free)",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 1048576,
-      "default_max_tokens": 104857,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "deepseek-v3.2",
       "name": "DeepSeek V3.2",
       "pricing": { "input": 0.58, "output": 1.68003 },
@@ -3993,15 +3984,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "nemotron-3.5-content-safety-free",
-      "name": "Nemotron 3.5 Content Safety (free)",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "nemotron-3.5-lightning-free",
       "name": "Nemotron 3.5 Lightning (free)",
       "pricing": { "input": 0, "output": 0 },
@@ -4682,15 +4664,6 @@
       "default_max_tokens": 131072,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "xing4.0-29b-a4b-free",
-      "name": "Xing4.0 29B A4B (free)",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "zai-glm-5-turbo",

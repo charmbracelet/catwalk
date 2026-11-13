@@ -190,23 +190,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "claude-opus-4-8-fast",
-      "name": "Claude Opus 4.8 Fast",
-      "pricing": { "input": 10, "output": 50 },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
       "pricing": { "input": 5, "output": 25 },
@@ -1688,6 +1671,15 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "pareto",
+      "name": "Pareto",
+      "pricing": { "input": 1, "output": 4 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
