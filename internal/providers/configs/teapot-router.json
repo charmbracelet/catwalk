@@ -1,0 +1,261 @@
+{
+  "name": "Teapot Router",
+  "id": "teapot-router",
+  "api_key": "$TEAPOT_ROUTER_API_KEY",
+  "api_endpoint": "https://api.teapotrouter.com/v1",
+  "type": "completions",
+  "default_large_model_id": "claude-opus-5-5",
+  "default_small_model_id": "claude-haiku-4-5",
+  "models": [
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "pricing": {
+        "input": 0.35,
+        "output": 1.75
+      },
+      "context_window": 200000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "pricing": {
+        "input": 0.7,
+        "output": 3.5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pricing": {
+        "input": 0.7,
+        "output": 3.5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "pricing": {
+        "input": 1.75,
+        "output": 8.75
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pricing": {
+        "input": 1.4,
+        "output": 7.0
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "pricing": {
+        "input": 3.5,
+        "output": 7.0
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "pricing": {
+        "input": 0.7,
+        "output": 1.4
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          },
+          {
+            "value": "xhigh",
+            "display": "X-High"
+          },
+          {
+            "value": "max",
+            "display": "Max"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": {
+        "vision": true
+      }
+    }
+  ]
+}
