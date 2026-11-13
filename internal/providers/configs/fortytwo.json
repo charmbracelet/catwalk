@@ -1,0 +1,33 @@
+{
+  "name": "Fortytwo",
+  "id": "fortytwo",
+  "api_key": "$FORTYTWO_API_KEY",
+  "api_endpoint": "https://api.fortytwo.network/v1",
+  "type": "completions",
+  "default_large_model_id": "qwen/qwen3.8-27b",
+  "default_small_model_id": "qwen/qwen3.8-27b",
+  "default_headers": {
+    "HTTP-Referer": "https://charm.land/crush",
+    "X-Title": "Crush"
+  },
+  "models": [
+    {
+      "id": "qwen/qwen3.8-27b",
+      "name": "Qwen3.8 27B",
+      "pricing": { "input": 0.425, "output": 2.55, "cache_hit": 0.085 },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
