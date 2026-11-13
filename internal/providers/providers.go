@@ -115,6 +115,9 @@ var scalewayConfig []byte
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
+//go:embed configs/upstage.json
+var upstageConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -180,6 +183,7 @@ var providerRegistry = []ProviderFunc{
 	paretoProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
+	upstageProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -349,6 +353,10 @@ func scalewayProvider() catwalk.Provider {
 
 func syntheticProvider() catwalk.Provider {
 	return loadProviderFromConfig(syntheticConfig)
+}
+
+func upstageProvider() catwalk.Provider {
+	return loadProviderFromConfig(upstageConfig)
 }
 
 func vercelProvider() catwalk.Provider {
