@@ -1,0 +1,79 @@
+{
+  "name": "ProxyStacks Relay",
+  "id": "proxystacks",
+  "api_key": "$RELAY_API_KEY",
+  "api_endpoint": "https://proxystacks.com/v1",
+  "type": "completions",
+  "default_large_model_id": "glm-5.3",
+  "default_small_model_id": "deepseek-v4.1-flash",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": { "input": 0.18, "output": 0.74, "cache_hit": 0.0039 },
+      "context_window": 1000000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "pricing": { "input": 0.78, "output": 2.86, "cache_hit": 0.17 },
+      "context_window": 1000000,
+      "default_max_tokens": 32000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3 Flash",
+      "pricing": { "input": 0.0975, "output": 0.33, "cache_hit": 0.0195 },
+      "context_window": 1000000,
+      "default_max_tokens": 32000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 1.6, "output": 8, "cache_hit": 0.16 },
+      "context_window": 1000000,
+      "default_max_tokens": 32000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
