@@ -188,15 +188,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "minimaxai/minimax-m2.7",
-      "name": "MiniMax M2.7",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
-      "context_window": 196608,
-      "default_max_tokens": 19660,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "qwen/qwen3.5-122b-a10b",
       "name": "Qwen3.5 122B A10B",
       "pricing": { "input": 0.3, "output": 2.4, "cache_hit": 0.3 },
