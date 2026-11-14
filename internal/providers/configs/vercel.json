@@ -1101,9 +1101,9 @@
     {
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.007 },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.006 },
       "context_window": 1048576,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3714,9 +3714,9 @@
     {
       "id": "moonshotai/kimi-k3-fast",
       "name": "Kimi K3 Fast",
-      "pricing": { "input": 4.5, "output": 22.5, "cache_hit": 0.45 },
+      "pricing": { "input": 6, "output": 22.5, "cache_hit": 0.6 },
       "context_window": 1000000,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3751,7 +3751,7 @@
       "pricing": {
         "input": 4,
         "output": 20,
-        "cache_create": 4,
+        "cache_create": 5,
         "cache_hit": 0.2
       },
       "context_window": 1048576,
@@ -4217,8 +4217,8 @@
       "id": "minimax/minimax-m3",
       "name": "MiniMax M3",
       "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
-      "context_window": 512000,
-      "default_max_tokens": 512000,
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4234,8 +4234,8 @@
       "id": "minimax/minimax-m3.1-flash",
       "name": "MiniMax-M3.1-Flash",
       "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.015 },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "context_window": 1000000,
+      "default_max_tokens": 524288,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4528,23 +4528,6 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "nvidia/nemotron-3-nano-30b-a3b",
-      "name": "Nemotron 3 Nano 30B A3B",
-      "pricing": { "input": 0.05, "output": 0.2, "cache_hit": 0.025 },
-      "context_window": 262144,
-      "default_max_tokens": 262144,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -4926,8 +4909,13 @@
     {
       "id": "alibaba/qwen3.8-max",
       "name": "Qwen 3.8 Max",
-      "pricing": { "input": 2, "output": 6, "cache_hit": 0.25 },
-      "context_window": 262144,
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_create": 2.5,
+        "cache_hit": 0.25
+      },
+      "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
@@ -5080,7 +5068,7 @@
       "name": "Qwen3.8 2.4T A95B",
       "pricing": { "input": 2, "output": 6, "cache_hit": 0.25 },
       "context_window": 262144,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -5186,8 +5174,8 @@
       "id": "stepfun/step-5-preview",
       "name": "Step 5 Preview",
       "pricing": { "input": 1, "output": 2.7, "cache_hit": 0.1 },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
