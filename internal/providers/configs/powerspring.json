@@ -1,0 +1,151 @@
+{
+  "name": "Powerspring",
+  "id": "powerspring",
+  "api_key": "$POWERSPRING_API_KEY",
+  "api_endpoint": "https://api.powerspring.eu/v1",
+  "type": "completions",
+  "default_large_model_id": "deepseek-v4.1-flash",
+  "default_small_model_id": "gpt-oss-20b",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": {
+        "input": 0.21120372,
+        "output": 0.63477162,
+        "cache_hit": 0.0058023
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "pricing": {
+        "input": 0.1044414,
+        "output": 0.36438444,
+        "cache_hit": 0.01856736
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "pricing": { "input": 0.088416, "output": 0.44208, "cache_hit": 0.088416 },
+      "context_window": 131000,
+      "default_max_tokens": 13100,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "gpt-oss-20b",
+      "pricing": { "input": 0.044208, "output": 0.16578, "cache_hit": 0.044208 },
+      "context_window": 131000,
+      "default_max_tokens": 13100,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen3.8-27b",
+      "name": "Qwen3.8-27B",
+      "pricing": {
+        "input": 0.1044414,
+        "output": 0.41660514,
+        "cache_hit": 0.04177656
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "xhigh"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "pricing": {
+        "input": 0.232092,
+        "output": 0.406161,
+        "cache_hit": 0.232092
+      },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
+      "pricing": { "input": 0.116046, "output": 0.58023, "cache_hit": 0.116046 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
