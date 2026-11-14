@@ -39,9 +39,8 @@
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": {
-        "thinking": "toggleable",
+        "thinking": "always",
         "effort_levels": [
-          { "value": "none", "display": "None" },
           { "value": "low", "display": "Low" },
           { "value": "high", "display": "High" }
         ],
