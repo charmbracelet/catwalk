@@ -1,0 +1,169 @@
+{
+  "name": "DotHoosh",
+  "id": "dothoosh",
+  "api_key": "$DOTHOOSH_API_KEY",
+  "api_endpoint": "https://gateway.dothoosh.com/v1",
+  "type": "completions",
+  "default_large_model_id": "kimi-k3",
+  "default_small_model_id": "deepseek-flash",
+  "models": [
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "pricing": {
+        "input": 1.694003,
+        "output": 5.082001,
+        "cache_hit": 0.056467
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 196608,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": {
+        "input": 0.385002,
+        "output": 1.540002,
+        "cache_hit": 0.007702
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 196608,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-3.5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "pricing": { "input": 0.385002, "output": 3.208335, "cache_hit": 0.0385 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "pricing": {
+        "input": 0.962502,
+        "output": 4.812503,
+        "cache_hit": 0.096252
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "pricing": {
+        "input": 2.56667,
+        "output": 12.833333,
+        "cache_hit": 0.128335
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi K2.6",
+      "pricing": {
+        "input": 1.219169,
+        "output": 5.133336,
+        "cache_hit": 0.205336
+      },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "pricing": {
+        "input": 1.219169,
+        "output": 5.133336,
+        "cache_hit": 0.243836
+      },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "pricing": { "input": 3.850001, "output": 19.25, "cache_hit": 0.385002 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": {
+        "input": 2.56667,
+        "output": 12.833333,
+        "cache_hit": 0.256667
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ]
+}
