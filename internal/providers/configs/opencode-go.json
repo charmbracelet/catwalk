@@ -270,7 +270,7 @@
       "name": "Kimi K3",
       "pricing": { "input": 3, "output": 15, "cache_hit": 0.3 },
       "context_window": 1048576,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -287,7 +287,7 @@
       "name": "Kimi K3.1 Pro",
       "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
       "context_window": 1048576,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [

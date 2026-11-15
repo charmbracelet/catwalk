@@ -1224,7 +1224,7 @@
         "cache_hit": 0.3
       },
       "context_window": 1048576,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
