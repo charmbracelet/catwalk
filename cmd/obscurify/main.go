@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 // Pricing holds per-token prices in USD.
@@ -30,6 +30,7 @@ type Model struct {
 	Name          string  `json:"name"`
 	ContextLength int64   `json:"context_length"`
 	Tools         bool    `json:"tools"`
+	Decisions     bool    `json:"decisions"`
 	Pricing       Pricing `json:"pricing"`
 }
 
@@ -75,7 +76,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderObscurify,
 		APIKey:              "$OBSCURIFY_API_KEY",
 		APIEndpoint:         "https://obscurify.ai/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "z-ai/glm-5.3",
 		DefaultSmallModelID: "meta-llama/llama-3.3-70b-instruct",
 		Models:              []catwalk.Model{},
@@ -88,8 +89,9 @@ func main() {
 	}
 
 	for _, model := range modelsResp.Data {
-		// Crush needs tool calling.
-		if !model.Tools {
+		// Crush needs tool calling. Decision models return typed judgments,
+		// not chat text.
+		if !model.Tools || model.Decisions {
 			continue
 		}
 
@@ -103,12 +105,16 @@ func main() {
 		defaultMaxTokens := min(model.ContextLength/10, 32768)
 
 		obscurifyProvider.Models = append(obscurifyProvider.Models, catwalk.Model{
-			ID:               model.ID,
-			Name:             model.Name,
-			CostPer1MIn:      roundCost(model.Pricing.Prompt * 1_000_000),
-			CostPer1MOut:     roundCost(model.Pricing.Completion * 1_000_000),
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:  roundCost(model.Pricing.Prompt * 1_000_000),
+				Output: roundCost(model.Pricing.Completion * 1_000_000),
+			},
 			ContextWindow:    model.ContextLength,
 			DefaultMaxTokens: defaultMaxTokens,
+			// The models API does not say which models reason.
+			Reasoning: catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
 		})
 	}
 
