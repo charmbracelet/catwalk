@@ -106,6 +106,16 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "eagle-bald",
+      "type": "responses",
+      "name": "Eagle",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "pricing": { "input": 0, "output": 0 },
