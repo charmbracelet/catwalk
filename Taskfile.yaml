@@ -175,7 +175,7 @@ tasks:
       - |
         if [ "{{.OPEN}}" = "1" ]; then
           sleep 3
-          RUN_ID="$(gh run list --workflow=update.yml --limit=1 --json=databaseId --jq='.[0].databaseId')"
+          RUN_ID="$(gh run list --workflow=sync.yml --limit=1 --json=databaseId --jq='.[0].databaseId')"
           for i in $(seq 10); do
             URL="$(gh run view "$RUN_ID" --json=jobs --jq='.jobs[0].url // empty')"
             [ -n "$URL" ] && break
