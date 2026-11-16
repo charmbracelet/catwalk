@@ -1,4 +1,4 @@
-name: Update Providers
+name: sync
 
 on:
   schedule:
@@ -11,8 +11,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  update-providers:
-    name: Update Providers
+  sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -102,9 +101,9 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
-          title: "chore: auto-update generated files"
+          title: "chore: sync providers"
           body: ""
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          commit-message: "chore: auto-update generated files"
+          commit-message: "chore: sync providers"
           branch: update-providers
           reviewers: andreynering,meowgorithm
