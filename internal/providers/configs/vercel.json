@@ -4925,6 +4925,28 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "alibaba/qwen4-max",
+      "name": "Qwen 4 Max",
+      "pricing": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache_create": 1.875,
+        "cache_hit": 0.075
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "alibaba/qwen-3-235b",
       "name": "Qwen3 235B A22B",
       "pricing": { "input": 0.22, "output": 0.88 },
@@ -5165,6 +5187,23 @@
       "id": "tencent/hy4",
       "name": "Tencent Hy4",
       "pricing": { "input": 0.417, "output": 1.2505, "cache_hit": 0.021 },
+      "context_window": 1024000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "tencent/hy4-flash",
+      "name": "Tencent Hy4 Flash",
+      "pricing": { "input": 0.035, "output": 0.1405, "cache_hit": 0.0015 },
       "context_window": 1024000,
       "default_max_tokens": 64000,
       "reasoning": {

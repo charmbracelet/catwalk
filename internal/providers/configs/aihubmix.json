@@ -1282,6 +1282,20 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "coding-qwen4-max-preview",
+      "name": "Coding Qwen4 Max Preview",
+      "pricing": {
+        "input": 0.353,
+        "output": 1.059,
+        "cache_create": 0.44125,
+        "cache_hit": 0.04413
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 393216,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "coding-xiaomi-mimo-v2.6-flash",
       "name": "Coding Xiaomi Mimo V2.6 Flash",
       "pricing": { "input": 0.08, "output": 0.16, "cache_hit": 0.0016 },

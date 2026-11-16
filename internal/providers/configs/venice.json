@@ -1889,6 +1889,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "qwen-4-max",
+      "name": "Qwen 4 Max",
+      "pricing": { "input": 1.875, "output": 5.625 },
+      "context_window": 1000000,
+      "default_max_tokens": 393216,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "qwen3-vl-235b-a22b",
       "name": "Qwen3 VL 235B",
       "pricing": { "input": 0.21, "output": 1.9 },
