@@ -4,7 +4,7 @@
   "api_key": "$ALIBABA_US_API_KEY",
   "api_endpoint": "https://dashscope-us.aliyuncs.com/compatible-mode/v1",
   "type": "completions",
-  "default_large_model_id": "qwen3.8-max",
+  "default_large_model_id": "qwen4-max",
   "default_small_model_id": "qwen3.8-flash",
   "models": [
     {
@@ -108,12 +108,41 @@
       "capabilities": { "vision": false }
     },
     {
+      "id": "qwen4-max",
+      "name": "Qwen4-Max",
+      "pricing": { "input": 1.413, "output": 4.24, "cache_hit": 0.071 },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
       "id": "qwen3.8-max",
       "name": "Qwen3.8-Max",
       "pricing": { "input": 1.65, "output": 4.951, "cache_hit": 0.206 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true }
     },
     {
