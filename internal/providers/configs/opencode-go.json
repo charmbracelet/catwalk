@@ -529,6 +529,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "qwen4-max",
+      "name": "Qwen4 Max",
+      "pricing": { "input": 1.5, "output": 4.5, "cache_hit": 0.08 },
+      "context_window": 1000000,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "space-bunny",
       "name": "Space Bunny",
       "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.03 },
