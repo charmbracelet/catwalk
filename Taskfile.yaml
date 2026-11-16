@@ -11,8 +11,9 @@ tasks:
     cmds:
       - golangci-lint run --fix ./...
 
-  fmt:
+  format:
     desc: Format code
+    aliases: [fmt]
     cmds:
       - gofumpt -w .
       - go run ./cmd/format
@@ -167,10 +168,10 @@ tasks:
     cmds:
       - go run cmd/xai/main.go
 
-  update:
-    desc: Trigger the update workflow on GitHub (pass OPEN=1 to open the job in the browser)
+  sync:
+    desc: Trigger the sync workflow on GitHub (pass OPEN=1 to open the job in the browser)
     cmds:
-      - gh workflow run update.yml
+      - gh workflow run sync.yml
       - |
         if [ "{{.OPEN}}" = "1" ]; then
           sleep 3
