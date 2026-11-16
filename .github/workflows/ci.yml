@@ -9,13 +9,19 @@ permissions:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-16vcpu-ubuntu-2404
     steps:
       - name: Checkout
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
       - name: Setup Mise
         uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+
+      - name: Cache Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: ''
+          cache: true
 
       - name: Install
         run: task install
@@ -24,13 +30,19 @@ jobs:
         run: task lint
 
   format:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-16vcpu-ubuntu-2404
     steps:
       - name: Checkout
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
       - name: Setup Mise
         uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+
+      - name: Cache Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: ''
+          cache: true
 
       - name: Install
         run: task install
@@ -43,13 +55,19 @@ jobs:
           git diff --exit-code
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-16vcpu-ubuntu-2404
     steps:
       - name: Checkout
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
       - name: Setup Mise
         uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+
+      - name: Cache Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: ''
+          cache: true
 
       - name: Install
         run: task install
