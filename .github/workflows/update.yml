@@ -58,6 +58,10 @@ jobs:
         run: go run ./cmd/huggingface/main.go
         continue-on-error: true
 
+      - name: Infersia
+        run: go run ./cmd/infersia/main.go
+        continue-on-error: true
+
       - name: io.net
         run: go run ./cmd/ionet/main.go
         continue-on-error: true
