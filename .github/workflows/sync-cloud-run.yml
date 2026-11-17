@@ -16,7 +16,7 @@ on:
 jobs:
   sync-cloud-run:
     name: Deploy to Cloud Run (prod)
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     permissions:
       id-token: write # for GCP Workload Identity Federation
       contents: read

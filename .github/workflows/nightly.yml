@@ -22,7 +22,7 @@ jobs:
 
   deploy:
     name: Run deploy workflow
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     needs: [goreleaser]
     permissions:
       id-token: write
@@ -59,7 +59,7 @@ jobs:
 
   notify:
     name: Notify deploy result
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     needs: [goreleaser, deploy]
     if: always()
     steps:
