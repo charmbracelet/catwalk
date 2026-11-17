@@ -4635,6 +4635,20 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "qwen4-max",
+      "name": "Qwen4 Max",
+      "pricing": {
+        "input": 1.471,
+        "output": 4.412,
+        "cache_create": 1.83875,
+        "cache_hit": 0.07355
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 262144,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "solar-pro4",
       "name": "Solar Pro4",
       "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
