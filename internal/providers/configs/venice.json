@@ -694,6 +694,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "glm-5-3-flash-uncensored",
+      "name": "GLM 5.3 Flash Uncensored",
+      "pricing": { "input": 0.165, "output": 0.55 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "z-ai-glm-5v-turbo",
       "name": "GLM 5V Turbo",
       "pricing": { "input": 1.5, "output": 5 },
@@ -1449,6 +1466,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "e2ee-kimi-k3-1-pro-p",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 2.5, "output": 12.5 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "kimi-k3-1-pro",
       "name": "Kimi K3.1 Pro",
       "pricing": { "input": 2, "output": 10 },
@@ -1891,7 +1925,7 @@
     {
       "id": "qwen-4-max",
       "name": "Qwen 4 Max",
-      "pricing": { "input": 1.875, "output": 5.625 },
+      "pricing": { "input": 1.5, "output": 4.5 },
       "context_window": 1000000,
       "default_max_tokens": 393216,
       "reasoning": { "thinking": "toggleable" },

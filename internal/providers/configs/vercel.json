@@ -1218,6 +1218,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "recursive/flint-v1.0",
+      "name": "Flint",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 262144,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "sakana/fugu-max",
       "name": "Fugu Max",
       "pricing": { "input": 2, "output": 6, "cache_hit": 0.25 },
