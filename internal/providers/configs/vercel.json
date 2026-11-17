@@ -120,23 +120,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "bytedance/seed-1.8",
-      "name": "Bytedance Seed 1.8",
-      "pricing": { "input": 0.25, "output": 2, "cache_hit": 0.05 },
-      "context_window": 256000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "anthropic/claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": {
@@ -219,6 +202,81 @@
         "output": 25,
         "cache_create": 6.25,
         "cache_hit": 0.125
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-fable-5.2",
+      "name": "Claude Fable 5.2",
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.2
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-fable-5.2-batch",
+      "name": "Claude Fable 5.2 (Batch)",
+      "pricing": {
+        "input": 4,
+        "output": 20,
+        "cache_create": 5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-fable-5.2-fast",
+      "name": "Claude Fable 5.2 (Fast)",
+      "pricing": {
+        "input": 16,
+        "output": 80,
+        "cache_create": 20,
+        "cache_hit": 0.4
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -1043,9 +1101,9 @@
     {
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.007 },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.006 },
       "context_window": 1048576,
-      "default_max_tokens": 32768,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3176,6 +3234,40 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "google/gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "google/gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.075 },
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "google/gemma-4-31b-it",
       "name": "Gemma 4 31B IT",
       "pricing": { "input": 0.14, "output": 0.4 },
@@ -3475,6 +3567,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "thinkingmachines/inkling-2-small",
+      "name": "Inkling 2 Small",
+      "pricing": { "input": 0.3, "output": 1, "cache_hit": 0.03 },
+      "context_window": 1048576,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "thinkingmachines/inkling-small",
       "name": "Inkling Small",
       "pricing": { "input": 0.45, "output": 1.2, "cache_hit": 0.1 },
@@ -3605,9 +3714,9 @@
     {
       "id": "moonshotai/kimi-k3-fast",
       "name": "Kimi K3 Fast",
-      "pricing": { "input": 4.5, "output": 22.5, "cache_hit": 0.45 },
+      "pricing": { "input": 6, "output": 22.5, "cache_hit": 0.6 },
       "context_window": 1000000,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3642,7 +3751,7 @@
       "pricing": {
         "input": 4,
         "output": 20,
-        "cache_create": 4,
+        "cache_create": 5,
         "cache_hit": 0.2
       },
       "context_window": 1048576,
@@ -3664,23 +3773,6 @@
       "pricing": { "input": 0.05, "output": 0.7, "cache_hit": 0.025 },
       "context_window": 128000,
       "default_max_tokens": 8200,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "poolside/laguna-s-2.1",
-      "name": "Laguna S 2.1",
-      "pricing": { "input": 0.09, "output": 0.18, "cache_hit": 0.009 },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3857,40 +3949,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "inception/mercury-2",
-      "name": "Mercury 2",
-      "pricing": { "input": 0.25, "output": 0.75, "cache_hit": 0.025 },
-      "context_window": 128000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "inception/mercury-2.5",
-      "name": "Mercury 2.5",
-      "pricing": { "input": 0.04, "output": 0.15, "cache_hit": 0.004 },
-      "context_window": 260000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "inception/mercury-3",
       "name": "Mercury 3",
       "pricing": { "input": 0.1, "output": 0.35, "cache_hit": 0.01 },
@@ -3905,15 +3963,6 @@
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "inception/mercury-coder-small",
-      "name": "Mercury Coder Small Beta",
-      "pricing": { "input": 0.25, "output": 1 },
-      "context_window": 32000,
-      "default_max_tokens": 16384,
-      "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
     },
     {
@@ -4125,8 +4174,8 @@
       "id": "minimax/minimax-m3",
       "name": "MiniMax M3",
       "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
-      "context_window": 512000,
-      "default_max_tokens": 512000,
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4142,8 +4191,8 @@
       "id": "minimax/minimax-m3.1-flash",
       "name": "MiniMax-M3.1-Flash",
       "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.015 },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "context_window": 1000000,
+      "default_max_tokens": 524288,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4248,6 +4297,23 @@
       "context_window": 262144,
       "default_max_tokens": 4000,
       "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "meta/muse-ember",
+      "name": "Muse Ember",
+      "pricing": { "input": 0.1, "output": 0.5, "cache_hit": 0.004 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -4421,23 +4487,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "nvidia/nemotron-3-nano-30b-a3b",
-      "name": "Nemotron 3 Nano 30B A3B",
-      "pricing": { "input": 0.05, "output": 0.2, "cache_hit": 0.025 },
-      "context_window": 262144,
-      "default_max_tokens": 262144,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra",
       "pricing": { "input": 0.6, "output": 2.4, "cache_hit": 0.12 },
@@ -4457,7 +4506,7 @@
     {
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "Nemotron 3.5 Lightning 30B",
-      "pricing": { "input": 0.05, "output": 0.2, "cache_hit": 0.01 },
+      "pricing": { "input": 0.06, "output": 0.16, "cache_hit": 0.03 },
       "context_window": 262144,
       "default_max_tokens": 131072,
       "reasoning": {
@@ -4688,6 +4737,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "alibaba/qwen3.6-35b-a3b",
+      "name": "Qwen 3.6 35B A3B",
+      "pricing": { "input": 0.375, "output": 2.25 },
+      "context_window": 262144,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "alibaba/qwen3.6-plus",
       "name": "Qwen 3.6 Plus",
       "pricing": {
@@ -4800,8 +4866,13 @@
     {
       "id": "alibaba/qwen3.8-max",
       "name": "Qwen 3.8 Max",
-      "pricing": { "input": 2, "output": 6, "cache_hit": 0.25 },
-      "context_window": 262144,
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_create": 2.5,
+        "cache_hit": 0.25
+      },
+      "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {
         "thinking": "toggleable",
@@ -4842,6 +4913,28 @@
       "pricing": { "input": 0.15, "output": 0.47, "cache_hit": 0.016 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "alibaba/qwen4-max",
+      "name": "Qwen 4 Max",
+      "pricing": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache_create": 1.875,
+        "cache_hit": 0.075
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 384000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4954,7 +5047,7 @@
       "name": "Qwen3.8 2.4T A95B",
       "pricing": { "input": 2, "output": 6, "cache_hit": 0.25 },
       "context_window": 262144,
-      "default_max_tokens": 128000,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4969,7 +5062,7 @@
     {
       "id": "alibaba/qwen3.8-27b",
       "name": "Qwen3.8 27B",
-      "pricing": { "input": 0.06, "output": 2.3, "cache_hit": 0.059 },
+      "pricing": { "input": 0.06, "output": 2.2, "cache_hit": 0.059 },
       "context_window": 262144,
       "default_max_tokens": 262144,
       "reasoning": {
@@ -5023,23 +5116,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "bytedance/seed-1.6",
-      "name": "Seed 1.6",
-      "pricing": { "input": 0.25, "output": 2, "cache_hit": 0.05 },
-      "context_window": 256000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "bytedance/seed-2.1-turbo",
       "name": "Seed 2.1 Turbo",
       "pricing": { "input": 0.5, "output": 2.5, "cache_hit": 0.1 },
@@ -5077,8 +5153,8 @@
       "id": "stepfun/step-5-preview",
       "name": "Step 5 Preview",
       "pricing": { "input": 1, "output": 2.7, "cache_hit": 0.1 },
-      "context_window": 1048576,
-      "default_max_tokens": 1048576,
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -5125,6 +5201,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "tencent/hy4-flash",
+      "name": "Tencent Hy4 Flash",
+      "pricing": { "input": 0.035, "output": 0.1405, "cache_hit": 0.0015 },
+      "context_window": 1024000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "tencent/hy4-preview",
       "name": "Tencent Hy4 Preview",
       "pricing": { "input": 0.834, "output": 2.501, "cache_hit": 0.042 },
@@ -5149,6 +5242,23 @@
       "default_max_tokens": 4000,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "paperinstruments/ultramarine-1-flash",
+      "name": "Ultramarine 1 Flash",
+      "pricing": { "input": 0.15, "output": 0.5, "cache_hit": 0.03 },
+      "context_window": 1048576,
+      "default_max_tokens": 131000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "openai/o1",

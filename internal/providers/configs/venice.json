@@ -96,6 +96,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "claude-fable-5-2",
+      "name": "Claude Fable 5.2",
+      "pricing": { "input": 8, "output": 40 },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "claude-haiku-5-5",
       "name": "Claude Haiku 5.5",
       "pricing": { "input": 0.1, "output": 0.5 },
@@ -159,23 +176,6 @@
       "id": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "pricing": { "input": 5, "output": 25 },
-      "context_window": 1000000,
-      "default_max_tokens": 128000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "claude-opus-4-8-fast",
-      "name": "Claude Opus 4.8 Fast",
-      "pricing": { "input": 10, "output": 50 },
       "context_window": 1000000,
       "default_max_tokens": 128000,
       "reasoning": {
@@ -460,7 +460,7 @@
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": { "vision": false, "audio": false }
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "deepseek-v4-1-flash-1017-uncensored",
@@ -1165,6 +1165,24 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "pricing": { "input": 2.5, "output": 12.5 },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "pricing": { "input": 1.875, "output": 9.375 },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemma-4-uncensored",
       "name": "Gemma 4 Uncensored",
       "pricing": { "input": 0.1625, "output": 0.5 },
@@ -1483,57 +1501,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "mercury-2",
-      "name": "Mercury 2",
-      "pricing": { "input": 0.3125, "output": 0.9375 },
-      "context_window": 128000,
-      "default_max_tokens": 50000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "mercury-2-5",
-      "name": "Mercury 2.5",
-      "pricing": { "input": 0.25, "output": 0.9375 },
-      "context_window": 260000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "mercury-3",
-      "name": "Mercury 3",
-      "pricing": { "input": 0.1, "output": 0.35 },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "xiaomi-mimo-v2-5",
       "name": "MiMo-V2.5",
       "pricing": { "input": 0.4, "output": 2 },
@@ -1713,6 +1680,15 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "pareto",
+      "name": "Pareto",
+      "pricing": { "input": 1, "output": 4 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -1909,6 +1885,15 @@
       "pricing": { "input": 2.5, "output": 7.5 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "qwen-4-max",
+      "name": "Qwen 4 Max",
+      "pricing": { "input": 1.875, "output": 5.625 },
+      "context_window": 1000000,
+      "default_max_tokens": 393216,
       "reasoning": { "thinking": "toggleable" },
       "capabilities": { "vision": true, "audio": false }
     },

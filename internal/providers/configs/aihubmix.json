@@ -360,6 +360,20 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "claude-fable-5-2",
+      "name": "Claude Fable 5.2",
+      "pricing": {
+        "input": 8.8,
+        "output": 44,
+        "cache_create": 11,
+        "cache_hit": 0.22
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "pricing": {
@@ -1268,6 +1282,20 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "coding-qwen4-max-preview",
+      "name": "Coding Qwen4 Max Preview",
+      "pricing": {
+        "input": 0.353,
+        "output": 1.059,
+        "cache_create": 0.44125,
+        "cache_hit": 0.04413
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 393216,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "coding-xiaomi-mimo-v2.6-flash",
       "name": "Coding Xiaomi Mimo V2.6 Flash",
       "pricing": { "input": 0.08, "output": 0.16, "cache_hit": 0.0016 },
@@ -1318,15 +1346,6 @@
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "crouton-alpha-free",
-      "name": "Crouton Alpha (free)",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 1048576,
-      "default_max_tokens": 104857,
-      "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -2162,6 +2181,24 @@
       "id": "gemini-4-argon",
       "name": "Gemini 4 Argon",
       "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.075 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },
@@ -3596,7 +3633,7 @@
     {
       "id": "kimi-k3.1-pro",
       "name": "Kimi K3.1 Pro",
-      "pricing": { "input": 2, "output": 10.5, "cache_hit": 0.2 },
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": { "thinking": "never" },
@@ -3968,15 +4005,6 @@
       "default_max_tokens": 104857,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "nemotron-3.5-content-safety-free",
-      "name": "Nemotron 3.5 Content Safety (free)",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "nemotron-3.5-lightning-free",
@@ -4659,15 +4687,6 @@
       "default_max_tokens": 131072,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "xing4.0-29b-a4b-free",
-      "name": "Xing4.0 29B A4B (free)",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 262144,
-      "default_max_tokens": 26214,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "zai-glm-5-turbo",
