@@ -25,6 +25,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "claude-fable-5.2",
+      "name": "Claude Fable 5.2",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "claude-haiku-4.5",
       "name": "Claude Haiku 4.5",
       "pricing": { "input": 0, "output": 0 },
@@ -39,15 +48,6 @@
       "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 100000,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "claude-opus-4.8",
-      "name": "Claude Opus 4.8",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 264000,
-      "default_max_tokens": 64000,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
     },
@@ -97,6 +97,16 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "eagle-bald",
+      "type": "responses",
+      "name": "Eagle",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "pricing": { "input": 0, "output": 0 },
@@ -110,6 +120,24 @@
       "name": "Gemini 4 Argon",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 265536,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 264000,
+      "default_max_tokens": 64000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
@@ -209,16 +237,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "gpt-5.6-terra",
-      "type": "responses",
-      "name": "GPT-5.6 Terra",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 400000,
-      "default_max_tokens": 128000,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "gpt-6-astra",
       "type": "responses",
       "name": "GPT-6 Astra",
@@ -271,6 +289,26 @@
       "id": "gpt-6.1-terra",
       "type": "responses",
       "name": "GPT-6.1 Terra",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gpt-6.2-astra",
+      "type": "responses",
+      "name": "GPT-6.2 Astra",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 400000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "type": "responses",
+      "name": "GPT-6.2 Sol",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 400000,
       "default_max_tokens": 128000,

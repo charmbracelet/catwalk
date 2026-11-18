@@ -76,23 +76,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "hf:moonshotai/Kimi-K3",
-      "name": "Kimi K3",
-      "pricing": { "input": 3, "output": 15, "cache_hit": 0.45 },
-      "context_window": 524288,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "hf:moonshotai/Kimi-K3.1-Pro",
       "name": "Kimi K3.1 Pro",
       "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
@@ -172,7 +155,7 @@
     {
       "id": "syn:large:vision",
       "name": "syn:large:vision",
-      "pricing": { "input": 3, "output": 15, "cache_hit": 0.45 },
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
       "context_window": 524288,
       "default_max_tokens": 32768,
       "reasoning": {

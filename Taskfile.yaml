@@ -11,8 +11,9 @@ tasks:
     cmds:
       - golangci-lint run --fix ./...
 
-  fmt:
+  format:
     desc: Format code
+    aliases: [fmt]
     cmds:
       - gofumpt -w .
       - go run ./cmd/format
@@ -173,14 +174,14 @@ tasks:
     cmds:
       - go run cmd/xai/main.go
 
-  update:
-    desc: Trigger the update workflow on GitHub (pass OPEN=1 to open the job in the browser)
+  sync:
+    desc: Trigger the sync workflow on GitHub (pass OPEN=1 to open the job in the browser)
     cmds:
-      - gh workflow run update.yml
+      - gh workflow run sync.yml
       - |
         if [ "{{.OPEN}}" = "1" ]; then
           sleep 3
-          RUN_ID="$(gh run list --workflow=update.yml --limit=1 --json=databaseId --jq='.[0].databaseId')"
+          RUN_ID="$(gh run list --workflow=sync.yml --limit=1 --json=databaseId --jq='.[0].databaseId')"
           for i in $(seq 10); do
             URL="$(gh run view "$RUN_ID" --json=jobs --jq='.jobs[0].url // empty')"
             [ -n "$URL" ] && break

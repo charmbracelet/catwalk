@@ -49,6 +49,9 @@ func TestProvidersV2Schema(t *testing.T) {
 	if strings.Contains(body, `"session_affinity_header"`) {
 		t.Errorf("v2 response should not contain session_affinity_header")
 	}
+	if strings.Contains(body, `"request_encoding"`) {
+		t.Errorf("v2 response should not contain request_encoding")
+	}
 
 	var providers []map[string]any
 	if err := json.Unmarshal([]byte(body), &providers); err != nil {

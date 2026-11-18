@@ -1,6 +1,6 @@
 module charm.land/catwalk/v3
 
-go 1.26.10
+go 1.26.11
 
 require (
 	github.com/charmbracelet/x/etag v0.2.0

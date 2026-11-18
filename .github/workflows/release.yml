@@ -22,7 +22,7 @@ jobs:
 
   deploy-cloud-run:
     name: Deploy to Cloud Run (prod)
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     needs: [goreleaser]
     permissions:
       id-token: write # for GCP Workload Identity Federation
@@ -79,7 +79,7 @@ jobs:
 
   notify:
     name: Notify deploy result
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     needs: [goreleaser, deploy-cloud-run]
     if: always()
     steps:

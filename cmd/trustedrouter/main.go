@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
 // Pricing is the per-token pricing of a model, as decimal strings in USD.
@@ -109,7 +109,7 @@ func main() {
 		ID:                  catwalk.InferenceProviderTrustedRouter,
 		APIKey:              "$TRUSTEDROUTER_API_KEY",
 		APIEndpoint:         "https://api.trustedrouter.com/v1",
-		Type:                catwalk.TypeOpenAICompat,
+		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "anthropic/claude-sonnet-4.6",
 		DefaultSmallModelID: "z-ai/glm-5.3-flash",
 		Models:              []catwalk.Model{},
@@ -136,12 +136,13 @@ func main() {
 			continue
 		}
 
-		canReason := slices.Contains(model.SupportedParams, "reasoning")
-		var reasoningLevels []string
-		var defaultReasoning string
-		if canReason {
-			reasoningLevels = []string{"low", "medium", "high"}
-			defaultReasoning = "medium"
+		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		if slices.Contains(model.SupportedParams, "reasoning") {
+			reasoning = catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+				DefaultEffortLevel: "medium",
+			}
 		}
 
 		contextWindow := model.ContextLength
@@ -150,17 +151,19 @@ func main() {
 		}
 
 		m := catwalk.Model{
-			ID:                     model.ID,
-			Name:                   model.Name,
-			CostPer1MIn:            roundCost(parsePrice(model.Pricing.Prompt) * 1_000_000),
-			CostPer1MOut:           roundCost(parsePrice(model.Pricing.Completion) * 1_000_000),
-			CostPer1MInCached:      roundCost(parsePrice(model.Pricing.InputCacheWrite) * 1_000_000),
-			CostPer1MOutCached:     roundCost(parsePrice(model.Pricing.InputCacheRead) * 1_000_000),
-			ContextWindow:          contextWindow,
-			CanReason:              canReason,
-			ReasoningLevels:        reasoningLevels,
-			DefaultReasoningEffort: defaultReasoning,
-			SupportsImages:         slices.Contains(model.Architecture.InputModalities, "image"),
+			ID:   model.ID,
+			Name: model.Name,
+			Pricing: catwalk.Pricing{
+				Input:       roundCost(parsePrice(model.Pricing.Prompt) * 1_000_000),
+				Output:      roundCost(parsePrice(model.Pricing.Completion) * 1_000_000),
+				CacheCreate: roundCost(parsePrice(model.Pricing.InputCacheWrite) * 1_000_000),
+				CacheHit:    roundCost(parsePrice(model.Pricing.InputCacheRead) * 1_000_000),
+			},
+			ContextWindow: contextWindow,
+			Reasoning:     reasoning,
+			Capabilities: catwalk.Capabilities{
+				Vision: slices.Contains(model.Architecture.InputModalities, "image"),
+			},
 		}
 		if model.TopProvider.MaxCompletionTokens != nil {
 			m.DefaultMaxTokens = *model.TopProvider.MaxCompletionTokens / 2

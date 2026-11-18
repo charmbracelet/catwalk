@@ -16,6 +16,21 @@ const (
 	TypeMessages Type = "messages"
 )
 
+// RequestEncoding represents the encoding applied to request bodies sent to
+// a provider.
+type RequestEncoding string
+
+// All the supported request encodings.
+const (
+	// RequestEncodingNone means request bodies are sent uncompressed. This
+	// is the default when the field is unset.
+	RequestEncodingNone RequestEncoding = "none"
+	// RequestEncodingBrotli means request bodies are compressed with Brotli.
+	RequestEncodingBrotli RequestEncoding = "brotli"
+	// RequestEncodingGzip means request bodies are compressed with gzip.
+	RequestEncodingGzip RequestEncoding = "gzip"
+)
+
 // InferenceProvider represents the inference provider identifier.
 type InferenceProvider string
 
@@ -78,6 +93,7 @@ type Provider struct {
 	Models                []Model           `json:"models,omitempty"`
 	DefaultHeaders        map[string]string `json:"default_headers,omitempty"`
 	SessionAffinityHeader string            `json:"session_affinity_header,omitempty"`
+	RequestEncoding       RequestEncoding   `json:"request_encoding,omitempty"`
 }
 
 // ModelOptions stores extra options for models.
@@ -252,5 +268,14 @@ func KnownProviderTypes() []Type {
 		TypeCompletions,
 		TypeResponses,
 		TypeMessages,
+	}
+}
+
+// KnownRequestEncodings returns all the known request encodings.
+func KnownRequestEncodings() []RequestEncoding {
+	return []RequestEncoding{
+		RequestEncodingNone,
+		RequestEncodingBrotli,
+		RequestEncodingGzip,
 	}
 }
