@@ -18,7 +18,17 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "reasoning": { "thinking": "always" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true }
     },
     {
@@ -32,7 +42,17 @@
       },
       "context_window": 1050000,
       "default_max_tokens": 128000,
-      "reasoning": { "thinking": "always" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true }
     },
     {
