@@ -80,6 +80,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "meta-models/Muse-Spark-Open-816B-A42B:fireworks-ai",
+      "name": "meta-models/Muse-Spark-Open-816B-A42B (fireworks-ai)",
+      "pricing": { "input": 1.25, "output": 4.25 },
+      "context_window": 1048576,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "moonshotai/Kimi-K3:fireworks-ai",
       "name": "moonshotai/Kimi-K3 (fireworks-ai)",
       "pricing": { "input": 3, "output": 15 },
