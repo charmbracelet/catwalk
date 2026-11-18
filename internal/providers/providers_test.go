@@ -43,6 +43,20 @@ func TestKnownProvidersMatchesRegistry(t *testing.T) {
 	}
 }
 
+func TestValidRequestEncoding(t *testing.T) {
+	known := catwalk.KnownRequestEncodings()
+	for _, p := range GetAll() {
+		if p.RequestEncoding == "" {
+			continue
+		}
+		t.Run(p.Name, func(t *testing.T) {
+			if !slices.Contains(known, p.RequestEncoding) {
+				t.Errorf("Invalid request encoding %q in provider %q", p.RequestEncoding, p.Name)
+			}
+		})
+	}
+}
+
 // validSessionAffinityHeader matches a lowercase HTTP header name (e.g.
 // "x-opencode-session").
 var validSessionAffinityHeader = regexp.MustCompile(`^[a-z][a-z0-9-]*$`)
