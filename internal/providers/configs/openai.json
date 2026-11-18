@@ -8,6 +8,34 @@
   "default_small_model_id": "gpt-6-luna",
   "models": [
     {
+      "id": "gpt-6.2-astra",
+      "name": "GPT-6.2 Astra",
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.4
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "name": "GPT-6.2 Sol",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": true }
+    },
+    {
       "id": "gpt-6.1-terra",
       "name": "GPT-6.1 Terra",
       "pricing": {
