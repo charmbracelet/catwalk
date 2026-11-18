@@ -197,7 +197,7 @@
     {
       "id": "claude-sonnet-5.5",
       "name": "claude-sonnet-5.5",
-      "pricing": { "input": 2.02, "output": 10.098 },
+      "pricing": { "input": 2.042, "output": 10.208 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -282,7 +282,7 @@
     {
       "id": "claude-opus-5.5",
       "name": "claude-opus-5.5",
-      "pricing": { "input": 3.949, "output": 19.747 },
+      "pricing": { "input": 4.083, "output": 20.416 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -503,7 +503,7 @@
     {
       "id": "claude-opus-5",
       "name": "claude-opus-5",
-      "pricing": { "input": 4.937, "output": 24.684 },
+      "pricing": { "input": 5.105, "output": 25.526 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -571,7 +571,7 @@
     {
       "id": "claude-sonnet-5",
       "name": "claude-sonnet-5",
-      "pricing": { "input": 1.975, "output": 9.874 },
+      "pricing": { "input": 2.042, "output": 10.208 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -673,7 +673,7 @@
     {
       "id": "claude-opus4-8",
       "name": "claude-opus4-8",
-      "pricing": { "input": 4.881, "output": 24.404 },
+      "pricing": { "input": 5.105, "output": 25.526 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -826,7 +826,7 @@
     {
       "id": "claude-opus4-7",
       "name": "claude-opus4-7",
-      "pricing": { "input": 4.881, "output": 24.404 },
+      "pricing": { "input": 5.105, "output": 25.526 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -937,7 +937,7 @@
     {
       "id": "claude-4-6-sonnet",
       "name": "claude-4-6-sonnet",
-      "pricing": { "input": 2.869, "output": 14.309 },
+      "pricing": { "input": 3.062, "output": 15.312 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -963,7 +963,7 @@
     {
       "id": "claude-opus4-6",
       "name": "claude-opus4-6",
-      "pricing": { "input": 4.769, "output": 23.843 },
+      "pricing": { "input": 5.105, "output": 25.526 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -1048,7 +1048,7 @@
     {
       "id": "claude-opus4-5",
       "name": "claude-opus4-5",
-      "pricing": { "input": 4.769, "output": 23.849 },
+      "pricing": { "input": 5.105, "output": 25.526 },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "reasoning": {
@@ -1186,7 +1186,7 @@
     {
       "id": "claude-4-5-sonnet",
       "name": "claude-4-5-sonnet",
-      "pricing": { "input": 2.683, "output": 13.416 },
+      "pricing": { "input": 3.062, "output": 15.312 },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "reasoning": {
