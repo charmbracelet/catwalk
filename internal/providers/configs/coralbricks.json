@@ -33,6 +33,15 @@
       "default_max_tokens": 32768,
       "reasoning": { "thinking": "toggleable" },
       "capabilities": { "vision": true }
+    },
+    {
+      "id": "deepseek-v4.1-flash-value",
+      "name": "DeepSeek V4.1 Flash Value",
+      "pricing": { "input": 0.005, "output": 0.57, "cache_hit": 0.003 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
     }
   ]
 }
