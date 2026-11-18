@@ -43,6 +43,48 @@ func TestKnownProvidersMatchesRegistry(t *testing.T) {
 	}
 }
 
+func TestTsubasaConfiguration(t *testing.T) {
+	for _, provider := range GetAll() {
+		if provider.ID != catwalk.InferenceProviderTsubasa {
+			continue
+		}
+		if provider.Type != catwalk.TypeCompletions || provider.APIKey != "$TSUBASA_API_KEY" || provider.APIEndpoint != "https://api.tsubasa.sh/v1" {
+			t.Fatal("Tsubasa must use its named credential and Chat Completions endpoint")
+		}
+		if len(provider.Models) != 2 || provider.DefaultLargeModelID != "tsubasa-pro" || provider.DefaultSmallModelID != "tsubasa-fast" {
+			t.Fatal("Tsubasa must expose both public models with valid defaults")
+		}
+		for _, model := range provider.Models {
+			if model.Pricing.Input <= 0 || model.Pricing.Output <= 0 || model.Reasoning.Thinking != catwalk.ThinkingNever {
+				t.Fatal("Tsubasa prices and non-reasoning metadata must survive v3 loading")
+			}
+			if model.DefaultMaxTokens <= 0 || model.DefaultMaxTokens > model.ContextWindow || model.Capabilities.Vision || model.Capabilities.Audio {
+				t.Fatal("Tsubasa model limits and text-only capabilities must be valid")
+			}
+		}
+		return
+	}
+	t.Fatal("Tsubasa is missing from the provider registry")
+}
+
+func TestTsubasaLegacyConfiguration(t *testing.T) {
+	for _, provider := range GetAllV2() {
+		if provider.ID != catwalk.InferenceProviderTsubasa {
+			continue
+		}
+		if provider.Type != "openai-compat" || provider.APIEndpoint != "https://api.tsubasa.sh/v1" || len(provider.Models) != 2 {
+			t.Fatal("Tsubasa must retain its legacy Chat Completions discovery")
+		}
+		for _, model := range provider.Models {
+			if model.CostPer1MIn <= 0 || model.CostPer1MOut <= 0 || model.CanReason || model.SupportsImages {
+				t.Fatal("Legacy Tsubasa discovery must retain prices and conservative capabilities")
+			}
+		}
+		return
+	}
+	t.Fatal("Tsubasa is missing from the legacy provider registry")
+}
+
 // validSessionAffinityHeader matches a lowercase HTTP header name (e.g.
 // "x-opencode-session").
 var validSessionAffinityHeader = regexp.MustCompile(`^[a-z][a-z0-9-]*$`)
