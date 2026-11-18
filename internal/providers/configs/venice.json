@@ -1086,6 +1086,74 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "openai-gpt-62-astra",
+      "name": "GPT-6.2 Astra",
+      "pricing": { "input": 8, "output": 40 },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "openai-gpt-62-astra-pro",
+      "name": "GPT-6.2 Astra Pro",
+      "pricing": { "input": 8, "output": 40 },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "openai-gpt-62-sol",
+      "name": "GPT-6.2 Sol",
+      "pricing": { "input": 2, "output": 10 },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "openai-gpt-62-sol-pro",
+      "name": "GPT-6.2 Sol Pro",
+      "pricing": { "input": 2, "output": 10 },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemini-3-flash-preview",
       "name": "Gemini 3 Flash Preview",
       "pricing": { "input": 0.7, "output": 3.75 },
@@ -1353,23 +1421,6 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "kimi-k2-5",
-      "name": "Kimi K2.5",
-      "pricing": { "input": 0.56, "output": 3.5 },
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "e2ee-kimi-k2-6",

@@ -35,9 +35,27 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
+      "name": "deepseek-ai/DeepSeek-V4-Flash (fireworks-ai)",
+      "pricing": { "input": 0.105, "output": 0.21 },
+      "context_window": 1048576,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash:fireworks-ai",
+      "name": "deepseek-ai/DeepSeek-V4.1-Flash (fireworks-ai)",
+      "pricing": { "input": 0.21, "output": 0.84 },
+      "context_window": 1048576,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V4.1-Flash-1017 (fireworks-ai)",
-      "pricing": { "input": 0.21, "output": 0.84 },
+      "pricing": { "input": 0.3, "output": 1.2 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
@@ -57,15 +75,6 @@
       "name": "meta-llama/Llama-3.3-70B-Instruct (groq)",
       "pricing": { "input": 0.59, "output": 0.79 },
       "context_window": 131072,
-      "default_max_tokens": 8192,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "meta-models/Muse-Spark-Open-816B-A42B:fireworks-ai",
-      "name": "meta-models/Muse-Spark-Open-816B-A42B (fireworks-ai)",
-      "pricing": { "input": 1.25, "output": 4.25 },
-      "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
