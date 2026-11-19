@@ -8,6 +8,23 @@
   "default_small_model_id": "glm-4.7-flash",
   "models": [
     {
+      "id": "nemotron-3.5-super-vl",
+      "name": "nemotron-3.5-super-vl",
+      "pricing": { "input": 0.183, "output": 0.458 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "inkling-2-small",
       "name": "inkling-2-small",
       "pricing": { "input": 0.275, "output": 0.918 },
@@ -163,7 +180,7 @@
     {
       "id": "claude-haiku-5.5",
       "name": "claude-haiku-5.5",
-      "pricing": { "input": 0.101, "output": 0.505 },
+      "pricing": { "input": 0.102, "output": 0.511 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -487,8 +504,8 @@
       "id": "kimi-k3",
       "name": "kimi-k3",
       "pricing": { "input": 2.693, "output": 13.464 },
-      "context_window": 1048576,
-      "default_max_tokens": 104857,
+      "context_window": 1024000,
+      "default_max_tokens": 102400,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -605,7 +622,7 @@
     {
       "id": "glm-5.2",
       "name": "glm-5.2",
-      "pricing": { "input": 0.808, "output": 2.908 },
+      "pricing": { "input": 1.167, "output": 3.77 },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": {
@@ -1169,7 +1186,7 @@
     {
       "id": "claude-haiku-4-5",
       "name": "claude-haiku-4-5",
-      "pricing": { "input": 0.894, "output": 4.472 },
+      "pricing": { "input": 1.021, "output": 5.105 },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "reasoning": {

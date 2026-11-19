@@ -404,57 +404,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "glm-5",
-      "name": "GLM-5",
-      "pricing": { "input": 1, "output": 3.2, "cache_hit": 0.2 },
-      "context_window": 204800,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "glm-5.1",
-      "name": "GLM-5.1",
-      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
-      "context_window": 204800,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "glm-5.2",
-      "name": "GLM-5.2",
-      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "glm-5.3",
       "name": "GLM-5.3",
       "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
@@ -1138,6 +1087,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "pricing": { "input": 3, "output": 15, "cache_hit": 0.15 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "grok-4.5",
       "type": "responses",
       "name": "Grok 4.5",
@@ -1198,40 +1164,6 @@
       "pricing": { "input": 1, "output": 2, "cache_hit": 0.2 },
       "context_window": 256000,
       "default_max_tokens": 256000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "kimi-k2.5",
-      "name": "Kimi K2.5",
-      "pricing": { "input": 0.6, "output": 3, "cache_hit": 0.1 },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "kimi-k2.6",
-      "name": "Kimi K2.6",
-      "pricing": { "input": 0.95, "output": 4, "cache_hit": 0.16 },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1511,6 +1443,73 @@
         "default_effort_level": "xhigh"
       },
       "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-decision-1",
+      "name": "gemini-decision-1",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-nano-banana-2.1",
+      "name": "gemini-nano-banana-2.1",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6-luna-decision",
+      "type": "responses",
+      "name": "gpt-6-luna-decision",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-image-2.5-sunburst",
+      "type": "responses",
+      "name": "gpt-image-2.5-sunburst",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-live-1",
+      "type": "responses",
+      "name": "gpt-live-1",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "grok-imagine-image-2.0",
+      "type": "responses",
+      "name": "grok-imagine-image-2.0",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "jev-1.13",
+      "name": "jev-1.13",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
     }
   ],
   "session_affinity_header": "x-opencode-session"

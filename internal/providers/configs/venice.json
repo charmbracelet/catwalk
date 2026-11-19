@@ -1268,6 +1268,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "pricing": { "input": 3.75, "output": 18.75 },
+      "context_window": 1000000,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemma-4-uncensored",
       "name": "Gemma 4 Uncensored",
       "pricing": { "input": 0.1625, "output": 0.5 },
