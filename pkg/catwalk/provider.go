@@ -77,6 +77,7 @@ const (
 	InferenceProviderAtlasCloud       InferenceProvider = "atlascloud"
 	InferenceProviderCoralBricks      InferenceProvider = "coralbricks"
 	InferenceProviderScaleway         InferenceProvider = "scaleway"
+	InferenceProviderAiand            InferenceProvider = "aiand"
 	InferenceProviderPareto           InferenceProvider = "pareto"
 )
 
@@ -256,6 +257,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderAtlasCloud,
 		InferenceProviderCoralBricks,
 		InferenceProviderScaleway,
+		InferenceProviderAiand,
 		InferenceProviderPareto,
 	}
 }
