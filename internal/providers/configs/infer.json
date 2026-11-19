@@ -1,0 +1,271 @@
+{
+  "name": "Infer by Flow7",
+  "id": "infer",
+  "api_key": "$INFER_API_KEY",
+  "api_endpoint": "https://infer.flow7.org/v1",
+  "type": "completions",
+  "default_large_model_id": "infer/claude-opus-5-5:low-cost",
+  "default_small_model_id": "infer/claude-haiku-4-5:low-cost",
+  "models": [
+    {
+      "id": "infer/claude-fable-5:low-cost",
+      "name": "Claude Fable 5 (Low cost)",
+      "pricing": {
+        "input": 4.91,
+        "output": 24.53,
+        "cache_create": 6.14,
+        "cache_hit": 0.5
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-fable-5-1:low-cost",
+      "name": "Claude Fable 5.1 (Low cost)",
+      "pricing": {
+        "input": 4.91,
+        "output": 24.53,
+        "cache_create": 6.14,
+        "cache_hit": 0.13
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-fable-5-2:low-cost",
+      "name": "Claude Fable 5.2 (Low cost)",
+      "pricing": {
+        "input": 3.93,
+        "output": 19.62,
+        "cache_create": 4.91,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-haiku-4-5:low-cost",
+      "name": "Claude Haiku 4.5 (Low cost)",
+      "pricing": {
+        "input": 0.5,
+        "output": 2.46,
+        "cache_create": 0.62,
+        "cache_hit": 0.05
+      },
+      "context_window": 200000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-opus-4-8:low-cost",
+      "name": "Claude Opus 4.8 (Low cost)",
+      "pricing": {
+        "input": 2.46,
+        "output": 12.27,
+        "cache_create": 3.07,
+        "cache_hit": 0.25
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-opus-5:low-cost",
+      "name": "Claude Opus 5 (Low cost)",
+      "pricing": {
+        "input": 2.46,
+        "output": 12.27,
+        "cache_create": 3.07,
+        "cache_hit": 0.25
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-opus-5-5:low-cost",
+      "name": "Claude Opus 5.5 (Low cost)",
+      "pricing": {
+        "input": 1.97,
+        "output": 9.81,
+        "cache_create": 2.46,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-sonnet-5:low-cost",
+      "name": "Claude Sonnet 5 (Low cost)",
+      "pricing": {
+        "input": 0.99,
+        "output": 4.91,
+        "cache_create": 1.23,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/claude-sonnet-5-5:low-cost",
+      "name": "Claude Sonnet 5.5 (Low cost)",
+      "pricing": {
+        "input": 0.99,
+        "output": 4.91,
+        "cache_create": 1.23,
+        "cache_hit": 0.1
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-5.5:low-cost",
+      "name": "GPT-5.5 (Low cost)",
+      "pricing": { "input": 0.3, "output": 1.77, "cache_hit": 0.03 },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-5.6-sol:low-cost",
+      "name": "GPT-5.6 Sol (Low cost)",
+      "pricing": {
+        "input": 0.59,
+        "output": 2.65,
+        "cache_create": 0.74,
+        "cache_hit": 0.06
+      },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-5.6-terra:low-cost",
+      "name": "GPT-5.6 Terra (Low cost)",
+      "pricing": {
+        "input": 0.24,
+        "output": 1.06,
+        "cache_create": 0.3,
+        "cache_hit": 0.03
+      },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-6-astra:low-cost",
+      "name": "GPT-6 Astra (Low cost)",
+      "pricing": {
+        "input": 1.18,
+        "output": 4.42,
+        "cache_create": 1.48,
+        "cache_hit": 0.12
+      },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-6-luna:low-cost",
+      "name": "GPT-6 Luna (Low cost)",
+      "pricing": {
+        "input": 0.03,
+        "output": 0.12,
+        "cache_create": 0.04,
+        "cache_hit": 0.01
+      },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-6-sol:low-cost",
+      "name": "GPT-6 Sol (Low cost)",
+      "pricing": {
+        "input": 0.24,
+        "output": 0.89,
+        "cache_create": 0.3,
+        "cache_hit": 0.03
+      },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-6.1-sol:low-cost",
+      "name": "GPT-6.1 Sol (Low cost)",
+      "pricing": {
+        "input": 0.24,
+        "output": 0.89,
+        "cache_create": 0.3,
+        "cache_hit": 0.02
+      },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/gpt-6.1-terra:low-cost",
+      "name": "GPT-6.1 Terra (Low cost)",
+      "pricing": {
+        "input": 0.12,
+        "output": 0.45,
+        "cache_create": 0.15,
+        "cache_hit": 0.01
+      },
+      "context_window": 271999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/grok-4.5:low-cost",
+      "name": "Grok 4.5 (Low cost)",
+      "pricing": { "input": 0.44, "output": 1.3, "cache_hit": 0.11 },
+      "context_window": 199999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/grok-4.6:low-cost",
+      "name": "Grok 4.6 (Low cost)",
+      "pricing": { "input": 0.44, "output": 1.3, "cache_hit": 0.11 },
+      "context_window": 199999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "infer/grok-4.7:low-cost",
+      "name": "Grok 4.7 (Low cost)",
+      "pricing": { "input": 0.44, "output": 1.3, "cache_hit": 0.11 },
+      "context_window": 199999,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ]
+}

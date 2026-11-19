@@ -67,6 +67,7 @@ tasks:
       - task: gen:copilot
       - task: gen:cortecs
       - task: gen:huggingface
+      - task: gen:infer
       - task: gen:ionet
       - task: gen:nebius
       - task: gen:neuralwatt
@@ -117,6 +118,11 @@ tasks:
     desc: Generate huggingface provider configurations
     cmds:
       - go run cmd/huggingface/main.go
+
+  gen:infer:
+    desc: Generate Infer provider configurations
+    cmds:
+      - go run cmd/infer/main.go
 
   gen:ionet:
     desc: Generate io.net provider configurations
