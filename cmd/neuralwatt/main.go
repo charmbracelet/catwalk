@@ -19,11 +19,10 @@ import (
 )
 
 type Pricing struct {
-	InputPerMillion        *float64 `json:"input_per_million"`
-	OutputPerMillion       *float64 `json:"output_per_million"`
-	CachedInputPerMillion  *float64 `json:"cached_input_per_million"`
-	CachedOutputPerMillion *float64 `json:"cached_output_per_million"`
-	PricingTBD             bool     `json:"pricing_tbd"`
+	InputPerMillion       *float64 `json:"input_per_million"`
+	OutputPerMillion      *float64 `json:"output_per_million"`
+	CachedInputPerMillion *float64 `json:"cached_input_per_million"`
+	PricingTBD            bool     `json:"pricing_tbd"`
 }
 
 type Capabilities struct {
@@ -140,8 +139,7 @@ func main() {
 
 		costIn := ptrDeref(meta.Pricing.InputPerMillion, 0)
 		costOut := ptrDeref(meta.Pricing.OutputPerMillion, 0)
-		costCacheCreate := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
-		costCacheHit := ptrDeref(meta.Pricing.CachedOutputPerMillion, 0)
+		costCacheHit := ptrDeref(meta.Pricing.CachedInputPerMillion, 0)
 
 		var defaultMaxTokens int64
 		if meta.Limits.MaxOutputTokens != nil {
@@ -173,10 +171,9 @@ func main() {
 			ID:   model.ID,
 			Name: name,
 			Pricing: catwalk.Pricing{
-				Input:       roundCost(costIn),
-				Output:      roundCost(costOut),
-				CacheCreate: roundCost(costCacheCreate),
-				CacheHit:    roundCost(costCacheHit),
+				Input:    roundCost(costIn),
+				Output:   roundCost(costOut),
+				CacheHit: roundCost(costCacheHit),
 			},
 			ContextWindow:    model.MaxModelLen,
 			DefaultMaxTokens: defaultMaxTokens,

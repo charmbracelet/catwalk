@@ -104,7 +104,8 @@ func fromType(id catwalk.InferenceProvider, t catwalk.Type) catwalk.Type {
 }
 
 // FromProvider converts a provider to the legacy v2 schema. The v3-only
-// SessionAffinityHeader field is dropped, as it never existed in v2.
+// SessionAffinityHeader and RequestEncoding fields are dropped, as they never
+// existed in v2.
 func FromProvider(p catwalk.Provider) Provider {
 	v2 := Provider{
 		Name:                p.Name,

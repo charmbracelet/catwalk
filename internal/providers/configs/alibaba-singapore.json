@@ -4,9 +4,28 @@
   "api_key": "$ALIBABA_SINGAPORE_API_KEY",
   "api_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
   "type": "completions",
-  "default_large_model_id": "qwen3.8-max",
+  "default_large_model_id": "qwen4-max",
   "default_small_model_id": "qwen3.8-flash",
   "models": [
+    {
+      "id": "qwen4-max",
+      "name": "Qwen4-Max",
+      "pricing": { "input": 1.5, "output": 4.5, "cache_hit": 0.075 },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true }
+    },
     {
       "id": "qwen3.5-35b-a3b",
       "name": "Qwen3.5-35B-A3B",
@@ -299,11 +318,28 @@
       "capabilities": { "vision": false }
     },
     {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": { "input": 3, "output": 15, "cache_hit": 0.3 },
       "context_window": 1048576,
-      "default_max_tokens": 16000,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -375,26 +411,9 @@
       "capabilities": { "vision": false }
     },
     {
-      "id": "deepseek-v4.1-flash",
-      "name": "DeepSeek-V4.1-Flash",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.03 },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "high", "display": "High" },
-          { "value": "max", "display": "Max" }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": { "vision": true }
-    },
-    {
       "id": "deepseek-v4.1-flash-1017",
       "name": "DeepSeek-V4.1-Flash-1017",
-      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.03 },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.006 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
       "reasoning": {

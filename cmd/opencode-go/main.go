@@ -91,11 +91,15 @@ func main() {
 		APIEndpoint:           "https://opencode.ai/zen/go/v1",
 		Type:                  catwalk.TypeCompletions,
 		SessionAffinityHeader: "x-opencode-session",
-		DefaultLargeModelID:   "minimax-m2.7",
-		DefaultSmallModelID:   "minimax-m2.7",
+		DefaultLargeModelID:   "deepseek-v4.1-flash",
+		DefaultSmallModelID:   "deepseek-v4.1-flash",
 	}
 
 	for _, goModel := range goModels {
+		if strings.HasSuffix(goModel.ID, "-free") {
+			continue
+		}
+
 		costPerTokenIn := math.Round(goModel.Cost.Input*100) / 100
 		costPerTokenOut := math.Round(goModel.Cost.Output*100) / 100
 		costCacheHit := math.Round(goModel.Cost.CacheRead*100) / 100

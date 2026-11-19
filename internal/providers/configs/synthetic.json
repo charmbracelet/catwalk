@@ -76,9 +76,9 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "hf:moonshotai/Kimi-K3",
-      "name": "Kimi K3",
-      "pricing": { "input": 3, "output": 15, "cache_hit": 0.45 },
+      "id": "hf:moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
       "context_window": 524288,
       "default_max_tokens": 32768,
       "reasoning": {
@@ -155,7 +155,7 @@
     {
       "id": "syn:large:vision",
       "name": "syn:large:vision",
-      "pricing": { "input": 3, "output": 15, "cache_hit": 0.45 },
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
       "context_window": 524288,
       "default_max_tokens": 32768,
       "reasoning": {

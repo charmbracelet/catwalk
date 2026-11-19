@@ -4,26 +4,9 @@
   "api_key": "$OPENCODE_API_KEY",
   "api_endpoint": "https://opencode.ai/zen/v1",
   "type": "completions",
-  "default_large_model_id": "mimo-v2.6-flash-free",
-  "default_small_model_id": "mimo-v2.6-flash-free",
+  "default_large_model_id": "deepseek-v4.1-flash",
+  "default_small_model_id": "deepseek-v4.1-flash",
   "models": [
-    {
-      "id": "beam-free",
-      "name": "Beam Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
     {
       "id": "big-pickle",
       "name": "Big Pickle",
@@ -73,6 +56,29 @@
         "output": 50,
         "cache_create": 12.5,
         "cache_hit": 0.25
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "claude-fable-5-2",
+      "type": "messages",
+      "name": "Claude Fable 5.2",
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.2
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -348,7 +354,7 @@
         "input": 2,
         "output": 10,
         "cache_create": 2.5,
-        "cache_hit": 0.2
+        "cache_hit": 0.1
       },
       "context_window": 1000000,
       "default_max_tokens": 128000,
@@ -382,7 +388,7 @@
     },
     {
       "id": "deepseek-v4.1-flash",
-      "name": "DeepSeek V4.1 Flash",
+      "name": "DeepSeek V4.1 Flash 1017",
       "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.01 },
       "context_window": 1000000,
       "default_max_tokens": 384000,
@@ -396,40 +402,6 @@
         "default_effort_level": "high"
       },
       "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "deepseek-v4.1-flash-free",
-      "name": "DeepSeek V4.1 Flash Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "high", "display": "High" },
-          { "value": "max", "display": "Max" }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "flint-40b-free",
-      "name": "Flint 40B Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "glm-5",
@@ -513,23 +485,6 @@
           { "value": "max", "display": "Max" }
         ],
         "default_effort_level": "high"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "glm-5.3-flash-free",
-      "name": "GLM-5.3-Flash Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
       },
       "capabilities": { "vision": true, "audio": false }
     },
@@ -1001,6 +956,52 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gpt-6.2-astra",
+      "type": "responses",
+      "name": "GPT-6.2 Astra",
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.4
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "type": "responses",
+      "name": "GPT-6.2 Sol",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2.5,
+        "cache_hit": 0.1
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "pricing": { "input": 1.5, "output": 9, "cache_hit": 0.15 },
@@ -1037,7 +1038,7 @@
     {
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
-      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
+      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.08 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -1054,7 +1055,7 @@
     {
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
-      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
+      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.08 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -1071,7 +1072,7 @@
     {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
-      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
+      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.08 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -1089,6 +1090,40 @@
       "id": "gemini-4-argon",
       "name": "Gemini 4 Argon",
       "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.08 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -1235,24 +1270,7 @@
         "cache_hit": 0.3
       },
       "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "mimo-v2.6-flash-free",
-      "name": "MiMo-V2.6-Flash Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 200000,
-      "default_max_tokens": 32000,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1333,6 +1351,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "muse-ember-1.0",
+      "name": "Muse Ember 1.0",
+      "pricing": { "input": 0.1, "output": 0.5 },
+      "context_window": 1048576,
+      "default_max_tokens": 270000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "muse-spark-1.2",
       "type": "responses",
       "name": "Muse Spark 1.2",
@@ -1372,40 +1407,6 @@
       "id": "muse-wonder-1.0",
       "name": "Muse Wonder",
       "pricing": { "input": 4, "output": 20, "cache_hit": 0.2 },
-      "context_window": 1048576,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "nemotron-3.5-lightning-free",
-      "name": "Nemotron 3.5 Lightning Free",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 262144,
-      "default_max_tokens": 262144,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "nemotron-3.5-super-vl-free",
-      "name": "Nemotron 3.5 Super VL Free",
-      "pricing": { "input": 0, "output": 0 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
