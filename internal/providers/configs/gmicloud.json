@@ -1,0 +1,65 @@
+{
+  "name": "GMI Cloud",
+  "id": "gmicloud",
+  "api_key": "$GMI_API_KEY",
+  "api_endpoint": "https://api.gmi-serving.com/v1",
+  "type": "completions",
+  "default_large_model_id": "moonshotai/kimi-k2.7-code",
+  "default_small_model_id": "zai-org/GLM-5.3-Flash",
+  "models": [
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "name": "DeepSeek V4 Flash",
+      "pricing": { "input": 0.14, "output": 0.28, "cache_hit": 0.028 },
+      "context_window": 1048575,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "name": "DeepSeek V4 Pro",
+      "pricing": { "input": 1.74, "output": 3.48, "cache_hit": 0.145 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "moonshotai/kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "pricing": { "input": 0.95, "output": 4, "cache_hit": 0.19 },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "moonshotai/kimi-k3",
+      "name": "Kimi K3",
+      "pricing": { "input": 3, "output": 15, "cache_hit": 0.3 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "name": "GLM 5.3",
+      "pricing": { "input": 1.4, "output": 4.4, "cache_hit": 0.26 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "name": "GLM 5.3 Flash",
+      "pricing": { "input": 0.15, "output": 0.5, "cache_hit": 0.03 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "always" },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ]
+}

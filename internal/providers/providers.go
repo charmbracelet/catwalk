@@ -64,6 +64,9 @@ var fireworksConfig []byte
 //go:embed configs/gemini.json
 var geminiConfig []byte
 
+//go:embed configs/gmicloud.json
+var gmiCloudConfig []byte
+
 //go:embed configs/groq.json
 var groqConfig []byte
 
@@ -144,6 +147,7 @@ var providerRegistry = []ProviderFunc{
 	anthropicProvider,
 	openAIProvider,
 	geminiProvider,
+	gmiCloudProvider,
 	xAIProvider,
 	zAIProvider,
 	kimiCodingProvider,
@@ -281,6 +285,10 @@ func fireworksProvider() catwalk.Provider {
 
 func geminiProvider() catwalk.Provider {
 	return loadProviderFromConfig(geminiConfig)
+}
+
+func gmiCloudProvider() catwalk.Provider {
+	return loadProviderFromConfig(gmiCloudConfig)
 }
 
 func groqProvider() catwalk.Provider {
