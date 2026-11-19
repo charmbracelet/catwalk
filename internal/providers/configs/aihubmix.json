@@ -2205,6 +2205,15 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "pricing": { "input": 3, "output": 15, "cache_hit": 0.15 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "gemini-nano-banana-2.1",
       "name": "Gemini Nano Banana 2.1",
       "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
@@ -3034,7 +3043,12 @@
     {
       "id": "gpt-5.6-sol-pro",
       "name": "GPT 5.6 Sol Pro",
-      "pricing": { "input": 8, "output": 40, "cache_hit": 0.8 },
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.8
+      },
       "context_window": 1050000,
       "default_max_tokens": 105000,
       "reasoning": { "thinking": "never" },
@@ -3129,7 +3143,12 @@
     {
       "id": "gpt-6.1-terra",
       "name": "GPT 6.1 Terra",
-      "pricing": { "input": 1, "output": 5, "cache_hit": 0.05 },
+      "pricing": {
+        "input": 1,
+        "output": 5,
+        "cache_create": 1.25,
+        "cache_hit": 0.05
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": { "thinking": "never" },
@@ -3771,15 +3790,6 @@
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "mercury-2.5",
-      "name": "Mercury 2.5",
-      "pricing": { "input": 0.2, "output": 0.75, "cache_hit": 0.02 },
-      "context_window": 260000,
-      "default_max_tokens": 26000,
-      "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
     },
     {
