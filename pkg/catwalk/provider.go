@@ -63,6 +63,7 @@ const (
 	InferenceProviderMiniMax          InferenceProvider = "minimax"
 	InferenceProviderMiniMaxChina     InferenceProvider = "minimax-china"
 	InferenceProviderIoNet            InferenceProvider = "ionet"
+	InferenceProviderJZSTOKEN        InferenceProvider = "jzstoken"
 	InferenceProviderQiniuCloud       InferenceProvider = "qiniucloud"
 	InferenceProviderAvian            InferenceProvider = "avian"
 	InferenceProviderNebius           InferenceProvider = "nebius"
@@ -242,6 +243,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderMiniMax,
 		InferenceProviderMiniMaxChina,
 		InferenceProviderIoNet,
+		InferenceProviderJZSTOKEN,
 		InferenceProviderQiniuCloud,
 		InferenceProviderAvian,
 		InferenceProviderNebius,
