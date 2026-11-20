@@ -1,0 +1,2738 @@
+{
+  "name": "Obscurify.ai",
+  "id": "obscurify",
+  "api_key": "$OBSCURIFY_API_KEY",
+  "api_endpoint": "https://obscurify.ai/v1",
+  "type": "completions",
+  "default_large_model_id": "z-ai/glm-5.3",
+  "default_small_model_id": "meta-llama/llama-3.3-70b-instruct",
+  "models": [
+    {
+      "id": "abliteration-ai/abliterated-model-large-flash",
+      "name": "Abliteration Ai: Abliterated Large Flash",
+      "pricing": { "input": 1.105, "output": 2.21 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "abliteration-ai/abliterated-model-large",
+      "name": "Abliteration Ai: Abliterated Model Large",
+      "pricing": { "input": 3.315, "output": 5.525 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "abliteration-ai/abliterated-model-large-v2",
+      "name": "Abliteration Ai: Abliterated Model Large V2",
+      "pricing": { "input": 3.315, "output": 5.525 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aion-labs/aion-3.0",
+      "name": "AionLabs: Aion 3.0",
+      "pricing": { "input": 3.315, "output": 6.63 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aion-labs/aion-3.0-mini",
+      "name": "AionLabs: Aion 3.0 Mini",
+      "pricing": { "input": 0.7735, "output": 1.547 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aion-labs/aion-3.5",
+      "name": "AionLabs: Aion 3.5",
+      "pricing": { "input": 3.9, "output": 7.8 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aion-labs/aion-3.5-mini",
+      "name": "AionLabs: Aion 3.5 Mini",
+      "pricing": { "input": 0.91, "output": 1.82 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aion-labs/aion-2.0",
+      "name": "AionLabs: Aion-2.0",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aion-labs/aion-rp-llama-3.1-8b",
+      "name": "AionLabs: Llama 3.1 8b (uncensored)",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 32768,
+      "default_max_tokens": 3276,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aisingapore/qwen-sea-lion-v4-32b-it",
+      "name": "Aisingapore: Qwen SEA-LION v4 32B",
+      "pricing": { "input": 0.3315, "output": 0.663 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "aleph-alpha/kolibri-1",
+      "name": "Aleph Alpha: Kolibri 1",
+      "pricing": { "input": 0.18564, "output": 0.64974 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "amazon/nova-2-lite-v1",
+      "name": "Amazon: Nova 2 Lite",
+      "pricing": { "input": 0.39, "output": 3.25 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "amazon/nova-micro-v1",
+      "name": "Amazon: Nova Micro 1.0",
+      "pricing": { "input": 0.0455, "output": 0.182 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-4.1",
+      "name": "Anthropic: Claude 4.1 Opus",
+      "pricing": { "input": 16.575, "output": 82.875 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-4.5",
+      "name": "Anthropic: Claude 4.5 Opus",
+      "pricing": { "input": 5.525, "output": 27.625 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-4.5:thinking",
+      "name": "Anthropic: Claude 4.5 Opus Thinking",
+      "pricing": { "input": 5.525, "output": 27.625 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-4.6",
+      "name": "Anthropic: Claude 4.6 Opus",
+      "pricing": { "input": 5.525, "output": 27.625 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-4.7",
+      "name": "Anthropic: Claude 4.7 Opus",
+      "pricing": { "input": 5.525, "output": 27.625 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-fable-5.1",
+      "name": "Anthropic: Claude Fable 5.1",
+      "pricing": { "input": 11.05, "output": 55.25 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-fable-5.2",
+      "name": "Anthropic: Claude Fable 5.2",
+      "pricing": { "input": 8.84, "output": 44.2 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-haiku-4.5",
+      "name": "Anthropic: Claude Haiku 4.5",
+      "pricing": { "input": 1.105, "output": 5.525 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-haiku-5.5",
+      "name": "Anthropic: Claude Haiku 5.5",
+      "pricing": { "input": 0.1105, "output": 0.5525 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-4.8",
+      "name": "Anthropic: Claude Opus 4.8",
+      "pricing": { "input": 5.525, "output": 27.625 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-5",
+      "name": "Anthropic: Claude Opus 5",
+      "pricing": { "input": 5.525, "output": 27.625 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-opus-5.5",
+      "name": "Anthropic: Claude Opus 5.5",
+      "pricing": { "input": 4.42, "output": 22.1 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.5",
+      "name": "Anthropic: Claude Sonnet 4.5",
+      "pricing": { "input": 3.315, "output": 16.575 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.6",
+      "name": "Anthropic: Claude Sonnet 4.6",
+      "pricing": { "input": 3.315, "output": 16.575 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-sonnet-5",
+      "name": "Anthropic: Claude Sonnet 5",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-sonnet-5.5",
+      "name": "Anthropic: Claude Sonnet 5.5",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "anthropic/claude-sonnet-5.5:thinking",
+      "name": "Anthropic: Claude Sonnet 5.5 Thinking",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "baidu/ernie-light-dt-1.0-intl",
+      "name": "Baidu: ERNIE Light DT 1.0 (Intl)",
+      "pricing": { "input": 1.4365, "output": 4.9725 },
+      "context_window": 1024000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "bytedance-seed/seed-2.0-code",
+      "name": "ByteDance Seed: ByteDance Seed 2.0 Code",
+      "pricing": { "input": 0.5525, "output": 3.315 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "bytedance-seed/seed-2-1-turbo",
+      "name": "ByteDance Seed: ByteDance Seed 2.1 Turbo",
+      "pricing": { "input": 0.5525, "output": 2.7625 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "bytedance-seed/seed-2.0-mini",
+      "name": "ByteDance Seed: Seed-2.0-Mini",
+      "pricing": { "input": 0.13, "output": 0.52 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "cohere/command-a-plus",
+      "name": "Cohere: Command A+",
+      "pricing": { "input": 0.39, "output": 1.95 },
+      "context_window": 192000,
+      "default_max_tokens": 19200,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-latest",
+      "name": "DeepSeek: DeepSeek Flash Latest",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-chat",
+      "name": "DeepSeek: DeepSeek V3",
+      "pricing": { "input": 0.33462, "output": 1.33731 },
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3-0324",
+      "name": "DeepSeek: DeepSeek V3 0324",
+      "pricing": { "input": 0.377, "output": 1.482 },
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3.1",
+      "name": "DeepSeek: DeepSeek V3.1",
+      "pricing": { "input": 0.325, "output": 1.235 },
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v3.1-terminus",
+      "name": "DeepSeek: DeepSeek V3.1 Terminus",
+      "pricing": { "input": 0.351, "output": 1.3 },
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v3.2",
+      "name": "DeepSeek: DeepSeek V3.2",
+      "pricing": { "input": 0.2873, "output": 0.4199 },
+      "context_window": 163000,
+      "default_max_tokens": 16300,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v3.2-exp",
+      "name": "DeepSeek: DeepSeek V3.2 Exp",
+      "pricing": { "input": 0.351, "output": 0.533 },
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/deepseek-v3.2",
+      "name": "DeepSeek: DeepSeek V3.2 TEE",
+      "pricing": { "input": 1.3, "output": 1.3 },
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "name": "DeepSeek: DeepSeek V4 Flash",
+      "pricing": { "input": 0.117, "output": 0.234 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0423",
+      "name": "DeepSeek: DeepSeek V4 Flash 0423",
+      "pricing": { "input": 0.1547, "output": 0.3094 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0423:thinking",
+      "name": "DeepSeek: DeepSeek V4 Flash 0423 (Thinking)",
+      "pricing": { "input": 0.1547, "output": 0.3094 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731",
+      "pricing": { "input": 0.05525, "output": 0.1768 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731:thinking",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731 (Thinking)",
+      "pricing": { "input": 0.05525, "output": 0.1768 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-vision-exp",
+      "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+      "pricing": { "input": 0.23824, "output": 0.71471 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-20260423",
+      "name": "DeepSeek: DeepSeek V4 Pro (April preview)",
+      "pricing": { "input": 0.96112, "output": 1.96209 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-20260423:thinking",
+      "name": "DeepSeek: DeepSeek V4 Pro (April preview, Thinking)",
+      "pricing": { "input": 1.05112, "output": 1.98466 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "name": "DeepSeek: DeepSeek V4 Pro 0813",
+      "pricing": { "input": 0.7293, "output": 2.7625 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813:thinking",
+      "name": "DeepSeek: DeepSeek V4 Pro 0813 Thinking",
+      "pricing": { "input": 0.7293, "output": 2.7625 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek: DeepSeek V4.1 Flash",
+      "pricing": { "input": 0.06591, "output": 0.26364 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-0910-uncensored",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 0910 Uncensored",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-0910-uncensored:thinking",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 0910 Uncensored Thinking",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
+      "pricing": { "input": 0.0468, "output": 0.65 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017-abliterated",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Abliterated",
+      "pricing": { "input": 0.41438, "output": 1.6575 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017-abliterated:thinking",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Abliterated Thinking",
+      "pricing": { "input": 0.41438, "output": 1.6575 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/deepseek-v4.1-flash-1017",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 TEE",
+      "pricing": { "input": 0.975, "output": 2.08 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017:thinking",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Thinking",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017-uncensored",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Uncensored",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017-uncensored:thinking",
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Uncensored Thinking",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash:thinking",
+      "name": "DeepSeek: DeepSeek V4.1 Flash Thinking",
+      "pricing": { "input": 0.04276, "output": 0.442 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-uncensored",
+      "name": "DeepSeek: DeepSeek V4.1 Flash Uncensored",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-uncensored:thinking",
+      "name": "DeepSeek: DeepSeek V4.1 Flash Uncensored Thinking",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "elorian/glimpse",
+      "name": "Elorian: Elorian Glimpse",
+      "pricing": { "input": 0.69615, "output": 3.48075 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "fireworks/ember-1",
+      "name": "Fireworks: Ember 1",
+      "pricing": { "input": 3.315, "output": 16.575 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-2.5-flash",
+      "name": "Google: Gemini 2.5 Flash",
+      "pricing": { "input": 0.39, "output": 3.25 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-2.5-flash-lite",
+      "name": "Google: Gemini 2.5 Flash Lite",
+      "pricing": { "input": 0.13, "output": 0.52 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-3.1-flash-lite-preview",
+      "name": "Google: Gemini 3.1 Flash Lite Preview",
+      "pricing": { "input": 0.325, "output": 1.95 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-3.7-flash",
+      "name": "Google: Gemini 3.7 Flash",
+      "pricing": { "input": 0.82875, "output": 4.14375 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-3.8-flash",
+      "name": "Google: Gemini 3.8 Flash",
+      "pricing": { "input": 0.82875, "output": 4.14375 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-4-argon",
+      "name": "Google: Gemini 4 Argon",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-4-carbon",
+      "name": "Google: Gemini 4 Carbon",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-4-hydrogen",
+      "name": "Google: Gemini 4 Hydrogen",
+      "pricing": { "input": 1.6575, "output": 8.2875 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-3-12b-it",
+      "name": "Google: Gemma 3 12B",
+      "pricing": { "input": 0.065, "output": 0.195 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-3-27b-it",
+      "name": "Google: Gemma 3 27B",
+      "pricing": { "input": 0.104, "output": 0.585 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-12b-it",
+      "name": "Google: Gemma 4 12B Instruct",
+      "pricing": { "input": 0.05525, "output": 0.27625 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-12b-it-semancer",
+      "name": "Google: Gemma 4 12B Semancer",
+      "pricing": { "input": 0.05525, "output": 0.27625 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-12b-it-starry-ocean",
+      "name": "Google: Gemma 4 12B Starry Ocean",
+      "pricing": { "input": 0.05525, "output": 0.27625 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-12b-it-station-keeper",
+      "name": "Google: Gemma 4 12B StationKeeper",
+      "pricing": { "input": 0.05525, "output": 0.27625 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "name": "Google: Gemma 4 26B A4B",
+      "pricing": { "input": 0.03912, "output": 0.1042 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-chimerax",
+      "name": "Google: Gemma 4 26B A4B Chimera X",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-chimeraxheretic",
+      "name": "Google: Gemma 4 26B A4B Chimera X Heretic",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-cybersecurity",
+      "name": "Google: Gemma 4 26B A4B Cybersecurity",
+      "pricing": { "input": 0.11669, "output": 0.36951 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-darksoul",
+      "name": "Google: Gemma 4 26B A4B Dark Soul",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-luminous",
+      "name": "Google: Gemma 4 26B A4B Luminous Mirror",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-meromero",
+      "name": "Google: Gemma 4 26B A4B MeroMero",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-meromero:thinking",
+      "name": "Google: Gemma 4 26B A4B MeroMero Thinking",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-moonlight",
+      "name": "Google: Gemma 4 26B A4B Moonlight Dusk",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-musica",
+      "name": "Google: Gemma 4 26B A4B Musica",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-opusdistill",
+      "name": "Google: Gemma 4 26B A4B Opus Distill",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it-shadowsiren",
+      "name": "Google: Gemma 4 26B A4B Shadow Siren",
+      "pricing": { "input": 0.1326, "output": 0.4199 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/gemma-4-26b-a4b-uncensored",
+      "name": "Google: Gemma 4 26B A4B Uncensored TEE",
+      "pricing": { "input": 0.195, "output": 0.91 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "name": "Google: Gemma 4 31B",
+      "pricing": { "input": 0.12155, "output": 0.36465 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it-fabled",
+      "name": "Google: Gemma 4 31B Fabled",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it-garnet",
+      "name": "Google: Gemma 4 31B Garnet",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it-gembrain",
+      "name": "Google: Gemma 4 31B Gembrain",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it-gemsicle",
+      "name": "Google: Gemma 4 31B Gemsicle",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it-isometry",
+      "name": "Google: Gemma 4 31B Isometry",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-meromero-v2",
+      "name": "Google: Gemma 4 31B MeroMero v2",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it-novelist",
+      "name": "Google: Gemma 4 31B Novelist",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-31b-it-scarlet",
+      "name": "Google: Gemma 4 31B Scarlet",
+      "pricing": { "input": 0.1105, "output": 0.49725 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemma4-31b-splituntied",
+      "name": "Google: Gemma 4 31B Split-Untied",
+      "pricing": { "input": 0.1105, "output": 0.3315 },
+      "context_window": 32768,
+      "default_max_tokens": 3276,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/gemma-4-31b-it",
+      "name": "Google: Gemma 4 31B TEE",
+      "pricing": { "input": 0.195, "output": 0.598 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "google/gemini-nano-banana-2.1",
+      "name": "Google: Nano Banana 2.1",
+      "pricing": { "input": 1.95, "output": 9.75 },
+      "context_window": 65536,
+      "default_max_tokens": 6553,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "heabsy/cyberheabsy",
+      "name": "Heabsy: CyberHeabsy",
+      "pricing": { "input": 1.6575, "output": 4.9725 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "heabsy/qwen3.8-27b-uncensored-fast",
+      "name": "Heabsy: Qwen 3.8 27B Uncensored Fast by Heabsy",
+      "pricing": { "input": 1.105, "output": 3.315 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "ibm-granite/granite-4.2-8b",
+      "name": "IBM: Granite 4.2 8B",
+      "pricing": { "input": 0.0663, "output": 0.16575 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "inception/mercury-3",
+      "name": "Inception: Mercury 3",
+      "pricing": { "input": 0.1105, "output": 0.38675 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "jcartu/deepseek-v4.1-flash-1017-abliterated-lossless-csf",
+      "name": "Jcartu: DeepSeek V4.1 Flash 1017 Abliterated CSF (jcartu)",
+      "pricing": { "input": 0.34808, "output": 1.16025 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "jiunsong/supergemma4-26b-uncensored",
+      "name": "Jiunsong: SuperGemma4 26B Uncensored",
+      "pricing": { "input": 0.17956, "output": 0.5525 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kt/midm-k-3.0-pro",
+      "name": "KT: Mi:dm K 3.0 Pro",
+      "pricing": { "input": 0.26, "output": 1.04 },
+      "context_window": 261795,
+      "default_max_tokens": 26179,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kitani/clover-2",
+      "name": "Kitani: Clover 2",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kitani/clover-2:thinking",
+      "name": "Kitani: Clover 2 Thinking",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "lightonai/lightonocr-2-1b",
+      "name": "Lightonai: LightOnOCR 2",
+      "pricing": { "input": 0.19724, "output": 0.38288 },
+      "context_window": 32768,
+      "default_max_tokens": 3276,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "liquid/lfm-2.5-24b-a2b",
+      "name": "LiquidAI: LFM2.5 24B A2B",
+      "pricing": { "input": 0.05525, "output": 0.7735 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "liquid/lfm-3-1.7b",
+      "name": "LiquidAI: LFM3-1.7B",
+      "pricing": { "input": 0.104, "output": 0.26 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "lyber/kimi-k3.1-pro-abliterated",
+      "name": "Lyber: Kimi K3.1 Pro Abliterated (Lyber)",
+      "pricing": { "input": 4.42, "output": 16.575 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta-llama/llama-3.1-70b-instruct",
+      "name": "Meta: Llama 3.1 70B Instruct",
+      "pricing": { "input": 0.936, "output": 0.936 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta-llama/llama-3.1-8b-instruct",
+      "name": "Meta: Llama 3.1 8b Instruct",
+      "pricing": { "input": 0.0221, "output": 0.0442 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/llama-3.3-70b",
+      "name": "Meta: Llama 3.3 70B TEE",
+      "pricing": { "input": 2.6, "output": 2.6 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta-llama/llama-3.3-70b-instruct",
+      "name": "Meta: Llama 3.3 70b Instruct",
+      "pricing": { "input": 0.05525, "output": 0.25415 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta-llama/llama-4-maverick",
+      "name": "Meta: Llama 4 Maverick",
+      "pricing": { "input": 0.38675, "output": 1.105 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta-llama/llama-4-scout",
+      "name": "Meta: Llama 4 Scout",
+      "pricing": { "input": 0.13, "output": 0.39 },
+      "context_window": 327680,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta/muse-ember",
+      "name": "Meta: Muse Ember",
+      "pricing": { "input": 0.1105, "output": 0.5525 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta/muse-glimmer-30b",
+      "name": "Meta: Muse Glimmer 30B",
+      "pricing": { "input": 0.38675, "output": 1.6575 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta/muse-spark-1.2",
+      "name": "Meta: Muse Spark 1.2",
+      "pricing": { "input": 1.38125, "output": 4.69625 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta/muse-spark-1.2-contributor",
+      "name": "Meta: Muse Spark 1.2 Contributor",
+      "pricing": { "input": 0.1105, "output": 0.221 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta/muse-spark-1.3",
+      "name": "Meta: Muse Spark 1.3",
+      "pricing": { "input": 1.38125, "output": 4.69625 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta/muse-spark-1.3-contributor",
+      "name": "Meta: Muse Spark 1.3 Contributor",
+      "pricing": { "input": 0.1105, "output": 0.221 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "meta/muse-spark-open",
+      "name": "Meta: Muse Spark Open",
+      "pricing": { "input": 1.38125, "output": 4.69625 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "minimax/minimax-m2.1",
+      "name": "MiniMax: MiniMax M2.1",
+      "pricing": { "input": 0.3315, "output": 1.326 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash",
+      "name": "MiniMax: MiniMax M3.1 Flash",
+      "pricing": { "input": 0.0975, "output": 0.39 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistralai/mistral-large-4",
+      "name": "Mistral: Mistral Large 4",
+      "pricing": { "input": 0.7514, "output": 2.30945 },
+      "context_window": 524288,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistralai/mistral-medium-3.5",
+      "name": "Mistral: Mistral Medium 3.5",
+      "pricing": { "input": 1.6575, "output": 8.2875 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistralai/mistral-medium-3.5:thinking",
+      "name": "Mistral: Mistral Medium 3.5 Thinking",
+      "pricing": { "input": 1.6575, "output": 8.2875 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistralai/mistral-nemo",
+      "name": "Mistral: Mistral Nemo",
+      "pricing": { "input": 0.0377, "output": 0.039 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistralai/voxtral-small-24b-2507",
+      "name": "Mistral: Voxtral Small 24B 2507",
+      "pricing": { "input": 0.13, "output": 0.39 },
+      "context_window": 32768,
+      "default_max_tokens": 3276,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "moonshotai/kimi-k2",
+      "name": "MoonshotAI: Kimi K2",
+      "pricing": { "input": 0.741, "output": 2.99 },
+      "context_window": 131072,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "moonshotai/kimi-k2-0905",
+      "name": "MoonshotAI: Kimi K2 0905",
+      "pricing": { "input": 0.78, "output": 3.25 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/kimi-k2.6",
+      "name": "MoonshotAI: Kimi K2.6 TEE",
+      "pricing": { "input": 1.417, "output": 5.98 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/kimi-k3",
+      "name": "MoonshotAI: Kimi K3 TEE",
+      "pricing": { "input": 3.9, "output": 19.5 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "name": "MoonshotAI: Kimi K3.1 Pro",
+      "pricing": { "input": 1.547, "output": 7.735 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro-highspeed",
+      "name": "MoonshotAI: Kimi K3.1 Pro Highspeed",
+      "pricing": { "input": 4.42, "output": 22.1 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/kimi-k3.1-pro",
+      "name": "MoonshotAI: Kimi K3.1 Pro TEE",
+      "pricing": { "input": 2.6, "output": 13 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "motif-technologies/motif-3",
+      "name": "Motif Technologies: Motif 3",
+      "pricing": { "input": 0.39, "output": 1.56 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "name": "NVIDIA: Nvidia Nemotron 3 Ultra 550B",
+      "pricing": { "input": 0.5525, "output": 2.7625 },
+      "context_window": 512288,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning",
+      "name": "NVIDIA: Nvidia Nemotron 3.5 Lightning",
+      "pricing": { "input": 0.05525, "output": 0.221 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning:thinking",
+      "name": "NVIDIA: Nvidia Nemotron 3.5 Lightning Thinking",
+      "pricing": { "input": 0.05525, "output": 0.221 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "name": "NVIDIA: Nvidia Nemotron 3.5 Super VL",
+      "pricing": { "input": 0.16575, "output": 0.5525 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nex-agi/nex-n2.6",
+      "name": "Nex AGI: Nex-N2.6",
+      "pricing": { "input": 0.156, "output": 0.52 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-4.1",
+      "name": "OpenAI: GPT 4.1",
+      "pricing": { "input": 2.21, "output": 8.84 },
+      "context_window": 1047576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5",
+      "name": "OpenAI: GPT 5",
+      "pricing": { "input": 1.38125, "output": 11.05 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.1",
+      "name": "OpenAI: GPT 5.1",
+      "pricing": { "input": 1.38125, "output": 11.05 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.2",
+      "name": "OpenAI: GPT 5.2",
+      "pricing": { "input": 1.93375, "output": 15.47 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.2-codex",
+      "name": "OpenAI: GPT 5.2 Codex",
+      "pricing": { "input": 1.93375, "output": 15.47 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.3-codex",
+      "name": "OpenAI: GPT 5.3 Codex",
+      "pricing": { "input": 1.93375, "output": 15.47 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.4",
+      "name": "OpenAI: GPT 5.4",
+      "pricing": { "input": 2.7625, "output": 16.575 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.4-mini",
+      "name": "OpenAI: GPT 5.4 Mini",
+      "pricing": { "input": 0.82875, "output": 4.9725 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.4-nano",
+      "name": "OpenAI: GPT 5.4 Nano",
+      "pricing": { "input": 0.221, "output": 1.38125 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "name": "OpenAI: GPT 5.5",
+      "pricing": { "input": 5.525, "output": 33.15 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.6-luna",
+      "name": "OpenAI: GPT 5.6 Luna",
+      "pricing": { "input": 0.221, "output": 1.326 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.6-luna-pro",
+      "name": "OpenAI: GPT 5.6 Luna Pro",
+      "pricing": { "input": 0.221, "output": 1.326 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.6-sol",
+      "name": "OpenAI: GPT 5.6 Sol",
+      "pricing": { "input": 4.42, "output": 22.1 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.6-sol-pro",
+      "name": "OpenAI: GPT 5.6 Sol Pro",
+      "pricing": { "input": 4.42, "output": 22.1 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.6-terra",
+      "name": "OpenAI: GPT 5.6 Terra",
+      "pricing": { "input": 2.21, "output": 13.26 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.6-terra-pro",
+      "name": "OpenAI: GPT 5.6 Terra Pro",
+      "pricing": { "input": 2.21, "output": 13.26 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6-astra",
+      "name": "OpenAI: GPT 6 Astra",
+      "pricing": { "input": 11.05, "output": 55.25 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6-astra-pro",
+      "name": "OpenAI: GPT 6 Astra Pro",
+      "pricing": { "input": 11.05, "output": 55.25 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6-luna",
+      "name": "OpenAI: GPT 6 Luna",
+      "pricing": { "input": 0.1105, "output": 0.5525 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6-luna-pro",
+      "name": "OpenAI: GPT 6 Luna Pro",
+      "pricing": { "input": 0.1105, "output": 0.5525 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "name": "OpenAI: GPT 6 Sol",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6-sol-pro",
+      "name": "OpenAI: GPT 6 Sol Pro",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.1-sol",
+      "name": "OpenAI: GPT 6.1 Sol",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.1-sol-pro",
+      "name": "OpenAI: GPT 6.1 Sol Pro",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.1-terra",
+      "name": "OpenAI: GPT 6.1 Terra",
+      "pricing": { "input": 1.105, "output": 5.525 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.1-terra-pro",
+      "name": "OpenAI: GPT 6.1 Terra Pro",
+      "pricing": { "input": 1.105, "output": 5.525 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.2-astra",
+      "name": "OpenAI: GPT 6.2 Astra",
+      "pricing": { "input": 8.84, "output": 44.2 },
+      "context_window": 922000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.2-astra-pro",
+      "name": "OpenAI: GPT 6.2 Astra Pro",
+      "pricing": { "input": 8.84, "output": 44.2 },
+      "context_window": 922000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.2-sol",
+      "name": "OpenAI: GPT 6.2 Sol",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 922000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.2-sol-pro",
+      "name": "OpenAI: GPT 6.2 Sol Pro",
+      "pricing": { "input": 2.21, "output": 11.05 },
+      "context_window": 922000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "OpenAI: GPT OSS 120B",
+      "pricing": { "input": 0.03315, "output": 0.16575 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-terra-latest",
+      "name": "OpenAI: GPT Terra Latest",
+      "pricing": { "input": 1.105, "output": 5.525 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-4o",
+      "name": "OpenAI: GPT-4o",
+      "pricing": { "input": 2.7625, "output": 11.05 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-4o-2024-05-13",
+      "name": "OpenAI: GPT-4o (2024-05-13)",
+      "pricing": { "input": 6.5, "output": 19.5 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-4o-2024-08-06",
+      "name": "OpenAI: GPT-4o (2024-08-06)",
+      "pricing": { "input": 2.7625, "output": 11.05 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-4o-2024-11-20",
+      "name": "OpenAI: GPT-4o (2024-11-20)",
+      "pricing": { "input": 2.7625, "output": 11.05 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.2-pro",
+      "name": "OpenAI: GPT-5.2 Pro",
+      "pricing": { "input": 27.3, "output": 218.4 },
+      "context_window": 400000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "openai/gpt-5.4-pro",
+      "name": "OpenAI: GPT-5.4 Pro",
+      "pricing": { "input": 39, "output": 234 },
+      "context_window": 1050000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-flash-1.0",
+      "name": "Orca: OrcaCyber DeepSeek V4.1 Flash",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 1048064,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-flash-1.0:thinking",
+      "name": "Orca: OrcaCyber DeepSeek V4.1 Flash Thinking",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 1048064,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-glm-5.3",
+      "name": "Orca: OrcaCyber GLM 5.3",
+      "pricing": { "input": 3.315, "output": 5.525 },
+      "context_window": 999488,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-glm-5.3-flash",
+      "name": "Orca: OrcaCyber GLM 5.3 Flash",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 1048064,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-hy4",
+      "name": "Orca: OrcaCyber Hy4",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 1048064,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-k3.1-pro",
+      "name": "Orca: OrcaCyber K3.1 Pro",
+      "pricing": { "input": 2.21, "output": 5.525 },
+      "context_window": 1048064,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-mimo-flash",
+      "name": "Orca: OrcaCyber MiMo V2.6 Flash",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 1048064,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-minimax-m3.1-flash",
+      "name": "Orca: OrcaCyber MiniMax M3.1 Flash",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 261632,
+      "default_max_tokens": 26163,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-qwen3.8-flash-next",
+      "name": "Orca: OrcaCyber Qwen3.8 Flash Next",
+      "pricing": { "input": 0.884, "output": 1.768 },
+      "context_window": 261632,
+      "default_max_tokens": 26163,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-ultra-1.0",
+      "name": "Orca: OrcaCyber Ultra 1.0",
+      "pricing": { "input": 5.525, "output": 11.05 },
+      "context_window": 1048064,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-zero-1.0",
+      "name": "Orca: OrcaCyber Zero 1.0",
+      "pricing": { "input": 3.315, "output": 8.2875 },
+      "context_window": 999488,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "orca/orcacyber-zero-1.5",
+      "name": "Orca: OrcaCyber Zero 1.5",
+      "pricing": { "input": 3.315, "output": 8.2875 },
+      "context_window": 999488,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "ornith-ai/ornith-1.5-122b",
+      "name": "Ornith Ai: Ornith 1.5 122B",
+      "pricing": { "input": 0.2873, "output": 2.2984 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "ornith-ai/ornith-1.5-35b-a3b",
+      "name": "Ornith Ai: Ornith 1.5 35B",
+      "pricing": { "input": 0.1105, "output": 0.442 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "ornith-ai/ornith-1.5-35b-a3b:thinking",
+      "name": "Ornith Ai: Ornith 1.5 35B Thinking",
+      "pricing": { "input": 0.1105, "output": 0.442 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "other/pokee-isaac",
+      "name": "Other: Pokee-Isaac 28B",
+      "pricing": { "input": 0.16575, "output": 1.105 },
+      "context_window": 250000,
+      "default_max_tokens": 25000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "particle-ai/particle-1",
+      "name": "Particle AI: Particle-1",
+      "pricing": { "input": 0.078, "output": 0.65 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "perceptron/perceptron-mk1.5",
+      "name": "Perceptron: Perceptron Mk1.5",
+      "pricing": { "input": 0.16575, "output": 1.6575 },
+      "context_window": 36864,
+      "default_max_tokens": 3686,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "pqhaz/deepseek-v4.1-flash-1017-heretic",
+      "name": "Pqhaz: DeepSeek V4.1 Flash Heretic",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "pqhaz/deepseek-v4.1-flash-1017-heretic:thinking",
+      "name": "Pqhaz: DeepSeek V4.1 Flash Heretic Thinking",
+      "pricing": { "input": 0.21879, "output": 0.87516 },
+      "context_window": 512000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "prism-ml/ternary-bonsai-2-27b",
+      "name": "PrismML: Ternary Bonsai 2 27B",
+      "pricing": { "input": 0.08287, "output": 0.5525 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "prism-ml/ternary-bonsai-2-9b",
+      "name": "PrismML: Ternary Bonsai2 9B",
+      "pricing": { "input": 0.0884, "output": 0.14365 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3-8b",
+      "name": "Qwen: Qwen 3 8B",
+      "pricing": { "input": 0.51935, "output": 0.51935 },
+      "context_window": 41000,
+      "default_max_tokens": 4100,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.6-plus",
+      "name": "Qwen: Qwen 3.6 Plus",
+      "pricing": { "input": 0.35913, "output": 2.15475 },
+      "context_window": 991808,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-antislop",
+      "name": "Qwen: Qwen 3.8 27B Antislop",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-cybersecurity",
+      "name": "Qwen: Qwen 3.8 27B Cybersecurity",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-darkidol",
+      "name": "Qwen: Qwen 3.8 27B DarkIdol",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-fable",
+      "name": "Qwen: Qwen 3.8 27B Fable",
+      "pricing": { "input": 0.27625, "output": 1.6575 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-fimi",
+      "name": "Qwen: Qwen 3.8 27B Fimi",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-kimiko",
+      "name": "Qwen: Qwen 3.8 27B Kimiko",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-kiwen",
+      "name": "Qwen: Qwen 3.8 27B Kiwen",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-novelist",
+      "name": "Qwen: Qwen 3.8 27B Novelist",
+      "pricing": { "input": 0.1105, "output": 0.663 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-queen",
+      "name": "Qwen: Qwen 3.8 27B Queen",
+      "pricing": { "input": 0.27625, "output": 1.6575 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-uncensored",
+      "name": "Qwen: Qwen 3.8 27B Uncensored",
+      "pricing": { "input": 1.105, "output": 3.315 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b-uncensored:thinking",
+      "name": "Qwen: Qwen 3.8 27B Uncensored Thinking",
+      "pricing": { "input": 1.105, "output": 3.315 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen4-max",
+      "name": "Qwen: Qwen 4 Max",
+      "pricing": { "input": 1.56137, "output": 4.6852 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen4-max:thinking",
+      "name": "Qwen: Qwen 4 Max Thinking",
+      "pricing": { "input": 1.56137, "output": 4.6852 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3-235b-a22b-2507",
+      "name": "Qwen: Qwen3 235B A22B Instruct 2507",
+      "pricing": { "input": 0.182, "output": 1.04 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b-instruct-2507",
+      "name": "Qwen: Qwen3 30B A3B Instruct 2507",
+      "pricing": { "input": 0.13, "output": 0.39 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3-coder-next",
+      "name": "Qwen: Qwen3 Coder Next",
+      "pricing": { "input": 0.1326, "output": 0.884 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "name": "Qwen: Qwen3 Next 80B A3B (Instruct)",
+      "pricing": { "input": 0.09945, "output": 1.2155 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3-vl-30b-a3b-instruct",
+      "name": "Qwen: Qwen3 VL 30B A3B Instruct",
+      "pricing": { "input": 0.195, "output": 0.78 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.5-35b-a3b",
+      "name": "Qwen: Qwen3.5 35B A3B",
+      "pricing": { "input": 0.1547, "output": 1.105 },
+      "context_window": 260096,
+      "default_max_tokens": 26009,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "name": "Qwen: Qwen3.5 397B A17B",
+      "pricing": { "input": 0.49725, "output": 3.315 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b:thinking",
+      "name": "Qwen: Qwen3.5 397B A17B Thinking",
+      "pricing": { "input": 0.49725, "output": 3.315 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.5-9b",
+      "name": "Qwen: Qwen3.5 9B",
+      "pricing": { "input": 0.1105, "output": 0.16575 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.6-27b",
+      "name": "Qwen: Qwen3.6 27B",
+      "pricing": { "input": 0.22432, "output": 2.4752 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/qwen3.6-27b",
+      "name": "Qwen: Qwen3.6 27B TEE",
+      "pricing": { "input": 0.416, "output": 4.225 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.6-27b:thinking",
+      "name": "Qwen: Qwen3.6 27B Thinking",
+      "pricing": { "input": 0.22432, "output": 2.4752 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/qwen3.6-35b-a3b",
+      "name": "Qwen: Qwen3.6 35B A3B TEE",
+      "pricing": { "input": 0.26, "output": 1.651 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.7-flash",
+      "name": "Qwen: Qwen3.7 Flash",
+      "pricing": { "input": 0.03315, "output": 0.14365 },
+      "context_window": 991808,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.7-max",
+      "name": "Qwen: Qwen3.7 Max",
+      "pricing": { "input": 1.62988, "output": 4.88962 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-2.4t-a95b",
+      "name": "Qwen: Qwen3.8 2.4T A95B",
+      "pricing": { "input": 2.6, "output": 7.8 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "name": "Qwen: Qwen3.8 27B",
+      "pricing": { "input": 0.16575, "output": 0.7735 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/qwen3.8-27b",
+      "name": "Qwen: Qwen3.8 27B TEE",
+      "pricing": { "input": 0.26, "output": 3.25 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-27b:thinking",
+      "name": "Qwen: Qwen3.8 27B Thinking",
+      "pricing": { "input": 0.16575, "output": 0.7735 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/qwen3.8-27b-uncensored",
+      "name": "Qwen: Qwen3.8 27B Uncensored TEE",
+      "pricing": { "input": 0.39, "output": 1.95 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/qwen3.8-27b-uncensored:thinking",
+      "name": "Qwen: Qwen3.8 27B Uncensored TEE (Thinking)",
+      "pricing": { "input": 0.39, "output": 1.95 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-flash",
+      "name": "Qwen: Qwen3.8 Flash",
+      "pricing": { "input": 0.16575, "output": 0.51935 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-max",
+      "name": "Qwen: Qwen3.8 Max",
+      "pricing": { "input": 2.21, "output": 6.63 },
+      "context_window": 991000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-max-0902",
+      "name": "Qwen: Qwen3.8 Max 0902",
+      "pricing": { "input": 2.21, "output": 6.63 },
+      "context_window": 991808,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-max-prime",
+      "name": "Qwen: Qwen3.8 Max Prime",
+      "pricing": { "input": 4.42, "output": 13.26 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-max:thinking",
+      "name": "Qwen: Qwen3.8 Max Thinking",
+      "pricing": { "input": 2.21, "output": 6.63 },
+      "context_window": 991000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen/qwen3.8-omni-flash",
+      "name": "Qwen: Qwen3.8 Omni Flash",
+      "pricing": { "input": 0.16575, "output": 0.51935 },
+      "context_window": 991808,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "reflection/beam-1.0-501b-a23b",
+      "name": "Reflection: Beam 1.0 501B A23B",
+      "pricing": { "input": 0.39, "output": 1.3 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "relace/relace-search",
+      "name": "Relace: Relace Search",
+      "pricing": { "input": 1.3, "output": 3.9 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "sakana/fugu-max",
+      "name": "Sakana: Fugu Max",
+      "pricing": { "input": 2.21, "output": 6.63 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "x-ai/grok-4.20",
+      "name": "SpaceXAI: Grok 4.20",
+      "pricing": { "input": 1.38125, "output": 2.7625 },
+      "context_window": 2000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "x-ai/grok-4.20-multi-agent",
+      "name": "SpaceXAI: Grok 4.20 Multi-Agent",
+      "pricing": { "input": 1.38125, "output": 2.7625 },
+      "context_window": 2000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "x-ai/grok-4.3",
+      "name": "SpaceXAI: Grok 4.3",
+      "pricing": { "input": 1.38125, "output": 2.7625 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "x-ai/grok-4.5",
+      "name": "SpaceXAI: Grok 4.5",
+      "pricing": { "input": 2.21, "output": 6.63 },
+      "context_window": 500000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "x-ai/grok-4.6",
+      "name": "SpaceXAI: Grok 4.6",
+      "pricing": { "input": 2.21, "output": 6.63 },
+      "context_window": 500000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "x-ai/grok-4.7",
+      "name": "SpaceXAI: Grok 4.7",
+      "pricing": { "input": 2.21, "output": 6.63 },
+      "context_window": 500000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "x-ai/grok-build-0.1",
+      "name": "SpaceXAI: Grok Build 0.1",
+      "pricing": { "input": 1.105, "output": 2.21 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "speakleash/bielik-11b-v3.0-instruct",
+      "name": "Speakleash: Bielik 11B v3.0",
+      "pricing": { "input": 0.5304, "output": 0.5304 },
+      "context_window": 32768,
+      "default_max_tokens": 3276,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "stepfun/step-5-preview",
+      "name": "StepFun: Step 5 Preview",
+      "pricing": { "input": 1.105, "output": 2.9835 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tencent/hy4-flash",
+      "name": "Tencent: Hy4 flash",
+      "pricing": { "input": 0.0455, "output": 0.18265 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tencent/hy4",
+      "name": "Tencent: Tencent Hy4",
+      "pricing": { "input": 0.46078, "output": 1.3818 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tencent/hy4-preview",
+      "name": "Tencent: Tencent Hy4 Preview",
+      "pricing": { "input": 0.92157, "output": 2.76361 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "thinkingmachines/inkling-2-small",
+      "name": "Thinking Machines: Inkling 2 Small",
+      "pricing": { "input": 0.39, "output": 1.3 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "typesafe/jev-router",
+      "name": "TypeSafe: Jev Router",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "unbiased/pareto-26.10",
+      "name": "Unbiased: Pareto 26.10",
+      "pricing": { "input": 0.884, "output": 3.536 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "unbiased/pareto-26.10-preview",
+      "name": "Unbiased: Pareto 26.10 Preview",
+      "pricing": { "input": 1.04, "output": 4.16 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "unbiased/pareto-26.9",
+      "name": "Unbiased: Pareto 26.9",
+      "pricing": { "input": 2.7625, "output": 8.2875 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "upstage/solar-mini4",
+      "name": "Upstage: Solar Mini 4",
+      "pricing": { "input": 0.05525, "output": 0.221 },
+      "context_window": 524288,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "upstage/solar-mini4:thinking",
+      "name": "Upstage: Solar Mini 4 Thinking",
+      "pricing": { "input": 0.05525, "output": 0.221 },
+      "context_window": 524288,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "upstage/solar-pro4",
+      "name": "Upstage: Solar Pro 4",
+      "pricing": { "input": 0.16575, "output": 0.663 },
+      "context_window": 524288,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "upstage/solar-pro4:thinking",
+      "name": "Upstage: Solar Pro 4 Thinking",
+      "pricing": { "input": 0.16575, "output": 0.663 },
+      "context_window": 524288,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash",
+      "name": "Xiaomi: MiMo V2.6 Flash",
+      "pricing": { "input": 0.1547, "output": 0.3094 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash-abliterated",
+      "name": "Xiaomi: MiMo V2.6 Flash Abliterated",
+      "pricing": { "input": 0.5525, "output": 1.6575 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash-uncensored",
+      "name": "Xiaomi: MiMo V2.6 Flash Uncensored",
+      "pricing": { "input": 0.5525, "output": 1.6575 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash-uncensored:thinking",
+      "name": "Xiaomi: MiMo V2.6 Flash Uncensored Thinking",
+      "pricing": { "input": 0.5525, "output": 1.6575 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro",
+      "name": "Xiaomi: MiMo V2.6 Pro",
+      "pricing": { "input": 0.48068, "output": 0.96135 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "name": "Xiaomi: MiMo V2.6 Pro UltraSpeed",
+      "pricing": { "input": 4.80675, "output": 9.6135 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3-flash-apex",
+      "name": "Z.ai: Apex Flash 1",
+      "pricing": { "input": 0.16575, "output": 0.5525 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-4.6",
+      "name": "Z.ai: GLM 4.6",
+      "pricing": { "input": 0.60775, "output": 2.431 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-4.7-flash",
+      "name": "Z.ai: GLM 4.7 Flash",
+      "pricing": { "input": 0.06685, "output": 0.442 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5",
+      "name": "Z.ai: GLM 5",
+      "pricing": { "input": 0.663, "output": 2.0995 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/glm-5.1",
+      "name": "Z.ai: GLM 5.1 TEE",
+      "pricing": { "input": 1.573, "output": 5.46 },
+      "context_window": 202752,
+      "default_max_tokens": 20275,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/glm-5.2",
+      "name": "Z.ai: GLM 5.2 TEE",
+      "pricing": { "input": 1.638, "output": 3.9 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3",
+      "name": "Z.ai: GLM 5.3",
+      "pricing": { "input": 0.663, "output": 1.2155 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "name": "Z.ai: GLM 5.3 Flash",
+      "pricing": { "input": 0.1105, "output": 0.3315 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/glm-5.3-flash",
+      "name": "Z.ai: GLM 5.3 Flash TEE",
+      "pricing": { "input": 0.195, "output": 0.65 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3-flash-uncensored",
+      "name": "Z.ai: GLM 5.3 Flash Uncensored",
+      "pricing": { "input": 0.221, "output": 0.884 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3-flashx",
+      "name": "Z.ai: GLM 5.3 FlashX",
+      "pricing": { "input": 0.481, "output": 1.625 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3-flashx-legal",
+      "name": "Z.ai: GLM 5.3 FlashX Legal",
+      "pricing": { "input": 0.40885, "output": 1.38125 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tee/glm-5.3",
+      "name": "Z.ai: GLM 5.3 TEE",
+      "pricing": { "input": 1.82, "output": 5.72 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3:thinking",
+      "name": "Z.ai: GLM 5.3 Thinking",
+      "pricing": { "input": 0.663, "output": 1.2155 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "z-ai/glm-5.3-uncensored",
+      "name": "Z.ai: GLM 5.3 Uncensored",
+      "pricing": { "input": 1.38125, "output": 2.48625 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash",
+      "name": "inclusionAI: Ling 3.0 Flash",
+      "pricing": { "input": 0.0273, "output": 0.0819 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-vl",
+      "name": "inclusionAI: Ling 3.0 Flash VL",
+      "pricing": { "input": 0.0663, "output": 0.1989 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "inclusionai/ling-3.1-flash",
+      "name": "inclusionAI: Ling 3.1 Flash",
+      "pricing": { "input": 0.0585, "output": 0.1755 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ]
+}
