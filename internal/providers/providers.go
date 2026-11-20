@@ -109,6 +109,9 @@ var paretoConfig []byte
 //go:embed configs/qiniucloud.json
 var qiniuCloudConfig []byte
 
+//go:embed configs/teamorouter.json
+var teamoRouterConfig []byte
+
 //go:embed configs/scaleway.json
 var scalewayConfig []byte
 
@@ -180,6 +183,7 @@ var providerRegistry = []ProviderFunc{
 	paretoProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
+	teamoRouterProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -341,6 +345,10 @@ func paretoProvider() catwalk.Provider {
 
 func qiniuCloudProvider() catwalk.Provider {
 	return loadProviderFromConfig(qiniuCloudConfig)
+}
+
+func teamoRouterProvider() catwalk.Provider {
+	return loadProviderFromConfig(teamoRouterConfig)
 }
 
 func scalewayProvider() catwalk.Provider {
