@@ -72,6 +72,7 @@ const (
 	InferenceProviderAlibabaSingapore InferenceProvider = "alibaba-singapore"
 	InferenceProviderAlibabaUS        InferenceProvider = "alibaba-us"
 	InferenceProviderFireworks        InferenceProvider = "fireworks"
+	InferenceProviderFortytwo         InferenceProvider = "fortytwo"
 	InferenceProviderBaseten          InferenceProvider = "baseten"
 	InferenceProviderMoonshot         InferenceProvider = "moonshot"
 	InferenceProviderAtlasCloud       InferenceProvider = "atlascloud"
@@ -251,6 +252,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderAlibabaSingapore,
 		InferenceProviderAlibabaUS,
 		InferenceProviderFireworks,
+		InferenceProviderFortytwo,
 		InferenceProviderBaseten,
 		InferenceProviderMoonshot,
 		InferenceProviderAtlasCloud,
