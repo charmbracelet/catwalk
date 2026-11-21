@@ -1445,6 +1445,42 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "bge-m3",
+      "name": "bge-m3",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "codestral-embed",
+      "name": "codestral-embed",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "cohere-embed-v5-fast",
+      "name": "cohere-embed-v5-fast",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "cohere-embed-v5-pro",
+      "name": "cohere-embed-v5-pro",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "gemini-decision-1",
       "name": "gemini-decision-1",
       "pricing": { "input": 0, "output": 0 },
@@ -1454,8 +1490,35 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "gemini-embedding-001",
+      "name": "gemini-embedding-001",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-embedding-2",
+      "name": "gemini-embedding-2",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "gemini-nano-banana-2.1",
       "name": "gemini-nano-banana-2.1",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-omni-1.2-flash",
+      "name": "gemini-omni-1.2-flash",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 20000,
@@ -1505,6 +1568,60 @@
     {
       "id": "jev-1.13",
       "name": "jev-1.13",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistral-embed",
+      "name": "mistral-embed",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen3-embedding-8b",
+      "name": "qwen3-embedding-8b",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "text-embedding-3-large",
+      "name": "text-embedding-3-large",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "text-embedding-3-small",
+      "name": "text-embedding-3-small",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "voyage-4",
+      "name": "voyage-4",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "voyage-code-4",
+      "name": "voyage-code-4",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 20000,

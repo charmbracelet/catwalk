@@ -35,9 +35,18 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "deepseek-ai/DeepSeek-V4-Flash:fireworks-ai",
+      "name": "deepseek-ai/DeepSeek-V4-Flash (fireworks-ai)",
+      "pricing": { "input": 0.07, "output": 0.14 },
+      "context_window": 1048576,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V4.1-Flash (fireworks-ai)",
-      "pricing": { "input": 0.21, "output": 0.84 },
+      "pricing": { "input": 0.15, "output": 0.6 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
@@ -46,7 +55,7 @@
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V4.1-Flash-1017 (fireworks-ai)",
-      "pricing": { "input": 0.21, "output": 0.84 },
+      "pricing": { "input": 0.15, "output": 0.6 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
@@ -56,15 +65,6 @@
       "id": "meta-llama/Llama-3.1-8B-Instruct:groq",
       "name": "meta-llama/Llama-3.1-8B-Instruct (groq)",
       "pricing": { "input": 0.05, "output": 0.08 },
-      "context_window": 131072,
-      "default_max_tokens": 8192,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "meta-llama/Llama-3.3-70B-Instruct:groq",
-      "name": "meta-llama/Llama-3.3-70B-Instruct (groq)",
-      "pricing": { "input": 0.59, "output": 0.79 },
       "context_window": 131072,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
@@ -145,7 +145,7 @@
     {
       "id": "zai-org/GLM-5.3:fireworks-ai",
       "name": "zai-org/GLM-5.3 (fireworks-ai)",
-      "pricing": { "input": 0.98, "output": 3.08 },
+      "pricing": { "input": 0.7, "output": 2.2 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
