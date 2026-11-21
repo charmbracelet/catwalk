@@ -8,6 +8,57 @@
   "default_small_model_id": "glm-4.7-flash",
   "models": [
     {
+      "id": "gemini-4-neon",
+      "name": "gemini-4-neon",
+      "pricing": { "input": 3.063, "output": 15.315 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6.2-astra",
+      "name": "gpt-6.2-astra",
+      "pricing": { "input": 8.909, "output": 44.544 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "name": "gpt-6.2-sol",
+      "pricing": { "input": 2.228, "output": 11.138 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "nemotron-3.5-super-vl",
       "name": "nemotron-3.5-super-vl",
       "pricing": { "input": 0.183, "output": 0.458 },
@@ -146,7 +197,7 @@
     {
       "id": "deepseek-v4.1-flash-1017",
       "name": "deepseek-v4.1-flash-1017",
-      "pricing": { "input": 0.182, "output": 0.547 },
+      "pricing": { "input": 0.092, "output": 0.55 },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": {
@@ -741,7 +792,7 @@
     {
       "id": "qwen3.6-35b-a3b",
       "name": "qwen3.6-35b-a3b",
-      "pricing": { "input": 0.25, "output": 1.5 },
+      "pricing": { "input": 0.17, "output": 1.15 },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "reasoning": {
@@ -758,7 +809,7 @@
     {
       "id": "gemma-4-26b-a4b-it",
       "name": "gemma-4-26b-a4b-it",
-      "pricing": { "input": 0.1, "output": 0.5 },
+      "pricing": { "input": 0.09, "output": 0.35 },
       "context_window": 262000,
       "default_max_tokens": 26200,
       "reasoning": {

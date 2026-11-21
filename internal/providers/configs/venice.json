@@ -448,7 +448,7 @@
     {
       "id": "deepseek-v4-1-flash-1017-ultrafast",
       "name": "DeepSeek V4.1 Flash 1017 Ultrafast",
-      "pricing": { "input": 3, "output": 12 },
+      "pricing": { "input": 1.5, "output": 6 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
