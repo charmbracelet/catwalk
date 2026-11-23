@@ -90,6 +90,9 @@ func fetchAtlasCloudModels(apiEndpoint string) (*ModelsResponse, error) {
 		return nil, fmt.Errorf("creating models request: %w", err)
 	}
 	req.Header.Set("User-Agent", "Catwalk-Client/1.0")
+	if apiKey := strings.TrimSpace(os.Getenv("ATLASCLOUD_API_KEY")); apiKey != "" {
+		req.Header.Set("Authorization", "Bearer "+apiKey)
+	}
 
 	resp, err := client.Do(req)
 	if err != nil {
