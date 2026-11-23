@@ -448,7 +448,7 @@
     {
       "id": "deepseek-v4-1-flash-1017-ultrafast",
       "name": "DeepSeek V4.1 Flash 1017 Ultrafast",
-      "pricing": { "input": 3, "output": 12 },
+      "pricing": { "input": 1.5, "output": 6 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
@@ -1237,7 +1237,15 @@
       "pricing": { "input": 0.9375, "output": 4.6875 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1246,7 +1254,15 @@
       "pricing": { "input": 2.5, "output": 12.5 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1255,7 +1271,15 @@
       "pricing": { "input": 2.5, "output": 12.5 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1264,7 +1288,15 @@
       "pricing": { "input": 1.875, "output": 9.375 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1273,7 +1305,15 @@
       "pricing": { "input": 3.75, "output": 18.75 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {

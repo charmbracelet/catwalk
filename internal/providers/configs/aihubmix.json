@@ -1802,6 +1802,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "ernie-5.5-flash-preview",
+      "name": "ERNIE 5.5 Flash Preview",
+      "pricing": { "input": 0.147, "output": 0.588, "cache_hit": 0.0147 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "ernie-x1-turbo",
       "name": "ERNIE X1 Turbo",
       "pricing": { "input": 0.136, "output": 0.544 },
@@ -2575,7 +2584,7 @@
     {
       "id": "gpt-5-chat-latest",
       "name": "GPT 5 Chat",
-      "pricing": { "input": 1.25, "output": 10, "cache_hit": 0.125 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -2669,7 +2678,7 @@
     {
       "id": "gpt-5.1-chat-latest",
       "name": "GPT 5.1 Chat",
-      "pricing": { "input": 1.25, "output": 10, "cache_hit": 0.125 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -2746,7 +2755,7 @@
     {
       "id": "gpt-5.2-chat-latest",
       "name": "GPT 5.2 Chat",
-      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.175 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -2823,7 +2832,7 @@
     {
       "id": "gpt-5.3-chat-latest",
       "name": "GPT 5.3 Chat",
-      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.175 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -3253,7 +3262,7 @@
     {
       "id": "grok-4-1-fast-non-reasoning",
       "name": "Grok 4.1 Fast",
-      "pricing": { "input": 0.2, "output": 0.5, "cache_hit": 0.05 },
+      "pricing": { "input": 0.2, "output": 0.5 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": { "thinking": "never" },
@@ -3262,7 +3271,7 @@
     {
       "id": "grok-4-1-fast-reasoning",
       "name": "Grok 4.1 Fast (reasoning)",
-      "pricing": { "input": 0.2, "output": 0.5, "cache_hit": 0.05 },
+      "pricing": { "input": 0.2, "output": 0.5 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {

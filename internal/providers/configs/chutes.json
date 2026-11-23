@@ -314,6 +314,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "Qwen/Qwen4-Max",
+      "name": "Qwen4-Max",
+      "pricing": { "input": 1.5, "output": 4.5, "cache_hit": 0.075 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "google/gemma-4-31B-turbo-TEE",
       "name": "gemma-4-31B-turbo-TEE",
       "pricing": { "input": 0.12, "output": 0.37, "cache_hit": 0.012 },
