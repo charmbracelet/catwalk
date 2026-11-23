@@ -34,8 +34,7 @@
         "thinking": "always",
         "effort_levels": [
           { "value": "low", "display": "Low" },
-          { "value": "high", "display": "High" },
-          { "value": "max", "display": "Max" }
+          { "value": "high", "display": "High" }
         ],
         "default_effort_level": "high"
       },
