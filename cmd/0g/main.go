@@ -30,6 +30,18 @@ type Model struct {
 	Architecture        Architecture `json:"architecture"`
 	SupportedParameters []string     `json:"supported_parameters"`
 	PricingUSD          Pricing      `json:"pricing_usd"`
+	Reasoning           *Reasoning   `json:"reasoning"`
+}
+
+// Reasoning is what reasoning_effort was measured to do on every row serving
+// a model, published only once all of them were probed and agreed.
+type Reasoning struct {
+	// Mandatory: reasoning_effort "none" does not turn thinking off.
+	Mandatory bool `json:"mandatory"`
+	// SupportedEfforts are the levels that change how much the model thinks,
+	// high to low, with "none" last when it turns thinking off and another
+	// level is listed.
+	SupportedEfforts []string `json:"supported_efforts"`
 }
 
 // Architecture lists the modalities a model accepts and returns.
@@ -89,6 +101,61 @@ func perMillion(s string) (float64, bool) {
 	return math.Round(v*1e6*1e6) / 1e6, true
 }
 
+// effortOrder is every reasoning_effort level, low to high.
+var effortOrder = []string{"none", "minimal", "low", "medium", "high", "xhigh", "max"}
+
+// reasoningFor maps the catalog's measured reasoning block to Crush's
+// controls. Without one, effort is offered where the router forwards
+// reasoning_effort, with the common three levels.
+func reasoningFor(model Model) catwalk.Reasoning {
+	block := model.Reasoning
+	if block == nil {
+		if !slices.Contains(model.SupportedParameters, "reasoning_effort") {
+			return catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+		}
+		return catwalk.Reasoning{
+			Thinking:           catwalk.ThinkingToggleable,
+			EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
+			DefaultEffortLevel: "medium",
+		}
+	}
+
+	var graded []string
+	for _, level := range effortOrder[1:] {
+		if slices.Contains(block.SupportedEfforts, level) {
+			graded = append(graded, level)
+		}
+	}
+	thinking := catwalk.ThinkingAlways
+	if !block.Mandatory {
+		thinking = catwalk.ThinkingToggleable
+	}
+	// Crush turns thinking off by sending a level, so "none" is offered only
+	// next to other levels; a model that only turns on and off stays on.
+	if len(graded) == 0 {
+		return catwalk.Reasoning{Thinking: thinking}
+	}
+	levels := graded
+	if !block.Mandatory {
+		levels = append([]string{"none"}, graded...)
+	}
+	return catwalk.Reasoning{
+		Thinking:           thinking,
+		EffortLevels:       catwalk.NewEffortLevels(levels...),
+		DefaultEffortLevel: defaultEffort(graded),
+	}
+}
+
+// defaultEffort picks medium where listed, else high, else the highest level.
+func defaultEffort(graded []string) string {
+	for _, level := range []string{"medium", "high"} {
+		if slices.Contains(graded, level) {
+			return level
+		}
+	}
+	return graded[len(graded)-1]
+}
+
 func main() {
 	resp, err := fetchModels()
 	if err != nil {
@@ -122,16 +189,7 @@ func main() {
 		}
 		cacheCreate, _ := perMillion(model.PricingUSD.CacheWrite)
 
-		// Effort is offered only where the router forwards reasoning_effort;
-		// the catalog does not list levels, so the common three are used.
-		reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
-		if slices.Contains(model.SupportedParameters, "reasoning_effort") {
-			reasoning = catwalk.Reasoning{
-				Thinking:           catwalk.ThinkingToggleable,
-				EffortLevels:       catwalk.NewEffortLevels("low", "medium", "high"),
-				DefaultEffortLevel: "medium",
-			}
-		}
+		reasoning := reasoningFor(model)
 
 		maxTokens := model.MaxCompletionTokens
 		if maxTokens <= 0 {
