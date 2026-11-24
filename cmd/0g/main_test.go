@@ -49,7 +49,11 @@ func TestReasoningFor(t *testing.T) {
 		{
 			name:  "on and off only",
 			model: Model{Reasoning: &Reasoning{}, SupportedParameters: []string{"reasoning_effort"}},
-			want:  catwalk.Reasoning{Thinking: catwalk.ThinkingToggleable},
+			want: catwalk.Reasoning{
+				Thinking:           catwalk.ThinkingToggleable,
+				EffortLevels:       catwalk.NewEffortLevels("none", "low"),
+				DefaultEffortLevel: "low",
+			},
 		},
 		{
 			name:  "always on, no control",

@@ -130,10 +130,20 @@ func reasoningFor(model Model) catwalk.Reasoning {
 	if !block.Mandatory {
 		thinking = catwalk.ThinkingToggleable
 	}
-	// Crush turns thinking off by sending a level, so "none" is offered only
-	// next to other levels; a model that only turns on and off stays on.
 	if len(graded) == 0 {
-		return catwalk.Reasoning{Thinking: thinking}
+		if block.Mandatory {
+			return catwalk.Reasoning{Thinking: thinking}
+		}
+		// The model turns on and off, but no level changes how much it
+		// thinks. Crush switches thinking by the level it sends, so offer
+		// "none" and one level that turns it on. Some of these models think
+		// only when a level is sent; "low" was accepted on every row the
+		// router measured ("medium" was not).
+		return catwalk.Reasoning{
+			Thinking:           thinking,
+			EffortLevels:       catwalk.NewEffortLevels("none", "low"),
+			DefaultEffortLevel: "low",
+		}
 	}
 	levels := graded
 	if !block.Mandatory {
