@@ -4661,23 +4661,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "alibaba/qwen3-max-thinking",
-      "name": "Qwen 3 Max Thinking",
-      "pricing": { "input": 1.2, "output": 6, "cache_hit": 0.24 },
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "alibaba/qwen3.5-flash",
       "name": "Qwen 3.5 Flash",
       "pricing": {

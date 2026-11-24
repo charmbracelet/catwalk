@@ -1215,6 +1215,28 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cache_create": 2,
+        "cache_hit": 0.2
+      },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "minimax-m2.5",
       "name": "MiniMax-M2.5",
       "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
@@ -1569,6 +1591,26 @@
       "id": "grok-imagine-image-2.0",
       "type": "responses",
       "name": "grok-imagine-image-2.0",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "grok-imagine-video-1.5",
+      "type": "responses",
+      "name": "grok-imagine-video-1.5",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "grok-imagine-video-1.5-lite",
+      "type": "responses",
+      "name": "grok-imagine-video-1.5-lite",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 20000,

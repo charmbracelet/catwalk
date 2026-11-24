@@ -1044,6 +1044,24 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "coding-glm-5.4",
+      "name": "Coding GLM 5.4",
+      "pricing": { "input": 0.06, "output": 0.22, "cache_hit": 0.015 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "coding-glm-5.4-free",
+      "name": "Coding GLM 5.4 (free)",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "coding-kimi-k3",
       "name": "Coding Kimi K3",
       "pricing": { "input": 0.44, "output": 1.61333, "cache_hit": 0.066 },
@@ -3737,15 +3755,6 @@
       "pricing": { "input": 0.06, "output": 0.18, "cache_hit": 0.012 },
       "context_window": 262144,
       "default_max_tokens": 26214,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "llama-3.3-70b-instruct",
-      "name": "Llama 3.3 70B Instruct",
-      "pricing": { "input": 0.6, "output": 1.2 },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
     },

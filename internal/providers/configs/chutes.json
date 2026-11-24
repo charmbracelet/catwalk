@@ -61,7 +61,7 @@
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "name": "DeepSeek-V4.1-Flash-1017",
-      "pricing": { "input": 0.195, "output": 0.78, "cache_hit": 0.02 },
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.03 },
       "context_window": 1000000,
       "default_max_tokens": 393216,
       "reasoning": {
@@ -129,7 +129,7 @@
     {
       "id": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
-      "pricing": { "input": 0.8, "output": 2.5, "cache_hit": 0.16 },
+      "pricing": { "input": 1.225, "output": 3.85, "cache_hit": 0.245 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {

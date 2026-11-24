@@ -1446,15 +1446,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "grok-build-0-1",
-      "name": "Grok Build 0.1",
-      "pricing": { "input": 1, "output": 2 },
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "hy4-preview",
       "name": "Hy4 Preview",
       "pricing": { "input": 1.0425, "output": 3.12625 },
@@ -2025,7 +2016,7 @@
     {
       "id": "qwen-4-max",
       "name": "Qwen 4 Max",
-      "pricing": { "input": 1.5, "output": 4.5 },
+      "pricing": { "input": 1.875, "output": 5.625 },
       "context_window": 1000000,
       "default_max_tokens": 393216,
       "reasoning": { "thinking": "toggleable" },
