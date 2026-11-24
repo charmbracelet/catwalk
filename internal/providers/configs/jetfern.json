@@ -1,0 +1,29 @@
+{
+  "name": "JetFern",
+  "id": "jetfern",
+  "api_key": "$JETFERN_API_KEY",
+  "api_endpoint": "https://inference.jetfern.ai/v1",
+  "type": "completions",
+  "default_large_model_id": "deepseek-v4.1-flash",
+  "default_small_model_id": "deepseek-v4.1-flash",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.006 },
+      "context_window": 262144,
+      "default_max_tokens": 8192,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ]
+}
