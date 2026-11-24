@@ -19,29 +19,49 @@ import (
 	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
-// PricingTier represents a single pricing tier. Atlas Cloud returns pricing
-// as either a single object or an array of tiered objects; we always pick
-// the first (base) tier.
-type PricingTier struct {
-	Prompt         string `json:"prompt"`
-	Completion     string `json:"completion"`
-	Image          string `json:"image"`
-	Request        string `json:"request"`
-	InputCacheRead string `json:"input_cache_read"`
+// PriceEntry is a single price line attached to a modality. Atlas Cloud
+// quotes prices in USD per token (e.g. "0.00000026").
+type PriceEntry struct {
+	Type    string `json:"type"`
+	Unit    string `json:"unit"`
+	CostUSD string `json:"cost_usd"`
+}
+
+// TokenLimit is a token limit together with its unit.
+type TokenLimit struct {
+	Value int64  `json:"value"`
+	Unit  string `json:"unit"`
+}
+
+// InputModality describes one supported input type with its context limit
+// and pricing.
+type InputModality struct {
+	Type            string `json:"type"`
+	SupportedInputs struct {
+		MaxContextLength *TokenLimit `json:"max_context_length,omitempty"`
+	} `json:"supported_inputs"`
+	Pricing []PriceEntry `json:"pricing,omitempty"`
+}
+
+// OutputModality describes one supported output type with its max length,
+// supported parameters, and pricing.
+type OutputModality struct {
+	Type                string      `json:"type"`
+	MaxLength           *TokenLimit `json:"max_length,omitempty"`
+	SupportedParameters map[string]struct {
+		Type string `json:"type"`
+	} `json:"supported_parameters,omitempty"`
+	Pricing []PriceEntry `json:"pricing,omitempty"`
 }
 
 // Model represents a model from the Atlas Cloud API.
 type Model struct {
-	ID                string          `json:"id"`
-	Name              string          `json:"name"`
-	IsReady           *bool           `json:"is_ready,omitempty"`
-	InputModalities   []string        `json:"input_modalities"`
-	OutputModalities  []string        `json:"output_modalities"`
-	ContextLength     int64           `json:"context_length"`
-	MaxOutputLength   int64           `json:"max_output_length,omitempty"`
-	SupportedFeatures []string        `json:"supported_features,omitempty"`
-	DiscountToUser    float64         `json:"discount_to_user,omitempty"`
-	Pricing           json.RawMessage `json:"pricing"`
+	ID               string           `json:"id"`
+	Name             string           `json:"name"`
+	IsReady          *bool            `json:"is_ready,omitempty"`
+	InputModalities  []InputModality  `json:"input_modalities"`
+	OutputModalities []OutputModality `json:"output_modalities"`
+	DiscountToUser   float64          `json:"discount_to_user,omitempty"`
 }
 
 // ModelsResponse is the response structure for the Atlas Cloud models API.
@@ -63,24 +83,34 @@ func roundCost(v float64) float64 {
 	return math.Round(v*1e5) / 1e5
 }
 
-// extractBasePricing returns the base pricing tier regardless of whether the
-// API returned a single object or a tiered array.
-func extractBasePricing(raw json.RawMessage) (PricingTier, error) {
-	// Try single object first.
-	var single PricingTier
-	if err := json.Unmarshal(raw, &single); err == nil && single.Prompt != "" {
-		return single, nil
+// findPrice returns the cost_usd of the price entry with the given type.
+func findPrice(entries []PriceEntry, typ string) string {
+	for _, p := range entries {
+		if p.Type == typ {
+			return p.CostUSD
+		}
 	}
+	return ""
+}
 
-	// Otherwise expect an array of tiers and use the first one.
-	var tiers []PricingTier
-	if err := json.Unmarshal(raw, &tiers); err != nil {
-		return PricingTier{}, fmt.Errorf("decoding pricing: %w", err)
+// textModalities returns the text input and output modalities of a model,
+// or nil pointers when the model does not handle text.
+func textModalities(m Model) (*InputModality, *OutputModality) {
+	var textIn *InputModality
+	var textOut *OutputModality
+	for i := range m.InputModalities {
+		if m.InputModalities[i].Type == "text" {
+			textIn = &m.InputModalities[i]
+			break
+		}
 	}
-	if len(tiers) == 0 {
-		return PricingTier{}, nil
+	for i := range m.OutputModalities {
+		if m.OutputModalities[i].Type == "text" {
+			textOut = &m.OutputModalities[i]
+			break
+		}
 	}
-	return tiers[0], nil
+	return textIn, textOut
 }
 
 func fetchAtlasCloudModels(apiEndpoint string) (*ModelsResponse, error) {
@@ -137,63 +167,77 @@ func main() {
 			continue
 		}
 
+		textIn, textOut := textModalities(model)
+		if textIn == nil || textOut == nil {
+			continue
+		}
+
+		// Tools support is reported per output modality as a supported
+		// parameter of type "boolean".
+		if textOut.SupportedParameters["tools"].Type != "boolean" {
+			continue
+		}
+
+		var contextLength int64
+		if textIn.SupportedInputs.MaxContextLength != nil {
+			contextLength = textIn.SupportedInputs.MaxContextLength.Value
+		}
 		// Skip models with small context windows.
-		if model.ContextLength < 20000 {
+		if contextLength < 20000 {
 			continue
 		}
 
-		// Skip non-text models.
-		if !slices.Contains(model.InputModalities, "text") ||
-			!slices.Contains(model.OutputModalities, "text") {
-			continue
-		}
-
-		// Require tool support.
-		if !slices.Contains(model.SupportedFeatures, "tools") {
-			continue
-		}
 		if model.DiscountToUser < 0 || model.DiscountToUser > 1 {
 			fmt.Printf("Skipping model %s: invalid user discount %g\n", model.ID, model.DiscountToUser)
 			continue
 		}
 
-		pricing, err := extractBasePricing(model.Pricing)
-		if err != nil {
-			fmt.Printf("Skipping model %s: %v\n", model.ID, err)
+		promptPrice := findPrice(textIn.Pricing, "prompt")
+		completionPrice := findPrice(textOut.Pricing, "completion")
+		if promptPrice == "" || completionPrice == "" {
+			fmt.Printf("Skipping model %s: missing prompt or completion pricing\n", model.ID)
 			continue
 		}
 
 		priceMultiplier := 1 - model.DiscountToUser
-		costPerTokenIn := roundCost(parsePrice(pricing.Prompt) * priceMultiplier * 1_000_000)
-		costPerTokenOut := roundCost(parsePrice(pricing.Completion) * priceMultiplier * 1_000_000)
-		costPerTokenCacheRead := roundCost(parsePrice(pricing.InputCacheRead) * priceMultiplier * 1_000_000)
+		costPerTokenIn := roundCost(parsePrice(promptPrice) * priceMultiplier * 1_000_000)
+		costPerTokenOut := roundCost(parsePrice(completionPrice) * priceMultiplier * 1_000_000)
+		costPerTokenCacheRead := roundCost(parsePrice(findPrice(textIn.Pricing, "cached_prompt")) * priceMultiplier * 1_000_000)
+		costPerTokenCacheWrite := roundCost(parsePrice(findPrice(textIn.Pricing, "cache_write")) * priceMultiplier * 1_000_000)
 
-		supportsImages := slices.Contains(model.InputModalities, "image")
+		supportsImages := slices.ContainsFunc(model.InputModalities, func(im InputModality) bool {
+			return im.Type == "image"
+		})
 
-		// DefaultMaxTokens: use half of max_output_length when available,
+		// DefaultMaxTokens: use half of max_length when available,
 		// capped at 15% of context_length; otherwise 10% of context_length.
+		var maxOutputLength int64
+		if textOut.MaxLength != nil {
+			maxOutputLength = textOut.MaxLength.Value
+		}
 		var defaultMaxTokens int64
-		if model.MaxOutputLength > 0 {
-			maxFromOutput := model.MaxOutputLength / 2
-			maxAt15Pct := (model.ContextLength * 15) / 100
+		if maxOutputLength > 0 {
+			maxFromOutput := maxOutputLength / 2
+			maxAt15Pct := (contextLength * 15) / 100
 			if maxFromOutput <= maxAt15Pct {
 				defaultMaxTokens = maxFromOutput
 			} else {
-				defaultMaxTokens = model.ContextLength / 10
+				defaultMaxTokens = contextLength / 10
 			}
 		} else {
-			defaultMaxTokens = model.ContextLength / 10
+			defaultMaxTokens = contextLength / 10
 		}
 
 		m := catwalk.Model{
 			ID:   model.ID,
 			Name: model.Name,
 			Pricing: catwalk.Pricing{
-				Input:    costPerTokenIn,
-				Output:   costPerTokenOut,
-				CacheHit: costPerTokenCacheRead,
+				Input:       costPerTokenIn,
+				Output:      costPerTokenOut,
+				CacheCreate: costPerTokenCacheWrite,
+				CacheHit:    costPerTokenCacheRead,
 			},
-			ContextWindow:    model.ContextLength,
+			ContextWindow:    contextLength,
 			DefaultMaxTokens: defaultMaxTokens,
 			Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
 			Capabilities:     catwalk.Capabilities{Vision: supportsImages},
