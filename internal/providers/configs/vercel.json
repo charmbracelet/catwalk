@@ -795,31 +795,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "anthropic/claude-sonnet-4.5-batch",
-      "name": "Claude Sonnet 4.5 (Batch)",
-      "pricing": {
-        "input": 1.5,
-        "output": 7.5,
-        "cache_create": 1.875,
-        "cache_hit": 0.15
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "none", "display": "None" },
-          { "value": "minimal", "display": "Minimal" },
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" },
-          { "value": "xhigh", "display": "X-High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "anthropic/claude-sonnet-4.6",
       "name": "Claude Sonnet 4.6",
       "pricing": {
@@ -3390,6 +3365,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "google/gemini-4-neon-fast",
+      "name": "Gemini 4 Neon (Fast)",
+      "pricing": { "input": 5.4, "output": 27, "cache_hit": 0.27 },
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B IT",
       "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.015 },
@@ -3660,6 +3652,23 @@
       "pricing": { "input": 1, "output": 4.05, "cache_hit": 0.17 },
       "context_window": 256000,
       "default_max_tokens": 256000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "thinkingmachines/inkling-2-mini",
+      "name": "Inkling 2 Mini",
+      "pricing": { "input": 0.075, "output": 0.3, "cache_hit": 0.015 },
+      "context_window": 1048576,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
