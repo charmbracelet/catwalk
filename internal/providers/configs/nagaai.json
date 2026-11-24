@@ -1,0 +1,72 @@
+{
+  "name": "NagaAI",
+  "id": "nagaai",
+  "api_key": "$NAGA_API_KEY",
+  "api_endpoint": "https://api.naga.ac/v1",
+  "type": "responses",
+  "default_large_model_id": "anthropic/claude-sonnet-5.5",
+  "default_small_model_id": "minimax/minimax-m3.1-flash",
+  "models": [
+    {
+      "id": "anthropic/claude-sonnet-5.5",
+      "name": "Claude Sonnet 5.5",
+      "pricing": {
+        "input": 1.0,
+        "output": 5.0,
+        "cache_create": 1.25,
+        "cache_hit": 0.05
+      },
+      "context_window": 1000000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "pricing": { "input": 0.0675, "output": 0.27, "cache_hit": 0.00675 },
+      "context_window": 1000000,
+      "default_max_tokens": 524288,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "openai/gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "pricing": {
+        "input": 1.0,
+        "output": 5.0,
+        "cache_create": 1.25,
+        "cache_hit": 0.05
+      },
+      "context_window": 1050000,
+      "default_max_tokens": 128000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}

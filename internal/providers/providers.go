@@ -85,6 +85,9 @@ var moonshotConfig []byte
 //go:embed configs/minimax-china.json
 var miniMaxChinaConfig []byte
 
+//go:embed configs/nagaai.json
+var nagaAIConfig []byte
+
 //go:embed configs/nebius.json
 var nebiusConfig []byte
 
@@ -172,6 +175,7 @@ var providerRegistry = []ProviderFunc{
 	groqProvider,
 	huggingFaceProvider,
 	ioNetProvider,
+	nagaAIProvider,
 	nebiusProvider,
 	neuralwattProvider,
 	openCodeGoProvider,
@@ -309,6 +313,10 @@ func miniMaxChinaProvider() catwalk.Provider {
 
 func moonshotProvider() catwalk.Provider {
 	return loadProviderFromConfig(moonshotConfig)
+}
+
+func nagaAIProvider() catwalk.Provider {
+	return loadProviderFromConfig(nagaAIConfig)
 }
 
 func nebiusProvider() catwalk.Provider {
