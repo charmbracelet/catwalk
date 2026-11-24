@@ -1,0 +1,296 @@
+{
+  "name": "AbliteratedLLM",
+  "id": "abliteratedllm",
+  "api_key": "$ABLITERATEDLLM_API_KEY",
+  "api_endpoint": "https://api.abliteratedllm.dev/v1",
+  "type": "completions",
+  "default_large_model_id": "glm-5.3-cyber-abliterated",
+  "default_small_model_id": "glm-5.3-flash-abliterated",
+  "models": [
+    {
+      "id": "glm-5.3-flash-abliterated",
+      "name": "GLM-5.3 Flash Abliterated",
+      "pricing": { "input": 0.0977, "output": 0.3421, "cache_hit": 0.0098 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "glm-5.3-cyber-abliterated",
+      "name": "GLM-5.3 Cyber Abliterated",
+      "pricing": { "input": 0.9, "output": 1.8, "cache_hit": 0.135 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "pricing": { "input": 0.27, "output": 1.08, "cache_hit": 0.0054 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "deepseek-v4.1-flash-1017-ultrafast",
+      "name": "DeepSeek V4.1 Flash 1017 Ultrafast",
+      "pricing": { "input": 2.16, "output": 8.64, "cache_hit": 0.0432 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "deepseek-v4.1-flash-original",
+      "name": "DeepSeek V4.1 Flash (original)",
+      "pricing": { "input": 0.27, "output": 1.08, "cache_hit": 0.0054 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3 Flash",
+      "pricing": { "input": 0.135, "output": 0.45, "cache_hit": 0.027 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "pricing": { "input": 1.26, "output": 3.96, "cache_hit": 0.234 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "glm-5.3-fast",
+      "name": "GLM-5.3 Fast",
+      "pricing": { "input": 1.89, "output": 5.94, "cache_hit": 0.351 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "pricing": { "input": 2.7, "output": 13.5, "cache_hit": 0.27 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 1.8, "output": 9, "cache_hit": 0.18 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "kimi-k3-fast",
+      "name": "Kimi K3 Fast",
+      "pricing": { "input": 4.05, "output": 20.25, "cache_hit": 0.405 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "ember-1",
+      "name": "Ember-1",
+      "pricing": { "input": 2.7, "output": 13.5, "cache_hit": 0.27 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "muse-spark-open",
+      "name": "Muse Spark Open",
+      "pricing": { "input": 1.125, "output": 3.825, "cache_hit": 0.135 },
+      "context_window": 1048576,
+      "default_max_tokens": 1048576,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8 Max",
+      "pricing": { "input": 1.8, "output": 5.4, "cache_hit": 0.225 },
+      "context_window": 262144,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "qwen3.8-2.4t-a95b",
+      "name": "Qwen3.8-2.4T-A95B",
+      "pricing": { "input": 1.8, "output": 5.4, "cache_hit": 0.225 },
+      "context_window": 262144,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "xhigh", "display": "X-High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "pricing": { "input": 0.27, "output": 1.08, "cache_hit": 0.054 },
+      "context_window": 512000,
+      "default_max_tokens": 512000,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
