@@ -235,8 +235,8 @@
       "id": "hy4-preview",
       "name": "Hy4 preview",
       "pricing": { "input": 0.83, "output": 2.5, "cache_hit": 0.04 },
-      "context_window": 1024000,
-      "default_max_tokens": 64000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
