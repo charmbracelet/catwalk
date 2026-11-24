@@ -352,7 +352,7 @@
       "name": "Qwen3.6 35B",
       "pricing": { "input": 0.29, "output": 1.15, "cache_hit": 0.029 },
       "context_window": 262128,
-      "default_max_tokens": 26212,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -369,7 +369,7 @@
       "name": "Qwen3.6 35B (flex)",
       "pricing": { "input": 0.1885, "output": 0.7475, "cache_hit": 0.01885 },
       "context_window": 262128,
-      "default_max_tokens": 26212,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -386,7 +386,7 @@
       "name": "Qwen3.6 35B Fast",
       "pricing": { "input": 0.29, "output": 1.15, "cache_hit": 0.029 },
       "context_window": 262128,
-      "default_max_tokens": 26212,
+      "default_max_tokens": 131072,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
     }
