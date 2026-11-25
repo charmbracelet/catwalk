@@ -55,7 +55,7 @@
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V4.1-Flash (fireworks-ai)",
-      "pricing": { "input": 0.3, "output": 1.2 },
+      "pricing": { "input": 0.15, "output": 0.6 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
@@ -143,6 +143,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "openai/gpt-oss-120b:fireworks-ai",
+      "name": "openai/gpt-oss-120b (fireworks-ai)",
+      "pricing": { "input": 0.15, "output": 0.6 },
+      "context_window": 131072,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "openai/gpt-oss-120b:groq",
       "name": "openai/gpt-oss-120b (groq)",
       "pricing": { "input": 0.15, "output": 0.6 },
@@ -156,6 +165,15 @@
       "name": "openai/gpt-oss-20b (groq)",
       "pricing": { "input": 0.075, "output": 0.3 },
       "context_window": 131072,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "tencent/Hy4-flash:fireworks-ai",
+      "name": "tencent/Hy4-flash (fireworks-ai)",
+      "pricing": { "input": 0.07, "output": 0.281 },
+      "context_window": 524288,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }

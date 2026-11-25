@@ -2122,7 +2122,7 @@
     {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
-      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.075 },
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -3229,7 +3229,7 @@
     {
       "id": "gpt-oss-120b",
       "name": "gpt-oss-120b",
-      "pricing": { "input": 0.18, "output": 0.9 },
+      "pricing": { "input": 0.35, "output": 0.9 },
       "context_window": 131072,
       "default_max_tokens": 32768,
       "reasoning": {
