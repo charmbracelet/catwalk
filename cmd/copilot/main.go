@@ -275,10 +275,15 @@ func modelToCatwalk(m Model) catwalk.Model {
 
 // modelEndpointType returns the endpoint type for the given model, derived
 // from the model's supported endpoints as reported by the Copilot API. Models
+// that support the Anthropic Messages API are routed through it, which is the
+// only endpoint that returns summarized thinking text for Claude models. Models
 // that support the OpenAI Responses API are routed through it; all others use
 // the provider's default endpoint type (Chat Completions).
 func modelEndpointType(m Model) catwalk.Type {
-	if slices.Contains(m.SupportedEndpoints, "/responses") {
+	switch {
+	case slices.Contains(m.SupportedEndpoints, "/v1/messages"):
+		return catwalk.TypeMessages
+	case slices.Contains(m.SupportedEndpoints, "/responses"):
 		return catwalk.TypeResponses
 	}
 	return ""

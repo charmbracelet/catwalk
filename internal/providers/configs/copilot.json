@@ -8,6 +8,7 @@
   "models": [
     {
       "id": "claude-fable-5",
+      "type": "messages",
       "name": "Claude Fable 5",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
@@ -27,6 +28,7 @@
     },
     {
       "id": "claude-fable-5.1",
+      "type": "messages",
       "name": "Claude Fable 5.1",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
@@ -46,6 +48,7 @@
     },
     {
       "id": "claude-fable-5.2",
+      "type": "messages",
       "name": "Claude Fable 5.2",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
@@ -65,6 +68,7 @@
     },
     {
       "id": "claude-haiku-4.5",
+      "type": "messages",
       "name": "Claude Haiku 4.5",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
@@ -74,6 +78,7 @@
     },
     {
       "id": "claude-haiku-5.5",
+      "type": "messages",
       "name": "Claude Haiku 5.5",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
@@ -93,6 +98,7 @@
     },
     {
       "id": "claude-opus-5.5",
+      "type": "messages",
       "name": "Claude Opus 5.5",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
@@ -112,6 +118,7 @@
     },
     {
       "id": "claude-sonnet-5",
+      "type": "messages",
       "name": "Claude Sonnet 5",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
@@ -131,6 +138,7 @@
     },
     {
       "id": "claude-sonnet-5.5",
+      "type": "messages",
       "name": "Claude Sonnet 5.5",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1000000,
@@ -579,15 +587,6 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "microsoft-decision-1",
-      "name": "Microsoft-Decision-1",
-      "pricing": { "input": 0, "output": 0 },
-      "context_window": 0,
-      "default_max_tokens": 0,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
     }
   ]
 }
