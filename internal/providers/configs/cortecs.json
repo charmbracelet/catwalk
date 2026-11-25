@@ -1346,6 +1346,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "mistral-small-3.2-24b-instruct-2506",
+      "name": "mistral-small-3.2-24b-instruct-2506",
+      "pricing": { "input": 0.09, "output": 0.28 },
+      "context_window": 131000,
+      "default_max_tokens": 13100,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "pixtral-large-2502",
       "name": "pixtral-large-2502",
       "pricing": { "input": 1.789, "output": 5.366 },
@@ -1355,11 +1364,11 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "mistral-small-3.2-24b-instruct-2506",
-      "name": "mistral-small-3.2-24b-instruct-2506",
-      "pricing": { "input": 0.09, "output": 0.28 },
-      "context_window": 131000,
-      "default_max_tokens": 13100,
+      "id": "qwen3-235b-a22b-instruct-2507",
+      "name": "qwen3-235b-a22b-instruct-2507",
+      "pricing": { "input": 0.179, "output": 0.537 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
     },
@@ -1382,18 +1391,9 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "qwen3-235b-a22b-instruct-2507",
-      "name": "qwen3-235b-a22b-instruct-2507",
-      "pricing": { "input": 0.179, "output": 0.537 },
-      "context_window": 262000,
-      "default_max_tokens": 26200,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "gpt-4.1-mini",
-      "name": "gpt-4.1-mini",
-      "pricing": { "input": 0.408, "output": 1.633 },
+      "id": "gpt-4.1",
+      "name": "gpt-4.1",
+      "pricing": { "input": 2.042, "output": 8.166 },
       "context_window": 1047576,
       "default_max_tokens": 104757,
       "reasoning": {
@@ -1408,9 +1408,9 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "gpt-4.1",
-      "name": "gpt-4.1",
-      "pricing": { "input": 2.042, "output": 8.166 },
+      "id": "gpt-4.1-mini",
+      "name": "gpt-4.1-mini",
+      "pricing": { "input": 0.408, "output": 1.633 },
       "context_window": 1047576,
       "default_max_tokens": 104757,
       "reasoning": {
@@ -1442,6 +1442,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "nova-lite-v1",
+      "name": "nova-lite-v1",
+      "pricing": { "input": 0.062, "output": 0.247 },
+      "context_window": 300000,
+      "default_max_tokens": 30000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "nova-micro-v1",
       "name": "nova-micro-v1",
       "pricing": { "input": 0.036, "output": 0.143 },
@@ -1460,15 +1469,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "nova-lite-v1",
-      "name": "nova-lite-v1",
-      "pricing": { "input": 0.062, "output": 0.247 },
-      "context_window": 300000,
-      "default_max_tokens": 30000,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "mistral-small-2503",
       "name": "mistral-small-2503",
       "pricing": { "input": 0.1, "output": 0.3 },
@@ -1478,9 +1478,9 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "gemini-2.5-flash",
-      "name": "gemini-2.5-flash",
-      "pricing": { "input": 0.268, "output": 2.236 },
+      "id": "gemini-2.5-pro",
+      "name": "gemini-2.5-pro",
+      "pricing": { "input": 1.342, "output": 8.944 },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": {
@@ -1495,9 +1495,9 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "gemini-2.5-pro",
-      "name": "gemini-2.5-pro",
-      "pricing": { "input": 1.342, "output": 8.944 },
+      "id": "gemini-2.5-flash",
+      "name": "gemini-2.5-flash",
+      "pricing": { "input": 0.268, "output": 2.236 },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": {
@@ -1539,11 +1539,11 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "gpt-4o",
-      "name": "gpt-4o",
-      "pricing": { "input": 2.553, "output": 10.208 },
-      "context_window": 128000,
-      "default_max_tokens": 12800,
+      "id": "gpt-5-nano",
+      "name": "gpt-5-nano",
+      "pricing": { "input": 0.056, "output": 0.408 },
+      "context_window": 400000,
+      "default_max_tokens": 40000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1556,11 +1556,11 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "gpt-5-nano",
-      "name": "gpt-5-nano",
-      "pricing": { "input": 0.056, "output": 0.408 },
-      "context_window": 400000,
-      "default_max_tokens": 40000,
+      "id": "gpt-4o",
+      "name": "gpt-4o",
+      "pricing": { "input": 2.553, "output": 10.208 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [

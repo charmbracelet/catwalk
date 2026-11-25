@@ -144,23 +144,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "tencent/Hy4",
-      "name": "Hy4",
-      "pricing": { "input": 0.525, "output": 1.5625, "cache_hit": 0.025 },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "moonshotai/Kimi-K2.6-TEE",
       "name": "Kimi-K2.6-TEE",
       "pricing": { "input": 0.39, "output": 1.8, "cache_hit": 0.039 },
