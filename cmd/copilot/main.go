@@ -112,6 +112,7 @@ func run() error {
 			strings.HasPrefix(m.ID, "search-agent") ||
 			strings.HasPrefix(m.ID, "copilot-search") ||
 			strings.HasPrefix(m.ID, "gpt-image") ||
+			strings.HasPrefix(m.ID, "microsoft-decision") ||
 			strings.HasSuffix(m.ID, "-base") ||
 			strings.HasSuffix(m.ID, "-copilot") ||
 			m.ID == "gpt-4-o-preview" ||
