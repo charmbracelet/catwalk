@@ -1614,6 +1614,1188 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-4-neon:latest",
+      "name": "gemini-4-neon:latest",
+      "pricing": { "input": 3.063, "output": 15.315 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6-astra:latest",
+      "name": "gpt-6-astra:latest",
+      "pricing": { "input": 8.909, "output": 44.544 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6-sol:latest",
+      "name": "gpt-6-sol:latest",
+      "pricing": { "input": 2.228, "output": 11.138 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nemotron-3-super-vl:latest",
+      "name": "nemotron-3-super-vl:latest",
+      "pricing": { "input": 0.183, "output": 0.458 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "inkling-2-small:latest",
+      "name": "inkling-2-small:latest",
+      "pricing": { "input": 0.275, "output": 0.918 },
+      "context_window": 1048000,
+      "default_max_tokens": 104800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-4-hydrogen:latest",
+      "name": "gemini-4-hydrogen:latest",
+      "pricing": { "input": 1.515, "output": 7.574 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-4-carbon:latest",
+      "name": "gemini-4-carbon:latest",
+      "pricing": { "input": 2.001, "output": 10.005 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kimi-k3:latest",
+      "name": "kimi-k3:latest",
+      "pricing": { "input": 1.833, "output": 9.164 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "minimax-m3-flash:latest",
+      "name": "minimax-m3-flash:latest",
+      "pricing": { "input": 0.137, "output": 0.55 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kolibri-1:latest",
+      "name": "kolibri-1:latest",
+      "pricing": { "input": 0.15, "output": 0.55 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-v4-flash:latest",
+      "name": "deepseek-v4-flash:latest",
+      "pricing": { "input": 0.092, "output": 0.55 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-4-argon:latest",
+      "name": "gemini-4-argon:latest",
+      "pricing": { "input": 2.02, "output": 10.098 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "claude-haiku-5:latest",
+      "name": "claude-haiku-5:latest",
+      "pricing": { "input": 0.102, "output": 0.511 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistral-large:latest",
+      "name": "mistral-large:latest",
+      "pricing": { "input": 0.687, "output": 2.11 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "claude-sonnet-5:latest",
+      "name": "claude-sonnet-5:latest",
+      "pricing": { "input": 2.042, "output": 10.208 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6-terra:latest",
+      "name": "gpt-6-terra:latest",
+      "pricing": { "input": 1.114, "output": 5.569 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6:latest",
+      "name": "gpt-6:latest",
+      "pricing": { "input": 2.228, "output": 11.138 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-6-luna:latest",
+      "name": "gpt-6-luna:latest",
+      "pricing": { "input": 0.111, "output": 0.557 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "claude-opus-5:latest",
+      "name": "claude-opus-5:latest",
+      "pricing": { "input": 4.083, "output": 20.416 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-3-flash:latest",
+      "name": "gemini-3-flash:latest",
+      "pricing": { "input": 0.741, "output": 3.703 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-v4-pro:latest",
+      "name": "deepseek-v4-pro:latest",
+      "pricing": { "input": 1.795, "output": 3.59 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "glm-5:latest",
+      "name": "glm-5:latest",
+      "pricing": { "input": 0.459, "output": 1.836 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "glm-5-flash:latest",
+      "name": "glm-5-flash:latest",
+      "pricing": { "input": 0.09, "output": 0.314 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-27b:latest",
+      "name": "qwen-3-27b:latest",
+      "pricing": { "input": 0.09, "output": 0.359 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-2.4t:latest",
+      "name": "qwen-3-2.4t:latest",
+      "pricing": { "input": 2.244, "output": 5.386 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-3-flash-lite:latest",
+      "name": "gemini-3-flash-lite:latest",
+      "pricing": { "input": 0.296, "output": 2.468 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-5-sol:latest",
+      "name": "gpt-5-sol:latest",
+      "pricing": { "input": 4.083, "output": 20.416 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-5:latest",
+      "name": "gpt-5:latest",
+      "pricing": { "input": 4.083, "output": 20.416 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-5-terra:latest",
+      "name": "gpt-5-terra:latest",
+      "pricing": { "input": 2.042, "output": 12.244 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-5-luna:latest",
+      "name": "gpt-5-luna:latest",
+      "pricing": { "input": 0.204, "output": 1.224 },
+      "context_window": 1050000,
+      "default_max_tokens": 105000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemma-4-31b:latest",
+      "name": "gemma-4-31b:latest",
+      "pricing": { "input": 0.2, "output": 0.35 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "kimi-k2:latest",
+      "name": "kimi-k2:latest",
+      "pricing": { "input": 0.589, "output": 2.962 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "minimax-m3:latest",
+      "name": "minimax-m3:latest",
+      "pricing": { "input": 0.269, "output": 1.077 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "claude-opus-4:latest",
+      "name": "claude-opus-4:latest",
+      "pricing": { "input": 5.105, "output": 25.526 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-35b:latest",
+      "name": "qwen-3-35b:latest",
+      "pricing": { "input": 0.17, "output": 1.15 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemma-4-26b:latest",
+      "name": "gemma-4-26b:latest",
+      "pricing": { "input": 0.09, "output": 0.35 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistral-medium:latest",
+      "name": "mistral-medium:latest",
+      "pricing": { "input": 1.375, "output": 7.04 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-9b:latest",
+      "name": "qwen-3-9b:latest",
+      "pricing": { "input": 0.1, "output": 0.15 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-coder-next:latest",
+      "name": "qwen-3-coder-next:latest",
+      "pricing": { "input": 0.15, "output": 0.8 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-397b:latest",
+      "name": "qwen-3-397b:latest",
+      "pricing": { "input": 0.6, "output": 3.6 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "deepseek-v3:latest",
+      "name": "deepseek-v3:latest",
+      "pricing": { "input": 0.449, "output": 1.346 },
+      "context_window": 163840,
+      "default_max_tokens": 16384,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "mistral-small:latest",
+      "name": "mistral-small:latest",
+      "pricing": { "input": 0.14, "output": 0.561 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "minimax-m2:latest",
+      "name": "minimax-m2:latest",
+      "pricing": { "input": 0.312, "output": 1.248 },
+      "context_window": 196000,
+      "default_max_tokens": 19600,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "claude-sonnet-4:latest",
+      "name": "claude-sonnet-4:latest",
+      "pricing": { "input": 3.062, "output": 15.312 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "glm-4-flash:latest",
+      "name": "glm-4-flash:latest",
+      "pricing": { "input": 0.072, "output": 0.429 },
+      "context_window": 203000,
+      "default_max_tokens": 20300,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-vl-235b:latest",
+      "name": "qwen-3-vl-235b:latest",
+      "pricing": { "input": 0.554, "output": 2.8 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nemotron-3-nano:latest",
+      "name": "nemotron-3-nano:latest",
+      "pricing": { "input": 0.054, "output": 0.215 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "devstral:latest",
+      "name": "devstral:latest",
+      "pricing": { "input": 0.429, "output": 2.147 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-oss-safeguard:latest",
+      "name": "gpt-oss-safeguard:latest",
+      "pricing": { "input": 0.161, "output": 0.626 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nova-2-lite:latest",
+      "name": "nova-2-lite:latest",
+      "pricing": { "input": 0.335, "output": 2.822 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "ministral-8b:latest",
+      "name": "ministral-8b:latest",
+      "pricing": { "input": 0.161, "output": 0.161 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "ministral-3b:latest",
+      "name": "ministral-3b:latest",
+      "pricing": { "input": 0.11, "output": 0.11 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "ministral-14b:latest",
+      "name": "ministral-14b:latest",
+      "pricing": { "input": 0.215, "output": 0.215 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nemotron-2-nano:latest",
+      "name": "nemotron-2-nano:latest",
+      "pricing": { "input": 0.215, "output": 0.635 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "claude-haiku-4:latest",
+      "name": "claude-haiku-4:latest",
+      "pricing": { "input": 1.021, "output": 5.105 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-oss-120b:latest",
+      "name": "gpt-oss-120b:latest",
+      "pricing": { "input": 0.08, "output": 0.4 },
+      "context_window": 131000,
+      "default_max_tokens": 13100,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-30b:latest",
+      "name": "qwen-3-30b:latest",
+      "pricing": { "input": 0.089, "output": 0.268 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-oss-20b:latest",
+      "name": "gpt-oss-20b:latest",
+      "pricing": { "input": 0.04, "output": 0.15 },
+      "context_window": 131000,
+      "default_max_tokens": 13100,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "pixtral-large:latest",
+      "name": "pixtral-large:latest",
+      "pricing": { "input": 1.789, "output": 5.366 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-235b:latest",
+      "name": "qwen-3-235b:latest",
+      "pricing": { "input": 0.179, "output": 0.537 },
+      "context_window": 262000,
+      "default_max_tokens": 26200,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-32b:latest",
+      "name": "qwen-3-32b:latest",
+      "pricing": { "input": 0.161, "output": 0.626 },
+      "context_window": 16384,
+      "default_max_tokens": 1638,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "qwen-3-coder-30b:latest",
+      "name": "qwen-3-coder-30b:latest",
+      "pricing": { "input": 0.161, "output": 0.626 },
+      "context_window": 262144,
+      "default_max_tokens": 26214,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-4:latest",
+      "name": "gpt-4:latest",
+      "pricing": { "input": 2.042, "output": 8.166 },
+      "context_window": 1047576,
+      "default_max_tokens": 104757,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-4-mini:latest",
+      "name": "gpt-4-mini:latest",
+      "pricing": { "input": 0.408, "output": 1.633 },
+      "context_window": 1047576,
+      "default_max_tokens": 104757,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-4-nano:latest",
+      "name": "gpt-4-nano:latest",
+      "pricing": { "input": 0.102, "output": 0.408 },
+      "context_window": 1047576,
+      "default_max_tokens": 104757,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nova-1-lite:latest",
+      "name": "nova-1-lite:latest",
+      "pricing": { "input": 0.062, "output": 0.247 },
+      "context_window": 300000,
+      "default_max_tokens": 30000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nova-1-micro:latest",
+      "name": "nova-1-micro:latest",
+      "pricing": { "input": 0.036, "output": 0.143 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "nova-1-pro:latest",
+      "name": "nova-1-pro:latest",
+      "pricing": { "input": 0.824, "output": 3.295 },
+      "context_window": 300000,
+      "default_max_tokens": 30000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-2-pro:latest",
+      "name": "gemini-2-pro:latest",
+      "pricing": { "input": 1.342, "output": 8.944 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemini-2-flash:latest",
+      "name": "gemini-2-flash:latest",
+      "pricing": { "input": 0.268, "output": 2.236 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gemma-3-27b:latest",
+      "name": "gemma-3-27b:latest",
+      "pricing": { "input": 0.089, "output": 0.268 },
+      "context_window": 131000,
+      "default_max_tokens": 13100,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "codestral:latest",
+      "name": "codestral:latest",
+      "pricing": { "input": 0.33, "output": 0.99 },
+      "context_window": 256000,
+      "default_max_tokens": 25600,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "llama-3-70b:latest",
+      "name": "llama-3-70b:latest",
+      "pricing": { "input": 0.65, "output": 0.65 },
+      "context_window": 131000,
+      "default_max_tokens": 13100,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-5-nano:latest",
+      "name": "gpt-5-nano:latest",
+      "pricing": { "input": 0.056, "output": 0.408 },
+      "context_window": 400000,
+      "default_max_tokens": 40000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-4o:latest",
+      "name": "gpt-4o:latest",
+      "pricing": { "input": 2.553, "output": 10.208 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-5-mini:latest",
+      "name": "gpt-5-mini:latest",
+      "pricing": { "input": 0.26, "output": 2.042 },
+      "context_window": 400000,
+      "default_max_tokens": 40000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "hermes-4-405b:latest",
+      "name": "hermes-4-405b:latest",
+      "pricing": { "input": 0.894, "output": 2.683 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "gpt-4o-mini:latest",
+      "name": "gpt-4o-mini:latest",
+      "pricing": { "input": 0.153, "output": 0.613 },
+      "context_window": 128000,
+      "default_max_tokens": 12800,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
     }
   ]
 }
