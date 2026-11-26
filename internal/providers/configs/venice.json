@@ -430,7 +430,7 @@
     {
       "id": "e2ee-deepseek-v4-1-flash-1017",
       "name": "DeepSeek V4.1 Flash 1017",
-      "pricing": { "input": 0.182, "output": 0.373 },
+      "pricing": { "input": 0.3, "output": 1.2 },
       "context_window": 1000000,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "toggleable" },

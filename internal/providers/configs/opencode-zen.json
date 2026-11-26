@@ -1588,6 +1588,16 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "gpt-transcribe",
+      "type": "responses",
+      "name": "gpt-transcribe",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "grok-imagine-image-2.0",
       "type": "responses",
       "name": "grok-imagine-image-2.0",
@@ -1611,6 +1621,16 @@
       "id": "grok-imagine-video-1.5-lite",
       "type": "responses",
       "name": "grok-imagine-video-1.5-lite",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 200000,
+      "default_max_tokens": 20000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "grok-voice-transcribe-2.0",
+      "type": "responses",
+      "name": "grok-voice-transcribe-2.0",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 200000,
       "default_max_tokens": 20000,

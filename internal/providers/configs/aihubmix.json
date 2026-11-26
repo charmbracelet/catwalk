@@ -2207,7 +2207,7 @@
     {
       "id": "gemini-4-argon",
       "name": "Gemini 4 Argon",
-      "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
+      "pricing": { "input": 2.2, "output": 11, "cache_hit": 0.11 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },
@@ -2234,7 +2234,7 @@
     {
       "id": "gemini-4-neon",
       "name": "Gemini 4 Neon",
-      "pricing": { "input": 3, "output": 15, "cache_hit": 0.15 },
+      "pricing": { "input": 3.3, "output": 16.5, "cache_hit": 0.165 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },
