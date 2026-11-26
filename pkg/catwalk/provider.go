@@ -63,7 +63,7 @@ const (
 	InferenceProviderCoralBricks      InferenceProvider = "coralbricks"
 	InferenceProviderScaleway         InferenceProvider = "scaleway"
 	InferenceProviderPareto           InferenceProvider = "pareto"
-	InferenceProviderUberLLM          InferenceProvider = "uberllm"
+	InferenceProviderMartLLM          InferenceProvider = "martllm"
 )
 
 // Provider represents an AI provider configuration.
@@ -242,7 +242,7 @@ func KnownProviders() []InferenceProvider {
 		InferenceProviderCoralBricks,
 		InferenceProviderScaleway,
 		InferenceProviderPareto,
-		InferenceProviderUberLLM,
+		InferenceProviderMartLLM,
 	}
 }
 

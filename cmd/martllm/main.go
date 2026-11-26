@@ -1,4 +1,4 @@
-// Package main provides a command-line tool to fetch models from UberLLM
+// Package main provides a command-line tool to fetch models from MartLLM
 // and generate a configuration file for the provider.
 package main
 
@@ -18,15 +18,15 @@ import (
 	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
-// UberLLMPricing is in US dollars per 1M tokens. UberLLM is a marketplace:
+// MartLLMPricing is in US dollars per 1M tokens. MartLLM is a marketplace:
 // the listed price follows the sellers and is refreshed every few minutes.
-type UberLLMPricing struct {
+type MartLLMPricing struct {
 	InputUSD     float64 `json:"input_usd"`
 	OutputUSD    float64 `json:"output_usd"`
 	CacheReadUSD float64 `json:"cache_read_usd"`
 }
 
-type UberLLMModel struct {
+type MartLLMModel struct {
 	ID              string         `json:"id"`
 	DisplayName     string         `json:"display_name"`
 	Type            string         `json:"type"`
@@ -35,11 +35,11 @@ type UberLLMModel struct {
 	MaxOutputTokens int64          `json:"max_output_tokens"`
 	InputModalities []string       `json:"input_modalities"`
 	SupportsTools   bool           `json:"supports_tools"`
-	Pricing         UberLLMPricing `json:"pricing"`
+	Pricing         MartLLMPricing `json:"pricing"`
 }
 
 type ModelsResponse struct {
-	Data []UberLLMModel `json:"data"`
+	Data []MartLLMModel `json:"data"`
 }
 
 // curated lists the models offered in Crush. The catalog has hundreds of
@@ -89,7 +89,7 @@ func fetchModels(apiEndpoint string) (*ModelsResponse, error) {
 	}
 
 	_ = os.MkdirAll("tmp", 0o700)
-	_ = os.WriteFile("tmp/uberllm-response.json", body, 0o600)
+	_ = os.WriteFile("tmp/martllm-response.json", body, 0o600)
 
 	var mr ModelsResponse
 	if err := json.Unmarshal(body, &mr); err != nil {
@@ -100,19 +100,19 @@ func fetchModels(apiEndpoint string) (*ModelsResponse, error) {
 }
 
 func main() {
-	uberllmProvider := catwalk.Provider{
-		Name:                "UberLLM",
-		ID:                  catwalk.InferenceProviderUberLLM,
-		APIKey:              "$UBERLLM_API_KEY",
-		APIEndpoint:         "https://api.uberllm.dev/v1",
+	martllmProvider := catwalk.Provider{
+		Name:                "MartLLM",
+		ID:                  catwalk.InferenceProviderMartLLM,
+		APIKey:              "$MARTLLM_API_KEY",
+		APIEndpoint:         "https://api.martllm.com/v1",
 		Type:                catwalk.TypeCompletions,
 		DefaultLargeModelID: "z-ai/glm-5.3",
 		DefaultSmallModelID: "deepseek/deepseek-v4.1-flash",
 	}
 
-	modelsResp, err := fetchModels(uberllmProvider.APIEndpoint)
+	modelsResp, err := fetchModels(martllmProvider.APIEndpoint)
 	if err != nil {
-		log.Fatal("Error fetching UberLLM models:", err)
+		log.Fatal("Error fetching MartLLM models:", err)
 	}
 
 	for _, model := range modelsResp.Data {
@@ -139,7 +139,7 @@ func main() {
 			maxTokens = min(maxTokens, model.MaxOutputTokens)
 		}
 
-		uberllmProvider.Models = append(uberllmProvider.Models, catwalk.Model{
+		martllmProvider.Models = append(martllmProvider.Models, catwalk.Model{
 			ID:   model.ID,
 			Name: model.DisplayName,
 			Pricing: catwalk.Pricing{
@@ -157,25 +157,25 @@ func main() {
 		})
 	}
 
-	for _, id := range []string{uberllmProvider.DefaultLargeModelID, uberllmProvider.DefaultSmallModelID} {
-		if !slices.ContainsFunc(uberllmProvider.Models, func(m catwalk.Model) bool { return m.ID == id }) {
+	for _, id := range []string{martllmProvider.DefaultLargeModelID, martllmProvider.DefaultSmallModelID} {
+		if !slices.ContainsFunc(martllmProvider.Models, func(m catwalk.Model) bool { return m.ID == id }) {
 			log.Fatalf("Default model %s is not in the catalog; keeping the existing config", id)
 		}
 	}
 
-	slices.SortFunc(uberllmProvider.Models, func(a, b catwalk.Model) int {
+	slices.SortFunc(martllmProvider.Models, func(a, b catwalk.Model) int {
 		return strings.Compare(a.ID, b.ID)
 	})
 
-	data, err := json.MarshalIndent(uberllmProvider, "", "  ")
+	data, err := json.MarshalIndent(martllmProvider, "", "  ")
 	if err != nil {
-		log.Fatal("Error marshaling UberLLM provider:", err)
+		log.Fatal("Error marshaling MartLLM provider:", err)
 	}
 	data = append(data, '\n')
 
-	if err := os.WriteFile("internal/providers/configs/uberllm.json", data, 0o600); err != nil {
-		log.Fatal("Error writing UberLLM provider config:", err)
+	if err := os.WriteFile("internal/providers/configs/martllm.json", data, 0o600); err != nil {
+		log.Fatal("Error writing MartLLM provider config:", err)
 	}
 
-	fmt.Printf("Generated uberllm.json with %d models\n", len(uberllmProvider.Models))
+	fmt.Printf("Generated martllm.json with %d models\n", len(martllmProvider.Models))
 }
