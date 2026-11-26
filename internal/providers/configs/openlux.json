@@ -1622,60 +1622,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "llama-3.1-70b",
-      "name": "Llama-3.1-70B-Instruct",
-      "pricing": { "input": 2, "output": 4 },
-      "context_window": 128000,
-      "default_max_tokens": 4096,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "llama-3.1-8b",
-      "name": "Llama-3.1-8B-Instruct",
-      "pricing": { "input": 1, "output": 1 },
-      "context_window": 128000,
-      "default_max_tokens": 4096,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "llama-3.2-11b-vision-instruct",
-      "name": "Llama-3.2-11B-Vision-Instruct",
-      "pricing": { "input": 1, "output": 1 },
-      "context_window": 128000,
-      "default_max_tokens": 4096,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "llama-3.2-1b-instruct",
-      "name": "Llama 3.2 1B Instruct",
-      "pricing": { "input": 0.25, "output": 0.0625 },
-      "context_window": 131072,
-      "default_max_tokens": 32000,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "llama-3.2-3b-instruct",
-      "name": "Llama 3.2 3B Instruct",
-      "pricing": { "input": 0.5, "output": 0.25 },
-      "context_window": 131072,
-      "default_max_tokens": 131072,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "llama-3.2-90b-vision-instruct",
-      "name": "Llama-3.2-90B-Vision-Instruct",
-      "pricing": { "input": 3, "output": 9 },
-      "context_window": 128000,
-      "default_max_tokens": 4096,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "mimo-v2.6-flash",
       "name": "MiMo-V2.6-Flash",
       "pricing": { "input": 0.042, "output": 0.084, "cache_hit": 0.00084 },
