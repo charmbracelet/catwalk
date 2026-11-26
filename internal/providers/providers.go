@@ -100,6 +100,9 @@ var openCodeGoConfig []byte
 //go:embed configs/opencode-zen.json
 var openCodeZenConfig []byte
 
+//go:embed configs/openlux.json
+var openLuxConfig []byte
+
 //go:embed configs/openrouter.json
 var openRouterConfig []byte
 
@@ -176,6 +179,7 @@ var providerRegistry = []ProviderFunc{
 	neuralwattProvider,
 	openCodeGoProvider,
 	openCodeZenProvider,
+	openLuxProvider,
 	openRouterProvider,
 	paretoProvider,
 	qiniuCloudProvider,
@@ -329,6 +333,10 @@ func openCodeGoProvider() catwalk.Provider {
 
 func openCodeZenProvider() catwalk.Provider {
 	return loadProviderFromConfig(openCodeZenConfig)
+}
+
+func openLuxProvider() catwalk.Provider {
+	return loadProviderFromConfig(openLuxConfig)
 }
 
 func openRouterProvider() catwalk.Provider {
