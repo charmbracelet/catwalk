@@ -40,6 +40,8 @@ jobs:
       - name: Atlas Cloud
         run: go run ./cmd/atlascloud/main.go
         continue-on-error: true
+        env:
+          ATLASCLOUD_API_KEY: ${{ secrets.ATLASCLOUD_API_KEY }}
 
       - name: Avian
         run: go run ./cmd/avian/main.go

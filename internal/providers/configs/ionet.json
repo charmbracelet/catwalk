@@ -179,6 +179,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "moonshotai/Kimi-K3.1-Pro",
+      "name": "MoonshotAI: Kimi K3.1 Pro",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
+      "context_window": 1048576,
+      "default_max_tokens": 13107,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "NVIDIA: Nemotron 3.5 Lightning",
       "pricing": { "input": 0.05125, "output": 0.17, "cache_hit": 0.02563 },
@@ -279,6 +288,15 @@
       "id": "tencent/Hy4-preview",
       "name": "Tencent: Hy4 Preview",
       "pricing": { "input": 0.834, "output": 2.501, "cache_hit": 0.417 },
+      "context_window": 262144,
+      "default_max_tokens": 6553,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "thinkingmachines/inkling-2-mini",
+      "name": "Thinking Machines: Inkling 2 Mini",
+      "pricing": { "input": 0.1, "output": 0.4, "cache_hit": 0.02 },
       "context_window": 262144,
       "default_max_tokens": 6553,
       "reasoning": { "thinking": "never" },

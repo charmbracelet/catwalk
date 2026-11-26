@@ -68,15 +68,6 @@
       "default_max_tokens": 20000,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "grok-build-0.1",
-      "name": "Grok Build 0.1",
-      "pricing": { "input": 1, "output": 2, "cache_hit": 0.2 },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
     }
   ]
 }

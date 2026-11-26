@@ -1044,6 +1044,24 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "coding-glm-5.4",
+      "name": "Coding GLM 5.4",
+      "pricing": { "input": 0.06, "output": 0.22, "cache_hit": 0.015 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "coding-glm-5.4-free",
+      "name": "Coding GLM 5.4 (free)",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "coding-kimi-k3",
       "name": "Coding Kimi K3",
       "pricing": { "input": 0.44, "output": 1.61333, "cache_hit": 0.066 },
@@ -1802,6 +1820,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "ernie-5.5-flash-preview",
+      "name": "ERNIE 5.5 Flash Preview",
+      "pricing": { "input": 0.147, "output": 0.588, "cache_hit": 0.0147 },
+      "context_window": 1000000,
+      "default_max_tokens": 100000,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "ernie-x1-turbo",
       "name": "ERNIE X1 Turbo",
       "pricing": { "input": 0.136, "output": 0.544 },
@@ -2095,7 +2122,7 @@
     {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
-      "pricing": { "input": 0.75, "output": 3.75, "cache_hit": 0.075 },
+      "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": {
@@ -2199,6 +2226,15 @@
       "id": "gemini-4-hydrogen",
       "name": "Gemini 4 Hydrogen",
       "pricing": { "input": 1.5, "output": 7.5, "cache_hit": 0.075 },
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "pricing": { "input": 3, "output": 15, "cache_hit": 0.15 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },
@@ -2566,7 +2602,7 @@
     {
       "id": "gpt-5-chat-latest",
       "name": "GPT 5 Chat",
-      "pricing": { "input": 1.25, "output": 10, "cache_hit": 0.125 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -2660,7 +2696,7 @@
     {
       "id": "gpt-5.1-chat-latest",
       "name": "GPT 5.1 Chat",
-      "pricing": { "input": 1.25, "output": 10, "cache_hit": 0.125 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -2737,7 +2773,7 @@
     {
       "id": "gpt-5.2-chat-latest",
       "name": "GPT 5.2 Chat",
-      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.175 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -2814,7 +2850,7 @@
     {
       "id": "gpt-5.3-chat-latest",
       "name": "GPT 5.3 Chat",
-      "pricing": { "input": 1.75, "output": 14, "cache_hit": 0.175 },
+      "pricing": { "input": 5, "output": 30, "cache_hit": 0.5 },
       "context_window": 128000,
       "default_max_tokens": 16384,
       "reasoning": { "thinking": "never" },
@@ -3034,7 +3070,12 @@
     {
       "id": "gpt-5.6-sol-pro",
       "name": "GPT 5.6 Sol Pro",
-      "pricing": { "input": 8, "output": 40, "cache_hit": 0.8 },
+      "pricing": {
+        "input": 8,
+        "output": 40,
+        "cache_create": 10,
+        "cache_hit": 0.8
+      },
       "context_window": 1050000,
       "default_max_tokens": 105000,
       "reasoning": { "thinking": "never" },
@@ -3129,7 +3170,12 @@
     {
       "id": "gpt-6.1-terra",
       "name": "GPT 6.1 Terra",
-      "pricing": { "input": 1, "output": 5, "cache_hit": 0.05 },
+      "pricing": {
+        "input": 1,
+        "output": 5,
+        "cache_create": 1.25,
+        "cache_hit": 0.05
+      },
       "context_window": 1050000,
       "default_max_tokens": 128000,
       "reasoning": { "thinking": "never" },
@@ -3183,7 +3229,7 @@
     {
       "id": "gpt-oss-120b",
       "name": "gpt-oss-120b",
-      "pricing": { "input": 0.18, "output": 0.9 },
+      "pricing": { "input": 0.35, "output": 0.9 },
       "context_window": 131072,
       "default_max_tokens": 32768,
       "reasoning": {
@@ -3234,7 +3280,7 @@
     {
       "id": "grok-4-1-fast-non-reasoning",
       "name": "Grok 4.1 Fast",
-      "pricing": { "input": 0.2, "output": 0.5, "cache_hit": 0.05 },
+      "pricing": { "input": 0.2, "output": 0.5 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": { "thinking": "never" },
@@ -3243,7 +3289,7 @@
     {
       "id": "grok-4-1-fast-reasoning",
       "name": "Grok 4.1 Fast (reasoning)",
-      "pricing": { "input": 0.2, "output": 0.5, "cache_hit": 0.05 },
+      "pricing": { "input": 0.2, "output": 0.5 },
       "context_window": 1000000,
       "default_max_tokens": 100000,
       "reasoning": {
@@ -3713,15 +3759,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "llama-3.3-70b-instruct",
-      "name": "Llama 3.3 70B Instruct",
-      "pricing": { "input": 0.6, "output": 1.2 },
-      "context_window": 131072,
-      "default_max_tokens": 13107,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "llama-4-maverick",
       "name": "Llama 4 Maverick",
       "pricing": { "input": 0.2, "output": 0.2 },
@@ -3771,15 +3808,6 @@
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "mercury-2.5",
-      "name": "Mercury 2.5",
-      "pricing": { "input": 0.2, "output": 0.75, "cache_hit": 0.02 },
-      "context_window": 260000,
-      "default_max_tokens": 26000,
-      "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
     },
     {

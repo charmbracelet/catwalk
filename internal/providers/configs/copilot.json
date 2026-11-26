@@ -7,6 +7,16 @@
   "default_small_model_id": "claude-haiku-4.5",
   "models": [
     {
+      "id": "albatross",
+      "type": "responses",
+      "name": "albatross",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "pricing": { "input": 0, "output": 0 },
@@ -138,6 +148,15 @@
       "name": "Gemini 4 Hydrogen",
       "pricing": { "input": 0, "output": 0 },
       "context_window": 1048576,
+      "default_max_tokens": 65536,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 265536,
       "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }

@@ -235,8 +235,8 @@
       "id": "hy4-preview",
       "name": "Hy4 preview",
       "pricing": { "input": 0.83, "output": 2.5, "cache_hit": 0.04 },
-      "context_window": 1024000,
-      "default_max_tokens": 64000,
+      "context_window": 1048576,
+      "default_max_tokens": 65536,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -315,6 +315,23 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "longcat-2.5",
+      "name": "LongCat-2.5",
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.01 },
+      "context_window": 1000000,
+      "default_max_tokens": 262144,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "mimo-v2.5",

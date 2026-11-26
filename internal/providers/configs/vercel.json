@@ -795,31 +795,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "anthropic/claude-sonnet-4.5-batch",
-      "name": "Claude Sonnet 4.5 (Batch)",
-      "pricing": {
-        "input": 1.5,
-        "output": 7.5,
-        "cache_create": 1.875,
-        "cache_hit": 0.15
-      },
-      "context_window": 1000000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "none", "display": "None" },
-          { "value": "minimal", "display": "Minimal" },
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" },
-          { "value": "xhigh", "display": "X-High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "anthropic/claude-sonnet-4.6",
       "name": "Claude Sonnet 4.6",
       "pricing": {
@@ -1084,9 +1059,9 @@
     {
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
-      "pricing": { "input": 0.66, "output": 1.98, "cache_hit": 0.066 },
-      "context_window": 1000000,
-      "default_max_tokens": 384000,
+      "pricing": { "input": 1.32, "output": 3.96, "cache_hit": 0.132 },
+      "context_window": 1048600,
+      "default_max_tokens": 1048600,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -3390,6 +3365,40 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "google/gemini-4-neon-fast",
+      "name": "Gemini 4 Neon (Fast)",
+      "pricing": { "input": 5.4, "output": 27, "cache_hit": 0.27 },
+      "context_window": 1000000,
+      "default_max_tokens": 1000000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "name": "Gemma 4 26B A4B IT",
+      "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.015 },
+      "context_window": 262144,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "google/gemma-4-31b-it",
       "name": "Gemma 4 31B IT",
       "pricing": { "input": 0.14, "output": 0.4 },
@@ -3422,23 +3431,6 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "google/gemma-4-26b-a4b-it",
-      "name": "Google Gemma 4 26B A4B",
-      "pricing": { "input": 0.15, "output": 0.6, "cache_hit": 0.015 },
-      "context_window": 262144,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "spacexai/grok-4.20-non-reasoning-beta",
@@ -3655,9 +3647,9 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "spacexai/grok-build-0.1",
-      "name": "Grok Build 0.1",
-      "pricing": { "input": 1, "output": 2, "cache_hit": 0.2 },
+      "id": "thinkingmachines/inkling",
+      "name": "Inkling",
+      "pricing": { "input": 1, "output": 4.05, "cache_hit": 0.17 },
       "context_window": 256000,
       "default_max_tokens": 256000,
       "reasoning": {
@@ -3672,11 +3664,11 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "thinkingmachines/inkling",
-      "name": "Inkling",
-      "pricing": { "input": 1, "output": 4.05, "cache_hit": 0.17 },
-      "context_window": 256000,
-      "default_max_tokens": 256000,
+      "id": "thinkingmachines/inkling-2-mini",
+      "name": "Inkling 2 Mini",
+      "pricing": { "input": 0.075, "output": 0.3, "cache_hit": 0.015 },
+      "context_window": 1048576,
+      "default_max_tokens": 1000000,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4175,9 +4167,9 @@
     {
       "id": "minimax/minimax-m2.7",
       "name": "MiniMax M2.7",
-      "pricing": { "input": 0.21, "output": 0.84, "cache_hit": 0.042 },
-      "context_window": 196608,
-      "default_max_tokens": 196608,
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
+      "context_window": 204800,
+      "default_max_tokens": 131072,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -4678,23 +4670,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "alibaba/qwen3-max-thinking",
-      "name": "Qwen 3 Max Thinking",
-      "pricing": { "input": 1.2, "output": 6, "cache_hit": 0.24 },
-      "context_window": 256000,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "alibaba/qwen3.5-flash",
       "name": "Qwen 3.5 Flash",
       "pricing": {
@@ -5046,7 +5021,7 @@
     {
       "id": "alibaba/qwen3.8-27b",
       "name": "Qwen3.8 27B",
-      "pricing": { "input": 0.06, "output": 2.2, "cache_hit": 0.059 },
+      "pricing": { "input": 0.06, "output": 1.96, "cache_hit": 0.059 },
       "context_window": 262144,
       "default_max_tokens": 262144,
       "reasoning": {
