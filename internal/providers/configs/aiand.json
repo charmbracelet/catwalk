@@ -8,8 +8,8 @@
   "default_small_model_id": "zai-org/glm-5.3-flash",
   "models": [
     {
-      "id": "deepseek-ai/deepseek-v4-pro",
-      "name": "DeepSeek-V4-Pro",
+      "id": "deepseek-ai/deepseek-v4-pro-0813",
+      "name": "DeepSeek-V4-Pro-0813",
       "pricing": { "input": 1, "output": 2.5, "cache_hit": 0.25 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
@@ -95,6 +95,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "name": "kimi-k3.1-pro",
+      "pricing": { "input": 2, "output": 10, "cache_hit": 0.2 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "high"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "motif-technologies/motif-3",
       "name": "Motif-3",
       "pricing": { "input": 0.5, "output": 2, "cache_hit": 0.2 },
@@ -126,22 +143,6 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "qwen/qwen3.6-27b",
-      "name": "qwen3.6-27b",
-      "pricing": { "input": 0.32, "output": 3.2, "cache_hit": 0.2 },
-      "context_window": 262144,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "none", "display": "None" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "high"
-      },
-      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen/qwen3.8-27b",
