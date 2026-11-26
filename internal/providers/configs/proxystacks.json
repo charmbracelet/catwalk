@@ -342,8 +342,8 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "funsion-fable-5-1",
-      "name": "Funsion Fable 5.1",
+      "id": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
       "pricing": {
         "input": 5,
         "output": 25,
@@ -366,8 +366,8 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "funsion-fable-5",
-      "name": "Funsion Fable 5",
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
       "pricing": {
         "input": 5,
         "output": 25,
@@ -390,8 +390,8 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "funsion-opus-5-5",
-      "name": "Funsion Opus 5.5",
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
       "pricing": {
         "input": 2,
         "output": 10,
@@ -414,8 +414,8 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "funsion-sonnet-5-5",
-      "name": "Funsion Sonnet 5.5",
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
       "pricing": {
         "input": 1,
         "output": 5,
@@ -438,8 +438,8 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "funsion-sonnet-5",
-      "name": "Funsion Sonnet 5",
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
       "pricing": {
         "input": 1,
         "output": 5,
@@ -463,8 +463,8 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "funsion-haiku-5-5",
-      "name": "Funsion Haiku 5.5",
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
       "pricing": {
         "input": 0.05,
         "output": 0.25,
