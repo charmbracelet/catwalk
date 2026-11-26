@@ -317,19 +317,22 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "accounts/fireworks/models/inkling",
-      "name": "Inkling",
-      "pricing": { "input": 1, "output": 4.05, "cache_hit": 0.17 },
+      "id": "accounts/fireworks/models/inkling-2-small",
+      "name": "Inkling 2 Small",
+      "pricing": { "input": 0.3, "output": 1, "cache_hit": 0.3 },
       "context_window": 1048576,
-      "default_max_tokens": 65536,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "minimal", "display": "Minimal" },
           { "value": "low", "display": "Low" },
           { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
         ],
-        "default_effort_level": "medium"
+        "default_effort_level": "high"
       },
       "capabilities": { "vision": true, "audio": true }
     },
