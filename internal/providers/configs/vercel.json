@@ -3647,6 +3647,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "tencent/hy4-flash",
+      "name": "Hy4 Flash",
+      "pricing": { "input": 0.035, "output": 0.1405, "cache_hit": 0.0015 },
+      "context_window": 1024000,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "thinkingmachines/inkling",
       "name": "Inkling",
       "pricing": { "input": 1, "output": 4.05, "cache_hit": 0.17 },
@@ -4631,7 +4648,7 @@
       "name": "Particle-1",
       "pricing": { "input": 0.125, "output": 0.5, "cache_hit": 0.015 },
       "context_window": 1048576,
-      "default_max_tokens": 131072,
+      "default_max_tokens": 1048576,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -5146,23 +5163,6 @@
       "id": "tencent/hy4",
       "name": "Tencent Hy4",
       "pricing": { "input": 0.417, "output": 1.2505, "cache_hit": 0.021 },
-      "context_window": 1024000,
-      "default_max_tokens": 64000,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "tencent/hy4-flash",
-      "name": "Tencent Hy4 Flash",
-      "pricing": { "input": 0.035, "output": 0.1405, "cache_hit": 0.0015 },
       "context_window": 1024000,
       "default_max_tokens": 64000,
       "reasoning": {

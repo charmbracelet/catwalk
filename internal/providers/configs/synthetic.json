@@ -206,8 +206,8 @@
     {
       "id": "syn:small:vision",
       "name": "syn:small:vision",
-      "pricing": { "input": 0.6, "output": 1.2, "cache_hit": 0.03 },
-      "context_window": 524288,
+      "pricing": { "input": 0.08, "output": 0.4, "cache_hit": 0.02 },
+      "context_window": 1024000,
       "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",

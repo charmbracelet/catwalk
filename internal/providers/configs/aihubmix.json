@@ -910,7 +910,7 @@
     {
       "id": "coding-glm-5.1",
       "name": "Coding GLM 5.1",
-      "pricing": { "input": 0.06, "output": 0.22 },
+      "pricing": { "input": 0.12, "output": 0.44 },
       "context_window": 200000,
       "default_max_tokens": 20000,
       "reasoning": {
@@ -978,7 +978,7 @@
     {
       "id": "coding-glm-5.3",
       "name": "Coding GLM 5.3",
-      "pricing": { "input": 0.06, "output": 0.22, "cache_hit": 0.015 },
+      "pricing": { "input": 0.12, "output": 0.44, "cache_hit": 0.03 },
       "context_window": 1048576,
       "default_max_tokens": 131072,
       "reasoning": {
@@ -995,7 +995,7 @@
     {
       "id": "coding-glm-5.3-flash",
       "name": "Coding GLM 5.3 Flash",
-      "pricing": { "input": 0.02817, "output": 0.0986, "cache_hit": 0.00704 },
+      "pricing": { "input": 0.05634, "output": 0.19719, "cache_hit": 0.01409 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
@@ -1046,7 +1046,7 @@
     {
       "id": "coding-glm-5.4",
       "name": "Coding GLM 5.4",
-      "pricing": { "input": 0.06, "output": 0.22, "cache_hit": 0.015 },
+      "pricing": { "input": 0.12, "output": 0.44, "cache_hit": 0.03 },
       "context_window": 1048576,
       "default_max_tokens": 104857,
       "reasoning": { "thinking": "never" },
@@ -4729,7 +4729,7 @@
     {
       "id": "step-5-preview",
       "name": "Step 5 Preview",
-      "pricing": { "input": 1.08, "output": 3.0888, "cache_hit": 0.054 },
+      "pricing": { "input": 1.08, "output": 3.0888, "cache_hit": 0.108 },
       "context_window": 1000000,
       "default_max_tokens": 64000,
       "reasoning": { "thinking": "never" },

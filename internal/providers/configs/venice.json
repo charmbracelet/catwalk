@@ -326,15 +326,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "e2ee-deepseek-v4-flash",
-      "name": "DeepSeek V4 Flash",
-      "pricing": { "input": 0.182, "output": 0.373 },
-      "context_window": 1000000,
-      "default_max_tokens": 8192,
-      "reasoning": { "thinking": "toggleable" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "pricing": { "input": 0.138, "output": 0.275 },
@@ -435,6 +426,15 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "e2ee-deepseek-v4-1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "pricing": { "input": 0.182, "output": 0.373 },
+      "context_window": 1000000,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": false, "audio": false }
     },
     {
       "id": "e2ee-deepseek-v4-1-flash-1017-abliterated",
@@ -616,45 +616,11 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "e2ee-glm-5-2-p",
-      "name": "GLM 5.2",
-      "pricing": { "input": 1.75, "output": 5.75 },
-      "context_window": 524288,
-      "default_max_tokens": 32768,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "zai-org-glm-5-2",
       "name": "GLM 5.2",
       "pricing": { "input": 1.4, "output": 4.4 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "e2ee-glm-5-3-p",
-      "name": "GLM 5.3",
-      "pricing": { "input": 1.75, "output": 5.5 },
-      "context_window": 1000000,
-      "default_max_tokens": 32768,
       "reasoning": {
         "thinking": "toggleable",
         "effort_levels": [
@@ -1210,7 +1176,15 @@
       "pricing": { "input": 0.375, "output": 3.125 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1219,7 +1193,15 @@
       "pricing": { "input": 0.9375, "output": 4.6875 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1228,7 +1210,15 @@
       "pricing": { "input": 0.9375, "output": 4.6875 },
       "context_window": 1000000,
       "default_max_tokens": 65536,
-      "reasoning": { "thinking": "toggleable" },
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1446,6 +1436,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "hy4",
+      "name": "Hy4",
+      "pricing": { "input": 1.0425, "output": 3.12625 },
+      "context_window": 1048576,
+      "default_max_tokens": 64000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "hy4-preview",
       "name": "Hy4 Preview",
       "pricing": { "input": 1.0425, "output": 3.12625 },
@@ -1477,15 +1484,6 @@
         ],
         "default_effort_level": "medium"
       },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "e2ee-kimi-k2-6",
-      "name": "Kimi K2.6",
-      "pricing": { "input": 0.87, "output": 4.12 },
-      "context_window": 262144,
-      "default_max_tokens": 8192,
-      "reasoning": { "thinking": "toggleable" },
       "capabilities": { "vision": true, "audio": false }
     },
     {
@@ -1523,23 +1521,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "e2ee-kimi-k3-p",
-      "name": "Kimi K3",
-      "pricing": { "input": 3.75, "output": 18.75 },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "pricing": { "input": 3.75, "output": 18.75 },
@@ -1560,23 +1541,6 @@
       "id": "kimi-k3-fast-api",
       "name": "Kimi K3 Fast",
       "pricing": { "input": 4.5, "output": 22.5 },
-      "context_window": 1000000,
-      "default_max_tokens": 131072,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "e2ee-kimi-k3-1-pro-p",
-      "name": "Kimi K3.1 Pro",
-      "pricing": { "input": 2.5, "output": 12.5 },
       "context_window": 1000000,
       "default_max_tokens": 131072,
       "reasoning": {
@@ -2053,15 +2017,6 @@
       "pricing": { "input": 0.21, "output": 1.9 },
       "context_window": 128000,
       "default_max_tokens": 16384,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
-    },
-    {
-      "id": "e2ee-qwen3-vl-30b-a3b-p",
-      "name": "Qwen3 VL 30B A3B",
-      "pricing": { "input": 0.25, "output": 0.9 },
-      "context_window": 128000,
-      "default_max_tokens": 4096,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
     },
