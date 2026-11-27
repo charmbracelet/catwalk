@@ -2216,7 +2216,7 @@
     {
       "id": "gemini-4-carbon",
       "name": "Gemini 4 Carbon",
-      "pricing": { "input": 2, "output": 10, "cache_hit": 0.1 },
+      "pricing": { "input": 2.2, "output": 11, "cache_hit": 0.11 },
       "context_window": 1048576,
       "default_max_tokens": 65536,
       "reasoning": { "thinking": "never" },

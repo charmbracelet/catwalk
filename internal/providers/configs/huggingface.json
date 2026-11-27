@@ -64,7 +64,7 @@
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V4.1-Flash-1017 (fireworks-ai)",
-      "pricing": { "input": 0.15, "output": 0.6 },
+      "pricing": { "input": 0.3, "output": 1.2 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
@@ -116,15 +116,6 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
-      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:fireworks-ai",
-      "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16 (fireworks-ai)",
-      "pricing": { "input": 0.6, "output": 2.4 },
-      "context_window": 262144,
-      "default_max_tokens": 8192,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:fireworks-ai",
       "name": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 (fireworks-ai)",
       "pricing": { "input": 0.05, "output": 0.2 },
@@ -137,15 +128,6 @@
       "id": "openai/gpt-oss-120b:cerebras",
       "name": "openai/gpt-oss-120b (cerebras)",
       "pricing": { "input": 0.35, "output": 0.75 },
-      "context_window": 131072,
-      "default_max_tokens": 8192,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "openai/gpt-oss-120b:fireworks-ai",
-      "name": "openai/gpt-oss-120b (fireworks-ai)",
-      "pricing": { "input": 0.15, "output": 0.6 },
       "context_window": 131072,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
@@ -181,7 +163,7 @@
     {
       "id": "zai-org/GLM-5.3:fireworks-ai",
       "name": "zai-org/GLM-5.3 (fireworks-ai)",
-      "pricing": { "input": 0.7, "output": 2.2 },
+      "pricing": { "input": 1.4, "output": 4.4 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
