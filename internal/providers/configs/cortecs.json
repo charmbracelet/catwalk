@@ -1366,9 +1366,9 @@
     {
       "id": "qwen3-235b-a22b-instruct-2507",
       "name": "qwen3-235b-a22b-instruct-2507",
-      "pricing": { "input": 0.179, "output": 0.537 },
-      "context_window": 262000,
-      "default_max_tokens": 26200,
+      "pricing": { "input": 0.75, "output": 2.25 },
+      "context_window": 250000,
+      "default_max_tokens": 25000,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
     },
@@ -2557,9 +2557,9 @@
     {
       "id": "qwen-3-235b:latest",
       "name": "qwen-3-235b:latest",
-      "pricing": { "input": 0.179, "output": 0.537 },
-      "context_window": 262000,
-      "default_max_tokens": 26200,
+      "pricing": { "input": 0.75, "output": 2.25 },
+      "context_window": 250000,
+      "default_max_tokens": 25000,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": false, "audio": false }
     },

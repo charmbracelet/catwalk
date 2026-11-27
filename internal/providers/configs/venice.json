@@ -633,6 +633,23 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "e2ee-glm-5-3-p",
+      "name": "GLM 5.3",
+      "pricing": { "input": 1.75, "output": 5.5 },
+      "context_window": 1000000,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "z-ai-glm-5-3",
       "name": "GLM 5.3",
       "pricing": { "input": 1.75, "output": 5.5 },
@@ -1555,6 +1572,23 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
+      "id": "e2ee-kimi-k3-1-pro-p",
+      "name": "Kimi K3.1 Pro",
+      "pricing": { "input": 2.5, "output": 12.5 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "kimi-k3-1-pro",
       "name": "Kimi K3.1 Pro",
       "pricing": { "input": 2, "output": 10 },
@@ -2017,6 +2051,15 @@
       "pricing": { "input": 0.21, "output": 1.9 },
       "context_window": 128000,
       "default_max_tokens": 16384,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "e2ee-qwen3-vl-30b-a3b-p",
+      "name": "Qwen3 VL 30B A3B",
+      "pricing": { "input": 0.25, "output": 0.9 },
+      "context_window": 128000,
+      "default_max_tokens": 4096,
       "reasoning": { "thinking": "never" },
       "capabilities": { "vision": true, "audio": false }
     },

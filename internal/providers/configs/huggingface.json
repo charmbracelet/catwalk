@@ -8,6 +8,15 @@
   "default_small_model_id": "Qwen/Qwen3.8-27B:cerebras",
   "models": [
     {
+      "id": "MiniMaxAI/MiniMax-M2.7:groq",
+      "name": "MiniMaxAI/MiniMax-M2.7 (groq)",
+      "pricing": { "input": 0.6, "output": 1.8 },
+      "context_window": 196608,
+      "default_max_tokens": 8192,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "MiniMaxAI/MiniMax-M3.1-Flash:fireworks-ai",
       "name": "MiniMaxAI/MiniMax-M3.1-Flash (fireworks-ai)",
       "pricing": { "input": 0.15, "output": 0.6 },
@@ -55,7 +64,7 @@
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:fireworks-ai",
       "name": "deepseek-ai/DeepSeek-V4.1-Flash-1017 (fireworks-ai)",
-      "pricing": { "input": 0.3, "output": 1.2 },
+      "pricing": { "input": 0.15, "output": 0.6 },
       "context_window": 1048576,
       "default_max_tokens": 8192,
       "reasoning": { "thinking": "never" },
