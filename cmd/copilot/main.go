@@ -66,9 +66,10 @@ type Limits struct {
 }
 
 type Supports struct {
-	ToolCalls         bool `json:"tool_calls,omitempty"`
-	ParallelToolCalls bool `json:"parallel_tool_calls,omitempty"`
-	Vision            bool `json:"vision,omitempty"`
+	ToolCalls         bool     `json:"tool_calls,omitempty"`
+	ParallelToolCalls bool     `json:"parallel_tool_calls,omitempty"`
+	Vision            bool     `json:"vision,omitempty"`
+	ReasoningEffort   []string `json:"reasoning_effort,omitempty"`
 }
 
 type Policy struct {
@@ -251,23 +252,39 @@ func modelsToCatwalk(m []Model) []catwalk.Model {
 }
 
 func modelToCatwalk(m Model) catwalk.Model {
-	return catwalk.Model{
+	reasoning := catwalk.Reasoning{Thinking: catwalk.ThinkingNever}
+	if len(m.Capabilities.Supports.ReasoningEffort) > 0 {
+		reasoning = catwalk.Reasoning{
+			Thinking:           catwalk.ThinkingToggleable,
+			EffortLevels:       catwalk.NewEffortLevels(m.Capabilities.Supports.ReasoningEffort...),
+			DefaultEffortLevel: "medium",
+		}
+	}
+
+	cat := catwalk.Model{
 		ID:               m.ID,
 		Name:             m.Name,
 		Type:             modelEndpointType(m),
 		DefaultMaxTokens: int64(m.Capabilities.Limits.MaxOutputTokens),
 		ContextWindow:    int64(m.Capabilities.Limits.MaxContextWindowTokens),
-		Reasoning:        catwalk.Reasoning{Thinking: catwalk.ThinkingNever},
+		Reasoning:        reasoning,
 		Capabilities:     catwalk.Capabilities{Vision: m.Capabilities.Supports.Vision},
 	}
+
+	return cat
 }
 
 // modelEndpointType returns the endpoint type for the given model, derived
 // from the model's supported endpoints as reported by the Copilot API. Models
+// that support the Anthropic Messages API are routed through it, which is the
+// only endpoint that returns summarized thinking text for Claude models. Models
 // that support the OpenAI Responses API are routed through it; all others use
 // the provider's default endpoint type (Chat Completions).
 func modelEndpointType(m Model) catwalk.Type {
-	if slices.Contains(m.SupportedEndpoints, "/responses") {
+	switch {
+	case slices.Contains(m.SupportedEndpoints, "/v1/messages"):
+		return catwalk.TypeMessages
+	case slices.Contains(m.SupportedEndpoints, "/responses"):
 		return catwalk.TypeResponses
 	}
 	return ""
