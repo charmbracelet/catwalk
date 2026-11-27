@@ -2,7 +2,7 @@
   "name": "Hubris",
   "id": "hubris",
   "api_key": "$HUBRIS_API_KEY",
-  "api_endpoint": "https://api.hubris.pw/v1",
+  "api_endpoint": "https://api.hubris.pro/v1",
   "type": "openai-compat",
   "default_large_model_id": "anthropic/claude-sonnet-5",
   "default_small_model_id": "google/gemini-3.7-flash",
