@@ -4,13 +4,40 @@
   "api_key": "$CORALBRICKS_API_KEY",
   "api_endpoint": "https://inference.coralbricks.ai/v1",
   "type": "completions",
-  "default_large_model_id": "deepseek-v4.1-flash-fast-fp4",
-  "default_small_model_id": "deepseek-v4.1-flash-fast-fp4",
+  "default_large_model_id": "deepseek-v4.1-flash-fast",
+  "default_small_model_id": "deepseek-v4.1-flash-fast",
   "models": [
     {
+      "id": "deepseek-v4.1-flash-fast",
+      "name": "DeepSeek V4.1 Flash Fast",
+      "pricing": { "input": 0.45, "output": 1.8, "cache_hit": 0.009 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
+    },
+    {
       "id": "deepseek-v4.1-flash-fast-fp4",
-      "name": "DeepSeek V4.1 Flash",
-      "pricing": { "input": 0.01, "output": 1.2, "cache_create": 0.09 },
+      "name": "DeepSeek V4.1 Flash Fast",
+      "pricing": { "input": 0.45, "output": 1.8, "cache_hit": 0.009 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash Standard",
+      "pricing": { "input": 0.19, "output": 0.6, "cache_hit": 0.008 },
+      "context_window": 1048576,
+      "default_max_tokens": 32768,
+      "reasoning": { "thinking": "toggleable" },
+      "capabilities": { "vision": true }
+    },
+    {
+      "id": "deepseek-v4.1-flash-value",
+      "name": "DeepSeek V4.1 Flash Value",
+      "pricing": { "input": 0.005, "output": 0.57, "cache_hit": 0.003 },
       "context_window": 1048576,
       "default_max_tokens": 32768,
       "reasoning": { "thinking": "toggleable" },
