@@ -980,7 +980,7 @@
     {
       "id": "gpt-4.1-mini",
       "name": "GPT-4.1 mini",
-      "pricing": { "input": 0.0176, "output": 0.0704 },
+      "pricing": { "input": 0.0176, "output": 0.0704, "cache_hit": 0.0176 },
       "context_window": 1047576,
       "default_max_tokens": 32768,
       "reasoning": { "thinking": "never" },
@@ -998,7 +998,7 @@
     {
       "id": "gpt-4.1-nano",
       "name": "GPT-4.1 nano",
-      "pricing": { "input": 0.01, "output": 0.04 },
+      "pricing": { "input": 0.01, "output": 0.04, "cache_hit": 0.01 },
       "context_window": 1047576,
       "default_max_tokens": 32768,
       "reasoning": { "thinking": "never" },
