@@ -49,6 +49,10 @@ jobs:
         env:
           BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
 
+      - name: bf16.ai
+        run: go run ./cmd/bf16/main.go
+        continue-on-error: true
+
       - name: Neuralwatt
         run: go run ./cmd/neuralwatt/main.go
         continue-on-error: true

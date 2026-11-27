@@ -28,6 +28,9 @@ var atlasCloudConfig []byte
 //go:embed configs/baseten.json
 var basetenConfig []byte
 
+//go:embed configs/bf16.json
+var bf16Config []byte
+
 //go:embed configs/avian.json
 var avianConfig []byte
 
@@ -158,6 +161,7 @@ var providerRegistry = []ProviderFunc{
 	alibabaUnitedStatesProvider,
 	atlasCloudProvider,
 	basetenProvider,
+	bf16Provider,
 	avianProvider,
 	azureProvider,
 	bedrockUnitedStatesProvider,
@@ -233,6 +237,10 @@ func atlasCloudProvider() catwalk.Provider {
 
 func basetenProvider() catwalk.Provider {
 	return loadProviderFromConfig(basetenConfig)
+}
+
+func bf16Provider() catwalk.Provider {
+	return loadProviderFromConfig(bf16Config)
 }
 
 func avianProvider() catwalk.Provider {
