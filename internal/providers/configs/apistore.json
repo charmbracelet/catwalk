@@ -372,41 +372,6 @@
       "capabilities": { "vision": true, "audio": false }
     },
     {
-      "id": "gemini-3.1-pro-preview",
-      "name": "Gemini 3.1 Pro Preview",
-      "pricing": { "input": 1.4, "output": 8.4, "cache_hit": 0.14 },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": true }
-    },
-    {
-      "id": "gemini-3.5-flash-lite",
-      "name": "Gemini 3.5 Flash Lite",
-      "pricing": { "input": 0.21, "output": 1.75, "cache_hit": 0.021 },
-      "context_window": 1048576,
-      "default_max_tokens": 65536,
-      "reasoning": {
-        "thinking": "toggleable",
-        "effort_levels": [
-          { "value": "minimal", "display": "Minimal" },
-          { "value": "low", "display": "Low" },
-          { "value": "medium", "display": "Medium" },
-          { "value": "high", "display": "High" }
-        ],
-        "default_effort_level": "medium"
-      },
-      "capabilities": { "vision": true, "audio": true }
-    },
-    {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "pricing": { "input": 0.525, "output": 2.625, "cache_hit": 0.0525 },
