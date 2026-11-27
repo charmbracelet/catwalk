@@ -91,6 +91,9 @@ var nebiusConfig []byte
 //go:embed configs/neuralwatt.json
 var neuralwattConfig []byte
 
+//go:embed configs/obscurify.json
+var obscurifyConfig []byte
+
 //go:embed configs/openai.json
 var openAIConfig []byte
 
@@ -174,6 +177,7 @@ var providerRegistry = []ProviderFunc{
 	ioNetProvider,
 	nebiusProvider,
 	neuralwattProvider,
+	obscurifyProvider,
 	openCodeGoProvider,
 	openCodeZenProvider,
 	openRouterProvider,
@@ -317,6 +321,10 @@ func nebiusProvider() catwalk.Provider {
 
 func neuralwattProvider() catwalk.Provider {
 	return loadProviderFromConfig(neuralwattConfig)
+}
+
+func obscurifyProvider() catwalk.Provider {
+	return loadProviderFromConfig(obscurifyConfig)
 }
 
 func openAIProvider() catwalk.Provider {
