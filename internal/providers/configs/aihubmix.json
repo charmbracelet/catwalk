@@ -3517,6 +3517,15 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "hy4-flash",
+      "name": "Hy4 Flash",
+      "pricing": { "input": 0.081, "output": 0.324, "cache_hit": 0.00324 },
+      "context_window": 1048576,
+      "default_max_tokens": 104857,
+      "reasoning": { "thinking": "never" },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
       "id": "hy4-preview",
       "name": "Hy4 Preview",
       "pricing": { "input": 0.845, "output": 2.535, "cache_hit": 0.04225 },
