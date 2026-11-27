@@ -1,0 +1,51 @@
+{
+  "name": "Upstage",
+  "id": "upstage",
+  "api_key": "$UPSTAGE_API_KEY",
+  "api_endpoint": "https://api.upstage.ai/v1",
+  "type": "completions",
+  "default_large_model_id": "solar-pro4",
+  "default_small_model_id": "solar-mini4",
+  "models": [
+    {
+      "id": "solar-pro4",
+      "name": "Solar Pro 4",
+      "pricing": { "input": 0.3, "output": 1.2, "cache_hit": 0.06 },
+      "context_window": 524288,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "solar-mini4",
+      "name": "Solar Mini 4",
+      "pricing": { "input": 0.1, "output": 0.4, "cache_hit": 0.01 },
+      "context_window": 524288,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "none", "display": "None" },
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "xhigh", "display": "X-High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    }
+  ]
+}
