@@ -63,6 +63,7 @@ tasks:
       - task: gen:atlascloud
       - task: gen:avian
       - task: gen:baseten
+      - task: gen:bf16
       - task: gen:chutes
       - task: gen:copilot
       - task: gen:cortecs
@@ -97,6 +98,11 @@ tasks:
     desc: Generate baseten provider configurations
     cmds:
       - go run cmd/baseten/main.go
+
+  gen:bf16:
+    desc: Generate bf16.ai provider configurations
+    cmds:
+      - go run cmd/bf16/main.go
 
   gen:chutes:
     desc: Generate chutes provider configurations

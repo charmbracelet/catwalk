@@ -1,0 +1,119 @@
+{
+  "name": "bf16.ai",
+  "id": "bf16",
+  "api_key": "$BF16_API_KEY",
+  "api_endpoint": "https://api.bf16.ai/v1",
+  "type": "completions",
+  "default_large_model_id": "zai-org/glm-5.3-uncensored",
+  "default_small_model_id": "deepseek/deepseek-v4.1-flash-uncensored",
+  "models": [
+    {
+      "id": "deepseek/deepseek-v4.1-flash-uncensored-fast",
+      "name": "DeepSeek V4.1 Flash (Uncensored Fast)",
+      "pricing": { "input": 0.28, "output": 1.12, "cache_hit": 0.055 },
+      "context_window": 1048576,
+      "default_max_tokens": 130000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-uncensored",
+      "name": "DeepSeek V4.1 Flash (Uncensored)",
+      "pricing": { "input": 0.26, "output": 1, "cache_hit": 0.045 },
+      "context_window": 1048576,
+      "default_max_tokens": 130000,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "bf16/deepseek-v4.1-flash-1017-exl3-2.5bpw",
+      "name": "DeepSeek V4.1 Flash 1017 EXL3 2.5bpw (bf16)",
+      "pricing": { "input": 0.2548, "output": 0.98, "cache_hit": 0.0441 },
+      "context_window": 524288,
+      "default_max_tokens": 65536,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "zai-org/glm-5.3-uncensored",
+      "name": "GLM-5.3 Flagship (Uncensored)",
+      "pricing": { "input": 1.35, "output": 4.2, "cache_hit": 0.25 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
+      "id": "zai-org/glm-5.3-flash-uncensored",
+      "name": "GLM-5.3 Flash Vision (Uncensored)",
+      "pricing": { "input": 0.3, "output": 1.12, "cache_hit": 0.065 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro-uncensored",
+      "name": "Kimi K3.1 Pro (Uncensored)",
+      "pricing": { "input": 1.95, "output": 6.9, "cache_hit": 0.28 },
+      "context_window": 1048576,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": true, "audio": false }
+    }
+  ]
+}
