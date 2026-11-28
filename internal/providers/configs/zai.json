@@ -8,6 +8,23 @@
   "default_small_model_id": "glm-5-turbo",
   "models": [
     {
+      "id": "glm-5.4",
+      "name": "GLM-5.4",
+      "pricing": { "input": 0, "output": 0 },
+      "context_window": 1000000,
+      "default_max_tokens": 131072,
+      "reasoning": {
+        "thinking": "always",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "high", "display": "High" },
+          { "value": "max", "display": "Max" }
+        ],
+        "default_effort_level": "max"
+      },
+      "capabilities": { "vision": true }
+    },
+    {
       "id": "glm-5.3-flash",
       "name": "GLM-5.3 Flash",
       "pricing": { "input": 0.15, "output": 0.5, "cache_create": 0.03 },
