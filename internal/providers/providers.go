@@ -22,6 +22,9 @@ var alibabaUnitedStatesConfig []byte
 //go:embed configs/anthropic.json
 var anthropicConfig []byte
 
+//go:embed configs/atlara.json
+var atlaraConfig []byte
+
 //go:embed configs/atlascloud.json
 var atlasCloudConfig []byte
 
@@ -156,6 +159,7 @@ var providerRegistry = []ProviderFunc{
 	aiHubMixProvider,
 	alibabaSingaporeProvider,
 	alibabaUnitedStatesProvider,
+	atlaraProvider,
 	atlasCloudProvider,
 	basetenProvider,
 	avianProvider,
@@ -225,6 +229,10 @@ func alibabaUnitedStatesProvider() catwalk.Provider {
 
 func anthropicProvider() catwalk.Provider {
 	return loadProviderFromConfig(anthropicConfig)
+}
+
+func atlaraProvider() catwalk.Provider {
+	return loadProviderFromConfig(atlaraConfig)
 }
 
 func atlasCloudProvider() catwalk.Provider {
