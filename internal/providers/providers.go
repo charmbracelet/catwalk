@@ -10,6 +10,9 @@ import (
 	"charm.land/catwalk/v3/pkg/catwalk"
 )
 
+//go:embed configs/aiand.json
+var aiandConfig []byte
+
 //go:embed configs/aihubmix.json
 var aiHubMixConfig []byte
 
@@ -153,6 +156,7 @@ var providerRegistry = []ProviderFunc{
 	syntheticProvider,
 
 	// The remaining will be in alphabetical order.
+	aiandProvider,
 	aiHubMixProvider,
 	alibabaSingaporeProvider,
 	alibabaUnitedStatesProvider,
@@ -209,6 +213,10 @@ func loadProviderFromConfig(configData []byte) catwalk.Provider {
 		return catwalk.Provider{}
 	}
 	return p
+}
+
+func aiandProvider() catwalk.Provider {
+	return loadProviderFromConfig(aiandConfig)
 }
 
 func aiHubMixProvider() catwalk.Provider {
