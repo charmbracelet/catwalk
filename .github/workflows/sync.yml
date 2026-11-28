@@ -39,6 +39,10 @@ jobs:
         env:
           ATLASCLOUD_API_KEY: ${{ secrets.ATLASCLOUD_API_KEY }}
 
+      - name: 0G Private Computer
+        run: go run ./cmd/0g/main.go
+        continue-on-error: true
+
       - name: Avian
         run: go run ./cmd/avian/main.go
         continue-on-error: true
