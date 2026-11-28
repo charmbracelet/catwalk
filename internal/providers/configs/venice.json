@@ -1796,6 +1796,23 @@
       "capabilities": { "vision": false, "audio": false }
     },
     {
+      "id": "nvidia-nemotron-3-5-lightning-30b-a3b",
+      "name": "NVIDIA Nemotron 3.5 Lightning 30B",
+      "pricing": { "input": 0.075, "output": 0.3 },
+      "context_window": 262144,
+      "default_max_tokens": 32768,
+      "reasoning": {
+        "thinking": "toggleable",
+        "effort_levels": [
+          { "value": "low", "display": "Low" },
+          { "value": "medium", "display": "Medium" },
+          { "value": "high", "display": "High" }
+        ],
+        "default_effort_level": "medium"
+      },
+      "capabilities": { "vision": false, "audio": false }
+    },
+    {
       "id": "nvidia-nemotron-3-5-super-vl-120b-a12b",
       "name": "NVIDIA Nemotron 3.5 Super VL 120B",
       "pricing": { "input": 0.2, "output": 0.5 },
@@ -1820,15 +1837,6 @@
         "default_effort_level": "medium"
       },
       "capabilities": { "vision": false, "audio": false }
-    },
-    {
-      "id": "pareto",
-      "name": "Pareto",
-      "pricing": { "input": 1, "output": 4 },
-      "context_window": 1000000,
-      "default_max_tokens": 32768,
-      "reasoning": { "thinking": "never" },
-      "capabilities": { "vision": true, "audio": false }
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
