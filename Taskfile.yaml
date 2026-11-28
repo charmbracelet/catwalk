@@ -74,6 +74,7 @@ tasks:
       - task: gen:opencode-zen
       - task: gen:openrouter
       - task: gen:synthetic
+      - task: gen:martllm
       - task: gen:venice
       - task: gen:vercel
       - task: gen:xai
@@ -152,6 +153,11 @@ tasks:
     desc: Generate synthetic provider configurations
     cmds:
       - go run cmd/synthetic/main.go
+
+  gen:martllm:
+    desc: Generate MartLLM provider configurations
+    cmds:
+      - go run cmd/martllm/main.go
 
   gen:venice:
     desc: Generate venice provider configurations

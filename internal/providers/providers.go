@@ -115,6 +115,9 @@ var scalewayConfig []byte
 //go:embed configs/synthetic.json
 var syntheticConfig []byte
 
+//go:embed configs/martllm.json
+var martLLMConfig []byte
+
 //go:embed configs/vercel.json
 var vercelConfig []byte
 
@@ -180,6 +183,7 @@ var providerRegistry = []ProviderFunc{
 	paretoProvider,
 	qiniuCloudProvider,
 	scalewayProvider,
+	martLLMProvider,
 	vercelProvider,
 	veniceProvider,
 	vertexAIProvider,
@@ -349,6 +353,10 @@ func scalewayProvider() catwalk.Provider {
 
 func syntheticProvider() catwalk.Provider {
 	return loadProviderFromConfig(syntheticConfig)
+}
+
+func martLLMProvider() catwalk.Provider {
+	return loadProviderFromConfig(martLLMConfig)
 }
 
 func vercelProvider() catwalk.Provider {
